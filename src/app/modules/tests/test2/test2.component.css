@@ -1,0 +1,11 @@
+@reference '@acorex/styles/themes/default.css';
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+ax-grid-layout-widget .grid-stack-item-content {
+  @apply overflow-hidden flex bg-lightest items-center justify-center shadow-lg border-none;
+  @apply hover:bg-light;
+}

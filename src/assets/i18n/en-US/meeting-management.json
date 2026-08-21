@@ -1,0 +1,110 @@
+{
+  "module": {
+    "title": "Meeting Management",
+    "description": "Manage meetings, participants, and meeting types",
+    "menus": {
+      "root": {
+        "title": "Meeting Management",
+        "description": "Manage meetings and participants"
+      }
+    }
+  },
+  "meetings": {
+    "terms": {
+      "title": "Meeting",
+      "plural": "Meetings",
+      "meeting-type": "Meeting Type",
+      "meeting-notes": "Meeting Notes",
+      "meeting-provider-type": "Meeting Provider Type",
+      "join-url": "Join URL",
+      "host-url": "Host URL",
+      "is-recorded": "Is Recorded",
+      "set-in-google-calendar": "Set Meeting in Google Calendar",
+      "meeting-status": "Meeting Status",
+      "is-fully-signed-off": "Fully SignedOff",
+      "meeting-files": "Meeting Files",
+      "meeting-location": "Meeting Location",
+      "schedule": "Schedule",
+      "schedule-mode": "Schedule Mode"
+    },
+    "groups": {
+      "basic-information": "Basic Information",
+      "meeting-details": "Meeting Details",
+      "meeting-status": "Meeting Status"
+    },
+    "states": {
+      "pending": "Pending",
+      "in-progress": "In Progress",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "cancelled": "Cancelled",
+      "is-published": "Is Published",
+      "completed": "Completed"
+    },
+    "actions": {
+      "start": "Start",
+      "start-event": "Start Event",
+      "end-event": "End Event",
+      "email-participants": "Email"
+    },
+    "publish-dialog": {
+      "title": "Publish Meeting",
+      "fields": {
+        "assigned-to": {
+          "title": "User"
+        },
+        "publish-date": {
+          "title": "Date"
+        }
+      }
+    },
+    "meeting-participants": {
+      "title": "Meeting Participant",
+      "plural": "Meeting Participants",
+      "signed-off-at": "Signed Off At",
+      "participant-status": "Participant Status",
+      "join-time": "Join Time",
+      "left-time": "Left Time",
+      "employee-id": "Employee",
+      "meeting-role-type-ids": "Participant Role Types",
+      "duration": "Duration",
+      "states": {
+        "absent": "Absent",
+        "present": "Present",
+        "accept": "Accept",
+        "decline": "Decline"
+      },
+      "transitions": {
+        "mark-present": "Mark Present",
+        "mark-absent": "Mark Absent",
+        "accept": "Accept",
+        "decline": "Decline"
+      }
+    },
+    "meeting-sessions": {
+      "title": "Meeting Session",
+      "plural": "Meeting Sessions",
+      "meeting-id": "Meeting",
+      "schedule-date": "Schedule Date",
+      "start-time": "Start Time",
+      "end-time": "End Time",
+      "actual-date": "Actual Date",
+      "actual-start-time": "Actual Start Time",
+      "actual-end-time": "Actual End Time"
+    },
+    "meeting-types": {
+      "title": "Meeting Type",
+      "plural": "Meeting Types"
+    },
+    "meeting-type-file-templates": {
+      "title": "Meeting Type File Template",
+      "plural": "Meeting Type File Templates",
+      "templateId": "Template",
+      "typeId": "Type"
+    },
+    "meeting-role-types": {
+      "title": "Meeting Role Type",
+      "plural": "Meeting Role Types"
+    }
+  }
+}

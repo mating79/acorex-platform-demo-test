@@ -1,0 +1,63 @@
+{
+  "module": {
+    "title": "LiveKit",
+    "description": "WebRTC infrastructure provider integration"
+  },
+  "integration": {
+    "display-name": "LiveKit",
+    "description": "Connect LiveKit Cloud or a self-hosted server for voice and video calls.",
+    "auth": {
+      "api-token": {
+        "label": "Server Credentials",
+        "instructions": "Enter your LiveKit server WebSocket URL, API key, and API secret.",
+        "server-url": {
+          "placeholder": "wss://your-project.livekit.cloud"
+        },
+        "api-key": {
+          "placeholder": "LiveKit API key"
+        },
+        "api-secret": {
+          "placeholder": "LiveKit API secret"
+        }
+      }
+    },
+    "connect": {
+      "api-token-dialog": {
+        "title": "Connect LiveKit",
+        "configure-title": "Configure LiveKit",
+        "instructions": "Provide the WebSocket URL and API credentials from your LiveKit project or self-hosted server.",
+        "fields": {
+          "display-name": "Display Name",
+          "server-url": "Server URL",
+          "api-key": "API Key",
+          "api-secret": "API Secret"
+        },
+        "placeholders": {
+          "display-name": "LiveKit",
+          "server-url": "wss://your-project.livekit.cloud",
+          "api-key": "LiveKit API key",
+          "api-secret": "LiveKit API secret"
+        },
+        "actions": {
+          "save": "Save Connection"
+        },
+        "messages": {
+          "server-url-required": "Server URL is required.",
+          "api-key-required": "API key is required.",
+          "api-secret-required": "API secret is required."
+        }
+      }
+    },
+    "validation": {
+      "incomplete-credentials": "LiveKit connection is missing server URL, API key, or API secret."
+    }
+  },
+  "settings": {
+    "tenant-integration": {
+      "section-title": "LiveKit",
+      "section-description": "Configure LiveKit server credentials for tenant voice and video calls.",
+      "connection-title": "Account",
+      "connection-description": "Save your LiveKit server URL, API key, and secret for this tenant."
+    }
+  }
+}

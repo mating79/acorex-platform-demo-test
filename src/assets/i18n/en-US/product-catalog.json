@@ -1,0 +1,365 @@
+{
+  "module": {
+    "title": "Product Catalog",
+    "description": "Manage products, SKUs, brands, and categories",
+    "menus": {
+      "root": {
+        "title": "Product Catalog",
+        "description": "Centralized product management system"
+      }
+    }
+  },
+  "brands": {
+    "terms": {
+      "brand": "Brand",
+      "brands": "Brands"
+    },
+    "menus": {
+      "brands": {
+        "title": "Brands",
+        "description": "Manage product brands"
+      }
+    },
+    "entities": {
+      "brand": {
+        "title": "Brand",
+        "plural": "Brands",
+        "groups": {
+          "manufacturer-info": "Manufacturer Information"
+        },
+        "fields": {
+          "logo": {
+            "title": "Logo"
+          },
+          "manufacturer": {
+            "title": "Manufacturer"
+          },
+          "country-of-origin": {
+            "title": "Country of Origin"
+          },
+          "website": {
+            "title": "Website"
+          }
+        }
+      }
+    },
+    "search-commands": {
+      "create-brand": {
+        "title": "Create Brand",
+        "description": "Create a new brand."
+      }
+    }
+  },
+  "manufacturers": {
+    "terms": {
+      "manufacturer": "Manufacturer",
+      "manufacturers": "Manufacturers"
+    },
+    "menus": {
+      "manufacturers": {
+        "title": "Manufacturers",
+        "description": "Manage manufacturers"
+      }
+    },
+    "entities": {
+      "manufacturer": {
+        "title": "Manufacturer",
+        "plural": "Manufacturers",
+        "groups": {
+          "contact-info": "Contact Information"
+        },
+        "fields": {
+          "logo": {
+            "title": "Logo"
+          },
+          "country-of-origin": {
+            "title": "Country of Origin"
+          },
+          "website": {
+            "title": "Website"
+          },
+          "contact-email": {
+            "title": "Contact Email"
+          },
+          "contact-phone": {
+            "title": "Contact Phone"
+          }
+        }
+      }
+    }
+  },
+  "categories": {
+    "terms": {
+      "category": "Category",
+      "categories": "Categories"
+    },
+    "menus": {
+      "categories": {
+        "title": "Categories",
+        "description": "Manage product categories"
+      }
+    },
+    "entities": {
+      "product-category": {
+        "title": "Category",
+        "plural": "Categories",
+        "fields": {
+          "parent": {
+            "title": "Parent Category"
+          }
+        }
+      }
+    }
+  },
+  "products": {
+    "terms": {
+      "product": "Product",
+      "products": "Products"
+    },
+    "menus": {
+      "products": {
+        "title": "Products",
+        "description": "Manage products and variants"
+      }
+    },
+    "entities": {
+      "product": {
+        "title": "Product",
+        "plural": "Products",
+        "groups": {
+          "sourcing": "Brand & Sourcing",
+          "financial-info": "Financial Information",
+          "measurement-info": "Measurement Information",
+          "media": "Images"
+        },
+        "components": {
+          "meta-data-form": {
+            "title": "Specifications"
+          }
+        },
+        "fields": {
+          "brand": {
+            "title": "Brand"
+          },
+          "tax-class": {
+            "title": "Tax Class"
+          },
+          "base-currency": {
+            "title": "Base Currency"
+          },
+          "base-price": {
+            "title": "Base Price"
+          },
+          "base-unit": {
+            "title": "Base Unit of Measure"
+          },
+          "weight": {
+            "title": "Weight"
+          },
+          "weight-unit": {
+            "title": "Weight Unit"
+          },
+          "length": {
+            "title": "Length"
+          },
+          "width": {
+            "title": "Width"
+          },
+          "height": {
+            "title": "Height"
+          },
+          "dimension-unit": {
+            "title": "Dimension Unit"
+          },
+          "manufacturer": {
+            "title": "Manufacturer"
+          },
+          "supplier": {
+            "title": "Supplier"
+          },
+          "images": {
+            "title": "Images"
+          },
+          "rating": {
+            "title": "Rating"
+          }
+        }
+      }
+    },
+    "states": {
+      "draft": "Draft",
+      "in-review": "Under Review",
+      "approved": "Approved",
+      "suspended": "Suspended",
+      "archived": "Archived"
+    },
+    "actions": {
+      "submit-for-review": {
+        "title": "Submit for Review"
+      },
+      "suspend": {
+        "title": "Suspend"
+      },
+      "activate": {
+        "title": "Activate"
+      }
+    }
+  },
+  "skus": {
+    "terms": {
+      "sku": "SKU",
+      "skus": "SKUs",
+      "variant": "Variant",
+      "variants": "Variants"
+    },
+    "menus": {
+      "skus": {
+        "title": "SKUs",
+        "description": "Manage product SKUs and variants"
+      }
+    },
+    "entities": {
+      "product-sku": {
+        "title": "Product SKU",
+        "plural": "Product SKUs",
+        "groups": {
+          "identifiers": "Product Identifiers",
+          "pricing": "Pricing Information",
+          "measurement-info": "Measurement Information",
+          "media": "Images"
+        },
+        "fields": {
+          "sku": {
+            "title": "SKU Code"
+          },
+          "product": {
+            "title": "Product"
+          },
+          "variant-name": {
+            "title": "Variant Name"
+          },
+          "barcode": {
+            "title": "Barcode"
+          },
+          "qr-code": {
+            "title": "QR Code"
+          },
+          "ean": {
+            "title": "EAN"
+          },
+          "upc": {
+            "title": "UPC"
+          },
+          "price": {
+            "title": "Price"
+          },
+          "compare-at-price": {
+            "title": "Compare at Price"
+          },
+          "cost-price": {
+            "title": "Cost Price"
+          },
+          "weight": {
+            "title": "Weight"
+          },
+          "weight-unit": {
+            "title": "Weight Unit"
+          },
+          "length": {
+            "title": "Length"
+          },
+          "width": {
+            "title": "Width"
+          },
+          "height": {
+            "title": "Height"
+          },
+          "dimension-unit": {
+            "title": "Dimension Unit"
+          },
+          "images": {
+            "title": "SKU Images"
+          },
+          "is-default": {
+            "title": "Default SKU"
+          }
+        }
+      }
+    },
+    "search-commands": {
+      "create-product": {
+        "title": "Create Product",
+        "description": "Create a new product."
+      }
+    }
+  },
+  "permissions": {
+    "products": {
+      "title": "Products",
+      "actions": {
+        "view": {
+          "title": "View Products"
+        },
+        "manage": {
+          "title": "Manage Products"
+        }
+      }
+    },
+    "brands": {
+      "title": "Brands",
+      "actions": {
+        "view": {
+          "title": "View Brands"
+        },
+        "manage": {
+          "title": "Manage Brands"
+        }
+      }
+    },
+    "categories": {
+      "title": "Categories",
+      "actions": {
+        "view": {
+          "title": "View Categories"
+        },
+        "manage": {
+          "title": "Manage Categories"
+        }
+      }
+    },
+    "manufacturers": {
+      "title": "Manufacturers",
+      "actions": {
+        "view": {
+          "title": "View Manufacturers"
+        },
+        "manage": {
+          "title": "Manage Manufacturers"
+        }
+      }
+    },
+    "skus": {
+      "title": "SKUs",
+      "actions": {
+        "view": {
+          "title": "View SKUs"
+        },
+        "manage": {
+          "title": "Manage SKUs"
+        }
+      }
+    }
+  },
+  "dashboard-widgets": {
+    "widget-picker-category": {
+      "product-catalog": "Product catalog"
+    },
+    "product-history-bar": {
+      "widget-title": "Product base price history",
+      "widget-description": "Shows how the product base price changed over time from version history.",
+      "chart-title": "Base price history",
+      "x-axis-label": "Date",
+      "y-axis-label": "Base price"
+    }
+  }
+}

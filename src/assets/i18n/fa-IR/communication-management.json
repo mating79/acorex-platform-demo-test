@@ -1,0 +1,321 @@
+{
+  "module": {
+    "title": "مدیریت ارتباطات",
+    "permissions": {
+      "title": "مدیریت ارتباطات",
+      "description": "مدیریت ارتباطات خروجی و ردیابی تحویل."
+    }
+  },
+  "permissions": {
+    "management": {
+      "title": "مدیریت ارتباطات",
+      "description": "مشاهده و مدیریت رکوردهای ارتباط و تحویل."
+    },
+    "send": {
+      "title": "ارسال ارتباط",
+      "description": "ایجاد ارتباط از طریق API ارسال."
+    },
+    "email": {
+      "show-dialog": {
+        "title": "نوشتن ایمیل (پنجره)",
+        "description": "باز کردن پنجره ارسال ایمیل."
+      },
+      "send": {
+        "title": "ارسال ایمیل",
+        "description": "ارسال ایمیل خروجی از طریق API ارتباطات."
+      }
+    }
+  },
+  "in-app": {
+    "panel": {
+      "title": "اعلان"
+    },
+    "page": {
+      "title": "اعلان‌ها",
+      "description": {
+        "none": "هنوز پیام درون‌برنامه‌ای وجود ندارد.",
+        "unread": "{{ unread }} خوانده‌نشده از {{ total }} پیام",
+        "all-read": "هر {{ total }} پیام خوانده شده است"
+      }
+    },
+    "tabs": {
+      "unread": "خوانده‌نشده",
+      "all": "همه"
+    },
+    "actions": {
+      "refresh": "بازخوانی",
+      "mark-all-read": "علامت‌گذاری همه به‌عنوان خوانده‌شده",
+      "mark-as-read": "علامت‌گذاری به‌عنوان خوانده‌شده",
+      "view-all": "مشاهده همه",
+      "delete": "حذف",
+      "archive": "بایگانی",
+      "select-items": "انتخاب موارد",
+      "clear-filters": "پاک کردن فیلترها"
+    },
+    "filters": {
+      "search": {
+        "title": "جستجو"
+      },
+      "read-status": {
+        "title": "وضعیت خواندن"
+      },
+      "priority": {
+        "title": "اولویت",
+        "options": {
+          "warning": "هشدار",
+          "danger": "خطر",
+          "notice": "اطلاع"
+        }
+      },
+      "category": {
+        "title": "دسته",
+        "options": {
+          "inbox": "صندوق ورودی",
+          "archive": "بایگانی"
+        }
+      }
+    },
+    "live-updates-offline": "به‌روزرسانی زنده در دسترس نیست — صندوق هنگام باز کردن یا هر دقیقه بازخوانی می‌شود.",
+    "state": {
+      "empty": {
+        "title": "پیامی وجود ندارد",
+        "description": "تحویل‌های درون‌برنامه‌ای پس از دریافت در اینجا نمایش داده می‌شوند."
+      },
+      "no-results": {
+        "title": "نتیجه‌ای یافت نشد",
+        "description": "فیلترها یا عبارت جستجو را تغییر دهید."
+      },
+      "all-caught-up": {
+        "title": "همه را خوانده‌اید",
+        "description": "پیام خوانده‌نشده‌ای در صندوق درون‌برنامه‌ای ندارید."
+      },
+      "error": {
+        "title": "بارگذاری صندوق ممکن نشد"
+      }
+    }
+  },
+  "settings": {
+    "communication": {
+      "nav-title": "ارتباطات",
+      "title": "تنظیمات ارتباطات",
+      "description": "پیکربندی کانال‌های ارتباط خروجی.",
+      "smtp": {
+        "title": "تنظیمات SMTP",
+        "description": "پیش‌فرض‌های SMTP سطح پلتفرم؛ مستأجران می‌توانند برای سازمان خود بازنویسی کنند.",
+        "server": {
+          "title": "سرور SMTP",
+          "description": "آدرس سرور SMTP."
+        },
+        "port": {
+          "title": "پورت SMTP",
+          "description": "پورت اتصال به سرور SMTP."
+        },
+        "username": {
+          "title": "نام کاربری SMTP",
+          "description": "نام کاربری برای احراز هویت سرور SMTP."
+        },
+        "password": {
+          "title": "رمز عبور SMTP",
+          "description": "رمز عبور برای احراز هویت سرور SMTP."
+        },
+        "from-address": {
+          "title": "آدرس فرستنده",
+          "description": "آدرس ایمیل فرستنده برای ارتباطات خروجی."
+        },
+        "ssl": {
+          "title": "استفاده از SSL",
+          "description": "SSL را برای ارتباط امن فعال کنید."
+        },
+        "tls": {
+          "title": "استفاده از TLS",
+          "description": "TLS را برای ارتباط امن فعال کنید."
+        },
+        "test": {
+          "action": "ارسال ایمیل آزمایشی",
+          "dialog": {
+            "title": "ارسال ایمیل آزمایشی",
+            "actions": {
+              "send": "ارسال ایمیل آزمایشی"
+            },
+            "fields": {
+              "recipient": {
+                "title": "ایمیل گیرنده",
+                "placeholder": "name@example.com"
+              }
+            }
+          },
+          "messages": {
+            "recipient-required": "آدرس ایمیل گیرنده الزامی است.",
+            "success": "ایمیل آزمایشی با موفقیت ارسال شد."
+          }
+        }
+      }
+    },
+    "user-notifications": {
+      "nav-title": "اعلان‌ها",
+      "title": "اعلان‌های ارتباطی",
+      "description": "انتخاب کنید پیام‌ها از چه کانال‌هایی به شما برسند.",
+      "delivery-channels": {
+        "title": "کانال‌های تحویل",
+        "description": "نحوه دریافت ارتباطات را در هر کانال فعال یا غیرفعال کنید.",
+        "in-app": {
+          "title": "پیام درون‌برنامه‌ای",
+          "description": "نمایش پیام‌ها در صندوق درون‌برنامه‌ای."
+        },
+        "email": {
+          "title": "ایمیل",
+          "description": "دریافت ارتباطات از طریق ایمیل."
+        }
+      }
+    }
+  },
+  "templates": {
+    "channels": {
+      "email": "ایمیل",
+      "in-app": "درون‌برنامه‌ای",
+      "not-configured": {
+        "email": "SMTP هنوز پیکربندی نشده است. می‌توانید همین حالا قالب بنویسید، اما تا زمانی که سرور، پورت و آدرس فرستنده ذخیره نشوند ایمیل ارسال نمی‌شود."
+      }
+    }
+  },
+  "email": {
+    "dialog": {
+      "title": "ارسال ایمیل",
+      "fields": {
+        "to": {
+          "title": "گیرنده",
+          "placeholder": "آدرس ایمیل گیرندگان (جدا با ویرگول)"
+        },
+        "cc": {
+          "title": "رونوشت",
+          "placeholder": "اختیاری"
+        },
+        "bcc": {
+          "title": "رونوشت مخفی",
+          "placeholder": "اختیاری"
+        },
+        "text-template": {
+          "title": "قالب متن"
+        },
+        "subject": {
+          "title": "موضوع",
+          "placeholder": "موضوع ایمیل"
+        },
+        "body": {
+          "title": "متن",
+          "placeholder": "متن را با ویرایشگر غنی بنویسید (برای ایمیل به‌صورت HTML ذخیره می‌شود)."
+        }
+      },
+      "messages": {
+        "required-fields": "گیرنده، موضوع و متن الزامی است."
+      }
+    },
+    "template-picker": {
+      "title": "انتخاب قالب متن"
+    },
+    "org-chart": {
+      "send-email": "ارسال ایمیل",
+      "send-email-employee": "ارسال ایمیل",
+      "private-email-top-executive": "ارسال ایمیل خصوصی به مدیر اجرایی",
+      "send-email-position-occupant": "ارسال ایمیل به فرد شاغل در سمت",
+      "group-email-bu": "ارسال ایمیل گروهی",
+      "private-email-bu-head": "ارسال ایمیل خصوصی به سرپرست",
+      "fallback-unit": "واحد سازمانی",
+      "prefilled-subject-group": "دربارهٔ {{unit}}",
+      "prefilled-subject-private": "دربارهٔ {{unit}}",
+      "error-title": "ایمیل در دسترس نیست",
+      "errors": {
+        "load-employee": "بارگذاری رکورد این کارمند ممکن نشد.",
+        "no-head-employee": "برای این واحد کارمند سرپرست تعیین نشده است.",
+        "no-email": "آدرس ایمیلی برای این شخص در دسترس نیست.",
+        "no-business-unit": "شناسایی این واحد سازمانی ممکن نشد.",
+        "no-members": "آدرس ایمیل گیرنده‌ای برای این واحد یافت نشد.",
+        "load-emails": "بارگذاری آدرس‌های ایمیل این واحد ممکن نشد."
+      }
+    }
+  },
+  "widgets": {
+    "my-in-app-inbox-dashboard": {
+      "widget-title": "اعلان",
+      "widget-description": "پیام‌های خوانده‌نشده درون‌برنامه‌ای را در داشبورد نمایش می‌دهد.",
+      "max-items": "حداکثر ردیف‌ها",
+      "show-avatar": "نمایش آواتار",
+      "show-date": "نمایش تاریخ"
+    }
+  },
+  "entities": {
+    "communication": {
+      "title": "ارتباط",
+      "plural": "ارتباطات",
+      "groups": {
+        "message": "پیام",
+        "routing": "مسیریابی"
+      },
+      "fields": {
+        "message-subject": "موضوع",
+        "message-body": "متن",
+        "primary-channel": "کانال اصلی",
+        "recipient-summary": "خلاصه گیرنده",
+        "definition-key": "کلید تعریف",
+        "correlation-id": "شناسه همبستگی",
+        "idempotency-key": "کلید یکتایی",
+        "actions": "اقدام‌ها"
+      },
+      "actions": {
+        "preview": {
+          "title": "پیش‌نمایش پیام",
+          "dialog": {
+            "title": "پیش‌نمایش پیام"
+          },
+          "messages": {
+            "error-title": "پیام در دسترس نیست",
+            "not-found": "این ارتباط یافت نشد."
+          }
+        }
+      },
+      "states": {
+        "pending": "در انتظار",
+        "processing": "در حال پردازش",
+        "completed": "تکمیل‌شده",
+        "failed": "ناموفق",
+        "cancelled": "لغوشده"
+      }
+    },
+    "communication-delivery": {
+      "title": "تحویل",
+      "plural": "تحویل‌ها",
+      "groups": {
+        "tracking": "ردیابی تحویل",
+        "timeline": "خط زمانی"
+      },
+      "fields": {
+        "communication-id": "شناسه ارتباط",
+        "channel": "کانال",
+        "provider-key": "ارائه‌دهنده",
+        "recipient-user-id": "شناسه کاربر گیرنده",
+        "recipient-address": "آدرس گیرنده",
+        "provider-message-id": "شناسه پیام ارائه‌دهنده",
+        "sent-at": "زمان ارسال",
+        "delivered-at": "زمان تحویل",
+        "seen-at": "زمان مشاهده",
+        "read-at": "زمان خوانده‌شدن",
+        "replied-at": "زمان پاسخ",
+        "is-pinned": "سنجاق‌شده",
+        "archived-at": "زمان بایگانی",
+        "timeline-summary": "خط زمانی"
+      },
+      "states": {
+        "pending": "در انتظار",
+        "queued": "در صف",
+        "processing": "در حال پردازش",
+        "accepted": "پذیرفته‌شده",
+        "sent": "ارسال‌شده",
+        "delivered": "تحویل‌شده",
+        "failed": "ناموفق",
+        "retry-scheduled": "تلاش مجدد برنامه‌ریزی‌شده",
+        "cancelled": "لغوشده",
+        "dead-lettered": "Dead Letter"
+      }
+    }
+  }
+}

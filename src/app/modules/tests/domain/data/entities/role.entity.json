@@ -1,0 +1,92 @@
+{
+  "name": "role",
+  "title": "Role",
+  "type": 0,
+  "fields": [
+    {
+      "name": "id",
+      "title": "Role ID",
+      "description": "Unique identifier for the role",
+      "schema": "uuid",
+      "features": {
+        "nullable": false,
+        "readOnly": true
+      }
+    },
+    {
+      "name": "name",
+      "title": "Role Name",
+      "description": "Name of the role",
+      "schema": "text-short",
+      "features": {
+        "nullable": false,
+        "readOnly": false
+      },
+      "validations": [
+        {
+          "rule": "required"
+        },
+        {
+          "rule": "unique"
+        },
+        {
+          "rule": "minLength",
+          "options": {
+            "value": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "description",
+      "title": "Description",
+      "description": "Description of the role and its responsibilities",
+      "schema": "text-long",
+      "features": {
+        "nullable": true,
+        "readOnly": false
+      }
+    },
+    {
+      "name": "isActive",
+      "title": "Active Status",
+      "description": "Whether the role is currently active",
+      "schema": "boolean",
+      "features": {
+        "nullable": false,
+        "readOnly": false
+      },
+      "defaultValue": true
+    },
+    {
+      "name": "permissions",
+      "title": "Permissions",
+      "description": "List of permissions assigned to this role",
+      "schema": "permission-list",
+      "features": {
+        "nullable": true,
+        "readOnly": false
+      }
+    },
+    {
+      "name": "createdAt",
+      "title": "Created Date",
+      "description": "When the role was created",
+      "schema": "datetime",
+      "features": {
+        "nullable": false,
+        "readOnly": true
+      }
+    },
+    {
+      "name": "updatedAt",
+      "title": "Updated Date",
+      "description": "When the role was last updated",
+      "schema": "datetime",
+      "features": {
+        "nullable": true,
+        "readOnly": true
+      }
+    }
+  ]
+}

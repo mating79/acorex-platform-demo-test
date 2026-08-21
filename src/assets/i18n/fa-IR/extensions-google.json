@@ -1,0 +1,33 @@
+{
+  "integration": {
+    "display-name": "گوگل",
+    "description": "حساب Google خود را برای همگام‌سازی Gmail و تقویم متصل کنید.",
+    "auth": {
+      "oauth": {
+        "label": "OAuth 2.0",
+        "instructions": "برای دسترسی به Gmail و Calendar به Google هدایت می‌شوید. با حسابی که می‌خواهید همگام شود وارد شوید و دسترسی را تأیید کنید."
+      }
+    },
+    "connect": {
+      "oauth-dialog": {
+        "title": "اتصال با OAuth",
+        "instructions": "برای دسترسی به Gmail و Calendar به Google هدایت می‌شوید. با حسابی که می‌خواهید همگام شود وارد شوید و دسترسی را تأیید کنید."
+      },
+      "actions": {
+        "connect": "اتصال"
+      }
+    }
+  },
+  "settings": {
+    "google": {
+      "section-title": "گوگل",
+      "section-description": "حساب Google خود را متصل کنید و سرویس‌هایی که می‌خواهید همگام شوند را انتخاب کنید.",
+      "connection-title": "حساب",
+      "connection-description": "برای فعال‌سازی همگام‌سازی Gmail و تقویم، با Google وارد شوید.",
+      "gmail-enabled-title": "همگام‌سازی Gmail",
+      "gmail-enabled-description": "پیام‌های حساب Gmail متصل را همگام‌سازی کنید.",
+      "calendar-enabled-title": "همگام‌سازی تقویم",
+      "calendar-enabled-description": "رویدادهای Google Calendar متصل را همگام‌سازی کنید."
+    }
+  }
+}

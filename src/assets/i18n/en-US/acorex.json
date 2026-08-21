@@ -1,0 +1,757 @@
+{
+  "common": {
+    "actions": {
+      "cancel": "Cancel",
+      "canceled": "Canceled",
+      "next": "Next",
+      "prev": "Previous",
+      "retry": "Retry",
+      "uploading": "Uploading",
+      "search": "Search",
+      "okay": "Okay",
+      "apply": "Apply",
+      "add": "Add"
+    },
+    "form": {
+      "title": "Title",
+      "name": "Name",
+      "size": "Size",
+      "color": "Color",
+      "display": "Display",
+      "value": "Value"
+    },
+    "status": {
+      "loading": "loading",
+      "failed": "Failed",
+      "completed": "Completed",
+      "processing": "Processing"
+    },
+    "general": {
+      "custom": "Custom",
+      "and": "and",
+      "between": "between",
+      "every": "Every",
+      "no-result-found": "No results found",
+      "more-items": "{{ number }} more",
+      "no-record": "No record",
+      "no-data-yet": "No Data Loaded Yet.",
+      "full-screen": "Full Screen",
+      "clear": "Clear",
+      "close": "Close",
+      "close-all": "Close All"
+    },
+    "notifications": {
+      "more": "And {{ number }} more..."
+    }
+  },
+  "error": {
+    "message": "Error: {{ message }}"
+  },
+  "dataTable": {
+    "rowCommandColumn": {
+      "emptyStateText": "No record found"
+    },
+    "rowHighlight": {
+      "new": "New"
+    }
+  },
+  "validation": {
+    "messages": {
+      "title": "Please fix the following error(s):",
+      "required": "{{ title }} is required",
+      "email": "Please enter a valid email address {{ title }}!",
+      "phone": "Please enter a valid phone number!",
+      "invalid-rull-name": "Invalid rule name: <b>\"{{ name }}\"</b>",
+      "min": "The value must be greater than {{ value }}",
+      "max": "The value must be less than {{ value }}"
+    }
+  },
+  "password-strength": {
+    "rules": {
+      "at-least-8-characters": "At least 8 characters",
+      "english-upper-case-letter": "English upper case letter",
+      "english-lower-case-letter": "English lower case letter",
+      "special-character": "Special character(%,$,...)",
+      "digits": "Digits (0-9)"
+    },
+    "levels": {
+      "fragile": "Fragile",
+      "weak": "Weak",
+      "good": "Good",
+      "strong": "Strong",
+      "unbreakable": "Unbreakable"
+    }
+  },
+  "scheduler": {
+    "time-units": {
+      "select-second": "select second(s)",
+      "select-minute": "select minute(s)",
+      "select-hour": "select hour(s)",
+      "select-day": "select day(s)",
+      "select-month": "select month(s)",
+      "select-year": "select year(s)"
+    },
+    "starting-at": {
+      "second": "second(s) starting at second",
+      "minute": "minute(s) starting at minute",
+      "hour": "hour(s) starting at hour",
+      "day": "day(s) starting on",
+      "month": "month(s) starting at month",
+      "year": "year(s) starting at year"
+    },
+    "specific": {
+      "second": "Specific second(s) (choose one or many)",
+      "minute": "Specific minute(s) (choose one or many)",
+      "hour": "Specific hour(s) (choose one or many)",
+      "day-of-month": "Specific day(s) of month (choose one or many)",
+      "day-of-week": "Specific day(s) of week (choose one or many)",
+      "month": "Specific month(s) (choose one or many)",
+      "year": "Specific year(s) (choose one or many)"
+    },
+    "base-on-week": "Base on week",
+    "base-on-month": "Base on Month",
+    "of-the-month": "of the month",
+    "on-the": "On the",
+    "on-the-last": "On the last",
+    "on-the-last-day-of-the-month": "On the Last day of the month",
+    "day-before-the-end-of-the-month": "day(s) before the end of the month",
+    "ordinal-suffix": "st",
+    "ordinal-suffix-of-month": "st of the month"
+  },
+  "dateTime": {
+    "set": "Set",
+    "today": "Today",
+    "now": "Now",
+    "date": "Date",
+    "time": "Time",
+    "units": {
+      "millisecond": "millisecond",
+      "second": "Second",
+      "seconds": "Seconds",
+      "minute": "Minute",
+      "minutes": "Minutes",
+      "hour": "Hour",
+      "hours": "Hours",
+      "day": "Day",
+      "days": "Days",
+      "week": "Week",
+      "month": "Month",
+      "months": "Months",
+      "year": "Year",
+      "years": "Years"
+    },
+    "weekdays": {
+      "short": { "0": "Sun", "1": "Mon", "2": "Tue", "3": "Wed", "4": "Thu", "5": "Fri", "6": "Sat" },
+      "long": {
+        "0": "Sunday",
+        "1": "Monday",
+        "2": "Tuesday",
+        "3": "Wednesday",
+        "4": "Thursday",
+        "5": "Friday",
+        "6": "Saturday"
+      }
+    },
+    "months": {
+      "gregorian": {
+        "short": {
+          "0": "Jan",
+          "1": "Feb",
+          "2": "Mar",
+          "3": "Apr",
+          "4": "May",
+          "5": "Jun",
+          "6": "Jul",
+          "7": "Aug",
+          "8": "Sep",
+          "9": "Oct",
+          "10": "Nov",
+          "11": "Dec"
+        },
+        "long": {
+          "0": "January",
+          "1": "February",
+          "2": "March",
+          "3": "April",
+          "4": "May",
+          "5": "June",
+          "6": "July",
+          "7": "August",
+          "8": "September",
+          "9": "October",
+          "10": "November",
+          "11": "December"
+        }
+      },
+      "solar-hijri": {
+        "short": {
+          "0": "Far",
+          "1": "Ordi",
+          "2": "Khor",
+          "3": "Tir",
+          "4": "Mordad",
+          "5": "Shah",
+          "6": "Mehr",
+          "7": "Aban",
+          "8": "Azar",
+          "9": "Dey",
+          "10": "Bah",
+          "11": "Esf"
+        },
+        "long": {
+          "0": "Farvardin",
+          "1": "Ordibehesht",
+          "2": "Khordad",
+          "3": "Tir",
+          "4": "Mordad",
+          "5": "Shahrivar",
+          "6": "Mehr",
+          "7": "Aban",
+          "8": "Azar",
+          "9": "Dey",
+          "10": "Bahman",
+          "11": "Esfand"
+        }
+      }
+    },
+    "day-period": {
+      "am": "am",
+      "pm": "pm",
+      "m": "m",
+      "a": "a",
+      "p": "p"
+    },
+    "duration": {
+      "format-second": "{0} second(s)",
+      "format-minute": "{0} minute(s)",
+      "daily": "Daily",
+      "daily-timeline": "Daily Timeline",
+      "multi-day-timeline": "Multi-Day Timeline",
+      "weekly": "Weekly",
+      "weekly-timeline": "Weekly Timeline",
+      "monthly": "Monthly",
+      "monthly-timeline": "Monthly Timeline",
+      "yearly": "Yearly",
+      "yearly-timeline": "Yearly Timeline",
+      "all-day": "All Day",
+      "agenda": "Agenda"
+    }
+  },
+  "selectbox": {
+    "popover": {
+      "title": "Choose an items..."
+    }
+  },
+  "datapager": {
+    "info": {
+      "text": "[page] of [totalPages] pages ([totalItems] items)"
+    }
+  },
+  "uploader": {
+    "zone": {
+      "text": "Drop files to upload them",
+      "drag": "Drag & Drop or ",
+      "choose": "Choose File",
+      "to-upload": " to Upload",
+      "uploadFile": "Upload File",
+      "uploadFiles": "Upload Files"
+    }
+  },
+  "comment": {
+    "replies": "Replies",
+    "reply": "Reply",
+    "view": "View",
+    "hide": "Hide"
+  },
+  "paint": {
+    "tools": {
+      "pen": "Pen",
+      "highlight": "Highlight",
+      "eraser": "Eraser"
+    },
+    "actions": {
+      "reset": "Reset"
+    }
+  },
+  "image-editor": {
+    "crop": "Crop",
+    "undo": "Undo",
+    "redo": "Redo",
+    "rotate-left": "Rotate Left",
+    "rotate-right": "Rotate Right",
+    "rotate": "Rotate"
+  },
+  "time": {
+    "right-now": "Right now",
+    "just-now": "Just now",
+    "left": "left",
+    "ago": "ago",
+    "second": "second",
+    "seconds": "seconds",
+    "minute": "minute",
+    "minutes": "minutes",
+    "hour": "hour",
+    "hours": "hours",
+    "day": "day",
+    "days": "days",
+    "month": "month",
+    "months": "months",
+    "week": "week",
+    "weeks": "weeks",
+    "year": "year",
+    "years": "years",
+    "an-hour": "an hour",
+    "a-day": "a day",
+    "a-month": "a month",
+    "a-year": "a year"
+  },
+  "chat": {
+    "text": "Text",
+    "image": "Image",
+    "video": "Video",
+    "audio": "Audio",
+    "voice": "Voice message",
+    "file": "File",
+    "location": "Location",
+    "sticker": "Sticker",
+    "poll": "Poll",
+    "system": "System message",
+    "message": "Message",
+    "bot": "Bot",
+    "tabs": {
+      "all": "All",
+      "private": "Private",
+      "groups": "Groups",
+      "channels": "Channels",
+      "bots": "Bots",
+      "unread": "Unread",
+      "archived": "Archived",
+      "emoji": "Emoji",
+      "stickers": "Stickers"
+    },
+    "actions": {
+      "search": "Search",
+      "speach-to-text": "Speach to text",
+      "conversation-info": "Conversation details",
+      "mute": "Mute",
+      "unmute": "Unmute",
+      "archive": "Archive",
+      "unarchive": "Unarchive",
+      "delete": "Delete",
+      "leave-and-delete": "Leave & Delete",
+      "block": "Block",
+      "unblock": "Unblock",
+      "copy": "Copy",
+      "reply": "Reply",
+      "edit": "Edit",
+      "forward": "Forward",
+      "cancel": "Cancel",
+      "save": "Save",
+      "send": "Send",
+      "stop": "Stop",
+      "stopping": "Stopping...",
+      "close": "Close",
+      "react": "React",
+      "choose-reaction": "Choose reaction",
+      "add-reaction": "Add reaction",
+      "scroll-to-bottom": "Scroll to bottom of messages",
+      "remove-attachment": "Remove attachment",
+      "back": "Back",
+      "next": "Next",
+      "create": "Create",
+      "new-conversation": "New conversation",
+      "emoji-and-stickers": "Emoji & Stickers",
+      "mark-as-read": "Mark as read",
+      "pin": "Pin",
+      "unpin": "Unpin",
+      "choose-image": "Choose Image",
+      "change-image": "Change Image",
+      "upload-image": "Upload Image",
+      "remove-image": "Remove Image"
+    },
+    "tooltips": {
+      "search-in-conversation": "Search in conversation",
+      "toggle-notifications": "Toggle notifications",
+      "pin-conversation": "Pin conversation",
+      "mark-conversation-as-read": "Mark conversation as read",
+      "leave-and-delete-group": "Leave and delete this group",
+      "delete-conversation": "Delete this conversation",
+      "block-conversation": "Block this conversation",
+      "send-image": "Send image",
+      "send-video": "Send video",
+      "attach-file": "Attach file",
+      "record-voice-message": "Record voice message",
+      "send-audio-file": "Send audio file",
+      "send-location": "Send location"
+    },
+    "placeholders": {
+      "search-conversations": "Search conversations...",
+      "search-users": "Search users...",
+      "group-title-required": "Enter group title... (required)",
+      "select-conversation": "Select a conversation",
+      "type-message": "Write a message..."
+    },
+    "status": {
+      "no-messages": "No messages",
+      "no-conversation-selected": "No conversation selected",
+      "loading-messages": "Loading messages...",
+      "loading-older-messages": "Loading older messages...",
+      "loading-more": "Loading more...",
+      "edited": "Edited",
+      "someone-typing": "Someone is typing...",
+      "typing": "typing...",
+      "user-is-typing": "{{ userName }} is typing...",
+      "people-typing": "{{ count }} people are typing...",
+      "online": "Online",
+      "offline": "Offline",
+      "last-seen": "Last seen {{ value }}",
+      "sending": "Sending...",
+      "sent": "Sent",
+      "delivered": "Delivered",
+      "read": "Read",
+      "failed-to-send": "Failed to send"
+    },
+    "dialog": {
+      "forward-message": {
+        "title": "Forward message",
+        "selected-count": "Forward message ({{ count }} selected)",
+        "no-conversations-search": "No conversations match your search.",
+        "no-conversations-available": "No other conversations to forward to."
+      },
+      "new-conversation": {
+        "title": "New Conversation",
+        "group-details": "Group details",
+        "selected-count": "New Conversation ({{ count }} selected)",
+        "no-users-search": "No users match your search.",
+        "no-users-available": "No users available."
+      },
+      "delete-message": {
+        "title": "Delete Message",
+        "for-everyone": "Delete this message for everyone?",
+        "default": "Delete this message?"
+      },
+      "delete-conversation": {
+        "title": "Delete Conversation",
+        "message": "Delete conversation \"{{ conversationTitle }}\"?"
+      }
+    },
+    "notifications": {
+      "message-forwarded": "Message forwarded to {{ count }} conversation(s)"
+    },
+    "errors": {
+      "failed-to-create-conversation": "Failed to create conversation. Please try again.",
+      "failed-to-forward-message": "Failed to forward message. Please try again.",
+      "upload-failed": "Upload failed",
+      "empty-file": "Cannot upload empty file",
+      "file-size-exceeds-limit": "File size exceeds {{ sizeMb }}MB limit",
+      "file-type-not-allowed": "File type \"{{ fileType }}\" is not allowed"
+    },
+    "fallbacks": {
+      "unknown-user": "Unknown user",
+      "someone": "Someone",
+      "you": "You",
+      "this-conversation": "this conversation"
+    },
+    "members": {
+      "title": "Members ({{ count }})",
+      "count": "{{ count }} members",
+      "subscribers-count": "{{ count }} subscribers"
+    },
+    "forwarded": {
+      "from": "Forwarded from {{ senderName }}",
+      "from-with-conversation": "Forwarded from {{ senderName }} ({{ conversationTitle }})"
+    },
+    "empty": {
+      "no-messages-yet": "No messages yet",
+      "inbox": "Your inbox",
+      "no-conversation-selected-title": "No Conversation Selected",
+      "no-conversation-open": "No conversation is open",
+      "select-conversation-description": "Select a conversation from the sidebar to start messaging",
+      "no-conversation-description": "Select a chat from the list to read and send messages, or start a new one when you are ready.",
+      "eyebrow": {
+        "direct-message": "Direct message",
+        "group-chat": "Group chat",
+        "channel": "Channel",
+        "assistant": "Assistant",
+        "conversation": "Conversation"
+      },
+      "description": {
+        "private-prefix": "Start the private chat with",
+        "group-prefix": "Start the group in",
+        "channel-prefix": "Start the channel in",
+        "bot-prefix": "Start the bot chat in",
+        "conversation-prefix": "Start the conversation in"
+      },
+      "no-emojis-found": "No emojis found",
+      "no-stickers-available": "No stickers available"
+    },
+    "composer": {
+      "editing-message": "Editing message",
+      "replying-to": "Replying to"
+    },
+    "avatar": {
+      "preview": "Avatar preview"
+    },
+    "pickers": {
+      "common": {
+        "add-more": "Add more",
+        "remove": "Remove",
+        "caption-optional": "Add a caption (optional)",
+        "release-to-upload": "Release to upload",
+        "click-to-browse": "or click to browse"
+      },
+      "images": {
+        "title": "Send images",
+        "drop-to-attach": "Drop images to attach",
+        "select": "Select images",
+        "selected-count": "{{ count }} image(s) selected",
+        "send-count": "Send {{ count }} image(s)"
+      },
+      "videos": {
+        "title": "Send video",
+        "drop-to-attach": "Drop videos to attach",
+        "select": "Select videos",
+        "selected-count": "{{ count }} video(s) selected",
+        "send-count": "Send {{ count }} video(s)"
+      },
+      "audio": {
+        "title": "Send audio",
+        "drop-to-attach": "Drop audio files to attach",
+        "select": "Select audio files",
+        "selected-count": "{{ count }} audio file(s) selected",
+        "send-count": "Send {{ count }} audio file(s)"
+      },
+      "files": {
+        "title": "Attach files",
+        "drop-here": "Drop files here",
+        "select": "Select files",
+        "selected-count": "{{ count }} file(s) selected",
+        "uploading-progress": "Uploading... {{ progress }}%",
+        "uploading-count": "Uploading {{ count }} file(s)...",
+        "uploaded": "Uploaded",
+        "send-count": "Send {{ count }} file(s)",
+        "ready-count": "{{ ready }}/{{ total }} ready"
+      },
+      "location": {
+        "title": "Send location",
+        "coordinates": "Coordinates",
+        "send": "Send location"
+      }
+    },
+    "voice-recorder": {
+      "title": "Voice message",
+      "tap-to-start": "Tap to start recording",
+      "recording": "Recording",
+      "transcribing": "Converting speech to text..."
+    },
+    "renderer-state": {
+      "message-status": "Message status",
+      "retry": "Retry",
+      "try-again": "Try again",
+      "could-not-load-content": "Couldn't load this content.",
+      "could-not-send-message": "Couldn't send this message."
+    },
+    "info-panel": {
+      "tabs": {
+        "about": "About",
+        "settings": "Settings",
+        "members-count": "Members ({{ count }})",
+        "profile": "Profile",
+        "manage": "Manage"
+      },
+      "stats": {
+        "members": "Members",
+        "unread": "Unread",
+        "type": "Type"
+      },
+      "timeline": {
+        "created": "Created",
+        "last-activity": "Last activity"
+      },
+      "placeholders": {
+        "search-members": "Search members...",
+        "enter-group-title": "Enter group title"
+      },
+      "member": "member",
+      "group-details": {
+        "title": "Group details",
+        "group-title": "Group title"
+      },
+      "actions": {
+        "save-changes": "Save changes",
+        "reset-to-default": "Reset to default",
+        "leave-conversation": "Leave conversation"
+      },
+      "settings": {
+        "notifications": "Notifications",
+        "notifications-description": "Receive notifications for new messages",
+        "show-preview": "Show preview",
+        "show-preview-description": "Show message preview in notifications",
+        "archived": "Archived",
+        "archived-description": "Hide this conversation from the list"
+      },
+      "background": {
+        "title": "Chat background",
+        "description": "Choose a clean color or gradient for this conversation.",
+        "set-label": "Set background {{ label }}",
+        "presets": {
+          "default": "Default",
+          "graphite": "Graphite",
+          "olive": "Olive",
+          "sky": "Sky",
+          "aurora": "Aurora",
+          "sunset": "Sunset"
+        }
+      },
+      "types": {
+        "private-chat": "Private chat",
+        "group-conversation": "Group conversation",
+        "channel": "Channel"
+      },
+      "toasts": {
+        "left-conversation": "You have left the conversation",
+        "deleted-conversation": "Conversation deleted successfully",
+        "group-updated": "Group details updated successfully",
+        "failed-group-update": "Failed to update group details",
+        "background-updated": "Background updated",
+        "background-reset": "Background reset to default",
+        "failed-background-update": "Failed to update background",
+        "settings-saved": "Settings saved successfully"
+      },
+      "time": {
+        "today": "Today",
+        "yesterday": "Yesterday",
+        "days-ago": "{{ count }} days ago",
+        "weeks-ago": "{{ count }} weeks ago",
+        "months-ago": "{{ count }} months ago",
+        "years-ago": "{{ count }} years ago"
+      }
+    },
+    "aria": {
+      "message-list": "Message list",
+      "messages": "Messages",
+      "conversation-interface": "Conversation interface",
+      "conversation-list": "Conversation list",
+      "active-conversation": "Active conversation",
+      "message-label": "{{ prefix }} at {{ time }}: {{ text }}{{ status }}",
+      "messages-from-date": "Messages from {{ date }}"
+    },
+    "time": {
+      "just-now": "Just now",
+      "minutes-ago": "{{ count }}m ago",
+      "hours-ago": "{{ count }}h ago",
+      "days-ago": "{{ count }}d ago"
+    },
+    "sidebar": {
+      "empty-title": "No conversations yet",
+      "empty-search": "No conversations match your search. Try a different keyword.",
+      "empty-default": "Start a new conversation to begin chatting!"
+    }
+  },
+  "schedulerPicker": {
+    "labels": {
+      "repeatEvery": "Repeat every",
+      "weekdaysOnly": "Weekdays only",
+      "onDays": "On days",
+      "selectDays": "Select days",
+      "occurrence": "Occurrence",
+      "selectMonths": "Select months",
+      "startCondition": "Start condition",
+      "startDate": "Start date",
+      "endCondition": "End condition",
+      "numberOfOccurrences": "Number of occurrences",
+      "endDate": "End date",
+      "includeDates": "Include dates",
+      "excludeDates": "Exclude dates",
+      "timezone": "Timezone",
+      "time": "Time"
+    },
+    "placeholders": {
+      "selectInclusionDate": "Select inclusion date",
+      "selectExclusionDate": "Select exclusion date"
+    },
+    "messages": {
+      "noIncludedDates": "No included dates",
+      "noExcludedDates": "No excluded dates"
+    },
+    "startCondition": {
+      "now": "Now",
+      "byDate": "By date"
+    },
+    "endCondition": {
+      "never": "Never",
+      "afterOccurrences": "After occurrences",
+      "byDate": "By date"
+    },
+    "units": {
+      "hour": { "singular": "hour", "plural": "hours" },
+      "day": { "singular": "day", "plural": "days" },
+      "week": { "singular": "week", "plural": "weeks" },
+      "month": { "singular": "month", "plural": "months" },
+      "year": { "singular": "year", "plural": "years" }
+    },
+    "positions": {
+      "first": "First",
+      "second": "Second",
+      "third": "Third",
+      "fourth": "Fourth",
+      "last": "Last"
+    },
+    "days": {
+      "sunday": "Sunday",
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday"
+    },
+    "months": {
+      "january": "January",
+      "february": "February",
+      "march": "March",
+      "april": "April",
+      "may": "May",
+      "june": "June",
+      "july": "July",
+      "august": "August",
+      "september": "September",
+      "october": "October",
+      "november": "November",
+      "december": "December"
+    },
+    "naturalLanguage": {
+      "everyHourly": "Every {{count}} hour(s)",
+      "everyDaily": "Every {{count}} day(s)",
+      "everyWeekly": "Every {{count}} week(s)",
+      "everyMonthly": "Every {{count}} month(s)",
+      "everyYearly": "Every {{count}} year(s)",
+      "onDays": "on {{days}}",
+      "onThe": "on the",
+      "onDaysPlural": "on days",
+      "onDay": "on day",
+      "in": "in",
+      "startingFrom": "starting from {{date}}",
+      "forOccurrences": "for {{count}} occurrence(s)",
+      "until": "until {{date}}"
+    },
+    "validation": {
+      "modeRequired": "Mode is required",
+      "intervalRequired": "Interval is required",
+      "intervalTooSmall": "Interval must be at least {{min}}",
+      "intervalTooLarge": "Interval must be at most {{max}}",
+      "cannotCombineDayAndOccurrence": "Cannot combine day and occurrence patterns",
+      "tooManyExclusions": "Too many exclusions (max {{max}})",
+      "tooManyInclusions": "Too many inclusions (max {{max}})",
+      "endDateInPast": "End date cannot be in the past",
+      "endDateTooFar": "End date cannot be after {{maxDate}}"
+    },
+    "ordinals": {
+      "1st": "1st",
+      "2nd": "2nd",
+      "3rd": "3rd",
+      "4th": "4th",
+      "last": "last"
+    }
+  }
+}

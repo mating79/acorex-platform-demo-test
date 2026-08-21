@@ -1,0 +1,851 @@
+{
+  "module": {
+    "title": "مدیریت سازمان",
+    "description": "مدیریت ساختار سازمانی، تعاریف شغل، تیم‌ها و سلسله‌مراتب",
+    "menus": {
+      "root": {
+        "title": "سازمان",
+        "description": "تیم‌ها، پست‌ها، واحدهای کسب‌وکار و نمودار سازمانی"
+      },
+      "configuration": {
+        "title": "سازمان",
+        "description": "تعاریف شغل، مسئولیت‌ها و داده‌های مرجع"
+      }
+    },
+    "permissions": {
+      "title": "مدیریت سازمان",
+      "description": "دسترسی کامل به ویژگی‌های مدیریت سازمان"
+    }
+  },
+  "teams": {
+    "terms": {
+      "team": "تیم",
+      "teams": "تیم‌ها"
+    },
+    "entities": {
+      "team": {
+        "title": "تیم",
+        "plural": "تیم‌ها",
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد یکتای تیم (مثال TEAM-ENG)"
+          }
+        }
+      }
+    },
+    "menus": {
+      "teams": {
+        "title": "تیم‌ها",
+        "description": "مدیریت تیم‌ها و اعضای تیم"
+      }
+    },
+    "related-entities": {
+      "members": {
+        "title": "اعضا"
+      },
+      "business-units": {
+        "title": "واحدهای سازمانی"
+      }
+    }
+  },
+  "team-business-units": {
+    "entities": {
+      "team-business-unit": {
+        "title": "پیوند تیم و واحد سازمانی",
+        "plural": "پیوندهای تیم و واحد سازمانی",
+        "fields": {
+          "team": {
+            "title": "تیم"
+          },
+          "business-unit": {
+            "title": "واحد سازمانی"
+          },
+          "is-primary": {
+            "title": "اصلی",
+            "description": "وقتی این واحد، میزبان اصلی تیم در چارت سازمانی است، این گزینه را فعال کنید؛ برای گزارش و مقادیر پیش‌فرض استفاده می‌شود."
+          },
+          "effective-from": {
+            "title": "تاریخ شروع اعتبار"
+          },
+          "effective-to": {
+            "title": "تاریخ پایان اعتبار"
+          }
+        }
+      }
+    }
+  },
+  "team-member-roles": {
+    "terms": {
+      "team-member-role": "نقش عضو تیم",
+      "team-member-roles": "نقش‌های عضو تیم"
+    },
+    "entities": {
+      "team-member-role": {
+        "title": "نقش عضو تیم",
+        "plural": "نقش‌های عضو تیم"
+      }
+    },
+    "menus": {
+      "team-member-roles": {
+        "title": "نقش‌های عضو تیم",
+        "description": "مدیریت نقش‌های عضو تیم"
+      }
+    }
+  },
+  "team-members": {
+    "terms": {
+      "team-member": "عضو تیم",
+      "team-members": "اعضای تیم"
+    },
+    "entities": {
+      "team-member": {
+        "title": "عضو تیم",
+        "plural": "اعضای تیم",
+        "fields": {
+          "team": {
+            "title": "تیم",
+            "description": "تیمی که این عضو به آن تعلق دارد"
+          },
+          "employee": {
+            "title": "کارمند",
+            "description": "کارمندی که عضو تیم است"
+          },
+          "role": {
+            "title": "نقش",
+            "description": "نقش کارمند در تیم"
+          }
+        }
+      }
+    }
+  },
+  "positions": {
+    "terms": {
+      "position": "سمت",
+      "positions": "سمت‌ها"
+    },
+    "entities": {
+      "position": {
+        "title": "سمت",
+        "plural": "سمت‌ها",
+        "groups": {
+          "organizational-details": "جزئیات سازمانی"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "description": "شناسه کد یکتا برای سمت",
+            "placeholder": "کد یکتای سمت (مثال POS-ENG-001)"
+          },
+          "job-level": {
+            "title": "سطح ارشدیت شغل",
+            "description": "رده ارشدیت این سمت (مستقل از اینکه سمت مدیریتی باشد یا نباشد)"
+          },
+          "job-definition": {
+            "title": "تعریف شغل",
+            "description": "تعریف شغل مرتبط با این سمت"
+          },
+          "business-unit": {
+            "title": "واحد سازمانی",
+            "description": "واحد سازمانی که این سمت به آن تعلق دارد"
+          },
+          "capacity": {
+            "title": "ظرفیت",
+            "description": "حداکثر تعداد کارمندانی که می‌توانند به این سمت اختصاص داده شوند"
+          },
+          "is-manager": {
+            "title": "جایگاه مدیریتی",
+            "description": "مشخص می‌کند این سمت در چارت سازمانی یک جایگاه مدیریت افراد است یا خیر"
+          }
+        }
+      }
+    },
+    "menus": {
+      "positions": {
+        "title": "سمت‌ها",
+        "description": "مدیریت سمت‌های سازمانی"
+      }
+    }
+  },
+  "job-definitions": {
+    "terms": {
+      "job-definition": "تعریف شغل",
+      "job-definitions": "تعاریف شغل"
+    },
+    "entities": {
+      "job-definition": {
+        "title": "تعریف شغل",
+        "plural": "تعاریف شغل",
+        "fields": {
+          "responsibilities": {
+            "title": "مسئولیت‌ها",
+            "description": "مسئولیت‌های مرتبط با این تعریف شغل"
+          },
+          "responsibility-weight": {
+            "title": "وزن",
+            "description": "وزن/اهمیت مسئولیت (0-100)"
+          },
+          "skills": {
+            "title": "الزامات مهارت",
+            "description": "سطح مهارت مورد نیاز برای هر مهارت در این تعریف شغل"
+          },
+          "job-levels": {
+            "title": "سطوح شغل مورد نیاز",
+            "description": "سطوح شغلی که برای این تعریف شغل مورد نیاز هستند"
+          },
+          "categories": {
+            "title": "دسته‌ها",
+            "description": "دسته‌هایی که این تعریف شغل به آن‌ها تعلق دارد"
+          },
+          "job-definitions-category": {
+            "title": "دسته تعاریف شغل",
+            "description": "طبقه‌بندی دسته برای تعریف شغل"
+          }
+        },
+        "groups": {
+          "responsibilities": "مسئولیت‌ها",
+          "skills": "مهارت‌ها"
+        }
+      }
+    },
+    "components": {
+      "responsibilities-matrix": {
+        "title": "مسئولیت / سطح مسئولیت",
+        "actions": {
+          "choose-responsibilities": {
+            "title": "انتخاب مسئولیت‌ها",
+            "description": "انتخاب مسئولیت‌ها برای افزودن به ماتریس"
+          }
+        },
+        "messages": {
+          "loading-responsibility-levels": "در حال بارگذاری سطوح مسئولیت..."
+        }
+      }
+    },
+    "menus": {
+      "job-definitions": {
+        "title": "تعاریف شغل",
+        "description": "مدیریت تعاریف شغل سازمانی"
+      }
+    }
+  },
+  "job-levels": {
+    "terms": {
+      "job-level": "سطح ارشدیت شغلی",
+      "job-levels": "سطوح ارشدیت شغلی"
+    },
+    "entities": {
+      "job-level": {
+        "title": "سطح ارشدیت شغلی",
+        "plural": "سطوح ارشدیت شغلی",
+        "fields": {
+          "level": {
+            "title": "ترتیب سلسله‌مراتب",
+            "description": "ترتیب عددی برای مرتب‌سازی سطوح ارشدیت از پایین به بالا"
+          }
+        }
+      }
+    },
+    "menus": {
+      "job-levels": {
+        "title": "سطوح ارشدیت شغلی",
+        "description": "مدیریت سطوح ارشدیت شغلی در سازمان"
+      }
+    }
+  },
+  "responsibilities": {
+    "terms": {
+      "responsibility": "مسئولیت",
+      "responsibilities": "مسئولیت‌ها"
+    },
+    "entities": {
+      "responsibility": {
+        "title": "مسئولیت",
+        "plural": "مسئولیت‌ها",
+        "fields": {
+          "categories": {
+            "title": "دسته‌ها",
+            "description": "دسته‌هایی که این مسئولیت به آن‌ها تعلق دارد"
+          }
+        }
+      }
+    },
+    "menus": {
+      "responsibilities": {
+        "title": "مسئولیت‌ها",
+        "description": "مدیریت مسئولیت‌های سازمانی"
+      }
+    }
+  },
+  "responsibility-levels": {
+    "terms": {
+      "responsibility-level": "سطح مسئولیت",
+      "responsibility-levels": "سطوح مسئولیت"
+    },
+    "entities": {
+      "responsibility-level": {
+        "title": "سطح مسئولیت",
+        "plural": "سطوح مسئولیت",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "level": {
+            "title": "سطح",
+            "placeholder": "سطح عددی"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توانمندی‌های این سطح را شرح دهید"
+          }
+        }
+      }
+    },
+    "menus": {
+      "responsibility-levels": {
+        "title": "سطوح مسئولیت",
+        "description": "مدیریت سطوح مسئولیت سازمانی"
+      }
+    }
+  },
+  "business-units": {
+    "terms": {
+      "business-unit": "واحد سازمانی",
+      "business-units": "واحدهای سازمانی",
+      "individual-title": "واحد سازمانی"
+    },
+    "entities": {
+      "business-unit": {
+        "title": "واحد سازمانی",
+        "plural": "واحدهای سازمانی",
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد یکتای واحد سازمانی (مثال BU-HQ)"
+          },
+          "relation-info": {
+            "title": "اطلاعات ارتباط",
+            "description": "اطلاعات ارتباطی برای این واحد سازمانی"
+          },
+          "positions": {
+            "title": "سمت‌ها",
+            "description": "سمت‌های موجود در این واحد سازمانی"
+          },
+          "head-position": {
+            "title": "سمت ریاست واحد",
+            "description": "سمت مدیریتی پیشرو این واحد (باید به‌عنوان مدیری علامت خورده باشد؛ برای تعیین مدیر و نمودار سازمانی)"
+          }
+        },
+        "groups": {
+          "relation-info": "اطلاعات ارتباط",
+          "classification": "طبقه‌بندی و جغرافیا"
+        }
+      }
+    },
+    "menus": {
+      "business-units": {
+        "title": "واحدهای سازمانی",
+        "description": "مدیریت واحدهای سازمانی"
+      }
+    },
+    "related-entities": {
+      "teams": {
+        "title": "تیم‌ها"
+      }
+    }
+  },
+  "business-unit-types": {
+    "terms": {
+      "business-unit-type": "نوع واحد سازمانی",
+      "business-unit-types": "انواع واحد سازمانی"
+    },
+    "entities": {
+      "business-unit-type": {
+        "title": "نوع واحد سازمانی",
+        "plural": "انواع واحد سازمانی",
+        "fields": {
+          "is-location-based": {
+            "title": "وابسته به موقعیت جغرافی",
+            "description": "اگر فعال باشد، واحدهای این نوع معمولاً با منطقه یا شعبه جغرافی مرتبط می‌شوند."
+          },
+          "allows-direct-positions": {
+            "title": "امکان سمت مستقیم",
+            "description": "در صورت فعال‌بودن، واحدهای این نوع می‌توانند سمت سازمانی و سمت رده‌بالا داشته باشند."
+          }
+        }
+      }
+    },
+    "menus": {
+      "business-unit-types": {
+        "title": "انواع واحد سازمانی",
+        "description": "مدیریت انواع واحد سازمانی"
+      }
+    }
+  },
+  "companies": {
+    "entities": {
+      "company": {
+        "title": "شرکت",
+        "plural": "شرکت‌ها"
+      }
+    }
+  },
+  "organization-chart": {
+    "terms": {
+      "chart": "نمودار",
+      "hierarchy-chart": "نمودار سلسله‌مراتب"
+    },
+    "entities": {
+      "chart": {
+        "plural": "نمودارهای سلسله‌مراتب سازمان",
+        "fields": {
+          "name": {
+            "title": "نام"
+          },
+          "version": {
+            "title": "نسخه"
+          },
+          "structure": {
+            "title": "ساختار"
+          }
+        },
+        "actions": {
+          "view-chart": {
+            "title": "مشاهده نمودار"
+          }
+        }
+      }
+    },
+    "components": {
+      "chart": {
+        "title": "نمودار سلسله‌مراتب سازمان",
+        "description": "نمایی شفاف و پویا از ساختار سازمان شما",
+        "empty-states": {
+          "no-data": {
+            "title": "بدون داده نمودار",
+            "description": "برای مشاهده ساختار سازمان خود یک نمودار تولید کنید"
+          }
+        },
+        "detail-panel": {
+          "title": "جزئیات گره",
+          "details-section": "جزئیات",
+          "empty": "برای نمایش جزئیات، یکی از گره‌های نمودار را انتخاب کنید.",
+          "no-rows": "جزئیات تکمیلی برای این گره موجود نیست."
+        },
+        "search-placeholder": "جستجوی گره روی نمودار…"
+      },
+      "generate-dialog": {
+        "title": "تولید نمودار سازمان",
+        "message": "گزینه‌های تولید نمودار را پیکربندی کنید",
+        "fields": {
+          "mode": {
+            "label": "حالت نمودار",
+            "description": "نوع نمودار سازمانی مورد نظر برای تولید را انتخاب کنید"
+          },
+          "show-vacant-leaf-seats": {
+            "label": "نمایش جای خالی",
+            "description": "در صورت خاموش بودن، جایگاه‌های بدون نیرو در زیر هر واحد نمایش داده نمی‌شوند (جای خالی روی کارت سرپرست واحد همچنان دیده می‌شود)."
+          }
+        }
+      }
+    },
+    "menus": {
+      "chart": {
+        "title": "نمودار سلسله‌مراتب",
+        "description": "مشاهده نمودار سلسله‌مراتب سازمان"
+      }
+    },
+    "actions": {
+      "print": {
+        "title": "چاپ",
+        "description": "چاپ نمودار سازمانی"
+      },
+      "generate": {
+        "title": "تولید",
+        "description": "تولید یک نمودار سازمانی جدید"
+      },
+      "reset": {
+        "title": "بازنشانی",
+        "description": "بازنشانی پیکربندی نمودار"
+      }
+    },
+    "commands": {
+      "generate": {
+        "loading": {
+          "title": "در حال تولید نمودار سازمان",
+          "description": "در حال ساخت سلسله‌مراتب از واحدهای کسب‌وکار، جایگاه‌ها و تخصیص‌ها. لطفاً کمی صبر کنید."
+        },
+        "messages": {
+          "success": "نمودار سازمان با موفقیت تولید شد.",
+          "failed": "تولید نمودار سازمان ناموفق بود."
+        }
+      },
+      "add-position": {
+        "type-not-allowed": "نوع این واحد سازمانی اجازهٔ سمت مستقیم نمی‌دهد."
+      }
+    },
+    "states": {
+      "preparing-document": "در حال آماده‌سازی سند",
+      "rendering-chart-image": "در حال رندر تصویر نمودار",
+      "finalizing-image-processing": "در حال نهایی‌سازی پردازش تصویر",
+      "downloading-image": "در حال دانلود تصویر",
+      "process-complete": "فرایند تکمیل شد",
+      "failed-to-generate-chart-image": "تولید تصویر نمودار ناموفق بود"
+    },
+    "options": {
+      "mode": {
+        "structure": "ساختار سازمانی",
+        "location": "موقعیت جغرافیایی",
+        "reporting": "سلسله‌مراتب گزارش‌دهی",
+        "positionHierarchy": "سلسله‌مراتب سمت‌ها"
+      }
+    },
+    "communication-submenu": {
+      "title": "ارتباطات"
+    },
+    "layout-submenu": {
+      "title": "نما و چیدمان"
+    },
+    "structure-submenu": {
+      "title": "ساختار"
+    },
+    "employee-submenu": {
+      "title": "کارمند"
+    },
+    "node-actions": {
+      "more": "بیشتر",
+      "add": "افزودن جدید ...",
+      "no-actions": "اقدامی در دسترس نیست",
+      "add-new-bu-with-type": "افزودن {{type}} جدید",
+      "add-new-position": "افزودن سمت جدید",
+      "select-position": "انتخاب سمت",
+      "assign-employee-confirm": {
+        "title": "تخصیص کارمند؟",
+        "message": "سمت به این واحد اضافه شد. آیا می‌خواهید اکنون یک کارمند به این سمت تخصیص دهید؟"
+      },
+      "assign-head-after-bu-create": {
+        "title": "تخصیص مسئول واحد؟",
+        "message": "واحد سازمانی ایجاد شد. آیا می‌خواهید اکنون یک کارمند را به‌عنوان مسئول این واحد تخصیص دهید؟"
+      },
+      "assign-head-missing-head-position": {
+        "title": "سمت مسئول تعیین نشده",
+        "message": "برای این واحد سمت مسئول تعیین نشده است. ابتدا سمت مسئول را برای واحد تنظیم کنید، سپس از گزینه «تخصیص مدیر» در نمودار استفاده کنید."
+      },
+      "navigate-to-team-after-create": {
+        "title": "باز کردن جزئیات تیم؟",
+        "message": "تیم ایجاد و به این واحد متصل شد. آیا می‌خواهید اکنون پرونده تیم را باز کنید؟",
+        "message-link-failed": "تیم ایجاد شد، اما اتصال آن به این واحد انجام نشد. آیا همچنان می‌خواهید پرونده تیم را باز کنید؟"
+      },
+      "modify": "ویرایش",
+      "modify-position": "ویرایش سمت",
+      "assign-employee-to-position": "تخصیص کارمند",
+      "assign-new-employee-to-position": "جایگزینی فرد تخصیص‌یافته",
+      "remove-from-unit": "حذف از واحد",
+      "remove-from-unit-confirm": {
+        "title": "حذف جایگاه از واحد؟",
+        "message": "این سمت از این واحد سازمانی برداشته می‌شود. اگر کارمندی تخصیص داده شده باشد، تخصیص او نیز پایان می‌یابد."
+      },
+      "replace-assignee-confirm": {
+        "title": "جایگزینی فرد تخصیص‌یافته؟",
+        "message": "تخصیص فعلی پایان می‌یابد. سپس کارمند جدید برای این جایگاه انتخاب می‌کنید."
+      },
+      "modify-employee": "ویرایش کارمند",
+      "remove": "حذف",
+      "toggle-detail-panel": "نمایش/پنهان‌سازی پنل جزئیات",
+      "expand": "باز کردن",
+      "collapse": "جمع کردن",
+      "open": "باز کردن",
+      "open-root-organization-record": "باز کردن پروفایل سازمان",
+      "open-organization-record": "باز کردن پروفایل واحد سازمانی",
+      "open-position-record": "باز کردن پروفایل سمت",
+      "move-business-unit": "جابه‌جایی واحد سازمانی",
+      "add-new-team": "افزودن تیم جدید",
+      "add-additional-assignee": "تخصیص جایگاه دیگر",
+      "hr-workflows": "گردش‌کارهای منابع انسانی",
+      "hr-workflow-transfer": "انتقال",
+      "hr-workflow-promotion": "ارتقا",
+      "hr-workflow-offboarding": "خروج از سازمان",
+      "schedule-meeting": "زمان‌بندی جلسه",
+      "add-to-team": "افزودن به تیم",
+      "add-to-team-select-team": "انتخاب تیم",
+      "add-note": "افزودن یادداشت",
+      "placeholders": {
+        "add-note": {
+          "title": "یادداشت",
+          "message": "یادداشت روی گره‌های نمودار هنوز در دسترس نیست. این کنش در نسخه‌های بعدی فعال می‌شود."
+        },
+        "hr-workflow": {
+          "title": "گردش‌کارهای منابع انسانی",
+          "transfer": "گردش‌کار انتقال هنوز پیکربندی نشده است.",
+          "promotion": "گردش‌کار ارتقا هنوز پیکربندی نشده است.",
+          "offboarding": "گردش‌کار خروج از سازمان هنوز پیکربندی نشده است."
+        },
+        "schedule-meeting": {
+          "title": "زمان‌بندی جلسه",
+          "message": "اتصال تقویم از نمودار سازمانی هنوز در دسترس نیست."
+        }
+      }
+    },
+    "nodes": {
+      "company": "شرکت",
+      "vacant": "خالی",
+      "head-prefix": "مسئول",
+      "demo-organization": "سازمان نمونه",
+      "employee": "کارمند",
+      "position": "سمت",
+      "region": "منطقه",
+      "assign": "تخصیص",
+      "reassign": "تغییر تخصیص",
+      "direct-reports": "گزارش مستقیم",
+      "team-members": "اعضای تیم"
+    }
+  },
+  "team": {
+    "permissions": {
+      "title": "تیم‌ها",
+      "description": "مدیریت تیم‌ها و اعضای تیم",
+      "view": {
+        "title": "@general:actions.view.title",
+        "description": "مشاهده تیم‌ها و اعضای تیم"
+      },
+      "create": {
+        "title": "@general:actions.create.title",
+        "description": "ایجاد تیم‌های جدید"
+      },
+      "edit": {
+        "title": "@general:actions.edit.title",
+        "description": "ویرایش تیم‌های موجود"
+      },
+      "delete": {
+        "title": "@general:actions.delete.title",
+        "description": "حذف تیم‌ها"
+      },
+      "manage": {
+        "title": "مدیریت تیم",
+        "description": "دسترسی کامل به مدیریت تیم‌ها"
+      }
+    }
+  },
+  "position": {
+    "permissions": {
+      "title": "سمت‌ها",
+      "description": "مدیریت سمت‌های سازمانی",
+      "view": {
+        "title": "@general:actions.view.title",
+        "description": "مشاهده سمت‌ها"
+      },
+      "create": {
+        "title": "@general:actions.create.title",
+        "description": "ایجاد سمت‌های جدید"
+      },
+      "edit": {
+        "title": "@general:actions.edit.title",
+        "description": "ویرایش سمت‌های موجود"
+      },
+      "delete": {
+        "title": "@general:actions.delete.title",
+        "description": "حذف سمت‌ها"
+      },
+      "manage": {
+        "title": "مدیریت سمت",
+        "description": "دسترسی کامل به مدیریت سمت‌ها"
+      }
+    }
+  },
+  "job-definition": {
+    "permissions": {
+      "title": "تعاریف شغل",
+      "description": "مدیریت تعاریف شغل سازمانی",
+      "view": {
+        "title": "@general:actions.view.title",
+        "description": "مشاهده تعاریف شغل"
+      },
+      "create": {
+        "title": "@general:actions.create.title",
+        "description": "ایجاد تعاریف شغل جدید"
+      },
+      "edit": {
+        "title": "@general:actions.edit.title",
+        "description": "ویرایش تعاریف شغل موجود"
+      },
+      "delete": {
+        "title": "@general:actions.delete.title",
+        "description": "حذف تعاریف شغل"
+      },
+      "manage": {
+        "title": "مدیریت تعریف شغل",
+        "description": "دسترسی کامل به مدیریت تعاریف شغل"
+      }
+    }
+  },
+  "job-level": {
+    "permissions": {
+      "title": "سطح‌های شغل",
+      "description": "مدیریت سطح‌های شغل سازمانی",
+      "manage": {
+        "title": "مدیریت سطح شغل",
+        "description": "دسترسی کامل به مدیریت سطح‌های شغل"
+      }
+    }
+  },
+  "responsibility": {
+    "permissions": {
+      "title": "مسئولیت‌ها",
+      "description": "مدیریت مسئولیت‌های سازمانی",
+      "manage": {
+        "title": "مدیریت مسئولیت",
+        "description": "دسترسی کامل به مدیریت مسئولیت‌ها"
+      }
+    }
+  },
+  "responsibility-level": {
+    "permissions": {
+      "title": "سطوح مسئولیت",
+      "description": "مدیریت سطوح مسئولیت سازمانی",
+      "manage": {
+        "title": "مدیریت سطح مسئولیت",
+        "description": "دسترسی کامل به مدیریت سطوح مسئولیت"
+      }
+    }
+  },
+  "business-unit": {
+    "permissions": {
+      "title": "واحدهای سازمانی",
+      "description": "مدیریت واحدهای سازمانی",
+      "view": {
+        "title": "@general:actions.view.title",
+        "description": "مشاهده واحدهای سازمانی"
+      },
+      "create": {
+        "title": "@general:actions.create.title",
+        "description": "ایجاد واحدهای سازمانی جدید"
+      },
+      "edit": {
+        "title": "@general:actions.edit.title",
+        "description": "ویرایش واحدهای سازمانی موجود"
+      },
+      "delete": {
+        "title": "@general:actions.delete.title",
+        "description": "حذف واحدهای سازمانی"
+      },
+      "manage": {
+        "title": "مدیریت واحد سازمانی",
+        "description": "دسترسی کامل به مدیریت واحدهای سازمانی"
+      }
+    }
+  },
+  "business-unit-type": {
+    "permissions": {
+      "title": "انواع واحد سازمانی",
+      "description": "مدیریت انواع واحد سازمانی",
+      "manage": {
+        "title": "مدیریت نوع واحد سازمانی",
+        "description": "دسترسی کامل به مدیریت انواع واحد سازمانی"
+      }
+    }
+  },
+  "chart": {
+    "permissions": {
+      "title": "نمودار سازمان",
+      "description": "مشاهده و مدیریت نمودارهای سازمانی",
+      "manage": {
+        "title": "مدیریت نمودار سازمان",
+        "description": "دسترسی کامل به مدیریت نمودارهای سازمانی"
+      }
+    }
+  },
+  "chart-configuration": {
+    "components": {
+      "chart-configuration": {
+        "title": "پیکربندی نمودار سلسله‌مراتب سازمان",
+        "description": "سفارشی‌سازی روابط سلسله‌مراتبی سازمان شما"
+      }
+    },
+    "menus": {
+      "chart-configuration": {
+        "title": "پیکربندی نمودار سلسله‌مراتب",
+        "description": "پیکربندی تنظیمات نمودار سلسله‌مراتب"
+      }
+    }
+  },
+  "settings": {
+    "sections": {
+      "organization-settings": {
+        "nav-title": "اطلاعات شرکت",
+        "title": "اطلاعات شرکت",
+        "description": "مدیریت ترجیحات سازمانی."
+      },
+      "branding": {
+        "title": "برندسازی",
+        "description": "پیکربندی برندسازی شرکت."
+      },
+      "branding-name": {
+        "title": "نام شرکت",
+        "description": "نام رسمی شرکت را مشخص کنید."
+      },
+      "branding-name-display": {
+        "title": "نمایش نام شرکت",
+        "description": "نام شرکت در برنامه نمایش داده شود."
+      },
+      "branding-trading-name": {
+        "title": "نام تجاری شرکت",
+        "description": "نام تجاری شرکت را مشخص کنید."
+      },
+      "branding-trading-name-display": {
+        "title": "نمایش نام تجاری",
+        "description": "نام تجاری شرکت در برنامه نمایش داده شود."
+      },
+      "branding-logo": {
+        "title": "لوگوی شرکت",
+        "description": "لوگوی شرکت را بارگذاری کنید."
+      },
+      "branding-color": {
+        "title": "رنگ برند",
+        "description": "رنگ اصلی برند شرکت را انتخاب کنید."
+      },
+      "branding-copyright": {
+        "title": "متن کپی‌رایت",
+        "description": "متنی که در پانوشت برنامه نمایش داده می‌شود."
+      },
+      "branding-bio": {
+        "title": "معرفی شرکت",
+        "description": "توضیح کوتاه دربارهٔ شرکت."
+      },
+      "registration": {
+        "title": "حقوقی و ثبت",
+        "description": "اطلاعات ثبت و مجوز شرکت."
+      },
+      "business-registration-number": {
+        "title": "شماره ثبت کسب‌وکار",
+        "description": "شماره ثبت کسب‌وکار صادرشده توسط مرجع مربوط."
+      },
+      "company-registration-number": {
+        "title": "شماره ثبت شرکت",
+        "description": "شماره رسمی ثبت شرکت."
+      },
+      "licence-number": {
+        "title": "شماره مجوز",
+        "description": "شماره مجوز یا پروانهٔ شرکت."
+      },
+      "hierarchy-chart": {
+        "title": "نمودار سلسله‌مراتب",
+        "description": "ترجیحات شما هنگام باز کردن نمودار سلسله‌مراتب سازمان."
+      },
+      "hierarchy-chart-mode": {
+        "title": "حالت پیش‌فرض نمودار",
+        "description": "کدام نما ابتدا بارگذاری شود (می‌توانید از صفحهٔ نمودار هر زمان عوض کنید)."
+      },
+      "hierarchy-chart-show-vacant": {
+        "title": "نمایش صندلی‌های خالی به‌صورت پیش‌فرض",
+        "description": "در صورت فعال بودن، صندلی‌های خالی برگ در حالت‌های سازمانی و جغرافی نمایش داده می‌شوند."
+      },
+      "hierarchy-chart-viewport": {
+        "title": "ذخیرهٔ جابه‌جایی و بزرگنمایی نمودار",
+        "description": "آخرین موقعیت جابه‌جایی و بزرگنمایی شما برای هر حالت نمودار به‌صورت خودکار ذخیره می‌شود. برای بازگشت به نمای پیش‌فرض می‌توانید این فیلد را در تنظیمات خالی کنید."
+      },
+      "address": {
+        "description": "مدیریت جزئیات آدرس شرکت."
+      }
+    }
+  }
+}

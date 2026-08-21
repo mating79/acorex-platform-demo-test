@@ -1,0 +1,323 @@
+{
+  "module": {
+    "title": "Risks",
+    "description": "Configure risk assessment reference data such as likelihood scales.",
+    "menus": {
+      "root": {
+        "title": "Risks",
+        "description": "Explore risk configuration features."
+      },
+      "risk": "Risks"
+    },
+    "permissions": {
+      "title": "Risk Management",
+      "description": "Access to risk management features."
+    }
+  },
+  "risk-likelihoods": {
+    "terms": {
+      "risk-likelihood": "Risk Likelihood",
+      "risk-likelihoods": "Risk Likelihoods"
+    },
+    "menus": {
+      "root": {
+        "title": "Risk Likelihoods",
+        "description": "Configure likelihood scales for risk assessments."
+      }
+    },
+    "entities": {
+      "risk-likelihood": {
+        "title": "Risk Likelihood",
+        "plural": "Risk Likelihoods",
+        "groups": {
+          "basic-info": "Basic Information",
+          "classification": "Classification"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "e.g. GLOBAL-RARE"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter likelihood title"
+          },
+          "description": {
+            "placeholder": "Optional description of when to use this likelihood level"
+          },
+          "level-value": {
+            "title": "Level Value",
+            "placeholder": "Enter a value between 0 and 99"
+          },
+          "status": {
+            "title": "Status",
+            "options": {
+              "active": "Active",
+              "inactive": "Inactive"
+            }
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Risk Likelihoods",
+        "description": "Full access to risk likelihood records."
+      },
+      "view": {
+        "title": "View Risk Likelihoods",
+        "description": "View risk likelihood records."
+      },
+      "create": {
+        "title": "Create Risk Likelihoods",
+        "description": "Create risk likelihood records."
+      },
+      "edit": {
+        "title": "Update Risk Likelihoods",
+        "description": "Update risk likelihood records."
+      },
+      "delete": {
+        "title": "Delete Risk Likelihoods",
+        "description": "Delete risk likelihood records."
+      }
+    }
+  },
+  "risk-severities": {
+    "terms": {
+      "risk-severity": "Risk Severity",
+      "risk-severities": "Risk Severities"
+    },
+    "menus": {
+      "root": {
+        "title": "Risk Severities",
+        "description": "Configure severity scales for risk assessments."
+      }
+    },
+    "entities": {
+      "risk-severity": {
+        "title": "Risk Severity",
+        "plural": "Risk Severities",
+        "groups": {
+          "basic-info": "Basic Information",
+          "classification": "Classification"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "e.g. GLOBAL-MINOR"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter severity title"
+          },
+          "description": {
+            "placeholder": "Optional description of when to use this severity level"
+          },
+          "level-value": {
+            "title": "Level Value",
+            "placeholder": "Enter a value between 1 and 99"
+          },
+          "status": {
+            "title": "Status",
+            "options": {
+              "active": "Active",
+              "inactive": "Inactive"
+            }
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Risk Severities",
+        "description": "Full access to risk severity records."
+      },
+      "view": {
+        "title": "View Risk Severities",
+        "description": "View risk severity records."
+      },
+      "create": {
+        "title": "Create Risk Severities",
+        "description": "Create risk severity records."
+      },
+      "edit": {
+        "title": "Update Risk Severities",
+        "description": "Update risk severity records."
+      },
+      "delete": {
+        "title": "Delete Risk Severities",
+        "description": "Delete risk severity records."
+      }
+    }
+  },
+  "risk-ratings": {
+    "terms": {
+      "risk-rating": "Risk Rating",
+      "risk-ratings": "Risk Ratings"
+    },
+    "menus": {
+      "root": {
+        "title": "Risk Ratings",
+        "description": "Configure risk rating levels for risk assessments."
+      }
+    },
+    "entities": {
+      "risk-rating": {
+        "title": "Risk Rating",
+        "plural": "Risk Ratings",
+        "groups": {
+          "basic-info": "Basic Information",
+          "classification": "Classification"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Auto-generated on save"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter risk rating title"
+          },
+          "description": {
+            "placeholder": "Optional description of when to use this risk rating level"
+          },
+          "level-value": {
+            "title": "Level Value",
+            "placeholder": "Enter a value between 1 and 99"
+          },
+          "status": {
+            "title": "Status",
+            "options": {
+              "active": "Active",
+              "inactive": "Inactive"
+            }
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Risk Ratings",
+        "description": "Full access to risk rating records."
+      },
+      "view": {
+        "title": "View Risk Ratings",
+        "description": "View risk rating records."
+      },
+      "create": {
+        "title": "Create Risk Ratings",
+        "description": "Create risk rating records."
+      },
+      "edit": {
+        "title": "Update Risk Ratings",
+        "description": "Update risk rating records."
+      },
+      "delete": {
+        "title": "Delete Risk Ratings",
+        "description": "Delete risk rating records."
+      }
+    }
+  },
+  "risk-matrix-cells": {
+    "terms": {
+      "risk-matrix-cell": "Risk Matrix",
+      "risk-matrix-cells": "Risk Matrix"
+    },
+    "menus": {
+      "root": {
+        "title": "Risk Matrix",
+        "description": "Configure likelihood and severity combinations mapped to risk ratings."
+      }
+    },
+    "entities": {
+      "risk-matrix-cell": {
+        "title": "Risk Matrix",
+        "plural": "Risk Matrix",
+        "groups": {
+          "basic-info": "Basic Information",
+          "classification": "Classification",
+          "matrix-definition": "Matrix Definition"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Auto-generated on save"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter matrix cell title"
+          },
+          "likelihood-id": {
+            "title": "Likelihood"
+          },
+          "severity-id": {
+            "title": "Severity"
+          },
+          "matrix-orientation": {
+            "title": "Matrix Orientation",
+            "options": {
+              "likelihood-rows": "Likelihood as rows, Severity as columns",
+              "severity-rows": "Severity as rows, Likelihood as columns"
+            }
+          },
+          "risk-rating-id": {
+            "title": "Risk Rating"
+          },
+          "matrix": {
+            "title": "Risk Matrix"
+          },
+          "status": {
+            "title": "Status",
+            "options": {
+              "active": "Active",
+              "inactive": "Inactive"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "risk-matrix": {
+        "titles": {
+          "likelihood-rows": "Likelihood / Severity",
+          "severity-rows": "Severity / Likelihood"
+        },
+        "messages": {
+          "loading": "Loading risk matrix data..."
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Risk Matrix",
+        "description": "Full access to risk matrix records."
+      },
+      "view": {
+        "title": "View Risk Matrix",
+        "description": "View risk matrix records."
+      },
+      "create": {
+        "title": "Create Risk Matrix",
+        "description": "Create risk matrix records."
+      },
+      "edit": {
+        "title": "Update Risk Matrix",
+        "description": "Update risk matrix records."
+      },
+      "delete": {
+        "title": "Delete Risk Matrix",
+        "description": "Delete risk matrix records."
+      }
+    }
+  },
+  "catalog-scopes": {
+    "hazard": {
+      "title": "Hazard",
+      "description": "Environmental and operational risk matrices for hazard assessment and exposure control."
+    },
+    "ppe-items": {
+      "title": "PPE Items",
+      "description": "Risk matrices for personal protective equipment selection and residual risk with controls applied."
+    }
+  }
+}

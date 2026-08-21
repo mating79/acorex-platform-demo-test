@@ -1,0 +1,48 @@
+{
+  "module": {
+    "title": "WeatherAPI.com",
+    "description": "Weather data provider integration"
+  },
+  "integration": {
+    "display-name": "WeatherAPI.com",
+    "description": "Connect WeatherAPI.com to power dashboard weather widgets.",
+    "auth": {
+      "pat": {
+        "label": "API key",
+        "instructions": "Create an API key at weatherapi.com and paste it below.",
+        "token": {
+          "placeholder": "WeatherAPI.com API key"
+        }
+      }
+    },
+    "connect": {
+      "pat-dialog": {
+        "title": "Connect Account",
+        "configure-title": "Configure Account",
+        "instructions": "Create an API key at weatherapi.com and paste it below.",
+        "fields": {
+          "display-name": "Display Name",
+          "api-key": "API Key"
+        },
+        "placeholders": {
+          "display-name": "WeatherAPI.com",
+          "api-key": "WeatherAPI.com API key"
+        },
+        "actions": {
+          "save": "Save Connection"
+        },
+        "messages": {
+          "api-key-required": "API key is required."
+        }
+      }
+    }
+  },
+  "settings": {
+    "weatherapi": {
+      "section-title": "WeatherAPI.com",
+      "section-description": "Connect your WeatherAPI.com account for tenant weather widgets.",
+      "connection-title": "Account",
+      "connection-description": "Save your WeatherAPI.com API key for this tenant."
+    }
+  }
+}

@@ -1,0 +1,631 @@
+{
+  "module": {
+    "title": "مدیریت منابع انسانی",
+    "description": "مدیریت کارمندان، مهارت‌ها، انواع استخدام و درخواست‌های مرخصی",
+    "menus": {
+      "root": {
+        "title": "مدیریت منابع انسانی",
+        "description": "مدیریت منابع انسانی"
+      }
+    },
+    "permissions": {
+      "title": "مدیریت منابع انسانی",
+      "description": "مدیریت تمام جنبه‌های مدیریت منابع انسانی"
+    }
+  },
+  "employees": {
+    "terms": {
+      "employee": "کارمند",
+      "employees": "کارمندان"
+    },
+    "states": {
+      "active": "فعال",
+      "on-leave": "مرخصی",
+      "suspended": "تعلیق شده",
+      "terminated": "ترک خدمت",
+      "pending": "در انتظار"
+    },
+    "transitions": {
+      "activate": "فعال‌سازی",
+      "start-leave": "شروع مرخصی",
+      "return-from-leave": "بازگشت از مرخصی",
+      "suspend": "تعلیق",
+      "resume": "از سرگیری",
+      "terminate": "ترک خدمت"
+    },
+    "entities": {
+      "employee": {
+        "title": "کارمند",
+        "plural": "کارمندان",
+        "search-result-description": "اطلاعات کارمند و پرسنل",
+        "fields": {
+          "firstname": "نام",
+          "lastname": "نام خانوادگی",
+          "email": "ایمیل",
+          "employee-code": "کد کارمندی",
+          "role-id": "نقش",
+          "position-id": "سمت",
+          "employment-type-id": "نوع استخدام",
+          "hire-date": "تاریخ استخدام",
+          "manager": "مدیر",
+          "manager-id": "مدیر",
+          "primary-position": "سمت اصلی",
+          "primary-position-placeholder": "بر اساس واگذاری‌های سمتِ فعال محاسبه می‌شود",
+          "primary-position-description": "این مقدار به صورت خودکار از واگذاری سمت اصلیِ فعال کارمند پر می‌شود.",
+          "active-position": "سمت فعال",
+          "manager-id-placeholder": "بر اساس ساختار گزارش‌دهی محاسبه می‌شود",
+          "manager-id-description": "این مقدار به صورت خودکار از ساختار گزارش‌دهی فعلی کارمند پر می‌شود.",
+          "primary-business-unit": "واحد سازمانی",
+          "primary-business-unit-placeholder": "بر اساس واگذاری سمت اصلی فعال محاسبه می‌شود",
+          "primary-business-unit-description": "این مقدار به صورت خودکار از واحد سازمانی مرتبط با واگذاری سمت اصلی فعال کارمند پر می‌شود.",
+          "signature": "امضا",
+          "job-definition": "تعریف شغل",
+          "integration-ref": "پیوند یکپارچه‌سازی"
+        },
+        "groups": {
+          "personal-information": "اطلاعات شخصی",
+          "organizational-structure": "ساختار سازمانی",
+          "employment-profile": "پروفایل استخدامی",
+          "signature": "امضا"
+        },
+        "formats": {
+          "profile-display-name": "پروفایل"
+        },
+        "related-entities": {
+          "position-assignments": "واگذاری‌های سمت",
+          "positions": "سمت‌ها",
+          "lifecycle-events": "رویدادهای چرخه عمر",
+          "lifecycle-event-start": {
+            "title": "شروع"
+          },
+          "leave-request-start": {
+            "title": "ثبت مرخصی"
+          },
+          "login-credentials": "اطلاعات ورود"
+        }
+      }
+    },
+    "menus": {
+      "employees": {
+        "title": "کارمندان",
+        "description": "مدیریت کارمندان"
+      }
+    },
+    "permissions": {
+      "employees": {
+        "title": "مدیریت کارمندان",
+        "description": "مدیریت سوابق کارمندان",
+        "actions": {
+          "view": {
+            "title": "مشاهده کارمندان",
+            "description": "مشاهده اطلاعات کارمندان"
+          },
+          "create": {
+            "title": "ایجاد کارمند",
+            "description": "ایجاد کارمندان جدید"
+          },
+          "edit": {
+            "title": "ویرایش کارمند",
+            "description": "ویرایش اطلاعات کارمندان"
+          },
+          "delete": {
+            "title": "حذف کارمند",
+            "description": "حذف کارمندان"
+          }
+        }
+      }
+    }
+  },
+  "employment-types": {
+    "terms": {
+      "employment-type": "نوع استخدام",
+      "employment-types": "انواع استخدام"
+    },
+    "entities": {
+      "employment-type": {
+        "title": "نوع استخدام",
+        "plural": "انواع استخدام",
+        "search-result-description": "مرجع نوع استخدام و قرارداد",
+        "fields": {
+          "title": "عنوان",
+          "description": "توضیحات"
+        },
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        }
+      }
+    },
+    "menus": {
+      "employment-types": {
+        "title": "انواع استخدام",
+        "description": "مدیریت انواع استخدام"
+      }
+    },
+    "permissions": {
+      "employment-types": {
+        "title": "مدیریت انواع استخدام",
+        "description": "مدیریت انواع استخدام",
+        "actions": {
+          "view": {
+            "title": "مشاهده انواع استخدام",
+            "description": "مشاهده اطلاعات انواع استخدام"
+          },
+          "create": {
+            "title": "ایجاد نوع استخدام",
+            "description": "ایجاد انواع استخدام جدید"
+          },
+          "edit": {
+            "title": "ویرایش نوع استخدام",
+            "description": "ویرایش اطلاعات انواع استخدام"
+          },
+          "delete": {
+            "title": "حذف نوع استخدام",
+            "description": "حذف انواع استخدام"
+          }
+        }
+      }
+    }
+  },
+  "position-assignments": {
+    "terms": {
+      "position-assignment": "واگذاری سمت",
+      "position-assignments": "واگذاری‌های سمت"
+    },
+    "entities": {
+      "position-assignment": {
+        "title": "واگذاری سمت",
+        "plural": "واگذاری‌های سمت",
+        "search-result-description": "سمت و واگذاری سازمانی کارمند",
+        "actions": {
+          "assign": {
+            "title": "انتصاب",
+            "description": "ایجاد واگذاری سمت جدید"
+          },
+          "revoke": {
+            "title": "لغو",
+            "description": "پایان‌دادن به واگذاری سمت فعال",
+            "confirm": {
+              "title": "لغو واگذاری سمت",
+              "message": "آیا مطمئن هستید می‌خواهید واگذاری(های) سمت انتخاب‌شده را لغو کنید؟"
+            }
+          }
+        },
+        "fields": {
+          "employee-id": "کارمند",
+          "position-id": "سمت",
+          "status-id": "وضعیت",
+          "scope-type": "نوع دامنه",
+          "scope": "دامنه"
+        },
+        "groups": {
+          "assignment": "واگذاری"
+        }
+      }
+    },
+    "states": {
+      "active": "فعال",
+      "scheduled": "زمان‌بندی‌شده",
+      "expired": "منقضی‌شده",
+      "revoked": "لغوشده"
+    },
+    "menus": {
+      "position-assignments": {
+        "title": "واگذاری‌های سمت",
+        "description": "مدیریت واگذاری‌های سمت"
+      }
+    },
+    "permissions": {
+      "position-assignments": {
+        "title": "مدیریت واگذاری‌های سمت",
+        "description": "مدیریت واگذاری‌های سمت",
+        "actions": {
+          "view": {
+            "title": "مشاهده واگذاری‌های سمت",
+            "description": "مشاهده اطلاعات واگذاری‌های سمت"
+          },
+          "create": {
+            "title": "ایجاد واگذاری سمت",
+            "description": "ایجاد واگذاری‌های سمت جدید"
+          },
+          "edit": {
+            "title": "ویرایش واگذاری سمت",
+            "description": "ویرایش اطلاعات واگذاری‌های سمت"
+          },
+          "delete": {
+            "title": "حذف واگذاری سمت",
+            "description": "حذف واگذاری‌های سمت"
+          }
+        }
+      }
+    }
+  },
+  "organization-chart": {
+    "node-actions": {
+      "position-assignment": "مدیر",
+      "assign-manager": "تخصیص مدیر",
+      "change-manager": "تغییر مدیر",
+      "revoke-manager-assignment": "لغو انتساب مدیر",
+      "revoke-manager-assignment-confirm-title": "لغو انتساب مدیر",
+      "revoke-manager-assignment-confirm-message": "آیا مطمئن هستید می‌خواهید این انتساب مدیر را همین حالا خاتمه دهید؟",
+      "select-employee": "انتخاب کارمند"
+    }
+  },
+  "leave-types": {
+    "terms": {
+      "leave-type": "نوع مرخصی",
+      "leave-types": "انواع مرخصی"
+    },
+    "entities": {
+      "leave-type": {
+        "title": "نوع مرخصی",
+        "plural": "انواع مرخصی",
+        "search-result-description": "پیکربندی نوع مرخصی و زمان استراحت",
+        "fields": {
+          "title": "عنوان",
+          "description": "توضیحات"
+        },
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        }
+      }
+    },
+    "menus": {
+      "leave-types": {
+        "title": "انواع مرخصی",
+        "description": "مدیریت انواع مرخصی"
+      }
+    },
+    "permissions": {
+      "leave-types": {
+        "title": "مدیریت انواع مرخصی",
+        "description": "مدیریت انواع مرخصی",
+        "actions": {
+          "view": {
+            "title": "مشاهده انواع مرخصی",
+            "description": "مشاهده اطلاعات انواع مرخصی"
+          },
+          "create": {
+            "title": "ایجاد نوع مرخصی",
+            "description": "ایجاد انواع مرخصی جدید"
+          },
+          "edit": {
+            "title": "ویرایش نوع مرخصی",
+            "description": "ویرایش اطلاعات انواع مرخصی"
+          },
+          "delete": {
+            "title": "حذف نوع مرخصی",
+            "description": "حذف انواع مرخصی"
+          }
+        }
+      }
+    }
+  },
+  "lifecycle-event-types": {
+    "terms": {
+      "lifecycle-event-type": "نوع رویداد کارمند",
+      "lifecycle-event-types": "انواع رویداد کارمند"
+    },
+    "entities": {
+      "lifecycle-event-type": {
+        "title": "نوع رویداد کارمند",
+        "plural": "انواع رویداد کارمند",
+        "search-result-description": "الگوی گردش کار و پارامترهای پیش‌فرض رویدادهای چرخه عمر کارمند",
+        "fields": {
+          "title": "عنوان",
+          "description": "توضیحات"
+        }
+      }
+    },
+    "menus": {
+      "lifecycle-event-types": {
+        "title": "انواع رویداد کارمند",
+        "description": "پیکربندی قالب‌های استخدام، جدایی و سایر رویدادهای کارمند"
+      }
+    },
+    "permissions": {
+      "lifecycle-event-types": {
+        "title": "مدیریت انواع رویداد کارمند",
+        "description": "مدیریت انواع رویداد کارمند",
+        "actions": {
+          "view": {
+            "title": "مشاهده انواع رویداد کارمند",
+            "description": "مشاهده تعاریف نوع رویداد کارمند"
+          },
+          "create": {
+            "title": "ایجاد نوع رویداد کارمند",
+            "description": "ایجاد نوع رویداد کارمند جدید"
+          },
+          "edit": {
+            "title": "ویرایش نوع رویداد کارمند",
+            "description": "ویرایش تعاریف نوع رویداد کارمند"
+          },
+          "delete": {
+            "title": "حذف انواع رویداد کارمند",
+            "description": "حذف انواع رویداد کارمند"
+          }
+        }
+      }
+    }
+  },
+  "leave-requests": {
+    "terms": {
+      "leave-request": "درخواست مرخصی",
+      "leave-requests": "درخواست‌های مرخصی"
+    },
+    "entities": {
+      "leave-request": {
+        "title": "درخواست مرخصی",
+        "plural": "درخواست‌های مرخصی",
+        "search-result-description": "درخواست مرخصی و زمان استراحت کارمند",
+        "fields": {
+          "leave-type-id": "نوع مرخصی",
+          "duration-days": "مدت‌زمان (روز)",
+          "reason": "دلیل",
+          "manager-note": "یادداشت مدیر",
+          "status": "وضعیت"
+        },
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "request-details": "جزئیات درخواست"
+        }
+      }
+    },
+    "components": {
+      "rejection-dialog": {
+        "title": "رد درخواست مرخصی",
+        "message": "لطفاً دلیل رد این درخواست مرخصی را ارائه دهید.",
+        "fields": {
+          "reason-label": "دلیل رد",
+          "reason-placeholder": "دلیل رد را وارد کنید...",
+          "reason-description": "لطفاً دلیل روشنی برای رد این درخواست مرخصی ارائه کنید.",
+          "note-label": "یادداشت‌های اضافی",
+          "note-placeholder": "هرگونه یادداشت یا توضیحی اضافه کنید...",
+          "note-description": "اطلاعات اضافی اختیاری درباره رد درخواست."
+        }
+      },
+      "cancellation-dialog": {
+        "title": "لغو درخواست مرخصی",
+        "message": "لطفاً دلیل لغو این درخواست مرخصی را ارائه دهید.",
+        "fields": {
+          "reason-label": "دلیل لغو",
+          "reason-placeholder": "دلیل لغو را وارد کنید...",
+          "reason-description": "لطفاً دلیل روشنی برای لغو این درخواست مرخصی ارائه کنید.",
+          "note-label": "یادداشت‌های اضافی",
+          "note-placeholder": "هرگونه یادداشت یا توضیحی اضافه کنید...",
+          "note-description": "اطلاعات اضافی اختیاری درباره لغو."
+        },
+        "actions": {
+          "submit-text": "لغو درخواست مرخصی",
+          "cancel-text": "نگه‌داشتن درخواست"
+        }
+      },
+      "approval-dialog": {
+        "title": "تأیید درخواست مرخصی",
+        "message": "می‌توانید هنگام تأیید این درخواست مرخصی یادداشت‌های اختیاری اضافه کنید.",
+        "fields": {
+          "note-label": "یادداشت‌های تأیید",
+          "note-placeholder": "هرگونه یادداشت یا توضیحی اضافه کنید...",
+          "note-description": "یادداشت‌های اختیاری درباره تصمیم تأیید."
+        }
+      }
+    },
+    "states": {
+      "waiting-approval": "در انتظار تأیید",
+      "approved": "تأیید شده",
+      "rejected": "رد شده",
+      "cancelled": "لغو شده"
+    },
+    "tasks": {
+      "task-title": "{{employeeDisplayName}} — {{leaveTypeTitle}}",
+      "actions": {
+        "review": "بررسی",
+        "reject": "رد"
+      },
+      "manager-approval": {
+        "description": "درخواست مرخصی {{employeeDisplayName}} ({{leaveTypeTitle}}) را از {{startDate}} تا {{endDate}} ({{durationDays}} روز) بررسی کنید. در صورت آمادگی تأیید یا رد کنید."
+      }
+    },
+    "messages": {
+      "request-not-implemented": "برای این نوع مرخصی هنوز گردش‌کار تنظیم نشده است.",
+      "leave-request-start-cancelled": "شروع درخواست مرخصی لغو شد.",
+      "sign-off": "جزئیات درخواست مرخصی را بررسی کنید و برای تأیید امضا کنید.",
+      "rejection": "دلیل رد این درخواست مرخصی را وارد کنید.",
+      "replace-open": {
+        "confirm": {
+          "title": "درخواست مرخصی در جریان است",
+          "message": "یک درخواست {{leaveTypeTitle}} در وضعیت در انتظار برای این کارمند وجود دارد. آن را ببندید و درخواست جدید شروع شود؟ گردش تأیید فعلی لغو می‌شود."
+        }
+      }
+    },
+    "menus": {
+      "leave-requests": {
+        "title": "درخواست‌های مرخصی",
+        "description": "مدیریت درخواست‌های مرخصی"
+      },
+      "appointment-board": {
+        "title": "برنامه رویداد",
+        "description": "مدیریت برنامه رویداد"
+      }
+    },
+    "permissions": {
+      "leave-requests": {
+        "title": "مدیریت درخواست‌های مرخصی",
+        "description": "مدیریت درخواست‌های مرخصی",
+        "actions": {
+          "view": {
+            "title": "مشاهده درخواست‌های مرخصی",
+            "description": "مشاهده اطلاعات درخواست‌های مرخصی"
+          },
+          "create": {
+            "title": "ایجاد درخواست مرخصی",
+            "description": "ایجاد درخواست‌های مرخصی جدید"
+          },
+          "edit": {
+            "title": "ویرایش درخواست مرخصی",
+            "description": "ویرایش اطلاعات درخواست‌های مرخصی"
+          },
+          "delete": {
+            "title": "حذف درخواست مرخصی",
+            "description": "حذف درخواست‌های مرخصی"
+          }
+        }
+      }
+    }
+  },
+  "lifecycle-events": {
+    "states": {
+      "in-progress": "در حال انجام",
+      "completed": "تکمیل‌شده",
+      "cancelled": "لغوشده"
+    },
+    "transitions": {
+      "await-sign-off": "انتظار تأیید",
+      "complete": "تکمیل"
+    },
+    "messages": {
+      "event-not-implemented": "این رویداد چرخه عمر هنوز راه‌اندازی نشده است.",
+      "lifecycle-start-cancelled": "شروع رویداد چرخه عمر لغو شد.",
+      "sign-off": "پاسخ‌های پرسشنامه را بازبینی کنید و برای اعمال وضعیت کارمند تأیید و امضا کنید.",
+      "rejection": "دلیل رد این رویداد چرخه عمر را وارد کنید.",
+      "replace-open": {
+        "confirm": {
+          "title": "رویداد چرخه عمر در حال انجام است",
+          "message": "یک {{eventTypeTitle}} در حال انجام برای این کارمند وجود دارد. آن را ببندیم و مورد جدید شروع کنیم؟ چک‌لیست و تأییدهای فعلی لغو می‌شوند."
+        }
+      }
+    },
+    "tasks": {
+      "task-title": "{{eventTypeTitle}} — {{employeeDisplayName}}",
+      "questionnaire": {
+        "description": "پرسشنامه را برای {{employeeDisplayName}} ({{eventTypeTitle}}) تکمیل کنید. تاریخ اثر: {{effectiveDate}}. برای شروع، «باز کردن پرسشنامه» را بزنید."
+      },
+      "manager-approval": {
+        "description": "پاسخ‌های پرسشنامه را برای {{employeeDisplayName}} ({{eventTypeTitle}}) بازبینی کنید و برای اعمال وضعیت کارمند تأیید و امضا یا رد کنید. تاریخ اثر: {{effectiveDate}}."
+      }
+    },
+    "entities": {
+      "lifecycle-event": {
+        "title": "رویداد چرخه عمر",
+        "plural": "رویدادهای چرخه عمر",
+        "search-result-description": "استخدام، جدایی یا سایر رویدادهای هدایت‌شده در چرخه عمر کارمند",
+        "groups": {
+          "event-details": "جزئیات"
+        },
+        "fields": {
+          "event-type-id": "رویداد",
+          "assigned-to-user-id": "مسئول",
+          "pinned-workflow-version": "نسخه گردش کار",
+          "workflow-instance-id": "نمونه گردش‌کار",
+          "effective-date": "تاریخ",
+          "notes": "یادداشت‌ها"
+        }
+      }
+    },
+    "menus": {
+      "lifecycle-events": {
+        "title": "رویدادهای چرخه عمر",
+        "description": "پیگیری استخدام، جدایی و رویدادهای مشابه در چرخه عمر کارمند."
+      }
+    },
+    "permissions": {
+      "lifecycle-events": {
+        "title": "مدیریت رویدادهای چرخه عمر",
+        "description": "مدیریت نمونه‌های رویداد چرخه عمر (استخدام، جدایی و جریان‌های مشابه).",
+        "actions": {
+          "view": {
+            "title": "مشاهده رویدادهای چرخه عمر",
+            "description": "مشاهده نمونه‌های رویداد چرخه عمر"
+          },
+          "create": {
+            "title": "ایجاد رویداد چرخه عمر",
+            "description": "شروع رویداد جدید چرخه عمر برای یک کارمند"
+          },
+          "edit": {
+            "title": "ویرایش رویداد چرخه عمر",
+            "description": "ویرایش نمونه‌های رویداد چرخه عمر"
+          },
+          "delete": {
+            "title": "حذف رویدادهای چرخه عمر",
+            "description": "حذف نمونه‌های رویداد چرخه عمر"
+          }
+        }
+      }
+    }
+  },
+  "features": {
+    "employee-management": {
+      "title": "مدیریت کارمندان",
+      "description": "مدیریت کارمندان، انواع استخدام و واگذاری‌های سمت"
+    },
+    "leave-management": {
+      "title": "مدیریت مرخصی",
+      "description": "مدیریت انواع مرخصی و درخواست‌های مرخصی"
+    },
+    "lifecycle-management": {
+      "title": "جریان‌های استخدام",
+      "description": "پیکربندی قالب فرایندها و پیگیری جریان‌هایی مانند استخدام و ورود و جدایی."
+    }
+  },
+  "settings": {
+    "nav-title": "منابع انسانی",
+    "title": "تنظیمات منابع انسانی",
+    "description": "تنظیمات ماژول مدیریت منابع انسانی"
+  },
+  "catalog-scopes": {
+    "hr": {
+      "title": "منابع انسانی",
+      "description": "پرسشنامه‌ها، آیتم‌های بانک سؤال و تعریف گردش‌کار برای چرخه عمر کارمند و مدیریت مرخصی."
+    }
+  },
+  "task-providers": {
+    "leave-request": {
+      "title": "درخواست‌های مرخصی",
+      "description": "وظایف مربوط به درخواست‌های مرخصی"
+    }
+  },
+  "profile-page": {
+    "groups": {
+      "documents": {
+        "title": "اسناد",
+        "empty": "سندی برای پروفایل شما موجود نیست."
+      }
+    },
+    "sections": {
+      "my-leave-requests": {
+        "title": "درخواست‌های مرخصی من",
+        "description": "درخواست‌های مرخصی و وضعیت تأیید آن‌ها را ببینید.",
+        "actions": {
+          "manage": "مشاهده درخواست‌های مرخصی"
+        }
+      }
+    },
+    "commands": {
+      "view-my-leave-requests": {
+        "coming-soon": "درخواست‌های مرخصی به‌زودی در دسترس خواهند بود."
+      },
+      "edit-personal-info": {
+        "dialog": {
+          "title": "اطلاعات پایه"
+        },
+        "messages": {
+          "success": "اطلاعات شما به‌روزرسانی شد.",
+          "required-name": "نام و نام خانوادگی الزامی است.",
+          "no-employee": "پروفایل کارمندی به حساب شما متصل نیست.",
+          "person-not-found": "رکورد شخصی شما بارگذاری نشد."
+        }
+      },
+      "edit-signature": {
+        "dialog": {
+          "title": "امضا"
+        },
+        "messages": {
+          "success": "امضای شما ذخیره شد.",
+          "removed": "امضای شما حذف شد.",
+          "required": "قبل از ذخیره، امضای خود را ترسیم کنید.",
+          "no-employee": "پروفایل کارمندی به حساب شما متصل نیست.",
+          "employee-not-found": "رکورد کارمندی شما بارگذاری نشد."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,407 @@
+{
+  "module": {
+    "title": "Attendance Management",
+    "description": "Track employee attendance, schedules, corrections, and reports",
+    "permissions": {
+      "title": "Attendance Management",
+      "description": "Manage attendance tracking, schedules, and reporting"
+    }
+  },
+  "features": {
+    "attendance-tracking": {
+      "title": "Attendance Tracking",
+      "description": "Enable check-in, check-out, and break tracking"
+    },
+    "attendance-correction": {
+      "title": "Attendance Correction",
+      "description": "Enable attendance correction requests and approvals"
+    },
+    "attendance-reporting": {
+      "title": "Attendance Reporting",
+      "description": "Enable team boards and attendance reports"
+    },
+    "schedule-management": {
+      "title": "Schedule Management",
+      "description": "Manage work schedules, shifts, and employee assignments"
+    }
+  },
+  "permissions": {
+    "group": {
+      "title": "Attendance Management",
+      "description": "Manage attendance tracking, schedules, and reporting"
+    },
+    "work-schedule": {
+      "management": { "title": "Work Schedules", "description": "Manage work schedule definitions" },
+      "view": { "title": "View work schedules" },
+      "create": { "title": "Create work schedules" },
+      "update": { "title": "Update work schedules" },
+      "delete": { "title": "Delete work schedules" }
+    },
+    "shift": {
+      "management": { "title": "Shifts", "description": "Manage shift definitions" },
+      "view": { "title": "View shifts" },
+      "create": { "title": "Create shifts" },
+      "update": { "title": "Update shifts" },
+      "delete": { "title": "Delete shifts" }
+    },
+    "employee-schedule-assignment": {
+      "management": { "title": "Schedule Assignments", "description": "Assign work schedules to employees" },
+      "view": { "title": "View schedule assignments" },
+      "create": { "title": "Create schedule assignments" },
+      "update": { "title": "Update schedule assignments" },
+      "delete": { "title": "Delete schedule assignments" }
+    },
+    "attendance-session": {
+      "management": { "title": "Attendance Sessions", "description": "Manage attendance sessions" },
+      "view": { "title": "View attendance sessions" },
+      "check-in-out": { "title": "Check In / Out" },
+      "team-view": { "title": "View team attendance" }
+    },
+    "attendance-correction-request": {
+      "management": { "title": "Correction Requests", "description": "Manage attendance correction requests" },
+      "view": { "title": "View correction requests" },
+      "submit": { "title": "Submit correction requests" },
+      "approve": { "title": "Approve correction requests" }
+    },
+    "attendance-report": {
+      "view": { "title": "View attendance reports", "description": "View attendance reports and team boards" },
+      "export": { "title": "Export attendance data" }
+    }
+  },
+  "pages": {
+    "my-attendance": {
+      "title": "My Attendance",
+      "actions": {
+        "check-in": "Check In",
+        "check-out": "Check Out",
+        "break-start": "Start Break",
+        "break-end": "End Break"
+      }
+    },
+    "team-attendance-board": {
+      "title": "Team Attendance Board"
+    },
+    "work-schedule-calendar": {
+      "title": "Work Schedule Calendar",
+      "description": "View weekly shifts and holidays on a monthly calendar"
+    }
+  },
+  "work-schedules": {
+    "menus": {
+      "work-schedules": {
+        "title": "Work Schedules"
+      }
+    },
+    "permissions": {
+      "work-schedules": {
+        "title": "Work Schedules",
+        "description": "Manage work schedule definitions",
+        "actions": {
+          "view": { "title": "View" },
+          "create": { "title": "Create" },
+          "edit": { "title": "Edit" },
+          "delete": { "title": "Delete" }
+        }
+      }
+    },
+    "entities": {
+      "work-schedule": {
+        "title": "Work Schedule",
+        "plural": "Work Schedules",
+        "fields": {
+          "code": { "title": "Code" },
+          "name": { "title": "Name" },
+          "timezone": { "title": "Timezone" },
+          "is-default": { "title": "Default" },
+          "is-active": { "title": "Active" }
+        }
+      }
+    }
+  },
+  "shifts": {
+    "menus": {
+      "shifts": {
+        "title": "Shifts"
+      }
+    },
+    "permissions": {
+      "shifts": {
+        "title": "Shifts",
+        "description": "Manage shift definitions",
+        "actions": {
+          "view": { "title": "View" },
+          "create": { "title": "Create" },
+          "edit": { "title": "Edit" },
+          "delete": { "title": "Delete" }
+        }
+      }
+    },
+    "entities": {
+      "shift": {
+        "title": "Shift",
+        "plural": "Shifts",
+        "groups": {
+          "timing": "Timing"
+        },
+        "fields": {
+          "work-schedule-id": { "title": "Work Schedule" },
+          "code": { "title": "Code" },
+          "name": { "title": "Name" },
+          "day-of-week": {
+            "title": "Day of Week",
+            "options": {
+              "sunday": "Sunday",
+              "monday": "Monday",
+              "tuesday": "Tuesday",
+              "wednesday": "Wednesday",
+              "thursday": "Thursday",
+              "friday": "Friday",
+              "saturday": "Saturday"
+            }
+          },
+          "start-time": { "title": "Start Time" },
+          "end-time": { "title": "End Time" },
+          "break-minutes": { "title": "Break (minutes)" },
+          "is-active": { "title": "Active" }
+        }
+      }
+    }
+  },
+  "employee-schedule-assignments": {
+    "menus": {
+      "employee-schedule-assignments": {
+        "title": "Schedule Assignments"
+      }
+    },
+    "permissions": {
+      "employee-schedule-assignments": {
+        "title": "Schedule Assignments",
+        "description": "Assign work schedules to employees",
+        "actions": {
+          "view": { "title": "View" },
+          "create": { "title": "Create" },
+          "edit": { "title": "Edit" },
+          "delete": { "title": "Delete" }
+        }
+      }
+    },
+    "entities": {
+      "employee-schedule-assignment": {
+        "title": "Schedule Assignment",
+        "plural": "Schedule Assignments",
+        "fields": {
+          "employee-id": { "title": "Employee" },
+          "work-schedule-id": { "title": "Work Schedule" },
+          "effective-from": { "title": "Effective From" },
+          "effective-to": { "title": "Effective To" },
+          "is-primary": { "title": "Primary" }
+        }
+      }
+    }
+  },
+  "attendance-events": {
+    "entities": {
+      "attendance-event": {
+        "title": "Attendance Event",
+        "plural": "Attendance Events",
+        "groups": {
+          "details": "Details"
+        },
+        "fields": {
+          "employee-id": { "title": "Employee" },
+          "session-id": { "title": "Session" },
+          "event-type": { "title": "Event Type" },
+          "occurred-at": { "title": "Occurred At" },
+          "source": { "title": "Source" },
+          "location": { "title": "Location" },
+          "notes": { "title": "Notes" },
+          "is-corrected": { "title": "Corrected" }
+        }
+      }
+    }
+  },
+  "attendance-sessions": {
+    "states": {
+      "open": "Open",
+      "on-break": "On Break",
+      "closed": "Closed"
+    },
+    "transitions": {
+      "start-break": "Start Break",
+      "end-break": "End Break",
+      "check-out": "Check Out"
+    },
+    "permissions": {
+      "attendance-sessions": {
+        "title": "Attendance Sessions",
+        "description": "Manage attendance sessions",
+        "actions": {
+          "view": { "title": "View" },
+          "check-in-out": { "title": "Check In / Out" },
+          "team-view": { "title": "Team View" }
+        }
+      }
+    },
+    "entities": {
+      "attendance-session": {
+        "title": "Attendance Session",
+        "plural": "Attendance Sessions",
+        "groups": {
+          "timing": "Timing"
+        },
+        "fields": {
+          "employee-id": { "title": "Employee" },
+          "work-date": { "title": "Work Date" },
+          "status-id": { "title": "Status" },
+          "shift-id": { "title": "Shift" },
+          "check-in-at": { "title": "Check In" },
+          "check-out-at": { "title": "Check Out" },
+          "total-work-seconds": { "title": "Work Duration" },
+          "total-break-seconds": { "title": "Break Duration" },
+          "timezone": { "title": "Timezone" }
+        }
+      }
+    }
+  },
+  "attendance-daily-summaries": {
+    "states": {
+      "draft": "Draft",
+      "calculated": "Calculated",
+      "needs-review": "Needs Review",
+      "locked": "Locked"
+    },
+    "transitions": {
+      "calculate": "Calculate",
+      "flag-review": "Flag for Review",
+      "lock": "Lock",
+      "resolve": "Resolve"
+    },
+    "entities": {
+      "attendance-daily-summary": {
+        "title": "Daily Summary",
+        "plural": "Daily Summaries",
+        "groups": {
+          "metrics": "Metrics"
+        },
+        "fields": {
+          "employee-id": { "title": "Employee" },
+          "work-date": { "title": "Work Date" },
+          "status-id": { "title": "Status" },
+          "scheduled-seconds": { "title": "Scheduled" },
+          "worked-seconds": { "title": "Worked" },
+          "break-seconds": { "title": "Break" },
+          "overtime-seconds": { "title": "Overtime" },
+          "late-seconds": { "title": "Late" },
+          "early-leave-seconds": { "title": "Early Leave" },
+          "absence-type": { "title": "Absence Type" },
+          "leave-request-id": { "title": "Leave Request" },
+          "is-holiday": { "title": "Holiday" },
+          "notes": { "title": "Notes" }
+        }
+      }
+    }
+  },
+  "attendance-correction-requests": {
+    "menus": {
+      "attendance-correction-requests": {
+        "title": "Correction Requests"
+      }
+    },
+    "states": {
+      "draft": "Draft",
+      "waiting-approval": "Waiting Approval",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "transitions": {
+      "submit": "Submit",
+      "approve": "Approve",
+      "reject": "Reject",
+      "reopen": "Reopen"
+    },
+    "permissions": {
+      "attendance-correction-requests": {
+        "title": "Correction Requests",
+        "description": "Manage attendance correction requests",
+        "actions": {
+          "view": { "title": "View" },
+          "submit": { "title": "Submit" },
+          "approve": { "title": "Approve" }
+        }
+      }
+    },
+    "entities": {
+      "attendance-correction-request": {
+        "title": "Correction Request",
+        "plural": "Correction Requests",
+        "groups": {
+          "review": "Review"
+        },
+        "fields": {
+          "employee-id": { "title": "Employee" },
+          "work-date": { "title": "Work Date" },
+          "requested-by-id": { "title": "Requested By" },
+          "reason": { "title": "Reason" },
+          "status-id": { "title": "Status" },
+          "proposed-changes": { "title": "Proposed Changes" },
+          "review-notes": { "title": "Review Notes" }
+        }
+      }
+    }
+  },
+  "overtime-records": {
+    "entities": {
+      "overtime-record": {
+        "title": "Overtime Record",
+        "plural": "Overtime Records",
+        "fields": {
+          "employee-id": { "title": "Employee" },
+          "work-date": { "title": "Work Date" },
+          "overtime-seconds": { "title": "Overtime" },
+          "approved-seconds": { "title": "Approved Overtime" },
+          "status-id": { "title": "Status" },
+          "daily-summary-id": { "title": "Daily Summary" },
+          "notes": { "title": "Notes" }
+        }
+      }
+    }
+  },
+  "attendance-policies": {
+    "menus": {
+      "attendance-policies": {
+        "title": "Attendance Policies"
+      }
+    },
+    "entities": {
+      "attendance-policy": {
+        "title": "Attendance Policy",
+        "plural": "Attendance Policies",
+        "groups": {
+          "rules": "Rules"
+        },
+        "fields": {
+          "code": { "title": "Code" },
+          "name": { "title": "Name" },
+          "grace-period-minutes": { "title": "Grace Period (minutes)" },
+          "auto-close-after-hours": { "title": "Auto-close After (hours)" },
+          "require-location": { "title": "Require Location" },
+          "allow-remote-check-in": { "title": "Allow Remote Check-in" },
+          "late-threshold-minutes": { "title": "Late Threshold (minutes)" },
+          "overtime-threshold-minutes": { "title": "Overtime Threshold (minutes)" },
+          "is-active": { "title": "Active" }
+        }
+      }
+    }
+  },
+  "reports": {
+    "permissions": {
+      "reports": {
+        "title": "Attendance Reports",
+        "description": "View and export attendance reports",
+        "actions": {
+          "export": { "title": "Export" }
+        }
+      }
+    }
+  }
+}

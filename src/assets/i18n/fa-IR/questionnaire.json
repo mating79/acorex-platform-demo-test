@@ -1,0 +1,195 @@
+{
+  "datasources": {
+    "yes-no-options": {
+      "title": "گزینه‌های بله/خیر",
+      "columns": {
+        "value": {
+          "title": "مقدار"
+        },
+        "title": {
+          "title": "عنوان"
+        }
+      },
+      "samples": {
+        "yes": "بله",
+        "no": "خیر"
+      }
+    },
+    "rating-scale-options": {
+      "title": "گزینه‌های مقیاس امتیازدهی",
+      "columns": {
+        "value": {
+          "title": "مقدار"
+        },
+        "title": {
+          "title": "عنوان"
+        },
+        "description": {
+          "title": "توضیحات"
+        }
+      },
+      "samples": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "descriptions": {
+          "1": "ضعیف",
+          "2": "متوسط پایین",
+          "3": "خوب",
+          "4": "خیلی خوب",
+          "5": "عالی"
+        }
+      }
+    },
+    "agreement-scale-options": {
+      "title": "گزینه‌های مقیاس توافق",
+      "columns": {
+        "value": {
+          "title": "مقدار"
+        },
+        "title": {
+          "title": "عنوان"
+        }
+      },
+      "samples": {
+        "strongly-disagree": "کاملاً مخالفم",
+        "disagree": "مخالفم",
+        "neutral": "خنثی",
+        "agree": "موافقم",
+        "strongly-agree": "کاملاً موافقم"
+      }
+    },
+    "frequency-options": {
+      "title": "گزینه‌های فراوانی",
+      "columns": {
+        "value": {
+          "title": "مقدار"
+        },
+        "title": {
+          "title": "عنوان"
+        }
+      },
+      "samples": {
+        "never": "هرگز",
+        "rarely": "به ندرت",
+        "sometimes": "گاهی",
+        "often": "غالباً",
+        "always": "همیشه"
+      }
+    },
+    "satisfaction-options": {
+      "title": "گزینه‌های رضایت",
+      "columns": {
+        "value": {
+          "title": "مقدار"
+        },
+        "title": {
+          "title": "عنوان"
+        }
+      },
+      "samples": {
+        "very-dissatisfied": "بسیار ناراضی",
+        "dissatisfied": "ناراضی",
+        "neutral": "خنثی",
+        "satisfied": "راضی",
+        "very-satisfied": "بسیار راضی"
+      }
+    },
+    "priority-options": {
+      "title": "گزینه‌های اولویت",
+      "columns": {
+        "value": {
+          "title": "مقدار"
+        },
+        "title": {
+          "title": "عنوان"
+        }
+      },
+      "samples": {
+        "low": "کم",
+        "medium": "متوسط",
+        "high": "زیاد",
+        "critical": "بحرانی"
+      }
+    },
+    "yes-no-maybe-options": {
+      "title": "بله / خیر / شاید",
+      "columns": {
+        "value": { "title": "مقدار" },
+        "title": { "title": "عنوان" }
+      },
+      "samples": {
+        "yes": "بله",
+        "no": "خیر",
+        "maybe": "شاید"
+      }
+    },
+    "yes-no-na-options": {
+      "title": "بله / خیر / نامعتبر",
+      "columns": {
+        "value": { "title": "مقدار" },
+        "title": { "title": "عنوان" }
+      },
+      "samples": {
+        "yes": "بله",
+        "no": "خیر",
+        "not-applicable": "نامعتبر"
+      }
+    },
+    "gender-options": {
+      "title": "جنسیت",
+      "columns": {
+        "value": { "title": "مقدار" },
+        "title": { "title": "عنوان" }
+      },
+      "samples": {
+        "female": "زن",
+        "male": "مرد",
+        "non-binary": "غیر دوتایی",
+        "prefer-not-to-say": "تمایلی به اعلام ندارم",
+        "other": "سایر"
+      }
+    },
+    "rating-1-10-options": {
+      "title": "امتیاز (۱ تا ۱۰)",
+      "columns": {
+        "value": { "title": "مقدار" },
+        "title": { "title": "عنوان" }
+      },
+      "samples": {
+        "1": "۱",
+        "2": "۲",
+        "3": "۳",
+        "4": "۴",
+        "5": "۵",
+        "6": "۶",
+        "7": "۷",
+        "8": "۸",
+        "9": "۹",
+        "10": "۱۰"
+      }
+    },
+    "nps-scale-options": {
+      "title": "شاخص وفاداری خالص (۰ تا ۱۰)",
+      "columns": {
+        "value": { "title": "مقدار" },
+        "title": { "title": "عنوان" }
+      },
+      "samples": {
+        "0": "۰",
+        "1": "۱",
+        "2": "۲",
+        "3": "۳",
+        "4": "۴",
+        "5": "۵",
+        "6": "۶",
+        "7": "۷",
+        "8": "۸",
+        "9": "۹",
+        "10": "۱۰"
+      }
+    }
+  }
+}

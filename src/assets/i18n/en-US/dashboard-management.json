@@ -1,0 +1,112 @@
+{
+  "module": {
+    "title": "Dashboard Management",
+    "description": "Manage dashboards and widgets",
+    "menus": {
+      "root": {
+        "title": "Dashboard Management",
+        "description": "Manage dashboards"
+      }
+    }
+  },
+  "dashboards": {
+    "entities": {
+      "dashboard": {
+        "pages": {
+          "layout": {
+            "title": "Layout",
+            "description": "Arrange widgets on the grid"
+          }
+        },
+        "groups": {
+          "access": {
+            "title": "Access & Visibility"
+          }
+        },
+        "fields": {
+          "description": {
+            "title": "Description"
+          },
+          "scope": {
+            "title": "Scope",
+            "options": {
+              "tenant": "Tenant",
+              "personal": "Personal",
+              "entity": "Entity"
+            }
+          }
+        },
+        "views": {
+          "tenant": "Tenant dashboards",
+          "personal": "Personal dashboards"
+        }
+      }
+    },
+    "actions": {
+      "open-entity-dashboard": "Open dashboard"
+    },
+    "widget": {
+      "entity-dashboard": {
+        "title": "Entity dashboard",
+        "description": "Dashboard scoped to the current entity record"
+      }
+    },
+    "terms": {
+      "dashboard": "Dashboard",
+      "dashboards": "Dashboards"
+    },
+    "menus": {
+      "dashboards": {
+        "title": "Dashboards",
+        "description": "Manage dashboards"
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "Dashboard Management",
+        "description": "Manage all dashboards"
+      },
+      "dashboards": {
+        "title": "Dashboards",
+        "actions": {
+          "manage": {
+            "title": "Dashboard Management",
+            "description": "Manage dashboards"
+          },
+          "view": {
+            "title": "@general:actions.view.title",
+            "description": "View dashboards"
+          },
+          "create": {
+            "title": "@general:actions.create.title",
+            "description": "Create new dashboards"
+          },
+          "edit": {
+            "title": "@general:actions.edit.title",
+            "description": "Edit existing dashboards"
+          },
+          "delete": {
+            "title": "@general:actions.delete.title",
+            "description": "Delete dashboards"
+          }
+        }
+      }
+    }
+  },
+  "shared-widgets": {
+    "widget-picker-category": {
+      "chart": "Charts",
+      "utility": "Utilities"
+    },
+    "widget-picker-sub-categories": {
+      "chart-kpi": "KPI",
+      "chart-cartesian": "Bar & line",
+      "chart-radial": "Donut & gauge",
+      "chart-specialized": "Heatmap & funnel",
+      "utility-shortcut": "Shortcuts",
+      "utility-time": "Time & calendar",
+      "utility-weather": "Weather",
+      "utility-notes": "Notes"
+    }
+  }
+}

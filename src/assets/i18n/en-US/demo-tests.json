@@ -1,0 +1,19 @@
+{
+  "ai-direct": {
+    "title": "Direct AI Chat",
+    "description": "Talk to the AI engine without the conversation chat layer.",
+    "description-with-timing": "Last reply {{elapsed}} ms. First token {{firstToken}} ms.",
+    "description-with-elapsed": "Last reply {{elapsed}} ms.",
+    "assist-label": "Assistant",
+    "assist-unknown": "Default Assistant",
+    "empty": "Send a text message. This page calls the AI engine directly — no conversation and no files.",
+    "placeholder": "Type a message",
+    "timing": {
+      "elapsed": "{{ms}} ms",
+      "first-token": "First Token {{ms}} ms"
+    },
+    "errors": {
+      "run-failed": "The AI engine could not complete this reply."
+    }
+  }
+}

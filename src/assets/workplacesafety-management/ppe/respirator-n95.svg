@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="N95 respirator">
+  <path fill="#F3F4F6" d="M18 18h28a12 12 0 0 1 12 12v6a12 12 0 0 1-12 12H18a12 12 0 0 1-12-12v-6a12 12 0 0 1 12-12z"/>
+  <rect fill="#D1D5DB" x="24" y="28" width="16" height="12" rx="2"/>
+  <path fill="#9CA3AF" d="M30 40v8c0 2 2 4 4 4h4v-3h-3c-1 0-1-1-1-1v-8h-4z"/>
+  <text x="22" y="25" fill="#111827" font-size="7" font-family="Arial,sans-serif" font-weight="700">N95</text>
+</svg>

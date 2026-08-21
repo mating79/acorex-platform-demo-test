@@ -1,0 +1,296 @@
+{
+  "module": {
+    "title": "Location Management",
+    "description": "Manage locations, location types, and geographic regions",
+    "menus": {
+      "root": {
+        "title": "Location Management",
+        "description": "Manage locations and geographic data"
+      },
+      "configuration": {
+        "title": "Locations",
+        "description": "Location types and geographic regions"
+      }
+    },
+    "permissions": {
+      "title": "Location Management",
+      "description": "Manage all aspects of location management"
+    }
+  },
+  "locations": {
+    "terms": {
+      "location": "Location",
+      "locations": "Locations"
+    },
+    "entities": {
+      "location": {
+        "title": "Location",
+        "plural": "Locations",
+        "formats": {
+          "display-name": "Location"
+        },
+        "related-entities": {
+          "assignments": {
+            "title": "Assignments"
+          }
+        },
+        "fields": {
+          "name": "Location Name",
+          "code": "Code",
+          "location-type": "Location Type",
+          "label": "Address Type",
+          "label-create-title": "Create Address Type",
+          "street1": "Street Address",
+          "street2": "Address Line 2",
+          "city": "City",
+          "state": "State/Province",
+          "country": "Country",
+          "postal-code": "Postal Code",
+          "coordinates": "Map Coordinates",
+          "show-map": "Show Map",
+          "parent-location": "Parent Location",
+          "district": "District",
+          "timezone": "Time Zone",
+          "external-id": "External System ID",
+          "valid-from": "Valid From",
+          "valid-to": "Valid To"
+        },
+        "groups": {
+          "address-details": "Address Details",
+          "geographic-location": "Geographic Location",
+          "geographic-details": "Geographic Details"
+        }
+      }
+    },
+    "menus": {
+      "locations": {
+        "title": "Locations",
+        "description": "Manage locations"
+      }
+    },
+    "permissions": {
+      "locations": {
+        "title": "Location Management",
+        "description": "Manage locations",
+        "actions": {
+          "view": {
+            "title": "View Locations",
+            "description": "View location information"
+          },
+          "create": {
+            "title": "Create Location",
+            "description": "Create new locations"
+          },
+          "edit": {
+            "title": "Edit Location",
+            "description": "Edit location information"
+          },
+          "delete": {
+            "title": "Delete Locations",
+            "description": "Delete locations"
+          }
+        }
+      }
+    }
+  },
+  "location-types": {
+    "terms": {
+      "location-type": "Location Type",
+      "location-types": "Location Types"
+    },
+    "entities": {
+      "location-type": {
+        "title": "Location Type",
+        "plural": "Location Types"
+      }
+    },
+    "menus": {
+      "location-types": {
+        "title": "Location Types",
+        "description": "Manage location types"
+      }
+    },
+    "permissions": {
+      "location-types": {
+        "title": "Location Type Management",
+        "description": "Manage location types",
+        "actions": {
+          "view": {
+            "title": "View Location Types",
+            "description": "View location type information"
+          },
+          "create": {
+            "title": "Create Location Type",
+            "description": "Create new location types"
+          },
+          "edit": {
+            "title": "Edit Location Type",
+            "description": "Edit location type information"
+          },
+          "delete": {
+            "title": "Delete Location Types",
+            "description": "Delete location types"
+          }
+        }
+      }
+    }
+  },
+  "location-roles": {
+    "terms": {
+      "location-role": "Location Role",
+      "location-roles": "Location Roles"
+    },
+    "entities": {
+      "location-role": {
+        "title": "Location Role",
+        "plural": "Location Roles",
+        "search-result-description": "Purpose a location serves for an owner (e.g., Billing Address, Head Office)",
+        "fields": {
+          "name": {
+            "title": "Name",
+            "placeholder": "Enter internal name (e.g., billing-address)"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter display title (e.g., Billing Address)"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Enter role description"
+          }
+        }
+      }
+    },
+    "menus": {
+      "location-roles": {
+        "title": "Location Roles",
+        "description": "Manage location roles (Billing, Shipping, Head Office, etc.)"
+      }
+    },
+    "permissions": {
+      "location-roles": {
+        "title": "Location Role Management",
+        "description": "Manage location roles",
+        "actions": {
+          "view": {
+            "title": "View Location Roles",
+            "description": "View location role information"
+          },
+          "create": {
+            "title": "Create Location Role",
+            "description": "Create new location roles"
+          },
+          "edit": {
+            "title": "Edit Location Role",
+            "description": "Edit location role information"
+          },
+          "delete": {
+            "title": "Delete Location Roles",
+            "description": "Delete location roles"
+          }
+        }
+      }
+    }
+  },
+  "geographic-regions": {
+    "terms": {
+      "geographic-region": "Geographic Region",
+      "geographic-regions": "Geographic Regions"
+    },
+    "entities": {
+      "geographic-region": {
+        "title": "Geographic Region",
+        "plural": "Geographic Regions",
+        "fields": {
+          "type": "Type",
+          "parent-region": "Parent Region",
+          "has-child": "Has Child Regions",
+          "coordinates": "Coordinates",
+          "timezone": "Timezone",
+          "population": "Population",
+          "area": "Area (sq km)",
+          "currency": "Currency"
+        },
+        "groups": {
+          "hierarchy": "Hierarchy",
+          "geographic-data": "Geographic Data"
+        }
+      }
+    },
+    "menus": {
+      "geographic-regions": {
+        "title": "Geographic Regions",
+        "description": "Manage geographic regions"
+      }
+    },
+    "permissions": {
+      "geographic-regions": {
+        "title": "Geographic Region Management",
+        "description": "Manage geographic regions",
+        "actions": {
+          "view": {
+            "title": "View Geographic Regions",
+            "description": "View geographic region information"
+          },
+          "create": {
+            "title": "Create Geographic Region",
+            "description": "Create new geographic regions"
+          },
+          "edit": {
+            "title": "Edit Geographic Region",
+            "description": "Edit geographic region information"
+          },
+          "delete": {
+            "title": "Delete Geographic Regions",
+            "description": "Delete geographic regions"
+          }
+        }
+      }
+    }
+  },
+  "location-assignments": {
+    "terms": {
+      "location-assignment": "Location Assignment",
+      "location-assignments": "Location Assignments"
+    },
+    "entities": {
+      "location-assignment": {
+        "title": "Location Assignment",
+        "plural": "Location Assignments",
+        "search-result-description": "Party or entity that uses a location with a specific role",
+        "fields": {
+          "location": {
+            "title": "Location"
+          },
+          "assignee": {
+            "title": "Assignee"
+          },
+          "assignee-type": {
+            "title": "Assignee Type"
+          },
+          "role": {
+            "title": "Role"
+          },
+          "contact": {
+            "title": "Contact"
+          }
+        }
+      }
+    },
+    "actions": {
+      "assign-existing-location": {
+        "title": "Assign existing location",
+        "selector-title": "Choose location",
+        "form-title": "Assign location to {{partyTitle}}"
+      },
+      "create-with-new-location": {
+        "title": "Create new location",
+        "location-dialog-title": "Create location",
+        "assignment-dialog-title": "Set location role"
+      }
+    },
+    "messages": {
+      "missing-party-context": "Party context is required to assign a location."
+    }
+  }
+}

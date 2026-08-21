@@ -1,0 +1,118 @@
+{
+  "name": "user",
+  "title": "User",
+  "type": 1,
+  "fields": [
+    {
+      "name": "id",
+      "title": "User ID",
+      "description": "Unique identifier for the user",
+      "schema": "uuid",
+      "features": {
+        "nullable": false,
+        "readOnly": true
+      }
+    },
+    {
+      "name": "email",
+      "title": "Email Address",
+      "description": "User's email address",
+      "schema": "email",
+      "features": {
+        "nullable": false,
+        "readOnly": false
+      },
+      "validations": [
+        {
+          "rule": "required"
+        },
+        {
+          "rule": "email"
+        }
+      ]
+    },
+    {
+      "name": "firstName",
+      "title": "First Name",
+      "description": "User's first name",
+      "schema": "text-short",
+      "features": {
+        "nullable": false,
+        "readOnly": false
+      },
+      "validations": [
+        {
+          "rule": "required"
+        },
+        {
+          "rule": "minLength",
+          "options": {
+            "value": 2
+          }
+        }
+      ]
+    },
+    {
+      "name": "lastName",
+      "title": "Last Name",
+      "description": "User's last name",
+      "schema": "text-short",
+      "features": {
+        "nullable": false,
+        "readOnly": false
+      },
+      "validations": [
+        {
+          "rule": "required"
+        },
+        {
+          "rule": "minLength",
+          "options": {
+            "value": 2
+          }
+        }
+      ]
+    },
+    {
+      "name": "phone",
+      "title": "Phone Number",
+      "description": "User's phone number",
+      "schema": "phone",
+      "features": {
+        "nullable": true,
+        "readOnly": false
+      }
+    },
+    {
+      "name": "dateOfBirth",
+      "title": "Date of Birth",
+      "description": "User's date of birth",
+      "schema": "date",
+      "features": {
+        "nullable": true,
+        "readOnly": false
+      }
+    },
+    {
+      "name": "isActive",
+      "title": "Active Status",
+      "description": "Whether the user account is active",
+      "schema": "boolean",
+      "features": {
+        "nullable": false,
+        "readOnly": false
+      },
+      "defaultValue": true
+    },
+    {
+      "name": "createdAt",
+      "title": "Created Date",
+      "description": "When the user account was created",
+      "schema": "datetime",
+      "features": {
+        "nullable": false,
+        "readOnly": true
+      }
+    }
+  ]
+}

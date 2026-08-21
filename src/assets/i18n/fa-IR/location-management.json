@@ -1,0 +1,296 @@
+{
+  "module": {
+    "title": "مدیریت مکان",
+    "description": "مدیریت مکان‌ها، انواع مکان و مناطق جغرافیایی",
+    "menus": {
+      "root": {
+        "title": "مدیریت مکان",
+        "description": "مدیریت مکان‌ها و داده‌های جغرافیایی"
+      },
+      "configuration": {
+        "title": "مکان‌ها",
+        "description": "انواع مکان و مناطق جغرافیایی"
+      }
+    },
+    "permissions": {
+      "title": "مدیریت مکان",
+      "description": "مدیریت تمام جنبه‌های مدیریت مکان"
+    }
+  },
+  "locations": {
+    "terms": {
+      "location": "مکان",
+      "locations": "مکان‌ها"
+    },
+    "entities": {
+      "location": {
+        "title": "مکان",
+        "plural": "مکان‌ها",
+        "formats": {
+          "display-name": "مکان"
+        },
+        "related-entities": {
+          "assignments": {
+            "title": "تخصیص‌ها"
+          }
+        },
+        "fields": {
+          "name": "نام مکان",
+          "code": "کد",
+          "location-type": "نوع مکان",
+          "label": "نوع آدرس",
+          "label-create-title": "ایجاد نوع آدرس",
+          "street1": "آدرس خیابان",
+          "street2": "خط آدرس 2",
+          "city": "شهر",
+          "state": "استان/ایالت",
+          "country": "کشور",
+          "postal-code": "کد پستی",
+          "coordinates": "مختصات نقشه",
+          "show-map": "نمایش نقشه",
+          "parent-location": "مکان والد",
+          "district": "منطقه",
+          "timezone": "منطقه زمانی",
+          "external-id": "شناسه سیستم خارجی",
+          "valid-from": "معتبر از",
+          "valid-to": "معتبر تا"
+        },
+        "groups": {
+          "address-details": "جزئیات آدرس",
+          "geographic-location": "موقعیت جغرافیایی",
+          "geographic-details": "جزئیات جغرافیایی"
+        }
+      }
+    },
+    "menus": {
+      "locations": {
+        "title": "مکان‌ها",
+        "description": "مدیریت مکان‌ها"
+      }
+    },
+    "permissions": {
+      "locations": {
+        "title": "مدیریت مکان‌ها",
+        "description": "مدیریت مکان‌ها",
+        "actions": {
+          "view": {
+            "title": "مشاهده مکان‌ها",
+            "description": "مشاهده اطلاعات مکان‌ها"
+          },
+          "create": {
+            "title": "ایجاد مکان",
+            "description": "ایجاد مکان‌های جدید"
+          },
+          "edit": {
+            "title": "ویرایش مکان",
+            "description": "ویرایش اطلاعات مکان‌ها"
+          },
+          "delete": {
+            "title": "حذف مکان",
+            "description": "حذف مکان‌ها"
+          }
+        }
+      }
+    }
+  },
+  "location-types": {
+    "terms": {
+      "location-type": "نوع مکان",
+      "location-types": "انواع مکان"
+    },
+    "entities": {
+      "location-type": {
+        "title": "نوع مکان",
+        "plural": "انواع مکان"
+      }
+    },
+    "menus": {
+      "location-types": {
+        "title": "انواع مکان",
+        "description": "مدیریت انواع مکان"
+      }
+    },
+    "permissions": {
+      "location-types": {
+        "title": "مدیریت انواع مکان",
+        "description": "مدیریت انواع مکان",
+        "actions": {
+          "view": {
+            "title": "مشاهده انواع مکان",
+            "description": "مشاهده اطلاعات انواع مکان"
+          },
+          "create": {
+            "title": "ایجاد نوع مکان",
+            "description": "ایجاد انواع مکان جدید"
+          },
+          "edit": {
+            "title": "ویرایش نوع مکان",
+            "description": "ویرایش اطلاعات انواع مکان"
+          },
+          "delete": {
+            "title": "حذف نوع مکان",
+            "description": "حذف انواع مکان"
+          }
+        }
+      }
+    }
+  },
+  "location-roles": {
+    "terms": {
+      "location-role": "نقش مکان",
+      "location-roles": "نقش‌های مکان"
+    },
+    "entities": {
+      "location-role": {
+        "title": "نقش مکان",
+        "plural": "نقش‌های مکان",
+        "search-result-description": "کاربرد مکان برای مالک (مثلاً آدرس صورتحساب، دفتر مرکزی)",
+        "fields": {
+          "name": {
+            "title": "نام",
+            "placeholder": "نام داخلی را وارد کنید (مثلاً billing-address)"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان نمایشی را وارد کنید (مثلاً آدرس صورتحساب)"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات نقش را وارد کنید"
+          }
+        }
+      }
+    },
+    "menus": {
+      "location-roles": {
+        "title": "نقش‌های مکان",
+        "description": "مدیریت نقش‌های مکان (آدرس صورتحساب، ارسال، دفتر مرکزی و غیره)"
+      }
+    },
+    "permissions": {
+      "location-roles": {
+        "title": "مدیریت نقش‌های مکان",
+        "description": "مدیریت نقش‌های مکان",
+        "actions": {
+          "view": {
+            "title": "مشاهده نقش‌های مکان",
+            "description": "مشاهده اطلاعات نقش‌های مکان"
+          },
+          "create": {
+            "title": "ایجاد نقش مکان",
+            "description": "ایجاد نقش‌های مکان جدید"
+          },
+          "edit": {
+            "title": "ویرایش نقش مکان",
+            "description": "ویرایش اطلاعات نقش‌های مکان"
+          },
+          "delete": {
+            "title": "حذف نقش‌های مکان",
+            "description": "حذف نقش‌های مکان"
+          }
+        }
+      }
+    }
+  },
+  "geographic-regions": {
+    "terms": {
+      "geographic-region": "منطقه جغرافیایی",
+      "geographic-regions": "مناطق جغرافیایی"
+    },
+    "entities": {
+      "geographic-region": {
+        "title": "منطقه جغرافیایی",
+        "plural": "مناطق جغرافیایی",
+        "fields": {
+          "type": "نوع",
+          "parent-region": "منطقه والد",
+          "has-child": "دارای مناطق فرعی",
+          "coordinates": "مختصات",
+          "timezone": "منطقه زمانی",
+          "population": "جمعیت",
+          "area": "مساحت (کیلومتر مربع)",
+          "currency": "واحد پول"
+        },
+        "groups": {
+          "hierarchy": "سلسله مراتب",
+          "geographic-data": "داده جغرافیایی"
+        }
+      }
+    },
+    "menus": {
+      "geographic-regions": {
+        "title": "مناطق جغرافیایی",
+        "description": "مدیریت مناطق جغرافیایی"
+      }
+    },
+    "permissions": {
+      "geographic-regions": {
+        "title": "مدیریت مناطق جغرافیایی",
+        "description": "مدیریت مناطق جغرافیایی",
+        "actions": {
+          "view": {
+            "title": "مشاهده مناطق جغرافیایی",
+            "description": "مشاهده اطلاعات مناطق جغرافیایی"
+          },
+          "create": {
+            "title": "ایجاد منطقه جغرافیایی",
+            "description": "ایجاد مناطق جغرافیایی جدید"
+          },
+          "edit": {
+            "title": "ویرایش منطقه جغرافیایی",
+            "description": "ویرایش اطلاعات مناطق جغرافیایی"
+          },
+          "delete": {
+            "title": "حذف منطقه جغرافیایی",
+            "description": "حذف مناطق جغرافیایی"
+          }
+        }
+      }
+    }
+  },
+  "location-assignments": {
+    "terms": {
+      "location-assignment": "تخصیص مکان",
+      "location-assignments": "تخصیص‌های مکان"
+    },
+    "entities": {
+      "location-assignment": {
+        "title": "تخصیص مکان",
+        "plural": "تخصیص‌های مکان",
+        "search-result-description": "طرف یا موجودیتی که از یک مکان با نقش مشخص استفاده می‌کند",
+        "fields": {
+          "location": {
+            "title": "مکان"
+          },
+          "assignee": {
+            "title": "متعلق به"
+          },
+          "assignee-type": {
+            "title": "نوع متعلق به"
+          },
+          "role": {
+            "title": "نقش"
+          },
+          "contact": {
+            "title": "مخاطب"
+          }
+        }
+      }
+    },
+    "actions": {
+      "assign-existing-location": {
+        "title": "اختصاص مکان موجود",
+        "selector-title": "انتخاب مکان",
+        "form-title": "اختصاص مکان به {{partyTitle}}"
+      },
+      "create-with-new-location": {
+        "title": "ایجاد مکان جدید",
+        "location-dialog-title": "ایجاد مکان",
+        "assignment-dialog-title": "تعیین نقش مکان"
+      }
+    },
+    "messages": {
+      "missing-party-context": "برای اختصاص مکان، زمینه طرف الزامی است."
+    }
+  }
+}

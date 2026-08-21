@@ -1,0 +1,270 @@
+{
+  "module": {
+    "title": "Settings Management",
+    "description": "Manage application, tenant, and user settings",
+    "menus": {
+      "root": {
+        "title": "Settings",
+        "description": "Application settings"
+      }
+    },
+    "terms": {
+      "scopes": {
+        "user": {
+          "title": "Preferences",
+          "description": "Customize your personal preferences and account-specific settings."
+        },
+        "tenant": {
+          "title": "Settings",
+          "description": "Set up and manage settings specific to your organization or tenant."
+        },
+        "platform": {
+          "title": "Platform Settings",
+          "description": "Configure global settings that apply across the entire platform."
+        }
+      }
+    },
+    "permissions": {
+      "title": "Settings Management",
+      "description": "Manage all settings"
+    }
+  },
+  "settings": {
+    "components": {
+      "search": {
+        "title": "Find a Setting",
+        "placeholder": "Search...",
+        "description": "Search for a setting by name or description.",
+        "empty-states": {
+          "not-found": {
+            "title": "No Search Results Found!",
+            "description": "Try different keywords or browse settings by category."
+          }
+        }
+      }
+    },
+    "actions": {
+      "restore-defaults": {
+        "title": "Restore Defaults",
+        "description": "Restore all settings to their default values",
+        "confirm": {
+          "title": "Restore Defaults",
+          "message": "Are you sure you want to restore all settings to their default values? This action cannot be undone."
+        },
+        "error": {
+          "title": "Restore Failed",
+          "message": "Failed to restore settings to their default values. Please try again."
+        }
+      },
+      "seed-data": {
+        "title": "Seed Data",
+        "description": "Submit selected seed filters to the server, or analyze diffs and apply bulk or per-row decisions.",
+        "actions": {
+          "run": "Run Seed",
+          "submit": "Submit",
+          "analyze": "Analyze Diff",
+          "apply": "Apply Decisions",
+          "advanced": "Advanced",
+          "check-by-ai": "Check by AI",
+          "merge-by-ai": "Merge with AI",
+          "accept-ai": "Accept AI Suggestions",
+          "decision": {
+            "take-seed": "Take Seed",
+            "keep-local": "Keep Local",
+            "delete": "Delete Local",
+            "merge": "Merge"
+          }
+        },
+        "fields": {
+          "phase": "Phase",
+          "dry-run": "Dry Run",
+          "remove-missing": "Propose Removals",
+          "enable-filter": "Use This Filter",
+          "include": "Include",
+          "exclude": "Exclude"
+        },
+        "phases": {
+          "data": "Data",
+          "definitions": "Definitions",
+          "schemas": "Schemas",
+          "all": "All"
+        },
+        "sections": {
+          "overview": {
+            "title": "Overview",
+            "description": "Choose Phase, then expand a filter section and turn on Use This Filter only for the selectors you need. Submit runs the seed pipeline with your selection. Analyze Diff compares mocks with the database so you can apply bulk or per-row decisions. Within one selector, values are OR; across selectors they are AND; exclusions override includes."
+          },
+          "phase": {
+            "title": "Phase & Options",
+            "description": "Choose the pipeline stage (usually Data). Propose Removals marks database rows missing from seed as conflicts you can delete—leave off unless the seeder owns the full table."
+          },
+          "modules": {
+            "title": "Modules",
+            "description": "Collapsed by default. Turn on Use This Filter, then Include module folder names (for example platform-management) or Exclude them from a full run."
+          },
+          "seeds": {
+            "title": "Seeds",
+            "description": "Collapsed by default. Turn on Use This Filter, then pick seed keys like module/DefinitionName. Dependencies are included automatically unless excluded."
+          },
+          "entities": {
+            "title": "Entities",
+            "description": "Collapsed by default. Turn on Use This Filter to limit targets by full entity name (for example PlatformManagement.Tokens)."
+          },
+          "providers": {
+            "title": "Providers",
+            "description": "Collapsed by default. Turn on Use This Filter to limit the run to registry provider names (for example settings-defaults)."
+          },
+          "tags": {
+            "title": "Tags",
+            "description": "Collapsed by default. Turn on Use This Filter to include or exclude metadata labels (for example demo, core, test)."
+          }
+        },
+        "review": {
+          "title": "Review Seed Diff",
+          "summary": "Targets: {{targets}} (skipped: {{skipped}}). Adds: {{add}}, changes: {{change}}, seed-removed: {{seedRemoved}}, extras (left alone): {{extra}}, conflicts: {{conflicts}}.",
+          "ai-hint": "AI Status",
+          "policies": {
+            "title": "Bulk Policies",
+            "description": "Default actions for each change kind. Apply sends only these three policies—the server expands them. Use Advanced to override individual conflict rows. Extras are never deleted automatically.",
+            "add": "New Seed Rows",
+            "change": "Changed Rows",
+            "removed": "Seed-Removed Rows"
+          }
+        },
+        "advanced": {
+          "title": "Advanced Seed Diff",
+          "list-title": "Conflicts",
+          "empty": "No conflict rows to review.",
+          "seed": "Seed",
+          "local": "Local",
+          "result": "Result",
+          "pick-field-hint": "Click a highlighted field on Seed or Local to pull it into Result. Use Merge with AI for this row only.",
+          "result-empty": "Choose Seed or Local, click fields to merge, or use Merge with AI.",
+          "result-delete": "This row will be deleted from the database.",
+          "legend": {
+            "added": "Added (only on this side)",
+            "removed": "Removed (missing here)",
+            "changed": "Changed"
+          }
+        },
+        "loading": {
+          "title": "Seeding Data",
+          "description": "Running the seed pipeline. This may take a while.",
+          "analyze-title": "Analyzing Seed Diff",
+          "analyze-description": "Comparing seed mocks with the database.",
+          "ai-title": "Checking Conflicts with AI",
+          "ai-description": "Sending conflicts to the AI assistant for recommendations.",
+          "ai-merge-title": "Merging Row with AI",
+          "ai-merge-description": "Asking AI to merge seed and local for this conflict only.",
+          "apply-title": "Applying Seed Decisions",
+          "apply-description": "Writing selected seed changes to the database."
+        },
+        "messages": {
+          "load-catalog-failed": "Could not load the seed catalog. Please try again.",
+          "cancelled": "Seed Data was cancelled.",
+          "failed": "Seed Data failed. Check the server logs for details.",
+          "success": "Seed finished. {{count}} target(s) were planned or executed.",
+          "dry-run-success": "Dry run finished. {{count}} target(s) would run. Turn off Dry Run to write data.",
+          "analyze-failed": "Seed diff analysis failed. Check the server logs for details.",
+          "analyse-only": "Analysis complete. Adds: {{add}}, changes: {{change}}, conflicts: {{conflicts}}. Apply was cancelled.",
+          "nothing-to-apply": "No write actions were selected. Local data was left unchanged.",
+          "apply-failed": "Applying seed decisions failed. Check the server logs for details.",
+          "apply-success": "Seed apply finished. Applied: {{applied}}, skipped: {{skipped}}, failed: {{failed}}.",
+          "ai-unavailable": "AI assist is not available in this session.",
+          "ai-success": "AI filled {{count}} undecided conflict(s). Your existing choices were kept.",
+          "ai-merge-success": "AI merged this row into Result. Review it, then Apply.",
+          "ai-merge-invalid": "AI returned an invalid merge payload.",
+          "ai-failed": "AI conflict check failed. You can still apply bulk policies manually.",
+          "ai-accepted": "AI suggestions will be applied for conflict rows."
+        }
+      },
+      "client-reset": {
+        "title": "Reset Local Data",
+        "description": "Clear all local data and reload the application",
+        "confirm": {
+          "title": "Reset Local Data",
+          "message": "This will clear localStorage, sessionStorage, cookies, and IndexedDB, then reload the app. Continue?"
+        }
+      },
+      "client-export": {
+        "title": "Export Local Data",
+        "description": "Export local data to a file"
+      },
+      "client-import": {
+        "title": "Import Local Data",
+        "description": "Import local data from a file",
+        "confirm": {
+          "title": "Import Local Data",
+          "message": "This will overwrite local data (localStorage and IndexedDB) with the imported file. Continue?"
+        }
+      },
+      "apply": {
+        "title": "Apply",
+        "description": "Apply settings changes",
+        "success": {
+          "title": "Settings Applied",
+          "message": "Your settings have been successfully applied."
+        },
+        "reload": {
+          "success": {
+            "title": "Settings Applied",
+            "message": "Your settings were saved. The page will reload to apply them."
+          }
+        },
+        "error": {
+          "title": "Apply Failed",
+          "message": "Failed to apply your settings. Please try again."
+        },
+        "invalid": {
+          "title": "Review Needed",
+          "message": "Invalid configuration detected. Please review your inputs."
+        }
+      }
+    }
+  },
+  "user-settings": {
+    "permissions": {
+      "manage": {
+        "title": "User Settings Management",
+        "description": "Manage user-level settings"
+      }
+    }
+  },
+  "tenant-settings": {
+    "permissions": {
+      "manage": {
+        "title": "Tenant Settings Management",
+        "description": "Manage tenant-level settings"
+      }
+    }
+  },
+  "platform-settings": {
+    "permissions": {
+      "manage": {
+        "title": "Platform Settings Management",
+        "description": "Manage platform-wide settings"
+      }
+    }
+  },
+  "app-startup": {
+    "loading-settings": "Loading settings..."
+  },
+  "profile-page": {
+    "sections": {
+      "export-data": {
+        "title": "Export Local Data",
+        "description": "Download localStorage and IndexedDB content as a JSON file.",
+        "actions": {
+          "manage": "Export Data"
+        }
+      },
+      "all-preferences": {
+        "title": "All Preferences",
+        "description": "Browse every personal setting in one place.",
+        "actions": {
+          "manage": "View All Settings"
+        }
+      }
+    }
+  }
+}

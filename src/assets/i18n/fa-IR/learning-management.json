@@ -1,0 +1,1078 @@
+{
+  "module": {
+    "title": "مدیریت یادگیری",
+    "description": "برنامه‌ریزی، اجرا و پایش ابتکارات یادگیری سازمان.",
+    "menus": {
+      "root": {
+        "title": "یادگیری",
+        "description": "مهارت‌ها، دوره‌ها، آموزش‌ها، ثبت‌نام‌ها و گواهینامه‌ها"
+      },
+      "configuration": {
+        "title": "یادگیری",
+        "description": "سطوح مهارت، انواع دوره، تعاریف آموزش، مجوزها و قواعد اجباری"
+      }
+    },
+    "terms": {
+      "skills": "مهارت‌ها",
+      "courses": "دوره‌ها",
+      "trainings": "آموزش‌ها",
+      "enrollments": "ثبت‌نام‌ها",
+      "certificates": "گواهینامه‌ها",
+      "licenses": "مجوزها",
+      "learning-paths": "مسیرهای یادگیری",
+      "compliance": "تطبیق"
+    }
+  },
+  "skills": {
+    "menus": {
+      "root": {
+        "title": "مهارت‌ها"
+      }
+    },
+    "entities": {
+      "skill-category": {
+        "title": "دسته‌بندی مهارت",
+        "plural": "دسته‌بندی‌های مهارت",
+        "search-description": "رده‌بندی برای مهارت‌ها و دارایی‌های یادگیری.",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "name": {
+            "title": "نام دسته‌بندی",
+            "placeholder": "نام دسته‌بندی را وارد کنید"
+          },
+          "parent-id": {
+            "title": "دسته‌بندی والد"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "نحوه استفاده از این دسته‌بندی را توضیح دهید"
+          }
+        }
+      },
+      "skill": {
+        "title": "مهارت",
+        "plural": "مهارت‌ها",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "classification": "طبقه‌بندی"
+        },
+        "fields": {
+          "name": {
+            "title": "نام فنی مهارت",
+            "placeholder": "شناسه برنامه‌نویسی یکتا"
+          },
+          "title": {
+            "title": "عنوان مهارت",
+            "placeholder": "عنوان مهارت را وارد کنید"
+          },
+          "code": {
+            "title": "کد مهارت",
+            "placeholder": "کد اختیاری برای پیگیری"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "دامنه این مهارت را توضیح دهید"
+          },
+          "category-ids": {
+            "title": "دسته‌بندی‌ها"
+          }
+        }
+      },
+      "skill-level": {
+        "title": "سطح مهارت",
+        "plural": "سطوح مهارت",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "title": {
+            "title": "عنوان سطح",
+            "placeholder": "عنوان سطح را وارد کنید"
+          },
+          "level-number": {
+            "title": "شماره سطح",
+            "placeholder": "ترتیب عددی"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توانمندی‌های این سطح را شرح دهید"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "skill-category": {
+        "actions": {
+          "manage": {
+            "title": "مدیریت دسته‌بندی‌های مهارت"
+          },
+          "view": {
+            "title": "مشاهده دسته‌بندی‌های مهارت"
+          },
+          "create": {
+            "title": "ایجاد دسته‌بندی مهارت"
+          },
+          "update": {
+            "title": "ویرایش دسته‌بندی مهارت"
+          },
+          "delete": {
+            "title": "حذف دسته‌بندی مهارت"
+          }
+        }
+      },
+      "skill": {
+        "actions": {
+          "manage": {
+            "title": "مدیریت مهارت‌ها"
+          },
+          "view": {
+            "title": "مشاهده مهارت‌ها"
+          },
+          "create": {
+            "title": "ایجاد مهارت"
+          },
+          "update": {
+            "title": "ویرایش مهارت"
+          },
+          "delete": {
+            "title": "حذف مهارت"
+          }
+        }
+      },
+      "skill-level": {
+        "actions": {
+          "manage": {
+            "title": "مدیریت سطوح مهارت"
+          },
+          "view": {
+            "title": "مشاهده سطوح مهارت"
+          },
+          "create": {
+            "title": "ایجاد سطح مهارت"
+          },
+          "update": {
+            "title": "ویرایش سطح مهارت"
+          },
+          "delete": {
+            "title": "حذف سطح مهارت"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-skill-level": {
+        "title": "ایجاد سطح مهارت",
+        "description": "ایجاد یک سطح مهارت جدید."
+      },
+      "create-skill": {
+        "title": "ایجاد مهارت",
+        "description": "تعریف یک مهارت جدید."
+      }
+    },
+    "components": {
+      "skill-matrix": {
+        "actions": {
+          "choose-skills": {
+            "title": "انتخاب مهارت‌ها"
+          }
+        },
+        "messages": {
+          "loading-skill-levels": "در حال بارگذاری سطوح مهارت..."
+        }
+      }
+    }
+  },
+  "courses": {
+    "menus": {
+      "root": {
+        "title": "دوره‌ها"
+      }
+    },
+    "entities": {
+      "course-type": {
+        "title": "نوع دوره",
+        "plural": "انواع دوره",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "code": {
+            "title": "کد نوع دوره",
+            "placeholder": "کد پایدار برای این نوع دوره"
+          },
+          "title": {
+            "title": "عنوان نمایشی",
+            "placeholder": "عنوان چندزبانه برای نمایش در فهرست‌ها"
+          },
+          "delivery-mode": {
+            "title": "روش ارائه",
+            "options": {
+              "online": "آنلاین",
+              "classroom": "حضوری",
+              "blended": "ترکیبی"
+            }
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "مناسبت استفاده از این نوع دوره را شرح دهید"
+          }
+        }
+      },
+      "course": {
+        "title": "دوره",
+        "plural": "دوره‌ها",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "settings": "تنظیمات",
+          "relationships": "ارتباطات"
+        },
+        "fields": {
+          "code": {
+            "title": "کد دوره",
+            "placeholder": "شناسه یکتا برای دوره"
+          },
+          "title": {
+            "title": "عنوان دوره",
+            "placeholder": "عنوان دوره را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "اهداف و مروری بر دوره"
+          },
+          "course-type-id": {
+            "title": "نوع دوره"
+          },
+          "duration-hours": {
+            "title": "مدت (ساعت)",
+            "placeholder": "زمان برگزاری"
+          },
+          "is-active": {
+            "title": "فعال"
+          },
+          "related-skill-ids": {
+            "title": "مهارت‌های مرتبط"
+          },
+          "certificate-definition-ids": {
+            "title": "تعاریف گواهینامه",
+            "placeholder": "تعاریف گواهینامه قابل صدور برای این دوره را انتخاب کنید"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "course-type": {
+        "actions": {
+          "manage": {
+            "title": "مدیریت انواع دوره"
+          },
+          "view": {
+            "title": "مشاهده انواع دوره"
+          },
+          "create": {
+            "title": "ایجاد نوع دوره"
+          },
+          "update": {
+            "title": "ویرایش نوع دوره"
+          },
+          "delete": {
+            "title": "حذف نوع دوره"
+          }
+        }
+      },
+      "course": {
+        "actions": {
+          "manage": {
+            "title": "مدیریت دوره‌ها"
+          },
+          "view": {
+            "title": "مشاهده دوره‌ها"
+          },
+          "create": {
+            "title": "ایجاد دوره"
+          },
+          "update": {
+            "title": "ویرایش دوره"
+          },
+          "delete": {
+            "title": "حذف دوره"
+          },
+          "publish": {
+            "title": "انتشار دوره"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-course-type": {
+        "title": "ایجاد نوع دوره",
+        "description": "ایجاد یک نوع دوره جدید."
+      },
+      "create-course": {
+        "title": "ایجاد دوره",
+        "description": "ایجاد یک دوره آموزشی جدید."
+      }
+    }
+  },
+  "trainings": {
+    "menus": {
+      "root": {
+        "title": "آموزش‌ها"
+      }
+    },
+    "entities": {
+      "training-type": {
+        "title": "نوع آموزش",
+        "plural": "انواع آموزش",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "code": {
+            "title": "کد فرمت آموزش",
+            "placeholder": "کد پایدار برای این قالب آموزشی"
+          },
+          "title": {
+            "title": "عنوان نمایشی",
+            "placeholder": "عنوان چندزبانه برای نمایش در فهرست‌ها"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "فرمت این آموزش را توضیح دهید"
+          }
+        }
+      },
+      "training-definition": {
+        "title": "تعریف آموزش",
+        "plural": "تعاریف آموزش",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "defaults": "تنظیمات پیش‌فرض"
+        },
+        "fields": {
+          "title": {
+            "title": "عنوان تعریف",
+            "placeholder": "نام برنامه آموزشی را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "هدف و خروجی‌های مورد انتظار را توضیح دهید"
+          },
+          "course-id": {
+            "title": "دوره"
+          },
+          "training-type-id": {
+            "title": "نوع آموزش"
+          },
+          "default-duration-hours": {
+            "title": "مدت زمان پیش‌فرض (ساعت)",
+            "placeholder": "مدت زمان معمول برگزاری برنامه"
+          },
+          "default-capacity": {
+            "title": "ظرفیت پیش‌فرض",
+            "placeholder": "حداکثر تعداد پیشنهادی شرکت‌کننده"
+          },
+          "default-location-id": {
+            "title": "مکان پیشنهادی"
+          },
+          "is-active": {
+            "title": "فعال"
+          }
+        }
+      },
+      "training": {
+        "title": "آموزش",
+        "plural": "آموزش‌ها",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "schedule": "زمان‌بندی",
+          "logistics": "تدارکات"
+        },
+        "fields": {
+          "training-definition-id": {
+            "title": "تعریف آموزش"
+          },
+          "course-id": {
+            "title": "دوره"
+          },
+          "training-type-id": {
+            "title": "نوع آموزش"
+          },
+          "status": {
+            "title": "وضعیت",
+            "options": {
+              "draft": "پیش‌نویس",
+              "open": "باز",
+              "closed": "بسته",
+              "cancelled": "لغو شده"
+            }
+          },
+          "start-date": {
+            "title": "تاریخ شروع"
+          },
+          "end-date": {
+            "title": "تاریخ پایان"
+          },
+          "capacity": {
+            "title": "ظرفیت",
+            "placeholder": "حداکثر شرکت‌کنندگان"
+          },
+          "location-id": {
+            "title": "مکان"
+          },
+          "instructor-id": {
+            "title": "مدرس"
+          },
+          "notes": {
+            "title": "یادداشت‌ها",
+            "placeholder": "راهنمای زمان‌بندی یا نیازمندی‌ها"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "training-type": {
+        "actions": {
+          "manage": {
+            "title": "مدیریت انواع آموزش"
+          },
+          "view": {
+            "title": "مشاهده انواع آموزش"
+          },
+          "create": {
+            "title": "ایجاد نوع آموزش"
+          },
+          "update": {
+            "title": "ویرایش نوع آموزش"
+          },
+          "delete": {
+            "title": "حذف نوع آموزش"
+          }
+        }
+      },
+      "training-definition": {
+        "actions": {
+          "manage": {
+            "title": "مدیریت تعاریف آموزش"
+          },
+          "view": {
+            "title": "مشاهده تعاریف آموزش"
+          },
+          "create": {
+            "title": "ایجاد تعریف آموزش"
+          },
+          "update": {
+            "title": "ویرایش تعریف آموزش"
+          },
+          "delete": {
+            "title": "حذف تعریف آموزش"
+          },
+          "publish": {
+            "title": "انتشار تعریف آموزش"
+          }
+        }
+      },
+      "training": {
+        "actions": {
+          "manage": {
+            "title": "مدیریت آموزش‌ها"
+          },
+          "view": {
+            "title": "مشاهده آموزش‌ها"
+          },
+          "create": {
+            "title": "ایجاد آموزش"
+          },
+          "update": {
+            "title": "ویرایش آموزش"
+          },
+          "delete": {
+            "title": "حذف آموزش"
+          },
+          "schedule": {
+            "title": "زمان‌بندی آموزش"
+          },
+          "close": {
+            "title": "بستن آموزش"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-training-type": {
+        "title": "ایجاد نوع آموزش",
+        "description": "ایجاد یک نوع آموزش جدید."
+      },
+      "create-training-definition": {
+        "title": "ایجاد تعریف آموزش",
+        "description": "یک الگوی قابل استفاده مجدد برای آموزش طراحی کنید."
+      },
+      "schedule-training": {
+        "title": "ایجاد آموزش",
+        "description": "یک آموزش جدید برای دوره ایجاد کنید."
+      }
+    }
+  },
+  "enrollments": {
+    "menus": {
+      "root": {
+        "title": "ثبت‌نام‌ها"
+      }
+    },
+    "entities": {
+      "enrollment": {
+        "title": "ثبت‌نام",
+        "plural": "ثبت‌نام‌ها",
+        "groups": {
+          "basic-info": "جزئیات ثبت‌نام",
+          "workflow": "فرایند"
+        },
+        "fields": {
+          "employee-id": {
+            "title": "کارمند"
+          },
+          "training-id": {
+            "title": "آموزش"
+          },
+          "status": {
+            "title": "وضعیت",
+            "options": {
+              "requested": "درخواست شده",
+              "approved": "تأیید شده",
+              "enrolled": "ثبت‌نام شده",
+              "completed": "به پایان رسیده",
+              "failed": "ناموفق",
+              "cancelled": "لغو شده"
+            }
+          },
+          "workflow-instance-id": {
+            "title": "فرایند کاری"
+          },
+          "notes": {
+            "title": "یادداشت‌ها",
+            "placeholder": "یادداشت‌های ثبت‌نام را اضافه کنید"
+          }
+        }
+      },
+      "attendance": {
+        "title": "حضور و غیاب",
+        "plural": "سوابق حضور",
+        "groups": {
+          "basic-info": "حضور"
+        },
+        "fields": {
+          "enrollment-id": {
+            "title": "ثبت‌نام"
+          },
+          "session-date": {
+            "title": "تاریخ جلسه"
+          },
+          "status": {
+            "title": "وضعیت",
+            "options": {
+              "present": "حاضر",
+              "absent": "غایب",
+              "late": "دیرکرد"
+            }
+          },
+          "notes": {
+            "title": "یادداشت‌ها",
+            "placeholder": "یادداشت حضور را وارد کنید"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "enrollment": {
+        "actions": {
+          "manage": {
+            "title": "مدیریت ثبت‌نام‌ها"
+          },
+          "view": {
+            "title": "مشاهده ثبت‌نام‌ها"
+          },
+          "create": {
+            "title": "ایجاد ثبت‌نام"
+          },
+          "update": {
+            "title": "ویرایش ثبت‌نام"
+          },
+          "delete": {
+            "title": "حذف ثبت‌نام"
+          },
+          "process": {
+            "title": "فرایند ثبت‌نام"
+          }
+        }
+      },
+      "attendance": {
+        "actions": {
+          "manage": {
+            "title": "مدیریت حضور و غیاب"
+          },
+          "view": {
+            "title": "مشاهده حضور و غیاب"
+          },
+          "create": {
+            "title": "ثبت حضور و غیاب"
+          },
+          "update": {
+            "title": "ویرایش حضور و غیاب"
+          },
+          "delete": {
+            "title": "حذف حضور و غیاب"
+          },
+          "record": {
+            "title": "ثبت وضعیت حضور"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-attendance": {
+        "title": "ایجاد حضور و غیاب",
+        "description": "ایجاد یک رکورد حضور و غیاب جدید."
+      },
+      "create-enrollment": {
+        "title": "ایجاد ثبت‌نام",
+        "description": "ایجاد یک ثبت‌نام جدید برای کارمند در آموزش."
+      }
+    }
+  },
+  "certificates": {
+    "menus": {
+      "root": {
+        "title": "گواهینامه‌ها"
+      }
+    },
+    "entities": {
+      "certificate-type": {
+        "title": "نوع گواهینامه",
+        "plural": "انواع گواهینامه",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "template": "قالب"
+        },
+        "fields": {
+          "code": {
+            "title": "کد نوع گواهینامه",
+            "placeholder": "کد پایدار برای این نوع گواهینامه"
+          },
+          "title": {
+            "title": "عنوان نمایشی",
+            "placeholder": "عنوان چندزبانه برای نمایش در فهرست‌ها"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "موارد استفاده این گواهینامه را شرح دهید"
+          },
+          "validity-days": {
+            "title": "اعتبار (روز)",
+            "placeholder": "تعداد روزهای اعتبار"
+          },
+          "template-id": {
+            "title": "قالب سند"
+          }
+        }
+      },
+      "certificate-definition": {
+        "title": "تعریف گواهینامه",
+        "plural": "تعاریف گواهینامه",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "configuration": "پیکربندی"
+        },
+        "fields": {
+          "title": {
+            "title": "عنوان تعریف",
+            "placeholder": "نام گواهینامه صادر شونده را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "شرایط صدور این گواهینامه را توضیح دهید"
+          },
+          "certificate-type-id": {
+            "title": "نوع گواهینامه"
+          },
+          "course-id": {
+            "title": "دوره مرتبط"
+          },
+          "validity-days": {
+            "title": "اعتبار (روز)",
+            "placeholder": "در صورت نیاز اعتبار پیش‌فرض را تغییر دهید"
+          },
+          "template-id": {
+            "title": "قالب سند"
+          },
+          "is-active": {
+            "title": "فعال"
+          }
+        }
+      },
+      "certificate": {
+        "title": "گواهینامه",
+        "plural": "گواهینامه‌ها",
+        "groups": {
+          "basic-info": "جزئیات گواهینامه",
+          "validity": "اعتبار",
+          "documents": "اسناد"
+        },
+        "fields": {
+          "certificate-definition-id": {
+            "title": "تعریف گواهینامه"
+          },
+          "certificate-type-id": {
+            "title": "نوع گواهینامه"
+          },
+          "employee-id": {
+            "title": "کارمند"
+          },
+          "course-id": {
+            "title": "دوره"
+          },
+          "issue-date": {
+            "title": "تاریخ صدور"
+          },
+          "expiry-date": {
+            "title": "تاریخ انقضا"
+          },
+          "file-id": {
+            "title": "فایل سند"
+          },
+          "notes": {
+            "title": "یادداشت‌ها",
+            "placeholder": "توضیحات مربوط به صدور را وارد کنید"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "certificate-type": {
+        "actions": {
+          "manage": {
+            "title": "مدیریت انواع گواهینامه"
+          },
+          "view": {
+            "title": "مشاهده انواع گواهینامه"
+          },
+          "create": {
+            "title": "ایجاد نوع گواهینامه"
+          },
+          "update": {
+            "title": "ویرایش نوع گواهینامه"
+          },
+          "delete": {
+            "title": "حذف نوع گواهینامه"
+          }
+        }
+      },
+      "certificate-definition": {
+        "actions": {
+          "manage": {
+            "title": "مدیریت تعاریف گواهینامه"
+          },
+          "view": {
+            "title": "مشاهده تعاریف گواهینامه"
+          },
+          "create": {
+            "title": "ایجاد تعریف گواهینامه"
+          },
+          "update": {
+            "title": "ویرایش تعریف گواهینامه"
+          },
+          "delete": {
+            "title": "حذف تعریف گواهینامه"
+          },
+          "publish": {
+            "title": "انتشار تعریف گواهینامه"
+          }
+        }
+      },
+      "certificate": {
+        "actions": {
+          "manage": {
+            "title": "مدیریت گواهینامه‌ها"
+          },
+          "view": {
+            "title": "مشاهده گواهینامه‌ها"
+          },
+          "create": {
+            "title": "ایجاد گواهینامه"
+          },
+          "update": {
+            "title": "ویرایش گواهینامه"
+          },
+          "delete": {
+            "title": "حذف گواهینامه"
+          },
+          "issue": {
+            "title": "صدور گواهینامه"
+          },
+          "renew": {
+            "title": "تمدید گواهینامه"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-certificate-type": {
+        "title": "ایجاد نوع گواهینامه",
+        "description": "ایجاد یک نوع گواهینامه جدید."
+      },
+      "create-certificate-definition": {
+        "title": "ایجاد تعریف گواهینامه",
+        "description": "یک الگوی آماده برای صدور گواهینامه تنظیم کنید."
+      },
+      "issue-certificate": {
+        "title": "ایجاد گواهینامه",
+        "description": "گواهینامه جدید برای کارمند صادر کنید."
+      }
+    }
+  },
+  "licenses": {
+    "menus": {
+      "root": {
+        "title": "مجوزها"
+      }
+    },
+    "entities": {
+      "license-type": {
+        "title": "نوع مجوز",
+        "plural": "انواع مجوز",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "code": {
+            "title": "کد نوع",
+            "placeholder": "کد نوع مجوز را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان نمایشی",
+            "placeholder": "عنوان را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "کاربرد این نوع مجوز را شرح دهید"
+          },
+          "is-active": {
+            "title": "فعال"
+          }
+        }
+      },
+      "license": {
+        "title": "مجوز",
+        "plural": "مجوزها",
+        "groups": {
+          "validity": "اعتبار",
+          "requirements": "الزامات",
+          "authority": "مرجع صادرکننده"
+        },
+        "fields": {
+          "code": {
+            "title": "کد مجوز",
+            "placeholder": "کد پایدار برای این تعریف مجوز"
+          },
+          "title": {
+            "title": "عنوان نمایشی",
+            "placeholder": "عنوان چندزبانه برای نمایش در فهرست‌ها"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "زمان نیاز به این مجوز را شرح دهید"
+          },
+          "license-type-id": {
+            "title": "نوع مجوز"
+          },
+          "validity-period": {
+            "title": "دوره اعتبار",
+            "placeholder": "مدت زمان تا انقضا"
+          },
+          "validity-period-unit": {
+            "title": "واحد اعتبار",
+            "options": {
+              "day": "روز",
+              "month": "ماه",
+              "year": "سال"
+            }
+          },
+          "renewal-notice-days": {
+            "title": "اعلان تمدید (روز)",
+            "placeholder": "تعداد روز قبل از انقضا برای ارسال اعلان تمدید"
+          },
+          "requires-renewal": {
+            "title": "نیاز به تمدید"
+          },
+          "requires-license-number": {
+            "title": "نیاز به شماره مجوز"
+          },
+          "requires-document": {
+            "title": "نیاز به سند"
+          },
+          "requires-verification": {
+            "title": "نیاز به تأیید"
+          },
+          "issuing-authority-name": {
+            "title": "مرجع صادرکننده",
+            "placeholder": "نام سازمان صادرکننده این مجوز"
+          },
+          "is-active": {
+            "title": "فعال"
+          }
+        }
+      }
+    }
+  },
+  "learning-paths": {
+    "menus": {
+      "root": {
+        "title": "مسیرهای یادگیری"
+      }
+    },
+    "entities": {
+      "learning-path": {
+        "title": "مسیر یادگیری",
+        "plural": "مسیرهای یادگیری",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "settings": "تنظیمات"
+        },
+        "fields": {
+          "code": {
+            "title": "کد مسیر",
+            "placeholder": "شناسه پایدار این مسیر یادگیری"
+          },
+          "title": {
+            "title": "عنوان مسیر",
+            "placeholder": "عنوان چندزبانه برای یادگیرندگان"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "سفر یادگیری را توضیح دهید"
+          },
+          "is-active": {
+            "title": "فعال"
+          }
+        }
+      },
+      "learning-path-course": {
+        "title": "دوره مسیر یادگیری",
+        "plural": "دوره‌های مسیر یادگیری",
+        "groups": {
+          "basic-info": "ردیف مسیر"
+        },
+        "fields": {
+          "learning-path-id": {
+            "title": "مسیر یادگیری"
+          },
+          "course-id": {
+            "title": "دوره"
+          },
+          "order-index": {
+            "title": "ترتیب"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "learning-path": {
+        "actions": {
+          "manage": {
+            "title": "مدیریت مسیرهای یادگیری"
+          },
+          "view": {
+            "title": "مشاهده مسیرهای یادگیری"
+          },
+          "create": {
+            "title": "ایجاد مسیر یادگیری"
+          },
+          "update": {
+            "title": "ویرایش مسیر یادگیری"
+          },
+          "delete": {
+            "title": "حذف مسیر یادگیری"
+          },
+          "publish": {
+            "title": "انتشار مسیر یادگیری"
+          },
+          "assign": {
+            "title": "اختصاص مسیر یادگیری"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-learning-path": {
+        "title": "ایجاد مسیر یادگیری",
+        "description": "ایجاد یک مسیر یادگیری هدفمند."
+      }
+    }
+  },
+  "compliance": {
+    "menus": {
+      "root": {
+        "title": "قواعد تطبیق"
+      }
+    },
+    "entities": {
+      "mandatory-training-rule": {
+        "title": "قاعده آموزش اجباری",
+        "plural": "قواعد آموزش اجباری",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "settings": "تنظیمات"
+        },
+        "fields": {
+          "position-id": {
+            "title": "سمت سازمانی"
+          },
+          "course-id": {
+            "title": "دوره"
+          },
+          "frequency-months": {
+            "title": "دوره زمانی (ماه)",
+            "placeholder": "بازه زمانی تکرار به ماه"
+          },
+          "is-active": {
+            "title": "فعال"
+          },
+          "notes": {
+            "title": "یادداشت‌ها",
+            "placeholder": "توضیحات مربوط به تطبیق را وارد کنید"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-mandatory-training-rule": {
+        "title": "ایجاد قاعده آموزش اجباری",
+        "description": "ایجاد یک قاعده آموزش اجباری جدید."
+      }
+    },
+    "permissions": {
+      "mandatory-training-rule": {
+        "actions": {
+          "manage": {
+            "title": "مدیریت قواعد آموزش اجباری"
+          },
+          "view": {
+            "title": "مشاهده قواعد آموزش اجباری"
+          },
+          "create": {
+            "title": "ایجاد قاعده آموزش اجباری"
+          },
+          "update": {
+            "title": "ویرایش قاعده آموزش اجباری"
+          },
+          "delete": {
+            "title": "حذف قاعده آموزش اجباری"
+          },
+          "activate": {
+            "title": "فعال‌سازی قاعده"
+          }
+        }
+      }
+    }
+  }
+}

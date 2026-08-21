@@ -1,0 +1,203 @@
+@import '@angular/cdk/overlay-prebuilt.css';
+@import '@acorex/styles/icons/fontawesome/index.css';
+@import '@acorex/styles/index.css';
+@import '@acorex/styles/themes/default.css';
+@source '../node_modules/@acorex-platform';
+@source '../node_modules/@acorex';
+
+/*
+ * Platform sizing tokens — override ACoreX defaults here.
+ * All ax-* size utilities derive from these bases, so changing one value
+ * (or --ax-sys-sizing-scale) updates spacing, typography, radius, and heights together.
+ */
+:root {
+  --ax-sys-sizing-scale: 1;
+  --ax-sys-spacing-base: calc(0.25rem * var(--ax-sys-sizing-scale));
+  --ax-sys-text-xs-base: calc(0.75rem * var(--ax-sys-sizing-scale));
+  --ax-sys-text-sm-base: calc(0.875rem * var(--ax-sys-sizing-scale));
+  --ax-sys-body-font-size: calc(1rem * var(--ax-sys-sizing-scale));
+  --ax-sys-text-lg-base: calc(1.125rem * var(--ax-sys-sizing-scale));
+  --ax-sys-text-xl-base: calc(1.25rem * var(--ax-sys-sizing-scale));
+  --ax-sys-leading-3-base: calc(0.75rem * var(--ax-sys-sizing-scale));
+  --ax-sys-leading-4-base: calc(1rem * var(--ax-sys-sizing-scale));
+  --ax-sys-leading-5-base: calc(1.25rem * var(--ax-sys-sizing-scale));
+  --ax-sys-leading-6-base: calc(1.5rem * var(--ax-sys-sizing-scale));
+  --ax-sys-size-base: calc(2.5rem * var(--ax-sys-sizing-scale));
+}
+
+/* Matches AXPDeviceService mobile breakpoint (width <= 600px). */
+@media (max-width: 600px) {
+  :root {
+    --ax-sys-sizing-scale: 1.1;
+  }
+}
+
+/*
+ * Tailwind can't detect dynamic classes (e.g. [color], runtime values).
+ * Uncomment if you use accent colors like: bg-accent2-lightest
+ * Keep minimal to avoid extra CSS.
+ */
+/*
+@source inline("ax-accent ax-accent1 ax-accent2 ax-accent3 ax-accent4 ax-accent5 ax-accent6");
+@source inline("bg-{primary,secondary,danger,warning,success,accent1,accent2,accent3}-lightest");
+*/
+
+@source inline("ax-primary ax-secondary ax-success ax-warning ax-danger ax-accent ax-accent1 ax-accent2 ax-accent3 ax-accent4 ax-accent5 ax-accent6");
+
+@source inline("{primary,secondary,success,warning,danger,accent,accent1,accent2,accent3,accent4,accent5,accent6}-{lightest,lighter,light,dark,darker,darkest}-surface");
+
+@source inline("{primary,secondary,success,warning,danger,accent,accent1,accent2,accent3,accent4,accent5,accent6}-surface");
+
+/* responsive grid classes */
+@source inline("{sm:,md:,lg:,xl:,2xl:,3xl:,4xl:,}col-start-{1..12}");
+@source inline("{sm:,md:,lg:,xl:,2xl:,3xl:,4xl:,}col-end-{1..12}");
+@source inline("{sm:,md:,lg:,xl:,2xl:,3xl:,4xl:,}col-span-{1..12}");
+
+@source inline("{sm:,md:,lg:,xl:,2xl:,3xl:,4xl:,}row-start-{1..12}");
+@source inline("{sm:,md:,lg:,xl:,2xl:,3xl:,4xl:,}row-end-{1..12}");
+@source inline("{sm:,md:,lg:,xl:,2xl:,3xl:,4xl:,}row-span-{1..12}");
+
+@source inline("{sm:,md:,lg:,xl:,2xl:,3xl:,4xl:,}grid-cols-{1..12}");
+@source inline("{sm:,md:,lg:,xl:,2xl:,3xl:,4xl:,}grid-rows-{1..12}");
+
+@source inline("{sm:,md:,lg:,xl:,2xl:,3xl:,4xl:,}order-{1..12}");
+
+/* range classes */
+@source inline("gap-{0..12}");
+
+/* responsive utility classes */
+@source inline("{sm:,md:,lg:,xl:,2xl:,3xl:,4xl:,}order-last");
+@source inline("{sm:,md:,lg:,xl:,2xl:,3xl:,4xl:,}order-first");
+@source inline("{sm:,md:,lg:,xl:,2xl:,3xl:,4xl:,}order-none");
+@source inline("{sm:,md:,lg:,xl:,2xl:,3xl:,4xl:,}justify-between");
+
+@source inline("{sm:,md:,lg:,xl:,2xl:,3xl:,4xl:,}justify-items-start");
+@source inline("{sm:,md:,lg:,xl:,2xl:,3xl:,4xl:,}justify-items-end");
+@source inline("{sm:,md:,lg:,xl:,2xl:,3xl:,4xl:,}justify-items-center");
+@source inline("{sm:,md:,lg:,xl:,2xl:,3xl:,4xl:,}justify-items-stretch");
+
+@source inline("{sm:,md:,lg:,xl:,2xl:,3xl:,4xl:,}align-items-start");
+@source inline("{sm:,md:,lg:,xl:,2xl:,3xl:,4xl:,}align-items-end");
+@source inline("{sm:,md:,lg:,xl:,2xl:,3xl:,4xl:,}align-items-center");
+@source inline("{sm:,md:,lg:,xl:,2xl:,3xl:,4xl:,}align-items-stretch");
+@source inline("{sm:,md:,lg:,xl:,2xl:,3xl:,4xl:,}align-items-baseline");
+
+@source inline("{sm:,md:,lg:,xl:,2xl:,3xl:,4xl:,}grid-flow-row");
+@source inline("{sm:,md:,lg:,xl:,2xl:,3xl:,4xl:,}grid-flow-col");
+@source inline("{sm:,md:,lg:,xl:,2xl:,3xl:,4xl:,}grid-flow-row-dense");
+@source inline("{sm:,md:,lg:,xl:,2xl:,3xl:,4xl:,}grid-flow-col-dense");
+
+/* animation classes */
+@source inline("animate-bounceIn animate-fadeIn animate-fadeInUp animate-animated animate-faster");
+
+html,
+body {
+  height: 100%;
+  font-display: swap;
+}
+
+.card {
+  background-color: rgba(var(--ax-sys-color-lowest-surface));
+  @apply overflow-hidden;
+}
+
+.card .card-header {
+  @apply flex items-center justify-between p-4 md:py-4 md:px-6 border-b;
+}
+
+.card .card-header p {
+  @apply text-xl font-medium;
+}
+
+.card .card-body {
+  @apply flex flex-col gap-4 md:gap-6 p-4 md:p-6;
+}
+
+.card > ax-footer {
+  @apply bg-on-surface py-3 px-4;
+}
+
+.loading-container {
+  @apply flex justify-center items-center flex-col h-full;
+}
+
+.loading-container .loading-content {
+  @apply w-72;
+}
+
+.loading-container .loading-content .logo {
+  @apply w-3/5 mx-auto;
+}
+
+.loading-container .loading-step {
+  @apply text-sm dark:text-neutral-300 text-neutral-500 mt-6;
+}
+
+.loading-container .progress-bar {
+  @apply h-1 dark:bg-neutral-500 bg-neutral-200 w-full overflow-hidden mt-12;
+}
+
+.loading-container .progress-bar-value {
+  @apply w-full h-full bg-primary-500;
+  animation: indeterminateAnimation 1s infinite linear;
+  transform-origin: 0% 50%;
+}
+
+.axp-auth-bk {
+  background-image: url('/assets/auth-background.svg');
+}
+
+@keyframes indeterminateAnimation {
+  0% {
+    transform: translateX(0) scaleX(0);
+  }
+
+  40% {
+    transform: translateX(0) scaleX(0.4);
+  }
+
+  100% {
+    transform: translateX(100%) scaleX(0.5);
+  }
+}
+
+.button-text {
+  @apply capitalize;
+}
+
+.highlight {
+  background-color: rgba(var(--ax-sys-color-warning-light-surface));
+  color: rgba(var(--ax-sys-color-on-warning-light-surface));
+}
+
+ax-form .error-message {
+  @apply text-danger text-sm;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+.cdk-drag-placeholder {
+  @apply opacity-40;
+}
+
+.cdk-drag-animating {
+  @apply transition-transform duration-200;
+}
+
+.code-editor .editor-container {
+  padding: 0.5rem;
+}
+
+.ax-editor-container:not(.ax-none) {
+  @apply bg-[rgba(245,245,246,0.75)]! dark:bg-[rgba(24,24,27,0.75)]!;
+}
+
+axp-query-filters ax-tag-box .ax-editor-container {
+  @apply bg-transparent!;
+}

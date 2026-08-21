@@ -1,0 +1,43 @@
+{
+  "integration": {
+    "display-name": "GitHub",
+    "description": "Connect GitHub with a personal access token for repositories and sync.",
+    "auth": {
+      "pat": {
+        "label": "Personal Access Token",
+        "instructions": "<p>Create a <strong>personal access token</strong> in GitHub and paste it below. Use <a href=\"https://github.com/settings/personal-access-tokens/new\" target=\"_blank\" rel=\"noopener noreferrer\">Fine-grained tokens</a> or <a href=\"https://github.com/settings/tokens/new\" target=\"_blank\" rel=\"noopener noreferrer\">classic tokens</a> with the repository scopes you need.</p>",
+        "token": {
+          "label": "Personal Access Token",
+          "placeholder": "Paste your personal access token"
+        }
+      }
+    },
+    "connect": {
+      "instructions": "<p>Create a <strong>personal access token</strong> in GitHub and paste it below. Open <a href=\"https://github.com/settings/personal-access-tokens/new\" target=\"_blank\" rel=\"noopener noreferrer\">Fine-grained tokens</a> or <a href=\"https://github.com/settings/tokens/new\" target=\"_blank\" rel=\"noopener noreferrer\">classic tokens</a>, generate a token with the repository scopes you need, then save the connection.</p>",
+      "dialog": {
+        "title": "Connect GitHub",
+        "reconfigure-title": "Reconfigure GitHub"
+      },
+      "fields": {
+        "display-name": "Display Name"
+      },
+      "placeholders": {
+        "display-name": "GitHub"
+      },
+      "actions": {
+        "save": "Save Connection"
+      },
+      "messages": {
+        "token-required": "Personal access token is required."
+      }
+    }
+  },
+  "settings": {
+    "github": {
+      "section-title": "GitHub",
+      "section-description": "Connect GitHub for source control and sync.",
+      "connection-title": "Connection",
+      "connection-description": "Use a personal access token to authorize repository access at tenant level."
+    }
+  }
+}

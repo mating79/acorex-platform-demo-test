@@ -1,0 +1,365 @@
+{
+  "module": {
+    "title": "کاتالوگ محصولات",
+    "description": "مدیریت محصولات، واحدهای انبارش، برندها و دسته‌بندی‌ها",
+    "menus": {
+      "root": {
+        "title": "کاتالوگ محصولات",
+        "description": "سیستم مدیریت متمرکز محصولات"
+      }
+    }
+  },
+  "brands": {
+    "terms": {
+      "brand": "برند",
+      "brands": "برندها"
+    },
+    "menus": {
+      "brands": {
+        "title": "برندها",
+        "description": "مدیریت برندهای محصولات"
+      }
+    },
+    "entities": {
+      "brand": {
+        "title": "برند",
+        "plural": "برندها",
+        "groups": {
+          "manufacturer-info": "اطلاعات تولیدکننده"
+        },
+        "fields": {
+          "logo": {
+            "title": "لوگو"
+          },
+          "manufacturer": {
+            "title": "تولیدکننده"
+          },
+          "country-of-origin": {
+            "title": "کشور سازنده"
+          },
+          "website": {
+            "title": "وب‌سایت"
+          }
+        }
+      }
+    },
+    "search-commands": {
+      "create-brand": {
+        "title": "ایجاد برند",
+        "description": "ایجاد یک برند جدید."
+      }
+    }
+  },
+  "manufacturers": {
+    "terms": {
+      "manufacturer": "تولیدکننده",
+      "manufacturers": "تولیدکنندگان"
+    },
+    "menus": {
+      "manufacturers": {
+        "title": "تولیدکنندگان",
+        "description": "مدیریت تولیدکنندگان"
+      }
+    },
+    "entities": {
+      "manufacturer": {
+        "title": "تولیدکننده",
+        "plural": "تولیدکنندگان",
+        "groups": {
+          "contact-info": "اطلاعات تماس"
+        },
+        "fields": {
+          "logo": {
+            "title": "لوگو"
+          },
+          "country-of-origin": {
+            "title": "کشور سازنده"
+          },
+          "website": {
+            "title": "وب‌سایت"
+          },
+          "contact-email": {
+            "title": "ایمیل تماس"
+          },
+          "contact-phone": {
+            "title": "تلفن تماس"
+          }
+        }
+      }
+    }
+  },
+  "categories": {
+    "terms": {
+      "category": "دسته‌بندی",
+      "categories": "دسته‌بندی‌ها"
+    },
+    "menus": {
+      "categories": {
+        "title": "دسته‌بندی‌ها",
+        "description": "مدیریت دسته‌بندی محصولات"
+      }
+    },
+    "entities": {
+      "product-category": {
+        "title": "دسته‌بندی",
+        "plural": "دسته‌بندی‌ها",
+        "fields": {
+          "parent": {
+            "title": "دسته‌بندی والد"
+          }
+        }
+      }
+    }
+  },
+  "products": {
+    "terms": {
+      "product": "محصول",
+      "products": "محصولات"
+    },
+    "menus": {
+      "products": {
+        "title": "محصولات",
+        "description": "مدیریت محصولات و انواع آنها"
+      }
+    },
+    "entities": {
+      "product": {
+        "title": "محصول",
+        "plural": "محصولات",
+        "groups": {
+          "sourcing": "برند و تأمین",
+          "financial-info": "اطلاعات مالی",
+          "measurement-info": "اطلاعات اندازه‌گیری",
+          "media": "تصاویر"
+        },
+        "components": {
+          "meta-data-form": {
+            "title": "مشخصات"
+          }
+        },
+        "fields": {
+          "brand": {
+            "title": "برند"
+          },
+          "tax-class": {
+            "title": "طبقه مالیاتی"
+          },
+          "base-currency": {
+            "title": "ارز پایه"
+          },
+          "base-price": {
+            "title": "قیمت پایه"
+          },
+          "base-unit": {
+            "title": "واحد اندازه‌گیری پایه"
+          },
+          "weight": {
+            "title": "وزن"
+          },
+          "weight-unit": {
+            "title": "واحد وزن"
+          },
+          "length": {
+            "title": "طول"
+          },
+          "width": {
+            "title": "عرض"
+          },
+          "height": {
+            "title": "ارتفاع"
+          },
+          "dimension-unit": {
+            "title": "واحد ابعاد"
+          },
+          "manufacturer": {
+            "title": "تولیدکننده"
+          },
+          "supplier": {
+            "title": "تأمین‌کننده"
+          },
+          "images": {
+            "title": "تصاویر"
+          },
+          "rating": {
+            "title": "امتیاز"
+          }
+        }
+      }
+    },
+    "states": {
+      "draft": "پیش‌نویس",
+      "in-review": "در حال بررسی",
+      "approved": "تأیید شده",
+      "suspended": "معلق",
+      "archived": "آرشیو شده"
+    },
+    "actions": {
+      "submit-for-review": {
+        "title": "ارسال برای بررسی"
+      },
+      "suspend": {
+        "title": "تعلیق"
+      },
+      "activate": {
+        "title": "فعال‌سازی"
+      }
+    }
+  },
+  "skus": {
+    "terms": {
+      "sku": "واحد انبارش",
+      "skus": "واحدهای انبارش",
+      "variant": "نوع",
+      "variants": "انواع"
+    },
+    "menus": {
+      "skus": {
+        "title": "واحدهای انبارش",
+        "description": "مدیریت واحدهای انبارش و انواع محصولات"
+      }
+    },
+    "entities": {
+      "product-sku": {
+        "title": "واحد انبارش محصول",
+        "plural": "واحدهای انبارش محصول",
+        "groups": {
+          "identifiers": "شناسه‌های محصول",
+          "pricing": "اطلاعات قیمت‌گذاری",
+          "measurement-info": "اطلاعات اندازه‌گیری",
+          "media": "تصاویر"
+        },
+        "fields": {
+          "sku": {
+            "title": "کد SKU"
+          },
+          "product": {
+            "title": "محصول"
+          },
+          "variant-name": {
+            "title": "نام نوع"
+          },
+          "barcode": {
+            "title": "بارکد"
+          },
+          "qr-code": {
+            "title": "کد QR"
+          },
+          "ean": {
+            "title": "EAN"
+          },
+          "upc": {
+            "title": "UPC"
+          },
+          "price": {
+            "title": "قیمت"
+          },
+          "compare-at-price": {
+            "title": "قیمت مقایسه"
+          },
+          "cost-price": {
+            "title": "قیمت تمام‌شده"
+          },
+          "weight": {
+            "title": "وزن"
+          },
+          "weight-unit": {
+            "title": "واحد وزن"
+          },
+          "length": {
+            "title": "طول"
+          },
+          "width": {
+            "title": "عرض"
+          },
+          "height": {
+            "title": "ارتفاع"
+          },
+          "dimension-unit": {
+            "title": "واحد ابعاد"
+          },
+          "images": {
+            "title": "تصاویر SKU"
+          },
+          "is-default": {
+            "title": "SKU پیش‌فرض"
+          }
+        }
+      }
+    },
+    "search-commands": {
+      "create-product": {
+        "title": "ایجاد محصول",
+        "description": "ایجاد یک محصول جدید."
+      }
+    }
+  },
+  "permissions": {
+    "products": {
+      "title": "محصولات",
+      "actions": {
+        "view": {
+          "title": "مشاهده محصولات"
+        },
+        "manage": {
+          "title": "مدیریت محصولات"
+        }
+      }
+    },
+    "brands": {
+      "title": "برندها",
+      "actions": {
+        "view": {
+          "title": "مشاهده برندها"
+        },
+        "manage": {
+          "title": "مدیریت برندها"
+        }
+      }
+    },
+    "categories": {
+      "title": "دسته‌بندی‌ها",
+      "actions": {
+        "view": {
+          "title": "مشاهده دسته‌بندی‌ها"
+        },
+        "manage": {
+          "title": "مدیریت دسته‌بندی‌ها"
+        }
+      }
+    },
+    "manufacturers": {
+      "title": "تولیدکنندگان",
+      "actions": {
+        "view": {
+          "title": "مشاهده تولیدکنندگان"
+        },
+        "manage": {
+          "title": "مدیریت تولیدکنندگان"
+        }
+      }
+    },
+    "skus": {
+      "title": "واحدهای انبارش",
+      "actions": {
+        "view": {
+          "title": "مشاهده واحدهای انبارش"
+        },
+        "manage": {
+          "title": "مدیریت واحدهای انبارش"
+        }
+      }
+    }
+  },
+  "dashboard-widgets": {
+    "widget-picker-category": {
+      "product-catalog": "کاتالوگ محصول"
+    },
+    "product-history-bar": {
+      "widget-title": "تاریخچه قیمت پایه محصول",
+      "widget-description": "تغییرات قیمت پایه محصول را بر اساس تاریخچه نسخه‌ها در طول زمان نشان می‌دهد.",
+      "chart-title": "تاریخچه قیمت پایه",
+      "x-axis-label": "تاریخ",
+      "y-axis-label": "قیمت پایه"
+    }
+  }
+}

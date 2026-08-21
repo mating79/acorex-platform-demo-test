@@ -1,0 +1,48 @@
+{
+  "module": {
+    "title": "OpenWeatherMap",
+    "description": "یکپارچه‌سازی ارائه‌دهنده داده OpenWeatherMap"
+  },
+  "integration": {
+    "display-name": "OpenWeatherMap",
+    "description": "OpenWeatherMap را برای تأمین ویجت‌های آب‌وهوا در داشبورد متصل کنید.",
+    "auth": {
+      "pat": {
+        "label": "کلید API",
+        "instructions": "در openweathermap.org یک کلید API بسازید و اینجا وارد کنید.",
+        "token": {
+          "placeholder": "کلید API OpenWeatherMap"
+        }
+      }
+    },
+    "connect": {
+      "pat-dialog": {
+        "title": "اتصال حساب",
+        "configure-title": "پیکربندی حساب",
+        "instructions": "در openweathermap.org یک کلید API بسازید و اینجا وارد کنید.",
+        "fields": {
+          "display-name": "نام نمایشی",
+          "api-key": "کلید API"
+        },
+        "placeholders": {
+          "display-name": "OpenWeatherMap",
+          "api-key": "کلید API OpenWeatherMap"
+        },
+        "actions": {
+          "save": "ذخیره اتصال"
+        },
+        "messages": {
+          "api-key-required": "کلید API الزامی است."
+        }
+      }
+    }
+  },
+  "settings": {
+    "openweathermap": {
+      "section-title": "OpenWeatherMap",
+      "section-description": "حساب OpenWeatherMap را برای ویجت‌های آب‌وهوا مستأجر متصل کنید.",
+      "connection-title": "حساب",
+      "connection-description": "کلید API مربوط به OpenWeatherMap را برای این مستأجر ذخیره کنید."
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "feature": {
+    "title": "گزارش فعالیت",
+    "description": "ردیابی و نمایش تاریخچه فعالیت برای موجودیت‌ها"
+  },
+  "terms": {
+    "created-at": "ایجاد شده در",
+    "created-by": "ایجاد شده توسط",
+    "modified-at": "تغییر یافته در",
+    "modified-by": "تغییر یافته توسط",
+    "deleted-at": "حذف شده در",
+    "deleted-by": "حذف شده توسط",
+    "created-by-title": "ایجاد شده توسط {{user}} در {{date}}",
+    "updated-by-title": "تغییر یافته توسط {{user}} در {{date}}",
+    "deleted-by-title": "حذف شده توسط {{user}} در {{date}}"
+  },
+  "components": {
+    "activity-log": {
+      "title": "گزارش فعالیت",
+      "description": "مشاهده تاریخچه فعالیت موجودیت",
+      "empty-states": {
+        "no-history": {
+          "title": "هیچ فعالیتی",
+          "description": "هیچ فعالیتی ثبت نشده است."
+        }
+      }
+    },
+    "compare-view": {
+      "title": "نمای مقایسه",
+      "description": "مقایسه تفاوت‌های بین رکوردها",
+      "show-only-differences": "نمایش فقط تفاوت‌ها",
+      "differences-found": "تفاوت‌ها یافت شد",
+      "values-match": "مقادیر مطابقت دارند"
+    }
+  },
+  "changes": {
+    "added": "اضافه شد",
+    "removed": "حذف شد",
+    "replaced": "جایگزین شد",
+    "renamed": "تغییر نام یافت",
+    "metadata-updated": "متادیتا به‌روزرسانی شد",
+    "updated": "به‌روزرسانی شد",
+    "unknown-field": "{{name}}"
+  },
+  "actions": {
+    "view-history": {
+      "title": "تاریخچه تغییرات",
+      "description": "مشاهده تاریخچه تغییرات"
+    },
+    "rename": {
+      "title": "تغییر نام",
+      "description": "تغییر نام این مورد"
+    },
+    "restore": {
+      "title": "بازیابی",
+      "description": "بازیابی نسخه قبلی"
+    },
+    "make-copy": {
+      "title": "ایجاد کپی",
+      "description": "ایجاد یک کپی از این مورد"
+    },
+    "compare-changes": {
+      "title": "مقایسه تغییرات",
+      "description": "مقایسه تغییرات بین نسخه‌ها"
+    },
+    "compare-records": {
+      "title": "مقایسه رکوردها",
+      "description": "مقایسه رکوردهای مختلف"
+    }
+  }
+}

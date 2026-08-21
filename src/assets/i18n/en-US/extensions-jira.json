@@ -1,0 +1,464 @@
+{
+  "module": {
+    "title": "Jira Management",
+    "description": "Manage Jira instances, projects, issues, and worklogs",
+    "menus": {
+      "configuration": {
+        "title": "Jira Management"
+      }
+    }
+  },
+  "integration": {
+    "display-name": "Atlassian Jira",
+    "description": "Connect to Jira Cloud or self-hosted for issue tracking and sync.",
+    "connect": {
+      "instance-picker": {
+        "title": "Select Jira Instance",
+        "empty": "No active Jira instances are configured. Create an instance first.",
+        "fields": {
+          "instance": "Jira Instance"
+        },
+        "actions": {
+          "continue": "Continue"
+        }
+      },
+      "pat-dialog": {
+        "title": "Connect with personal access token",
+        "fields": {
+          "display-name": "Display Name",
+          "instance-url": "Instance URL",
+          "token": "Personal Access Token"
+        },
+        "placeholders": {
+          "display-name": "Jira",
+          "instance-url": "https://jira.example.com",
+          "token": "Paste your personal access token"
+        },
+        "actions": {
+          "save": "Save Connection"
+        }
+      },
+      "oauth-dialog": {
+        "title": "Connect with OAuth 2.0",
+        "actions": {
+          "connect": "Connect"
+        }
+      }
+    },
+    "auth": {
+      "pat": {
+        "label": "Personal access token",
+        "base-url": { "placeholder": "https://jira.example.com" },
+        "token": { "placeholder": "Personal access token" },
+        "instructions": "In your Jira instance, open Profile → Personal access tokens (or Account settings → Security → API tokens on older versions). Create a token with the scopes you need and paste it below."
+      },
+      "basic": {
+        "label": "Username and password",
+        "base-url": { "placeholder": "https://jira.example.com" },
+        "username": { "placeholder": "Username" },
+        "password": { "placeholder": "Password" },
+        "instructions": "Use your Jira username and password for self-hosted instances that allow basic authentication. Prefer personal access tokens when available."
+      },
+      "api-token": {
+        "label": "API token (cloud)",
+        "site-url": { "placeholder": "https://your-domain.atlassian.net" },
+        "email": { "placeholder": "Account email" },
+        "token": { "placeholder": "API token" },
+        "instructions": "Open id.atlassian.com → Security → API tokens → Create API token. Use your Atlassian account email and the generated token for Jira Cloud."
+      },
+      "oauth": {
+        "label": "OAuth 2.0",
+        "instructions": "You will be redirected to Atlassian to authorize this application for your Jira Cloud site. Complete sign-in and approve the requested scopes.",
+        "not-implemented": "Jira Cloud OAuth is not available yet. Use PAT, Basic, or API token authentication instead."
+      }
+    }
+  },
+  "settings": {
+    "jira": {
+      "section-title": "Jira",
+      "section-description": "Connect your Jira account for issue tracking and sync.",
+      "connection-title": "Account",
+      "connection-description": "Choose an authentication method and save your Jira connection."
+    }
+  },
+  "permissions": {
+    "group": {
+      "title": "Jira Management",
+      "description": "Configure Jira integration and mirrored data"
+    },
+    "management": {
+      "title": "Jira management",
+      "description": "Full access to Jira configuration entities"
+    },
+    "jira-instance": {
+      "view": { "title": "View Jira instances" },
+      "create": { "title": "Create Jira instances" },
+      "update": { "title": "Update Jira instances" },
+      "delete": { "title": "Delete Jira instances" }
+    },
+    "jira-project": {
+      "view": { "title": "View Jira projects" },
+      "create": { "title": "Create Jira projects" },
+      "update": { "title": "Update Jira projects" },
+      "delete": { "title": "Delete Jira projects" }
+    },
+    "jira-issue": {
+      "view": { "title": "View Jira issues" },
+      "create": { "title": "Create Jira issues" },
+      "update": { "title": "Update Jira issues" },
+      "delete": { "title": "Delete Jira issues" }
+    },
+    "jira-worklog": {
+      "view": { "title": "View worklogs" },
+      "create": { "title": "Create worklogs" },
+      "update": { "title": "Update worklogs" },
+      "delete": { "title": "Delete worklogs" }
+    },
+    "catalog": {
+      "view": { "title": "View Jira catalogs" },
+      "manage": { "title": "Manage Jira catalogs" }
+    },
+    "project-import": {
+      "execute": { "title": "Import projects from Jira" }
+    },
+    "project-sync": {
+      "execute": { "title": "Sync project with Jira" }
+    }
+  },
+  "actions": {
+    "import-from-jira": {
+      "title": "Import from Jira"
+    },
+    "sync": {
+      "title": "Sync"
+    }
+  },
+  "import": {
+    "not-connected": {
+      "title": "Connect Jira to import projects",
+      "message": "Jira is not connected for this tenant. Open Administration → Integrations to connect your account, then try importing again."
+    },
+    "no-connection-for-instance": "No Jira connection found for the selected instance. Connect it in Settings → Integrations first.",
+    "success": "Imported {{imported}} and updated {{updated}} project(s) from Jira.",
+    "success-single": "Imported \"{{title}}\" from Jira.",
+    "selector": {
+      "title": "Select Jira Project"
+    },
+    "dialog": {
+      "title": "Import Jira Project",
+      "submit": "Import Project"
+    },
+    "loading": {
+      "fetch": {
+        "title": "Loading from Jira",
+        "status": "Pulling projects into cache…"
+      },
+      "import": {
+        "title": "Importing Project",
+        "status": "Creating platform project…"
+      }
+    },
+    "status": {
+      "imported": "Already imported",
+      "not_imported": "Available"
+    },
+    "popup": {
+      "title": "Import projects from Jira",
+      "confirm": "Import selected",
+      "empty": "No projects were returned from Jira.",
+      "default-project-type": "Default project type for new imports",
+      "columns": {
+        "key": "Key",
+        "name": "Name",
+        "strategy": "Sync strategy",
+        "status": "Status"
+      }
+    },
+    "sync-strategy": {
+      "title": "Sync Strategy",
+      "options": {
+        "remoteOverride": "Remote overrides local",
+        "localOverride": "Keep local values",
+        "merge": "Merge (fill empty local fields)"
+      },
+      "remoteOverride": "Remote overrides local",
+      "localOverride": "Keep local values",
+      "merge": "Merge (fill empty local fields)"
+    }
+  },
+  "sync": {
+    "success": "Project synced with Jira successfully.",
+    "loading": {
+      "title": "Syncing with Jira",
+      "status": "Updating project from Jira…"
+    }
+  },
+  "project-links": {
+    "entities": {
+      "project-link": {
+        "title": "Project Link",
+        "plural": "Project Links"
+      }
+    }
+  },
+  "instances": {
+    "entities": {
+      "instance": {
+        "title": "Jira Instance",
+        "plural": "Jira Instances",
+        "groups": {
+          "connection": "Connection",
+          "cloud-auth": "Cloud Authentication",
+          "self-hosted-auth": "Self-Hosted Authentication",
+          "sync": "Synchronization"
+        },
+        "fields": {
+          "deployment-type": {
+            "title": "Deployment Type",
+            "options": {
+              "cloud": "Atlassian Cloud",
+              "self-hosted": "Self-Hosted / Data Center"
+            }
+          },
+          "site-url": { "title": "Site URL" },
+          "base-url": { "title": "Base URL" },
+          "email": { "title": "Account Email" },
+          "api-token": { "title": "API Token" },
+          "cloud-id": { "title": "Cloud ID" },
+          "auth-type": {
+            "title": "Authentication Type",
+            "options": {
+              "pat": "Personal Access Token",
+              "basic": "Username and Password"
+            }
+          },
+          "personal-access-token": { "title": "Personal Access Token" },
+          "username": { "title": "Username" },
+          "password": { "title": "Password" },
+          "verify-ssl": { "title": "Verify SSL Certificate" },
+          "api-version": { "title": "REST API Version" },
+          "is-active": { "title": "Active" },
+          "admin-token": {
+            "title": "Admin Sync Token",
+            "description": "Personal access token used by mock sync to fetch data from Jira."
+          },
+          "last-sync-at": { "title": "Last Sync At" }
+        },
+        "actions": {
+          "sync": {
+            "title": "Sync from Jira",
+            "loading": {
+              "title": "Syncing Jira data",
+              "description": "Fetching projects, issues, and catalogs from the remote Jira instance."
+            },
+            "messages": {
+              "missing-instance": "Jira instance id is required.",
+              "success": "Synced {{projects}} project(s) and {{issues}} issue(s) from Jira.",
+              "failed": "Jira sync failed.",
+              "network-error": "Could not reach Jira. Check CORS, base URL, and token configuration."
+            }
+          }
+        }
+      }
+    }
+  },
+  "projects": {
+    "statuses": {
+      "active": "Active",
+      "archived": "Archived",
+      "sync-error": "Sync Error"
+    },
+    "transitions": {
+      "archive": "Archive",
+      "activate": "Activate",
+      "mark-sync-error": "Mark Sync Error",
+      "resolve-sync-error": "Resolve Sync Error"
+    },
+    "entities": {
+      "project": {
+        "title": "Jira Project",
+        "plural": "Jira Projects",
+        "groups": {
+          "jira-meta": "Jira Metadata",
+          "lead": "Project Lead",
+          "platform-link": "Platform Project",
+          "sync": "Sync Settings"
+        },
+        "fields": {
+          "platform-project": { "title": "Platform Project" },
+          "sync-strategy": {
+            "title": "Sync Strategy",
+            "options": {
+              "remote-override": "Remote overrides local",
+              "local-override": "Keep local values",
+              "merge": "Merge (fill empty fields)"
+            }
+          },
+          "last-sync-at": { "title": "Last Sync At" },
+          "jira-instance": { "title": "Jira Instance" },
+          "jira-project-id": { "title": "Jira Project ID" },
+          "key": { "title": "Project Key" },
+          "name": { "title": "Project Name" },
+          "project-type-key": { "title": "Project Type Key" },
+          "style": { "title": "Style" },
+          "simplified": { "title": "Simplified (Team-Managed)" },
+          "lead-account-id": { "title": "Lead Account ID" },
+          "lead-display-name": { "title": "Lead Display Name" },
+          "avatar-url": { "title": "Avatar URL" }
+        }
+      }
+    }
+  },
+  "issue-types": {
+    "entities": {
+      "issue-type": {
+        "title": "Issue Type",
+        "plural": "Issue Types",
+        "groups": {
+          "jira-meta": "Jira Metadata"
+        },
+        "fields": {
+          "jira-instance": { "title": "Jira Instance" },
+          "jira-issue-type-id": { "title": "Jira Issue Type ID" },
+          "name": { "title": "Name" },
+          "subtask": { "title": "Sub-task" },
+          "hierarchy-level": { "title": "Hierarchy Level" },
+          "icon-url": { "title": "Icon URL" }
+        }
+      }
+    }
+  },
+  "fields": {
+    "entities": {
+      "field": {
+        "title": "Jira Field",
+        "plural": "Jira Fields",
+        "groups": {
+          "schema": "Field Schema"
+        },
+        "fields": {
+          "jira-instance": { "title": "Jira Instance" },
+          "jira-field-id": { "title": "Jira Field ID" },
+          "name": { "title": "Name" },
+          "custom": { "title": "Custom Field" },
+          "field-type": { "title": "Field Type" },
+          "schema": { "title": "Schema (JSON)" }
+        }
+      }
+    }
+  },
+  "project-issue-types": {
+    "entities": {
+      "project-issue-type": {
+        "title": "Project Issue Type",
+        "plural": "Project Issue Types",
+        "fields": {
+          "project": { "title": "Project" },
+          "issue-type": { "title": "Issue Type" }
+        }
+      }
+    }
+  },
+  "project-issue-type-fields": {
+    "entities": {
+      "project-issue-type-field": {
+        "title": "Project Issue Type Field",
+        "plural": "Project Issue Type Fields",
+        "groups": {
+          "config": "Field Configuration"
+        },
+        "fields": {
+          "project": { "title": "Project" },
+          "issue-type": { "title": "Issue Type" },
+          "field": { "title": "Field" },
+          "required": { "title": "Required" },
+          "has-default-value": { "title": "Has Default Value" },
+          "default-value": { "title": "Default Value (JSON)" },
+          "allowed-values": { "title": "Allowed Values (JSON)" },
+          "order": { "title": "Display Order" }
+        }
+      }
+    }
+  },
+  "workflow-statuses": {
+    "entities": {
+      "workflow-status": {
+        "title": "Workflow Status",
+        "plural": "Workflow Statuses",
+        "fields": {
+          "project": { "title": "Project" },
+          "issue-type": { "title": "Issue Type" },
+          "jira-status-id": { "title": "Jira Status ID" },
+          "name": { "title": "Status Name" },
+          "status-category-key": {
+            "title": "Status Category",
+            "options": {
+              "new": "To Do",
+              "indeterminate": "In Progress",
+              "done": "Done"
+            }
+          },
+          "order": { "title": "Order" }
+        }
+      }
+    }
+  },
+  "issues": {
+    "entities": {
+      "issue": {
+        "title": "Jira Issue",
+        "plural": "Jira Issues",
+        "groups": {
+          "relations": "Relations",
+          "people": "People",
+          "jira-meta": "Jira Metadata",
+          "custom": "Custom Data"
+        },
+        "fields": {
+          "jira-instance": { "title": "Jira Instance" },
+          "project": { "title": "Project" },
+          "issue-type": { "title": "Issue Type" },
+          "workflow-status": { "title": "Workflow Status" },
+          "jira-issue-id": { "title": "Jira Issue ID" },
+          "jira-issue-key": { "title": "Issue Key" },
+          "summary": { "title": "Summary" },
+          "assignee-account-id": { "title": "Assignee Account ID" },
+          "assignee-display-name": { "title": "Assignee" },
+          "reporter-account-id": { "title": "Reporter Account ID" },
+          "reporter-display-name": { "title": "Reporter" },
+          "priority-name": { "title": "Priority" },
+          "parent-issue": { "title": "Parent Issue" },
+          "resolution-name": { "title": "Resolution" },
+          "labels": { "title": "Labels (JSON)" },
+          "custom-fields": { "title": "Custom Fields (JSON)" },
+          "jira-created": { "title": "Created in Jira" },
+          "jira-updated": { "title": "Updated in Jira" }
+        }
+      }
+    }
+  },
+  "worklogs": {
+    "entities": {
+      "worklog": {
+        "title": "Worklog",
+        "plural": "Worklogs",
+        "groups": {
+          "time": "Time",
+          "jira-meta": "Jira Metadata"
+        },
+        "fields": {
+          "issue": { "title": "Issue" },
+          "jira-worklog-id": { "title": "Jira Worklog ID" },
+          "author-account-id": { "title": "Author Account ID" },
+          "author-display-name": { "title": "Author" },
+          "started": { "title": "Started" },
+          "time-spent-seconds": { "title": "Time Spent (Seconds)" },
+          "time-spent-display": { "title": "Time Spent" },
+          "comment": { "title": "Comment" },
+          "jira-created": { "title": "Created in Jira" },
+          "jira-updated": { "title": "Updated in Jira" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,425 @@
+{
+  "module": {
+    "title": "گفتگو",
+    "description": "مدیریت گفتگوها، اتاق‌ها و پیام‌ها",
+    "menus": {
+      "conversations": {
+        "title": "گفتگوها"
+      }
+    },
+    "permissions": {
+      "title": "گفتگو",
+      "description": "دسترسی به گفتگو و چت",
+      "manage": {
+        "title": "مدیریت گفتگو",
+        "description": "استفاده از گفتگوها، اتاق‌ها و پیام‌ها"
+      }
+    }
+  },
+  "plural-title": "گفتگوها",
+  "chat-error": "بارگذاری گفتگوها ناموفق بود.",
+  "chat-try-again": "لطفاً دوباره تلاش کنید!",
+  "try-again": "تلاش مجدد",
+  "back-to-chat-list": "بازگشت به فهرست گفتگو",
+  "remove-chat": "حذف گفتگو",
+  "is-typing": "در حال تایپ است",
+  "room": {
+    "individual-title": "اتاق",
+    "plural-title": "اتاق‌ها",
+    "basic-info": "اطلاعات پایه",
+    "title": "عنوان",
+    "topic": "موضوع",
+    "members": "اعضا",
+    "entity": "نهاد",
+    "create": "ایجاد اتاق",
+    "delete-items": "حذف انتخاب‌شده‌ها",
+    "detail": "مشاهده جزئیات",
+    "delete": "حذف",
+    "all-item": "همه اتاق‌ها"
+  },
+  "message": {
+    "individual-title": "پیام",
+    "plural-title": "پیام‌ها",
+    "basic-info": "اطلاعات پایه",
+    "room": "اتاق",
+    "content": "محتوا",
+    "contentType": "نوع محتوا",
+    "author": "نویسنده",
+    "replyTo": "پاسخ به",
+    "reactions": "واکنش‌ها",
+    "seen": "دیده‌شده توسط",
+    "create": "ایجاد پیام",
+    "delete-items": "حذف انتخاب‌شده‌ها",
+    "detail": "مشاهده جزئیات",
+    "delete": "حذف",
+    "all-item": "همه پیام‌ها"
+  },
+  "actions": {
+    "show-comment-popup": "نمایش نظرات",
+    "reply": "پاسخ",
+    "open": "باز کردن",
+    "delete": "حذف",
+    "mark-seen": "علامت‌گذاری به‌عنوان دیده‌شده"
+  },
+  "no-chats-found": {
+    "title": "هیچ گفتگویی یافت نشد",
+    "description": "در این زبانه هیچ گفتگویی موجود نیست. یک گفتگو جدید شروع کنید."
+  },
+  "state-message": {
+    "error": {
+      "title": "خطای گفتگو",
+      "description": "هنگام بارگذاری گفتگو خطایی رخ داد"
+    }
+  },
+  "new-conversation": {
+    "header": "گفتگوی جدید",
+    "lookup": {
+      "label": "انتخاب کاربران"
+    },
+    "title": {
+      "label": "عنوان",
+      "placeholder": "عنوان را وارد کنید"
+    },
+    "actions": {
+      "accept-send": "تأیید و ارسال",
+      "new-chat": "گفتگوی جدید",
+      "chat-with-ai": "گفتگو با هوش مصنوعی"
+    },
+    "button": "گفتگوی جدید"
+  },
+  "mini-chat": {
+    "history-title": "تاریخچه گفتگو",
+    "new-chat": "گفتگوی جدید",
+    "loading": "در حال بارگذاری…",
+    "inbox-empty-state": {
+      "title": "هنوز گفتگویی با هوش مصنوعی ندارید",
+      "description": "برای گفتگو با هوش مصنوعی، یک گفتگوی جدید شروع کنید."
+    },
+    "entity-empty-state": {
+      "title": "هنوز گفتگویی ندارید",
+      "description": "برای گفتگو درباره این رکورد با هوش مصنوعی، گفتگوی جدیدی شروع کنید."
+    }
+  },
+  "in-app": {
+    "actions": {
+      "open-chat": "باز کردن گفتگو"
+    }
+  },
+  "chat": {
+    "notification": {
+      "name": "گفتگو",
+      "title": "گفتگو",
+      "new-message": "یک پیام جدید دارید.",
+      "new-message-title": "پیام جدید"
+    },
+    "actions": {
+      "call": "تماس",
+      "copy": "کپی",
+      "back-to-chats": "بازگشت به گفتگوها",
+      "download-debug-information": "دانلود اطلاعات اشکال‌زدایی"
+    },
+    "call": {
+      "start-title": "شروع تماس",
+      "loading": "در حال بارگذاری مخاطب...",
+      "load-error": "بارگذاری این گفتگو ممکن نشد.",
+      "hint": "برای شروع تماس نوع آن را انتخاب کنید",
+      "start-video": "شروع تصویر",
+      "stop-video": "توقف تصویر",
+      "start-call": "تماس صوتی",
+      "cancel": "انصراف",
+      "waiting": "در انتظار...",
+      "connecting": "در حال اتصال...",
+      "connected": "متصل",
+      "is-calling": "در حال تماس با شماست...",
+      "screencast": "اشتراک صفحه",
+      "end-call": "پایان تماس",
+      "mute": "بی‌صدا",
+      "unmute": "باصدا",
+      "add-people": "افزودن افراد",
+      "share-link": "اشتراک لینک",
+      "decline": "رد",
+      "accept": "پذیرش",
+      "group-title": "تماس گروهی",
+      "encrypted": "رمزنگاری سرتاسری",
+      "speaking": "در حال صحبت",
+      "add-people-soon": "افزودن افراد به‌زودی در دسترس خواهد بود.",
+      "link-copied": "لینک تماس کپی شد.",
+      "link-copy-failed": "کپی لینک تماس ممکن نشد.",
+      "media-error": "دسترسی به دوربین یا میکروفون ممکن نشد.",
+      "connect-error": "اتصال به تماس برقرار نشد.",
+      "no-answer": "هنوز پاسخی نیست. تماس تا وقتی قطع نکنید باز می‌ماند.",
+      "devices": {
+        "microphone": "میکروفون",
+        "camera": "دوربین",
+        "empty": "دستگاهی پیدا نشد"
+      },
+      "rtc-not-configured": "تماس در دسترس نیست. یک ارائه‌دهنده RTC مانند LiveKit را در مدیریت ← یکپارچه‌سازی‌ها متصل کنید.",
+      "popup-blocked": "پنجره مسدود شد. پاپ‌آپ را برای این سایت مجاز کنید و دوباره تلاش کنید.",
+      "log": {
+        "declined": "تماس صوتی رد شد",
+        "declined-video": "تماس تصویری رد شد",
+        "missed": "تماس صوتی بی‌پاسخ",
+        "missed-video": "تماس تصویری بی‌پاسخ",
+        "cancelled": "تماس صوتی لغو شد",
+        "cancelled-video": "تماس تصویری لغو شد"
+      }
+    },
+    "debug-mode": "اشکال‌زدایی",
+    "speech-to-text": {
+      "errors": {
+        "transcription-failed": "تبدیل ضبط صوتی به متن انجام نشد. لطفاً دوباره تلاش کنید."
+      }
+    },
+    "tabs": {
+      "bot": "ربات"
+    },
+    "empty-state": {
+      "title": "هنوز پیامی وجود ندارد",
+      "description": "برای شروع این گفتگو، پیام خود را بنویسید."
+    },
+    "assist": {
+      "errors": {
+        "title": "خطای هوش مصنوعی",
+        "tool-title": "خطای ابزار هوش مصنوعی",
+        "stream-title": "جریان هوش مصنوعی"
+      }
+    },
+    "assist-dialog": {
+      "search": {
+        "placeholder": "جستجوی دستیارها..."
+      },
+      "actions": {
+        "start-chat": "شروع گفتگو"
+      },
+      "states": {
+        "loading": "در حال بارگذاری دستیارها...",
+        "no-search-result": "دستیاری مطابق جستجوی شما پیدا نشد.",
+        "no-assists": "هیچ دستیاری در دسترس نیست."
+      },
+      "errors": {
+        "load-assists": "بارگذاری دستیارها ناموفق بود. لطفاً دوباره تلاش کنید.",
+        "start-chat": "شروع گفتگو ناموفق بود. لطفاً دوباره تلاش کنید."
+      }
+    },
+    "empty-assist": {
+      "caption": "چطور می‌توانم کمک کنم؟",
+      "assist-default": "دستیار",
+      "placeholder": "پیام به {{assist}}...",
+      "errors": {
+        "send": "ارسال ناموفق بود. لطفاً دوباره تلاش کنید.",
+        "load-assists": "بارگذاری دستیارها ناموفق بود."
+      }
+    },
+    "starter-prompts": {
+      "list-aria": "پیشنهادهای شروع گفتگو",
+      "errors": {
+        "send": "ارسال ناموفق بود. لطفاً دوباره تلاش کنید."
+      }
+    },
+    "assist-renderer": {
+      "run-meta": {
+        "title": "جزئیات اجرا",
+        "model": "مدل",
+        "duration": "مدت",
+        "total-tokens": "مجموع توکن"
+      },
+      "aria": {
+        "assistant-response": "پاسخ دستیار",
+        "run-usage": "مصرف توکن و زمان اجرای مدل"
+      },
+      "sections": {
+        "thinking": "تفکر",
+        "input": "ورودی",
+        "output": "خروجی",
+        "agent-prompt": "پرامپت ارسال‌شده به ایجنت",
+        "agent-answer": "پاسخ ایجنت",
+        "agent-stream": "خروجی ایجنت (استریم)",
+        "nested-tools": "ابزارهای اجرا شده داخل ایجنت"
+      },
+      "badges": {
+        "internal": "داخلی",
+        "agent": "ایجنت",
+        "tool": "ابزار",
+        "running": "در حال اجرا...",
+        "done": "انجام شد"
+      },
+      "delegated-agent": {
+        "detail": "جزئیات",
+        "detail-aria": "مشاهده رونوشت کامل اجرای specialist",
+        "dialog-title-suffix": "اجرای کامل Specialist",
+        "transcript-label": "رونوشت Specialist",
+        "transcript-missing": "رونوشت specialist برای این فراخوانی ابزار ذخیره نشده است.",
+        "download-json": "دانلود JSON",
+        "reflection": "بازتاب",
+        "roles": {
+          "user": "کاربر",
+          "assistant": "دستیار",
+          "tool": "ابزار",
+          "system": "سیستم"
+        }
+      },
+      "activity": {
+        "starting": "در حال اتصال…",
+        "planning": "در حال تفکر…",
+        "using-tools": "در حال استفاده از ابزار / ایجنت…",
+        "responding": "در حال نوشتن پاسخ…"
+      },
+      "errors": {
+        "image-load": "بارگذاری فایل تصویر ممکن نبود.",
+        "audio-load": "بارگذاری فایل صوتی ممکن نبود.",
+        "file-load": "بارگذاری فایل ممکن نبود."
+      },
+      "retry": {
+        "aria": {
+          "panel": "پاسخ دستیار کامل نشد"
+        },
+        "action": "تلاش دوباره",
+        "incomplete": {
+          "title": "پاسخ ناقص ماند",
+          "description": "دستیار این پاسخ را کامل نکرد. می‌توانید دوباره تلاش کنید تا پاسخ دوباره تولید شود."
+        },
+        "failed": {
+          "title": "تولید پاسخ ناموفق بود",
+          "description": "در تولید این پاسخ خطایی رخ داد. هر زمان آماده بودید دوباره تلاش کنید."
+        }
+      }
+    },
+    "assist-conversation": {
+      "rename": {
+        "action": "تغییر عنوان گفتگو",
+        "title": "تغییر عنوان گفتگو",
+        "placeholder": "عنوان گفتگو را وارد کنید",
+        "actions": {
+          "save": "ذخیره"
+        },
+        "messages": {
+          "success": "عنوان گفتگو به‌روزرسانی شد.",
+          "error": "به‌روزرسانی عنوان گفتگو ناموفق بود. لطفاً دوباره تلاش کنید."
+        }
+      }
+    },
+    "org-chart": {
+      "private-chat": "شروع گفتگوی خصوصی",
+      "private-chat-bu-head": "گفتگوی خصوصی با سرپرست",
+      "group-chat-bu": "شروع گفتگوی گروهی",
+      "group-room-title": "گفتگو — {{unit}}",
+      "fallback-unit": "واحد",
+      "error-title": "گفتگو",
+      "errors": {
+        "load-employee": "رکورد کارمند بارگذاری نشد.",
+        "no-user": "برای این کارمند حساب کاربری ثبت نشده است.",
+        "self-chat": "نمی‌توانید با خودتان گفتگو را شروع کنید.",
+        "no-business-unit": "واحد سازمانی شناسایی نشد.",
+        "no-head-employee": "سرپرستی برای این واحد تعیین نشده یا جایگاه خالی است.",
+        "no-members": "عضو دیگری با حساب کاربری در این واحد پیدا نشد.",
+        "create-room": "ایجاد اتاق گفتگو ناموفق بود."
+      }
+    },
+    "user-card": {
+      "message": "پیام",
+      "error-title": "گفتگو",
+      "errors": {
+        "self-chat": "نمی‌توانید با خودتان گفتگو را شروع کنید.",
+        "create-room": "شروع گفتگو ناموفق بود.",
+        "missing-user": "برای این شخص حساب کاربری جهت پیام وجود ندارد."
+      }
+    },
+    "route": {
+      "error-title": "گفتگو",
+      "conversation-not-found": "این گفتگو وجود ندارد یا دیگر در دسترس نیست."
+    },
+    "user-form": {
+      "actions": {
+        "submit": "ثبت"
+      },
+      "states": {
+        "submitted": "ثبت شد",
+        "submitted-success": "فرم با موفقیت ثبت شد."
+      },
+      "fields": {
+        "name": {
+          "placeholder": "نام"
+        }
+      }
+    }
+  },
+  "search": {
+    "placeholder": "جستجوی گفتگوها...",
+    "assist": {
+      "group-title": "دستیار هوش مصنوعی",
+      "shortcut-description": "شروع گفتگوی جدید با این دستیار."
+    }
+  },
+  "messages": {
+    "create-room-failed": "ایجاد اتاق ناموفق بود",
+    "mark-seen-failed": "علامت دیده‌شدن ناموفق بود"
+  },
+  "terms": {
+    "common": {
+      "comment": "نظر",
+      "comments": "نظرات"
+    }
+  },
+  "comments": {
+    "feature": {
+      "title": "نظرات"
+    },
+    "widget": {
+      "title": "نظرات",
+      "description": "نمایش و مدیریت نظرات برای موجودیت‌ها"
+    },
+    "notification": {
+      "title": "نظر",
+      "new-comment": "نظر جدید"
+    },
+    "actions": {
+      "edit": {
+        "title": "ویرایش"
+      },
+      "delete": {
+        "title": "حذف"
+      },
+      "send": {
+        "title": "ارسال"
+      },
+      "cancel": {
+        "title": "انصراف"
+      },
+      "reply-to": "پاسخ به",
+      "edit-message": "ویرایش پیام"
+    },
+    "components": {
+      "comment": {
+        "empty-states": {
+          "no-comments": {
+            "title": "هیچ نظری",
+            "description": "هیچ نظری ثبت نشده است."
+          }
+        }
+      }
+    },
+    "confirmations": {
+      "delete-comment": {
+        "title": "حذف نظر",
+        "message": "آیا مطمئن هستید که می‌خواهید این نظر را حذف کنید؟",
+        "deleting": "در حال حذف..."
+      }
+    },
+    "messages": {
+      "success": {
+        "comment-deleted": "نظر با موفقیت حذف شد."
+      },
+      "error": {
+        "load-comments": "بارگذاری نظرات ناموفق بود. لطفاً دوباره تلاش کنید.",
+        "delete-comment": "حذف نظر ناموفق بود!",
+        "submit-comment": "ارسال نظر ناموفق بود. لطفاً دوباره تلاش کنید.",
+        "add-reaction-not-implemented": "فرمان افزودن واکنش هنوز پیاده‌سازی نشده است."
+      }
+    }
+  },
+  "support": {
+    "title": "پشتیبانی هوش مصنوعی",
+    "aria-label": "باز کردن چت پشتیبانی",
+    "model": "مدل هوش مصنوعی"
+  }
+}

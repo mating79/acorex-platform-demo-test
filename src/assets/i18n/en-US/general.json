@@ -1,0 +1,1926 @@
+{
+  "widgets": {
+    "file-uploader": {
+      "attachments": {
+        "title": "Attachments"
+      },
+      "column": {
+        "files-count": "{{count}} files"
+      },
+      "edit-dialog": {
+        "title": "Edit File",
+        "add-title": "Add File"
+      },
+      "empty-state": {
+        "title": "No Files Found",
+        "description": "Click or drag files here to add them.",
+        "description-with-formats": "Click or drag files here. Allowed: {{formats}}.",
+        "description-with-max-size": "Click or drag files here. Max size: {{maxSize}}.",
+        "description-with-limits": "Click or drag files here. Allowed: {{formats}} · Max {{maxSize}}."
+      },
+      "validation": {
+        "file-type-not-allowed": "\"{{fileName}}\" is not an allowed file type.",
+        "file-type-not-allowed-summary": "{{count}} file(s) were rejected because their type is not allowed.",
+        "file-size-exceeds-limit": "\"{{fileName}}\" exceeds the {{maxSizeMb}} MB size limit.",
+        "files-rejected-summary": "{{count}} file(s) were rejected because they do not meet the upload rules."
+      },
+      "messages": {
+        "upload-failed": "File upload failed. Please try again with a smaller file."
+      }
+    },
+    "lookup": {
+      "placeholder": "Choose from the list...",
+      "search": {
+        "placeholder": "Search..."
+      },
+      "column": {
+        "items-count": "{{count}} items",
+        "popover-title": "All {{count}} items",
+        "load-failed": "Unable to load items."
+      }
+    },
+    "toggle": {
+      "yes": "Yes",
+      "no": "No",
+      "unknown": "Unknown"
+    },
+    "multi-language": "Multi-Language",
+    "multi-language-select": {
+      "show-other-languages": "Show languages without a locale profile"
+    },
+    "selectbox": {
+      "popover": {
+        "title": "Select Option"
+      }
+    },
+    "icon-chooser": {
+      "search-placeholder": "Search for icons...",
+      "view-mode": {
+        "square": "Square View",
+        "rectangle": "Rectangle View"
+      }
+    },
+    "font-style-chooser": {
+      "popup-title": "Choose Font"
+    },
+    "tag-editor": {
+      "placeholder": "Add tags..."
+    },
+    "widget-configurator": {
+      "select-widget-type": "Select a widget type to configure",
+      "no-configuration-needed": "This widget doesn't require configuration"
+    },
+    "widget-item": {
+      "pin": "Pin",
+      "unpin": "Unpin"
+    },
+    "triggers": {
+      "event": {
+        "label": "Event:",
+        "placeholder": "Click to edit event"
+      },
+      "action": {
+        "label": "Action:",
+        "placeholder": "Click to edit action"
+      },
+      "empty-state": {
+        "title": "No Triggers Defined. Click \"Add Trigger\" to Create One."
+      },
+      "add-trigger": "Add Trigger",
+      "add-first-trigger": "Add Your First Trigger",
+      "edit-event-expression": "Edit Event Expression",
+      "edit-action-expression": "Edit Action Expression",
+      "edit-binding-expression": "Edit Binding Expression",
+      "open-editor": "Open Editor"
+    },
+    "table-columns-editor": {
+      "popup-title": "Table columns",
+      "column-name": "Column name",
+      "column-title": "Column title",
+      "add-column": "Add column",
+      "remove-column": "Remove column",
+      "empty-state": "No columns defined. Add at least one column."
+    },
+    "table-data-editor": {
+      "popup-title": "Table data",
+      "define-columns-first": "Define columns first."
+    },
+    "query-options": {
+      "query": "Query",
+      "query-placeholder": "Select Query...",
+      "tabs": "Query Tabs",
+      "add-tab": "Add Query Tab",
+      "label-placeholder": "Tab Label"
+    },
+    "data-source-options": {
+      "source": "Source",
+      "mode": {
+        "exists": "Exists Data Source",
+        "list": "List",
+        "tabular": "Tabular"
+      },
+      "data-source": "Data Source",
+      "data-source-placeholder": "Select data source...",
+      "inline-data": "Inline Data",
+      "list-items": "Items",
+      "add-list-item": "Add item",
+      "columns": "Columns",
+      "columns-with-count": "Columns ({{count}})",
+      "rows": "Rows",
+      "rows-with-count": "Rows ({{count}})",
+      "edit-array": "Edit array...",
+      "value-field": "Value Field",
+      "value-field-placeholder": "Select value field...",
+      "value-field-placeholder-disabled": "Select a data source first",
+      "text-field": "Text Field",
+      "text-field-placeholder": "Select text field...",
+      "text-field-placeholder-disabled": "Select a data source first",
+      "filters": "Filters",
+      "filters-button-empty": "Configure filters",
+      "filters-button-with-count": "Edit filters ({{count}} set)",
+      "filters-modal-title": "Filters",
+      "inline-array-editor": {
+        "title": "Inline Data",
+        "column-value": "Value",
+        "column-text": "Text"
+      }
+    }
+  },
+  "settings": {
+    "experience": {
+      "nav-title": "Experience",
+      "title": "Experience Settings",
+      "description": "Configure startup, widgets, notifications, and how you work with data in the app.",
+      "startup": {
+        "title": "Startup",
+        "description": "Control what happens when the app starts.",
+        "home-page": {
+          "title": "Home Page",
+          "description": "Choose which page should be shown after login."
+        },
+        "release-notes": {
+          "title": "What's New",
+          "description": "Show the latest changes and features after each update."
+        },
+        "application-terms": {
+          "title": "Application Terms",
+          "description": "Show terms and conditions notifications when new terms are available."
+        }
+      },
+      "widgets": {
+        "title": "Widgets",
+        "description": "Configure dashboard widgets and their data sources."
+      },
+      "notifications": {
+        "title": "Notifications",
+        "description": "Configure notification and toast message preferences.",
+        "enable-operation-toasts": {
+          "title": "Show Operation Results",
+          "description": "Display toast notifications for API operations (create, update, delete, etc.)."
+        }
+      },
+      "performance": {
+        "title": "Performance",
+        "description": "Configure client-side request optimization for runtime queries.",
+        "runtime-query-cache-enabled": {
+          "title": "Runtime Query Request Cache",
+          "description": "Coalesce identical runtime queries while a request is in progress and optionally reuse successful responses for the configured time."
+        },
+        "runtime-query-cache-ttl-ms": {
+          "title": "Runtime Query Cache TTL (ms)",
+          "description": "Keep successful runtime query responses in memory for this many milliseconds. Use 0 to coalesce only in-progress requests."
+        }
+      },
+      "offline": {
+        "title": "Offline",
+        "description": "Control whether the app may continue from cached platform settings when the API is unreachable.",
+        "allow-working-offline": {
+          "title": "Allow Working Offline",
+          "description": "When enabled and the API or network is unavailable, ask to continue using the last cached platform settings. When disabled, the app shows the unavailable page."
+        }
+      },
+      "file-chooser": {
+        "title": "File Chooser",
+        "description": "Platform-wide processing applied after files are chosen or dropped.",
+        "compress-images": {
+          "title": "Compress Images After Choose",
+          "description": "When enabled, image files are compressed before they are added to the selection."
+        },
+        "prompt-zip-on-multiple": {
+          "title": "Prompt to ZIP Multiple Files",
+          "description": "When enabled, choosing multiple files at once asks whether to bundle them into a single ZIP archive."
+        }
+      },
+      "entity": {
+        "title": "Entities & Lists",
+        "description": "Configure how entity lists, forms, and detail pages behave.",
+        "filter-apply-mode": {
+          "title": "Filter Apply Mode",
+          "description": "Configure the mode for applying filters.",
+          "options": {
+            "auto": "Auto",
+            "manual": "Manual"
+          }
+        },
+        "list-persistence-mode": {
+          "title": "Entity List State Persistence",
+          "description": "Controls how list preferences (columns, filters, sorting, paging, expanded rows) are saved.",
+          "options": {
+            "none": "Do Not Save",
+            "persistent": "Save And Keep Across Visits",
+            "route": "Save Until You Leave Current Page"
+          }
+        },
+        "show-category-columns-by-default": {
+          "title": "Show Category Columns by Default",
+          "description": "Display category columns in data grid view by default. When disabled, category columns are hidden initially."
+        },
+        "apply-layout-ordering": {
+          "title": "Apply Layout Ordering",
+          "description": "When enabled, entity form sections and properties are reordered by a standard layout (e.g. basic-info first, then classification, appearance, etc.). When disabled, layout order is left as defined by the entity."
+        },
+        "redirect-to-details-after-create": {
+          "title": "Redirect to Details After Create",
+          "description": "When enabled, after creating a new record the user is redirected to the entity details page. When disabled, the user stays on the list or current view. This can be overridden per action via options.process.redirect."
+        },
+        "highlight-after-create-in-list": {
+          "title": "Highlight After Create in List",
+          "description": "When enabled, after creating a record the new row or card is highlighted in the list."
+        },
+        "show-page-badge": {
+          "title": "Show Page Badge",
+          "description": "When enabled, a badge indicator is displayed on the page header to show contextual information such as status or state. When disabled, the page badge is hidden."
+        },
+        "confirm-unsaved-changes": {
+          "title": "Confirm Unsaved Changes",
+          "description": "When enabled, a warning dialog is shown when you leave a page, close a dialog, or switch sections with unsaved edits. When disabled, changes may be lost without confirmation."
+        },
+        "show-row-index-column": {
+          "title": "Show Row Index Column",
+          "description": "When enabled, lists and tables that support a row number column will show it (where the view or widget also allows it). When disabled, the row index column stays hidden."
+        },
+        "quick-search-enabled": {
+          "title": "Enable Quick Search",
+          "description": "When enabled, entity lists show a quick search box for fast full-text filtering. When disabled, quick search is hidden."
+        }
+      }
+    }
+  },
+  "messages": {
+    "generic": {
+      "cancel": {
+        "title": "Cancel",
+        "description": "Operation cancelled."
+      },
+      "success": {
+        "title": "Success",
+        "description": "Operation completed successfully."
+      },
+      "error": {
+        "title": "Error",
+        "description": "Something went wrong. Please try again."
+      },
+      "warning": {
+        "title": "Warning",
+        "description": "Please review and try again."
+      },
+      "info": {
+        "title": "Information",
+        "description": "Here is some helpful information."
+      }
+    },
+    "unsaved-changes": {
+      "title": "Discard Changes?",
+      "message": "You have unsaved changes. Are you sure you want to close without saving?"
+    },
+    "offline-continue": {
+      "title": "Continue Offline?",
+      "message": "The server is unreachable. Continue using cached platform settings in offline mode?"
+    },
+    "discard-changes": {
+      "message": "You have unsaved changes. Are you sure you want to discard them?"
+    },
+    "clipboard": {
+      "copied": "{{title}} copied!"
+    },
+    "entity": {
+      "invalid-identifier": "Invalid entity identifier",
+      "invalid-data": "Invalid data: must be string (id) or object (record data)",
+      "create-command-unavailable": "Create command is not available for the selected entity",
+      "update-command-unavailable": "Update command is not available for the selected entity",
+      "command-no-result": "Command returned no result",
+      "invalid-action": "Invalid action",
+      "create-failed": "Failed to create entity",
+      "update-failed": "Failed to update entity",
+      "view-failed": "Failed to view entity details"
+    },
+    "preload-filters": {
+      "title": "Search for Specific Items",
+      "description": "Use one or more fields below to filter the list.",
+      "filter-icon-alt": "Filters",
+      "no-match": "No records match the filters you entered. Try different values."
+    },
+    "crud": {
+      "create": {
+        "success": {
+          "title": "Created",
+          "description": "{{entity}} was created successfully."
+        },
+        "error": {
+          "title": "Create Failed",
+          "description": "Could not create {{entity}}."
+        },
+        "warning": {
+          "title": "Create Warning",
+          "description": "{{reason}}"
+        }
+      },
+      "update": {
+        "success": {
+          "title": "Updated",
+          "description": "{{entity}} was updated successfully."
+        },
+        "error": {
+          "title": "Update Failed",
+          "description": "Could not update {{entity}}."
+        },
+        "warning": {
+          "title": "Update Warning",
+          "description": "{{reason}}"
+        }
+      },
+      "delete": {
+        "success": {
+          "title": "Deleted",
+          "description": "{{entity}} was deleted successfully."
+        },
+        "error": {
+          "title": "Delete Failed",
+          "description": "Could not delete {{entity}}."
+        },
+        "warning": {
+          "title": "Delete Warning",
+          "description": "{{reason}}"
+        },
+        "bulk": {
+          "success": {
+            "title": "Deleted Items",
+            "description": "Deleted {{count}} items."
+          },
+          "error": {
+            "title": "Bulk Delete Failed",
+            "description": "Failed to delete {{count}} items."
+          }
+        }
+      },
+      "archive": {
+        "success": {
+          "title": "Archived",
+          "description": "{{entity}} was archived successfully."
+        },
+        "error": {
+          "title": "Archive Failed",
+          "description": "Could not archive {{entity}}."
+        }
+      },
+      "restore-archive": {
+        "success": {
+          "title": "Unarchived",
+          "description": "{{entity}} was restored from archive."
+        },
+        "error": {
+          "title": "Unarchive Failed",
+          "description": "Could not unarchive {{entity}}."
+        }
+      },
+      "set-primary": {
+        "success": {
+          "title": "Set as Primary",
+          "description": "{{entity}} was set as primary successfully."
+        },
+        "error": {
+          "title": "Set Primary Failed",
+          "description": "Could not set {{entity}} as primary."
+        }
+      }
+    },
+    "network": {
+      "offline": {
+        "title": "Offline",
+        "description": "You appear to be offline."
+      },
+      "timeout": {
+        "title": "Timeout",
+        "description": "The request timed out. Please try again."
+      },
+      "server-error": {
+        "title": "Server Error",
+        "description": "An unexpected error ({{code}}) occurred."
+      },
+      "forbidden": {
+        "title": "Access Denied",
+        "description": "You do not have permission to perform this action."
+      },
+      "not-found": {
+        "title": "Not Found",
+        "description": "The requested resource was not found."
+      }
+    },
+    "form": {
+      "saved": {
+        "success": {
+          "title": "Saved",
+          "description": "Your changes were saved."
+        }
+      },
+      "invalid": {
+        "error": {
+          "title": "Form Invalid",
+          "description": "Please fix the highlighted fields."
+        }
+      },
+      "no-changes": {
+        "warning": {
+          "title": "No Changes",
+          "description": "There are no changes to save."
+        }
+      }
+    }
+  },
+  "data-list": {
+    "dialog": {
+      "add-title": "Add row",
+      "edit-title": "Edit row"
+    },
+    "actions": {
+      "add-row": "Add row",
+      "edit": "Edit",
+      "revert": "Revert"
+    },
+    "pending-removed": "Marked for removal (applied when you save the form)"
+  },
+  "entity-form": {
+    "create-and-continue": {
+      "title": "Create and continue"
+    },
+    "update-and-continue": {
+      "title": "Update and continue"
+    },
+    "save-and-continue": {
+      "title": "Save and continue"
+    },
+    "done": {
+      "title": "Done"
+    }
+  },
+  "errors": {
+    "codes": {
+      "PAYLOAD_TOO_LARGE": "This file is too large to upload. Choose a smaller file and try again.",
+      "FILE_UPLOAD_FAILED": "File upload failed. Please try again.",
+      "POLICY_IMMUTABLE_RECORD": "This record is marked as system and cannot be changed.",
+      "USER_HOME_TENANT_PROFILE_DENIED": "You can only update this profile from the user's home tenant, or as the user themselves. Manage membership and roles in this tenant instead.",
+      "UNAUTHORIZED": "You are not signed in or your session has expired.",
+      "FORBIDDEN": "You do not have permission to perform this action.",
+      "NOT_FOUND": "The requested item was not found.",
+      "UNKNOWN": "Something went wrong. Please try again."
+    },
+    "404": {
+      "title": "No Result Found",
+      "description": "Whoops! Looks like that page doesn't exist.",
+      "image-alt": "Error 404 - page not found illustration",
+      "actions": {
+        "go-home": {
+          "title": "Go back to home",
+          "description": "Return to the application home page"
+        },
+        "contact-us": {
+          "title": "Contact us",
+          "description": "Get help from support"
+        }
+      }
+    },
+    "401": {
+      "title": "Access Denied",
+      "description": "Sorry, you are not authorized to view this page.",
+      "image-alt": "Error 401 - access denied illustration",
+      "actions": {
+        "go-home": {
+          "title": "Go back to home",
+          "description": "Return to the application home page"
+        },
+        "sign-in": {
+          "title": "Sign in",
+          "description": "Sign in to access this application"
+        },
+        "contact-us": {
+          "title": "Contact us",
+          "description": "Get help from support"
+        }
+      }
+    },
+    "policy-immutable-record": "This record is marked as system and cannot be changed."
+  },
+  "actions": {
+    "manage": {
+      "title": "Manage",
+      "description": "Manage items"
+    },
+    "view": {
+      "title": "View",
+      "description": "Displays item details"
+    },
+    "detail": {
+      "title": "Detail",
+      "description": "Show detailed information"
+    },
+    "create": {
+      "title": "Create",
+      "description": "Add a new item"
+    },
+    "search-create-entity": {
+      "title": "Create {{entity}}",
+      "description": "Create a new {{entity}}"
+    },
+    "create-category": {
+      "title": "Create Category",
+      "description": "Create a new category"
+    },
+    "edit": {
+      "title": "Edit",
+      "description": "Modify this item"
+    },
+    "modify": {
+      "title": "Modify",
+      "description": "Modify this item"
+    },
+    "delete": {
+      "title": "Delete",
+      "description": "Remove this item permanently",
+      "confirm": {
+        "title": "Confirm Deletion",
+        "message": "Are you sure you want to delete this item? This action cannot be undone.",
+        "processing": "Deleting...",
+        "buttons": {
+          "confirm": "Delete",
+          "cancel": "Cancel"
+        }
+      }
+    },
+    "lock": {
+      "title": "Lock",
+      "description": "Lock this item"
+    },
+    "unlock": {
+      "title": "Unlock",
+      "description": "Unlock this item"
+    },
+    "ok": {
+      "title": "OK",
+      "description": "Confirm action"
+    },
+    "close": {
+      "title": "Close",
+      "description": "Close dialog"
+    },
+    "close-tab": {
+      "title": "Close Tab"
+    },
+    "close-other-tabs": {
+      "title": "Close Other Tabs"
+    },
+    "close-all-tabs": {
+      "title": "Close All Tabs"
+    },
+    "pin-tab": {
+      "title": "Pin Tab"
+    },
+    "unpin-tab": {
+      "title": "Unpin Tab"
+    },
+    "scroll-tabs-back": {
+      "title": "Scroll tabs back"
+    },
+    "scroll-tabs-forward": {
+      "title": "Scroll tabs forward"
+    },
+    "select": {
+      "title": "Select",
+      "description": "Select item"
+    },
+    "show": {
+      "all": {
+        "title": "Show All",
+        "description": "Open the full list without applying preload filters"
+      }
+    },
+    "delete-items": {
+      "title": "Delete Items",
+      "description": "Remove selected items permanently",
+      "confirm": {
+        "title": "Confirm Bulk Deletion",
+        "message": "Are you sure you want to delete the selected items? This action cannot be undone.",
+        "processing": "Deleting items...",
+        "buttons": {
+          "confirm": "Delete Items",
+          "cancel": "Cancel"
+        }
+      }
+    },
+    "update": {
+      "title": "Update",
+      "description": "Update an item"
+    },
+    "save": {
+      "title": "Save",
+      "description": "Save changes"
+    },
+    "save-and-new": {
+      "title": "Save and Create New",
+      "description": "Save changes and create a new item"
+    },
+    "add": {
+      "title": "Add",
+      "description": "Add a new item"
+    },
+    "add-item": {
+      "title": "Add Item",
+      "description": "Add a new item"
+    },
+    "download": {
+      "title": "Download",
+      "description": "Download file",
+      "processing": "Downloading..."
+    },
+    "add-new": {
+      "title": "Add New",
+      "description": "Add a new item"
+    },
+    "add-new-child": {
+      "title": "Add New Child",
+      "description": "Add a new child item"
+    },
+    "save-as": {
+      "title": "Save As",
+      "description": "Save as new item"
+    },
+    "next": {
+      "title": "Next",
+      "description": "Go to the next step"
+    },
+    "previous": {
+      "title": "Previous",
+      "description": "Go to the previous step"
+    },
+    "back": {
+      "title": "Back",
+      "description": "Go back to previous page"
+    },
+    "approve": {
+      "title": "Approve",
+      "description": "Accept and approve the item"
+    },
+    "reject": {
+      "title": "Reject",
+      "description": "Reject and return the item",
+      "confirm": {
+        "title": "Confirm Rejection",
+        "message": "Are you sure you want to reject this item?",
+        "processing": "Rejecting...",
+        "buttons": {
+          "confirm": "Reject",
+          "cancel": "Cancel"
+        }
+      }
+    },
+    "submit": {
+      "title": "Submit",
+      "description": "Send this for processing"
+    },
+    "complete": {
+      "title": "Complete",
+      "description": "Mark as complete"
+    },
+    "archive": {
+      "title": "Archive",
+      "description": "Archive this item",
+      "confirm": {
+        "title": "Confirm Archiving",
+        "message": "Are you sure you want to archive this item?",
+        "processing": "Archiving...",
+        "buttons": {
+          "confirm": "Archive",
+          "cancel": "Cancel"
+        }
+      }
+    },
+    "disable": {
+      "title": "Disable",
+      "description": "Disable this item",
+      "confirm": {
+        "title": "Confirm Disabling",
+        "message": "Are you sure you want to disable this item?",
+        "processing": "Disabling...",
+        "buttons": {
+          "confirm": "Disable",
+          "cancel": "Cancel"
+        }
+      }
+    },
+    "enable": {
+      "title": "Enable",
+      "description": "Enable this item",
+      "confirm": {
+        "title": "Confirm Enabling",
+        "message": "Are you sure you want to enable this item?",
+        "processing": "Enabling...",
+        "buttons": {
+          "confirm": "Enable",
+          "cancel": "Cancel"
+        }
+      }
+    },
+    "bulk-disable": {
+      "title": "Disable Selected",
+      "description": "Disable selected items",
+      "confirm": {
+        "title": "Confirm Bulk Disabling",
+        "message": "Are you sure you want to disable {{count}} selected items?",
+        "processing": "Disabling items...",
+        "buttons": {
+          "confirm": "Disable Items",
+          "cancel": "Cancel"
+        }
+      }
+    },
+    "bulk-enable": {
+      "title": "Enable Selected",
+      "description": "Enable selected items",
+      "confirm": {
+        "title": "Confirm Bulk Enabling",
+        "message": "Are you sure you want to enable {{count}} selected items?",
+        "processing": "Enabling items...",
+        "buttons": {
+          "confirm": "Enable Items",
+          "cancel": "Cancel"
+        }
+      }
+    },
+    "set-primary": {
+      "title": "Set Primary",
+      "description": "Set this item as primary",
+      "confirm": {
+        "title": "Confirm Set Primary",
+        "message": "Are you sure you want to set this item as primary? This will unset any other primary items.",
+        "processing": "Setting as primary...",
+        "buttons": {
+          "confirm": "Set Primary",
+          "cancel": "Cancel"
+        }
+      }
+    },
+    "export": {
+      "title": "Export",
+      "description": "Download item data"
+    },
+    "import": {
+      "title": "Import",
+      "description": "Upload items in bulk"
+    },
+    "print": {
+      "title": "Print",
+      "description": "Print this record"
+    },
+    "clone": {
+      "title": "Clone",
+      "description": "Create an exact copy of this item",
+      "confirm": {
+        "title": "Confirm Clone",
+        "message": "Are you sure you want to clone this item? A new copy will be created.",
+        "processing": "Cloning...",
+        "buttons": {
+          "confirm": "Clone",
+          "cancel": "Cancel"
+        }
+      }
+    },
+    "open": {
+      "title": "Open",
+      "description": "Open item or file"
+    },
+    "open-details": {
+      "title": "Open Details",
+      "description": "Open details of the item"
+    },
+    "change": {
+      "title": "Change"
+    },
+    "cancel": {
+      "title": "Cancel",
+      "description": "Cancel the current action"
+    },
+    "refresh": {
+      "title": "Refresh",
+      "description": "Refresh data"
+    },
+    "reload": {
+      "title": "Reload",
+      "description": "Reload page or component"
+    },
+    "search": {
+      "title": "Search",
+      "description": "Search for items"
+    },
+    "filter": {
+      "title": "Filter",
+      "description": "Apply filters"
+    },
+    "sort": {
+      "title": "Sort",
+      "description": "Sort items"
+    },
+    "clear": {
+      "title": "Clear",
+      "description": "Clear data or form"
+    },
+    "unselect": {
+      "title": "Unselect",
+      "description": "Clear selection"
+    },
+    "reset": {
+      "title": "Reset",
+      "description": "Reset to defaults"
+    },
+    "sync": {
+      "title": "Sync",
+      "description": "Synchronize data"
+    },
+    "assign": {
+      "title": "Assign",
+      "description": "Assign responsibility"
+    },
+    "terminate": {
+      "title": "Terminate",
+      "description": "Terminate this session"
+    },
+    "terminate-selected": {
+      "title": "Terminate Selected",
+      "description": "Terminate selected sessions"
+    },
+    "restore": {
+      "title": "Restore",
+      "description": "Restore this archived item",
+      "confirm": {
+        "title": "Confirm Restoration",
+        "message": "Are you sure you want to restore this item?",
+        "processing": "Restoring...",
+        "buttons": {
+          "confirm": "Restore",
+          "cancel": "Cancel"
+        }
+      }
+    },
+    "restore-archive": {
+      "title": "Restore from Archive",
+      "description": "Restore this item from archive",
+      "confirm": {
+        "title": "Confirm Archive Restoration",
+        "message": "Are you sure you want to restore this item from the archive?",
+        "processing": "Restoring from archive...",
+        "buttons": {
+          "confirm": "Restore",
+          "cancel": "Cancel"
+        }
+      }
+    },
+    "bulk-archive": {
+      "title": "Bulk Archive",
+      "description": "Archive selected items",
+      "confirm": {
+        "title": "Confirm Bulk Archiving",
+        "message": "Are you sure you want to archive {{count}} selected items?",
+        "processing": "Archiving items...",
+        "buttons": {
+          "confirm": "Archive",
+          "cancel": "Cancel"
+        }
+      }
+    },
+    "bulk-restore": {
+      "title": "Bulk Restore",
+      "description": "Restore selected archived items",
+      "confirm": {
+        "title": "Confirm Bulk Restoration",
+        "message": "Are you sure you want to restore the selected items?",
+        "processing": "Restoring items...",
+        "buttons": {
+          "confirm": "Restore",
+          "cancel": "Cancel"
+        }
+      }
+    },
+    "bulk-restore-archive": {
+      "title": "Bulk Restore",
+      "description": "Restore selected items from archive",
+      "confirm": {
+        "title": "Confirm Bulk Archive Restoration",
+        "message": "Are you sure you want to restore {{count}} selected items from the archive?",
+        "processing": "Restoring from archive...",
+        "buttons": {
+          "confirm": "Restore",
+          "cancel": "Cancel"
+        }
+      }
+    },
+    "share": {
+      "title": "Share",
+      "description": "Send or share with others"
+    },
+    "upload": {
+      "title": "Upload",
+      "description": "Upload an item"
+    },
+    "remove": {
+      "title": "Remove",
+      "description": "Remove an item",
+      "confirm": {
+        "title": "Confirm Removal",
+        "message": "Are you sure you want to remove this item?",
+        "processing": "Removing...",
+        "buttons": {
+          "confirm": "Remove",
+          "cancel": "Cancel"
+        }
+      }
+    },
+    "configure": {
+      "title": "Configure",
+      "named-title": "Configure {{name}}",
+      "description": "Adjust settings and options"
+    },
+    "setup": {
+      "title": "Setup",
+      "description": "Configure settings"
+    },
+    "design": {
+      "title": "Design",
+      "description": "Open design mode"
+    },
+    "start": {
+      "title": "Start",
+      "description": "Start process or workflow"
+    },
+    "stop": {
+      "title": "Stop",
+      "description": "Stop process or workflow"
+    },
+    "pause": {
+      "title": "Pause",
+      "description": "Pause process or workflow"
+    },
+    "publish": {
+      "title": "Publish",
+      "description": "Make publicly available",
+      "confirm": {
+        "title": "Confirm Publish",
+        "message": "Are you sure you want to publish this item? It will become publicly visible.",
+        "processing": "Publishing...",
+        "buttons": {
+          "confirm": "Publish",
+          "cancel": "Cancel"
+        }
+      }
+    },
+    "unpublish": {
+      "title": "Unpublish",
+      "description": "Remove from public view",
+      "confirm": {
+        "title": "Confirm Unpublish",
+        "message": "Are you sure you want to unpublish this item? It will no longer be publicly visible.",
+        "processing": "Unpublishing...",
+        "buttons": {
+          "confirm": "Unpublish",
+          "cancel": "Cancel"
+        }
+      }
+    },
+    "info": {
+      "title": "Information",
+      "description": "Display detailed information"
+    },
+    "confirm": {
+      "title": "Confirm",
+      "description": "Confirm the current action"
+    },
+    "preview": {
+      "title": "Preview",
+      "description": "See how it will appear"
+    },
+    "version-history": {
+      "title": "Version History",
+      "description": "Show version history"
+    },
+    "compare": {
+      "title": "Compare",
+      "description": "Compare selected items"
+    },
+    "comments": {
+      "title": "Comments",
+      "description": "Show comments and discussions"
+    },
+    "sign": {
+      "title": "Sign",
+      "description": "Sign the document",
+      "checkBox": {
+        "label": "Agreement And Signature"
+      },
+      "signature": {
+        "label": "when accept agreement and sign"
+      }
+    },
+    "send": {
+      "title": "Send",
+      "description": "Send the item"
+    },
+    "report": {
+      "title": "Report",
+      "description": "Generate a report"
+    },
+    "sent": {
+      "title": "Sent",
+      "description": "Mark item as sent"
+    },
+    "review": {
+      "title": "Review",
+      "description": "Review this item"
+    },
+    "generate": {
+      "title": "Generate",
+      "description": "Generate new content or data"
+    },
+    "reorder": {
+      "title": "Reorder",
+      "description": "Change the order of items"
+    },
+    "rename": {
+      "title": "Rename",
+      "description": "Change the name of this item"
+    },
+    "apply": {
+      "title": "Apply",
+      "description": "Apply changes",
+      "messages": {
+        "invalid": {
+          "title": "Invalid Settings",
+          "message": "Some settings are invalid and cannot be applied."
+        },
+        "success": {
+          "title": "Settings Applied",
+          "message": "Settings have been successfully applied."
+        },
+        "error": {
+          "title": "Application Failed",
+          "message": "Failed to apply settings. Please try again."
+        }
+      }
+    },
+    "discard": {
+      "title": "Discard",
+      "description": "Discard changes"
+    },
+    "view-all": {
+      "title": "View All",
+      "button": "View All Items"
+    },
+    "view-less": {
+      "title": "View Less",
+      "button": "View Less Items"
+    },
+    "distribution": {
+      "title": "Distribution",
+      "description": "Distribute the item",
+      "permission": "Distribution",
+      "audit": "Distribution",
+      "success": {
+        "title": "Distributed",
+        "message": "Distributed to {{count}} recipients."
+      },
+      "error": {
+        "title": "Distribution Failed",
+        "message": "Could not distribute. Please try again."
+      }
+    }
+  },
+  "empty-states": {
+    "no-records-found": {
+      "title": "No Records Found",
+      "description": "No records are available in this section. Create a new record to get started."
+    }
+  },
+  "virtual-keypad": {
+    "aria-label": "Numeric keypad",
+    "backspace": "Backspace"
+  },
+  "state-message": {
+    "error": {
+      "title": "Error",
+      "description": "Something went wrong"
+    },
+    "loading": {
+      "title": "Loading",
+      "description": "Please wait..."
+    },
+    "searching": {
+      "title": "Searching",
+      "description": "Looking for items..."
+    },
+    "success": {
+      "title": "Success",
+      "description": "Operation completed successfully"
+    },
+    "empty": {
+      "title": "No Data",
+      "description": "No items found"
+    },
+    "empty-columns": {
+      "title": "No Columns Defined",
+      "description": "Please configure columns first to display data in the spreadsheet"
+    },
+    "empty-rows": {
+      "title": "No Data",
+      "description": "No rows found. Add rows to display data"
+    },
+    "no-results": {
+      "title": "No Results Found",
+      "description": "No items match your search"
+    },
+    "repeater-empty": {
+      "title": "No Items Added",
+      "description": "Get started by adding your first item to the list",
+      "add-first-item": "Add Your First Item",
+      "add-item": "Add Item"
+    }
+  },
+  "startup-tasks": {
+    "module-manifests": "Loading module manifests...",
+    "seed-data": "Seeding data...",
+    "loading-settings": "Loading settings...",
+    "regional-settings": "Applying regional settings...",
+    "check-terms": "Checking terms and conditions...",
+    "layout-theme": "Applying layout theme settings..."
+  },
+
+  "background-operation": {
+    "entity": {
+      "title": "Background operation",
+      "plural": "Background operations"
+    },
+    "panel": {
+      "title": "Background tasks"
+    },
+    "slot": {
+      "single": "1 Task In Progress ...",
+      "multiple": "{{count}} Tasks In Progress ...",
+      "failed-single": "1 Task Failed",
+      "failed-multiple": "{{count}} Tasks Failed"
+    },
+    "actions": {
+      "cancel": "Cancel",
+      "pause": "Pause",
+      "resume": "Resume",
+      "retry": "Retry",
+      "dismiss": "Dismiss"
+    },
+    "step": "Step",
+    "progress": "Progress",
+    "estimate": "Estimated time remaining",
+    "status": {
+      "queued": "Queued",
+      "running": "Running",
+      "paused": "Paused",
+      "completed": "Completed",
+      "failed": "Failed",
+      "cancelled": "Cancelled"
+    },
+    "completion": {
+      "success": "{{title}} completed successfully.",
+      "cancelled": "{{title}} was cancelled."
+    },
+    "failed": {
+      "retry-count": "Retry attempt",
+      "continue-step": "Continue from step"
+    },
+    "empty": {
+      "all": "No background tasks"
+    }
+  },
+  "workflow": {
+    "warning": "Warning",
+    "confirm-delete": "Are you sure you want to delete this item? This action cannot be undone.",
+    "deleting": "Deleting...",
+    "success-delete-title": "Successfully Deleted",
+    "success-delete-body": "The selected items have been successfully deleted.",
+    "success-partial-delete-title": "Partially Deleted",
+    "partial-delete-body": "Some items were successfully deleted, but others could not be removed.",
+    "partial-delete-body-with-reason": "{{success}} deleted, {{fail}} failed. {{reason}}",
+    "fail-delete-title": "Deletion Failed",
+    "fail-delete-body": "Failed to delete the selected items. Please try again.",
+    "fail-delete-body-with-reason": "Failed to delete {{item}} item(s). {{reason}}",
+    "entity-disabled": "Item Disabled",
+    "entity-disabled-body": "The item has been successfully disabled.",
+    "entity-enabled": "Item Enabled",
+    "entity-enabled-body": "The item has been successfully enabled.",
+    "entity-bulk-disabled": "Items Disabled",
+    "entity-bulk-disabled-body": "Selected items have been successfully disabled.",
+    "entity-bulk-enabled": "Items Enabled",
+    "entity-bulk-enabled-body": "Selected items have been successfully enabled.",
+    "entity-archived": "Item Archived",
+    "entity-archived-body": "The item has been successfully archived.",
+    "entity-unarchived": "Item Restored",
+    "entity-unarchived-body": "The item has been successfully restored from the archive.",
+    "entity-bulk-archived": "Items Archived",
+    "entity-bulk-archived-body": "Selected items have been successfully archived.",
+    "entity-bulk-unarchived": "Items Restored",
+    "entity-bulk-unarchived-body": "Selected items have been successfully restored from the archive.",
+    "entity-cloned": "Item Cloned",
+    "entity-cloned-body": "A new copy has been successfully created.",
+    "no-need": "No Action Required",
+    "no-item": "No items selected for deletion.",
+    "entity-modified-title": "Entity Modified",
+    "entity-modified-body": "The entity has been successfully modified.",
+    "bulk": {
+      "confirm-title": "Confirm Bulk Action",
+      "confirm-message": "Apply this action to the selected items?",
+      "processing-title": "Processing",
+      "processing-status": "Running bulk action...",
+      "success-title": "Bulk Action Completed",
+      "success-body": "{{item}} item(s) completed successfully.",
+      "partial-title": "Bulk Action Partially Completed",
+      "partial-body": "{{success}} succeeded, {{fail}} failed.",
+      "partial-body-with-reason": "{{success}} succeeded, {{fail}} failed. {{reason}}",
+      "fail-title": "Bulk Action Failed",
+      "fail-body": "Failed to process {{item}} item(s).",
+      "fail-body-with-reason": "Failed to process {{item}} item(s). {{reason}}"
+    }
+  },
+  "statuses": {
+    "todo": {
+      "title": "Todo",
+      "description": "Item is pending and needs to be started"
+    },
+    "in-progress": {
+      "title": "In Progress",
+      "description": "Item is currently being worked on"
+    },
+    "in-review": {
+      "title": "In Review",
+      "description": "Item is being reviewed"
+    },
+    "blocked": {
+      "title": "Blocked",
+      "description": "Item is blocked and cannot proceed"
+    },
+    "done": {
+      "title": "Done",
+      "description": "Item has been completed"
+    },
+    "cancelled": {
+      "title": "Cancelled",
+      "description": "Item has been cancelled"
+    },
+    "draft": {
+      "title": "Draft",
+      "description": "Item is in draft state"
+    },
+    "pending-review": {
+      "title": "Pending Review",
+      "description": "Item is waiting for review"
+    },
+    "waiting-sign-off": {
+      "title": "Waiting for Sign-Off",
+      "description": "Item is waiting for sign-off or final approval"
+    },
+    "waiting-approval": {
+      "title": "Waiting Approval",
+      "description": "Item is waiting for approval"
+    },
+    "approved": {
+      "title": "Approved",
+      "description": "Item has been approved"
+    },
+    "published": {
+      "title": "Published",
+      "description": "Item has been published"
+    },
+    "archived": {
+      "title": "Archived",
+      "description": "Item has been archived"
+    },
+    "rejected": {
+      "title": "Rejected",
+      "description": "Item has been rejected"
+    },
+    "revision-requested": {
+      "title": "Revision Requested",
+      "description": "Reviewer requested changes; author should revise and resubmit for review"
+    },
+    "active": {
+      "title": "Active",
+      "description": "Item is active"
+    },
+    "inactive": {
+      "title": "Inactive",
+      "description": "Item is inactive"
+    },
+    "pending": {
+      "title": "Pending",
+      "description": "Item is pending"
+    },
+    "completed": {
+      "title": "Completed",
+      "description": "Item has been completed"
+    },
+    "suspended": {
+      "title": "Suspended",
+      "description": "Item has been suspended"
+    },
+    "failed": {
+      "title": "Failed",
+      "description": "Item has failed"
+    }
+  },
+  "common": {
+    "module": {
+      "title": "Common",
+      "description": "Common utilities and shared functionality"
+    },
+    "features": {
+      "global-search": {
+        "title": "Global Search",
+        "description": "Enable global search functionality across all modules and entities"
+      },
+      "advanced-export": {
+        "title": "Advanced Export",
+        "description": "Enable advanced export options with custom formats, templates, and batch processing"
+      },
+      "activity-log": {
+        "title": "Activity Log",
+        "description": "Track and audit all user activities, changes, and system events"
+      },
+      "data-import": {
+        "title": "Data Import",
+        "description": "Import data from external sources including CSV, Excel, and API integrations"
+      },
+      "bulk-operations": {
+        "title": "Bulk Operations",
+        "description": "Perform batch operations on multiple records simultaneously"
+      },
+      "advanced-filtering": {
+        "title": "Advanced Filtering",
+        "description": "Enable complex query building and advanced filtering capabilities"
+      },
+      "data-synchronization": {
+        "title": "Data Synchronization",
+        "description": "Synchronize data across multiple systems, tenants, and applications"
+      }
+    }
+  },
+  "terms": {
+    "common": {
+      "back": "Back",
+      "yes-no": {
+        "yes": "Yes",
+        "no": "No",
+        "unknown": "Unknown"
+      },
+      "text-direction": {
+        "rtl": "RTL",
+        "ltr": "LTR"
+      },
+      "row-number": "No.",
+      "title": "Title",
+      "titles": "Titles",
+      "name": "Name",
+      "names": "Names",
+      "short-name": "Short Name",
+      "display-name": "Display Name",
+      "full-name": "Full Name",
+      "first-name": "First Name",
+      "last-name": "Last Name",
+      "description": "Description",
+      "code": "Code",
+      "expression": "Expression",
+      "value": "Value",
+      "values": "Values",
+      "type": "Type",
+      "types": "Types",
+      "icon": "Icon",
+      "color": "Color",
+      "avatar": "Avatar",
+      "size": "Size",
+      "notes": "Notes",
+      "body": "Body",
+      "content": "Content",
+      "placeholder": "Placeholder",
+      "profile": "Profile",
+      "version": "Version",
+      "versions": "Versions",
+      "tag": "Tag",
+      "tags": "Tags",
+      "scope": "Scope",
+      "readonly": "Read-only",
+      "id": "ID",
+      "information": "Information",
+      "interface": "Interface",
+      "from": "From",
+      "to": "To",
+      "language": "Language",
+      "columns": "Columns",
+      "sorts": "Sorts",
+      "widget": "Widget",
+      "configured-options": "Configured Options",
+      "overview": "Overview",
+      "date": {
+        "today": "Today"
+      }
+    },
+    "date-presets": {
+      "today": "Today",
+      "this-week": "This Week",
+      "this-month": "This Month",
+      "yesterday": "Yesterday",
+      "last-week": "Last Week",
+      "last-month": "Last Month",
+      "tomorrow": "Tomorrow",
+      "next-week": "Next Week",
+      "next-month": "Next Month"
+    },
+    "people": {
+      "user": "User",
+      "users": "Users",
+      "employee": "Employee",
+      "employees": "Employees",
+      "contact": "Contact",
+      "contacts": "Contacts",
+      "member": "Member",
+      "members": "Members",
+      "manager": "Manager",
+      "managers": "Managers",
+      "leader": "Leader",
+      "leaders": "Leaders",
+      "individual": "Individual",
+      "individuals": "Individuals"
+    },
+    "organizations": {
+      "organization": "Organization",
+      "organizations": "Organizations",
+      "company": "Company",
+      "companies": "Companies",
+      "department": "Department",
+      "departments": "Departments",
+      "team": "Team",
+      "teams": "Teams",
+      "group": "Group",
+      "groups": "Groups",
+      "position": "Position",
+      "positions": "Positions",
+      "calendar": "Calendar",
+      "calendars": "Calendars",
+      "progress": "Progress",
+      "availability": "Availability"
+    },
+    "business": {
+      "client": "Client",
+      "clients": "Clients",
+      "customer": "Customer",
+      "customers": "Customers",
+      "vendor": "Vendor",
+      "vendors": "Vendors",
+      "supplier": "Supplier",
+      "suppliers": "Suppliers",
+      "partner": "Partner",
+      "partners": "Partners",
+      "project": "Project",
+      "projects": "Projects",
+      "task": "Task",
+      "tasks": "Tasks"
+    },
+    "security": {
+      "role": "Role",
+      "roles": "Roles",
+      "permission": "Permission",
+      "permissions": "Permissions",
+      "session": "Session",
+      "sessions": "Sessions",
+      "administration": "Administration"
+    },
+    "communication": {
+      "message": "Message",
+      "messages": "Messages",
+      "notification": "Notification",
+      "notifications": "Notifications",
+      "email": "Email",
+      "emails": "Emails",
+      "website": "Website",
+      "websites": "Websites",
+      "phone": "Phone",
+      "phones": "Phones",
+      "mobile": "Mobile"
+    },
+    "reports": {
+      "report": "Report",
+      "reports": "Reports",
+      "dashboard": "Dashboard",
+      "dashboards": "Dashboards"
+    },
+    "geography": {
+      "location": "Location",
+      "locations": "Locations",
+      "country": "Country",
+      "countries": "Countries",
+      "region": "Region",
+      "regions": "Regions",
+      "city": "City",
+      "cities": "Cities",
+      "address": "Address",
+      "addresses": "Addresses"
+    },
+    "classification": {
+      "priority": "Priority",
+      "priorities": "Priorities",
+      "order": "Order",
+      "hierarchy": "Hierarchy",
+      "parent": "Parent",
+      "category": "Category",
+      "categories": "Categories",
+      "children-count": "Children Count",
+      "catalog-scopes": "Catalog Scopes"
+    },
+    "contact": {
+      "first-name": "First Name",
+      "last-name": "Last Name",
+      "username": "Username",
+      "company": "Company",
+      "companies": "Companies",
+      "people": "People"
+    },
+    "status": {
+      "title": "Status",
+      "description": "Status of the item",
+      "current": "Current Status",
+      "available": "Available Statuses",
+      "change": "Change Status",
+      "name": "Name",
+      "color": "Color",
+      "icon": "Icon",
+      "order": "Order",
+      "active": "Active",
+      "final": "Final",
+      "initial": "Initial",
+      "transitions": "Transitions",
+      "from": "From",
+      "to": "To",
+      "transition": {
+        "title": "Title",
+        "description": "Description",
+        "action": "Action",
+        "color": "Color",
+        "icon": "Icon",
+        "automatic": "Automatic",
+        "requiresApproval": "Requires Approval"
+      },
+      "options": {
+        "active": "Active",
+        "inactive": "Inactive",
+        "blocked": "Blocked",
+        "archived": "Archived",
+        "verified": "Verified",
+        "pending": "Pending",
+        "approved": "Approved",
+        "rejected": "Rejected",
+        "completed": "Completed",
+        "cancelled": "Cancelled",
+        "enabled": "Enabled",
+        "disabled": "Disabled"
+      },
+      "states": {
+        "is-active": "Active",
+        "is-archived": "Archived",
+        "is-disabled": "Disabled",
+        "is-enabled": "Enabled",
+        "is-verified": "Verified",
+        "is-default": "Default",
+        "is-primary": "Primary",
+        "is-unique": "Is Unique"
+      },
+      "confirm-change": {
+        "title": "Confirm Status Change",
+        "message": "Are you sure you want to change the status to \"{{transition}}\"?"
+      }
+    },
+    "datetime": {
+      "date": "Date",
+      "dates": "Dates",
+      "start-date": "Start Date",
+      "end-date": "End Date",
+      "started-at": "Started At",
+      "completed-at": "Completed At",
+      "period": "Period",
+      "periods": "Periods",
+      "created-at": "Created At",
+      "modified-at": "Modified At",
+      "last-verified": "Last Verified",
+      "read-at": "Read At"
+    },
+    "audit": {
+      "section-title": "Audit Information",
+      "column-title": "Audit Info",
+      "modified": "Modified",
+      "history": "History",
+      "created": "Created",
+      "updated": "Updated",
+      "deleted": "Deleted",
+      "date": "Date",
+      "by": "By",
+      "reason": "Reason",
+      "source": "Source"
+    },
+    "validation": {
+      "validation": "Validation",
+      "validations": "Validations",
+      "regex": "Validation Regex",
+      "min-length": "Minimum Length",
+      "max-length": "Maximum Length",
+      "validity": "Validity",
+      "valid-from": "Valid From",
+      "valid-to": "Valid To",
+      "messages": {
+        "required": "This field is required",
+        "variable-name-format": "Name must start with a letter or underscore, and can only contain letters, numbers, underscores, and hyphens. No spaces or special characters allowed."
+      }
+    },
+    "operators": {
+      "equal": "Equal",
+      "not-equal": "Not Equal",
+      "greater-than": "Greater Than",
+      "less-than": "Less Than",
+      "greater-than-or-equal": "Greater Than or Equal",
+      "less-than-or-equal": "Less Than or Equal",
+      "contains": "Contains",
+      "not-contains": "Does Not Contain",
+      "in": "In",
+      "starts-with": "Starts With",
+      "ends-with": "Ends With",
+      "is-empty": "Is Empty",
+      "is-not-empty": "Is Not Empty",
+      "between": "Between"
+    },
+    "interface": {
+      "settings": "Settings",
+      "action": "Action",
+      "actions": "Actions",
+      "event": "Event",
+      "events": "Events",
+      "appearance": "Appearance",
+      "classification": "Classification",
+      "icon": "Icon",
+      "user-interface": "User Interface",
+      "basic-info": "Basic Information",
+      "configuration": "Configuration",
+      "additional-info": "Additional Info",
+      "geographic-details": "Geographic Details",
+      "items-selected": "Items Selected",
+      "unselect-all": "Unselect All",
+      "table-view": "Table View",
+      "card-view": "Card View",
+      "list-display": "List Display",
+      "card-display": "Card Display",
+      "card-compact-view": "Compact Cards",
+      "card-expanded-view": "Expanded Cards",
+      "no-items": "No items found",
+      "filter": {
+        "title": "Filters",
+        "placeholder": "Add filter here",
+        "no-filter-definitions": "No Filter Definitions Found",
+        "no-records": {
+          "title": "No Records Found",
+          "description": "No records match your search criteria. Try adjusting your search terms."
+        }
+      },
+      "category": {
+        "title": "Category",
+        "placeholder": "Add category here",
+        "no-records": {
+          "title": "No Category Definitions Found",
+          "description": "No category definitions are available in this category. Create a new category definition to get started."
+        },
+        "search": {
+          "placeholder": "Search categories…",
+          "searching": "Searching...",
+          "results-found": {
+            "singular": "{{count}} result found",
+            "plural": "{{count}} results found"
+          },
+          "no-results": "No results found",
+          "no-results-found": {
+            "title": "No Results Found",
+            "description": "No categories match your search. Try different keywords."
+          },
+          "no-records": {
+            "title": "No categories found matching \"{{term}}\"",
+            "description": "Try adjusting your search terms"
+          }
+        }
+      },
+      "selection": {
+        "items-selected": "Items Selected",
+        "all-items": "All Items",
+        "availability": "Availability"
+      },
+      "navigation": {
+        "home": "Home",
+        "more-tabs": "More tabs"
+      },
+      "save-status": {
+        "draft": {
+          "title": "Draft",
+          "description": "Changes have not been saved"
+        },
+        "saved": {
+          "title": "Saved",
+          "description": "Changes have been saved"
+        },
+        "not-saved": {
+          "title": "Not Saved",
+          "description": "Changes have not been saved"
+        },
+        "error": {
+          "title": "Error",
+          "description": "An error occurred while saving"
+        },
+        "confirmed": {
+          "title": "Confirmed",
+          "description": "Changes have been confirmed"
+        }
+      }
+    }
+  },
+  "menus": {
+    "administration": {
+      "title": "Administration",
+      "description": "Administrative settings and configuration"
+    },
+    "contacts": {
+      "title": "Contacts",
+      "description": "Contacts, emergency services, and related reference data"
+    },
+    "help": {
+      "title": "Help",
+      "description": "Application help and support"
+    },
+    "foundation-data": {
+      "title": "Configuration",
+      "description": "Configuration and reference data management"
+    },
+    "date-and-time": {
+      "title": "Date and Time",
+      "description": "Timezones, calendars, and calendar event types"
+    },
+    "region": {
+      "title": "Region and Locale",
+      "description": "Location types, geographic regions, and languages"
+    },
+    "people-and-demographics": {
+      "title": "People and Demographics",
+      "description": "Personal reference data"
+    },
+    "health": {
+      "title": "Health",
+      "description": "Health reference data and catalogs"
+    },
+    "projects": {
+      "title": "Projects & Tasks",
+      "description": "Project and task reference data"
+    },
+    "scheduling-and-events": {
+      "title": "Scheduling and Events",
+      "description": "Meeting and reservation types"
+    },
+    "data-and-content": {
+      "title": "Data and Content",
+      "description": "Document types and data definitions"
+    },
+    "platform-definitions": {
+      "title": "Platform Definitions",
+      "description": "Entity, command, query, plugin, and widget catalogs"
+    },
+    "maintenance": {
+      "title": "Maintenance",
+      "description": "Maintenance reference data and failure causes"
+    },
+    "plan-equipment": {
+      "title": "Plant & Equipment",
+      "description": "Maintenance planning and asset setup configuration"
+    },
+    "plan-equipment-maintenances": {
+      "title": "Maintenances",
+      "description": "Maintenance type, failures, and activity type settings"
+    },
+    "plan-equipment-assettypes": {
+      "title": "Asset Types",
+      "description": "Asset type and asset system type settings"
+    },
+    "platform": {
+      "title": "Platform",
+      "description": "Applications, tenants, and subscriptions across the platform"
+    },
+    "content": {
+      "title": "Publishing",
+      "description": "Promotions, pages, dashboards, and announcements."
+    },
+    "monitoring": {
+      "title": "Monitoring",
+      "description": "Communication logs and background job history."
+    },
+    "workflows": {
+      "title": "Workflows",
+      "description": "Workflow definitions, instances, and studio"
+    },
+    "commerce": {
+      "title": "Commerce",
+      "description": "Products, orders, and supplier products"
+    },
+    "meeting": {
+      "title": "Meeting",
+      "description": "Meeting types and role types"
+    },
+    "help-desk": {
+      "title": "Help Desk",
+      "description": "Issue types and help desk configuration"
+    },
+    "ai-management": {
+      "title": "Intelligence",
+      "description": "AI models and assists configuration"
+    },
+    "document-management": {
+      "title": "Documents",
+      "description": "Document types and file configuration"
+    },
+    "forms-and-assessments": {
+      "title": "Forms & Assessments",
+      "description": "Question bank, questionnaires, and form templates"
+    },
+    "assessments": {
+      "title": "Assessments",
+      "description": "Assessment cases and sessions"
+    },
+    "reservation": {
+      "title": "Reservation",
+      "description": "Reservation types, statuses, and classes"
+    },
+    "reservations": {
+      "title": "Reservations",
+      "description": "Manage reservations"
+    },
+    "assets": {
+      "title": "Assets",
+      "description": "Physical and digital asset records and definitions."
+    },
+    "maintenances": {
+      "title": "Maintenance",
+      "description": "Maintenance types, work orders, and related reference data."
+    },
+    "modules": {
+      "title": "Modules",
+      "description": "Application modules"
+    }
+  },
+  "app-startup": {
+    "loading-module-manifests": "Loading module manifests...",
+    "preloading-entities": "Preloading entities...",
+    "registering-stored-module-manifests": "Registering module manifests from entity definition store...",
+    "seeding-data": "Seeding data...",
+    "seeding-entity-definitions": "Seeding entity definitions..."
+  },
+  "keyboard-shortcuts": {
+    "help-title": "Keyboard Shortcuts",
+    "help-action": "Show keyboard shortcuts",
+    "no-shortcuts": "No keyboard shortcuts are available on this page.",
+    "or": "or",
+    "groups": {
+      "system": "System",
+      "general": "General",
+      "global": "Global",
+      "navigation": "Navigation",
+      "filters": "Filters",
+      "entity-details": "Entity Details",
+      "settings": "Settings",
+      "dialog": "Dialog"
+    },
+    "actions": {
+      "global-search": "Open Global Search",
+      "open-voice-command": "Open Voice Command",
+      "focus-filters": "Focus filters",
+      "toggle-side-menu": "Toggle Side Menu"
+    }
+  }
+}

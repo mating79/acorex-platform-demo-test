@@ -1,0 +1,607 @@
+{
+  "module": {
+    "title": "هسته مالی",
+    "description": "داده‌های پایه مالی مشترک برای حسابداری، فروش، تدارکات، صورتحساب و پرداخت.",
+    "menus": {
+      "root": {
+        "title": "مالی",
+        "description": "مدیریت ارز، مالیات، شرایط پرداخت و تنظیمات مالی."
+      }
+    }
+  },
+  "currencies": {
+    "terms": {
+      "currency": "ارز",
+      "currencies": "ارزها"
+    },
+    "entities": {
+      "currency": {
+        "title": "ارز",
+        "plural": "ارزها",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "formatting": "قالب‌بندی"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد سه حرفی (مثلاً USD)"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان ارز را وارد کنید"
+          },
+          "symbol": {
+            "title": "نماد",
+            "placeholder": "نماد ارز را وارد کنید"
+          },
+          "iso-number": {
+            "title": "شماره ISO",
+            "placeholder": "کد عددی ISO را وارد کنید"
+          },
+          "decimal-places": {
+            "title": "تعداد اعشار",
+            "placeholder": "تعداد ارقام اعشاری"
+          },
+          "thousand-separator": {
+            "title": "جداکننده هزارگان",
+            "placeholder": "کاراکتر جداکننده (مثلاً ,)"
+          },
+          "decimal-separator": {
+            "title": "جداکننده اعشار",
+            "placeholder": "کاراکتر جداکننده (مثلاً .)"
+          },
+          "format-pattern": {
+            "title": "الگوی نمایش",
+            "placeholder": "الگوی دلخواه نمایش"
+          },
+          "is-default": {
+            "title": "ارز پیش‌فرض"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-currency": {
+        "title": "ایجاد ارز",
+        "description": "ایجاد یک ارز جدید."
+      }
+    },
+    "permissions": {
+      "currency": {
+        "title": "ارزها",
+        "actions": {
+          "manage": {
+            "title": "مدیریت ارزها"
+          }
+        }
+      }
+    }
+  },
+  "exchange-rates": {
+    "terms": {
+      "exchange-rate": "نرخ تبدیل",
+      "exchange-rates": "نرخ‌های تبدیل"
+    },
+    "entities": {
+      "exchange-rate": {
+        "title": "نرخ تبدیل",
+        "plural": "نرخ‌های تبدیل",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "valuation": "ارزش‌گذاری"
+        },
+        "fields": {
+          "pair-code": {
+            "title": "جفت ارزی",
+            "placeholder": "فرمت USD/EUR"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان توصیفی را وارد کنید"
+          },
+          "base-currency": {
+            "title": "ارز مبنا"
+          },
+          "quote-currency": {
+            "title": "ارز مقابل"
+          },
+          "method": {
+            "title": "روش",
+            "options": {
+              "manual": "دستی",
+              "market": "بازار",
+              "central-bank": "بانک مرکزی"
+            }
+          },
+          "source": {
+            "title": "منبع",
+            "placeholder": "منبع یا ارائه‌دهنده نرخ"
+          },
+          "status": {
+            "title": "وضعیت",
+            "options": {
+              "draft": "پیش‌نویس",
+              "published": "منتشرشده",
+              "expired": "منقضی"
+            }
+          },
+          "rate": {
+            "title": "نرخ"
+          },
+          "inverse-rate": {
+            "title": "نرخ معکوس"
+          },
+          "effective-from": {
+            "title": "شروع اعتبار"
+          },
+          "effective-to": {
+            "title": "پایان اعتبار"
+          }
+        }
+      }
+    },
+    "search": {
+      "capture-exchange-rate": {
+        "title": "ایجاد نرخ تبدیل",
+        "description": "ایجاد یک نرخ تبدیل جدید."
+      }
+    },
+    "permissions": {
+      "exchange-rate": {
+        "title": "نرخ‌های تبدیل",
+        "actions": {
+          "manage": {
+            "title": "مدیریت نرخ‌های تبدیل"
+          }
+        }
+      }
+    }
+  },
+  "taxation": {
+    "entities": {
+      "tax-class": {
+        "title": "طبقه مالیاتی",
+        "plural": "طبقات مالیاتی",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "configuration": "پیکربندی"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد طبقه"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان طبقه"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیح طبقه"
+          },
+          "type": {
+            "title": "نوع",
+            "options": {
+              "vat": "ارزش افزوده",
+              "sales": "فروش",
+              "withholding": "کسر از منبع",
+              "service": "خدمات"
+            }
+          },
+          "default-rate": {
+            "title": "نرخ پیش‌فرض"
+          },
+          "is-compound": {
+            "title": "محاسبه مرکب"
+          },
+          "priority": {
+            "title": "اولویت"
+          }
+        }
+      },
+      "tax-region": {
+        "title": "منطقه مالیاتی",
+        "plural": "مناطق مالیاتی",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "jurisdiction": "صلاحیت"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد منطقه"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان منطقه"
+          },
+          "country-code": {
+            "title": "کد کشور",
+            "placeholder": "کد دو حرفی"
+          },
+          "region-code": {
+            "title": "کد ناحیه",
+            "placeholder": "کد استان یا ایالت"
+          },
+          "tax-authority": {
+            "title": "مرجع مالیاتی",
+            "placeholder": "نام مرجع"
+          },
+          "default-currency": {
+            "title": "ارز مرجع"
+          },
+          "is-default": {
+            "title": "منطقه پیش‌فرض"
+          }
+        }
+      },
+      "tax-rule": {
+        "title": "قانون مالیاتی",
+        "plural": "قوانین مالیاتی",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "calculation": "محاسبات",
+          "effectivity": "دوره اعتبار"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد قانون"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان قانون"
+          },
+          "tax-region": {
+            "title": "منطقه مالیاتی"
+          },
+          "tax-class": {
+            "title": "طبقه مالیاتی"
+          },
+          "priority": {
+            "title": "اولویت"
+          },
+          "calculation-method": {
+            "title": "روش محاسبه",
+            "options": {
+              "percentage": "درصدی",
+              "fixed": "مبلغ ثابت",
+              "tiered": "پلکانی"
+            }
+          },
+          "rate": {
+            "title": "نرخ (%)"
+          },
+          "threshold-amount": {
+            "title": "آستانه"
+          },
+          "condition-summary": {
+            "title": "شرایط",
+            "placeholder": "شرایط اجرا"
+          },
+          "effective-from": {
+            "title": "شروع اعتبار"
+          },
+          "effective-to": {
+            "title": "پایان اعتبار"
+          }
+        }
+      }
+    },
+    "search": {
+      "define-tax-rule": {
+        "title": "ایجاد قانون مالیاتی",
+        "description": "ایجاد قانون جدید برای منطقه و طبقه."
+      },
+      "create-tax-class": {
+        "title": "ایجاد طبقه مالیاتی",
+        "description": "ایجاد یک طبقه مالیاتی جدید."
+      },
+      "create-tax-region": {
+        "title": "ایجاد منطقه مالیاتی",
+        "description": "ایجاد یک منطقه مالیاتی جدید."
+      }
+    },
+    "permissions": {
+      "tax-class": {
+        "title": "طبقات مالیاتی",
+        "actions": {
+          "manage": {
+            "title": "مدیریت طبقات مالیاتی"
+          }
+        }
+      },
+      "tax-region": {
+        "title": "مناطق مالیاتی",
+        "actions": {
+          "manage": {
+            "title": "مدیریت مناطق مالیاتی"
+          }
+        }
+      },
+      "tax-rule": {
+        "title": "قوانین مالیاتی",
+        "actions": {
+          "manage": {
+            "title": "مدیریت قوانین مالیاتی"
+          }
+        }
+      }
+    }
+  },
+  "payments": {
+    "entities": {
+      "payment-term": {
+        "title": "شرط پرداخت",
+        "plural": "شرایط پرداخت",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "schedule": "زمان‌بندی"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد شرط پرداخت"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان شرط پرداخت"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیح شرط پرداخت"
+          },
+          "net-due-days": {
+            "title": "روزهای سررسید"
+          },
+          "discount-percent": {
+            "title": "درصد تخفیف"
+          },
+          "discount-days": {
+            "title": "روزهای تخفیف"
+          },
+          "grace-period-days": {
+            "title": "مهلت اضافی"
+          },
+          "auto-renew": {
+            "title": "تمدید خودکار"
+          }
+        }
+      },
+      "payment-method": {
+        "title": "روش پرداخت",
+        "plural": "روش‌های پرداخت",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "capabilities": "امکانات"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد روش پرداخت"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان روش پرداخت"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "شرح روش پرداخت"
+          },
+          "type": {
+            "title": "نوع",
+            "options": {
+              "cash": "نقدی",
+              "bank": "حواله بانکی",
+              "card": "کارت",
+              "digital": "کیف پول دیجیتال"
+            }
+          },
+          "provider": {
+            "title": "ارائه‌دهنده",
+            "placeholder": "نام بانک یا سرویس"
+          },
+          "integration-type": {
+            "title": "نوع یکپارچه‌سازی",
+            "options": {
+              "manual": "دستی",
+              "api": "رابط برنامه‌نویسی",
+              "file": "بارگذاری فایل"
+            }
+          },
+          "fee-percent": {
+            "title": "درصد کارمزد"
+          },
+          "settlement-time-days": {
+            "title": "زمان تسویه (روز)"
+          },
+          "supports-refunds": {
+            "title": "پشتیبانی از بازگشت وجه"
+          },
+          "supports-recurring": {
+            "title": "پشتیبانی از پرداخت دوره‌ای"
+          },
+          "instructions": {
+            "title": "دستورالعمل‌ها",
+            "placeholder": "شرح مراحل پرداخت"
+          }
+        }
+      }
+    },
+    "search": {
+      "add-payment-method": {
+        "title": "ایجاد روش پرداخت",
+        "description": "ایجاد یک روش پرداخت جدید."
+      },
+      "create-payment-term": {
+        "title": "ایجاد شرایط پرداخت",
+        "description": "ایجاد شرایط پرداخت جدید."
+      }
+    },
+    "permissions": {
+      "payment-term": {
+        "title": "شرایط پرداخت",
+        "actions": {
+          "manage": {
+            "title": "مدیریت شرایط پرداخت"
+          }
+        }
+      },
+      "payment-method": {
+        "title": "روش‌های پرداخت",
+        "actions": {
+          "manage": {
+            "title": "مدیریت روش‌های پرداخت"
+          }
+        }
+      }
+    }
+  },
+  "calendars": {
+    "entities": {
+      "fiscal-calendar": {
+        "title": "تقویم مالی",
+        "plural": "تقویم‌های مالی",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "timeline": "خط زمانی",
+          "controls": "کنترل‌ها"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد تقویم"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان تقویم"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "شرح تقویم مالی"
+          },
+          "fiscal-year": {
+            "title": "سال مالی"
+          },
+          "start-date": {
+            "title": "تاریخ شروع"
+          },
+          "end-date": {
+            "title": "تاریخ پایان"
+          },
+          "template-calendar": {
+            "title": "تقویم مرجع",
+            "placeholder": "شناسه تقویم مرجع"
+          },
+          "closing-periods": {
+            "title": "دوره‌های بسته شدن"
+          },
+          "status": {
+            "title": "وضعیت",
+            "options": {
+              "draft": "پیش‌نویس",
+              "open": "باز",
+              "closed": "بسته"
+            }
+          },
+          "is-locked": {
+            "title": "قفل شده"
+          },
+          "is-default": {
+            "title": "تقویم پیش‌فرض"
+          }
+        }
+      }
+    },
+    "search": {
+      "publish-fiscal-calendar": {
+        "title": "ایجاد تقویم مالی",
+        "description": "ایجاد یک تقویم مالی جدید."
+      }
+    },
+    "permissions": {
+      "fiscal-calendar": {
+        "title": "تقویم‌های مالی",
+        "actions": {
+          "manage": {
+            "title": "مدیریت تقویم‌های مالی"
+          },
+          "view": {
+            "title": "مشاهده تقویم‌های مالی"
+          },
+          "create": {
+            "title": "ایجاد تقویم مالی"
+          },
+          "update": {
+            "title": "به‌روزرسانی تقویم مالی"
+          },
+          "delete": {
+            "title": "حذف تقویم مالی"
+          }
+        }
+      }
+    }
+  },
+  "dimensions": {
+    "entities": {
+      "financial-dimension": {
+        "title": "بعد مالی",
+        "plural": "ابعاد مالی",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "hierarchy": "سلسله‌مراتب"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد بعد"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان بعد"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "شرح بعد مالی"
+          },
+          "dimension-type": {
+            "title": "نوع بعد",
+            "options": {
+              "cost-center": "مرکز هزینه",
+              "profit-center": "مرکز سود",
+              "project": "پروژه",
+              "product": "محصول",
+              "region": "منطقه"
+            }
+          },
+          "parent": {
+            "title": "بعد والد"
+          },
+          "display-order": {
+            "title": "ترتیب نمایش"
+          },
+          "is-leaf": {
+            "title": "گره انتهایی"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-financial-dimension": {
+        "title": "ایجاد بعد مالی",
+        "description": "ایجاد یک بعد مالی جدید."
+      }
+    },
+    "permissions": {
+      "financial-dimension": {
+        "title": "ابعاد مالی",
+        "actions": {
+          "manage": {
+            "title": "مدیریت ابعاد مالی"
+          }
+        }
+      }
+    }
+  }
+}

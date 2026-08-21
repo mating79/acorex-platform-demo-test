@@ -1,0 +1,90 @@
+@reference '@acorex/styles/themes/default.css';
+:root,
+.light {
+  /* Sizing and Typography */
+  --ax-sys-body-font-size: 1rem;
+  --ax-sys-size-base: 2.5rem;
+  --ax-sys-transition-duration: 150ms;
+  --ax-sys-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --ax-sys-border-radius: 0.5rem;
+  --ax-sys-color-body-text: 0, 0, 0;
+  --ax-sys-color-input-text: 0, 0, 0;
+  --axp-brand-color: var(--ax-sys-color-primary-surface);
+  --axp-on-brand-color: var(--ax-sys-color-on-primary-surface);
+}
+:root .cdk-overlay-dark-backdrop,
+.light .cdk-overlay-dark-backdrop {
+  background: rgba(var(--ax-sys-color-dark), 0.5);
+}
+:root :root,
+:root *,
+.light :root,
+.light * {
+  --ax-sys-scroller-size: 5px;
+  --ax-sys-scroller-size-radius: 3px;
+  --ax-sys-scroller-track-color: rgba(var(--ax-sys-color-light-surface));
+  --ax-sys-scroller-thumb-color: rgba(var(--ax-sys-color-darkest-surface));
+  scrollbar-width: thin;
+  scrollbar-color: var(--ax-sys-scroller-thumb-color) var(--ax-sys-scroller-track-color);
+}
+:root .ax-dark,
+:root .ax-dark *,
+.light .ax-dark,
+.light .ax-dark * {
+  --ax-sys-scroller-size: 5px;
+  --ax-sys-scroller-size-radius: 3px;
+  --ax-sys-scroller-track-color: rgba(var(--ax-sys-color-darker-surface));
+  --ax-sys-scroller-thumb-color: rgba(var(--ax-sys-color-lightest-surface));
+  scrollbar-color: var(--ax-sys-scroller-thumb-color) var(--ax-sys-scroller-track-color);
+}
+:root ::-webkit-scrollbar,
+.light ::-webkit-scrollbar {
+  width: var(--ax-sys-scroller-size);
+  height: var(--ax-sys-scroller-size);
+}
+:root ::-webkit-scrollbar-track,
+.light ::-webkit-scrollbar-track {
+  background: var(--ax-sys-scroller-track-color);
+  border-radius: var(--ax-sys-scroller-size-radius);
+}
+:root ::-webkit-scrollbar-thumb,
+.light ::-webkit-scrollbar-thumb {
+  background: var(--ax-sys-scroller-thumb-color);
+  border-radius: var(--ax-sys-scroller-size-radius);
+}
+
+.dark {
+  --ax-sys-color-body-text: 255, 255, 255;
+}
+.dark .cdk-overlay-dark-backdrop {
+  background: rgba(var(--ax-sys-color-light), 0.2);
+}
+.dark :root,
+.dark * {
+  --ax-sys-scroller-size: 5px;
+  --ax-sys-scroller-size-radius: 3px;
+  --ax-sys-scroller-track-color: rgba(var(--ax-sys-color-light-surface));
+  --ax-sys-scroller-thumb-color: rgba(var(--ax-sys-color-darkest-surface));
+  scrollbar-width: thin;
+  scrollbar-color: var(--ax-sys-scroller-thumb-color) var(--ax-sys-scroller-track-color);
+}
+.dark .ax-dark,
+.dark .ax-dark * {
+  --ax-sys-scroller-size: 5px;
+  --ax-sys-scroller-size-radius: 3px;
+  --ax-sys-scroller-track-color: rgba(var(--ax-sys-color-darker-surface));
+  --ax-sys-scroller-thumb-color: rgba(var(--ax-sys-color-lightest-surface));
+  scrollbar-color: var(--ax-sys-scroller-thumb-color) var(--ax-sys-scroller-track-color);
+}
+.dark ::-webkit-scrollbar {
+  width: var(--ax-sys-scroller-size);
+  height: var(--ax-sys-scroller-size);
+}
+.dark ::-webkit-scrollbar-track {
+  background: var(--ax-sys-scroller-track-color);
+  border-radius: var(--ax-sys-scroller-size-radius);
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--ax-sys-scroller-thumb-color);
+  border-radius: var(--ax-sys-scroller-size-radius);
+}

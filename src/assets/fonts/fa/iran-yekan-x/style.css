@@ -1,0 +1,8 @@
+@reference '@acorex/styles/themes/default.css';
+@font-face {
+  font-family: "iranyekanx";
+  src: url("/assets/fonts/fa/iran-yekan-x/IRANYekanXVF.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}

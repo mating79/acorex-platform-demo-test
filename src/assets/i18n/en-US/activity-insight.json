@@ -1,0 +1,185 @@
+{
+  "module": {
+    "title": "Activity Insight",
+    "description": "Track meaningful user and system activity across the platform",
+    "menus": {
+      "root": {
+        "title": "Activity Insight",
+        "description": "Explore activity events and timelines"
+      },
+      "events": {
+        "title": "Activity Events",
+        "description": "Browse tracked activity events"
+      },
+      "timelines": {
+        "title": "Timelines",
+        "description": "Session, journey, and entity timelines"
+      },
+      "policies": {
+        "title": "Policies",
+        "description": "Tracking, masking, sampling, and retention policies"
+      }
+    }
+  },
+  "groups": {
+    "general": "General",
+    "correlation": "Correlation",
+    "context": "Context",
+    "outcome": "Outcome",
+    "policy": "Policy"
+  },
+  "entities": {
+    "activity-event": {
+      "title": "Activity Event",
+      "plural": "Activity Events"
+    },
+    "tracking-rule": {
+      "title": "Tracking Rule",
+      "plural": "Tracking Rules"
+    },
+    "saved-view": {
+      "title": "Saved View",
+      "plural": "Saved Views"
+    },
+    "retention-policy": {
+      "title": "Retention Policy",
+      "plural": "Retention Policies"
+    },
+    "masking-policy": {
+      "title": "Masking Policy",
+      "plural": "Masking Policies"
+    },
+    "sampling-policy": {
+      "title": "Sampling Policy",
+      "plural": "Sampling Policies"
+    },
+    "data-source": {
+      "title": "Data Source",
+      "plural": "Data Sources"
+    }
+  },
+  "fields": {
+    "id": "Identifier",
+    "name": "Event Name",
+    "type": "Type",
+    "category": "Category",
+    "timestamp": "Timestamp",
+    "session-id": "Session ID",
+    "journey-id": "Journey ID",
+    "user-id": "User ID",
+    "tenant-id": "Tenant ID",
+    "application-id": "Application ID",
+    "request-id": "Request ID",
+    "trace-id": "Trace ID",
+    "source": "Source",
+    "route": "Route",
+    "module": "Module",
+    "entity-name": "Entity Name",
+    "entity-id": "Entity ID",
+    "command-name": "Command Name",
+    "query-name": "Query Name",
+    "status": "Status",
+    "duration-ms": "Duration (ms)",
+    "severity": "Severity",
+    "enabled": "Enabled",
+    "event-pattern": "Event Pattern",
+    "sampling-rate": "Sampling Rate",
+    "priority": "Priority",
+    "data-type": "Data Type",
+    "retention-days": "Retention Days",
+    "denylist-fields": "Denylist Fields",
+    "max-property-bytes": "Max Property Bytes",
+    "provider": "Provider",
+    "connection-url": "Connection URL",
+    "query-json": "Query JSON",
+    "is-default": "Default View"
+  },
+  "permissions": {
+    "group": {
+      "title": "Activity Insight",
+      "description": "Permissions for activity tracking and timelines"
+    },
+    "events": {
+      "view": {
+        "title": "View Activity Events",
+        "description": "Browse activity event data"
+      }
+    },
+    "timelines": {
+      "view": {
+        "title": "View Timelines",
+        "description": "View session, journey, and entity timelines"
+      }
+    },
+    "policies": {
+      "manage": {
+        "title": "Manage Policies",
+        "description": "Configure tracking, masking, and retention policies"
+      }
+    }
+  },
+  "settings": {
+    "group": {
+      "title": "Activity Insight",
+      "description": "Configure activity tracking, buffering, and privacy at the platform level"
+    },
+    "tracking": {
+      "title": "Tracking",
+      "description": "Enable or disable activity tracking for the platform",
+      "items": {
+        "enabled": {
+          "title": "Enable Activity Tracking",
+          "description": "Turn activity tracking on or off for the platform"
+        }
+      }
+    },
+    "buffer": {
+      "title": "Buffer",
+      "description": "Control how activity events are batched and sent to the server",
+      "items": {
+        "flush-interval": {
+          "title": "Flush Interval",
+          "description": "How often buffered events are sent to the server (milliseconds)"
+        },
+        "max-batch-size": {
+          "title": "Max Batch Size",
+          "description": "Maximum number of events per bulk request"
+        },
+        "max-payload-bytes": {
+          "title": "Max Payload Size",
+          "description": "Maximum payload size per bulk request (bytes)"
+        },
+        "max-queue-size": {
+          "title": "Max Queue Size",
+          "description": "Maximum number of events held in the client buffer"
+        },
+        "flush-on-hidden": {
+          "title": "Flush on Tab Hidden",
+          "description": "Send buffered events when the browser tab becomes hidden"
+        },
+        "use-beacon": {
+          "title": "Use Beacon for Final Flush",
+          "description": "Use the browser beacon API for the final flush on page unload"
+        }
+      }
+    },
+    "privacy": {
+      "title": "Privacy",
+      "description": "Masking, sampling, and content tracking options",
+      "items": {
+        "masking-enabled": {
+          "title": "Enable Masking",
+          "description": "Mask sensitive fields before events are sent"
+        },
+        "sampling-enabled": {
+          "title": "Enable Sampling",
+          "description": "Sample events to reduce volume while preserving insight"
+        },
+        "track-ai-content": {
+          "title": "Track AI Content",
+          "description": "Include AI-related content in tracked activity events"
+        }
+      }
+    }
+  }
+}

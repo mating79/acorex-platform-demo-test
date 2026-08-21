@@ -1,0 +1,1440 @@
+{
+  "module": {
+    "title": "مدیریت خطر",
+    "description": "تعریف و مدیریت خطرهای محیط کار و قالب‌های ارزیابی مرتبط.",
+    "menus": {
+      "workplace-safety": "ایمنی محیط کار",
+      "hazards": "کتابخانه خطرها",
+      "hazard-registers": "ثبت خطرها"
+    },
+    "permissions": {
+      "title": "مدیریت خطر",
+      "description": "مجوزهای کتابخانه خطر و ثبت خطر."
+    }
+  },
+  "hazards": {
+    "permissions": {
+      "hazard": {
+        "management": {
+          "title": "مدیریت خطرها",
+          "description": "دسترسی کامل به رکوردهای کتابخانه خطر."
+        },
+        "view": {
+          "title": "مشاهده خطرها",
+          "description": "مشاهده رکوردهای کتابخانه خطر."
+        },
+        "create": {
+          "title": "ایجاد خطر",
+          "description": "ایجاد رکورد در کتابخانه خطر."
+        },
+        "update": {
+          "title": "ویرایش خطر",
+          "description": "ویرایش رکوردهای کتابخانه خطر."
+        },
+        "delete": {
+          "title": "حذف خطر",
+          "description": "حذف رکوردهای کتابخانه خطر."
+        }
+      }
+    },
+    "entities": {
+      "hazard": {
+        "title": "خطر",
+        "plural": "خطرها",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "chemical-compliance": "انطباق شیمیایی",
+          "assessment-compliance": "ارزیابی و انطباق",
+          "control-measures": "اقدامات کنترلی",
+          "hazard-metadata": "متادیتای خطر"
+        },
+        "components": {
+          "meta-data-form": {
+            "title": "متادیتای خطر"
+          }
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد خطر را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان خطر را وارد کنید"
+          },
+          "description": {
+            "placeholder": "توضیحات اختیاری"
+          },
+          "category-id": {
+            "title": "دسته‌بندی",
+            "placeholder": "شناسه دسته‌بندی"
+          },
+          "template-id": {
+            "title": "قالب پرسشنامه"
+          },
+          "safety-data-sheet-available": {
+            "title": "برگه اطلاعات ایمنی"
+          },
+          "ghs-ids": {
+            "title": "GHS - سیستم هماهنگ‌سازی جهانی"
+          },
+          "metadata-json": {
+            "title": "متادیتا (JSON)",
+            "placeholder": "متادیتای JSON اختیاری"
+          },
+          "status": {
+            "title": "وضعیت",
+            "options": {
+              "draft": "پیش‌نویس",
+              "active": "فعال",
+              "inactive": "غیرفعال",
+              "archived": "بایگانی‌شده"
+            }
+          }
+        }
+      }
+    }
+  },
+  "risk-ratings": {
+    "permissions": {
+      "risk-rating": {
+        "management": {
+          "title": "مدیریت رتبه‌بندی ریسک",
+          "description": "دسترسی کامل به داده مرجع رتبه‌بندی ریسک."
+        }
+      }
+    },
+    "entities": {
+      "risk-rating": {
+        "title": "رتبه‌بندی ریسک",
+        "plural": "رتبه‌بندی‌های ریسک",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد رتبه‌بندی ریسک را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان رتبه‌بندی ریسک را وارد کنید"
+          },
+          "level-number": {
+            "title": "شماره سطح",
+            "placeholder": "شماره سطح را وارد کنید"
+          },
+          "description": {
+            "placeholder": "توضیحات اختیاری"
+          }
+        }
+      }
+    }
+  },
+  "control-measure-types": {
+    "permissions": {
+      "control-measure-type": {
+        "management": {
+          "title": "مدیریت سلسله مراتب کنترل",
+          "description": "دسترسی کامل به تعریف سلسله مراتب کنترل و سطوح آن."
+        },
+        "view": {
+          "title": "مشاهده سلسله مراتب کنترل",
+          "description": "مشاهده تعریف سلسله مراتب کنترل و سطوح آن."
+        },
+        "create": {
+          "title": "ایجاد سلسله مراتب کنترل",
+          "description": "ایجاد تعریف سلسله مراتب کنترل و سطوح آن."
+        },
+        "update": {
+          "title": "ویرایش سلسله مراتب کنترل",
+          "description": "ویرایش تعریف سلسله مراتب کنترل و سطوح آن."
+        },
+        "delete": {
+          "title": "حذف سلسله مراتب کنترل",
+          "description": "حذف تعریف سلسله مراتب کنترل و سطوح آن."
+        }
+      }
+    },
+    "entities": {
+      "control-measure-type": {
+        "title": "سلسله مراتب کنترل",
+        "plural": "سلسله مراتب‌های کنترل",
+        "groups": {
+          "visualization": "نمودار سلسله مراتب",
+          "basic-info": "اطلاعات پایه",
+          "hierarchy-levels": "سطوح سلسله مراتب"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد سلسله مراتب کنترل را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان سلسله مراتب کنترل را وارد کنید"
+          },
+          "description": {
+            "placeholder": "توضیحات اختیاری"
+          },
+          "items": {
+            "title": "سطوح سلسله مراتب"
+          },
+          "status": {
+            "title": "وضعیت",
+            "options": {
+              "draft": "پیش‌نویس",
+              "active": "فعال",
+              "inactive": "غیرفعال",
+              "archived": "بایگانی‌شده"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "control-hierarchy-diagram": {
+        "title": "سلسله مراتب کنترل",
+        "widget-title": "نمودار سلسله مراتب کنترل",
+        "widget-description": "سطوح فعال سلسله مراتب کنترل را به‌صورت عمودی، افقی یا فلش‌دار نمایش می‌دهد.",
+        "most-effective": "مؤثرترین",
+        "least-effective": "کم‌اثرترین",
+        "fields": {
+          "view-type": {
+            "title": "نوع نمایش"
+          }
+        },
+        "view-types": {
+          "horizontal": "کارت‌های افقی",
+          "vertical": "هرم عمودی",
+          "horizontal-chevron": "فلش افقی"
+        }
+      }
+    }
+  },
+  "control-measures": {
+    "permissions": {
+      "control-measure": {
+        "management": {
+          "title": "مدیریت اقدامات کنترلی",
+          "description": "دسترسی کامل به رکوردهای اقدام کنترلی محیط کار."
+        },
+        "view": {
+          "title": "مشاهده اقدامات کنترلی",
+          "description": "مشاهده رکوردهای اقدام کنترلی محیط کار."
+        },
+        "create": {
+          "title": "ایجاد اقدام کنترلی",
+          "description": "ایجاد رکورد اقدام کنترلی محیط کار."
+        },
+        "update": {
+          "title": "ویرایش اقدامات کنترلی",
+          "description": "ویرایش رکوردهای اقدام کنترلی محیط کار."
+        },
+        "delete": {
+          "title": "حذف اقدامات کنترلی",
+          "description": "حذف رکوردهای اقدام کنترلی محیط کار."
+        }
+      }
+    },
+    "entities": {
+      "control-measure": {
+        "title": "اقدام کنترلی",
+        "plural": "اقدامات کنترلی",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "instruction": "دستورالعمل‌ها"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد اقدام کنترلی را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان اقدام کنترلی را وارد کنید"
+          },
+          "instruction": {
+            "title": "دستورالعمل",
+            "placeholder": "نحوه اجرای این اقدام کنترلی را شرح دهید"
+          },
+          "status": {
+            "title": "وضعیت",
+            "options": {
+              "active": "فعال",
+              "inactive": "غیرفعال",
+              "archived": "بایگانی‌شده"
+            }
+          }
+        }
+      }
+    }
+  },
+  "ppe-items": {
+    "permissions": {
+      "ppe-item": {
+        "management": {
+          "title": "مدیریت اقلام PPE",
+          "description": "دسترسی کامل به رکوردهای کتابخانه تجهیزات حفاظت فردی."
+        },
+        "view": {
+          "title": "مشاهده اقلام PPE",
+          "description": "مشاهده رکوردهای کتابخانه تجهیزات حفاظت فردی."
+        },
+        "create": {
+          "title": "ایجاد قلم PPE",
+          "description": "ایجاد رکورد در کتابخانه تجهیزات حفاظت فردی."
+        },
+        "update": {
+          "title": "ویرایش اقلام PPE",
+          "description": "ویرایش رکوردهای کتابخانه تجهیزات حفاظت فردی."
+        },
+        "delete": {
+          "title": "حذف اقلام PPE",
+          "description": "حذف رکوردهای کتابخانه تجهیزات حفاظت فردی."
+        }
+      }
+    },
+    "entities": {
+      "ppe-item": {
+        "title": "قلم PPE",
+        "plural": "اقلام PPE",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "compliance": "انطباق و کاربرد"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد قلم PPE را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان قلم PPE را وارد کنید"
+          },
+          "description": {
+            "placeholder": "توضیحات اختیاری"
+          },
+          "serial-number": {
+            "title": "شماره سریال",
+            "placeholder": "شماره سریال را وارد کنید"
+          },
+          "usage-note": {
+            "title": "یادداشت کاربرد",
+            "placeholder": "مثال: همیشه استفاده شود"
+          },
+          "icon": {
+            "title": "آیکون"
+          },
+          "status": {
+            "title": "وضعیت",
+            "options": {
+              "draft": "پیش‌نویس",
+              "active": "فعال",
+              "inactive": "غیرفعال",
+              "archived": "بایگانی‌شده"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "ppe-item-viewer": {
+        "widget-title": "نمایشگر اقلام PPE",
+        "widget-description": "نمایش اقلام PPE قابل انتخاب از کتابخانه تجهیزات حفاظت فردی همراه با تصویر، عنوان و شماره سریال.",
+        "empty": "هیچ قلم PPE انتخاب نشده است. اقلام PPE را در تنظیمات ویجت پیکربندی کنید.",
+        "fields": {
+          "ppe-items": {
+            "title": "اقلام PPE"
+          },
+          "layout": {
+            "title": "چیدمان"
+          }
+        },
+        "layouts": {
+          "horizontal": "افقی",
+          "vertical": "عمودی"
+        }
+      }
+    }
+  },
+  "hazard-ppe-rules": {
+    "permissions": {
+      "hazard-ppe-rule": {
+        "management": {
+          "title": "مدیریت قوانین PPE خطر",
+          "description": "دسترسی کامل به قوانین الزامات PPE برای خطرها."
+        },
+        "view": {
+          "title": "مشاهده قوانین PPE خطر",
+          "description": "مشاهده قوانین الزامات PPE برای خطرها."
+        },
+        "create": {
+          "title": "ایجاد قانون PPE خطر",
+          "description": "ایجاد قانون الزامات PPE برای خطر."
+        },
+        "update": {
+          "title": "ویرایش قوانین PPE خطر",
+          "description": "ویرایش قوانین الزامات PPE برای خطرها."
+        },
+        "delete": {
+          "title": "حذف قوانین PPE خطر",
+          "description": "حذف قوانین الزامات PPE برای خطرها."
+        }
+      }
+    },
+    "entities": {
+      "hazard-ppe-rule": {
+        "title": "قانون PPE خطر",
+        "plural": "قوانین PPE خطر",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "configuration": "پیکربندی",
+          "notes": "یادداشت‌ها و دستورالعمل‌ها"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد قانون را وارد کنید"
+          },
+          "hazard-id": {
+            "title": "خطر"
+          },
+          "ppe-item-id": {
+            "title": "قلم PPE"
+          },
+          "requirement-type": {
+            "title": "نوع الزام",
+            "options": {
+              "required": "الزامی",
+              "recommended": "توصیه‌شده",
+              "conditional": "مشروط"
+            }
+          },
+          "condition-note": {
+            "title": "یادداشت شرط",
+            "placeholder": "زمان اعمال این PPE"
+          },
+          "usage-instruction": {
+            "title": "دستورالعمل استفاده",
+            "placeholder": "نحوه استفاده از PPE"
+          },
+          "sort-order": {
+            "title": "ترتیب نمایش",
+            "placeholder": "ترتیب نمایش"
+          },
+          "status": {
+            "title": "وضعیت",
+            "options": {
+              "active": "فعال",
+              "inactive": "غیرفعال"
+            }
+          }
+        }
+      }
+    }
+  },
+  "hazard-risk-ppe-rules": {
+    "permissions": {
+      "hazard-risk-ppe-rule": {
+        "management": {
+          "title": "مدیریت قوانین PPE ریسک خطر",
+          "description": "دسترسی کامل به قوانین الزامات PPE برای ریسک‌های خطر."
+        },
+        "view": {
+          "title": "مشاهده قوانین PPE ریسک خطر",
+          "description": "مشاهده قوانین الزامات PPE برای ریسک‌های خطر."
+        },
+        "create": {
+          "title": "ایجاد قانون PPE ریسک خطر",
+          "description": "ایجاد قانون الزامات PPE برای ریسک خطر."
+        },
+        "update": {
+          "title": "ویرایش قوانین PPE ریسک خطر",
+          "description": "ویرایش قوانین الزامات PPE برای ریسک‌های خطر."
+        },
+        "delete": {
+          "title": "حذف قوانین PPE ریسک خطر",
+          "description": "حذف قوانین الزامات PPE برای ریسک‌های خطر."
+        }
+      }
+    },
+    "entities": {
+      "hazard-risk-ppe-rule": {
+        "title": "قانون PPE ریسک خطر",
+        "plural": "قوانین PPE ریسک خطر",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "configuration": "پیکربندی",
+          "notes": "یادداشت‌ها و دستورالعمل‌ها"
+        },
+        "fields": {
+          "hazard-risk-id": {
+            "title": "ریسک خطر"
+          },
+          "ppe-item-id": {
+            "title": "قلم PPE"
+          },
+          "requirement-type": {
+            "title": "نوع الزام",
+            "options": {
+              "required": "الزامی",
+              "recommended": "توصیه‌شده",
+              "conditional": "مشروط"
+            }
+          },
+          "condition-note": {
+            "title": "یادداشت شرط",
+            "placeholder": "زمان اعمال این PPE"
+          },
+          "usage-instruction": {
+            "title": "دستورالعمل استفاده",
+            "placeholder": "نحوه استفاده از PPE"
+          },
+          "status": {
+            "title": "وضعیت",
+            "options": {
+              "active": "فعال",
+              "inactive": "غیرفعال"
+            }
+          }
+        }
+      }
+    }
+  },
+  "hazard-risks": {
+    "permissions": {
+      "hazard-risk": {
+        "management": {
+          "title": "مدیریت ریسک‌های خطر",
+          "description": "دسترسی کامل به سناریوهای ریسک خطر."
+        },
+        "view": {
+          "title": "مشاهده ریسک‌های خطر",
+          "description": "مشاهده سناریوهای ریسک خطر."
+        },
+        "create": {
+          "title": "ایجاد ریسک خطر",
+          "description": "ایجاد سناریوی ریسک خطر."
+        },
+        "update": {
+          "title": "ویرایش ریسک‌های خطر",
+          "description": "ویرایش سناریوهای ریسک خطر."
+        },
+        "delete": {
+          "title": "حذف ریسک‌های خطر",
+          "description": "حذف سناریوهای ریسک خطر."
+        }
+      }
+    },
+    "entities": {
+      "hazard-risk": {
+        "title": "ریسک خطر",
+        "plural": "ریسک‌های خطر",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "risk-assessment": "ارزیابی ریسک",
+          "control-measures": "اقدامات کنترلی"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد ریسک خطر را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان ریسک خطر را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "سناریوی ریسک را شرح دهید"
+          },
+          "hazard-id": {
+            "title": "خطر"
+          },
+          "risk-matrix-id": {
+            "title": "ماتریس ریسک"
+          },
+          "default-initial-risk-rating-id": {
+            "title": "رتبه‌بندی ریسک اولیه پیش‌فرض"
+          },
+          "default-residual-risk-rating-id": {
+            "title": "رتبه‌بندی ریسک باقی‌مانده پیش‌فرض"
+          },
+          "status": {
+            "title": "وضعیت",
+            "options": {
+              "active": "فعال",
+              "inactive": "غیرفعال"
+            }
+          }
+        }
+      }
+    }
+  },
+  "hazard-registers": {
+    "permissions": {
+      "hazard-register": {
+        "management": {
+          "title": "مدیریت ثبت خطر",
+          "description": "دسترسی کامل به رکوردهای ثبت خطر."
+        },
+        "view": {
+          "title": "مشاهده ثبت خطر",
+          "description": "مشاهده رکوردهای ثبت خطر."
+        },
+        "create": {
+          "title": "ایجاد ثبت خطر",
+          "description": "ایجاد رکورد ثبت خطر."
+        },
+        "update": {
+          "title": "ویرایش ثبت خطر",
+          "description": "ویرایش رکوردهای ثبت خطر."
+        },
+        "delete": {
+          "title": "حذف ثبت خطر",
+          "description": "حذف رکوردهای ثبت خطر."
+        }
+      }
+    },
+    "entities": {
+      "hazard-register": {
+        "title": "ثبت خطر",
+        "plural": "ثبت‌های خطر",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "hazard-link": "خطر مرتبط",
+          "context": "زمینه"
+        },
+        "components": {
+          "category-meta-data-form": {
+            "title": "اطلاعات تکمیلی دسته خطر"
+          },
+          "hazard-meta-data-form": {
+            "title": "اطلاعات تکمیلی خطر"
+          }
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد ثبت را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان ثبت را وارد کنید"
+          },
+          "description": {
+            "placeholder": "توضیحات اختیاری"
+          },
+          "register-type": {
+            "title": "دسته خطر"
+          },
+          "hazard-id": {
+            "title": "خطر"
+          },
+          "context-type": {
+            "title": "نوع زمینه",
+            "options": {
+              "asset": "دارایی",
+              "site": "سایت",
+              "work-order": "دستور کار",
+              "project": "پروژه"
+            }
+          },
+          "context-id": {
+            "title": "شناسه زمینه",
+            "placeholder": "شناسه زمینه را وارد کنید"
+          }
+        }
+      }
+    }
+  },
+  "safety-plans": {
+    "messages": {
+      "publish": {
+        "success": "برنامه ایمنی با موفقیت منتشر شد.",
+        "already-published": "این برنامه ایمنی قبلاً منتشر شده است.",
+        "not-found": "برنامه ایمنی یافت نشد.",
+        "id-required": "برای انتشار، شناسه برنامه ایمنی الزامی است.",
+        "no-sections": "این برنامه ایمنی را نمی‌توان منتشر کرد چون هیچ بخشی ندارد. حداقل یک بخش اضافه کنید و دوباره تلاش کنید.",
+        "no-sections": "این برنامه ایمنی را نمی‌توان منتشر کرد چون هیچ بخشی ندارد. حداقل یک بخش اضافه کنید و دوباره تلاش کنید."
+      },
+      "section-structure": {
+        "confirm-replace": {
+          "title": "جایگزینی ساختار بخش‌ها؟",
+          "message": "با تغییر نوع برنامه، ساختار بخش‌های فعلی با پیش‌فرض‌های نوع جدید جایگزین می‌شود. ادامه می‌دهید؟"
+        },
+        "confirm-change-plan-type": {
+          "title": "تغییر نوع برنامه؟",
+          "message": "با تغییر نوع برنامه، همه بخش‌های فعلی و مقادیر انتخاب‌شده آن‌ها حذف می‌شوند و بخش‌های پیش‌فرض نوع جدید بارگذاری می‌گردند. ادامه می‌دهید؟"
+        },
+        "required-section-missing": "یک بخش پیش‌فرض الزامی در این برنامه ایمنی وجود ندارد.",
+        "section-type-not-allowed": "یک یا چند بخش از نوعی استفاده می‌کنند که برای این نوع برنامه مجاز نیست.",
+        "duplicate-non-repeatable": "نوع بخش غیرتکراری «{{sectionTypeTitle}}» بیش از یک‌بار ظاهر شده است.",
+        "invalid-type-template-duplicate": "قالب بخش‌های نوع برنامه انتخاب‌شده، نوع بخش غیرتکراری «{{sectionTypeTitle}}» را بیش از یک‌بار فهرست کرده است. بخش‌های نوع برنامه را اصلاح کنید و دوباره تلاش کنید.",
+        "invalid-sort-order": "ترتیب بخش‌ها نامعتبر است یا تکراری دارد.",
+        "load-failed": "بارگذاری ساختار بخش برای این نوع برنامه ممکن نشد. دوباره تلاش کنید یا بخش‌ها را دستی اضافه کنید.",
+        "change-plan-type-failed": "تغییر نوع برنامه ممکن نشد. بخش‌های فعلی بدون تغییر باقی ماندند.",
+        "same-plan-type": "برای ادامه، نوع برنامه متفاوتی انتخاب کنید.",
+        "draft-only": "نوع برنامه فقط در وضعیت پیش‌نویس قابل تغییر است."
+      }
+    },
+    "actions": {
+      "change-plan-type": {
+        "title": "تغییر ساختار برنامه",
+        "dialog": {
+          "title": "تغییر نوع برنامه",
+          "fields": {
+            "plan-type": {
+              "title": "نوع برنامه",
+              "placeholder": "یک نوع برنامه انتخاب کنید"
+            }
+          },
+          "actions": {
+            "continue": "ادامه"
+          },
+          "success": "نوع برنامه تغییر کرد و بخش‌های پیش‌فرض بارگذاری شدند."
+        }
+      }
+    },
+    "permissions": {
+      "safety-plan": {
+        "management": {
+          "title": "مدیریت برنامه‌های ایمنی",
+          "description": "دسترسی کامل به رکوردهای برنامه ایمنی محیط کار."
+        },
+        "view": {
+          "title": "مشاهده برنامه‌های ایمنی",
+          "description": "مشاهده رکوردهای برنامه ایمنی محیط کار."
+        },
+        "create": {
+          "title": "ایجاد برنامه ایمنی",
+          "description": "ایجاد رکورد برنامه ایمنی محیط کار."
+        },
+        "update": {
+          "title": "ویرایش برنامه‌های ایمنی",
+          "description": "ویرایش رکوردهای برنامه ایمنی محیط کار."
+        },
+        "delete": {
+          "title": "حذف برنامه‌های ایمنی",
+          "description": "حذف رکوردهای برنامه ایمنی محیط کار."
+        }
+      }
+    },
+    "entities": {
+      "safety-plan": {
+        "title": "برنامه ایمنی",
+        "plural": "برنامه‌های ایمنی",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "configuration": "پیکربندی",
+          "publication": "انتشار"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "پس از ذخیره به‌صورت خودکار تولید می‌شود"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان برنامه ایمنی را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات اختیاری درباره هدف برنامه"
+          },
+          "plan-type": {
+            "title": "نوع برنامه",
+            "options": {
+              "swms": "SWMS",
+              "jsa": "JSA",
+              "sop": "SOP",
+              "take5": "Take 5",
+              "permit": "مجوز",
+              "checklist": "چک‌لیست"
+            }
+          },
+          "safety-plan-type": {
+            "title": "نوع برنامه ایمنی"
+          },
+          "safety-plan-type": {
+            "title": "نوع برنامه ایمنی"
+          },
+          "allow-clone": {
+            "title": "اجازه استفاده مجدد به‌عنوان برنامه جدید"
+          },
+          "published-at": {
+            "title": "تاریخ انتشار"
+          },
+          "published-by": {
+            "title": "منتشرکننده"
+          },
+          "status": {
+            "title": "وضعیت",
+            "options": {
+              "pending": "در انتظار",
+              "published": "منتشرشده",
+              "archived": "بایگانی‌شده"
+            }
+          }
+        },
+        "pages": {
+          "sections": {
+            "title": "بخش‌های ایمنی",
+            "save-plan-first": "برای مدیریت بخش‌ها ابتدا برنامه ایمنی را ذخیره کنید.",
+            "select-plan-type-first": "برای بارگذاری ساختار پیش‌فرض بخش‌ها، نوع برنامه ایمنی را انتخاب کنید.",
+            "loading": "در حال بارگذاری ساختار بخش‌ها…"
+          }
+        }
+      }
+    }
+  },
+  "safety-plan-sections": {
+    "messages": {
+      "duplicate-section-type": "این نوع بخش از قبل در برنامه ایمنی وجود دارد.",
+      "confirm-change-work-step": {
+        "title": "تغییر گام کاری؟",
+        "message": "با تغییر گام کاری، همه ردیف‌های جدول این بخش پاک می‌شوند. ادامه می‌دهید؟"
+      },
+      "work-step-required": {
+        "message": "قبل از افزودن ردیف، یک گام کاری برای این بخش انتخاب کنید."
+      }
+    },
+    "permissions": {
+      "safety-plan-section": {
+        "management": {
+          "title": "مدیریت بخش‌های برنامه ایمنی",
+          "description": "دسترسی کامل به رکوردهای بخش برنامه ایمنی."
+        },
+        "view": {
+          "title": "مشاهده بخش‌های برنامه ایمنی",
+          "description": "مشاهده رکوردهای بخش برنامه ایمنی."
+        },
+        "create": {
+          "title": "ایجاد بخش برنامه ایمنی",
+          "description": "ایجاد رکوردهای بخش برنامه ایمنی."
+        },
+        "update": {
+          "title": "ویرایش بخش برنامه ایمنی",
+          "description": "ویرایش رکوردهای بخش برنامه ایمنی."
+        },
+        "delete": {
+          "title": "حذف بخش برنامه ایمنی",
+          "description": "حذف رکوردهای بخش برنامه ایمنی."
+        }
+      }
+    },
+    "entities": {
+      "safety-plan-section": {
+        "title": "بخش برنامه ایمنی",
+        "plural": "بخش‌های برنامه ایمنی",
+        "actions": {
+          "add-section": {
+            "title": "افزودن بخش"
+          },
+          "add-item": {
+            "title": "افزودن آیتم"
+          },
+          "add-row": {
+            "title": "افزودن ردیف"
+          }
+        },
+        "groups": {
+          "plan-folder": "برنامه ایمنی",
+          "section-content": "جزئیات بخش",
+          "items": "آیتم‌های بخش"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "پس از ذخیره به‌صورت خودکار تولید می‌شود"
+          },
+          "safety-plan": {
+            "title": "برنامه ایمنی"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان بخش را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات اختیاری بخش"
+          },
+          "section-type": {
+            "title": "نوع بخش"
+          },
+          "work-step": {
+            "title": "گام کاری"
+          },
+          "item-ids": {
+            "title": "آیتم‌ها",
+            "placeholder": "از لیست انتخاب کنید...",
+            "parent-required-placeholder": "ابتدا در بخش قبلی خطرات را انتخاب کنید"
+          },
+          "source-type-section": {
+            "title": "بخش نوع مبدأ"
+          },
+          "sort-order": {
+            "title": "ترتیب"
+          }
+        }
+      }
+    }
+  },
+  "safety-plan-types": {
+    "permissions": {
+      "safety-plan-type": {
+        "management": {
+          "title": "مدیریت انواع برنامه ایمنی",
+          "description": "دسترسی کامل به پیکربندی نوع برنامه ایمنی."
+        },
+        "view": {
+          "title": "مشاهده انواع برنامه ایمنی",
+          "description": "مشاهده پیکربندی نوع برنامه ایمنی."
+        },
+        "create": {
+          "title": "ایجاد نوع برنامه ایمنی",
+          "description": "ایجاد پیکربندی نوع برنامه ایمنی."
+        },
+        "update": {
+          "title": "ویرایش انواع برنامه ایمنی",
+          "description": "ویرایش پیکربندی نوع برنامه ایمنی."
+        },
+        "delete": {
+          "title": "حذف انواع برنامه ایمنی",
+          "description": "حذف پیکربندی نوع برنامه ایمنی."
+        }
+      }
+    },
+    "entities": {
+      "safety-plan-type": {
+        "title": "نوع برنامه ایمنی",
+        "plural": "انواع برنامه ایمنی",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "sections": "بخش‌ها"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "پس از ذخیره به‌صورت خودکار تولید می‌شود"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان نوع برنامه ایمنی را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات اختیاری درباره این نوع برنامه"
+          },
+          "sections": {
+            "title": "بخش‌ها"
+          }
+        }
+      }
+    }
+  },
+  "safety-plan-type-sections": {
+    "messages": {
+      "duplicate-default-section": "برای این نوع برنامه ایمنی فقط یک بخش پیش‌فرض مجاز است."
+    },
+    "permissions": {
+      "safety-plan-type-section": {
+        "management": {
+          "title": "مدیریت بخش‌های نوع برنامه ایمنی",
+          "description": "دسترسی کامل به پیکربندی بخش نوع برنامه ایمنی."
+        },
+        "view": {
+          "title": "مشاهده بخش‌های نوع برنامه ایمنی",
+          "description": "مشاهده پیکربندی بخش نوع برنامه ایمنی."
+        },
+        "create": {
+          "title": "ایجاد بخش نوع برنامه ایمنی",
+          "description": "ایجاد پیکربندی بخش نوع برنامه ایمنی."
+        },
+        "update": {
+          "title": "ویرایش بخش‌های نوع برنامه ایمنی",
+          "description": "ویرایش پیکربندی بخش نوع برنامه ایمنی."
+        },
+        "delete": {
+          "title": "حذف بخش‌های نوع برنامه ایمنی",
+          "description": "حذف پیکربندی بخش نوع برنامه ایمنی."
+        }
+      }
+    },
+    "entities": {
+      "safety-plan-type-section": {
+        "title": "بخش نوع برنامه ایمنی",
+        "plural": "بخش‌های نوع برنامه ایمنی",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "sections": "بخش‌ها"
+        },
+        "fields": {
+          "safety-plan-type": {
+            "title": "نوع برنامه ایمنی"
+          },
+          "section-type": {
+            "title": "نوع بخش"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان بخش را وارد کنید"
+          },
+          "sort-order": {
+            "title": "ترتیب"
+          },
+          "is-default": {
+            "title": "بخش پیش‌فرض"
+          }
+        }
+      }
+    }
+  },
+  "safety-plan-types": {
+    "permissions": {
+      "safety-plan-type": {
+        "management": {
+          "title": "مدیریت انواع برنامه ایمنی",
+          "description": "دسترسی کامل به پیکربندی نوع برنامه ایمنی."
+        },
+        "view": {
+          "title": "مشاهده انواع برنامه ایمنی",
+          "description": "مشاهده پیکربندی نوع برنامه ایمنی."
+        },
+        "create": {
+          "title": "ایجاد نوع برنامه ایمنی",
+          "description": "ایجاد پیکربندی نوع برنامه ایمنی."
+        },
+        "update": {
+          "title": "ویرایش انواع برنامه ایمنی",
+          "description": "ویرایش پیکربندی نوع برنامه ایمنی."
+        },
+        "delete": {
+          "title": "حذف انواع برنامه ایمنی",
+          "description": "حذف پیکربندی نوع برنامه ایمنی."
+        }
+      }
+    },
+    "entities": {
+      "safety-plan-type": {
+        "title": "نوع برنامه ایمنی",
+        "plural": "انواع برنامه ایمنی",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "sections": "بخش‌ها"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "پس از ذخیره به‌صورت خودکار تولید می‌شود"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان نوع برنامه ایمنی را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات اختیاری درباره این نوع برنامه"
+          },
+          "sections": {
+            "title": "بخش‌ها"
+          }
+        }
+      }
+    }
+  },
+  "safety-plan-type-sections": {
+    "messages": {
+      "duplicate-default-section": "برای این نوع برنامه ایمنی فقط یک بخش پیش‌فرض مجاز است."
+    },
+    "permissions": {
+      "safety-plan-type-section": {
+        "management": {
+          "title": "مدیریت بخش‌های نوع برنامه ایمنی",
+          "description": "دسترسی کامل به پیکربندی بخش نوع برنامه ایمنی."
+        },
+        "view": {
+          "title": "مشاهده بخش‌های نوع برنامه ایمنی",
+          "description": "مشاهده پیکربندی بخش نوع برنامه ایمنی."
+        },
+        "create": {
+          "title": "ایجاد بخش نوع برنامه ایمنی",
+          "description": "ایجاد پیکربندی بخش نوع برنامه ایمنی."
+        },
+        "update": {
+          "title": "ویرایش بخش‌های نوع برنامه ایمنی",
+          "description": "ویرایش پیکربندی بخش نوع برنامه ایمنی."
+        },
+        "delete": {
+          "title": "حذف بخش‌های نوع برنامه ایمنی",
+          "description": "حذف پیکربندی بخش نوع برنامه ایمنی."
+        }
+      }
+    },
+    "entities": {
+      "safety-plan-type-section": {
+        "title": "بخش نوع برنامه ایمنی",
+        "plural": "بخش‌های نوع برنامه ایمنی",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "sections": "بخش‌ها"
+        },
+        "fields": {
+          "safety-plan-type": {
+            "title": "نوع برنامه ایمنی"
+          },
+          "section-type": {
+            "title": "نوع بخش"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان بخش را وارد کنید"
+          },
+          "sort-order": {
+            "title": "ترتیب"
+          },
+          "is-default": {
+            "title": "بخش پیش‌فرض"
+          }
+        }
+      }
+    }
+  },
+  "safety-plan-work-steps": {
+    "permissions": {
+      "safety-plan-work-step": {
+        "management": {
+          "title": "مدیریت گام‌های فرآیند کاری برنامه ایمنی",
+          "description": "دسترسی کامل به رکوردهای گام فرآیند کاری برنامه ایمنی."
+        },
+        "view": {
+          "title": "مشاهده گام‌های فرآیند کاری برنامه ایمنی",
+          "description": "مشاهده رکوردهای گام فرآیند کاری برنامه ایمنی."
+        },
+        "create": {
+          "title": "ایجاد گام‌های فرآیند کاری برنامه ایمنی",
+          "description": "ایجاد رکوردهای گام فرآیند کاری برنامه ایمنی."
+        },
+        "update": {
+          "title": "ویرایش گام‌های فرآیند کاری برنامه ایمنی",
+          "description": "ویرایش رکوردهای گام فرآیند کاری برنامه ایمنی."
+        },
+        "delete": {
+          "title": "حذف گام‌های فرآیند کاری برنامه ایمنی",
+          "description": "حذف رکوردهای گام فرآیند کاری برنامه ایمنی."
+        }
+      }
+    },
+    "entities": {
+      "safety-plan-work-step": {
+        "title": "گام کاری",
+        "plural": "گام‌های کاری",
+        "actions": {
+          "add-step": {
+            "title": "افزودن گام"
+          },
+          "edit-step": {
+            "title": "ویرایش گام"
+          }
+        },
+        "groups": {
+          "plan-folder": "برنامه ایمنی",
+          "step-content": "جزئیات گام",
+          "hazards": "خطرات و کنترل‌ها"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "پس از ذخیره به‌صورت خودکار تولید می‌شود"
+          },
+          "safety-plan": {
+            "title": "برنامه ایمنی"
+          },
+          "safety-plan-section": {
+            "title": "بخش برنامه ایمنی"
+          },
+          "task": {
+            "title": "وظیفه کاری",
+            "placeholder": "وظیفه یا گام رویه را توصیف کنید"
+          },
+          "responsible-person": {
+            "title": "مسئول",
+            "placeholder": "شخص یا نقش مسئول را وارد کنید"
+          },
+          "sort-order": {
+            "title": "ترتیب"
+          },
+          "hazard": {
+            "title": "خطر"
+          },
+          "hazard-text": {
+            "title": "خطر",
+            "placeholder": "خطر مربوط به این گام را توصیف کنید"
+          },
+          "initial-risk": {
+            "title": "ریسک اولیه",
+            "placeholder": "مثلاً 3H"
+          },
+          "residual-risk": {
+            "title": "ریسک باقیمانده",
+            "placeholder": "مثلاً 2M"
+          },
+          "control-measures": {
+            "title": "اقدامات کنترلی",
+            "placeholder": "اقدامات کنترلی این خطر را توصیف کنید"
+          },
+          "hazard-responsible-person": {
+            "title": "مسئول",
+            "placeholder": "مسئول این خطر را وارد کنید"
+          }
+        }
+      }
+    }
+  },
+  "safety-plan-work-steps": {
+    "permissions": {
+      "safety-plan-work-step": {
+        "management": {
+          "title": "مدیریت گام‌های کاری برنامه ایمنی",
+          "description": "دسترسی کامل به رکوردهای گام کاری برنامه ایمنی."
+        },
+        "view": {
+          "title": "مشاهده گام‌های کاری برنامه ایمنی",
+          "description": "مشاهده رکوردهای گام کاری برنامه ایمنی."
+        },
+        "create": {
+          "title": "ایجاد گام‌های کاری برنامه ایمنی",
+          "description": "ایجاد رکوردهای گام کاری برنامه ایمنی."
+        },
+        "update": {
+          "title": "ویرایش گام‌های کاری برنامه ایمنی",
+          "description": "ویرایش رکوردهای گام کاری برنامه ایمنی."
+        },
+        "delete": {
+          "title": "حذف گام‌های کاری برنامه ایمنی",
+          "description": "حذف رکوردهای گام کاری برنامه ایمنی."
+        }
+      }
+    },
+    "entities": {
+      "safety-plan-work-step": {
+        "title": "گام کاری",
+        "plural": "گام‌های کاری",
+        "actions": {
+          "add-step": {
+            "title": "افزودن گام"
+          },
+          "edit-step": {
+            "title": "ویرایش گام"
+          }
+        },
+        "groups": {
+          "plan-folder": "برنامه ایمنی",
+          "step-content": "جزئیات گام",
+          "hazards": "خطرات و کنترل‌ها"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "پس از ذخیره به‌صورت خودکار تولید می‌شود"
+          },
+          "safety-plan": {
+            "title": "برنامه ایمنی"
+          },
+          "safety-plan-section": {
+            "title": "بخش برنامه ایمنی"
+          },
+          "task": {
+            "title": "وظیفه کاری",
+            "placeholder": "وظیفه یا گام رویه را توصیف کنید"
+          },
+          "responsible-person": {
+            "title": "مسئول",
+            "placeholder": "شخص یا نقش مسئول را وارد کنید"
+          },
+          "sort-order": {
+            "title": "ترتیب"
+          },
+          "hazard-text": {
+            "title": "خطر",
+            "placeholder": "خطر مربوط به این گام را توصیف کنید"
+          },
+          "initial-risk": {
+            "title": "ریسک اولیه",
+            "placeholder": "مثلاً 3H"
+          },
+          "residual-risk": {
+            "title": "ریسک باقیمانده",
+            "placeholder": "مثلاً 2M"
+          },
+          "control-measures": {
+            "title": "اقدامات کنترلی",
+            "placeholder": "اقدامات کنترلی این خطر را توصیف کنید"
+          },
+          "hazard-responsible-person": {
+            "title": "مسئول",
+            "placeholder": "مسئول این خطر را وارد کنید"
+          }
+        }
+      }
+    }
+  },
+  "section-types": {
+    "permissions": {
+      "section-type": {
+        "management": {
+          "title": "مدیریت انواع بخش",
+          "description": "دسترسی کامل به داده مرجع نوع بخش برنامه ایمنی."
+        },
+        "view": {
+          "title": "مشاهده انواع بخش",
+          "description": "مشاهده داده مرجع نوع بخش برنامه ایمنی."
+        },
+        "create": {
+          "title": "ایجاد انواع بخش",
+          "description": "ایجاد داده مرجع نوع بخش برنامه ایمنی."
+        },
+        "update": {
+          "title": "ویرایش انواع بخش",
+          "description": "ویرایش داده مرجع نوع بخش برنامه ایمنی."
+        },
+        "delete": {
+          "title": "حذف انواع بخش",
+          "description": "حذف داده مرجع نوع بخش برنامه ایمنی."
+        },
+        "view": {
+          "title": "مشاهده انواع بخش",
+          "description": "مشاهده داده مرجع نوع بخش برنامه ایمنی."
+        },
+        "create": {
+          "title": "ایجاد انواع بخش",
+          "description": "ایجاد داده مرجع نوع بخش برنامه ایمنی."
+        },
+        "update": {
+          "title": "ویرایش انواع بخش",
+          "description": "ویرایش داده مرجع نوع بخش برنامه ایمنی."
+        },
+        "delete": {
+          "title": "حذف انواع بخش",
+          "description": "حذف داده مرجع نوع بخش برنامه ایمنی."
+        }
+      }
+    },
+    "entities": {
+      "section-type": {
+        "title": "نوع بخش",
+        "plural": "انواع بخش",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "پس از ذخیره به‌صورت خودکار تولید می‌شود"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان نوع بخش را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات نوع بخش را وارد کنید"
+          },
+          "item-entity-name": {
+            "title": "نام موجودیت آیتم",
+            "placeholder": "مثال: WorkplaceSafetyManagement.Hazard"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات نوع بخش را وارد کنید"
+          }
+        }
+      }
+    }
+  },
+  "work-step-types": {
+    "entities": {
+      "work-step-type": {
+        "title": "گام کاری",
+        "plural": "گام‌های کاری",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "columns": "ستون‌های جدول"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "پس از ذخیره به‌صورت خودکار تولید می‌شود"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان گام کاری را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات گام کاری را وارد کنید"
+          },
+          "column-title": {
+            "title": "عنوان ستون"
+          },
+          "section-type": {
+            "title": "نوع بخش"
+          }
+        }
+      }
+    }
+  },
+  "safety-plan-work-steps": {
+    "entities": {
+      "safety-plan-work-step": {
+        "title": "گام کاری برنامه ایمنی",
+        "plural": "گام‌های کاری برنامه ایمنی",
+        "actions": {
+          "add-work-step": {
+            "title": "افزودن گام کاری"
+          }
+        },
+        "groups": {
+          "plan-folder": "برنامه ایمنی",
+          "basic-info": "اطلاعات پایه",
+          "table-content": "جدول گام"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "پس از ذخیره به‌صورت خودکار تولید می‌شود"
+          },
+          "safety-plan": {
+            "title": "برنامه ایمنی"
+          },
+          "safety-plan-section": {
+            "title": "بخش برنامه ایمنی"
+          },
+          "work-step-type": {
+            "title": "گام کاری"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان گام کاری را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات"
+          },
+          "sort-order": {
+            "title": "ترتیب"
+          },
+          "rows": {
+            "title": "ردیف‌های جدول"
+          },
+          "cells": {
+            "title": "سلول‌ها"
+          },
+          "text-value": {
+            "title": "مقدار متنی"
+          }
+        }
+      }
+    }
+  }
+}

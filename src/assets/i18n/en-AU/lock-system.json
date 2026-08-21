@@ -1,0 +1,62 @@
+{
+  "feature": {
+    "title": "Lock System",
+    "description": "Manage entity locking to prevent concurrent editing"
+  },
+  "actions": {
+    "lock": {
+      "title": "Lock Item",
+      "description": "Lock this item to prevent other users from editing"
+    },
+    "unlock": {
+      "title": "Unlock Item",
+      "description": "Unlock this item to allow other users to edit"
+    }
+  },
+  "components": {
+    "lock-dialog": {
+      "title": "Lock Item",
+      "description": "Are you sure you want to lock this item? This will prevent other users from editing it.",
+      "fields": {
+        "reason": {
+          "title": "Reason (Optional)",
+          "placeholder": "Enter the reason for locking this item..."
+        },
+        "duration": {
+          "title": "Lock Duration",
+          "options": {
+            "1h": "1 Hour",
+            "1d": "1 Day",
+            "infinite": "Infinite"
+          }
+        }
+      },
+      "actions": {
+        "confirm": "Lock",
+        "cancel": "Cancel"
+      }
+    },
+    "unlock-dialog": {
+      "title": "Unlock Item",
+      "description": "Are you sure you want to unlock this item? This will allow other users to edit it.",
+      "actions": {
+        "confirm": "Unlock",
+        "cancel": "Cancel"
+      }
+    }
+  },
+  "messages": {
+    "success": {
+      "unlock": {
+        "title": "Unlock Successful",
+        "description": "The item has been unlocked successfully."
+      }
+    },
+    "error": {
+      "unlock": {
+        "title": "Unlock Failed",
+        "description": "Failed to unlock the item. Please try again."
+      }
+    }
+  }
+}

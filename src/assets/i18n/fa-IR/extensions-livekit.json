@@ -1,0 +1,63 @@
+{
+  "module": {
+    "title": "LiveKit",
+    "description": "یکپارچه‌سازی ارائه‌دهنده زیرساخت WebRTC"
+  },
+  "integration": {
+    "display-name": "LiveKit",
+    "description": "LiveKit Cloud یا سرور self-hosted را برای تماس صوتی و تصویری متصل کنید.",
+    "auth": {
+      "api-token": {
+        "label": "اعتبارنامه سرور",
+        "instructions": "URL WebSocket سرور LiveKit، API key و API secret را وارد کنید.",
+        "server-url": {
+          "placeholder": "wss://your-project.livekit.cloud"
+        },
+        "api-key": {
+          "placeholder": "API key مربوط به LiveKit"
+        },
+        "api-secret": {
+          "placeholder": "API secret مربوط به LiveKit"
+        }
+      }
+    },
+    "connect": {
+      "api-token-dialog": {
+        "title": "اتصال LiveKit",
+        "configure-title": "پیکربندی LiveKit",
+        "instructions": "URL WebSocket و اعتبارنامه API را از پروژه LiveKit یا سرور self-hosted وارد کنید.",
+        "fields": {
+          "display-name": "نام نمایشی",
+          "server-url": "URL سرور",
+          "api-key": "API Key",
+          "api-secret": "API Secret"
+        },
+        "placeholders": {
+          "display-name": "LiveKit",
+          "server-url": "wss://your-project.livekit.cloud",
+          "api-key": "API key مربوط به LiveKit",
+          "api-secret": "API secret مربوط به LiveKit"
+        },
+        "actions": {
+          "save": "ذخیره اتصال"
+        },
+        "messages": {
+          "server-url-required": "URL سرور الزامی است.",
+          "api-key-required": "API key الزامی است.",
+          "api-secret-required": "API secret الزامی است."
+        }
+      }
+    },
+    "validation": {
+      "incomplete-credentials": "اتصال LiveKit فاقد URL سرور، API key یا API secret است."
+    }
+  },
+  "settings": {
+    "tenant-integration": {
+      "section-title": "LiveKit",
+      "section-description": "اعتبارنامه سرور LiveKit را برای تماس‌های صوتی و تصویری مستأجر پیکربندی کنید.",
+      "connection-title": "حساب",
+      "connection-description": "URL سرور LiveKit، API key و secret این مستأجر را ذخیره کنید."
+    }
+  }
+}

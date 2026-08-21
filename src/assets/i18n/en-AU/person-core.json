@@ -1,0 +1,409 @@
+{
+  "module": {
+    "title": "Person Core",
+    "description": "Shared person and demographic reference data (education level, marital status) used across modules.",
+    "menus": {
+      "root": {
+        "title": "Personal",
+        "description": "Education levels, marital statuses, and related reference data."
+      }
+    }
+  },
+  "education-levels": {
+    "terms": {
+      "education-level": "Education Level",
+      "education-levels": "Education Levels"
+    },
+    "entities": {
+      "education-level": {
+        "title": "Education Level",
+        "plural": "Education Levels",
+        "search-result-description": "Education level and qualification reference data",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter education level (e.g., High School, Bachelor's, Master's)"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Enter description"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "education-level": {
+        "manage": {
+          "title": "Manage Education Levels",
+          "description": "Full access to manage education levels"
+        }
+      }
+    }
+  },
+  "genders": {
+    "terms": {
+      "gender": "Gender",
+      "genders": "Genders"
+    },
+    "entities": {
+      "gender": {
+        "title": "Gender",
+        "plural": "Genders",
+        "search-result-description": "Gender reference data for person profiles",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter gender label (e.g., Male, Female, Non-binary)"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Enter description"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "gender": {
+        "manage": {
+          "title": "Manage Genders",
+          "description": "Full access to manage gender reference values"
+        }
+      }
+    }
+  },
+  "person-titles": {
+    "terms": {
+      "person-title": "Person Title",
+      "person-titles": "Person Titles"
+    },
+    "entities": {
+      "person-title": {
+        "title": "Person Title",
+        "plural": "Person Titles",
+        "search-result-description": "Person title and salutation reference (Mr, Mrs, Dr, etc.)",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter title (e.g., Mr, Mrs, Ms, Dr, Prof)"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Enter description"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "person-title": {
+        "manage": {
+          "title": "Manage Person Titles",
+          "description": "Full access to manage person titles"
+        }
+      }
+    }
+  },
+  "marital-statuses": {
+    "terms": {
+      "marital-status": "Marital Status",
+      "marital-statuses": "Marital Statuses"
+    },
+    "entities": {
+      "marital-status": {
+        "title": "Marital Status",
+        "plural": "Marital Statuses",
+        "search-result-description": "Marital status reference data (Single, Married, etc.)",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter marital status (e.g., Single, Married, Divorced)"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Enter description"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "marital-status": {
+        "manage": {
+          "title": "Manage Marital Statuses",
+          "description": "Full access to manage marital statuses"
+        }
+      }
+    }
+  },
+  "person-identifier-types": {
+    "entities": {
+      "person-identifier-type": {
+        "title": "Person Identifier Type",
+        "plural": "Person Identifier Types",
+        "search-result-description": "Person identifier type information",
+        "fields": {
+          "scope": "Scope",
+          "scope-options": {
+            "global": "Global",
+            "national": "National",
+            "regional": "Regional"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "person-identifier-type": {
+        "manage": {
+          "title": "Manage Person Identifier Types",
+          "description": "Full access to manage person identifier types"
+        }
+      }
+    }
+  },
+  "person-relationships": {
+    "entities": {
+      "person-relationship": {
+        "title": "Linked Contact",
+        "plural": "Linked Contacts",
+        "search-result-description": "Linked contact information",
+        "properties": {
+          "from-person": { "title": "From Person" },
+          "to-person": { "title": "To Person" },
+          "type": { "title": "Link Type" }
+        },
+        "related-entities": {
+          "from-person": { "title": "From Person" },
+          "to-person": { "title": "To Person" },
+          "type": { "title": "Link Type" }
+        },
+        "columns": {
+          "phone": { "title": "Phone" },
+          "email": { "title": "Email" }
+        }
+      }
+    },
+    "actions": {
+      "choose-existing-person": {
+        "title": "Choose Existing Person",
+        "selector-title": "Select Person",
+        "form-title": "Add Link Type"
+      },
+      "create-new-person": {
+        "title": "Create New Person",
+        "dialog-title": "Create New Person",
+        "relationship-form-title": "Set Link Type"
+      }
+    },
+    "permissions": {
+      "person-relationship": {
+        "manage": {
+          "title": "Manage Linked Contacts",
+          "description": "Full access to manage linked contacts"
+        }
+      }
+    }
+  },
+  "religions": {
+    "entities": {
+      "religion": {
+        "title": "Religion",
+        "plural": "Religions",
+        "search-result-description": "Religion and belief reference data",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter religion (e.g., Christianity, Islam)"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Enter description"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "religion": {
+        "manage": {
+          "title": "Manage Religions",
+          "description": "Full access to manage religions"
+        }
+      }
+    }
+  },
+  "contact-roles": {
+    "terms": {
+      "contact-role": "Contact Role",
+      "contact-roles": "Contact Roles"
+    },
+    "entities": {
+      "contact-role": {
+        "title": "Contact Role",
+        "plural": "Contact Roles",
+        "search-result-description": "Contact role catalog used across Person, Location, and Opportunity contexts",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "type": {
+            "title": "Type",
+            "options": {
+              "person": "Person",
+              "location-contact": "Location Contact",
+              "opportunity-contact": "Opportunity Contact",
+              "contact-assignment": "Contact Assignment",
+              "person-relationship": "Person Relationship",
+              "family": "Family"
+            }
+          },
+          "name": {
+            "title": "Name",
+            "placeholder": "Unique identifier (e.g., customer, site-manager)"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Display name (e.g., Customer, Site Manager)"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Optional description"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "contact-role": {
+        "manage": {
+          "title": "Manage Contact Roles",
+          "description": "Full access to manage contact roles"
+        }
+      }
+    }
+  },
+  "contact-assignments": {
+    "terms": {
+      "contact-assignment": "Contact Assignment",
+      "contact-assignments": "Contact Assignments"
+    },
+    "entities": {
+      "contact-assignment": {
+        "title": "Contact Assignment",
+        "plural": "Contact Assignments",
+        "search-result-description": "Person assigned to a party with a specific contact role",
+        "fields": {
+          "party": {
+            "title": "Party"
+          },
+          "person": {
+            "title": "Person"
+          },
+          "role": {
+            "title": "Role"
+          },
+          "integration-ref": {
+            "title": "Integration Link"
+          }
+        }
+      }
+    },
+    "actions": {
+      "assign-existing-person": {
+        "title": "Assign existing contact",
+        "selector-title": "Choose contact",
+        "form-title": "Assign contact to {{partyTitle}}"
+      },
+      "create-with-new-person": {
+        "title": "Create new contact",
+        "person-dialog-title": "Create contact",
+        "assignment-dialog-title": "Set contact role"
+      }
+    },
+    "messages": {
+      "missing-party-context": "Party context is required to assign a contact."
+    }
+  },
+  "persons": {
+    "terms": {
+      "person": "Person",
+      "persons": "Individuals"
+    },
+    "entities": {
+      "person": {
+        "title": "Person",
+        "plural": "Individuals",
+        "search-result-description": "Individual person information",
+        "groups": {
+          "profile": "Profile",
+          "image": "Photo",
+          "phones": "Phones",
+          "emails": "Emails",
+          "addresses": "Addresses",
+          "signature": "Signature"
+        },
+        "fields": {
+          "birth-date": {
+            "title": "Birth Date"
+          },
+          "person-title": {
+            "title": "Title"
+          },
+          "gender": {
+            "title": "Gender"
+          },
+          "marital-status": {
+            "title": "Marital Status"
+          },
+          "education-level": {
+            "title": "Education Level"
+          },
+          "identity-number": {
+            "title": "Identity Number",
+            "placeholder": "Enter identity number"
+          },
+          "user": {
+            "title": "User"
+          },
+          "signature": {
+            "title": "Signature"
+          },
+          "phone": {
+            "title": "Phone",
+            "placeholder": "Enter phone number"
+          },
+          "email": {
+            "title": "Email",
+            "placeholder": "Enter email address"
+          },
+          "address-labels": {
+            "home": "Home",
+            "work": "Work",
+            "other": "Other"
+          }
+        },
+        "related-entities": {
+          "relationships": { "title": "Linked Contacts" }
+        }
+      }
+    },
+    "permissions": {
+      "person": {
+        "manage": {
+          "title": "Manage Individuals",
+          "description": "Full access to manage persons"
+        }
+      }
+    }
+  }
+}

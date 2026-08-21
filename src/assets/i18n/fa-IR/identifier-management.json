@@ -1,0 +1,37 @@
+{
+  "module": {
+    "title": "مدیریت شناسه",
+    "description": "مدیریت شناسه‌ها و سیستم‌های شناسایی"
+  },
+  "permissions": {
+    "manage": {
+      "title": "مدیریت شناسه",
+      "description": "مدیریت پیکربندی و قوانین شناسه"
+    }
+  },
+  "entities": {
+    "identifier-rule": {
+      "title": "قانون شناسه",
+      "plural": "قوانین شناسه",
+      "permissions": {
+        "manage": {
+          "title": "مدیریت قوانین شناسه",
+          "description": "ایجاد، ویرایش و حذف قوانین شناسه"
+        }
+      },
+      "groups": {
+        "basic-info": "اطلاعات پایه",
+        "pattern": "الگو",
+        "scope": "محدوده"
+      },
+      "fields": {
+        "entity": { "title": "موجودیت" },
+        "pattern": { "title": "الگو" },
+        "scope-config": {
+          "title": "پیکربندی محدوده",
+          "description": "تنظیمات JSON برای محدوده‌بندی و بازنشانی شمارنده. کلیدهای رایج: byTenant، byApp، period، minValue، blockSize، customKeys."
+        }
+      }
+    }
+  }
+}

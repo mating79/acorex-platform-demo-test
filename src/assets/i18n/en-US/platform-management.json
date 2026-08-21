@@ -1,0 +1,1709 @@
+{
+  "module": {
+    "title": "Platform Management",
+    "description": "Manage platform-wide settings, menus, and tokens",
+    "menus": {
+      "root": {
+        "title": "Platform",
+        "description": "Platform management and configuration"
+      }
+    }
+  },
+  "presence": {
+    "queries": {
+      "user-activity": {
+        "title": "User Presence Activity",
+        "description": "Time spent online, away, busy, and offline in a date range."
+      },
+      "tenant-activity": {
+        "title": "Tenant Presence Activity",
+        "description": "How many users were online, away, or busy in a date range."
+      }
+    }
+  },
+  "reports": {
+    "category": {
+      "title": "Sessions & Presence",
+      "description": "Sessions, presence, and account activity for users."
+    },
+    "user-activity-timeline": {
+      "title": "Session & Presence Timeline",
+      "description": "Session and presence history: event timeline, summary, daily charts, presence segments, and away vs busy."
+    },
+    "tenant-presence-overview": {
+      "title": "Tenant Presence Summary",
+      "description": "Connected users, status totals, and daily online trend for the tenant."
+    },
+    "parameters": {
+      "user-activity-filters": {
+        "title": "Activity Filters",
+        "description": "User and date range for activity and presence views"
+      },
+      "tenant-presence-filters": {
+        "title": "Presence Filters",
+        "description": "Date range for tenant presence activity"
+      },
+      "user": {
+        "title": "User",
+        "description": "User to include in the report"
+      },
+      "users": {
+        "title": "User",
+        "description": "User to include in the report"
+      },
+      "date-range": {
+        "title": "Date Range",
+        "description": "Report range for activity and presence that overlap this period"
+      }
+    },
+    "columns": {
+      "display-name": "Display Name",
+      "username": "Username",
+      "day": "Day",
+      "status": "Status",
+      "source": "Source",
+      "event-type": "Event",
+      "occurred-at": "Occurred At",
+      "detail": "Detail",
+      "device-name": "Device",
+      "ip-address": "IP Address",
+      "session-status": "Session Status",
+      "started-at": "Started At",
+      "ended-at": "Ended At",
+      "duration-hours": "Duration (Hours)",
+      "online-hours": "Online (Hours)",
+      "away-hours": "Away (Hours)",
+      "busy-hours": "Busy (Hours)",
+      "offline-hours": "Offline (Hours)",
+      "online-percent": "Online %",
+      "away-auto-hours": "Away Auto (Hours)",
+      "away-manual-hours": "Away Manual (Hours)",
+      "busy-manual-hours": "Busy Manual (Hours)",
+      "connected-user-count": "Connected Users",
+      "online-user-count": "Online Users",
+      "away-user-count": "Away Users",
+      "busy-user-count": "Busy Users",
+      "last-status": "Last Status"
+    }
+  },
+  "features": {
+    "menu-customization": {
+      "title": "Menu Customization",
+      "description": "Allow users to customize menu structure and organization"
+    },
+    "auto-check-updates": {
+      "title": "Auto Check Updates",
+      "description": "Automatically check for platform updates and notify users"
+    },
+    "max-tokens": {
+      "title": "Max Tokens",
+      "description": "Maximum number of tokens allowed in the system"
+    }
+  },
+  "menu-management": {
+    "terms": {
+      "menu": "Menu",
+      "menus": "Menus"
+    },
+    "menus": {
+      "user": {
+        "title": "Menu Management",
+        "description": "Manage your personal menu customizations"
+      },
+      "tenant": {
+        "title": "Menu Management",
+        "description": "Manage organization menu customizations"
+      }
+    },
+    "components": {
+      "menu-list": {
+        "title": "Menu Management",
+        "description": "Manage application menus and customize menu structure",
+        "empty-states": {
+          "no-data": {
+            "title": "No Menu Items Found",
+            "description": "Start by adding a new menu item or wait for providers to load"
+          },
+          "loading": {
+            "title": "Loading Menu Items...",
+            "description": "Please wait while we load the menu structure"
+          },
+          "error": {
+            "title": "Failed to Load Menus",
+            "description": "An error occurred while loading menu items"
+          }
+        }
+      },
+      "menu-customizer-popup": {
+        "title": "Customize Menu"
+      },
+      "add-dialog": {
+        "title": "Add Menu Item",
+        "description": "Create a new menu item"
+      },
+      "edit-dialog": {
+        "title": "Edit Menu Item",
+        "description": "Modify menu item properties"
+      }
+    },
+    "states": {
+      "built-in": "Built-in",
+      "custom": "Custom",
+      "hidden": "Hidden",
+      "divider": "Divider",
+      "group": "Group"
+    },
+    "fields": {
+      "name": "Name",
+      "text": "Text",
+      "icon": "Icon",
+      "path": "Path",
+      "priority": "Priority",
+      "description": "Description"
+    },
+    "actions": {
+      "add-root": {
+        "title": "Add Root Menu",
+        "description": "Add a new root-level menu item"
+      },
+      "add-child": {
+        "title": "Add Child",
+        "description": "Add a child menu item"
+      },
+      "show": {
+        "title": "Show",
+        "description": "Show this menu item"
+      },
+      "hide": {
+        "title": "Hide",
+        "description": "Hide this menu item"
+      },
+      "reset": {
+        "title": "Reset All",
+        "description": "Reset all menu customizations",
+        "confirm": {
+          "title": "Reset Customizations",
+          "message": "Are you sure you want to reset all menu customizations? This action cannot be undone."
+        }
+      },
+      "collapse": {
+        "title": "Collapse All",
+        "description": "Collapse all menu items"
+      },
+      "expand": {
+        "title": "Expand All",
+        "description": "Expand all menu items"
+      },
+      "move-up": {
+        "title": "Move Up",
+        "description": "Move menu item up"
+      },
+      "move-down": {
+        "title": "Move Down",
+        "description": "Move menu item down"
+      },
+      "move-to-parent": {
+        "title": "Move to Parent",
+        "description": "Move menu item to parent level"
+      },
+      "delete": {
+        "title": "Delete",
+        "description": "Delete this menu item",
+        "confirm": {
+          "message": "Are you sure you want to delete this menu item?"
+        }
+      },
+      "customize-menu": {
+        "title": "Customize Menu",
+        "description": "Customize menu structure for this item"
+      }
+    },
+    "messages": {
+      "success": {
+        "save": "Menu item saved successfully",
+        "delete": "Menu item deleted successfully",
+        "show": "Menu item shown successfully",
+        "hide": "Menu item hidden successfully",
+        "reorder": "Menu items reordered successfully",
+        "reset": "Customizations reset successfully",
+        "customization-saved": "Menu customizations saved successfully"
+      },
+      "error": {
+        "load": "Failed to load menu items",
+        "save": "Failed to save menu item",
+        "delete": "Failed to delete menu item",
+        "show": "Failed to show menu item",
+        "hide": "Failed to hide menu item",
+        "move": "Cannot drop menu item into a leaf node with a path",
+        "reorder": "Failed to reorder menu items",
+        "sync": "Failed to sync menu changes",
+        "reset": "Failed to reset customizations"
+      },
+      "info": {
+        "no-name": "This menu item doesn't have a name and cannot be customized"
+      }
+    },
+    "permissions": {
+      "menu-management": {
+        "title": "Menu Management",
+        "actions": {
+          "manage": {
+            "title": "Manage Menus",
+            "description": "Full menu management access"
+          },
+          "view": {
+            "title": "View Menus",
+            "description": "View menu structure"
+          },
+          "create": {
+            "title": "Create Menu Items",
+            "description": "Create new menu items"
+          },
+          "edit": {
+            "title": "Edit Menu Items",
+            "description": "Edit existing menu items"
+          },
+          "delete": {
+            "title": "Delete Menu Items",
+            "description": "Delete menu items"
+          }
+        }
+      }
+    }
+  },
+  "tokens": {
+    "terms": {
+      "token": "Token",
+      "tokens": "Tokens",
+      "data-type": "Data Type",
+      "value": "Value"
+    },
+    "entities": {
+      "token": {
+        "title": "Token",
+        "plural": "Tokens",
+        "groups": {
+          "basic-info": "Basic Information",
+          "value": "Value"
+        },
+        "fields": {
+          "kind": {
+            "title": "Kind"
+          },
+          "data-type": {
+            "title": "Data Type"
+          },
+          "format": {
+            "title": "Format"
+          },
+          "expression": {
+            "title": "Expression"
+          },
+          "sample-value": {
+            "title": "Sample Value",
+            "placeholder": "Sample value for template preview"
+          },
+          "is-sensitive": {
+            "title": "Sensitive"
+          },
+          "mask-pattern": {
+            "title": "Mask Pattern"
+          }
+        },
+        "actions": {
+          "execute": {
+            "title": "Execute Token"
+          }
+        }
+      }
+    },
+    "components": {
+      "execute-token-dialog": {
+        "title": "Token Execution Result",
+        "fields": {
+          "token-name": {
+            "title": "Token Name"
+          },
+          "value": {
+            "title": "Value"
+          }
+        }
+      }
+    },
+    "messages": {
+      "execute-failed": {
+        "title": "Token Execution Failed",
+        "content": "Token \"{{tokenName}}\" not found or returned no value"
+      },
+      "execute-error": {
+        "title": "Token Execution Error",
+        "content": "Failed to execute token: {{error}}"
+      }
+    },
+    "permissions": {
+      "token": {
+        "title": "Tokens",
+        "manage": {
+          "title": "Manage Tokens",
+          "description": "Full token management access"
+        },
+        "view": {
+          "title": "View Tokens",
+          "description": "View tokens"
+        },
+        "create": {
+          "title": "Create Token",
+          "description": "Create new tokens"
+        },
+        "edit": {
+          "title": "Edit Token",
+          "description": "Edit tokens"
+        },
+        "delete": {
+          "title": "Delete Tokens",
+          "description": "Delete tokens"
+        }
+      }
+    }
+  },
+  "permissions": {
+    "manage": {
+      "title": "Platform Management",
+      "description": "Manage platform-wide settings and configuration"
+    }
+  },
+  "definitions": {
+    "terms": {
+      "title": "Definitions"
+    },
+    "relations": {
+      "title": "Relations",
+      "terms": {
+        "title": "Relations",
+        "relation-definition": "Relation Definition"
+      },
+      "columns": {
+        "id": "ID",
+        "type": "Type",
+        "kind": "Kind",
+        "source": "Source",
+        "target": "Target",
+        "typeLabel": "Type",
+        "kindLabel": "Kind",
+        "sourceLabel": "Source",
+        "targetLabel": "Target"
+      },
+      "actions": {
+        "create": {
+          "title": "Create Relation Definition",
+          "description": "Create a new relation definition"
+        },
+        "view": {
+          "title": "View",
+          "description": "View relation definition details"
+        },
+        "edit": {
+          "title": "Edit Relation Definition",
+          "description": "Edit relation definition"
+        },
+        "delete": {
+          "title": "Delete",
+          "description": "Delete relation definition",
+          "confirm-message": "Are you sure you want to delete this relation definition? This action cannot be undone."
+        }
+      },
+      "components": {
+        "list": {
+          "description": "Manage relation definitions. Relations are stored in a separate collection (like MySQL join table).",
+          "search-placeholder": "Search by id, source or target...",
+          "empty-states": {
+            "loading": {
+              "title": "Loading Relation Definitions...",
+              "description": "Please wait"
+            },
+            "error": {
+              "title": "Failed to Load",
+              "description": "An error occurred while loading relation definitions"
+            },
+            "no-data": {
+              "title": "No Relation Definitions Found",
+              "description": "Create your first relation definition"
+            },
+            "not-available": {
+              "title": "Relation Definitions Not Available",
+              "description": "Relation definition management is only available when using Dexie or Firestore as the entity definition source"
+            }
+          }
+        }
+      },
+      "detail": {
+        "sections": {
+          "basic-info": "Basic Information",
+          "source": "Source",
+          "target": "Target"
+        },
+        "fields": {
+          "type": "Type",
+          "kind": "Kind",
+          "is-required": "Required",
+          "source-module": "Source module",
+          "source-entity": "Source entity",
+          "source-key": "Source key",
+          "target-module": "Target module",
+          "target-entity": "Target entity",
+          "target-key": "Target key",
+          "source-label": "Source",
+          "target-label": "Target",
+          "cardinality-values": {
+            "one-to-one": "One-to-one",
+            "one-to-many": "One-to-many",
+            "many-to-many": "Many-to-many"
+          },
+          "kind-values": {
+            "association": "Association",
+            "composition": "Composition",
+            "aggregation": "Aggregation"
+          }
+        }
+      },
+      "messages": {
+        "success": {
+          "create": "Relation definition created successfully",
+          "update": "Relation definition updated successfully",
+          "delete": "Relation definition deleted successfully"
+        },
+        "error": {
+          "delete": "Failed to delete relation definition"
+        }
+      }
+    },
+    "commands": {
+      "title": "Commands",
+      "detail": {
+        "sections": {
+          "basic-info": "Basic information",
+          "description": "Description",
+          "catalog-metadata": "Catalog metadata",
+          "input-parameters": "Input parameters",
+          "output-parameters": "Output parameters"
+        },
+        "pages": {
+          "input-parameters": "Input parameters",
+          "output-parameters": "Output parameters"
+        },
+        "fields": {
+          "catalog-title": "Catalog title",
+          "execution-mode": "Execution mode",
+          "outcomes-definition": "Outcomes (metadata)",
+          "ai-metadata": "AI metadata",
+          "capabilities": "Capabilities (tooling)",
+          "param-name": "Name",
+          "param-title": "Title",
+          "param-schema": "Schema",
+          "param-description": "Description"
+        }
+      }
+    },
+    "queries": {
+      "title": "Queries",
+      "detail": {
+        "sections": {
+          "basic-info": "Basic information",
+          "description": "Description",
+          "catalog-metadata": "Catalog metadata",
+          "input-parameters": "Input parameters",
+          "output-parameters": "Output parameters"
+        },
+        "pages": {
+          "input-parameters": "Input parameters",
+          "output-parameters": "Output parameters"
+        },
+        "fields": {
+          "catalog-title": "Catalog title",
+          "execution-mode": "Execution mode",
+          "capabilities": "Capabilities (tooling)",
+          "ai-metadata": "AI metadata",
+          "param-name": "Name",
+          "param-title": "Title",
+          "param-schema": "Schema",
+          "param-description": "Description"
+        }
+      }
+    },
+    "modules": {
+      "title": "Modules",
+      "detail": {
+        "pages": {
+          "overview": "Overview",
+          "entities": "Entities",
+          "aggregates": "Aggregates",
+          "relations": "Relations",
+          "menus": "Menu definitions"
+        },
+        "fields": {
+          "icon": "Icon",
+          "entity-count": "Entity Count",
+          "feature-count": "Feature Count",
+          "relation-count": "Relation Count",
+          "features": "Features",
+          "feature-name": "Feature Name",
+          "feature-title": "Feature Title",
+          "feature-default-value": "Default Value",
+          "relation-source": "Source",
+          "relation-target": "Target",
+          "type": "Type",
+          "kind": "Kind"
+        }
+      }
+    },
+    "aggregates": {
+      "title": "Aggregates",
+      "detail": {
+        "pages": {
+          "overview": "Overview",
+          "entities": "Entities"
+        },
+        "fields": {
+          "module": "Module",
+          "aggregate-name": "Aggregate name",
+          "entity-count": "Entity count"
+        }
+      }
+    },
+    "entities": {
+      "title": "Entities",
+      "terms": {
+        "title": "Entities",
+        "entity-definition": "Entity Definition"
+      },
+      "columns": {
+        "module": "Module",
+        "name": "Name",
+        "title": "Title"
+      },
+      "actions": {
+        "create": {
+          "title": "Create Entity Definition",
+          "description": "Create a new entity definition"
+        },
+        "view": {
+          "title": "View",
+          "description": "View entity definition details"
+        },
+        "edit": {
+          "title": "Edit Entity Definition",
+          "description": "Edit entity definition"
+        },
+        "delete": {
+          "title": "Delete",
+          "description": "Delete entity definition",
+          "confirm-message": "Are you sure you want to delete this entity definition? This action cannot be undone."
+        }
+      },
+      "components": {
+        "list": {
+          "description": "Manage entity definitions loaded from Dexie or Firestore. Create, edit, or delete definitions.",
+          "search-placeholder": "Search by name or module...",
+          "empty-states": {
+            "loading": {
+              "title": "Loading Entity Definitions...",
+              "description": "Please wait"
+            },
+            "error": {
+              "title": "Failed to Load",
+              "description": "An error occurred while loading entity definitions"
+            },
+            "no-data": {
+              "title": "No Entity Definitions Found",
+              "description": "Create your first entity definition or run the seeder to load from JSON files"
+            },
+            "not-available": {
+              "title": "Entity Definitions Not Available",
+              "description": "Entity definition management is only available when using Dexie or Firestore as the entity definition source"
+            }
+          }
+        }
+      },
+      "detail": {
+        "pages": {
+          "overview": "Overview",
+          "fields": "Fields & Schema",
+          "interfaces": "Interfaces & Layout",
+          "configuration": "Configuration",
+          "menus": "Menu links"
+        },
+        "tabs": {
+          "create": "Create",
+          "update": "Update",
+          "single": "Single View",
+          "list": "List View"
+        },
+        "sections": {
+          "basic-info": "General Information",
+          "fields": "Fields",
+          "groups": "Groups",
+          "columns": "Columns",
+          "formats": "Display Formats",
+          "plugins": "Plugins",
+          "interfaces-master-single": "Master — single view",
+          "interfaces-master-list": "Master — list view",
+          "interfaces-master-create": "Master — create form",
+          "interfaces-master-update": "Master — update form",
+          "interfaces-detail-list": "Detail — list",
+          "related-entities": "Related Entities"
+        },
+        "fields": {
+          "name": "Name",
+          "title": "Title",
+          "aggregate-root-id": "Aggregate root",
+          "module": "Module",
+          "icon": "Icon",
+          "type": "Type",
+          "format-individual": "Individual Format",
+          "format-plural": "Plural Format",
+          "format-lookup": "Lookup display format",
+          "format-display-name": "Display name format",
+          "format-search-title": "Search Result Title",
+          "format-search-description": "Search Result Description",
+          "field-name": "Field Name",
+          "field-title": "Field Title",
+          "field-schema": "Schema",
+          "field-description": "Description",
+          "field-flags": "Field flags (nullable, read-only)",
+          "field-default-value": "Default value",
+          "add-from-property-definition": "Add from property definition",
+          "add-from-schema-definition": "Add from schema definition",
+          "field-nullable": "Nullable",
+          "field-readonly": "Read Only",
+          "fields": "Fields",
+          "groups": "Groups",
+          "group-id": "Group Id",
+          "group-title": "Group Title",
+          "group-description": "Description",
+          "group-permissions": "Permissions",
+          "group-icon": "Icon",
+          "columns": "Columns",
+          "columns-selector-placeholder": "Choose a column…",
+          "formats": "Formats",
+          "plugins": "Plugins",
+          "related-entities": "Related Entities",
+          "interface-single-title": "Single view title",
+          "interface-single-description": "Single view description",
+          "interface-single-sections": "Single view sections",
+          "interface-single-properties": "Single view properties",
+          "interface-single-actions": "Single view actions",
+          "interface-list-title": "List view title",
+          "interface-list-description": "List view description",
+          "interface-list-actions": "List view actions",
+          "interface-list-views": "List query views",
+          "interface-list-table-columns": "List table columns",
+          "interface-create-title": "Create form title",
+          "interface-create-description": "Create form description",
+          "interface-create-sections": "Create form sections",
+          "interface-create-properties": "Create form properties",
+          "interface-create-steps": "Create wizard steps",
+          "interface-create-quick-create": "Quick create (lookup)",
+          "interface-update-title": "Update form title",
+          "interface-update-description": "Update form description",
+          "interface-update-sections": "Update form sections",
+          "interface-update-properties": "Update form properties",
+          "interface-detail-title": "Detail list title",
+          "interface-detail-description": "Detail list description",
+          "interface-detail-columns": "Detail list columns",
+          "interface-detail-actions": "Detail list actions",
+          "interface-property-data-path": "Data path",
+          "interface-property-permissions": "Permissions",
+          "interface-property-layout": "Layout",
+          "interface-action-name": "Action name",
+          "interface-action-title": "Action title",
+          "interface-action-command": "Command",
+          "interface-action-type": "Action type",
+          "interface-action-priority": "Priority",
+          "interface-action-scope": "Scope",
+          "interface-action-hidden": "Hidden",
+          "interface-action-items": "Sub-actions",
+          "interface-query-name": "View name",
+          "interface-query-title": "View title",
+          "interface-query-fixed": "Fixed",
+          "interface-query-columns": "Columns",
+          "interface-query-conditions": "Conditions",
+          "interface-query-sorts": "Sorts",
+          "interface-column-hidden": "Hidden",
+          "interface-column-show-as": "Show as",
+          "interface-column-sort": "Sort",
+          "interface-column-options": "Column options",
+          "interface-step-id": "Step id",
+          "interface-step-title": "Step title",
+          "interface-step-description": "Step description"
+        }
+      },
+      "editor": {
+        "placeholder": "Paste or edit JSON entity definition. Must include: name, module, fields (array), groups."
+      },
+      "messages": {
+        "success": {
+          "create": "Entity definition created successfully",
+          "update": "Entity definition updated successfully",
+          "delete": "Entity definition deleted successfully"
+        },
+        "error": {
+          "delete": "Failed to delete entity definition"
+        }
+      }
+    },
+    "interfaces": {
+      "title": "Interfaces",
+      "terms": {
+        "title": "Interfaces",
+        "interface-definition": "Interface Definition"
+      },
+      "columns": {
+        "name": "Name",
+        "title": "Title"
+      },
+      "actions": {
+        "create": {
+          "title": "Create Interface Definition",
+          "description": "Create a new interface definition"
+        },
+        "view": {
+          "title": "View",
+          "description": "View interface definition details"
+        },
+        "edit": {
+          "title": "Edit Interface Definition",
+          "description": "Edit interface definition"
+        },
+        "delete": {
+          "title": "Delete",
+          "description": "Delete interface definition",
+          "confirm-message": "Are you sure you want to delete this interface definition? This action cannot be undone."
+        }
+      },
+      "list": {
+        "views": {
+          "form-element": "Form Elements",
+          "dashboard-widget": "Dashboard Widgets",
+          "form-template": "Form Templates",
+          "property-editor": "Property Editors",
+          "meta-data": "Meta Data",
+          "setting-widget": "Setting Widgets",
+          "entity-widget": "Entity Widgets",
+          "utility-widget": "Utility Widgets"
+        }
+      },
+      "components": {
+        "list": {
+          "description": "Manage widget interface definitions. Create, edit, or delete interface definitions.",
+          "search-placeholder": "Search by name or title...",
+          "empty-states": {
+            "loading": {
+              "title": "Loading Interface Definitions...",
+              "description": "Please wait"
+            },
+            "error": {
+              "title": "Failed to Load",
+              "description": "An error occurred while loading interface definitions"
+            },
+            "no-data": {
+              "title": "No Interface Definitions Found",
+              "description": "Create your first interface definition or run the seeder to load from widget registry"
+            },
+            "not-available": {
+              "title": "Interface Definitions Not Available",
+              "description": "Interface definition management is only available when using Dexie or Firestore as the entity definition source"
+            }
+          }
+        }
+      },
+      "detail": {
+        "pages": {
+          "overview": "Overview",
+          "option-definitions": "Option Definitions"
+        },
+        "sections": {
+          "basic-info": "General Information",
+          "configuration": "Configuration",
+          "categories": "Categories",
+          "groups": "Groups"
+        },
+        "fields": {
+          "name": "Name",
+          "title": "Title",
+          "type": "Type",
+          "icon": "Icon",
+          "description": "Description",
+          "option-name": "Option Name",
+          "option-title": "Option Title",
+          "option-schema": "Schema",
+          "option-description": "Description"
+        }
+      },
+      "editor": {
+        "placeholder": "Paste or edit JSON interface definition. Must include: name, title, optionDefinitions (array)."
+      },
+      "messages": {
+        "success": {
+          "create": "Interface definition created successfully",
+          "update": "Interface definition updated successfully",
+          "delete": "Interface definition deleted successfully"
+        },
+        "error": {
+          "delete": "Failed to delete interface definition"
+        }
+      }
+    },
+    "schemas": {
+      "title": "Schemas",
+      "terms": {
+        "title": "Schemas",
+        "schema-definition": "Schema Definition"
+      },
+      "columns": {
+        "name": "Name",
+        "title": "Title"
+      },
+      "actions": {
+        "create": {
+          "title": "Create Schema Definition",
+          "description": "Create a new schema definition"
+        },
+        "view": {
+          "title": "View",
+          "description": "View schema definition details"
+        },
+        "edit": {
+          "title": "Edit Schema Definition",
+          "description": "Edit schema definition"
+        },
+        "delete": {
+          "title": "Delete",
+          "description": "Delete schema definition",
+          "confirm-message": "Are you sure you want to delete this schema definition? This action cannot be undone."
+        }
+      },
+      "components": {
+        "list": {
+          "description": "Manage schema definitions. Create, edit, or delete property schemas.",
+          "search-placeholder": "Search by name or title...",
+          "empty-states": {
+            "loading": {
+              "title": "Loading Schema Definitions...",
+              "description": "Please wait"
+            },
+            "error": {
+              "title": "Failed to Load",
+              "description": "An error occurred while loading schema definitions"
+            },
+            "no-data": {
+              "title": "No Schema Definitions Found",
+              "description": "Create your first schema definition or run the seeder to load from mock files"
+            },
+            "not-available": {
+              "title": "Schema Definitions Not Available",
+              "description": "Schema definition management is only available when using Dexie or Firestore as the entity definition source"
+            }
+          }
+        }
+      },
+      "detail": {
+        "pages": {
+          "overview": "Overview"
+        },
+        "sections": {
+          "basic-info": "Basic Information",
+          "interface": "Interface",
+          "validations": "Validations",
+          "features": "Features"
+        },
+        "fields": {
+          "name": "Name",
+          "title": "Title",
+          "description": "Description",
+          "features-searchable-enabled": "Searchable",
+          "features-searchable-full-text": "Full-text search",
+          "features-filterable-enabled": "Filterable",
+          "features-filterable-inline": "Inline filter",
+          "features-sortable-enabled": "Sortable",
+          "features-auditable-enabled": "Auditable"
+        }
+      },
+      "editor": {
+        "placeholder": "Paste or edit JSON schema definition. Must include: name, title, interface (with name and options)."
+      },
+      "messages": {
+        "success": {
+          "create": "Schema definition created successfully",
+          "update": "Schema definition updated successfully",
+          "delete": "Schema definition deleted successfully"
+        },
+        "error": {
+          "delete": "Failed to delete schema definition"
+        }
+      }
+    },
+    "properties": {
+      "title": "Properties",
+      "terms": {
+        "title": "Properties",
+        "property-definition": "Property Definition"
+      },
+      "columns": {
+        "name": "Name",
+        "title": "Title"
+      },
+      "actions": {
+        "create": {
+          "title": "Create Property Definition",
+          "description": "Create a new property definition"
+        },
+        "view": {
+          "title": "View",
+          "description": "View property definition details"
+        },
+        "edit": {
+          "title": "Edit Property Definition",
+          "description": "Edit property definition"
+        },
+        "delete": {
+          "title": "Delete",
+          "description": "Delete property definition",
+          "confirm-message": "Are you sure you want to delete this property definition? This action cannot be undone."
+        }
+      },
+      "components": {
+        "list": {
+          "description": "Manage global property definitions (id, title, name, etc.). Create, edit, or delete property definitions.",
+          "search-placeholder": "Search by id, name or title...",
+          "empty-states": {
+            "loading": {
+              "title": "Loading Property Definitions...",
+              "description": "Please wait"
+            },
+            "error": {
+              "title": "Failed to Load",
+              "description": "An error occurred while loading property definitions"
+            },
+            "no-data": {
+              "title": "No Property Definitions Found",
+              "description": "Create your first property definition or run the seeder to load from mock files"
+            },
+            "not-available": {
+              "title": "Property Definitions Not Available",
+              "description": "Property definition management is only available when using Dexie or Firestore as the entity definition source"
+            }
+          }
+        }
+      },
+      "detail": {
+        "pages": {
+          "overview": "Overview"
+        },
+        "sections": {
+          "basic-info": "Basic Information",
+          "features": "Features",
+          "entity-binding": "Entity binding"
+        },
+        "fields": {
+          "name": "Name",
+          "title": "Title",
+          "description": "Description",
+          "nullable": "Nullable",
+          "readonly": "Read Only",
+          "domain-actions": "Domain actions",
+          "domain-action-event": "Event",
+          "domain-action-side": "Side",
+          "domain-action-condition": "Condition",
+          "domain-action-expression": "Expression"
+        }
+      },
+      "messages": {
+        "success": {
+          "create": "Property definition created successfully",
+          "update": "Property definition updated successfully",
+          "delete": "Property definition deleted successfully"
+        },
+        "error": {
+          "delete": "Failed to delete property definition"
+        }
+      }
+    },
+    "plugins": {
+      "title": "Plugins",
+      "terms": {
+        "title": "Plugins",
+        "plugin-definition": "Plugin Definition"
+      },
+      "columns": {
+        "name": "Name",
+        "title": "Title"
+      },
+      "actions": {
+        "create": {
+          "title": "Create Plugin Definition",
+          "description": "Create a new plugin definition"
+        },
+        "view": {
+          "title": "View",
+          "description": "View plugin definition details"
+        },
+        "edit": {
+          "title": "Edit Plugin Definition",
+          "description": "Edit plugin definition"
+        },
+        "delete": {
+          "title": "Delete",
+          "description": "Delete plugin definition",
+          "confirm-message": "Are you sure you want to delete this plugin definition? This action cannot be undone."
+        }
+      },
+      "components": {
+        "list": {
+          "description": "Manage plugin definitions (history, lock, status, etc.). Create, edit, or delete plugin definitions.",
+          "search-placeholder": "Search by name or title...",
+          "empty-states": {
+            "loading": {
+              "title": "Loading Plugin Definitions...",
+              "description": "Please wait"
+            },
+            "error": {
+              "title": "Failed to Load",
+              "description": "An error occurred while loading plugin definitions"
+            },
+            "no-data": {
+              "title": "No Plugin Definitions Found",
+              "description": "Create your first plugin definition or run the seeder to load from mock files"
+            },
+            "not-available": {
+              "title": "Plugin Definitions Not Available",
+              "description": "Plugin definition management is only available when using Dexie or Firestore as the entity definition source"
+            }
+          }
+        }
+      },
+      "detail": {
+        "pages": {
+          "overview": "Overview"
+        },
+        "sections": {
+          "basic-info": "Basic Information",
+          "options": "Options"
+        },
+        "fields": {
+          "name": "Name",
+          "title": "Title",
+          "description": "Description",
+          "icon": "Icon",
+          "options": "Options",
+          "option-interface": "Interface",
+          "option-name": "Option Name",
+          "option-title": "Option Title",
+          "option-schema": "Schema",
+          "option-description": "Description"
+        }
+      },
+      "messages": {
+        "success": {
+          "create": "Plugin definition created successfully",
+          "update": "Plugin definition updated successfully",
+          "delete": "Plugin definition deleted successfully"
+        },
+        "error": {
+          "delete": "Failed to delete plugin definition"
+        }
+      }
+    },
+    "validations": {
+      "title": "Validations",
+      "terms": {
+        "title": "Validations",
+        "validation-definition": "Validation Rule Definition"
+      },
+      "columns": {
+        "name": "Name",
+        "title": "Title",
+        "runAt": "Run At"
+      },
+      "actions": {
+        "create": {
+          "title": "Create Validation Definition",
+          "description": "Create a new validation rule definition"
+        },
+        "view": {
+          "title": "View",
+          "description": "View validation definition details"
+        },
+        "edit": {
+          "title": "Edit Validation Definition",
+          "description": "Edit validation definition"
+        },
+        "delete": {
+          "title": "Delete",
+          "description": "Delete validation definition",
+          "confirm-message": "Are you sure you want to delete this validation definition? This action cannot be undone."
+        }
+      },
+      "components": {
+        "list": {
+          "description": "Manage validation rule definitions (variable-name, unique, etc.). Create, edit, or delete validation definitions.",
+          "search-placeholder": "Search by name or title...",
+          "empty-states": {
+            "loading": {
+              "title": "Loading Validation Definitions...",
+              "description": "Please wait"
+            },
+            "error": {
+              "title": "Failed to Load",
+              "description": "An error occurred while loading validation definitions"
+            },
+            "no-data": {
+              "title": "No Validation Definitions Found",
+              "description": "Create your first validation definition or run the seeder to load from mock files"
+            },
+            "not-available": {
+              "title": "Validation Definitions Not Available",
+              "description": "Validation definition management is only available when using Dexie or Firestore as the entity definition source"
+            }
+          }
+        }
+      },
+      "detail": {
+        "pages": {
+          "overview": "Overview",
+          "option-definitions": "Option Definitions"
+        },
+        "sections": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "name": "Name",
+          "title": "Title",
+          "description": "Description",
+          "run-at": "Run At",
+          "run-at-values": {
+            "client": "Client-Side",
+            "server": "Server-Side",
+            "both": "Both"
+          },
+          "option-name": "Option Name",
+          "option-title": "Option Title",
+          "option-schema": "Schema",
+          "option-description": "Description"
+        }
+      },
+      "messages": {
+        "success": {
+          "create": "Validation definition created successfully",
+          "update": "Validation definition updated successfully",
+          "delete": "Validation definition deleted successfully"
+        },
+        "error": {
+          "delete": "Failed to delete validation definition"
+        }
+      }
+    },
+    "menus": {
+      "title": "Menu Definitions",
+      "terms": {
+        "title": "Menu Definitions",
+        "menu-definition": "Menu Definition"
+      },
+      "columns": {
+        "name": "Name",
+        "text": "Text",
+        "attachParentName": "Parent menu",
+        "refId": "Reference id",
+        "refType": "Reference type"
+      },
+      "actions": {
+        "create": {
+          "title": "Create Menu Definition",
+          "description": "Create a new dynamic menu item."
+        },
+        "view": {
+          "title": "View",
+          "description": "View the menu definition."
+        },
+        "edit": {
+          "title": "Edit Menu Definition",
+          "description": "Edit the menu definition."
+        },
+        "delete": {
+          "title": "Delete",
+          "description": "Delete the menu definition.",
+          "confirm-message": "Are you sure you want to delete this menu definition? This action cannot be undone."
+        }
+      },
+      "components": {
+        "list": {
+          "description": "Manage menu items loaded from storage. Used by the runtime menu provider.",
+          "search-placeholder": "Search by name or text...",
+          "empty-states": {
+            "loading": {
+              "title": "Loading Menu Definitions...",
+              "description": "Please wait"
+            },
+            "error": {
+              "title": "Failed to Load",
+              "description": "An error occurred while loading menu definitions"
+            },
+            "no-data": {
+              "title": "No Menu Definitions Found",
+              "description": "Create a menu definition or run the seeder"
+            },
+            "not-available": {
+              "title": "Menu Definitions Not Available",
+              "description": "Menu definition management is only available when using Dexie or Firestore as the entity definition source"
+            }
+          }
+        }
+      },
+      "detail": {
+        "sections": {
+          "basic-info": "Basic information",
+          "placement": "Placement",
+          "navigation": "Navigation",
+          "policy": "Access policy",
+          "command-meta": "Command & badge",
+          "linking": "Module / entity link"
+        },
+        "fields": {
+          "name": "Menu key",
+          "text": "Text",
+          "description": "Description",
+          "icon": "Icon",
+          "priority": "Priority",
+          "type": "Item type",
+          "type-values": {
+            "menu": "Menu",
+            "group": "Group",
+            "break": "Break"
+          },
+          "attach-parent-name": "Parent menu name",
+          "path": "Path (literal route)",
+          "entity-list-module": "Entity list module",
+          "entity-list-entity": "Entity list name",
+          "policy-features": "Required feature keys",
+          "policy-permissions": "Required permission keys",
+          "feature-key": "Feature key",
+          "permission-key": "Permission key",
+          "badge-key": "Badge key",
+          "command-kind": "Command type",
+          "command-kind-values": {
+            "none": "None",
+            "navigate": "Router navigation",
+            "execute": "Execute command"
+          },
+          "command-path": "Route path",
+          "command-navigate-extras": "Navigation extras (key / value)",
+          "command-execute-name": "Command name",
+          "command-execute-options": "Command options (key / value)",
+          "kv-key": "Key",
+          "kv-value": "Value (JSON for non-text)",
+          "ref-module": "Module (definition)",
+          "ref-entity": "Entity definition (optional)",
+          "module-ref": "Module scope (for filters)"
+        }
+      },
+      "messages": {
+        "success": {
+          "create": "Menu definition created successfully",
+          "update": "Menu definition updated successfully",
+          "delete": "Menu definition deleted successfully"
+        },
+        "error": {
+          "delete": "Failed to delete menu definition"
+        }
+      }
+    },
+    "permissionGroups": {
+      "title": "Permission Groups",
+      "terms": {
+        "title": "Permission Groups",
+        "permission-group": "Permission Group"
+      },
+      "columns": {
+        "name": "Group key",
+        "title": "Title"
+      },
+      "actions": {
+        "create": {
+          "title": "Create Permission Group",
+          "description": "Define a permission group stored in the entity definition store."
+        },
+        "view": {
+          "title": "View",
+          "description": "View the permission group."
+        },
+        "edit": {
+          "title": "Edit Permission Group",
+          "description": "Edit the permission group."
+        },
+        "delete": {
+          "title": "Delete",
+          "description": "Delete the permission group.",
+          "confirm-message": "Are you sure you want to delete this permission group? This action cannot be undone."
+        }
+      },
+      "components": {
+        "list": {
+          "description": "Manage permission groups loaded from Dexie or Firestore. Used by the runtime permission definition provider.",
+          "search-placeholder": "Search by name or title...",
+          "empty-states": {
+            "loading": {
+              "title": "Loading Permission Groups...",
+              "description": "Please wait"
+            },
+            "error": {
+              "title": "Failed to Load",
+              "description": "An error occurred while loading permission groups"
+            },
+            "no-data": {
+              "title": "No Permission Groups Found",
+              "description": "Create a permission group or add definitions in storage"
+            },
+            "not-available": {
+              "title": "Permission Groups Not Available",
+              "description": "Permission group management is only available when using Dexie or Firestore as the entity definition source"
+            }
+          }
+        }
+      },
+      "detail": {
+        "sections": {
+          "basic-info": "Basic information",
+          "permissions": "Root permissions"
+        },
+        "fields": {
+          "name": "Group key",
+          "title": "Title",
+          "description": "Description",
+          "permissions": "Root permissions (optional one-level child permissions per fluent API). Required features: comma-separated values."
+        },
+        "columns": {
+          "permission-name": "Permission key",
+          "permission-title": "Title",
+          "permission-description": "Description",
+          "required-features": "Required features",
+          "child-permissions": "Child permissions"
+        }
+      },
+      "messages": {
+        "success": {
+          "create": "Permission group created successfully",
+          "update": "Permission group updated successfully",
+          "delete": "Permission group deleted successfully"
+        },
+        "error": {
+          "delete": "Failed to delete permission group"
+        }
+      }
+    }
+  },
+  "entity-definitions": {
+    "entities": {
+      "entity-definition": {
+        "title": "Entity Definition",
+        "title-plural": "Entity Definitions",
+        "groups": {
+          "basic-info": "Basic Information",
+          "schema": "Schema"
+        },
+        "fields": {
+          "module-id": {
+            "title": "Module"
+          },
+          "aggregate-id": {
+            "title": "Aggregate"
+          },
+          "definition": {
+            "title": "Definition"
+          },
+          "layout": {
+            "title": "Layout"
+          },
+          "content": {
+            "title": "Content"
+          }
+        }
+      }
+    }
+  },
+  "menus": {
+    "platform-definitions": {
+      "title": "Platform Definitions"
+    },
+    "entity-definitions": {
+      "title": "Entity Definitions"
+    },
+    "command-definitions": {
+      "title": "Command Definitions"
+    },
+    "query-definitions": {
+      "title": "Query Definitions"
+    },
+    "plugin-definitions": {
+      "title": "Plugin Definitions"
+    },
+    "widgets": {
+      "title": "Widgets"
+    }
+  },
+  "command-definitions": {
+    "entities": {
+      "command-definition": {
+        "title": "Command Definition",
+        "title-plural": "Command Definitions",
+        "groups": {
+          "basic-info": "Basic Information",
+          "schema": "Schema"
+        },
+        "fields": {
+          "execution-mode": {
+            "title": "Execution Mode"
+          },
+          "capabilities": {
+            "title": "Capabilities"
+          },
+          "inputs": {
+            "title": "Input Schema"
+          },
+          "outputs": {
+            "title": "Output Schema"
+          },
+          "outcomes": {
+            "title": "Outcomes"
+          }
+        }
+      }
+    }
+  },
+  "query-definitions": {
+    "entities": {
+      "query-definition": {
+        "title": "Query Definition",
+        "title-plural": "Query Definitions",
+        "groups": {
+          "basic-info": "Basic Information",
+          "schema": "Schema"
+        },
+        "views": {
+          "my-query": "My Queries",
+          "system-query": "System Queries"
+        },
+        "actions": {
+          "create": {
+            "entity": "Entity Data",
+            "static-list": "Static List",
+            "external-api": "External API",
+            "advanced": "Advanced"
+          }
+        },
+        "fields": {
+          "execution-mode": {
+            "title": "Execution Mode"
+          },
+          "kind": {
+            "title": "Kind"
+          },
+          "result-type": {
+            "title": "Result Type"
+          },
+          "value-type": {
+            "title": "Value Type"
+          },
+          "by-key-query": {
+            "title": "By-Key Query"
+          },
+          "capabilities": {
+            "title": "Capabilities"
+          },
+          "binding": {
+            "title": "Binding"
+          },
+          "args": {
+            "title": "Args"
+          },
+          "filter": {
+            "title": "Filter"
+          },
+          "sort": {
+            "title": "Sort"
+          },
+          "paging": {
+            "title": "Paging"
+          },
+          "columns": {
+            "title": "Columns"
+          },
+          "ai-metadata": {
+            "title": "AI Metadata"
+          }
+        }
+      }
+    },
+    "wizard": {
+      "create": {
+        "titles": {
+          "entity": "Create Entity Query",
+          "static-list": "Create Static List Query",
+          "external-api": "Create External API Query",
+          "advanced": "Create Advanced Query"
+        },
+        "steps": {
+          "source": "Source",
+          "entity": "Entity",
+          "fields": "Fields and Relations",
+          "contract": "Contract"
+        },
+        "fields": {
+          "entity": "Entity",
+          "fields": "Fields and Relations",
+          "host-fields": "Fields",
+          "value": "Value",
+          "title": "Title",
+          "connection": "Connection",
+          "method": "Method",
+          "path": "Path",
+          "request": "Request",
+          "sample": "Sample Response",
+          "status": "Status",
+          "response": "Response"
+        },
+        "import": {
+          "title": "Import Request",
+          "placeholder": "Paste a cURL command, fetch call, raw HTTP request, JSON, or URL.",
+          "apply": "Apply"
+        },
+        "rest-api-generator": {
+          "title": "REST API Generator",
+          "description": "Configure a REST request visually or import from cURL."
+        },
+        "methods": {
+          "get": "GET",
+          "post": "POST"
+        },
+        "placeholders": {
+          "contract": "This step will be implemented in a later phase.",
+          "advanced": "Combining entity data with external APIs will be available in a later phase.",
+          "entity-fields": "Choose which properties this query should fetch.",
+          "fields-next": "After you continue, properties and relations of the selected entity will load.",
+          "selected-entity-hint": "Use Previous to choose a different entity.",
+          "related-to": "Related: {{name}}",
+          "api-fields-next": "After you continue, this request is sent. If it succeeds, you can choose fields from the response.",
+          "selected-api-hint": "Use Previous to change the request.",
+          "api-fields": "Choose which properties this query should return.",
+          "api-test-ok": "The request returned {{status}}. Choose which fields to keep."
+        },
+        "items-hint": "Add as many rows as you need. At least one value is required.",
+        "errors": {
+          "entity-required": "Select an entity to continue.",
+          "entity-load-failed": "Could not load this entity definition.",
+          "fields-required": "Select at least one field or relation to continue.",
+          "static-required": "Enter at least one item value to continue.",
+          "api-connection-required": "Select a connection to continue.",
+          "api-path-required": "Enter a request path to continue.",
+          "api-url-required": "Enter a request URL to continue.",
+          "parse-failed": "Could not parse this request. Check the format and try again.",
+          "api-test-failed": "The request did not succeed ({{status}}). Check the URL, method, and body.",
+          "api-test-network": "The request could not be sent. Check the URL and try again."
+        }
+      }
+    }
+  },
+  "plugin-definitions": {
+    "entities": {
+      "plugin-definition": {
+        "title": "Plugin Definition",
+        "title-plural": "Plugin Definitions",
+        "groups": {
+          "basic-info": "Basic Information",
+          "schema": "Schema"
+        },
+        "fields": {
+          "source-module": {
+            "title": "Source Module"
+          },
+          "order": {
+            "title": "Order"
+          },
+          "options": {
+            "title": "Options Schema"
+          },
+          "contributions": {
+            "title": "Contributions"
+          },
+          "ai-metadata": {
+            "title": "AI Metadata"
+          }
+        }
+      }
+    }
+  },
+  "widgets": {
+    "entities": {
+      "widget": {
+        "title": "Widget",
+        "title-plural": "Widgets",
+        "groups": {
+          "basic-info": "Basic Information",
+          "schema": "Schema"
+        },
+        "fields": {
+          "type": {
+            "title": "Type"
+          },
+          "data-type": {
+            "title": "Data Type"
+          },
+          "source-module": {
+            "title": "Source Module"
+          },
+          "icon": {
+            "title": "Icon"
+          },
+          "groups": {
+            "title": "Groups"
+          },
+          "inputs": {
+            "title": "Input Schema"
+          },
+          "outputs": {
+            "title": "Output Schema"
+          },
+          "ai-metadata": {
+            "title": "AI Metadata"
+          },
+          "metadata": {
+            "title": "Full Metadata"
+          }
+        }
+      }
+    },
+    "entity-access-policies": {
+      "entities": {
+        "entity-access-policy": {
+          "title": "Entity Access Policy",
+          "title-plural": "Entity Access Policies",
+          "groups": {
+            "basic-info": "Basic Information"
+          },
+          "fields": {
+            "entity-name": {
+              "title": "Entity Name"
+            },
+            "read": {
+              "title": "Read Expression"
+            },
+            "write": {
+              "title": "Write Expression"
+            },
+            "enabled": {
+              "title": "Enabled"
+            }
+          }
+        }
+      }
+    }
+  }
+}

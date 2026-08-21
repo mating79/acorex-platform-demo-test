@@ -1,0 +1,35 @@
+{
+  "name": "user-management",
+  "title": "User Management",
+  "aggregates": [
+    {
+      "name": "user-aggregate",
+      "title": "User Aggregate",
+      "entities": ["/data/entities/user.entity.json", "/data/entities/user-profile.entity.json"],
+      "relations": [
+        {
+          "name": "user-profile-relation",
+          "title": "User to Profile Relation",
+          "type": "one-to-one",
+          "sourceEntity": "user",
+          "targetEntity": "user-profile",
+          "sourceField": "id",
+          "targetField": "userId"
+        }
+      ],
+      "validations": [],
+      "actions": [
+        {
+          "event": "user.created",
+          "side": "server",
+          "expression": "createUserProfile(user.id)"
+        },
+        {
+          "event": "user.deleted",
+          "side": "server",
+          "expression": "deleteUserProfile(user.id)"
+        }
+      ]
+    }
+  ]
+}

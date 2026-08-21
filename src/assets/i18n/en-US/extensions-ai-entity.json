@@ -1,0 +1,29 @@
+{
+  "actions": {
+    "assist": {
+      "type-level": {
+        "title": "AI Assist"
+      },
+      "selected": {
+        "title": "AI Assist (Selection)"
+      },
+      "individual": {
+        "title": "AI Assist"
+      }
+    }
+  },
+  "assist": {
+    "no-ai-module": "AI management is not loaded. Enable the AI module to use entity assist.",
+    "placeholder": "Ask about this entity, filters, selected rows, or field values…",
+    "result-toast-title": "AI Assist",
+    "dialog-title": {
+      "type-level": "Ask AI About This List",
+      "selected": "Ask AI About Selected Rows",
+      "individual": "Ask AI About This Record"
+    },
+    "loading": {
+      "run-title": "Running AI Assist",
+      "run-initial": "Thinking…"
+    }
+  }
+}

@@ -1,0 +1,985 @@
+{
+  "module": {
+    "title": "Assessment Management",
+    "description": "Manage assessments, questionnaires, and response tracking",
+    "menus": {
+      "root": {
+        "title": "Assessment Management",
+        "description": "Manage assessments and questionnaires"
+      }
+    },
+    "permissions": {
+      "title": "Assessment Management",
+      "description": "Assessment management permissions"
+    }
+  },
+  "features": {
+    "questionnaire-management": {
+      "title": "Questionnaire Management",
+      "description": "Enable questionnaire management functionality"
+    }
+  },
+  "question-bank": {
+    "terms": {
+      "question": "Question",
+      "questions": "Questions",
+      "question-bank": "Question Bank",
+      "interface": "Interface"
+    },
+    "entities": {
+      "question-bank-item": {
+        "title": "Question",
+        "plural": "Question Bank",
+        "fields": {
+          "title": {
+            "title": "Title",
+            "description": "Short label used in the question bank list (administrators only).",
+            "placeholder": "e.g. Age (years)"
+          },
+          "name": {
+            "title": "Variable Name",
+            "description": "Unique name for use in questionnaire outcomes (e.g. answer.eval('name')). Overridable per questionnaire item.",
+            "placeholder": "e.g. scope_clear"
+          },
+          "question": {
+            "title": "Question",
+            "description": "Question text shown to respondents (rich text).",
+            "placeholder": "Enter the question wording…"
+          },
+          "note": {
+            "title": "Note",
+            "description": "Optional note or context (rich text).",
+            "placeholder": "Optional note…"
+          },
+          "estimated-time": {
+            "title": "Estimated Time (seconds)",
+            "description": "Estimated time to answer"
+          },
+          "difficulty": {
+            "title": "Difficulty Level",
+            "description": "Difficulty level of the question",
+            "options": {
+              "easy": "Easy",
+              "medium": "Medium",
+              "hard": "Hard"
+            }
+          },
+          "interface": {
+            "title": "Interface",
+            "description": "Widget interface configuration",
+            "load-from-metadata-definition": "Load from metadata definition",
+            "load-from-metadata-invalid": "The selected definition does not include a valid widget configuration.",
+            "load-from-metadata-failed": "Could not open metadata definitions. Ensure Data Management is available.",
+            "editor-mode-widget": "Widget",
+            "editor-mode-meta-data": "MetaData definition",
+            "meta-data-configurator-label": "MetaData definition",
+            "empty-source": {
+              "prompt": "Choose how to configure this interface. You can change the widget directly, or bind a metadata definition.",
+              "readonly": "No interface is configured yet."
+            },
+            "switch-source": "Change source"
+          },
+          "hint": {
+            "title": "Hint",
+            "description": "Optional rich text hint shown with the question (can be overridden per questionnaire)"
+          },
+          "hint-mode": {
+            "title": "Hint Mode",
+            "description": "Off hides the hint; other values set the alert style when hint text is set",
+            "options": {
+              "off": "Off",
+              "info": "Info",
+              "warning": "Warning",
+              "danger": "Danger",
+              "success": "Success",
+              "neutral": "Neutral"
+            }
+          },
+          "hint-content": {
+            "title": "Hint Text",
+            "description": "Rich text shown when hint mode is not off"
+          },
+          "comment": {
+            "title": "Respondent Comment",
+            "enabled": "Allow Comments",
+            "required": "Comment Required"
+          }
+        },
+        "groups": {
+          "content": "Content",
+          "presentation": "Presentation",
+          "settings": "Settings"
+        },
+        "actions": {
+          "preview": {
+            "title": "Preview"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "question-bank": {
+        "title": "Question Bank",
+        "management": {
+          "title": "Manage Question Bank",
+          "description": "Full question bank management access"
+        }
+      }
+    }
+  },
+  "questionnaires": {
+    "terms": {
+      "questionnaire": "Questionnaire",
+      "questionnaires": "Questionnaires"
+    },
+    "entities": {
+      "questionnaire": {
+        "title": "Questionnaire",
+        "plural": "Questionnaires",
+        "fields": {
+          "title": {
+            "title": "Title",
+            "description": "Questionnaire title",
+            "placeholder": "Enter title"
+          },
+          "description": {
+            "title": "Description",
+            "description": "Questionnaire description",
+            "placeholder": "Enter description"
+          },
+          "print-template-id": {
+            "title": "Print Template",
+            "description": "Content template that wraps the filled questionnaire. Uses the company print master for letterhead and border."
+          },
+          "sections": {
+            "title": "Sections",
+            "description": "Questionnaire sections"
+          },
+          "items": {
+            "title": "Questions",
+            "description": "Questions in the questionnaire"
+          },
+          "type": {
+            "title": "Assessment Type",
+            "description": "Type of assessment",
+            "options": {
+              "questionnaire": "Questionnaire",
+              "survey": "Survey",
+              "checklist": "Checklist",
+              "test": "Test",
+              "evaluation": "Evaluation"
+            }
+          },
+          "structure": {
+            "title": "Structure",
+            "description": "Questionnaire structure with sections and questions"
+          },
+          "questions": {
+            "title": "Questions",
+            "description": "Questionnaire questions with sections and items"
+          },
+          "outcomes": {
+            "title": "Outcomes",
+            "description": "Named outcome rules evaluated from answers (outcome.eval, summary placeholders)"
+          },
+          "pre-enabled": {
+            "title": "Show Welcome Screen",
+            "description": "Display a welcome or intro screen before the questionnaire questions"
+          },
+          "pre-content": {
+            "title": "Welcome Content",
+            "description": "Rich text content shown on the welcome screen (supports multi-language)",
+            "placeholder": "Enter welcome message, instructions, or intro text..."
+          },
+          "post-review-enabled": {
+            "title": "Show Review Before Submit",
+            "description": "Display a review step where users can see all answers before submitting"
+          },
+          "post-summary-enabled": {
+            "title": "Show Summary After Submit",
+            "description": "After submit, show a final summary step (rich text) when enabled. If outcome results are also enabled, the summary step comes after the outcomes step."
+          },
+          "post-show-outcome-results": {
+            "title": "Show Outcome Results",
+            "description": "After submit, show outcome results before the summary step when both are enabled; if summary is off, this step appears right after submit when enabled."
+          },
+          "post-summary-content": {
+            "title": "Summary Content",
+            "description": "Custom rich text for the summary screen (supports multi-language and placeholders)",
+            "placeholder": "Enter thank-you message or custom summary. Placeholders: {{totalQuestions}}, {{answeredCount}}, {{totalTime}}, {{elapsedSeconds}}, and {{outcomeName}} from your outcomes"
+          }
+        },
+        "groups": {
+          "structure": "Structure",
+          "questions": "Questions",
+          "pre-questionnaire": "Pre-Questionnaire",
+          "post-questionnaire": "Post-Questionnaire",
+          "display": "Display",
+          "print": "Printing Options"
+        },
+        "related-entities": {
+          "automations": {
+            "title": "Automation",
+            "description": "Actions to execute based on questionnaire outcome results"
+          }
+        },
+        "actions": {
+          "preview": {
+            "title": "Preview"
+          }
+        }
+      }
+    },
+    "components": {
+      "questionnaire-builder": {
+        "item-badge": {
+          "required": "Required",
+          "conditional-required": "Conditionally required",
+          "optional": "Optional",
+          "visibility-visible": "Visible",
+          "visibility-hidden": "Hidden",
+          "visibility-conditional": "Conditional visibility"
+        },
+        "title": "Questionnaire Builder",
+        "description": "Build questionnaire structure with sections and questions",
+        "tabs": {
+          "general": {
+            "title": "General"
+          }
+        },
+        "groups": {
+          "identity": {
+            "title": "Identity"
+          },
+          "validation": {
+            "title": "Validation"
+          },
+          "visibility": {
+            "title": "Visibility"
+          },
+          "hint": {
+            "title": "Hint"
+          },
+          "comment": {
+            "title": "Respondent Comment"
+          },
+          "section": {
+            "title": "Section"
+          }
+        },
+        "actions": {
+          "add-section": {
+            "title": "Add Section"
+          },
+          "edit-section": {
+            "title": "Edit Section"
+          },
+          "delete-section": {
+            "title": "Delete Section"
+          },
+          "add-question": {
+            "title": "Add Question"
+          },
+          "edit-question": {
+            "title": "Edit Question Settings"
+          },
+          "preview": {
+            "title": "Preview"
+          },
+          "preview-question": {
+            "title": "Preview Question"
+          },
+          "fullscreen": {
+            "title": "Full Screen"
+          },
+          "settings": {
+            "title": "Display Settings"
+          }
+        },
+        "fields": {
+          "question-id": {
+            "title": "Question ID",
+            "description": "Stable unique id for this question instance (used as answer key unless Name override is set)",
+            "placeholder": "Unique ID (letters, numbers, _ and -)"
+          },
+          "section-id": {
+            "title": "Section ID",
+            "description": "Stable unique id for this section (used in layout and conditions)",
+            "placeholder": "Unique ID (letters, numbers, _ and -)"
+          },
+          "question-item-id-badge": {
+            "title": "Question ID"
+          },
+          "tags": {
+            "title": "Tags",
+            "description": "Labels for outcomes (answer.byTag / answer.allByTag)",
+            "placeholder": "Add tags"
+          },
+          "is-required": {
+            "title": "Required",
+            "description": "Whether this question is required, or use binding to drive required state with an expression."
+          },
+          "visible": {
+            "title": "Visible",
+            "description": "Whether this question is shown. Use binding to drive visibility with an expression."
+          },
+          "hint": {
+            "title": "Hint Text",
+            "description": "Optional rich text hint for this question (overrides question bank default when set)"
+          },
+          "hint-mode": {
+            "title": "Hint Mode",
+            "description": "Off hides the hint; other values set the alert style when hint text is set",
+            "options": {
+              "off": "Off",
+              "info": "Info",
+              "warning": "Warning",
+              "danger": "Danger",
+              "success": "Success",
+              "neutral": "Neutral"
+            }
+          },
+          "comment-enabled": {
+            "title": "Allow Comments",
+            "description": "Whether respondents can add a comment for this question (overrides question bank default when changed)"
+          },
+          "comment-required": {
+            "title": "Comment Required",
+            "description": "When the comment field is shown, require non-empty text before continuing (overrides question bank default when changed)"
+          },
+          "section-title": {
+            "placeholder": "Enter section title"
+          },
+          "section-description": {
+            "placeholder": "Enter section description (optional)"
+          }
+        },
+        "validation": {
+          "section-title-required": {
+            "title": "Section Title Required",
+            "description": "Enter a section title."
+          },
+          "section-id-required": {
+            "title": "Section ID Required",
+            "description": "Enter a unique section ID."
+          },
+          "section-id-invalid": {
+            "title": "Invalid Section ID",
+            "description": "Use letters, numbers, underscores, and hyphens (1–128 characters)."
+          },
+          "section-id-duplicate": {
+            "title": "Duplicate Section ID",
+            "description": "Another section already uses this ID."
+          },
+          "question-id-required": {
+            "title": "Question ID Required",
+            "description": "Enter a unique question ID."
+          },
+          "question-id-invalid": {
+            "title": "Invalid Question ID",
+            "description": "Use letters, numbers, underscores, and hyphens (1–128 characters)."
+          },
+          "question-id-duplicate": {
+            "title": "Duplicate Question ID",
+            "description": "Another question already uses this ID."
+          }
+        },
+        "empty-states": {
+          "no-sections": {
+            "title": "No Sections",
+            "description": "Start building your questionnaire by adding a section"
+          },
+          "empty-section": {
+            "title": "Empty Section",
+            "description": "Add questions to this section from the question bank"
+          }
+        },
+        "select-questions": "Select Questions from Question Bank",
+        "categories": "Categories"
+      },
+      "questionnaire-outcomes-builder": {
+        "summary": "Define named outcome rules evaluated from answers after submit or in preview.",
+        "tabs": {
+          "general": {
+            "title": "General"
+          }
+        },
+        "groups": {
+          "result": "Result",
+          "display-rules": "Display Rules"
+        },
+        "empty": {
+          "no-sections": {
+            "title": "No sections yet",
+            "description": "Add a section to group outcome rules."
+          },
+          "empty-section": {
+            "title": "No outcomes in this section",
+            "description": "Add outcome rules to compute scores, bands, and messages from answers."
+          }
+        },
+        "actions": {
+          "add-section": {
+            "title": "Add Section"
+          },
+          "add-outcome": {
+            "title": "Add Outcome"
+          }
+        },
+        "fields": {
+          "name": {
+            "title": "Name",
+            "placeholder": "e.g. totalScore, bmi, readinessBand"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "e.g. Total Score, BMI, Readiness Band"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Describe what this outcome evaluates"
+          },
+          "result-kind": {
+            "title": "Result Kind",
+            "options": {
+              "number": "Number",
+              "string": "Text",
+              "boolean": "Yes / No"
+            }
+          },
+          "expression": {
+            "title": "Expression",
+            "placeholder": "e.g. fn.ROUND(Number(answer.eval('weight_kg')) / ((Number(answer.eval('height_cm')) / 100) ** 2), 1)"
+          },
+          "display-rules": {
+            "title": "Display Rules",
+            "description": "Apply semantic styling when the outcome value matches the condition. First matching rule wins."
+          },
+          "display-operator": {
+            "title": "Operator",
+            "options": {
+              "eq": "Equals",
+              "neq": "Not equal",
+              "gt": "Greater than",
+              "gte": "Greater than or equal",
+              "lt": "Less than",
+              "lte": "Less than or equal"
+            }
+          },
+          "display-compare-value": {
+            "title": "Value",
+            "placeholder": "Value"
+          },
+          "display-color": {
+            "title": "Color",
+            "placeholder": "Choose a theme color"
+          },
+          "display-emphasis": {
+            "title": "Emphasis",
+            "options": {
+              "normal": "Normal",
+              "medium": "Medium",
+              "bold": "Bold"
+            }
+          },
+          "display-icon": {
+            "title": "Icon"
+          }
+        },
+        "validation": {
+          "duplicate-name": "Each outcome name must be unique within this questionnaire.",
+          "name-required": {
+            "title": "Name required",
+            "description": "Enter a unique outcome name."
+          },
+          "name-invalid": {
+            "title": "Invalid name",
+            "description": "Use letters, numbers, underscores, and hyphens."
+          },
+          "title-required": {
+            "title": "Title required",
+            "description": "Enter a display title for this outcome."
+          },
+          "expression-required": {
+            "title": "Expression required",
+            "description": "Enter an expression for this outcome."
+          }
+        }
+      },
+      "questionnaire-viewer": {
+        "title": "Questionnaire Viewer",
+        "description": "View and interact with questionnaires",
+        "flow": {
+          "start": "Start",
+          "review": "Review",
+          "results": "Results",
+          "answers": "Answers",
+          "edit": "Edit",
+          "done": "Done",
+          "sign-off": "Sign off",
+          "review-title": "Review Your Answers",
+          "summary-title": "Thank You",
+          "outcomes-section-title": "Outcome results",
+          "no-outcomes": "No outcome results to display.",
+          "pass": "Pass",
+          "fail": "Fail"
+        },
+        "preview": {
+          "notice": {
+            "title": "Preview Mode",
+            "description": "Answers are not saved or submitted."
+          },
+          "finish": {
+            "title": "Finish Preview"
+          }
+        },
+        "actions": {
+          "save-as-draft": {
+            "title": "Save as draft",
+            "success": "Your answers were saved. You can continue later from the task."
+          }
+        },
+        "validation": {
+          "error-title": "Validation Error",
+          "current-page-error": "Please complete all required questions on this page before continuing.",
+          "all-questions-error": "Please complete all required questions in the questionnaire before submitting.",
+          "comment-required": "A comment is required for {{ title }}."
+        },
+        "fields": {
+          "questionnaire-id": {
+            "title": "Questionnaire ID"
+          },
+          "view-mode": {
+            "title": "View Mode",
+            "description": "How questions are displayed",
+            "options": {
+              "single-page": "Single Page (All Groups in One Page)",
+              "page-per-group": "Page Per Group (One Section Per Page)",
+              "page-per-question": "Page Per Question (One Question Per Page)",
+              "side-menu": "Side Menu (Sections in Sidebar, Questions On Right)"
+            }
+          },
+          "show-timer": {
+            "title": "Show Timer"
+          },
+          "show-progress-bar": {
+            "title": "Show Progress Bar"
+          },
+          "show-question-numbers": {
+            "title": "Show Question Numbers"
+          },
+          "validation-strategy": {
+            "title": "Validation Timing",
+            "options": {
+              "step": "Per Step",
+              "end": "At Final Submit"
+            }
+          },
+          "completion-mode": {
+            "title": "Completion mode",
+            "description": "Whether respondents can save a draft before final submit",
+            "options": {
+              "submit-only": "Submit only",
+              "save-and-continue": "Save and continue"
+            }
+          },
+          "print-paper-size": {
+            "title": "Paper Size",
+            "options": {
+              "a4": "A4",
+              "letter": "Letter",
+              "legal": "Legal"
+            }
+          },
+          "print-orientation": {
+            "title": "Orientation",
+            "options": {
+              "portrait": "Portrait",
+              "landscape": "Landscape"
+            }
+          },
+          "print-watermark": {
+            "title": "Watermark",
+            "placeholder": "Optional text, e.g. Confidential"
+          },
+          "print-show-welcome-screen": {
+            "title": "Show Welcome Screen"
+          },
+          "print-show-summary-after-submit": {
+            "title": "Show Summary After Submit"
+          },
+          "print-show-outcome-results": {
+            "title": "Show Outcome Results"
+          },
+          "print-show-unanswered-questions": {
+            "title": "Show Unanswered Questions"
+          },
+          "print-show-comments": {
+            "title": "Show Comments"
+          },
+          "print-show-attachments": {
+            "title": "Show Attachments"
+          },
+          "print-show-hints": {
+            "title": "Show Hints"
+          },
+          "print-show-notes": {
+            "title": "Show Question Notes"
+          }
+        },
+        "loading": {
+          "title": "Loading Questionnaire",
+          "description": "Please wait while we load the questionnaire..."
+        },
+        "error": {
+          "title": "Error Loading Questionnaire"
+        },
+        "attachments": {
+          "title": "Attachments"
+        },
+        "questionnaire-attachments": {
+          "title": "Reference Documents",
+          "footer-action": {
+            "title": "Reference Documents"
+          }
+        },
+        "comment": {
+          "label": "Comment",
+          "placeholder": "Enter your comment…"
+        },
+        "badges": {
+          "answered": "Answered",
+          "required": "Required"
+        }
+      }
+    },
+    "permissions": {
+      "questionnaire": {
+        "title": "Questionnaires",
+        "management": {
+          "title": "Manage Questionnaires",
+          "description": "Full questionnaire management access"
+        },
+        "create": {
+          "title": "Create Questionnaire",
+          "description": "Create new questionnaires"
+        },
+        "edit": {
+          "title": "Edit Questionnaire",
+          "description": "Edit questionnaire information"
+        },
+        "delete": {
+          "title": "Delete Questionnaires",
+          "description": "Delete questionnaires"
+        }
+      }
+    }
+  },
+  "automations": {
+    "terms": {
+      "automation": "Automation",
+      "automations": "Automations"
+    },
+    "entities": {
+      "automation": {
+        "title": "Automation",
+        "plural": "Automations",
+        "groups": {
+          "action": "Action Definition"
+        },
+        "fields": {
+          "questionnaire": {
+            "title": "Questionnaire",
+            "description": "Parent questionnaire"
+          },
+          "name": {
+            "title": "Name",
+            "description": "Variable name (letters, numbers, underscores, hyphens)",
+            "placeholder": "e.g. lifestyleCounseling, urgentReferral"
+          },
+          "title": {
+            "title": "Title",
+            "description": "Display title",
+            "placeholder": "e.g. Lifestyle Counseling, Urgent Referral"
+          },
+          "description": {
+            "title": "Description",
+            "description": "Optional description",
+            "placeholder": "Describe when this action runs"
+          },
+          "condition": {
+            "title": "Condition",
+            "description": "JSON expression on rule results (field = rule result name)",
+            "placeholder": "{ \"op\": \"eq\", \"field\": \"overallRisk\", \"value\": \"moderate\" }"
+          },
+          "command": {
+            "title": "Command",
+            "description": "AXPCommand registry key to execute",
+            "placeholder": "e.g. AssessmentManagement.HealthAssessment:LifestyleCounseling"
+          },
+          "params": {
+            "title": "Parameters",
+            "description": "JSON object passed to command",
+            "placeholder": "{ \"priority\": 3 }"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "automation": {
+        "title": "Automations",
+        "management": {
+          "title": "Manage Automations",
+          "description": "Full automation management access"
+        },
+        "create": {
+          "title": "Create Automation",
+          "description": "Create new automations"
+        },
+        "edit": {
+          "title": "Edit Automation",
+          "description": "Edit automation information"
+        },
+        "delete": {
+          "title": "Delete Automations",
+          "description": "Delete automations"
+        }
+      }
+    }
+  },
+  "cases": {
+    "terms": {
+      "case": "Case",
+      "cases": "Cases"
+    },
+    "entities": {
+      "assessment-case": {
+        "title": "Assessment Case",
+        "plural": "Assessment Cases",
+        "fields": {
+          "questionnaire": {
+            "title": "Questionnaire",
+            "description": "Assigned questionnaire",
+            "placeholder": "Select questionnaire"
+          },
+          "title": {
+            "title": "Title",
+            "description": "Case title",
+            "placeholder": "Enter title"
+          },
+          "description": {
+            "title": "Description",
+            "description": "Case description",
+            "placeholder": "Enter description"
+          },
+          "status": {
+            "title": "Status",
+            "description": "Case status",
+            "options": {
+              "active": "Active",
+              "closed": "Closed",
+              "cancelled": "Cancelled"
+            }
+          },
+          "subject": {
+            "title": "Subject",
+            "description": "Entity this assessment case applies to"
+          },
+          "subject-entity-name": {
+            "title": "Subject Entity Name",
+            "description": "Target entity name (e.g. AssetManagement.Asset)"
+          },
+          "subject-entity-id": {
+            "title": "Subject Entity ID",
+            "description": "Target entity ID"
+          }
+        },
+        "groups": {
+          "subject": "Subject"
+        }
+      }
+    },
+    "actions": {
+      "fill-assessment": {
+        "title": "Fill Assessment",
+        "description": "Fill out the assessment questionnaire for this case"
+      },
+      "view-last-session-answers": {
+        "title": "View Last Session Answers",
+        "no-session": "No assessment session found for this case"
+      },
+      "preview-last-session-pdf": {
+        "title": "Preview last session PDF"
+      }
+    },
+    "states": {
+      "draft": "Draft",
+      "active": "Active",
+      "in-progress": "In Progress",
+      "closed": "Closed",
+      "cancelled": "Cancelled"
+    },
+    "transitions": {
+      "activate": "Activate",
+      "start": "Start",
+      "close": "Close",
+      "cancel": "Cancel",
+      "reopen": "Reopen"
+    },
+    "permissions": {
+      "assessment-case": {
+        "title": "Assessment Cases",
+        "management": {
+          "title": "Manage Cases",
+          "description": "Full assessment case management access"
+        },
+        "create": {
+          "title": "Create Case",
+          "description": "Create new assessment cases"
+        },
+        "edit": {
+          "title": "Edit Case",
+          "description": "Edit assessment cases"
+        },
+        "delete": {
+          "title": "Delete Case",
+          "description": "Delete assessment cases"
+        }
+      }
+    }
+  },
+  "sessions": {
+    "terms": {
+      "session": "Session",
+      "sessions": "Sessions"
+    },
+    "entities": {
+      "assessment-session": {
+        "title": "Assessment Session",
+        "plural": "Assessment Sessions",
+        "fields": {
+          "case": {
+            "title": "Case",
+            "description": "Associated assessment case",
+            "placeholder": "Select case"
+          },
+          "responder": {
+            "title": "Responder",
+            "description": "Response author"
+          },
+          "role": {
+            "title": "Role",
+            "description": "Responder role",
+            "options": {
+              "responder": "Responder",
+              "supervisor": "Supervisor",
+              "reviewer": "Reviewer"
+            }
+          },
+          "started-at": {
+            "title": "Started At",
+            "description": "When the session was started"
+          },
+          "last-saved-at": {
+            "title": "Last Saved At",
+            "description": "When the session was last saved"
+          },
+          "time-spent": {
+            "title": "Time Spent (seconds)",
+            "description": "Total time spent on the assessment"
+          },
+          "progress-percentage": {
+            "title": "Progress (%)",
+            "description": "Completion percentage"
+          },
+          "answered-questions-count": {
+            "title": "Answered Questions",
+            "description": "Number of questions answered"
+          },
+          "answers": {
+            "title": "Answers",
+            "description": "All answers as a single JSON object",
+            "states": {
+              "answered": "Answered",
+              "not-answered": "Not Answered"
+            }
+          },
+          "print-html-gzip": {
+            "title": "Print HTML snapshot"
+          },
+          "outcomes": {
+            "title": "Outcome results",
+            "description": "Evaluated questionnaire outcome values saved at submit"
+          },
+          "previous": {
+            "title": "Previous Session",
+            "description": "Previous session being overridden"
+          }
+        },
+        "groups": {
+          "time-tracking": "Time Tracking",
+          "progress": "Progress",
+          "answers": "Answers",
+          "outcomes": "Outcome results",
+          "override": "Override"
+        }
+      }
+    },
+    "actions": {
+      "view-answers": {
+        "title": "View Answers"
+      },
+      "review-answers": {
+        "title": "Review answers"
+      },
+      "view-outcomes": {
+        "title": "View outcome results",
+        "empty": "This session has no stored outcome results."
+      },
+      "preview-pdf": {
+        "title": "Preview PDF",
+        "download": "Download",
+        "failed": "Failed to preview assessment session PDF."
+      }
+    },
+    "states": {
+      "not-started": "Not Started",
+      "in-progress": "In Progress",
+      "submitted": "Submitted",
+      "under-review": "Under Review",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "completed": "Completed"
+    },
+    "transitions": {
+      "start": "Start",
+      "submit": "Submit",
+      "review": "Review",
+      "approve": "Approve",
+      "reject": "Reject",
+      "complete": "Complete",
+      "reopen": "Reopen"
+    },
+    "permissions": {
+      "assessment-session": {
+        "title": "Assessment Sessions",
+        "management": {
+          "title": "Manage Sessions",
+          "description": "Full assessment session management access"
+        },
+        "create": {
+          "title": "Create Session",
+          "description": "Create new assessment sessions"
+        },
+        "edit": {
+          "title": "Edit Session",
+          "description": "Edit assessment sessions"
+        },
+        "delete": {
+          "title": "Delete Session",
+          "description": "Delete assessment sessions"
+        }
+      }
+    }
+  }
+}

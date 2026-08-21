@@ -1,0 +1,594 @@
+{
+  "features": {
+    "manage-catalog": {
+      "title": "مدیریت کاتالوگ هوش مصنوعی",
+      "description": "فعال‌سازی پیکربندی هوشمندی در کنسول پلتفرم (عامل‌ها، دستیارها، مدل‌ها، endpointها، قوانین)."
+    }
+  },
+  "module": {
+    "title": "مدیریت هوش مصنوعی",
+    "description": "مدیریت ارائه‌دهندگان هوش مصنوعی و کلیدهای API",
+    "menus": {
+      "root": {
+        "title": "هوشمندی"
+      },
+      "assists": {
+        "title": "دستیارها"
+      },
+      "agents": {
+        "title": "عامل‌های هوش مصنوعی"
+      },
+      "models": {
+        "title": "مدل‌ها"
+      },
+      "open-ai-endpoints": {
+        "title": "Endpointهای OpenAI"
+      },
+      "rules": {
+        "title": "قوانین"
+      },
+      "tools": {
+        "title": "ابزارها"
+      },
+      "settings": {
+        "title": "تنظیمات هوشمندی"
+      },
+      "ai-settings": {
+        "title": "تنظیمات هوشمندی"
+      }
+    },
+    "permissions": {
+      "title": "مدیریت هوش مصنوعی",
+      "description": "دسترسی به پیکربندی و مدیریت هوش مصنوعی",
+      "manage": {
+        "title": "مدیریت هوش مصنوعی",
+        "description": "مدیریت عامل‌ها، دستیارها، مدل‌ها و Endpointهای OpenAI"
+      },
+      "assist-use": {
+        "title": "استفاده از دستیارهای هوش مصنوعی",
+        "description": "اعطای دسترسی استفاده از دستیارهای مشخص در گفتگو و خودکارسازی‌ها"
+      }
+    }
+  },
+  "support": {
+    "aria-label": "باز کردن چت پشتیبانی هوش مصنوعی",
+    "title": "پشتیبانی هوش مصنوعی"
+  },
+  "chat": {
+    "title": "چت هوش مصنوعی",
+    "placeholder": "پیام خود را بنویسید...",
+    "send": "ارسال",
+    "sending": "در حال فکر کردن…",
+    "empty-hint": "با نوشتن پیام در پایین، گفتگو را شروع کنید.",
+    "select-model": "مدل",
+    "model-unavailable": "برای این دستیار مدل چت تنظیم نشده است.",
+    "select-assist": "دستیار",
+    "chat-target-label": "هدف گفتگو",
+    "picker-assist-prefix": "دستیار:",
+    "picker-agent-prefix": "عامل:",
+    "assistant-thinking-label": "استدلال مدل",
+    "clarify-region": "پاسخ لازم است",
+    "clarify-other": "سایر",
+    "clarify-other-placeholder": "پاسخ خود را بنویسید…",
+    "clarify-submit": "ادامه",
+    "clarify-select-hint": "برای ادامه یک گزینه را انتخاب کنید.",
+    "clarify-other-required": "برای «سایر» یک پاسخ کوتاه وارد کنید.",
+    "tools-ran": "ابزارهای اجرا شده",
+    "tool-io-details": "ورودی و خروجی ابزار",
+    "tool-input": "ورودی",
+    "tool-output": "خروجی",
+    "tool-output-pending": "هنوز نتیجه‌ای نیست (در حال اجرا یا ناموجود).",
+    "context-used": "استفاده از context",
+    "logs": "لاگ پیام‌ها",
+    "download-json": "دانلود JSON",
+    "messages-log-dialog-title": "پیام‌های گفتگو (JSON)",
+    "messages-log-main-transcript": "رونوشت اصلی (JSON)",
+    "messages-log-delegated-missing": "اجرای داخلی agent برای این call در حافظه نیست (فقط در همین session).",
+    "delegated-agent-detail": "جزئیات",
+    "delegated-agent-detail-aria": "مشاهدهٔ کامل گفتگوی specialist و فراخوانی ابزارها",
+    "delegated-agent-transcript-suffix": "اجرای کامل specialist",
+    "delegated-agent-transcript-aria": "رونوشت specialist",
+    "delegated-agent-transcript-toolbar-aria": "اقدامات رونوشت",
+    "context-meter-unknown": "—",
+    "tool-executing": "در حال اجرا…",
+    "delegated-agent-reflecting": "در حال بررسی خروجی tool توسط specialist…",
+    "specialist-delegation-context-json-label": "گفتگوی اخیر (برای زمینه)",
+    "tool-done": "انجام شد",
+    "agent-prefix": "عامل",
+    "agent-name-unknown": "عامل نامشخص",
+    "agent-commands-executed": "دستورات اجراشده توسط این عامل",
+    "tool-run-again": "اجرای مجدد",
+    "tool-execute-dialog-title": "اجرای ابزار",
+    "tool-execute-submit": "اجرا",
+    "tool-execute-json-field": "پارامترها (JSON)",
+    "tool-execute-done": "دستور انجام شد",
+    "tool-execute-not-registered": "هیچ command یا query با این نام در برنامه ثبت نشده است.",
+    "tool-execute-skipped-builtin": "این ابزار داخلی دستیار از اینجا قابل اجرا نیست.",
+    "usage-prompt": "ورودی",
+    "usage-completion": "خروجی",
+    "usage-cached": "کش شده",
+    "cost-tooltip": "هزینه تخمینی جلسه (دلار)",
+    "generated-image-aria-label": "تصویر تولیدشده از درخواست شما",
+    "generated-speech-aria-label": "صوت تولیدشده از درخواست شما",
+    "upload-images": "تصویر",
+    "upload-images-aria": "پیوست تصویر برای ارسال همراه پیام",
+    "upload-audio": "صوت",
+    "upload-audio-aria": "پیوست فایل صوتی برای ارسال همراه پیام",
+    "attached-image-aria-label": "تصویر پیوست‌شده به پیام شما",
+    "attached-audio-label": "صوت",
+    "audio-untitled": "صوت بدون عنوان",
+    "upload-invalid-type": "فقط فایل تصویری مجاز است.",
+    "upload-too-large": "هر تصویر باید حداکثر ۲۰ مگابایت باشد.",
+    "upload-too-many": "حداکثر ۲۰ تصویر برای هر پیام می‌توانید پیوست کنید.",
+    "upload-audio-invalid-type": "فقط فایل صوتی مجاز است.",
+    "upload-audio-too-large": "هر فایل صوتی باید حداکثر ۲۵ مگابایت باشد.",
+    "upload-audio-too-many": "حداکثر ۵ فایل صوتی برای هر پیام می‌توانید پیوست کنید.",
+    "upload-error": "بارگذاری تصویر انجام نشد.",
+    "upload-audio-error": "بارگذاری فایل صوتی انجام نشد.",
+    "composer-images-count": "تصویر برای ارسال آماده است",
+    "composer-audio-count": "فایل صوتی برای ارسال آماده است",
+    "composer-attachments-region": "پیوست‌های پیام بعدی شما",
+    "composer-uploading": "در حال ذخیرهٔ پیوست‌ها…",
+    "remove-draft-image": "حذف تصویر",
+    "remove-draft-audio": "حذف صوت",
+    "upload-documents": "سند",
+    "upload-documents-aria": "پیوست PDF یا فایل متنی برای ارسال همراه پیام",
+    "attached-document-label": "سند",
+    "document-untitled": "سند بدون عنوان",
+    "upload-documents-invalid-type": "فقط انواع سند پشتیبانی‌شده مجاز است (مثلاً PDF، متن، CSV یا JSON).",
+    "upload-documents-too-large": "هر سند باید حداکثر ۳۵ مگابایت باشد.",
+    "upload-documents-too-many": "حداکثر ۱۰ سند برای هر پیام می‌توانید پیوست کنید.",
+    "upload-documents-error": "بارگذاری سند انجام نشد.",
+    "composer-documents-count": "سند برای ارسال آماده است",
+    "remove-draft-document": "حذف سند",
+    "documents-still-saving": "اسناد هنوز در حال ذخیره‌اند. لطفاً صبر کنید.",
+    "images-still-saving": "تصاویر هنوز در حال ذخیره‌اند. لطفاً صبر کنید.",
+    "audio-still-saving": "فایل‌های صوتی هنوز در حال ذخیره‌اند. لطفاً صبر کنید."
+  },
+  "assist-popup": {
+    "placeholder": "بنویسید دستیار چه کاری انجام دهد…",
+    "generate": "تولید",
+    "generating": "در حال اجرا…",
+    "composer-menu-aria": "پیوست و سایر اقدامات",
+    "send": "ارسال",
+    "sending": "در حال اجرا…",
+    "cancel": "انصراف",
+    "run-error": "درخواست هوش مصنوعی ناموفق بود. دوباره تلاش کنید یا تنظیمات هوش مصنوعی را بررسی کنید."
+  },
+  "settings": {
+    "group": {
+      "nav-title": "هوشمندی",
+      "title": "تنظیمات هوشمندی",
+      "description": "کلیدهای API و دستیار پیش‌فرض را برای tenant ذخیره کنید."
+    },
+    "section": {
+      "global-ai": {
+        "title": "تنظیمات سراسری هوش مصنوعی",
+        "description": "دستیار پیش‌فرض و دستورالعمل‌های سراسری برای چت هوش مصنوعی."
+      },
+      "gemini": {
+        "title": "گوگل جمینی",
+        "description": "کلید API گوگل جمینی را تنظیم کنید."
+      }
+    },
+    "default-assist": {
+      "name": {
+        "title": "دستیار پیش‌فرض",
+        "description": "یک دستیار را از لیست انتخاب کنید. اگر خالی باشد، در صورت وجود، دستیار با نام platform-assistant استفاده می‌شود."
+      }
+    },
+    "global-system-prompt": {
+      "prefix": {
+        "title": "دستورالعمل سیستم",
+        "description": "در صورت پر بودن، قبل از پرامپت assist و agent اضافه می‌شود.",
+        "placeholder": "مثال: همیشه سیاست X شرکت را رعایت کن. شناسه‌های داخلی را فاش نکن."
+      }
+    },
+    "gemini": {
+      "api-key": {
+        "title": "کلید API",
+        "description": "کلید API استودیوی هوش مصنوعی گوگل برای جمینی.",
+        "placeholder": "کلید API جمینی را وارد کنید"
+      }
+    }
+  },
+  "open-ai-endpoints": {
+    "entities": {
+      "endpoint": {
+        "title": "Endpoint سازگار با OpenAI",
+        "plural": "Endpointهای سازگار با OpenAI",
+        "groups": {
+          "connection": {
+            "title": "اتصال"
+          }
+        },
+        "fields": {
+          "api-base": {
+            "title": "آدرس پایه API",
+            "description": "پایه سازگار با OpenAI: URL کامل chat completions، یا مبدأ با پایان /v1، یا فقط host. برای چت و آدرس تصویر (وقتی کاربرد مدل تصویر است) استفاده می‌شود."
+          },
+          "api-key": {
+            "title": "کلید API",
+            "description": "توکن Bearer ارسالی به این endpoint (فقط مقادیر مورد اعتماد ذخیره کنید)."
+          },
+          "stream": {
+            "title": "استریم پاسخ چت",
+            "description": "در حالت روشن، پاسخ چت با استریم SSE می‌آید. برای سرورهای محلی که استریم را درست پشتیبانی نمی‌کنند یا برای دیباگ با یک پاسخ JSON کامل، خاموش کنید."
+          }
+        }
+      }
+    }
+  },
+  "models": {
+    "entities": {
+      "model": {
+        "title": "مدل هوش مصنوعی",
+        "plural": "مدل‌های هوش مصنوعی",
+        "groups": {
+          "configuration": {
+            "title": "پیکربندی"
+          }
+        },
+        "fields": {
+          "max-context-tokens": {
+            "title": "حداکثر context (توکن)",
+            "description": "اندازه پنجره context برای این مدل (ورودی + بودجه خروجی)."
+          },
+          "max-output-tokens": {
+            "title": "حداکثر خروجی (توکن)",
+            "description": "حداکثر توکن خروجی در یک completion."
+          },
+          "max-input-tokens": {
+            "title": "حداکثر ورودی (توکن)",
+            "description": "سقف معمول توکن‌های کاربر و تاریخچه در هر درخواست."
+          },
+          "input-price-per-million": {
+            "title": "قیمت ورودی (به ازای ۱M توکن)",
+            "description": "دلار آمریکا به ازای ۱ میلیون توکن ورودی (تخمین مرجع)."
+          },
+          "output-price-per-million": {
+            "title": "قیمت خروجی (به ازای ۱M توکن)",
+            "description": "دلار آمریکا به ازای ۱ میلیون توکن خروجی (تخمین مرجع)."
+          },
+          "cached-input-price-per-million": {
+            "title": "قیمت ورودی کش شده (به ازای ۱M توکن)",
+            "description": "دلار آمریکا به ازای ۱ میلیون توکن ورودی کش شده. اگر خالی بماند از قیمت ورودی معمولی استفاده می‌شود."
+          },
+          "provider-id": "شناسه پروایدر",
+          "model-id": "شناسه مدل",
+          "chat-transport": {
+            "title": "Transport چت",
+            "options": {
+              "gemini": "Google Gemini",
+              "openai": "سازگار با OpenAI"
+            }
+          },
+          "open-ai-endpoint": {
+            "title": "Endpoint OpenAI",
+            "description": "وقتی transport سازگار با OpenAI است اجباری است. برای Gemini نادیده گرفته می‌شود."
+          },
+          "open-ai-endpoint-is-disabled": {
+            "title": "Endpoint OpenAI غیرفعال (سیستمی)",
+            "description": "وقتی endpoint متصل غیرفعال باشد true می‌شود؛ به‌صورت خودکار به‌روز می‌شود و تا endpoint فعال نشود مدل قابل فعال‌سازی نیست."
+          },
+          "api-model-id": {
+            "title": "شناسه مدل API",
+            "description": "رشته‌ای که مستقیماً به provider ارسال می‌شود (مثل gpt-4o، gemini-2.5-flash). در لیست به‌عنوان نام فنی نمایش داده می‌شود."
+          },
+          "model-purpose": {
+            "title": "کاربرد مدل",
+            "description": "مدل‌های چت برای کاتالوگ دستیار؛ تولید تصویر با AiManagement:ChatGenerateImage؛ گفتار به متن با AiManagement:ChatTranscribeSpeech؛ متن به گفتار با AiManagement:ChatSynthesizeSpeech.",
+            "options": {
+              "chat": "چت / تکمیل",
+              "image": "تولید تصویر",
+              "speech": "گفتار به متن",
+              "tts": "متن به گفتار"
+            }
+          },
+          "model-purposes": {
+            "title": "قابلیت‌های مدل",
+            "description": "یک مدل می‌تواند چند قابلیت داشته باشد (مثلاً چت + vision + گفتار). در لیست‌ها تگ‌ها رنگی نمایش داده می‌شوند؛ هنگام ویرایش از پیشنهادها انتخاب کنید.",
+            "placeholder": "تگ قابلیت اضافه کنید (chat، vision، image، …)"
+          }
+        }
+      }
+    }
+  },
+  "tools": {
+    "entities": {
+      "tool": {
+        "title": "ابزار",
+        "plural": "ابزارها",
+        "fields": {
+          "name": {
+            "title": "نام ابزار"
+          },
+          "is-active": {
+            "title": "فعال"
+          },
+          "parameters": {
+            "title": "طرح پارامترها"
+          },
+          "handler-key": {
+            "title": "کلید هندلر"
+          },
+          "input-metadata": {
+            "title": "متادیتای ورودی"
+          },
+          "result-metadata": {
+            "title": "متادیتای خروجی"
+          }
+        },
+        "components": {
+          "meta-data-form": {
+            "title": "فرم متادیتای ابزار"
+          }
+        }
+      }
+    }
+  },
+  "assists": {
+    "entities": {
+      "assist": {
+        "title": "دستیار",
+        "plural": "دستیارها",
+        "groups": {
+          "profile": "پروفایل",
+          "ai-configuration": "پیکربندی هوش مصنوعی",
+          "welcome-interaction": "تعامل خوش‌آمد",
+          "prompt-behaviour": "پرامت و رفتار",
+          "output-contract": "قرارداد خروجی",
+          "registry-commands": "رجیستری دستور",
+          "registry-queries": "رجیستری پرس‌وجو",
+          "mcp-servers": "سرورهای MCP",
+          "available-agents": "عامل‌های در دسترس"
+        },
+        "fields": {
+          "command-registry": {
+            "title": "دستورها",
+            "description": "به‌ازای هر تعریف دستوری که این دستیار می‌تواند مستقیماً در همان جلسه فراخوانی کند یک ردیف اضافه کنید. مقادیر پیش‌فرض آرگومان را از schema ورودی رجیستری تنظیم کنید؛ مدل می‌تواند در هر فراخوانی آن‌ها را بازنویسی کند.",
+            "item-label": "دستور"
+          },
+          "query-registry": {
+            "title": "پرس‌وجوها",
+            "description": "به‌ازای هر تعریف پرس‌وجویی که این دستیار می‌تواند مستقیماً در همان جلسه فراخوانی کند یک ردیف اضافه کنید. مقادیر پیش‌فرض ورودی با آرگومان‌های مدل ادغام می‌شوند (در تضاد، مدل برنده است).",
+            "item-label": "پرس‌وجو"
+          },
+          "mcp-servers": {
+            "title": "سرورهای MCP",
+            "description": "سرورهای MCP خارجی که ابزارهایشان در همان جلسه به این دستیار در دسترس است.",
+            "placeholder": "انتخاب سرورهای MCP…"
+          },
+          "output-contract": {
+            "title": "قرارداد خروجی",
+            "description": "شیء JSON: kind (string | object | array)، transcriptSegment (وقتی object)، instruction، schema، schemaSummary، validationCommandName، structuredRetries. قرارداد پیش‌فرض خروجی سرپرست؛ توسط عامل یا هر اجرا قابل بازنویسی است."
+          },
+          "planning-mode": {
+            "title": "حالت برنامه‌ریزی",
+            "description": "چه زمانی یک دور برنامه‌ریزی بدون ابزار قبل از فراخوانی ابزارها اجرا شود. کاربر نهایی این را تغییر نمی‌دهد؛ برای هر دستیار تنظیم می‌شود.",
+            "placeholder": "حالت برنامه‌ریزی را انتخاب کنید",
+            "options": {
+              "off": "خاموش",
+              "once": "یک‌بار (همیشه ابتدا برنامه)",
+              "when-needed": "در صورت نیاز (heuristic)"
+            }
+          },
+          "system-prompt": {
+            "title": "سیستم پرامت"
+          },
+          "rules": {
+            "title": "قوانین",
+            "description": "بخش‌های قابل‌استفادهٔ مجدد system prompt از کاتالوگ قوانین (در هر اجرای موتور ادغام می‌شوند). عنوان نمایشی است؛ موتور با name قانون resolve می‌کند.",
+            "placeholder": "انتخاب قوانین…"
+          },
+          "knowledge-files": {
+            "title": "فایل‌های دانش",
+            "description": "برای گسترش پایگاه دانش این دستیار، فایل PDF یا تصویر بارگذاری کنید."
+          },
+          "initial-messages": {
+            "title": "پیام آغازین"
+          },
+          "starter-prompts": {
+            "title": "پیشنهادهای شروع گفتگو",
+            "description": "پیام‌های پیشنهادی اختیاری (برای هر زبان) که کاربر قبل از اولین پیام خود در چت می‌تواند انتخاب کند.",
+            "item-placeholder": "متن پیشنهادی اولین پیام…"
+          },
+          "has-access-to-all-tools": {
+            "title": "دسترسی به همه ابزارها و پرس‌وجوها"
+          },
+          "command-tools": {
+            "title": "ابزارهای کامند"
+          },
+          "query-tools": {
+            "title": "ابزارهای پرس‌وجو"
+          },
+          "tools": {
+            "title": "ابزارها"
+          },
+          "model": {
+            "title": "مدل چت",
+            "description": "ردیف کاتالوگ مدل هوش مصنوعی برای اجرای دستیار سوپروایزر (کاربر نهایی در چت مدل انتخاب نمی‌کند).",
+            "placeholder": "مدل چت را انتخاب کنید"
+          },
+          "profession-image-url": {
+            "title": "عکس پروفایل"
+          },
+          "available-agents": {
+            "title": "عامل‌های در دسترس",
+            "description": "به‌ازای هر عامل هوش مصنوعی که این دستیار می‌تواند به آن تفویض کند یک ردیف اضافه کنید. مقادیر assist_locked و assist_default را per agent تنظیم کنید (مطابق تعاریف parameter همان عامل). در صورت نیاز ترتیب ردیف‌ها را تغییر دهید."
+          }
+        }
+      }
+    },
+    "pages": {
+      "prompt": {
+        "title": "پرامت و پیام‌های اولیه",
+        "validation-invalid-json": "پیام‌های اولیه باید آرایه JSON معتبر باشند."
+      }
+    }
+  },
+  "agents": {
+    "entities": {
+      "agent": {
+        "title": "عامل هوش مصنوعی",
+        "plural": "عامل‌های هوش مصنوعی",
+        "groups": {
+          "prompt-behaviour": "پرامت و رفتار",
+          "supervisor-delegation": "واگذاری به سوپروایزر",
+          "output-contract": "قرارداد خروجی",
+          "access": "مدل و محدودیت‌ها",
+          "registry-commands": "رجیستری دستور",
+          "registry-queries": "رجیستری کوئری"
+        },
+        "fields": {
+          "command-registry": {
+            "title": "دستورها",
+            "description": "برای هر تعریف دستور از رجیستری که این متخصص می‌تواند اجرا کند یک ردیف اضافه کنید. مقادیر پیش‌فرض آرگومان‌ها را از اسکیمای ورودی رجیستری تنظیم کنید؛ مدل می‌تواند در هر فراخوانی آن‌ها را بازنویسی کند.",
+            "item-label": "دستور"
+          },
+          "query-registry": {
+            "title": "کوئری‌ها",
+            "description": "برای هر تعریف کوئری از رجیستری که این متخصص می‌تواند استفاده کند یک ردیف اضافه کنید. مقادیر پیش‌فرض ورودی با آرگومان‌های مدل در زمان fetch ادغام می‌شوند (در تداخل، مدل اولویت دارد).",
+            "item-label": "کوئری"
+          },
+          "description": {
+            "description": "خلاصه کوتاه برای فهرست و جستجو. مسیریابی کامل سوپروایزر از فیلدهای بخش واگذاری به سوپروایزر ساخته می‌شود."
+          },
+          "supervisor-when-to-use": {
+            "title": "چه موقع واگذار شود",
+            "description": "به دستیار سرپرست می‌گوید چه زمانی این متخصص (`agent:<id>`) را صدا بزند. در زمان اجرا در توضیح ابزار ادغام می‌شود."
+          },
+          "supervisor-when-not-to-use": {
+            "title": "چه موقع واگذار نشود",
+            "description": "نیت‌هایی که سرپرست نباید این متخصص را صدا بزند (مثلاً احوال‌پرسی برای current-time)."
+          },
+          "supervisor-chains-with": {
+            "title": "راهنمای زنجیره‌سازی",
+            "description": "ترتیب اختیاری با سایر متخصص‌ها (مثلاً ابتدا platform-entity، سپس widget-form-layout)."
+          },
+          "supervisor-intent-tags": {
+            "title": "برچسب نیت",
+            "description": "کلیدواژه‌های اختیاری برای فیلتر ادمین؛ به توضیح ابزار سوپروایزر هم اضافه می‌شود.",
+            "placeholder": "navigation، chart، crud…"
+          },
+          "model-entity": {
+            "title": "مدل جایگزین",
+            "description": "اختیاری. در صورت تنظیم، این متخصص از این مدل کاتالوگ به‌جای مدل چت کاربر استفاده می‌کند (باید توسط دستیار مجاز باشد).",
+            "placeholder": "انتخاب مدل (اختیاری)"
+          },
+          "max-steps": {
+            "title": "حداکثر دور ابزار",
+            "description": "حداکثر دور provider در اجرای این متخصص (پیش‌فرض ۵، سقف ۵۰)."
+          },
+          "rules": {
+            "title": "قوانین",
+            "description": "بخش‌های قابل‌استفادهٔ مجدد system prompt از کاتالوگ قوانین (در هر اجرای موتور ادغام می‌شوند). عنوان نمایشی است؛ موتور با name قانون resolve می‌کند.",
+            "placeholder": "انتخاب قوانین…"
+          },
+          "parameter-definitions": {
+            "title": "پارامترهای سوپروایزر",
+            "description": "آرایه تعریف پارامترها: هر شیء شامل name، binding (supervisor | assist_locked | assist_default) و در صورت نیاز title، description، defaultValue. خالی بگذارید برای یک آرگومان رشته‌ای اجباری `query`. assist_locked از ردیف دستیار؛ assist_default برای پر کردن آرگومان‌های خالی سوپروایزر از دستیار؛ فیلدهای supervisor توسط مدل سوپروایزر پر می‌شوند."
+          },
+          "output-contract": {
+            "title": "قرارداد خروجی",
+            "description": "پیش‌تنظیم سگمنت transcript برای پیام نهایی متخصص در اجرای واگذارشده. گزینه‌ها از پروایدرهای ثبت‌شده بارگذاری می‌شوند. برای پاسخ string (متن/Markdown) خالی بگذارید.",
+            "kind": {
+              "title": "نوع خروجی",
+              "placeholder": "انتخاب نوع خروجی",
+              "description": "نوع داده JSON برای خروجی نهایی: string (متن/Markdown)، object (شیء JSON)، array (آرایه JSON). موتور بر اساس این مقدار system prompt و پردازش پس از پاسخ را می‌سازد.",
+              "options": {
+                "string": "String",
+                "object": "Object",
+                "array": "Array"
+              }
+            },
+            "transcript-segment": {
+              "title": "سگمنت Transcript",
+              "placeholder": "انتخاب نگاشت transcript",
+              "description": "وقتی kind برابر object است: JSON parse‌شده چطور در transcript چت قرار می‌گیرد. text = JSON عمومی به‌صورت متن؛ node = AXPWidgetNode داخلی در chat node؛ followUp = envelope پیشنهادهای بعدی.",
+              "options": {
+                "text": "Text (شیء JSON عمومی)",
+                "node": "Chat node (AXPWidgetNode)",
+                "follow-up": "پیشنهادهای بعدی",
+                "file": "فایل ذخیره‌شده (نمایش در چت)"
+              }
+            },
+            "instruction": {
+              "title": "دستورالعمل خروجی",
+              "placeholder": "مثال: برای جدول چت root از block-layout استفاده کن.",
+              "description": "قوانین اختیاری مخصوص دامنه که پس از قوانین پیش‌فرض موتور (بر اساس kind) ادغام می‌شوند. شکل خروجی، دستور اعتبارسنجی یا envelope را اینجا تکرار نکنید — موتور خودش inject می‌کند."
+            },
+            "schema-summary": {
+              "title": "خلاصه اسکیما",
+              "description": "توضیح کوتاه به زبان طبیعی درباره شکل JSON مورد انتظار. در system prompt و پیام‌های retry هنگام خطای اعتبارسنجی نمایش داده می‌شود. مثال: root از نوع block-layout با mode view؛ children ردیف‌های form-field."
+            },
+            "schema-name": {
+              "title": "نام اسکیما برای Provider",
+              "description": "برچسب JSON schema وقتی قالب پاسخ provider از نوع json_schema است. مثال: FormLayoutOutput."
+            },
+            "schema-strict": {
+              "title": "اسکیمای JSON سخت‌گیرانه",
+              "description": "در صورت فعال بودن، provider را وادار می‌کند JSON schema را سخت‌گیرانه اعمال کند (مثلاً OpenAI structured outputs)."
+            },
+            "structured-retries": {
+              "title": "تلاش مجدد ساختاریافته",
+              "description": "تعداد دور اضافی مدل پس از خطای parse یا اعتبارسنجی (۰ تا ۱۰). پیش‌فرض ۲ وقتی خالی باشد. مثال: ۳ برای agentهای transcript segment node."
+            },
+            "validation-command-name": {
+              "title": "دستور اعتبارسنجی",
+              "placeholder": "مثال: AiFormbuilder:ValidateLayoutJsonForAi",
+              "description": "دستور رجیستری که agent قبل از JSON نهایی ویجت باید صدا بزند (object + transcript segment node). مثال: AiFormbuilder:ValidateLayoutJsonForAi — وقتی data.valid برابر true است، متن نهایی باید data.normalizedJson باشد."
+            },
+            "provider-format-type": {
+              "title": "قالب پاسخ Provider",
+              "placeholder": "در صورت خالی از kind استنتاج می‌شود",
+              "description": "جایگزین hint ساختاریافته native provider. خالی بگذارید تا از kind استنتاج شود (مثلاً json_object برای object/array). json_schema برای binding سخت‌گیرانه schema.",
+              "options": {
+                "text": "متن",
+                "json-object": "شیء JSON",
+                "json-schema": "اسکیمای JSON"
+              }
+            },
+            "provider-format-name": {
+              "title": "نام اسکیمای Provider",
+              "description": "نام schema ارسالی به provider وقتی قالب پاسخ json_schema است. مثال: ChartLayoutOutput."
+            },
+            "provider-format-strict": {
+              "title": "حالت سخت‌گیرانه Provider",
+              "description": "با قالب json_schema، حالت strict schema provider را (در صورت پشتیبانی) فعال می‌کند."
+            }
+          }
+        }
+      }
+    }
+  },
+  "rules": {
+    "entities": {
+      "rule": {
+        "title": "قانون",
+        "plural": "قوانین",
+        "groups": {
+          "rule-content": "محتوای قانون"
+        },
+        "fields": {
+          "name": {
+            "description": "کلید برنامه‌نویسی که از دستیار، عامل و گزینه‌های run موتور ارجاع داده می‌شود (مثلاً markdown)."
+          },
+          "markdown": {
+            "title": "Markdown",
+            "description": "متنی که هنگام include شدن این قانون در system prompt ادغام می‌شود."
+          }
+        }
+      }
+    }
+  },
+  "errors": {
+    "invalid-api-key": "سرویس گفتار کلید API را نپذیرفت. کلید نقطه پایان را در هوشمندی ← نقاط پایان OpenAI بررسی کنید.",
+    "rate-limited": "سرویس گفتار شلوغ است. لطفاً کمی بعد دوباره تلاش کنید.",
+    "provider-unavailable": "گفتار فعلاً در دسترس نیست. لطفاً دوباره تلاش کنید.",
+    "extract-document-text-failed": "خواندن سند انجام نشد. دوباره تلاش کنید یا فیلدها را خودتان پر کنید.",
+    "generate-image-failed": "تولید تصویر انجام نشد. دوباره تلاش کنید.",
+    "transcribe-speech-failed": "رونویسی صدا انجام نشد. دوباره تلاش کنید.",
+    "synthesize-speech-failed": "تولید گفتار انجام نشد. دوباره تلاش کنید."
+  }
+}

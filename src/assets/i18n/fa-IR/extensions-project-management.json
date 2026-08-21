@@ -1,0 +1,67 @@
+{
+  "module": {
+    "title": "مدیریت پروژه",
+    "description": "دامنه یکپارچه‌سازی مشترک مدیریت پروژه و اتصال‌دهنده‌ها"
+  },
+  "integration": {
+    "domain": {
+      "title": "مدیریت پروژه",
+      "description": "اتصال سامانه‌های خارجی مدیریت پروژه برای مسائل، ثبت زمان و همگام‌سازی پروژه."
+    }
+  },
+  "settings": {
+    "project-management": {
+      "group": {
+        "nav-title": "مدیریت پروژه",
+        "title": "مدیریت پروژه",
+        "description": "پیکربندی پیش‌فرض‌های یکپارچه‌سازی مدیریت پروژه برای این مستأجر."
+      },
+      "section-title": "پیکربندی",
+      "section-description": "پیش‌فرض‌های سراسری مستأجر که توسط ارائه‌دهندگان متصل مدیریت پروژه استفاده می‌شوند.",
+      "default-project-type": {
+        "title": "نوع پروژه پیش‌فرض",
+        "description": "نوع پروژه در دیالوگ‌های ورود از ارائه‌دهندگان متصل مدیریت پروژه از پیش انتخاب می‌شود."
+      }
+    },
+    "integrations": {
+      "section-title": "مدیریت پروژه",
+      "section-description": "اتصال Jira، Simpro، ServiceM8، Fergus و سایر ارائه‌دهندگان مدیریت پروژه.",
+      "connections-panel": {
+        "title": "ارائه‌دهندگان مدیریت پروژه",
+        "description": "اتصال و پیکربندی یکپارچه‌سازی‌های مدیریت پروژه."
+      },
+      "default-project-type": {
+        "title": "نوع پروژه پیش‌فرض",
+        "description": "نوع پروژه در دیالوگ‌های ورود از ارائه‌دهندگان متصل مدیریت پروژه از پیش انتخاب می‌شود."
+      }
+    }
+  },
+  "integration-remote-record": {
+    "entities": {
+      "record": {
+        "title": "رکورد ریموت",
+        "plural": "رکوردهای ریموت",
+        "groups": {
+          "remote": "جزئیات ریموت",
+          "cache": "کش"
+        },
+        "fields": {
+          "provider-id": { "title": "ارائه‌دهنده" },
+          "connection-display-name": { "title": "اتصال" },
+          "resource-type": { "title": "نوع منبع" },
+          "connection-id": { "title": "شناسه اتصال" },
+          "remote-id": { "title": "شناسه ریموت" },
+          "order-no": { "title": "شماره سفارش" },
+          "stage": { "title": "مرحله" },
+          "customer-name": { "title": "مشتری" },
+          "site-name": { "title": "سایت" },
+          "due-date": { "title": "تاریخ سررسید" },
+          "payload-json": { "title": "Payload" },
+          "remote-fetched-at": { "title": "زمان دریافت" },
+          "is-active": { "title": "فعال" },
+          "is-linked": { "title": "پیوندخورده" }
+        }
+      }
+    }
+  }
+}

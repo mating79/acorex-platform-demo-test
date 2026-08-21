@@ -1,0 +1,345 @@
+{
+  "module": {
+    "title": "Task Management",
+    "description": "Manage tasks, assignments, and time tracking"
+  },
+  "catalog-scopes": {
+    "tasks": {
+      "title": "Task workflows",
+      "description": "Workflow definitions for task types"
+    }
+  },
+  "settings": {
+    "task-management": {
+      "group": {
+        "nav-title": "Tasks",
+        "title": "Task Management",
+        "description": "Preferences for task board views and modes."
+      },
+      "taskboard": {
+        "section": {
+          "title": "Task Board",
+          "description": "Choose which task board layouts appear in the view switcher."
+        },
+        "parts": {
+          "calendar": {
+            "title": "Calendar Modes",
+            "description": "Choose which calendar modes are available in the task board.",
+            "mode-options": {
+              "day": "Daily",
+              "week": "Weekly",
+              "month": "Monthly",
+              "agenda": "Agenda"
+            }
+          },
+          "timeline": {
+            "title": "Timeline Modes",
+            "description": "Choose which timeline modes are available in the task board.",
+            "mode-options": {
+              "timeline-day": "Daily Timeline",
+              "timeline-weekly": "Weekly Timeline",
+              "timeline-month": "Monthly Timeline",
+              "timeline-year": "Yearly Timeline"
+            }
+          },
+          "table": {
+            "title": "Table Modes",
+            "description": "Choose which table modes are available in the task board.",
+            "mode-options": {
+              "grid": "Simple",
+              "status-grouped-grid": "Grouped By Status"
+            }
+          },
+          "kanban": {
+            "title": "Kanban Modes",
+            "description": "Choose which kanban modes are available in the task board.",
+            "mode-options": {
+              "kanban": "Kanban"
+            }
+          }
+        },
+        "color-by": {
+          "title": "Color Tasks By",
+          "description": "Default accent color for task rows and cards across the task board.",
+          "due-date": "Due Date",
+          "priority": "Priority",
+          "status": "Status"
+        }
+      }
+    }
+  },
+  "root-menu": "Task Management",
+  "task": {
+    "individual-title": "Task",
+    "plural-title": "Tasks",
+    "scheduling": "Scheduling",
+    "classification": "Classification",
+    "tracking": "Tracking",
+    "context": "Context",
+    "due-date": "Due Date",
+    "start-date": "Start Date",
+    "completed-date": "Completed Date",
+    "estimated-hours": "Estimated Hours",
+    "actual-hours": "Actual Hours",
+    "parent-task": "Parent Task",
+    "context-type": "Context Type",
+    "subject": "Subject",
+    "subject-type": "Subject type",
+    "context-id": "Context ID",
+    "form-template": "Form Template",
+    "permissions": {
+      "task": {
+        "manage": {
+          "title": "Manage Tasks"
+        },
+        "view-all": {
+          "title": "View All Tasks",
+          "description": "View and filter tasks for all assignees on the task board."
+        }
+      }
+    }
+  },
+  "task-type": {
+    "individual-title": "Task Type",
+    "plural-title": "Task Types",
+    "configuration": "Configuration",
+    "allowed-context-types": "Allowed Context Types",
+    "allowed-subject-types": "Allowed subject types",
+    "form-template": "Form Template",
+    "document-types": "Document Types",
+    "features": {
+      "title": "Features",
+      "has-checklist": "Has Checklist",
+      "has-time-tracking": "Has Time Tracking",
+      "has-attachments": "Has Attachments",
+      "has-dependencies": "Has Dependencies",
+      "has-subtasks": "Has Subtasks"
+    },
+    "default-status": "Default Status"
+  },
+  "task-type-categories": {
+    "title": "Task Type Category",
+    "plural": "Task Type Categories"
+  },
+  "task-status": {
+    "individual-title": "Task Status",
+    "plural-title": "Task Statuses",
+    "configuration": "Configuration",
+    "workflow": "Workflow",
+    "is-default": "Is Default",
+    "is-final": "Is Final",
+    "allowed-transitions": "Allowed Transitions"
+  },
+  "task-checklist-item": {
+    "individual-title": "Checklist Item",
+    "plural-title": "Checklist Items"
+  },
+  "checklist-item": {
+    "assignment": "Assignment",
+    "status": "Status",
+    "assigned-to": "Assigned To",
+    "due-date": "Due Date",
+    "is-completed": "Is Completed",
+    "completed-by": "Completed By",
+    "completed-at": "Completed At"
+  },
+  "task-assignment": {
+    "individual-title": "Task Assignment",
+    "plural-title": "Task Assignments",
+    "assigned-to": "Assigned To",
+    "assigned-by": "Assigned By",
+    "assigned-at": "Assigned At"
+  },
+  "time-log": {
+    "individual-title": "Time Log",
+    "plural-title": "Time Logs",
+    "time-details": "Time Details",
+    "approval": "Approval",
+    "start-time": "Start Time",
+    "end-time": "End Time",
+    "duration": "Duration",
+    "is-approved": "Is Approved"
+  },
+  "task-dependency": {
+    "individual-title": "Task Dependency",
+    "plural-title": "Task Dependencies",
+    "depends-on-task": "Depends On Task",
+    "dependency-type": "Dependency Type",
+    "lag-days": "Lag Days"
+  },
+  "task-context": {
+    "individual-title": "Task Context",
+    "plural-title": "Task Contexts",
+    "context-type": "Context Type",
+    "subject": "Subject",
+    "subject-type": "Subject type",
+    "context-id": "Context ID",
+    "context-title": "Context Title",
+    "is-primary": "Is Primary Context"
+  },
+  "task-template": {
+    "individual-title": "Task Template",
+    "plural-title": "Task Templates",
+    "task-data": "Task Data",
+    "template-data": "Template Data",
+    "is-public": "Is Public"
+  },
+  "task-board": {
+    "page-title": "Task Board",
+    "all": "All Tasks",
+    "calendar": "Calendar",
+    "table": "List",
+    "kanban": "Kanban",
+    "widget-title": "Widget Title",
+    "timeline": "Timeline",
+    "view-page-title": {
+      "calendar": {
+        "daily": "Daily Calendar",
+        "weekly": "Weekly Calendar",
+        "monthly": "Monthly Calendar",
+        "agenda": "Agenda"
+      },
+      "timeline": {
+        "daily": "Daily Timeline",
+        "weekly": "Weekly Timeline",
+        "monthly": "Monthly Timeline",
+        "yearly": "Yearly Timeline"
+      },
+      "table": {
+        "simple": "Task List",
+        "grouped": "Tasks by Status"
+      },
+      "kanban": "Kanban Board"
+    },
+    "navigator": {
+      "today": "Today",
+      "current-week": "Current Week",
+      "current-month": "Current Month",
+      "current-year": "Current Year",
+      "previous-period": "Previous period",
+      "next-period": "Next period"
+    },
+    "shortcuts": {
+      "groups": {
+        "views": "Views",
+        "panels": "Panels"
+      },
+      "go-to-today": "Go to Today",
+      "dismiss-overlays": "Close Panel or Popover",
+      "toggle-settings": "Toggle Settings",
+      "previous-layout": "Previous Layout",
+      "next-layout": "Next Layout",
+      "switch-to-calendar": "Switch to Calendar",
+      "switch-to-timeline": "Switch to Timeline",
+      "switch-to-table": "Switch to List",
+      "switch-to-kanban": "Switch to Kanban"
+    },
+    "view": {
+      "daily": "Daily",
+      "daily-timeline": "Daily Timeline",
+      "multi-day-timeline": "Multi-Day Timeline",
+      "weekly": "Weekly",
+      "weekly-timeline": "Weekly Timeline",
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "monthly-timeline": "Monthly Timeline",
+      "all-day": "All Day",
+      "agenda": "Agenda",
+      "kanban": "Kanban",
+      "grid": "List",
+      "status-grouped-grid": "By Status",
+      "time-grouped-grid": "Grouped By Time",
+      "yearly-timeline": "Yearly Timeline"
+    },
+    "detail-panel": {
+      "title": "Task Details",
+      "description": "Description",
+      "start-date": "Start Date",
+      "end-date": "End Date",
+      "status": "Status",
+      "priority": "Priority",
+      "no-task-selected": {
+        "title": "No Task Selected",
+        "description": "Please select a task to view its details."
+      },
+      "reporter": "Reporter",
+      "assignee": "Assignee"
+    },
+    "grid-headers": {
+      "title": "Title",
+      "description": "Description",
+      "start-date": "Start Date",
+      "due-date": "Due Date",
+      "received": "Received",
+      "priority": "Priority",
+      "reporter": "Reporter",
+      "assignee": "Assignee",
+      "status": "Status",
+      "type": "Type",
+      "action-view": "View"
+    },
+    "filter": {
+      "title": "Filter",
+      "title-plural": "Filters",
+      "task-type": "Task Type",
+      "assignee": "Assignee",
+      "unassigned": "Unassigned",
+      "reporter": "Reporter",
+      "priority": "Priority",
+      "due-status": "Due status",
+      "date-range": "Date Range",
+      "calendar-event-type": "Holiday Calendars",
+      "calendars": "Holiday Calendars"
+    },
+    "priority": {
+      "urgent": "Urgent",
+      "high": "High",
+      "normal": "Normal",
+      "low": "Low",
+      "no-priority": "No priority"
+    },
+    "due-status": {
+      "completed": "Completed",
+      "no-due-date": "No due date",
+      "overdue": "Overdue",
+      "due-today": "Due today",
+      "due-tomorrow": "Due tomorrow",
+      "due-this-week": "Due this week",
+      "upcoming": "Upcoming"
+    },
+    "color-by": {
+      "due-date": "Due date",
+      "priority": "Priority",
+      "status": "Status"
+    },
+    "settings": {
+      "title": "Settings",
+      "color-by": "Color by"
+    }
+  },
+  "cartable": {
+    "menu-title": "Cartable",
+    "page-title": "Cartable",
+    "view-cards": "Cards",
+    "view-grid": "Grid",
+    "empty-state": {
+      "title": "All clear",
+      "description": "No pooled workflow tasks in your cartable. New items will appear here when you are a candidate."
+    },
+    "badge-pool": "Pool",
+    "badge-assigned": "Assigned to you",
+    "open-actions": "Actions",
+    "col-title": "Title",
+    "col-type": "Workflow",
+    "col-state": "State"
+  },
+  "dashboard-widgets": {
+    "widget-picker-category": {
+      "tasks": "Tasks"
+    },
+    "widget-picker-sub-categories": {
+      "shortcut": "Shortcuts",
+      "board": "Task board"
+    }
+  }
+}

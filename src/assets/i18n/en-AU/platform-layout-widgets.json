@@ -1,0 +1,193 @@
+{
+  "categories": {
+    "layout": { "title": "Layout" },
+    "editor": { "title": "Editors" },
+    "action": { "title": "Action" },
+    "advance": { "title": "Advance" },
+    "ai": { "title": "AI" }
+  },
+  "subcategories": {
+    "editor-text-inputs": { "title": "Text inputs" },
+    "editor-numeric": { "title": "Numeric" },
+    "editor-datetime": { "title": "Date & time" },
+    "editor-choice": { "title": "Choice & lists" },
+    "editor-rich": { "title": "Rich text" },
+    "editor-visual": { "title": "Colors" },
+    "editor-composite": { "title": "Composite fields" },
+    "editor-config": { "title": "Configuration" },
+    "layout-shell": { "title": "Page & document" },
+    "layout-grid": { "title": "Grids & tables" },
+    "layout-surfaces": { "title": "Surfaces & sections" },
+    "layout-tabs": { "title": "Tabs" },
+    "layout-lists": { "title": "Lists & toolbars" },
+    "layout-utility": { "title": "Utility" },
+    "action-controls": { "title": "Controls" },
+    "advance-media": { "title": "Media & files" },
+    "advance-input": { "title": "Input & code" },
+    "advance-data": { "title": "Data & status" },
+    "advance-tools": { "title": "Maps & tools" }
+  },
+  "widgets": {
+    "button-action": { "title": "Button", "description": "Triggers customizable actions" },
+    "avatar": { "title": "Avatar", "description": "Displays an avatar image based on a reference ID and type" },
+    "cron-job": { "title": "Cron Job" },
+    "attachments": { "title": "Attachments", "description": "Uploads and manages entity attachments" },
+    "image": {
+      "title": "Image",
+      "description": "Simple image viewer/editor that stores a URL or binary",
+      "dialog": {
+        "title": "Image",
+        "preview-title": "Image Preview",
+        "editor-title": "Image Editor"
+      }
+    },
+    "widget-field-configurator": { "title": "Widget Field Configurator", "description": "Configure widget type and options for a single field" },
+    "scheduler-picker": { "title": "Scheduler Picker" },
+    "signature": {
+      "title": "Signature",
+      "description": "Captures digital signatures",
+      "empty-state": {
+        "hint": "Click to sign",
+        "sign-here": "Sign here"
+      }
+    },
+    "data-list": { "title": "Data List", "description": "Displays data in a list like table format with customizable columns" },
+    "status-widget": { "title": "Status Widget", "description": "Displays and manages entity status with visual indicators" },
+    "item-configurator": { "title": "Item Configurator", "description": "Select an item and edit settings via the generic property viewer; the form value remains a widget node (type + options) for compatibility." },
+    "list-toolbar": { "title": "List Toolbar" },
+    "map": { "title": "Map", "description": "Displays and interacts with maps" },
+    "code-editor": { "title": "Code Editor", "description": "A code editor widget for editing code expressions and scripts" },
+    "stopwatch": { "title": "Stopwatch", "description": "A stopwatch widget that can count up or count down from a time limit" },
+    "integration-connections-panel": {
+      "title": "Integration Connections",
+      "description": "Manage connected external provider accounts.",
+      "status": {
+        "connected": "Connected",
+        "connected-count": "{{connected}}/{{total}} Connected",
+        "disabled": "Disabled",
+        "not-connected": "Not Connected"
+      },
+      "fields": {
+        "auth-method": "Auth Method",
+        "display-name": "Display Name",
+        "instance-url": "Instance URL",
+        "token": "Token",
+        "username": "Username",
+        "email": "Email",
+        "password": "Password",
+        "api-token": "API Token"
+      },
+      "placeholders": {
+        "display-name": "Display name",
+        "instance-url": "Instance URL (optional)",
+        "token": "Personal access token",
+        "username": "Username",
+        "email": "Account email",
+        "password": "Password",
+        "api-token": "API token"
+      },
+      "actions": {
+        "connect": "Connect",
+        "manage": "Manage",
+        "configure": "Configure",
+        "reconfigure": "Reconfigure",
+        "connect-oauth": "Connect With OAuth",
+        "save-connection": "Save Connection",
+        "validate": "Validate",
+        "disconnect": "Disconnect",
+        "remove": "Remove",
+        "add-connection": "Add New Connection"
+      },
+      "dialogs": {
+        "select-auth-method": {
+          "title": "Choose Authentication Method"
+        },
+        "oauth": {
+          "title": "Connect With OAuth",
+          "description": "You will be redirected to authorize this application. After approval, you will return here automatically."
+        },
+        "credentials": {
+          "title": "Connect Account",
+          "configure-title": "Configure Account"
+        },
+        "disconnect": {
+          "title": "Disconnect Integration",
+          "message": "Are you sure you want to disconnect {{provider}}? You will need to reconnect to use this integration again."
+        },
+        "remove": {
+          "title": "Remove Connection",
+          "message": "Are you sure you want to remove {{provider}}? This permanently deletes the connection."
+        }
+      }
+    },
+    "gallery": { "title": "Media Gallery", "description": "Shows and edits image galleries" },
+    "file-viewer": {
+      "title": "File Viewer",
+      "description": "Shows and edits multi-format file carousels with thumbnails"
+    },
+    "qrcode": {
+      "title": "QR Code",
+      "description": "Display and edit QR Codes",
+      "content": "Content"
+    },
+    "image-marker": { "title": "Image Marker", "description": "Image Marker Widget to add markers to an image" },
+    "json-viewer": { "title": "JSON Viewer", "description": "Displays JSON data in a formatted, collapsible tree view" },
+    "outcome-results-viewer": {
+      "title": "Outcome results",
+      "description": "Read-only label/value list for evaluated outcome snapshots"
+    },
+    "text-editor": { "title": "Text Box", "description": "Inputs single-line text" },
+    "large-text-editor": { "title": "Large Text Box", "description": "Inputs long text entries" },
+    "number-editor": { "title": "Number Box", "description": "Inputs numeric values" },
+    "list-editor": { "title": "Drag & Drop List", "description": "Reorderable list with drag and drop" },
+    "time-duration": { "title": "Time Duration", "description": "Selects a time duration" },
+    "color-palette-editor": { "title": "Color Palette", "description": "Selects colors from a predefined palette" },
+    "color-editor": { "title": "Color Box", "description": "Picks and applies colors" },
+    "number-unit-editor": { "title": "Number Unit Box", "description": "Inputs numeric values" },
+    "contact-editor": { "title": "Contact", "description": "Inputs contact information" },
+    "meta-data-editor": { "title": "Meta Data", "description": "meta data rendered" },
+    "address-editor": { "title": "Address", "description": "Inputs address information" },
+    "rate-picker-editor": { "title": "Rate Picker", "description": "Allows users to select a rating value" },
+    "date-time-editor": { "title": "Date Time Box", "description": "Selects date and time" },
+    "template-box-editor": { "title": "Template Box", "description": "Advanced template text editor with language support" },
+    "selection-list-editor": { "title": "Selection List", "description": "Selects from a list" },
+    "toggle-editor": { "title": "Toggle", "description": "Switches between on/off states" },
+    "editor-js-editor": { "title": "Editor Js", "description": "Formats and edits text" },
+    "rich-text-editor": {
+      "title": "Rich Text",
+      "description": "Formats and edits rich text",
+      "column-expand-title": "View full content"
+    },
+    "progress-bar-editor": { "title": "Progress Bar", "description": "Displays progress as a value out of a total with visual progress bar" },
+    "connected-lists-editor": { "title": "Connected Drag & Drop Lists", "description": "Two connected lists with drag and drop transfer" },
+    "checkbox-editor": { "title": "Check Box", "description": "Selects multiple options via checkboxes" },
+    "tag-editor": { "title": "Tag Editor", "description": "Input and manage multiple tags" },
+    "select-editor": { "title": "Select Box", "description": "Chooses from dropdown options" },
+    "password-editor": { "title": "Password Box", "description": "Secures password input" },
+    "table-editor": { "title": "Table Editor", "description": "Inputs single-line text" },
+    "document-layout": { "title": "Document", "description": "Structures the entire document" },
+    "fieldset-layout": { "title": "Fieldset", "description": "Organizes content in a fieldset container" },
+    "grid-layout": { "title": "Grid Layout" },
+    "advanced-grid-item-layout": { "title": "Advanced Grid Item" },
+    "block-layout": { "title": "Block Layout", "description": "Organizes content in blocks" },
+    "flex-item-layout": { "title": "Flex Item", "description": "Flex Item Layout" },
+    "table-layout": { "title": "Table Layout", "description": "Structures content into rows and cells" },
+    "repeater-layout": { "title": "Repeater", "description": "Adds repeating form elements" },
+    "step-wizard": { "title": "Step Wizard" },
+    "advanced-grid-layout": { "title": "Advanced Grid Layout" },
+    "tabset-item": { "title": "TabSet Item", "description": "A tab set item is a widget that displays a tab set item" },
+    "panel-layout": { "title": "Panel Layout", "description": "Organizes content in a collapsible panel" },
+    "tabset-layout": { "title": "TabSet Layout", "description": "A tab set layout is a widget that displays a tab set" },
+    "alert-box-layout": { "title": "Alert Box", "description": "Displays an alert with title and description using ax-alert" },
+    "badge-layout": { "title": "Badge", "description": "Displays a colored badge with optional icon for status or labels" },
+    "flex-layout": { "title": "Flex Layout", "description": "Organizes content in flexible layout" },
+    "component-slot": { "title": "Component Slot", "description": "Renders a component slot" },
+    "grid-item-layout": { "title": "Grid Item" },
+    "text-block-layout": { "title": "Text Block", "description": "Displays text blocks" },
+    "state-message": { "title": "State Message", "description": "Displays empty, error, loading, or info states" },
+    "table-item-layout": { "title": "Table Item", "description": "Table Item (row/cell) container" },
+    "icon": { "title": "Icon" },
+    "form-field": { "title": "Form Field" },
+    "page-layout": { "title": "Page", "description": "Structures the entire page" }
+  }
+}

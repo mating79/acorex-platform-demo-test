@@ -1,0 +1,26 @@
+{
+  "pages": {
+    "trace-ai": {
+      "title": "هوش مصنوعی",
+      "not-found": "Trace یافت نشد.",
+      "empty": "این Trace هیچ Span مربوط به هوش مصنوعی ندارد.",
+      "duration": "مدت",
+      "model": "مدل",
+      "provider": "ارائه‌دهنده",
+      "input-tokens": "توکن ورودی",
+      "output-tokens": "توکن خروجی",
+      "steps": "فراخوانی‌های مدل",
+      "tools": "فراخوانی ابزارها",
+      "transcript": "رونوشت",
+      "input": "ورودی",
+      "output": "خروجی",
+      "no-transcript": "پرامپت و پاسخ برای این Trace ثبت نشده است.",
+      "no-steps": "Span فراخوانی مدل ثبت نشده است.",
+      "no-tools": "Span فراخوانی ابزار ثبت نشده است.",
+      "finish-reason": "دلیل پایان",
+      "time-to-first-chunk": "زمان تا اولین قطعه",
+      "tool-call-id": "شناسه فراخوانی ابزار",
+      "unavailable": "نامشخص"
+    }
+  }
+}

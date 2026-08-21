@@ -1,0 +1,1927 @@
+{
+  "widgets": {
+    "file-uploader": {
+      "attachments": {
+        "title": "پیوست‌ها"
+      },
+      "column": {
+        "files-count": "{{count}} فایل"
+      },
+      "edit-dialog": {
+        "title": "ویرایش فایل",
+        "add-title": "افزودن فایل"
+      },
+      "empty-state": {
+        "title": "هیچ فایلی یافت نشد",
+        "description": "برای افزودن فایل، اینجا کلیک کنید یا فایل را بکشید و رها کنید.",
+        "description-with-formats": "اینجا کلیک کنید یا فایل را بکشید. مجاز: {{formats}}.",
+        "description-with-max-size": "اینجا کلیک کنید یا فایل را بکشید. حداکثر حجم: {{maxSize}}.",
+        "description-with-limits": "اینجا کلیک کنید یا فایل را بکشید. مجاز: {{formats}} · حداکثر {{maxSize}}."
+      },
+      "validation": {
+        "file-type-not-allowed": "نوع فایل «{{fileName}}» مجاز نیست.",
+        "file-type-not-allowed-summary": "{{count}} فایل به‌دلیل نوع غیرمجاز رد شد.",
+        "file-size-exceeds-limit": "«{{fileName}}» از محدودیت {{maxSizeMb}} مگابایت بیشتر است.",
+        "files-rejected-summary": "{{count}} فایل به‌دلیل عدم رعایت قوانین بارگذاری رد شد."
+      },
+      "messages": {
+        "upload-failed": "بارگذاری فایل انجام نشد. لطفاً با فایل کوچک‌تری دوباره تلاش کنید."
+      }
+    },
+    "lookup": {
+      "placeholder": "انتخاب از لیست...",
+      "search": {
+        "placeholder": "جستجو ..."
+      },
+      "column": {
+        "items-count": "{{count}} مورد",
+        "popover-title": "همه {{count}} مورد",
+        "load-failed": "بارگذاری موارد ممکن نشد."
+      }
+    },
+    "toggle": {
+      "yes": "بله",
+      "no": "خیر",
+      "unknown": "نامشخص"
+    },
+    "multi-language": "چند زبانه",
+    "multi-language-select": {
+      "show-other-languages": "نمایش زبان‌هایی که پروفایل محلی ندارند"
+    },
+    "selectbox": {
+      "popover": {
+        "title": "انتخاب گزینه"
+      }
+    },
+    "icon-chooser": {
+      "search-placeholder": "جستجو برای آیکون‌ها...",
+      "view-mode": {
+        "square": "نمایش مربعی",
+        "rectangle": "نمایش مستطیلی"
+      }
+    },
+    "font-style-chooser": {
+      "popup-title": "انتخاب فونت"
+    },
+    "tag-editor": {
+      "placeholder": "افزودن تگ..."
+    },
+    "widget-configurator": {
+      "select-widget-type": "یک نوع ابزارک برای پیکربندی انتخاب کنید",
+      "no-configuration-needed": "این ابزارک نیازی به پیکربندی ندارد"
+    },
+    "widget-item": {
+      "pin": "سنجاق کردن",
+      "unpin": "برداشتن سنجاق"
+    },
+    "triggers": {
+      "event": {
+        "label": "رویداد:",
+        "placeholder": "برای ویرایش رویداد کلیک کنید"
+      },
+      "action": {
+        "label": "عمل:",
+        "placeholder": "برای ویرایش عمل کلیک کنید"
+      },
+      "empty-state": {
+        "title": "هیچ تریگر تعریف نشده است. برای ایجاد یکی روی \"افزودن تریگر\" کلیک کنید."
+      },
+      "add-trigger": "افزودن تریگر",
+      "add-first-trigger": "اولین تریگر خود را اضافه کنید",
+      "edit-event-expression": "ویرایش عبارت رویداد",
+      "edit-action-expression": "ویرایش عبارت عمل",
+      "edit-binding-expression": "ویرایش عبارت اتصال",
+      "open-editor": "باز کردن ویرایشگر"
+    },
+    "table-columns-editor": {
+      "popup-title": "ستون‌های جدول",
+      "column-name": "نام ستون",
+      "column-title": "عنوان ستون",
+      "add-column": "افزودن ستون",
+      "remove-column": "حذف ستون",
+      "empty-state": "ستونی تعریف نشده است. حداقل یک ستون اضافه کنید."
+    },
+    "table-data-editor": {
+      "popup-title": "داده جدول",
+      "define-columns-first": "ابتدا ستون‌ها را تعریف کنید."
+    },
+    "query-options": {
+      "query": "کوئری",
+      "query-placeholder": "انتخاب کوئری...",
+      "tabs": "زبانه‌های کوئری",
+      "add-tab": "افزودن زبانه کوئری",
+      "label-placeholder": "برچسب زبانه"
+    },
+    "data-source-options": {
+      "source": "منبع",
+      "mode": {
+        "exists": "منبع داده موجود",
+        "list": "فهرست",
+        "tabular": "جدولی"
+      },
+      "data-source": "منبع داده",
+      "data-source-placeholder": "انتخاب منبع داده...",
+      "inline-data": "داده درون‌خطی",
+      "list-items": "موارد",
+      "add-list-item": "افزودن مورد",
+      "columns": "ستون‌ها",
+      "columns-with-count": "ستون‌ها ({{count}})",
+      "rows": "سطرها",
+      "rows-with-count": "سطرها ({{count}})",
+      "edit-array": "ویرایش آرایه...",
+      "value-field": "فیلد مقدار",
+      "value-field-placeholder": "انتخاب فیلد مقدار...",
+      "value-field-placeholder-disabled": "ابتدا یک منبع داده انتخاب کنید",
+      "text-field": "فیلد متن",
+      "text-field-placeholder": "انتخاب فیلد متن...",
+      "text-field-placeholder-disabled": "ابتدا یک منبع داده انتخاب کنید",
+      "filters": "فیلترها",
+      "filters-button-empty": "پیکربندی فیلترها",
+      "filters-button-with-count": "ویرایش فیلترها ({{count}} تنظیم شده)",
+      "filters-modal-title": "فیلترها",
+      "inline-array-editor": {
+        "title": "داده درون‌خطی",
+        "column-value": "مقدار",
+        "column-text": "متن"
+      }
+    }
+  },
+  "settings": {
+    "experience": {
+      "nav-title": "تجربه کاربری",
+      "title": "تنظیمات تجربه کاربری",
+      "description": "پیکربندی راه‌اندازی، ویجت‌ها، اعلان‌ها و نحوه کار با داده‌ها در برنامه.",
+      "startup": {
+        "title": "راه‌اندازی",
+        "description": "کنترل آنچه هنگام شروع برنامه اتفاق می‌افتد.",
+        "home-page": {
+          "title": "صفحه اصلی",
+          "description": "انتخاب صفحه‌ای که پس از ورود نمایش داده شود."
+        },
+        "release-notes": {
+          "title": "جدیدترین‌ها",
+          "description": "نمایش آخرین تغییرات و ویژگی‌ها پس از هر به‌روزرسانی."
+        },
+        "application-terms": {
+          "title": "شرایط برنامه",
+          "description": "نمایش اعلان‌های شرایط و ضوابط زمانی که شرایط جدید در دسترس است."
+        }
+      },
+      "widgets": {
+        "title": "ویجت‌ها",
+        "description": "پیکربندی ویجت‌های داشبورد و منابع داده آن‌ها."
+      },
+      "notifications": {
+        "title": "اعلان‌ها",
+        "description": "پیکربندی ترجیحات اعلان‌ها و پیام‌های توست.",
+        "enable-operation-toasts": {
+          "title": "نمایش نتایج عملیات",
+          "description": "نمایش اعلان‌های توست برای عملیات API (ایجاد، ویرایش، حذف و ...)."
+        }
+      },
+      "performance": {
+        "title": "کارایی",
+        "description": "پیکربندی بهینه‌سازی درخواست‌های سمت کاربر برای کوئری‌های زمان اجرا.",
+        "runtime-query-cache-enabled": {
+          "title": "کش درخواست کوئری زمان اجرا",
+          "description": "کوئری‌های یکسان زمان اجرا را هنگام اجرای درخواست ادغام می‌کند و در صورت تنظیم زمان، پاسخ‌های موفق را دوباره استفاده می‌کند."
+        },
+        "runtime-query-cache-ttl-ms": {
+          "title": "زمان نگهداری کش کوئری زمان اجرا (میلی‌ثانیه)",
+          "description": "پاسخ‌های موفق کوئری زمان اجرا را به این مدت در حافظه نگه می‌دارد. مقدار ۰ فقط درخواست‌های در حال اجرا را ادغام می‌کند."
+        }
+      },
+      "offline": {
+        "title": "آفلاین",
+        "description": "کنترل امکان ادامه کار با تنظیمات کش‌شدهٔ پلتفرم وقتی API در دسترس نیست.",
+        "allow-working-offline": {
+          "title": "اجازه کار آفلاین",
+          "description": "در صورت فعال بودن و در دسترس نبودن API یا شبکه، برای ادامه با آخرین تنظیمات کش‌شدهٔ پلتفرم سؤال می‌شود. در صورت غیرفعال بودن، صفحهٔ در دسترس نبودن نمایش داده می‌شود."
+        }
+      },
+      "file-chooser": {
+        "title": "انتخاب فایل",
+        "description": "پردازش سراسری پلتفرم پس از انتخاب یا رها کردن فایل‌ها.",
+        "compress-images": {
+          "title": "فشرده‌سازی تصاویر پس از انتخاب",
+          "description": "در صورت فعال بودن، فایل‌های تصویری قبل از افزودن به انتخاب فشرده می‌شوند."
+        },
+        "prompt-zip-on-multiple": {
+          "title": "پرسش برای ZIP چند فایل",
+          "description": "در صورت فعال بودن، انتخاب چند فایل یک‌جا از شما می‌پرسد آیا آن‌ها در یک آرشیو ZIP ترکیب شوند."
+        }
+      },
+      "entity": {
+        "title": "موجودیت‌ها و لیست‌ها",
+        "description": "پیکربندی رفتار لیست‌ها، فرم‌ها و صفحات جزئیات موجودیت.",
+        "filter-apply-mode": {
+          "title": "حالت اعمال فیلتر",
+          "description": "پیکربندی حالت اعمال فیلتر.",
+          "options": {
+            "auto": "خودکار",
+            "manual": "دستی"
+          }
+        },
+        "list-persistence-mode": {
+          "title": "ذخیره‌سازی وضعیت لیست قابلیت",
+          "description": "نحوه ذخیره ترجیحات لیست (ستون‌ها، فیلتر، مرتب‌سازی، صفحه‌بندی، ردیف‌های باز) را مشخص می‌کند.",
+          "options": {
+            "none": "ذخیره نشود",
+            "persistent": "ذخیره و ماندگار بین بازدیدها",
+            "route": "ذخیره تا خروج از صفحه فعلی"
+          }
+        },
+        "show-category-columns-by-default": {
+          "title": "نمایش ستون‌های دسته‌بندی به‌صورت پیش‌فرض",
+          "description": "نمایش ستون‌های دسته‌بندی در نمای جدول داده به‌صورت پیش‌فرض. در صورت غیرفعال بودن، ستون‌های دسته‌بندی در ابتدا مخفی هستند."
+        },
+        "apply-layout-ordering": {
+          "title": "اعمال ترتیب چیدمان",
+          "description": "در صورت فعال بودن، بخش‌ها و فیلدهای فرم قابلیت طبق یک چیدمان استاندارد (مثلاً ابتدا اطلاعات پایه، سپس دسته‌بندی، ظاهر و ...) مرتب می‌شوند. در صورت غیرفعال بودن، ترتیب تعریف‌شده در خود قابلیت حفظ می‌شود."
+        },
+        "redirect-to-details-after-create": {
+          "title": "انتقال به صفحه جزئیات پس از ایجاد",
+          "description": "در صورت فعال بودن، پس از ایجاد رکورد جدید کاربر به صفحه جزئیات همان قابلیت منتقل می‌شود. در صورت غیرفعال بودن، کاربر در لیست یا نمای فعلی می‌ماند. این مقدار را می‌توان برای هر عملیات با options.process.redirect بازنویسی کرد."
+        },
+        "highlight-after-create-in-list": {
+          "title": "برجسته‌سازی پس از ایجاد در لیست",
+          "description": "در صورت فعال بودن، پس از ایجاد رکورد، ردیف یا کارت جدید در لیست برجسته می‌شود."
+        },
+        "show-page-badge": {
+          "title": "نمایش نشان صفحه",
+          "description": "در صورت فعال بودن، یک نشان نشانگر در هدر صفحه نمایش داده می‌شود تا اطلاعات متنی مانند وضعیت یا حالت را نشان دهد. در صورت غیرفعال بودن، نشان صفحه مخفی می‌شود."
+        },
+        "confirm-unsaved-changes": {
+          "title": "تأیید تغییرات ذخیره‌نشده",
+          "description": "در صورت فعال بودن، هنگام ترک صفحه، بستن دیالوگ یا جابه‌جایی بین بخش‌ها با ویرایش‌های ذخیره‌نشده، یک دیالوگ هشدار نمایش داده می‌شود. در صورت غیرفعال بودن، ممکن است تغییرات بدون تأیید از بین بروند."
+        },
+        "show-row-index-column": {
+          "title": "نمایش ستون شماره ردیف",
+          "description": "در صورت فعال بودن، در لیست‌ها و جدول‌هایی که از ستون شماره ردیف پشتیبانی می‌کنند، این ستون نمایش داده می‌شود (در صورتی که نمای یا ویجت نیز آن را مجاز کرده باشد). در صورت غیرفعال بودن، ستون شماره ردیف مخفی می‌ماند."
+        },
+        "quick-search-enabled": {
+          "title": "فعال‌سازی جستجوی سریع",
+          "description": "در صورت فعال بودن، در لیست قابلیت‌ها جعبه جستجوی سریع برای فیلتر متنی نمایش داده می‌شود. در صورت غیرفعال بودن، جستجوی سریع مخفی می‌ماند."
+        }
+      }
+    }
+  },
+  "messages": {
+    "generic": {
+      "cancel": {
+        "title": "انصراف",
+        "description": "عملیات لغو شد."
+      },
+      "success": {
+        "title": "موفقیت",
+        "description": "عملیات با موفقیت انجام شد."
+      },
+      "error": {
+        "title": "خطا",
+        "description": "مشکلی پیش آمده است. لطفاً دوباره تلاش کنید."
+      },
+      "warning": {
+        "title": "هشدار",
+        "description": "لطفاً بررسی کنید و دوباره تلاش کنید."
+      },
+      "info": {
+        "title": "اطلاعات",
+        "description": "در اینجا اطلاعات مفیدی وجود دارد."
+      }
+    },
+    "unsaved-changes": {
+      "title": "تغییرات ذخیره نشود؟",
+      "message": "تغییرات ذخیره نشده دارید. می‌خواهید بدون ذخیره خارج شوید؟"
+    },
+    "offline-continue": {
+      "title": "ادامه به‌صورت آفلاین؟",
+      "message": "سرور در دسترس نیست. آیا می‌خواهید با تنظیمات کش‌شدهٔ پلتفرم به‌صورت آفلاین ادامه دهید؟"
+    },
+    "discard-changes": {
+      "message": "تغییراتی اعمال کرده‌اید. آیا مطمئن هستید که می‌خواهید آن‌ها را کنار بگذارید؟"
+    },
+    "clipboard": {
+      "copied": "{{title}} کپی شد!"
+    },
+    "entity": {
+      "invalid-identifier": "شناسه موجودیت نامعتبر است",
+      "invalid-data": "داده نامعتبر است: باید رشته (شناسه) یا شیء (داده رکورد) باشد",
+      "create-command-unavailable": "دستور ایجاد برای موجودیت انتخاب‌شده در دسترس نیست",
+      "update-command-unavailable": "دستور به‌روزرسانی برای موجودیت انتخاب‌شده در دسترس نیست",
+      "command-no-result": "دستور هیچ نتیجه‌ای برنگرداند",
+      "invalid-action": "عملیات نامعتبر",
+      "create-failed": "ایجاد موجودیت انجام نشد",
+      "update-failed": "به‌روزرسانی موجودیت انجام نشد",
+      "view-failed": "نمایش جزئیات موجودیت انجام نشد"
+    },
+    "preload-filters": {
+      "title": "جستجو برای موارد مشخص",
+      "description": "برای فیلتر کردن لیست از یکی یا چند فیلد زیر استفاده کنید.",
+      "filter-icon-alt": "فیلتر",
+      "no-match": "هیچ رکوردی با این فیلترها پیدا نشد. مقادیر دیگری را امتحان کنید."
+    },
+    "crud": {
+      "create": {
+        "success": {
+          "title": "ایجاد شد",
+          "description": "{{entity}} با موفقیت ایجاد شد."
+        },
+        "error": {
+          "title": "ایجاد ناموفق",
+          "description": "نمی‌توان {{entity}} را ایجاد کرد."
+        },
+        "warning": {
+          "title": "هشدار ایجاد",
+          "description": "{{reason}}"
+        }
+      },
+      "update": {
+        "success": {
+          "title": "به‌روزرسانی شد",
+          "description": "{{entity}} با موفقیت به‌روزرسانی شد."
+        },
+        "error": {
+          "title": "به‌روزرسانی ناموفق",
+          "description": "نمی‌توان {{entity}} را به‌روزرسانی کرد."
+        },
+        "warning": {
+          "title": "هشدار به‌روزرسانی",
+          "description": "{{reason}}"
+        }
+      },
+      "delete": {
+        "success": {
+          "title": "حذف شد",
+          "description": "{{entity}} با موفقیت حذف شد."
+        },
+        "error": {
+          "title": "حذف ناموفق",
+          "description": "نمی‌توان {{entity}} را حذف کرد."
+        },
+        "warning": {
+          "title": "هشدار حذف",
+          "description": "{{reason}}"
+        },
+        "bulk": {
+          "success": {
+            "title": "ردیف‌ها حذف شدند",
+            "description": "{{count}} مورد حذف شد."
+          },
+          "error": {
+            "title": "حذف گروهی ناموفق",
+            "description": "حذف {{count}} مورد انجام نشد."
+          }
+        }
+      },
+      "archive": {
+        "success": {
+          "title": "بایگانی شد",
+          "description": "{{entity}} با موفقیت بایگانی شد."
+        },
+        "error": {
+          "title": "بایگانی ناموفق",
+          "description": "نمی‌توان {{entity}} را بایگانی کرد."
+        }
+      },
+      "restore-archive": {
+        "success": {
+          "title": "از بایگانی خارج شد",
+          "description": "{{entity}} از بایگانی بازگردانده شد."
+        },
+        "error": {
+          "title": "خارج‌سازی از بایگانی ناموفق",
+          "description": "نمی‌توان {{entity}} را از بایگانی خارج کرد."
+        }
+      },
+      "set-primary": {
+        "success": {
+          "title": "به‌عنوان اصلی تنظیم شد",
+          "description": "{{entity}} با موفقیت به‌عنوان مورد اصلی تنظیم شد."
+        },
+        "error": {
+          "title": "تنظیم به‌عنوان اصلی ناموفق",
+          "description": "نمی‌توان {{entity}} را به‌عنوان اصلی تنظیم کرد."
+        }
+      }
+    },
+    "network": {
+      "offline": {
+        "title": "آفلاین",
+        "description": "به نظر می‌رسد آفلاین هستید."
+      },
+      "timeout": {
+        "title": "اتمام زمان",
+        "description": "درخواست منقضی شد. لطفاً دوباره تلاش کنید."
+      },
+      "server-error": {
+        "title": "خطای سرور",
+        "description": "یک خطای غیرمنتظره ({{code}}) رخ داد."
+      },
+      "forbidden": {
+        "title": "عدم دسترسی",
+        "description": "شما مجوز انجام این عملیات را ندارید."
+      },
+      "not-found": {
+        "title": "یافت نشد",
+        "description": "منبع درخواستی پیدا نشد."
+      }
+    },
+    "form": {
+      "saved": {
+        "success": {
+          "title": "ذخیره شد",
+          "description": "تغییرات شما ذخیره شد."
+        }
+      },
+      "invalid": {
+        "error": {
+          "title": "فرم نامعتبر است",
+          "description": "فیلدهای مشخص‌شده را اصلاح کنید."
+        }
+      },
+      "no-changes": {
+        "warning": {
+          "title": "بدون تغییر",
+          "description": "تغییری برای ذخیره وجود ندارد."
+        }
+      }
+    }
+  },
+  "data-list": {
+    "dialog": {
+      "add-title": "افزودن سطر",
+      "edit-title": "ویرایش سطر"
+    },
+    "actions": {
+      "add-row": "افزودن سطر",
+      "edit": "ویرایش",
+      "revert": "بازگردانی"
+    },
+    "pending-removed": "علامت‌گذاری برای حذف (با ذخیرهٔ فرم اعمال می‌شود)"
+  },
+  "entity-form": {
+    "create-and-continue": {
+      "title": "ایجاد و ادامه"
+    },
+    "update-and-continue": {
+      "title": "به‌روزرسانی و ادامه"
+    },
+    "save-and-continue": {
+      "title": "ذخیره و ادامه"
+    },
+    "done": {
+      "title": "پایان"
+    }
+  },
+  "errors": {
+    "codes": {
+      "PAYLOAD_TOO_LARGE": "این فایل برای بارگذاری خیلی بزرگ است. فایل کوچک‌تری انتخاب کنید و دوباره تلاش کنید.",
+      "FILE_UPLOAD_FAILED": "بارگذاری فایل انجام نشد. لطفاً دوباره تلاش کنید.",
+      "POLICY_IMMUTABLE_RECORD": "این ردیف به‌عنوان ردیف سیستمی علامت‌گذاری شده و قابل تغییر نیست.",
+      "USER_HOME_TENANT_PROFILE_DENIED": "فقط خود کاربر، مستأجر اصلی او، یا پلتفرم می‌توانند این پروفایل را ویرایش کنند. در این مستأجر عضویت و نقش‌ها را مدیریت کنید.",
+      "UNAUTHORIZED": "وارد نشده‌اید یا نشست شما منقضی شده است.",
+      "FORBIDDEN": "مجوز انجام این عمل را ندارید.",
+      "NOT_FOUND": "مورد درخواستی یافت نشد.",
+      "UNKNOWN": "مشکلی پیش آمده است. لطفاً دوباره تلاش کنید."
+    },
+    "404": {
+      "title": "نتیجه‌ای یافت نشد",
+      "description": "اوه! به نظر می‌رسد این صفحه وجود ندارد.",
+      "image-alt": "خطای ۴۰۴ - تصویر صفحه پیدا نشد",
+      "actions": {
+        "go-home": {
+          "title": "بازگشت به خانه",
+          "description": "بازگشت به صفحه اصلی برنامه"
+        },
+        "contact-us": {
+          "title": "تماس با ما",
+          "description": "دریافت پشتیبانی"
+        }
+      }
+    },
+    "401": {
+      "title": "دسترسی مجاز نیست",
+      "description": "متأسفانه شما مجاز به مشاهده این صفحه نیستید.",
+      "image-alt": "خطای ۴۰۱ - تصویر دسترسی غیرمجاز",
+      "actions": {
+        "go-home": {
+          "title": "بازگشت به خانه",
+          "description": "بازگشت به صفحه اصلی برنامه"
+        },
+        "sign-in": {
+          "title": "ورود",
+          "description": "برای دسترسی به برنامه وارد شوید"
+        },
+        "contact-us": {
+          "title": "تماس با ما",
+          "description": "دریافت پشتیبانی"
+        }
+      }
+    },
+    "policy-immutable-record": "این ردیف به‌عنوان ردیف سیستمی علامت‌گذاری شده و قابل تغییر نیست."
+  },
+  "actions": {
+    "manage": {
+      "title": "مدیریت",
+      "description": "مدیریت ردیف‌ها"
+    },
+    "view": {
+      "title": "مشاهده",
+      "description": "نمایش جزئیات ردیف"
+    },
+    "detail": {
+      "title": "جزئیات",
+      "description": "نمایش اطلاعات کامل"
+    },
+    "create": {
+      "title": "ایجاد",
+      "description": "افزودن ردیف جدید"
+    },
+    "search-create-entity": {
+      "title": "ایجاد {{entity}}",
+      "description": "ایجاد {{entity}} جدید"
+    },
+    "create-category": {
+      "title": "ایجاد دسته‌بندی",
+      "description": "ایجاد دسته‌بندی جدید"
+    },
+    "edit": {
+      "title": "ویرایش",
+      "description": "ویرایش این ردیف"
+    },
+    "modify": {
+      "title": "ویرایش",
+      "description": "ویرایش این ردیف"
+    },
+    "delete": {
+      "title": "حذف",
+      "description": "حذف دائمی این ردیف",
+      "confirm": {
+        "title": "تأیید حذف",
+        "message": "آیا از حذف این ردیف مطمئن هستید؟ این عمل قابل بازگشت نیست.",
+        "processing": "در حال حذف...",
+        "buttons": {
+          "confirm": "حذف",
+          "cancel": "انصراف"
+        }
+      }
+    },
+    "lock": {
+      "title": "قفل",
+      "description": "قفل کردن این ردیف"
+    },
+    "unlock": {
+      "title": "باز کردن قفل",
+      "description": "باز کردن قفل این ردیف"
+    },
+    "ok": {
+      "title": "تأیید",
+      "description": "تأیید عملیات"
+    },
+    "close": {
+      "title": "بستن",
+      "description": "بستن پنجره"
+    },
+    "close-tab": {
+      "title": "بستن تب"
+    },
+    "close-other-tabs": {
+      "title": "بستن سایر تب‌ها"
+    },
+    "close-all-tabs": {
+      "title": "بستن همه تب‌ها"
+    },
+    "pin-tab": {
+      "title": "سنجاق کردن تب"
+    },
+    "unpin-tab": {
+      "title": "برداشتن سنجاق تب"
+    },
+    "scroll-tabs-back": {
+      "title": "اسکرول تب‌ها به عقب"
+    },
+    "scroll-tabs-forward": {
+      "title": "اسکرول تب‌ها به جلو"
+    },
+    "select": {
+      "title": "انتخاب",
+      "description": "انتخاب ردیف"
+    },
+    "show": {
+      "all": {
+        "title": "نمایش همه",
+        "description": "باز کردن لیست کامل بدون اعمال فیلترهای پیش‌بارگذاری"
+      }
+    },
+    "delete-items": {
+      "title": "حذف ردیف‌ها",
+      "description": "حذف دائمی ردیف‌های انتخاب‌شده",
+      "confirm": {
+        "title": "تأیید حذف گروهی",
+        "message": "آیا از حذف ردیف‌های انتخاب‌شده مطمئن هستید؟ این عمل قابل بازگشت نیست.",
+        "processing": "در حال حذف ردیف‌ها...",
+        "buttons": {
+          "confirm": "حذف ردیف‌ها",
+          "cancel": "انصراف"
+        }
+      }
+    },
+    "update": {
+      "title": "به‌روزرسانی",
+      "description": "به‌روزرسانی ردیف"
+    },
+    "save": {
+      "title": "ذخیره",
+      "description": "ذخیره تغییرات"
+    },
+    "save-and-new": {
+      "title": "ذخیره و ایجاد جدید",
+      "description": "ذخیره تغییرات و ایجاد ردیف جدید"
+    },
+    "add": {
+      "title": "افزودن",
+      "description": "افزودن ردیف جدید"
+    },
+    "add-item": {
+      "title": "افزودن ردیف",
+      "description": "افزودن ردیف جدید"
+    },
+    "download": {
+      "title": "دانلود",
+      "description": "دانلود فایل",
+      "processing": "در حال دانلود..."
+    },
+    "add-new": {
+      "title": "افزودن جدید",
+      "description": "افزودن ردیف جدید"
+    },
+    "add-new-child": {
+      "title": "افزودن زیرمجموعه",
+      "description": "افزودن ردیف زیرمجموعه جدید"
+    },
+    "save-as": {
+      "title": "ذخیره به‌عنوان",
+      "description": "ذخیره به‌عنوان ردیف جدید"
+    },
+    "next": {
+      "title": "بعدی",
+      "description": "رفتن به مرحله بعد"
+    },
+    "previous": {
+      "title": "قبلی",
+      "description": "رفتن به مرحله قبل"
+    },
+    "back": {
+      "title": "بازگشت",
+      "description": "بازگشت به صفحه قبل"
+    },
+    "approve": {
+      "title": "تأیید",
+      "description": "پذیرفتن و تأیید ردیف"
+    },
+    "reject": {
+      "title": "رد",
+      "description": "رد و بازگرداندن ردیف",
+      "confirm": {
+        "title": "تأیید رد",
+        "message": "آیا از رد این ردیف مطمئن هستید؟",
+        "processing": "در حال رد...",
+        "buttons": {
+          "confirm": "رد",
+          "cancel": "انصراف"
+        }
+      }
+    },
+    "submit": {
+      "title": "ارسال",
+      "description": "ارسال برای پردازش"
+    },
+    "complete": {
+      "title": "تکمیل",
+      "description": "علامت‌گذاری به‌عنوان تکمیل‌شده"
+    },
+    "archive": {
+      "title": "بایگانی",
+      "description": "بایگانی این ردیف",
+      "confirm": {
+        "title": "تأیید بایگانی",
+        "message": "آیا از بایگانی این ردیف مطمئن هستید؟",
+        "processing": "در حال بایگانی...",
+        "buttons": {
+          "confirm": "بایگانی",
+          "cancel": "انصراف"
+        }
+      }
+    },
+    "disable": {
+      "title": "غیرفعال",
+      "description": "غیرفعال کردن این ردیف",
+      "confirm": {
+        "title": "تأیید غیرفعال‌سازی",
+        "message": "آیا از غیرفعال کردن این ردیف مطمئن هستید؟",
+        "processing": "در حال غیرفعال‌سازی...",
+        "buttons": {
+          "confirm": "غیرفعال",
+          "cancel": "انصراف"
+        }
+      }
+    },
+    "enable": {
+      "title": "فعال",
+      "description": "فعال کردن این ردیف",
+      "confirm": {
+        "title": "تأیید فعال‌سازی",
+        "message": "آیا از فعال کردن این ردیف مطمئن هستید؟",
+        "processing": "در حال فعال‌سازی...",
+        "buttons": {
+          "confirm": "فعال",
+          "cancel": "انصراف"
+        }
+      }
+    },
+    "bulk-disable": {
+      "title": "غیرفعال کردن انتخاب‌شده‌ها",
+      "description": "غیرفعال کردن ردیف‌های انتخاب‌شده",
+      "confirm": {
+        "title": "تأیید غیرفعال‌سازی گروهی",
+        "message": "آیا از غیرفعال کردن {{count}} ردیف انتخاب‌شده مطمئن هستید؟",
+        "processing": "در حال غیرفعال‌سازی ردیف‌ها...",
+        "buttons": {
+          "confirm": "غیرفعال کردن ردیف‌ها",
+          "cancel": "انصراف"
+        }
+      }
+    },
+    "bulk-enable": {
+      "title": "فعال کردن انتخاب‌شده‌ها",
+      "description": "فعال کردن ردیف‌های انتخاب‌شده",
+      "confirm": {
+        "title": "تأیید فعال‌سازی گروهی",
+        "message": "آیا از فعال کردن {{count}} ردیف انتخاب‌شده مطمئن هستید؟",
+        "processing": "در حال فعال‌سازی ردیف‌ها...",
+        "buttons": {
+          "confirm": "فعال کردن ردیف‌ها",
+          "cancel": "انصراف"
+        }
+      }
+    },
+    "set-primary": {
+      "title": "تنظیم به‌عنوان اصلی",
+      "description": "تنظیم این ردیف به‌عنوان اصلی",
+      "confirm": {
+        "title": "تأیید تنظیم به‌عنوان اصلی",
+        "message": "آیا از تنظیم این ردیف به‌عنوان اصلی مطمئن هستید؟ این کار سایر ردیف‌های اصلی را لغو می‌کند.",
+        "processing": "در حال تنظیم به‌عنوان اصلی...",
+        "buttons": {
+          "confirm": "تنظیم به‌عنوان اصلی",
+          "cancel": "انصراف"
+        }
+      }
+    },
+    "export": {
+      "title": "برون‌بری",
+      "description": "دریافت داده‌های ردیف"
+    },
+    "import": {
+      "title": "درون‌ریزی",
+      "description": "بارگذاری گروهی ردیف‌ها"
+    },
+    "print": {
+      "title": "چاپ",
+      "description": "چاپ این رکورد"
+    },
+    "clone": {
+      "title": "کپی",
+      "description": "ایجاد یک نسخهٔ دقیق از این ردیف",
+      "confirm": {
+        "title": "تأیید کپی",
+        "message": "آیا از کپی این ردیف مطمئن هستید؟ یک نسخهٔ جدید ایجاد می‌شود.",
+        "processing": "در حال کپی...",
+        "buttons": {
+          "confirm": "کپی",
+          "cancel": "انصراف"
+        }
+      }
+    },
+    "open": {
+      "title": "باز کردن",
+      "description": "باز کردن ردیف یا فایل"
+    },
+    "open-details": {
+      "title": "باز کردن جزئیات",
+      "description": "باز کردن جزئیات ردیف"
+    },
+    "change": {
+      "title": "تغییر"
+    },
+    "cancel": {
+      "title": "انصراف",
+      "description": "لغو عملیات جاری"
+    },
+    "refresh": {
+      "title": "نوسازی",
+      "description": "نوسازی داده‌ها"
+    },
+    "reload": {
+      "title": "بارگذاری مجدد",
+      "description": "بارگذاری مجدد صفحه یا مؤلفه"
+    },
+    "search": {
+      "title": "جستجو",
+      "description": "جستجوی ردیف‌ها"
+    },
+    "filter": {
+      "title": "فیلتر",
+      "description": "اعمال فیلترها"
+    },
+    "sort": {
+      "title": "مرتب‌سازی",
+      "description": "مرتب‌سازی ردیف‌ها"
+    },
+    "clear": {
+      "title": "پاک کردن",
+      "description": "پاک کردن داده یا فرم"
+    },
+    "unselect": {
+      "title": "لغو انتخاب",
+      "description": "پاک‌سازی انتخاب"
+    },
+    "reset": {
+      "title": "بازنشانی",
+      "description": "بازنشانی به مقادیر پیش‌فرض"
+    },
+    "sync": {
+      "title": "همگام‌سازی",
+      "description": "همگام‌سازی داده‌ها"
+    },
+    "assign": {
+      "title": "اختصاص",
+      "description": "اختصاص مسئولیت"
+    },
+    "terminate": {
+      "title": "خاتمه",
+      "description": "خاتمه این نشست"
+    },
+    "terminate-selected": {
+      "title": "خاتمه انتخاب‌شده‌ها",
+      "description": "خاتمه نشست‌های انتخاب‌شده"
+    },
+    "restore": {
+      "title": "بازگردانی",
+      "description": "بازگردانی این ردیف بایگانی‌شده",
+      "confirm": {
+        "title": "تأیید بازگردانی",
+        "message": "آیا از بازگردانی این ردیف مطمئن هستید؟",
+        "processing": "در حال بازگردانی...",
+        "buttons": {
+          "confirm": "بازگردانی",
+          "cancel": "انصراف"
+        }
+      }
+    },
+    "restore-archive": {
+      "title": "بازگردانی از بایگانی",
+      "description": "بازگردانی این ردیف از بایگانی",
+      "confirm": {
+        "title": "تأیید بازگردانی از بایگانی",
+        "message": "آیا از بازگردانی این ردیف از بایگانی مطمئن هستید؟",
+        "processing": "در حال بازگردانی از بایگانی...",
+        "buttons": {
+          "confirm": "بازگردانی",
+          "cancel": "انصراف"
+        }
+      }
+    },
+    "bulk-archive": {
+      "title": "بایگانی گروهی",
+      "description": "بایگانی ردیف‌های انتخاب‌شده",
+      "confirm": {
+        "title": "تأیید بایگانی گروهی",
+        "message": "آیا از بایگانی {{count}} ردیف انتخاب‌شده مطمئن هستید؟",
+        "processing": "در حال بایگانی ردیف‌ها...",
+        "buttons": {
+          "confirm": "بایگانی",
+          "cancel": "انصراف"
+        }
+      }
+    },
+    "bulk-restore": {
+      "title": "بازگردانی گروهی",
+      "description": "بازگردانی ردیف‌های بایگانی‌شدهٔ انتخاب‌شده",
+      "confirm": {
+        "title": "تأیید بازگردانی گروهی",
+        "message": "آیا از بازگردانی ردیف‌های انتخاب‌شده مطمئن هستید؟",
+        "processing": "در حال بازگردانی ردیف‌ها...",
+        "buttons": {
+          "confirm": "بازگردانی",
+          "cancel": "انصراف"
+        }
+      }
+    },
+    "bulk-restore-archive": {
+      "title": "بازگردانی گروهی",
+      "description": "بازگردانی ردیف‌های انتخاب‌شده از بایگانی",
+      "confirm": {
+        "title": "تأیید بازگردانی گروهی از بایگانی",
+        "message": "آیا از بازگردانی {{count}} ردیف انتخاب‌شده از بایگانی مطمئن هستید؟",
+        "processing": "در حال بازگردانی از بایگانی...",
+        "buttons": {
+          "confirm": "بازگردانی",
+          "cancel": "انصراف"
+        }
+      }
+    },
+    "share": {
+      "title": "اشتراک‌گذاری",
+      "description": "ارسال یا اشتراک‌گذاری با دیگران"
+    },
+    "upload": {
+      "title": "بارگذاری",
+      "description": "بارگذاری یک ردیف"
+    },
+    "remove": {
+      "title": "حذف",
+      "description": "حذف یک ردیف",
+      "confirm": {
+        "title": "تأیید حذف",
+        "message": "آیا از حذف این ردیف مطمئن هستید؟",
+        "processing": "در حال حذف...",
+        "buttons": {
+          "confirm": "حذف",
+          "cancel": "انصراف"
+        }
+      }
+    },
+    "configure": {
+      "title": "پیکربندی",
+      "named-title": "پیکربندی {{name}}",
+      "description": "تنظیم گزینه‌ها و تنظیمات"
+    },
+    "setup": {
+      "title": "راه‌اندازی",
+      "description": "پیکربندی تنظیمات"
+    },
+    "design": {
+      "title": "طراحی",
+      "description": "باز کردن حالت طراحی"
+    },
+    "start": {
+      "title": "شروع",
+      "description": "شروع فرایند یا گردش‌کار"
+    },
+    "stop": {
+      "title": "توقف",
+      "description": "توقف فرایند یا گردش‌کار"
+    },
+    "pause": {
+      "title": "مکث",
+      "description": "مکث فرایند یا گردش‌کار"
+    },
+    "publish": {
+      "title": "انتشار",
+      "description": "قرار دادن به‌صورت عمومی",
+      "confirm": {
+        "title": "تأیید انتشار",
+        "message": "آیا از انتشار این ردیف مطمئن هستید؟ این ردیف به‌صورت عمومی قابل مشاهده خواهد بود.",
+        "processing": "در حال انتشار...",
+        "buttons": {
+          "confirm": "انتشار",
+          "cancel": "انصراف"
+        }
+      }
+    },
+    "unpublish": {
+      "title": "لغو انتشار",
+      "description": "حذف از دید عمومی",
+      "confirm": {
+        "title": "تأیید لغو انتشار",
+        "message": "آیا از لغو انتشار این ردیف مطمئن هستید؟ این ردیف دیگر به‌صورت عمومی قابل مشاهده نخواهد بود.",
+        "processing": "در حال لغو انتشار...",
+        "buttons": {
+          "confirm": "لغو انتشار",
+          "cancel": "انصراف"
+        }
+      }
+    },
+    "info": {
+      "title": "اطلاعات",
+      "description": "نمایش اطلاعات تفصیلی"
+    },
+    "confirm": {
+      "title": "تأیید",
+      "description": "تأیید عملیات جاری"
+    },
+    "preview": {
+      "title": "پیش‌نمایش",
+      "description": "مشاهده نحوهٔ نمایش"
+    },
+    "version-history": {
+      "title": "تاریخچهٔ نسخه‌ها",
+      "description": "نمایش تاریخچهٔ نسخه‌ها"
+    },
+    "compare": {
+      "title": "مقایسه",
+      "description": "مقایسهٔ ردیف‌های انتخاب‌شده"
+    },
+    "comments": {
+      "title": "نظرات",
+      "description": "نمایش نظرات و گفتگوها"
+    },
+    "sign": {
+      "title": "امضا",
+      "description": "امضای سند",
+      "checkBox": {
+        "label": "موافقت و امضا"
+      },
+      "signature": {
+        "label": "پس از پذیرش موافقت و امضا"
+      }
+    },
+    "send": {
+      "title": "ارسال",
+      "description": "ارسال ردیف"
+    },
+    "report": {
+      "title": "گزارش",
+      "description": "تولید گزارش"
+    },
+    "sent": {
+      "title": "ارسال شد",
+      "description": "علامت‌گذاری ردیف به‌عنوان ارسال‌شده"
+    },
+    "review": {
+      "title": "بازبینی",
+      "description": "بازبینی این ردیف"
+    },
+    "generate": {
+      "title": "تولید",
+      "description": "تولید محتوای جدید یا داده"
+    },
+    "reorder": {
+      "title": "بازچینی",
+      "description": "تغییر ترتیب ردیف‌ها"
+    },
+    "rename": {
+      "title": "تغییر نام",
+      "description": "تغییر نام این ردیف"
+    },
+    "apply": {
+      "title": "اعمال",
+      "description": "تغییرات را اعمال کنید",
+      "messages": {
+        "invalid": {
+          "title": "تنظیمات نامعتبر",
+          "message": "برخی از تنظیمات نامعتبر و قابل اعمال نیستند."
+        },
+        "success": {
+          "title": "تنظیمات اعمال شده",
+          "message": "تنظیمات با موفقیت اعمال شده است."
+        },
+        "error": {
+          "title": "پیاده‌سازی ناموفق",
+          "message": "تنظیمات اعمال نشد. لطفاً دوباره تلاش کنید."
+        }
+      }
+    },
+    "discard": {
+      "title": "لغو تغییرات",
+      "description": "صرف‌نظر از تغییرات"
+    },
+    "view-all": {
+      "title": "نمایش همه",
+      "button": "نمایش همهٔ ردیف‌ها"
+    },
+    "view-less": {
+      "title": "نمایش کمتر",
+      "button": "نمایش ردیف‌های کمتر"
+    },
+    "distribution": {
+      "title": "توزیع",
+      "description": "توزیع مورد",
+      "permission": "توزیع",
+      "audit": "توزیع",
+      "success": {
+        "title": "توزیع شد",
+        "message": "برای {{count}} گیرنده توزیع شد."
+      },
+      "error": {
+        "title": "خطای توزیع",
+        "message": "امکان توزیع وجود ندارد. لطفاً دوباره تلاش کنید."
+      }
+    }
+  },
+  "empty-states": {
+    "no-records-found": {
+      "title": "رکوردی یافت نشد",
+      "description": "در این بخش رکوردی موجود نیست. برای شروع یک رکورد جدید ایجاد کنید."
+    }
+  },
+  "virtual-keypad": {
+    "aria-label": "صفحه‌کلید عددی",
+    "backspace": "پاک کردن"
+  },
+  "state-message": {
+    "error": {
+      "title": "خطا",
+      "description": "مشکلی پیش آمده است"
+    },
+    "loading": {
+      "title": "در حال بارگذاری",
+      "description": "لطفاً صبر کنید..."
+    },
+    "searching": {
+      "title": "در حال جستجو",
+      "description": "در حال جستجوی ردیف‌ها..."
+    },
+    "success": {
+      "title": "موفقیت",
+      "description": "عملیات با موفقیت انجام شد."
+    },
+    "empty": {
+      "title": "بدون داده",
+      "description": "هیچ ردیفی یافت نشد"
+    },
+    "empty-columns": {
+      "title": "ستونی تعریف نشده",
+      "description": "لطفاً ابتدا ستون‌ها را پیکربندی کنید تا داده‌ها در صفحه‌گسترده نمایش داده شوند"
+    },
+    "empty-rows": {
+      "title": "بدون داده",
+      "description": "هیچ ردیفی یافت نشد. ردیف اضافه کنید تا داده نمایش داده شود"
+    },
+    "no-results": {
+      "title": "نتیجه‌ای یافت نشد",
+      "description": "هیچ ردیفی با جستجوی شما مطابقت ندارد"
+    },
+    "repeater-empty": {
+      "title": "هیچ ردیفی اضافه نشده",
+      "description": "با اضافه کردن اولین ردیف به لیست شروع کنید",
+      "add-first-item": "افزودن اولین ردیف",
+      "add-item": "افزودن ردیف"
+    }
+  },
+  "startup-tasks": {
+    "module-manifests": "در حال بارگذاری مانیفست ماژول‌ها...",
+    "seed-data": "در حال بارگذاری داده‌های اولیه...",
+    "loading-settings": "در حال بارگذاری تنظیمات...",
+    "regional-settings": "در حال اعمال تنظیمات منطقه‌ای...",
+    "check-terms": "در حال بررسی شرایط و ضوابط...",
+    "layout-theme": "در حال اعمال تنظیمات تم..."
+  },
+  "background-operation": {
+    "entity": {
+      "title": "عملیات پس‌زمینه",
+      "plural": "عملیات‌های پس‌زمینه"
+    },
+    "panel": {
+      "title": "کارهای پس‌زمینه"
+    },
+    "slot": {
+      "single": "۱ کار در حال انجام...",
+      "multiple": "{{count}} کار در حال انجام...",
+      "failed-single": "۱ کار ناموفق",
+      "failed-multiple": "{{count}} کار ناموفق"
+    },
+    "actions": {
+      "cancel": "لغو",
+      "pause": "توقف",
+      "resume": "ادامه",
+      "retry": "تلاش مجدد",
+      "dismiss": "بستن"
+    },
+    "step": "مرحله",
+    "progress": "پیشرفت",
+    "estimate": "زمان تقریبی باقی‌مانده",
+    "status": {
+      "queued": "در صف",
+      "running": "در حال اجرا",
+      "paused": "متوقف",
+      "completed": "انجام شد",
+      "failed": "ناموفق",
+      "cancelled": "لغو شد"
+    },
+    "completion": {
+      "success": "{{title}} با موفقیت انجام شد.",
+      "cancelled": "{{title}} لغو شد."
+    },
+    "failed": {
+      "retry-count": "تلاش",
+      "continue-step": "ادامه از مرحله"
+    },
+    "empty": {
+      "active": "عملیات فعالی وجود ندارد",
+      "completed": "عملیات انجام‌شده‌ای وجود ندارد",
+      "failed": "عملیات ناموفقی وجود ندارد"
+    }
+  },
+  "workflow": {
+    "warning": "هشدار",
+    "confirm-delete": "آیا از حذف این ردیف مطمئن هستید؟ این عمل قابل بازگشت نیست.",
+    "deleting": "در حال حذف...",
+    "success-delete-title": "با موفقیت حذف شد",
+    "success-delete-body": "ردیف‌های انتخاب‌شده با موفقیت حذف شدند.",
+    "success-partial-delete-title": "حذف جزئی",
+    "partial-delete-body": "برخی ردیف‌ها حذف شدند، اما حذف بقیه امکان‌پذیر نبود.",
+    "partial-delete-body-with-reason": "{{success}} حذف شد، {{fail}} ناموفق. {{reason}}",
+    "fail-delete-title": "حذف ناموفق",
+    "fail-delete-body": "حذف ردیف‌های انتخاب‌شده انجام نشد. لطفاً دوباره تلاش کنید.",
+    "fail-delete-body-with-reason": "حذف {{item}} ردیف انجام نشد. {{reason}}",
+    "entity-disabled": "ردیف غیرفعال شد",
+    "entity-disabled-body": "ردیف با موفقیت غیرفعال شد.",
+    "entity-enabled": "ردیف فعال شد",
+    "entity-enabled-body": "ردیف با موفقیت فعال شد.",
+    "entity-bulk-disabled": "ردیف‌ها غیرفعال شدند",
+    "entity-bulk-disabled-body": "ردیف‌های انتخاب‌شده با موفقیت غیرفعال شدند.",
+    "entity-bulk-enabled": "ردیف‌ها فعال شدند",
+    "entity-bulk-enabled-body": "ردیف‌های انتخاب‌شده با موفقیت فعال شدند.",
+    "entity-archived": "ردیف بایگانی شد",
+    "entity-archived-body": "ردیف با موفقیت بایگانی شد.",
+    "entity-unarchived": "ردیف بازگردانی شد",
+    "entity-unarchived-body": "ردیف با موفقیت از بایگانی بازگردانی شد.",
+    "entity-bulk-archived": "ردیف‌ها بایگانی شدند",
+    "entity-bulk-archived-body": "ردیف‌های انتخاب‌شده با موفقیت بایگانی شدند.",
+    "entity-bulk-unarchived": "ردیف‌ها بازگردانی شدند",
+    "entity-bulk-unarchived-body": "ردیف‌های انتخاب‌شده با موفقیت از بایگانی بازگردانی شدند.",
+    "entity-cloned": "ردیف کپی شد",
+    "entity-cloned-body": "یک نسخه جدید با موفقیت ایجاد شد.",
+    "no-need": "نیازی به اقدام نیست",
+    "no-item": "هیچ ردیفی برای حذف انتخاب نشده است.",
+    "entity-modified-title": "موجودیت تغییر یافت",
+    "entity-modified-body": "موجودیت با موفقیت تغییر یافت.",
+    "bulk": {
+      "confirm-title": "تأیید عملیات گروهی",
+      "confirm-message": "این عملیات روی ردیف‌های انتخاب‌شده اعمال شود؟",
+      "processing-title": "در حال پردازش",
+      "processing-status": "در حال اجرای عملیات گروهی...",
+      "success-title": "عملیات گروهی انجام شد",
+      "success-body": "{{item}} ردیف با موفقیت انجام شد.",
+      "partial-title": "عملیات گروهی ناقص انجام شد",
+      "partial-body": "{{success}} موفق، {{fail}} ناموفق.",
+      "partial-body-with-reason": "{{success}} موفق، {{fail}} ناموفق. {{reason}}",
+      "fail-title": "عملیات گروهی ناموفق",
+      "fail-body": "پردازش {{item}} ردیف انجام نشد.",
+      "fail-body-with-reason": "پردازش {{item}} ردیف انجام نشد. {{reason}}"
+    }
+  },
+  "statuses": {
+    "todo": {
+      "title": "انجام نشده",
+      "description": "ردیف در انتظار است و باید شروع شود"
+    },
+    "in-progress": {
+      "title": "در حال انجام",
+      "description": "ردیف در حال انجام است"
+    },
+    "in-review": {
+      "title": "در حال بررسی",
+      "description": "ردیف در حال بررسی است"
+    },
+    "blocked": {
+      "title": "مسدود شده",
+      "description": "ردیف مسدود شده و نمی‌تواند ادامه یابد"
+    },
+    "done": {
+      "title": "انجام شده",
+      "description": "ردیف تکمیل شده است"
+    },
+    "cancelled": {
+      "title": "لغو شده",
+      "description": "ردیف لغو شده است"
+    },
+    "draft": {
+      "title": "پیش‌نویس",
+      "description": "ردیف در حالت پیش‌نویس است"
+    },
+    "pending-review": {
+      "title": "در انتظار بررسی",
+      "description": "ردیف در انتظار بررسی است"
+    },
+    "waiting-sign-off": {
+      "title": "در انتظار تأیید",
+      "description": "ردیف در انتظار تأیید یا امضای نهایی است"
+    },
+    "waiting-approval": {
+      "title": "در انتظار تأیید",
+      "description": "ردیف در انتظار تأیید است"
+    },
+    "approved": {
+      "title": "تأیید شده",
+      "description": "ردیف تأیید شده است"
+    },
+    "published": {
+      "title": "منتشر شده",
+      "description": "ردیف منتشر شده است"
+    },
+    "archived": {
+      "title": "بایگانی شده",
+      "description": "ردیف بایگانی شده است"
+    },
+    "rejected": {
+      "title": "رد شده",
+      "description": "ردیف رد شده است"
+    },
+    "revision-requested": {
+      "title": "درخواست اصلاح",
+      "description": "بررسی‌کننده درخواست اصلاح داده؛ نویسنده باید اصلاح و مجدداً برای بررسی ارسال کند"
+    },
+    "active": {
+      "title": "فعال",
+      "description": "ردیف فعال است"
+    },
+    "inactive": {
+      "title": "غیرفعال",
+      "description": "ردیف غیرفعال است"
+    },
+    "pending": {
+      "title": "در انتظار",
+      "description": "ردیف در انتظار است"
+    },
+    "completed": {
+      "title": "تکمیل شده",
+      "description": "ردیف تکمیل شده است"
+    },
+    "suspended": {
+      "title": "معلق",
+      "description": "ردیف معلق شده است"
+    },
+    "failed": {
+      "title": "ناموفق",
+      "description": "ردیف ناموفق بوده است"
+    }
+  },
+  "common": {
+    "module": {
+      "title": "عمومی",
+      "description": "ابزارهای عمومی و عملکردهای مشترک"
+    },
+    "features": {
+      "global-search": {
+        "title": "جستجوی سراسری",
+        "description": "فعال‌سازی قابلیت جستجوی سراسری در تمام ماژول‌ها و موجودیت‌ها"
+      },
+      "advanced-export": {
+        "title": "خروجی پیشرفته",
+        "description": "فعال‌سازی گزینه‌های خروجی پیشرفته با فرمت‌های سفارشی، قالب‌ها و پردازش دسته‌ای"
+      },
+      "activity-log": {
+        "title": "گزارش فعالیت",
+        "description": "ردیابی و ممیزی تمام فعالیت‌های کاربر، تغییرات و رویدادهای سیستم"
+      },
+      "data-import": {
+        "title": "واردات داده",
+        "description": "واردات داده از منابع خارجی شامل CSV، Excel و یکپارچه‌سازی‌های API"
+      },
+      "bulk-operations": {
+        "title": "عملیات دسته‌ای",
+        "description": "انجام عملیات دسته‌ای روی چندین رکورد به صورت همزمان"
+      },
+      "advanced-filtering": {
+        "title": "فیلتر پیشرفته",
+        "description": "فعال‌سازی قابلیت ساخت پرس‌وجوی پیچیده و فیلتر پیشرفته"
+      },
+      "data-synchronization": {
+        "title": "همگام‌سازی داده",
+        "description": "همگام‌سازی داده در چندین سیستم، مستأجر و برنامه"
+      }
+    }
+  },
+  "terms": {
+    "common": {
+      "back": "بازگشت",
+      "yes-no": {
+        "yes": "بله",
+        "no": "خیر",
+        "unknown": "نامشخص"
+      },
+      "text-direction": {
+        "rtl": "راست‌به‌چپ",
+        "ltr": "چپ‌به‌راست"
+      },
+      "title": "عنوان",
+      "titles": "عناوین",
+      "name": "نام",
+      "names": "نام‌ها",
+      "short-name": "نام کوتاه",
+      "display-name": "نام نمایشی",
+      "full-name": "نام کامل",
+      "first-name": "نام",
+      "last-name": "نام خانوادگی",
+      "description": "توضیحات",
+      "code": "کد",
+      "row-number": "ردیف",
+      "expression": "عبارت",
+      "value": "مقدار",
+      "values": "مقادیر",
+      "type": "نوع",
+      "types": "نوع‌ها",
+      "icon": "آیکون",
+      "color": "رنگ",
+      "avatar": "نمایه",
+      "size": "اندازه",
+      "notes": "یادداشت‌ها",
+      "body": "متن",
+      "content": "محتوا",
+      "placeholder": "مکان‌نامه",
+      "profile": "پروفایل",
+      "version": "نسخه",
+      "versions": "نسخه‌ها",
+      "tag": "تگ",
+      "tags": "تگ‌ها",
+      "scope": "محدوده",
+      "readonly": "فقط خواندنی",
+      "id": "شناسه",
+      "information": "اطلاعات",
+      "interface": "رابط",
+      "from": "از",
+      "to": "به",
+      "language": "زبان",
+      "columns": "ستون‌ها",
+      "sorts": "مرتب‌سازی‌ها",
+      "widget": "ابزارک",
+      "configured-options": "گزینه‌های پیکربندی شده",
+      "overview": "نمای کلی",
+      "date": {
+        "today": "امروز"
+      }
+    },
+    "date-presets": {
+      "today": "امروز",
+      "this-week": "این هفته",
+      "this-month": "این ماه",
+      "yesterday": "دیروز",
+      "last-week": "هفته گذشته",
+      "last-month": "ماه گذشته",
+      "tomorrow": "فردا",
+      "next-week": "هفته آینده",
+      "next-month": "ماه آینده"
+    },
+    "people": {
+      "user": "کاربر",
+      "users": "کاربران",
+      "employee": "کارمند",
+      "employees": "کارمندان",
+      "contact": "تماس",
+      "contacts": "تماس‌ها",
+      "member": "عضو",
+      "members": "عضوان",
+      "manager": "مدیر",
+      "managers": "مدیران",
+      "leader": "رهبر",
+      "leaders": "رهبران",
+      "individual": "فرد",
+      "individuals": "فردان"
+    },
+    "organizations": {
+      "organization": "سازمان",
+      "organizations": "سازمان‌ها",
+      "company": "شرکت",
+      "companies": "شرکت‌ها",
+      "department": "دپارتمان",
+      "departments": "دپارتمان‌ها",
+      "team": "تیم",
+      "teams": "تیم‌ها",
+      "group": "گروه",
+      "groups": "گروه‌ها",
+      "position": "سمت",
+      "positions": "سمت‌ها",
+      "calendar": "تقویم",
+      "calendars": "تقویم‌ها",
+      "progress": "پیشرفت",
+      "availability": "قابلیت دسترسی"
+    },
+    "business": {
+      "client": "مشتری",
+      "clients": "مشتریان",
+      "customer": "مشترو",
+      "customers": "مشتروان",
+      "vendor": "تامین‌کننده",
+      "vendors": "تامین‌کنندگان",
+      "supplier": "تامین‌کننده",
+      "suppliers": "تامین‌کنندگان",
+      "partner": "همکار",
+      "partners": "همکاران",
+      "project": "پروژه",
+      "projects": "پروژه‌ها",
+      "task": "کار",
+      "tasks": "کارها"
+    },
+    "security": {
+      "role": "نقش",
+      "roles": "نقش‌ها",
+      "permission": "دسترسی",
+      "permissions": "دسترسی‌ها",
+      "session": "نشست",
+      "sessions": "نشست‌ها",
+      "administration": "مدیریت"
+    },
+    "communication": {
+      "message": "پیام",
+      "messages": "پیام‌ها",
+      "notification": "اعلان",
+      "notifications": "اعلان‌ها",
+      "email": "ایمیل",
+      "emails": "ایمیل‌ها",
+      "website": "وب‌سایت",
+      "websites": "وب‌سایت‌ها",
+      "phone": "تلفن",
+      "phones": "تلفن‌ها",
+      "mobile": "موبایل"
+    },
+    "reports": {
+      "report": "گزارش",
+      "reports": "گزارش‌ها",
+      "dashboard": "داشبورد",
+      "dashboards": "داشبورد‌ها"
+    },
+    "geography": {
+      "location": "مکان",
+      "locations": "مکان‌ها",
+      "country": "کشور",
+      "countries": "کشورها",
+      "region": "منطقه",
+      "regions": "مناطق",
+      "city": "شهر",
+      "cities": "شهرها",
+      "address": "آدرس",
+      "addresses": "آدرس‌ها"
+    },
+    "classification": {
+      "priority": "اولویت",
+      "priorities": "اولویت‌ها",
+      "order": "ترتیب",
+      "hierarchy": "ساختار",
+      "parent": "پدر",
+      "category": "دسته‌بندی",
+      "categories": "دسته‌بندی‌ها",
+      "children-count": "تعداد زیرمجموعه",
+      "catalog-scopes": "حوزه‌های کاتالوگ"
+    },
+    "contact": {
+      "first-name": "نام",
+      "last-name": "نام خانوادگی",
+      "username": "نام کاربری",
+      "company": "شرکت",
+      "companies": "شرکت‌ها",
+      "people": "فرد"
+    },
+    "status": {
+      "title": "وضعیت",
+      "description": "وضعیت ردیف",
+      "current": "وضعیت فعلی",
+      "available": "وضعیت‌های موجود",
+      "change": "تغییر وضعیت",
+      "name": "نام",
+      "color": "رنگ",
+      "icon": "آیکون",
+      "order": "ترتیب",
+      "active": "فعال",
+      "final": "نهایی",
+      "initial": "اولیه",
+      "transitions": "انتقال‌ها",
+      "from": "از",
+      "to": "به",
+      "transition": {
+        "title": "عنوان",
+        "description": "توضیحات",
+        "action": "عملیات",
+        "color": "رنگ",
+        "icon": "آیکون",
+        "automatic": "خودکار",
+        "requiresApproval": "نیاز به تأیید"
+      },
+      "options": {
+        "active": "فعال",
+        "inactive": "غیرفعال",
+        "blocked": "مسدود",
+        "archived": "بایگانی شده",
+        "verified": "تأیید شده",
+        "pending": "در انتظار",
+        "approved": "تایید شده",
+        "rejected": "رد شده",
+        "completed": "تکمیل شده",
+        "cancelled": "لغو شده",
+        "enabled": "فعال",
+        "disabled": "غیرفعال"
+      },
+      "states": {
+        "is-active": "فعال",
+        "is-archived": "بایگانی شده",
+        "is-disabled": "غیرفعال",
+        "is-enabled": "فعال",
+        "is-verified": "تأیید شده",
+        "is-default": "پیش‌فرض",
+        "is-primary": "اصلی",
+        "is-unique": "منحصر به فرد"
+      },
+      "confirm-change": {
+        "title": "تأیید تغییر وضعیت",
+        "message": "آیا مطمئن هستید که می‌خواهید وضعیت را به \"{{transition}}\" تغییر دهید؟"
+      }
+    },
+    "datetime": {
+      "date": "تاریخ",
+      "dates": "تاریخ‌ها",
+      "start-date": "تاریخ شروع",
+      "end-date": "تاریخ پایان",
+      "started-at": "شروع در",
+      "completed-at": "تکمیل در",
+      "period": "دوره",
+      "periods": "دوره‌ها",
+      "created-at": "ایجاد شده در",
+      "modified-at": "ویرایش شده در",
+      "last-verified": "آخرین تأیید",
+      "read-at": "خوانده شده در"
+    },
+    "audit": {
+      "section-title": "اطلاعات حسابرسی",
+      "column-title": "اطلاعات حسابرسی",
+      "modified": "تغییر یافته",
+      "history": "تاریخچه",
+      "created": "ایجاد شده",
+      "updated": "به‌روزرسانی شده",
+      "deleted": "حذف شده",
+      "date": "تاریخ",
+      "by": "توسط",
+      "reason": "دلیل",
+      "source": "منبع"
+    },
+    "validation": {
+      "validation": "اعتبارسنجی",
+      "validations": "اعتبارسنجی‌ها",
+      "regex": "رجوع به عبارت",
+      "min-length": "حداقل طول",
+      "max-length": "حداکثر طول",
+      "validity": "معتبریت",
+      "valid-from": "معتبر از",
+      "valid-to": "معتبر تا",
+      "messages": {
+        "required": "این فیلد الزامی است",
+        "variable-name-format": "نام باید با حرف یا زیرخط شروع شود و فقط می‌تواند شامل حروف، اعداد، زیرخط و خط تیره باشد. فاصله یا کاراکترهای خاص مجاز نیست."
+      }
+    },
+    "operators": {
+      "equal": "برابر",
+      "not-equal": "نا برابر",
+      "greater-than": "بزرگتر از",
+      "less-than": "کوچکتر از",
+      "greater-than-or-equal": "بزرگتر یا مساوی",
+      "less-than-or-equal": "کوچکتر یا مساوی",
+      "contains": "شامل",
+      "not-contains": "شامل نمی‌شود",
+      "in": "در",
+      "starts-with": "شروع با",
+      "ends-with": "پایان با",
+      "is-empty": "خالی است",
+      "is-not-empty": "خالی نیست",
+      "between": "بین"
+    },
+    "interface": {
+      "settings": "تنظیمات",
+      "action": "عملیات",
+      "actions": "عملیات‌ها",
+      "event": "رویداد",
+      "events": "رویدادها",
+      "appearance": "ظاهر",
+      "classification": "دسته‌بندی",
+      "icon": "آیکون",
+      "user-interface": "رابط کاربری",
+      "basic-info": "اطلاعات پایه",
+      "configuration": "پیکربندی",
+      "additional-info": "اطلاعات اضافی",
+      "geographic-details": "جزئیات جغرافیایی",
+      "items-selected": "ردیف انتخاب شده",
+      "unselect-all": "لغو انتخاب همه",
+      "table-view": "نمای جدول",
+      "card-view": "نمای کارت",
+      "list-display": "نمایش فهرست",
+      "card-display": "نمایش کارت",
+      "card-compact-view": "کارت‌های فشرده",
+      "card-expanded-view": "کارت‌های باز",
+      "no-items": "موردی یافت نشد",
+      "filter": {
+        "title": "فیلترها",
+        "placeholder": "فیلتری را اضافه کنید",
+        "no-filter-definitions": "تعریف فیلتر پیدا نشد",
+        "no-records": {
+          "title": "رکوردی پیدا نشد",
+          "description": "رکوردی پیدا نشد که معیارهای جستجوی خود را تطابق دهد. لطفاً مترادف‌های جستجو را تنظیم کنید."
+        }
+      },
+      "category": {
+        "title": "دسته‌بندی",
+        "placeholder": "یک دسته‌بندی را اضافه کنید",
+        "no-records": {
+          "title": "تعریف دسته‌بندی پیدا نشد",
+          "description": "دسته‌بندی‌های تعریف شده در این دسته در دسترس نیست. یک تعریف دسته‌بندی جدید ایجاد کنید تا شروع کنید."
+        },
+        "search": {
+          "placeholder": "جستجوی دسته‌بندی‌ها…",
+          "searching": "در حال جستجو...",
+          "results-found": {
+            "singular": "{{count}} نتیجه یافت شد",
+            "plural": "{{count}} نتیجه یافت شد"
+          },
+          "no-results": "نتیجه‌ای یافت نشد",
+          "no-results-found": {
+            "title": "نتیجه‌ای یافت نشد",
+            "description": "هیچ دسته‌بندی‌ای مطابق با جستجوی شما یافت نشد. کلمات کلیدی دیگری را امتحان کنید."
+          },
+          "no-records": {
+            "title": "هیچ دسته‌بندی‌ای مطابق با \"{{term}}\" یافت نشد",
+            "description": "لطفاً عبارت جستجو را تغییر دهید"
+          }
+        }
+      },
+      "selection": {
+        "items-selected": "ردیف‌های انتخاب شده",
+        "all-items": "همه ردیفها",
+        "availability": "قابلیت دسترسی"
+      },
+      "navigation": {
+        "home": "خانه",
+        "more-tabs": "تب‌های بیشتر"
+      },
+      "save-status": {
+        "draft": {
+          "title": "پیش‌نویس",
+          "description": "تغییرات ذخیره نشده است"
+        },
+        "saved": {
+          "title": "ذخیره شده",
+          "description": "تغییرات ذخیره شده است"
+        },
+        "not-saved": {
+          "title": "ذخیره نشده",
+          "description": "تغییرات ذخیره نشده است"
+        },
+        "error": {
+          "title": "خطا",
+          "description": "خطایی در ذخیره رخ داده است"
+        },
+        "confirmed": {
+          "title": "تأیید شده",
+          "description": "تغییرات تأیید شده است"
+        }
+      }
+    }
+  },
+  "menus": {
+    "administration": {
+      "title": "مدیریت",
+      "description": "تنظیمات و پیکربندی مدیریتی"
+    },
+    "contacts": {
+      "title": "تماس‌ها",
+      "description": "تماس‌ها، خدمات اضطراری و داده‌های مرجع مرتبط"
+    },
+    "help": {
+      "title": "راهنما",
+      "description": "راهنما و پشتیبانی برنامه"
+    },
+    "foundation-data": {
+      "title": "پیکربندی",
+      "description": "مدیریت پیکربندی و داده‌های مرجع"
+    },
+    "date-and-time": {
+      "title": "تاریخ و زمان",
+      "description": "منطقه‌های زمانی، تقویم‌ها و انواع رویداد تقویم"
+    },
+    "region": {
+      "title": "منطقه و زبان",
+      "description": "انواع مکان، مناطق جغرافیایی و زبان‌ها"
+    },
+    "people-and-demographics": {
+      "title": "افراد و جمعیت‌شناسی",
+      "description": "داده‌های مرجع شخصی"
+    },
+    "health": {
+      "title": "سلامت",
+      "description": "داده‌های مرجع و فهرست‌های سلامت"
+    },
+    "projects": {
+      "title": "پروژه‌ها و وظایف",
+      "description": "داده‌های مرجع پروژه و وظیفه"
+    },
+    "scheduling-and-events": {
+      "title": "زمان‌بندی و رویدادها",
+      "description": "انواع جلسات و رزرو"
+    },
+    "data-and-content": {
+      "title": "داده و محتوا",
+      "description": "انواع سند و تعاریف داده"
+    },
+    "platform-definitions": {
+      "title": "تعاریف پلتفرم",
+      "description": "کاتالوگ موجودیت، دستور، کوئری، افزونه و ویجت"
+    },
+    "maintenance": {
+      "title": "نگهداری",
+      "description": "داده‌های مرجع نگهداری و علل خرابی"
+    },
+    "plan-equipment": {
+      "title": "برنامه‌ریزی و تجهیزات",
+      "description": "پیکربندی برنامه‌ریزی نگهداری و تنظیمات دارایی"
+    },
+    "plan-equipment-maintenances": {
+      "title": "نگهداری‌ها",
+      "description": "تنظیمات نوع نگهداری، خرابی‌ها و انواع فعالیت"
+    },
+    "plan-equipment-assettypes": {
+      "title": "انواع دارایی",
+      "description": "تنظیمات نوع دارایی و نوع سیستم دارایی"
+    },
+    "platform": {
+      "title": "پلتفرم",
+      "description": "برنامه‌ها، مستاجرین و اشتراک‌ها در سراسر پلتفرم"
+    },
+    "content": {
+      "title": "انتشار",
+      "description": "تبلیغات، صفحات، داشبوردها و اطلاعیه‌ها."
+    },
+    "monitoring": {
+      "title": "پایش",
+      "description": "لاگ ارتباطات و سابقه کارهای پس‌زمینه."
+    },
+    "workflows": {
+      "title": "گردش کار",
+      "description": "تعاریف، نمونه‌ها و استودیوی گردش کار"
+    },
+    "commerce": {
+      "title": "تجارت",
+      "description": "محصولات، سفارشات و محصولات تامین‌کننده"
+    },
+    "meeting": {
+      "title": "جلسه",
+      "description": "انواع جلسات و انواع نقش‌ها"
+    },
+    "help-desk": {
+      "title": "پشتیبانی",
+      "description": "انواع مسئله و پیکربندی پشتیبانی"
+    },
+    "ai-management": {
+      "title": "هوشمندی",
+      "description": "پیکربندی مدل‌ها و دستیارهای هوش مصنوعی"
+    },
+    "document-management": {
+      "title": "اسناد",
+      "description": "انواع سند و پیکربندی فایل"
+    },
+    "forms-and-assessments": {
+      "title": "فرم‌ها و ارزیابی‌ها",
+      "description": "بانک سوالات، پرسشنامه‌ها و قالب‌های فرم"
+    },
+    "assessments": {
+      "title": "ارزیابی‌ها",
+      "description": "پرونده‌ها و جلسات ارزیابی"
+    },
+    "reservation": {
+      "title": "رزرو",
+      "description": "انواع، وضعیت‌ها و کلاس‌های رزرو"
+    },
+    "reservations": {
+      "title": "رزروها",
+      "description": "مدیریت رزروها"
+    },
+    "assets": {
+      "title": "دارایی‌ها",
+      "description": "سوابق دارایی‌های فیزیکی و دیجیتال و تعاریف مرتبط."
+    },
+    "maintenances": {
+      "title": "نگهداری",
+      "description": "انواع نگهداری، دستورکارها و داده‌های مرجع مرتبط."
+    },
+    "modules": {
+      "title": "ماژول‌ها",
+      "description": "ماژول‌های برنامه"
+    }
+  },
+  "app-startup": {
+    "loading-module-manifests": "در حال بارگذاری مانیفست ماژول‌ها...",
+    "preloading-entities": "در حال پیش‌بارگذاری موجودیت‌ها...",
+    "registering-stored-module-manifests": "در حال ثبت مانیفست ماژول‌ها از مخزن تعریف موجودیت...",
+    "seeding-data": "در حال بارگذاری داده‌های نمونه...",
+    "seeding-entity-definitions": "در حال بارگذاری تعاریف موجودیت..."
+  },
+  "keyboard-shortcuts": {
+    "help-title": "میانبرهای صفحه‌کلید",
+    "help-action": "نمایش میانبرهای صفحه‌کلید",
+    "no-shortcuts": "میانبر صفحه‌کلیدی برای این صفحه در دسترس نیست.",
+    "or": "یا",
+    "groups": {
+      "system": "سیستم",
+      "general": "عمومی",
+      "global": "سراسری",
+      "navigation": "پیمایش",
+      "filters": "فیلترها",
+      "entity-details": "جزئیات موجودیت",
+      "settings": "تنظیمات",
+      "dialog": "گفتگو"
+    },
+    "actions": {
+      "global-search": "باز کردن جستجوی سراسری",
+      "open-voice-command": "باز کردن فرمان صوتی",
+      "focus-filters": "فوکوس روی فیلترها",
+      "toggle-side-menu": "باز و بسته کردن منوی کناری"
+    }
+  }
+}

@@ -1,0 +1,1020 @@
+{
+  "module": {
+    "title": "مدیریت ارزیابی",
+    "description": "مدیریت ارزیابی‌ها، پرسشنامه‌ها و پیگیری پاسخ‌ها",
+    "menus": {
+      "root": {
+        "title": "مدیریت ارزیابی",
+        "description": "مدیریت ارزیابی‌ها و پرسشنامه‌ها"
+      }
+    },
+    "permissions": {
+      "title": "مدیریت ارزیابی",
+      "description": "مجوزهای مدیریت ارزیابی"
+    }
+  },
+  "features": {
+    "questionnaire-management": {
+      "title": "مدیریت پرسشنامه‌ها",
+      "description": "فعال‌سازی قابلیت مدیریت پرسشنامه‌ها"
+    }
+  },
+  "assetSystemTypes": {
+    "entities": {
+      "assetSystemType": {
+        "title": "نوع سیستم دارایی",
+        "plural": "انواع سیستم دارایی",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "id": {
+            "title": "شناسه"
+          },
+          "code": {
+            "title": "کد",
+            "placeholder": "کد نوع سیستم دارایی را وارد کنید"
+          },
+          "name": {
+            "title": "نام",
+            "placeholder": "نام نوع سیستم دارایی را وارد کنید"
+          },
+          "parentId": {
+            "title": "نوع سیستم والد",
+            "placeholder": "نوع سیستم والد را انتخاب کنید"
+          },
+          "parent": {
+            "title": "والد"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات نوع سیستم دارایی را وارد کنید"
+          }
+        }
+      }
+    }
+  },
+  "question-bank": {
+    "terms": {
+      "question": "سؤال",
+      "questions": "سؤالات",
+      "question-bank": "بانک سؤالات",
+      "interface": "رابط"
+    },
+    "entities": {
+      "question-bank-item": {
+        "title": "سؤال",
+        "plural": "بانک سؤالات",
+        "fields": {
+          "title": {
+            "title": "عنوان",
+            "description": "برچسب کوتاه در فهرست بانک سؤالات (فقط مدیران).",
+            "placeholder": "مثلاً سن (سال)"
+          },
+          "name": {
+            "title": "نام متغیر",
+            "description": "نام یکتا برای استفاده در فرمول‌های نتیجه (مثلاً answer.eval('name')). در هر ردیف پرسشنامه قابل بازنویسی است.",
+            "placeholder": "مثلاً scope_clear"
+          },
+          "question": {
+            "title": "سؤال",
+            "description": "متن سؤال برای پاسخ‌دهنده (متن غنی).",
+            "placeholder": "متن سؤال را وارد کنید…"
+          },
+          "note": {
+            "title": "یادداشت",
+            "description": "یادداشت یا زمینه اختیاری (متن غنی).",
+            "placeholder": "یادداشت اختیاری…"
+          },
+          "estimated-time": {
+            "title": "زمان تخمینی (ثانیه)",
+            "description": "زمان تخمینی برای پاسخ"
+          },
+          "difficulty": {
+            "title": "سطح دشواری",
+            "description": "سطح دشواری سؤال",
+            "options": {
+              "easy": "آسان",
+              "medium": "متوسط",
+              "hard": "دشوار"
+            }
+          },
+          "interface": {
+            "title": "رابط",
+            "description": "پیکربندی رابط ویجت",
+            "load-from-metadata-definition": "بارگذاری از تعریف فراداده",
+            "load-from-metadata-invalid": "تعریف انتخاب‌شده شامل پیکربندی معتبر ویجت نیست.",
+            "load-from-metadata-failed": "باز کردن فهرست تعاریف فراداده ممکن نشد. ماژول مدیریت داده باید در دسترس باشد.",
+            "editor-mode-widget": "ویجت",
+            "editor-mode-meta-data": "تعریف فراداده",
+            "meta-data-configurator-label": "تعریف فراداده",
+            "empty-source": {
+              "prompt": "نحوهٔ پیکربندی این رابط را انتخاب کنید: ویرایش مستقیم ویجت یا اتصال به یک تعریف فراداده.",
+              "readonly": "هنوز رابطی پیکربندی نشده است."
+            },
+            "switch-source": "تغییر منبع"
+          },
+          "hint": {
+            "title": "راهنما",
+            "description": "متن راهنمای اختیاری نمایش داده شده با سؤال (قابل بازنویسی در هر پرسشنامه)"
+          },
+          "hint-mode": {
+            "title": "حالت راهنما",
+            "description": "خاموش راهنما را پنهان می‌کند؛ سایر گزینه‌ها با متن راهنما سبک هشدار را تعیین می‌کنند",
+            "options": {
+              "off": "خاموش",
+              "info": "اطلاعات",
+              "warning": "هشدار",
+              "danger": "خطر",
+              "success": "موفقیت",
+              "neutral": "خنثی"
+            }
+          },
+          "hint-content": {
+            "title": "متن راهنما",
+            "description": "متن غنی نمایش داده می‌شود وقتی حالت راهنما خاموش نباشد"
+          },
+          "comment": {
+            "title": "توضیح پاسخ‌دهنده",
+            "enabled": "اجازه ثبت توضیح",
+            "required": "توضیح اجباری"
+          }
+        },
+        "groups": {
+          "content": "محتوای سؤال",
+          "presentation": "نمایش",
+          "settings": "تنظیمات"
+        },
+        "actions": {
+          "preview": {
+            "title": "پیش‌نمایش"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "question-bank": {
+        "title": "بانک سؤالات",
+        "management": {
+          "title": "مدیریت بانک سؤالات",
+          "description": "دسترسی کامل به مدیریت بانک سؤالات"
+        }
+      }
+    }
+  },
+  "questionnaires": {
+    "terms": {
+      "questionnaire": "پرسشنامه",
+      "questionnaires": "پرسشنامه‌ها"
+    },
+    "entities": {
+      "questionnaire": {
+        "title": "پرسشنامه",
+        "plural": "پرسشنامه‌ها",
+        "fields": {
+          "title": {
+            "title": "عنوان",
+            "description": "عنوان پرسشنامه",
+            "placeholder": "عنوان را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "description": "توضیحات پرسشنامه",
+            "placeholder": "توضیحات را وارد کنید"
+          },
+          "print-template-id": {
+            "title": "قالب چاپ",
+            "description": "قالب محتوایی که پرسشنامه پرشده را می‌پوشاند. سربرگ و حاشیه از قالب اصلی چاپ شرکت می‌آید."
+          },
+          "sections": {
+            "title": "بخش‌ها",
+            "description": "بخش‌های پرسشنامه"
+          },
+          "items": {
+            "title": "سؤالات",
+            "description": "سؤالات در پرسشنامه"
+          },
+          "type": {
+            "title": "نوع ارزیابی",
+            "description": "نوع ارزیابی",
+            "options": {
+              "questionnaire": "پرسشنامه",
+              "survey": "نظرسنجی",
+              "checklist": "چک‌لیست",
+              "test": "آزمون",
+              "evaluation": "ارزشیابی"
+            }
+          },
+          "structure": {
+            "title": "ساختار",
+            "description": "ساختار پرسشنامه با بخش‌ها و سؤالات"
+          },
+          "questions": {
+            "title": "سؤالات",
+            "description": "سؤالات پرسشنامه با بخش‌ها و ردیف‌ها"
+          },
+          "outcomes": {
+            "title": "نتایج",
+            "description": "قوانین نام‌گذاری‌شدهٔ نتیجه که از پاسخ‌ها ارزیابی می‌شوند (outcome.eval، placeholderهای خلاصه)"
+          },
+          "pre-enabled": {
+            "title": "نمایش صفحه خوش‌آمدگویی",
+            "description": "نمایش صفحه خوش‌آمدگویی یا مقدمه قبل از سؤالات پرسشنامه"
+          },
+          "pre-content": {
+            "title": "محتوای خوش‌آمدگویی",
+            "description": "محتوای متنی غنی نمایش داده شده در صفحه خوش‌آمدگویی (چند زبانه)",
+            "placeholder": "پیام خوش‌آمدگویی، دستورالعمل‌ها یا متن مقدمه را وارد کنید..."
+          },
+          "post-review-enabled": {
+            "title": "نمایش بررسی قبل از ارسال",
+            "description": "نمایش مرحله بررسی که کاربران می‌توانند تمام پاسخ‌ها را قبل از ارسال ببینند"
+          },
+          "post-summary-enabled": {
+            "title": "نمایش خلاصه پس از ارسال",
+            "description": "پس از ارسال، در صورت فعال بودن، گام نهایی خلاصه (متن غنی) نمایش داده می‌شود. اگر نتایج هم فعال باشد، خلاصه بعد از گام نتایج است."
+          },
+          "post-show-outcome-results": {
+            "title": "نمایش نتایج",
+            "description": "پس از ارسال، اگر خلاصه هم فعال باشد، ابتدا گام نتایج و سپس خلاصه؛ اگر خلاصه غیرفعال باشد، فقط این گام پس از ارسال نمایش داده می‌شود."
+          },
+          "post-summary-content": {
+            "title": "محتوای خلاصه",
+            "description": "متن سفارشی برای صفحه خلاصه (چند زبانه و متغیرها)",
+            "placeholder": "پیام تشکر یا خلاصه سفارشی. متغیرها: {{totalQuestions}}, {{answeredCount}}, {{totalTime}}, {{elapsedSeconds}} و {{outcomeName}} از نتایج"
+          }
+        },
+        "groups": {
+          "structure": "ساختار",
+          "questions": "سؤالات",
+          "pre-questionnaire": "قبل از پرسشنامه",
+          "post-questionnaire": "بعد از پرسشنامه",
+          "display": "نمایش",
+          "print": "گزینه‌های چاپ"
+        },
+        "related-entities": {
+          "automations": {
+            "title": "اتوماسیون",
+            "description": "اقداماتی که بر اساس نتایج پرسشنامه اجرا می‌شوند"
+          }
+        },
+        "actions": {
+          "preview": {
+            "title": "پیش‌نمایش"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "questionnaire": {
+        "title": "پرسشنامه‌ها",
+        "management": {
+          "title": "مدیریت پرسشنامه‌ها",
+          "description": "دسترسی کامل به مدیریت پرسشنامه‌ها"
+        },
+        "create": {
+          "title": "ایجاد پرسشنامه",
+          "description": "ایجاد پرسشنامه‌های جدید"
+        },
+        "edit": {
+          "title": "ویرایش پرسشنامه",
+          "description": "ویرایش اطلاعات پرسشنامه"
+        },
+        "delete": {
+          "title": "حذف پرسشنامه‌ها",
+          "description": "حذف پرسشنامه‌ها"
+        }
+      }
+    },
+    "components": {
+      "questionnaire-builder": {
+        "item-badge": {
+          "required": "اجباری",
+          "conditional-required": "اجباری شرطی",
+          "optional": "اختیاری",
+          "visibility-visible": "قابل نمایش",
+          "visibility-hidden": "مخفی",
+          "visibility-conditional": "نمایش شرطی"
+        },
+        "title": "سازنده پرسشنامه",
+        "description": "ساخت ساختار پرسشنامه با بخش‌ها و سوالات",
+        "tabs": {
+          "general": {
+            "title": "عمومی"
+          }
+        },
+        "groups": {
+          "identity": {
+            "title": "شناسه"
+          },
+          "validation": {
+            "title": "اعتبارسنجی"
+          },
+          "visibility": {
+            "title": "نمایش"
+          },
+          "hint": {
+            "title": "راهنما"
+          },
+          "comment": {
+            "title": "توضیح پاسخ‌دهنده"
+          },
+          "section": {
+            "title": "بخش"
+          }
+        },
+        "actions": {
+          "add-section": {
+            "title": "افزودن بخش"
+          },
+          "edit-section": {
+            "title": "ویرایش بخش"
+          },
+          "delete-section": {
+            "title": "حذف بخش"
+          },
+          "add-question": {
+            "title": "افزودن سوال"
+          },
+          "edit-question": {
+            "title": "ویرایش تنظیمات سوال"
+          },
+          "preview": {
+            "title": "پیش‌نمایش"
+          },
+          "preview-question": {
+            "title": "پیش‌نمایش سوال"
+          },
+          "fullscreen": {
+            "title": "تمام صفحه"
+          },
+          "settings": {
+            "title": "تنظیمات نمایش"
+          }
+        },
+        "fields": {
+          "question-id": {
+            "title": "شناسه سوال",
+            "description": "شناسه پایدار و یکتا برای این نمونه سوال (در صورت نبود نام جایگزین، به‌عنوان کلید پاسخ استفاده می‌شود)",
+            "placeholder": "شناسه یکتا (حروف، اعداد، _ و -)"
+          },
+          "section-id": {
+            "title": "شناسه بخش",
+            "description": "شناسه پایدار و یکتا برای این بخش (در چیدمان و شرایط استفاده می‌شود)",
+            "placeholder": "شناسه یکتا (حروف، اعداد، _ و -)"
+          },
+          "question-item-id-badge": {
+            "title": "شناسه سوال"
+          },
+          "tags": {
+            "title": "برچسب‌ها",
+            "description": "برچسب برای نتایج (answer.byTag / answer.allByTag)",
+            "placeholder": "افزودن برچسب"
+          },
+          "is-required": {
+            "title": "اجباری",
+            "description": "آیا این سوال اجباری است؛ با binding می‌توان وضعیت اجباری را با عبارت تعیین کرد."
+          },
+          "visible": {
+            "title": "قابل نمایش",
+            "description": "آیا این سوال نمایش داده شود. با binding می‌توان نمایش را با عبارت کنترل کرد."
+          },
+          "hint": {
+            "title": "راهنما",
+            "description": "متن راهنمای اختیاری برای این سوال (در صورت تنظیم، مقدار پیش‌فرض بانک سوال را بازنویسی می‌کند)"
+          },
+          "hint-mode": {
+            "title": "حالت راهنما",
+            "description": "خاموش راهنما را پنهان می‌کند؛ سایر گزینه‌ها با متن راهنما سبک را تعیین می‌کنند",
+            "options": {
+              "off": "خاموش",
+              "info": "اطلاعات",
+              "warning": "هشدار",
+              "danger": "خطر",
+              "success": "موفقیت",
+              "neutral": "خنثی"
+            }
+          },
+          "comment-enabled": {
+            "title": "اجازه ثبت توضیح",
+            "description": "آیا پاسخ‌دهنده بتواند برای این سؤال توضیح وارد کند (در صورت تغییر، مقدار پیش‌فرض بانک سؤال را بازنویسی می‌کند)"
+          },
+          "comment-required": {
+            "title": "توضیح اجباری",
+            "description": "در صورت نمایش فیلد توضیح، خالی نبودن آن قبل از ادامه الزامی است (در صورت تغییر، مقدار پیش‌فرض بانک سؤال را بازنویسی می‌کند)"
+          },
+          "section-title": {
+            "placeholder": "عنوان بخش را وارد کنید"
+          },
+          "section-description": {
+            "placeholder": "توضیح بخش (اختیاری)"
+          }
+        },
+        "validation": {
+          "section-title-required": {
+            "title": "عنوان بخش الزامی است",
+            "description": "یک عنوان برای بخش وارد کنید."
+          },
+          "section-id-required": {
+            "title": "شناسه بخش الزامی است",
+            "description": "یک شناسه یکتا برای بخش وارد کنید."
+          },
+          "section-id-invalid": {
+            "title": "شناسه بخش نامعتبر است",
+            "description": "فقط حروف، اعداد، زیرخط و خط تیره (۱ تا ۱۲۸ نویسه) مجاز است."
+          },
+          "section-id-duplicate": {
+            "title": "شناسه بخش تکراری است",
+            "description": "بخش دیگری این شناسه را دارد."
+          },
+          "question-id-required": {
+            "title": "شناسه سوال الزامی است",
+            "description": "یک شناسه یکتا برای سوال وارد کنید."
+          },
+          "question-id-invalid": {
+            "title": "شناسه سوال نامعتبر است",
+            "description": "فقط حروف، اعداد، زیرخط و خط تیره (۱ تا ۱۲۸ نویسه) مجاز است."
+          },
+          "question-id-duplicate": {
+            "title": "شناسه تکراری",
+            "description": "سوال دیگری این شناسه را دارد."
+          }
+        },
+        "empty-states": {
+          "no-sections": {
+            "title": "بدون بخش",
+            "description": "با افزودن یک بخش، ساخت پرسشنامه را شروع کنید"
+          },
+          "empty-section": {
+            "title": "بخش خالی",
+            "description": "سوالات را از بانک سوالات به این بخش اضافه کنید"
+          }
+        },
+        "select-questions": "انتخاب سوالات از بانک سوالات",
+        "categories": "دسته‌بندی‌ها"
+      },
+      "questionnaire-outcomes-builder": {
+        "summary": "قوانین نام‌گذاری‌شدهٔ نتیجه را تعریف کنید؛ پس از ارسال یا در پیش‌نمایش از پاسخ‌ها ارزیابی می‌شوند.",
+        "tabs": {
+          "general": {
+            "title": "عمومی"
+          }
+        },
+        "groups": {
+          "result": "نتیجه",
+          "display-rules": "قوانین نمایش"
+        },
+        "empty": {
+          "no-sections": {
+            "title": "هنوز بخشی تعریف نشده",
+            "description": "برای گروه‌بندی قوانین نتیجه، یک بخش اضافه کنید."
+          },
+          "empty-section": {
+            "title": "نتیجه‌ای در این بخش نیست",
+            "description": "برای تعیین امتیاز، باند و پیام از پاسخ‌ها، قوانین نتیجه اضافه کنید."
+          }
+        },
+        "actions": {
+          "add-section": {
+            "title": "افزودن بخش"
+          },
+          "add-outcome": {
+            "title": "افزودن نتیجه"
+          }
+        },
+        "fields": {
+          "name": {
+            "title": "نام",
+            "placeholder": "مثلاً totalScore، bmi، readinessBand"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "مثلاً امتیاز کل، BMI، باند آمادگی"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیح دهید این نتیجه چه چیزی را تعیین می‌کند"
+          },
+          "result-kind": {
+            "title": "نوع نتیجه",
+            "options": {
+              "number": "عدد",
+              "string": "متن",
+              "boolean": "بله / خیر"
+            }
+          },
+          "expression": {
+            "title": "عبارت",
+            "placeholder": "مثلاً fn.ROUND(Number(answer.eval('weight_kg')) / ((Number(answer.eval('height_cm')) / 100) ** 2), 1)"
+          },
+          "display-rules": {
+            "title": "قوانین نمایش",
+            "description": "وقتی مقدار نتیجه با شرط مطابقت دارد، استایل معنایی اعمال می‌شود. اولین قانون منطبق اعمال می‌شود."
+          },
+          "display-operator": {
+            "title": "عملگر",
+            "options": {
+              "eq": "برابر",
+              "neq": "نامساوی",
+              "gt": "بزرگ‌تر از",
+              "gte": "بزرگ‌تر یا مساوی",
+              "lt": "کوچک‌تر از",
+              "lte": "کوچک‌تر یا مساوی"
+            }
+          },
+          "display-compare-value": {
+            "title": "مقدار",
+            "placeholder": "مقدار"
+          },
+          "display-color": {
+            "title": "رنگ",
+            "placeholder": "یک رنگ تم انتخاب کنید"
+          },
+          "display-emphasis": {
+            "title": "تاکید",
+            "options": {
+              "normal": "عادی",
+              "medium": "متوسط",
+              "bold": "پررنگ"
+            }
+          },
+          "display-icon": {
+            "title": "آیکن"
+          }
+        },
+        "validation": {
+          "duplicate-name": "نام هر نتیجه باید در این پرسشنامه یکتا باشد.",
+          "name-required": {
+            "title": "نام الزامی است",
+            "description": "یک نام یکتا برای نتیجه وارد کنید."
+          },
+          "name-invalid": {
+            "title": "نام نامعتبر است",
+            "description": "از حروف، اعداد، زیرخط و خط تیره استفاده کنید."
+          },
+          "title-required": {
+            "title": "عنوان الزامی است",
+            "description": "عنوان نمایشی برای این نتیجه وارد کنید."
+          },
+          "expression-required": {
+            "title": "عبارت الزامی است",
+            "description": "عبارت این نتیجه را وارد کنید."
+          }
+        }
+      },
+      "questionnaire-viewer": {
+        "title": "نمایشگر پرسشنامه",
+        "description": "مشاهده و تعامل با پرسشنامه‌ها",
+        "flow": {
+          "start": "شروع",
+          "review": "بررسی",
+          "results": "نتایج",
+          "answers": "پاسخ‌ها",
+          "edit": "ویرایش",
+          "done": "تکمیل",
+          "sign-off": "تأیید و امضا",
+          "review-title": "بررسی پاسخ‌های شما",
+          "summary-title": "متشکریم",
+          "outcomes-section-title": "نتایج قوانین خروجی",
+          "no-outcomes": "نتیجه‌ای برای نمایش وجود ندارد.",
+          "pass": "قبول",
+          "fail": "رد"
+        },
+        "preview": {
+          "notice": {
+            "title": "حالت پیش‌نمایش",
+            "description": "پاسخ‌ها ذخیره یا ارسال نمی‌شوند."
+          },
+          "finish": {
+            "title": "پایان پیش‌نمایش"
+          }
+        },
+        "actions": {
+          "save-as-draft": {
+            "title": "ذخیره پیش‌نویس",
+            "success": "پاسخ‌های شما ذخیره شد. می‌توانید بعداً از کارتابل ادامه دهید."
+          }
+        },
+        "validation": {
+          "error-title": "خطای اعتبارسنجی",
+          "current-page-error": "لطفاً تمام سوالات اجباری این صفحه را تکمیل کنید.",
+          "all-questions-error": "لطفاً تمام سوالات اجباری پرسشنامه را قبل از ارسال تکمیل کنید.",
+          "comment-required": "برای «{{ title }}» وارد کردن توضیح الزامی است."
+        },
+        "fields": {
+          "questionnaire-id": {
+            "title": "شناسه پرسشنامه"
+          },
+          "view-mode": {
+            "title": "حالت نمایش",
+            "description": "نحوه نمایش سوالات",
+            "options": {
+              "single-page": "صفحه واحد (همه گروه‌ها در یک صفحه)",
+              "page-per-group": "صفحه به ازای گروه (یک بخش در هر صفحه)",
+              "page-per-question": "صفحه به ازای سوال (یک سوال در هر صفحه)",
+              "side-menu": "منوی کناری (بخش‌ها در سایدبار، سوالات در سمت راست)"
+            }
+          },
+          "show-timer": {
+            "title": "نمایش تایمر"
+          },
+          "show-progress-bar": {
+            "title": "نمایش نوار پیشرفت"
+          },
+          "show-question-numbers": {
+            "title": "نمایش شماره سوالات"
+          },
+          "validation-strategy": {
+            "title": "زمان‌بندی اعتبارسنجی",
+            "options": {
+              "step": "در هر مرحله",
+              "end": "در ارسال نهایی"
+            }
+          },
+          "completion-mode": {
+            "title": "حالت تکمیل",
+            "description": "آیا پاسخ‌دهنده می‌تواند پیش از ارسال نهایی پیش‌نویس ذخیره کند",
+            "options": {
+              "submit-only": "فقط ارسال",
+              "save-and-continue": "ذخیره و ادامه"
+            }
+          },
+          "print-paper-size": {
+            "title": "اندازه کاغذ",
+            "options": {
+              "a4": "A4",
+              "letter": "Letter",
+              "legal": "Legal"
+            }
+          },
+          "print-orientation": {
+            "title": "جهت صفحه",
+            "options": {
+              "portrait": "عمودی",
+              "landscape": "افقی"
+            }
+          },
+          "print-watermark": {
+            "title": "واترمارک",
+            "placeholder": "متن اختیاری، مثلاً محرمانه"
+          },
+          "print-show-welcome-screen": {
+            "title": "نمایش صفحه خوش‌آمدگویی"
+          },
+          "print-show-summary-after-submit": {
+            "title": "نمایش خلاصه پس از ارسال"
+          },
+          "print-show-outcome-results": {
+            "title": "نمایش نتایج"
+          },
+          "print-show-unanswered-questions": {
+            "title": "نمایش سؤالات بدون پاسخ"
+          },
+          "print-show-comments": {
+            "title": "نمایش توضیحات"
+          },
+          "print-show-attachments": {
+            "title": "نمایش پیوست‌ها"
+          },
+          "print-show-hints": {
+            "title": "نمایش راهنما"
+          },
+          "print-show-notes": {
+            "title": "نمایش یادداشت سؤال"
+          }
+        },
+        "loading": {
+          "title": "در حال بارگذاری پرسشنامه",
+          "description": "لطفا صبر کنید..."
+        },
+        "error": {
+          "title": "خطا در بارگذاری پرسشنامه"
+        },
+        "attachments": {
+          "title": "پیوست‌ها"
+        },
+        "questionnaire-attachments": {
+          "title": "اسناد مرجع",
+          "footer-action": {
+            "title": "اسناد مرجع"
+          }
+        },
+        "comment": {
+          "label": "توضیح",
+          "placeholder": "توضیح خود را وارد کنید…"
+        },
+        "badges": {
+          "answered": "پاسخ داده شده",
+          "required": "اجباری"
+        }
+      }
+    }
+  },
+  "automations": {
+    "terms": {
+      "automation": "اتوماسیون",
+      "automations": "اتوماسیون‌ها"
+    },
+    "entities": {
+      "automation": {
+        "title": "اتوماسیون",
+        "plural": "اتوماسیون‌ها",
+        "groups": {
+          "action": "تعریف اقدام"
+        },
+        "fields": {
+          "questionnaire": {
+            "title": "پرسشنامه",
+            "description": "پرسشنامه والد"
+          },
+          "name": {
+            "title": "نام",
+            "description": "نام متغیر (حروف، اعداد، زیرخط، خط تیره)",
+            "placeholder": "مثال: lifestyleCounseling، urgentReferral"
+          },
+          "title": {
+            "title": "عنوان",
+            "description": "عنوان نمایشی",
+            "placeholder": "مثال: مشاوره سبک زندگی، ارجاع فوری"
+          },
+          "description": {
+            "title": "توضیحات",
+            "description": "توضیحات اختیاری",
+            "placeholder": "توضیح دهید این اقدام چه زمانی اجرا می‌شود"
+          },
+          "condition": {
+            "title": "شرط",
+            "description": "عبارت JSON روی نتایج قوانین (field = نام نتیجه قانون)",
+            "placeholder": "{ \"op\": \"eq\", \"field\": \"overallRisk\", \"value\": \"moderate\" }"
+          },
+          "command": {
+            "title": "کلید دستور",
+            "description": "کلید ثبت‌شده AXPCommand برای اجرا",
+            "placeholder": "مثال: AssessmentManagement.HealthAssessment:LifestyleCounseling"
+          },
+          "params": {
+            "title": "پارامترها",
+            "description": "شیء JSON ارسال‌شده به دستور",
+            "placeholder": "{ \"priority\": 3 }"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "automation": {
+        "title": "اتوماسیون‌ها",
+        "management": {
+          "title": "مدیریت اتوماسیون‌ها",
+          "description": "دسترسی کامل به مدیریت اتوماسیون‌ها"
+        },
+        "create": {
+          "title": "ایجاد اتوماسیون",
+          "description": "ایجاد اتوماسیون‌های جدید"
+        },
+        "edit": {
+          "title": "ویرایش اتوماسیون",
+          "description": "ویرایش اطلاعات اتوماسیون"
+        },
+        "delete": {
+          "title": "حذف اتوماسیون‌ها",
+          "description": "حذف اتوماسیون‌ها"
+        }
+      }
+    }
+  },
+  "cases": {
+    "terms": {
+      "case": "پرونده",
+      "cases": "پرونده‌ها"
+    },
+    "entities": {
+      "assessment-case": {
+        "title": "پرونده ارزیابی",
+        "plural": "پرونده‌های ارزیابی",
+        "fields": {
+          "questionnaire": {
+            "title": "پرسشنامه",
+            "description": "پرسشنامه اختصاص داده شده",
+            "placeholder": "پرسشنامه را انتخاب کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "description": "عنوان پرونده",
+            "placeholder": "عنوان را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "description": "توضیحات پرونده",
+            "placeholder": "توضیحات را وارد کنید"
+          },
+          "status": {
+            "title": "وضعیت",
+            "description": "وضعیت پرونده",
+            "options": {
+              "active": "فعال",
+              "closed": "بسته شده",
+              "cancelled": "لغو شده"
+            }
+          },
+          "subject": {
+            "title": "هدف",
+            "description": "موجودیتی که این پرونده ارزیابی برای آن ثبت شده است"
+          },
+          "subject-entity-name": {
+            "title": "نام موجودیت هدف",
+            "description": "نام موجودیت هدف (مثال: AssetManagement.Asset)"
+          },
+          "subject-entity-id": {
+            "title": "شناسه موجودیت هدف",
+            "description": "شناسه موجودیت هدف"
+          }
+        },
+        "groups": {
+          "subject": "هدف"
+        }
+      }
+    },
+    "actions": {
+      "fill-assessment": {
+        "title": "تکمیل ارزیابی",
+        "description": "تکمیل پرسشنامه ارزیابی برای این پرونده"
+      },
+      "view-last-session-answers": {
+        "title": "مشاهده پاسخ‌های آخرین جلسه",
+        "no-session": "جلسه ارزیابی برای این پرونده یافت نشد"
+      },
+      "preview-last-session-pdf": {
+        "title": "پیش‌نمایش PDF آخرین جلسه"
+      }
+    },
+    "states": {
+      "draft": "پیش‌نویس",
+      "active": "فعال",
+      "in-progress": "در حال انجام",
+      "closed": "بسته شده",
+      "cancelled": "لغو شده"
+    },
+    "transitions": {
+      "activate": "فعال‌سازی",
+      "start": "شروع",
+      "close": "بستن",
+      "cancel": "لغو",
+      "reopen": "بازگشایی"
+    },
+    "permissions": {
+      "assessment-case": {
+        "title": "پرونده‌های ارزیابی",
+        "management": {
+          "title": "مدیریت پرونده‌ها",
+          "description": "دسترسی کامل به مدیریت پرونده‌های ارزیابی"
+        },
+        "create": {
+          "title": "ایجاد پرونده",
+          "description": "ایجاد پرونده‌های جدید"
+        },
+        "edit": {
+          "title": "ویرایش پرونده",
+          "description": "ویرایش پرونده‌های ارزیابی"
+        },
+        "delete": {
+          "title": "حذف پرونده",
+          "description": "حذف پرونده‌های ارزیابی"
+        }
+      }
+    }
+  },
+  "sessions": {
+    "terms": {
+      "session": "جلسه",
+      "sessions": "جلسات"
+    },
+    "entities": {
+      "assessment-session": {
+        "title": "جلسه ارزیابی",
+        "plural": "جلسات ارزیابی",
+        "fields": {
+          "case": {
+            "title": "پرونده",
+            "description": "پرونده ارزیابی مرتبط",
+            "placeholder": "پرونده را انتخاب کنید"
+          },
+          "responder": {
+            "title": "پاسخ‌دهنده",
+            "description": "ثبت‌کننده پاسخ"
+          },
+          "role": {
+            "title": "نقش",
+            "description": "نقش پاسخ‌دهنده",
+            "options": {
+              "responder": "پاسخ‌دهنده",
+              "supervisor": "سرپرست",
+              "reviewer": "بازبین"
+            }
+          },
+          "started-at": {
+            "title": "زمان شروع",
+            "description": "زمان شروع جلسه"
+          },
+          "last-saved-at": {
+            "title": "آخرین ذخیره‌سازی",
+            "description": "زمان آخرین ذخیره‌سازی جلسه"
+          },
+          "time-spent": {
+            "title": "زمان صرف شده (ثانیه)",
+            "description": "کل زمان صرف شده برای ارزیابی"
+          },
+          "progress-percentage": {
+            "title": "پیشرفت (%)",
+            "description": "درصد تکمیل"
+          },
+          "answered-questions-count": {
+            "title": "سؤالات پاسخ داده شده",
+            "description": "تعداد سؤالات پاسخ داده شده"
+          },
+          "answers": {
+            "title": "پاسخ‌ها",
+            "description": "تمام پاسخ‌ها به صورت یک شیء JSON",
+            "states": {
+              "answered": "پاسخ داده شده",
+              "not-answered": "پاسخ داده نشده"
+            }
+          },
+          "print-html-gzip": {
+            "title": "تصویر HTML چاپ"
+          },
+          "outcomes": {
+            "title": "نتایج خروجی",
+            "description": "مقادیر خروجی پرسشنامه که هنگام ارسال ارزیابی و ذخیره شده‌اند"
+          },
+          "previous": {
+            "title": "جلسه قبلی",
+            "description": "جلسه قبلی که بازنویسی می‌شود"
+          }
+        },
+        "groups": {
+          "time-tracking": "پیگیری زمان",
+          "progress": "پیشرفت",
+          "answers": "پاسخ‌ها",
+          "outcomes": "نتایج خروجی",
+          "override": "بازنویسی"
+        }
+      }
+    },
+    "actions": {
+      "view-answers": {
+        "title": "مشاهده پاسخ‌ها"
+      },
+      "review-answers": {
+        "title": "بازبینی پاسخ‌ها"
+      },
+      "view-outcomes": {
+        "title": "مشاهده نتایج خروجی",
+        "empty": "این جلسه نتیجهٔ خروجی ذخیره‌شده‌ای ندارد."
+      },
+      "preview-pdf": {
+        "title": "پیش‌نمایش PDF",
+        "download": "دانلود",
+        "failed": "پیش‌نمایش PDF جلسه ارزیابی ناموفق بود."
+      }
+    },
+    "states": {
+      "not-started": "شروع نشده",
+      "in-progress": "در حال انجام",
+      "submitted": "ارسال شده",
+      "under-review": "در حال بررسی",
+      "approved": "تأیید شده",
+      "rejected": "رد شده",
+      "completed": "تکمیل شده"
+    },
+    "transitions": {
+      "start": "شروع",
+      "submit": "ارسال",
+      "review": "بررسی",
+      "approve": "تأیید",
+      "reject": "رد",
+      "complete": "تکمیل",
+      "reopen": "بازگشایی"
+    },
+    "permissions": {
+      "assessment-session": {
+        "title": "جلسات ارزیابی",
+        "management": {
+          "title": "مدیریت جلسات",
+          "description": "دسترسی کامل به مدیریت جلسات ارزیابی"
+        },
+        "create": {
+          "title": "ایجاد جلسه",
+          "description": "ایجاد جلسات ارزیابی جدید"
+        },
+        "edit": {
+          "title": "ویرایش جلسه",
+          "description": "ویرایش جلسات ارزیابی"
+        },
+        "delete": {
+          "title": "حذف جلسه",
+          "description": "حذف جلسات ارزیابی"
+        }
+      }
+    }
+  }
+}

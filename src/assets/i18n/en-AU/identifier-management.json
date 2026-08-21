@@ -1,0 +1,37 @@
+{
+  "module": {
+    "title": "Identifier Management",
+    "description": "Manage identifiers and identification systems"
+  },
+  "permissions": {
+    "manage": {
+      "title": "Identifier Management",
+      "description": "Manage identifier configuration and rules"
+    }
+  },
+  "entities": {
+    "identifier-rule": {
+      "title": "Identifier Rule",
+      "plural": "Identifier Rules",
+      "permissions": {
+        "manage": {
+          "title": "Manage Identifier Rules",
+          "description": "Create, update, and delete identifier rules"
+        }
+      },
+      "groups": {
+        "basic-info": "Basic Information",
+        "pattern": "Pattern",
+        "scope": "Scope"
+      },
+      "fields": {
+        "entity": { "title": "Entity" },
+        "pattern": { "title": "Pattern" },
+        "scope-config": {
+          "title": "Scope Configuration",
+          "description": "JSON settings that control how sequence numbers are scoped and reset. Common keys: byTenant, byApp, period (none|daily|monthly|yearly), minValue, blockSize, customKeys."
+        }
+      }
+    }
+  }
+}

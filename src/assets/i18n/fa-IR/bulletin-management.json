@@ -1,0 +1,212 @@
+{
+  "module": {
+    "title": "اطلاعیه‌ها",
+    "description": "انتشار اطلاعیه‌ها، اخبار، رویدادها و پیام‌های فوری سازمان."
+  },
+  "menus": {
+    "feed": {
+      "title": "اطلاعیه‌ها"
+    },
+    "posts": {
+      "title": "اطلاعیه‌ها"
+    }
+  },
+  "pages": {
+    "feed": {
+      "title": "اطلاعیه‌ها",
+      "description": "اطلاعیه‌ها، اخبار و رویدادهای سازمان.",
+      "search-placeholder": "جستجوی اطلاعیه‌ها",
+      "empty": "اطلاعیه‌ای با این فیلتر یافت نشد.",
+      "empty-title": "هنوز اطلاعیه‌ای نیست",
+      "empty-description": "اطلاعیه‌های منتشرشده برای شما اینجا نمایش داده می‌شود.",
+      "no-results-title": "اطلاعیه‌ای مطابق فیلتر نیست",
+      "no-results-description": "عبارت دیگری جستجو کنید یا فیلترها را پاک کنید.",
+      "load-error-title": "بارگذاری اطلاعیه‌ها ممکن نشد",
+      "load-error-description": "اتصال را بررسی کنید و دوباره تلاش کنید.",
+      "unread-count": "اطلاعیه‌های خوانده‌نشده",
+      "pinned": "سنجاق‌شده",
+      "event-label": "رویداد",
+      "filters": {
+        "all": "همه",
+        "unread": "خوانده‌نشده",
+        "pinned": "سنجاق‌شده",
+        "urgent": "فوری",
+        "read-status": "وضعیت خواندن",
+        "tags": "برچسب‌ها"
+      },
+      "actions": {
+        "mark-read": "علامت به‌عنوان خوانده‌شده",
+        "read": "خوانده‌شده",
+        "react": "واکنش",
+        "comment": "نظر",
+        "see-more": "بیشتر ببین",
+        "see-less": "کمتر ببین",
+        "discuss": "بحث",
+        "refresh": "بازخوانی",
+        "retry": "تلاش دوباره",
+        "clear-filters": "پاک کردن فیلترها"
+      }
+    }
+  },
+  "entities": {
+    "bulletin-post": {
+      "title": "اطلاعیه",
+      "plural": "اطلاعیه‌ها",
+      "groups": {
+        "lifecycle": "چرخه حیات",
+        "event": "رویداد",
+        "engagement": "تعامل"
+      },
+      "fields": {
+        "body": {
+          "title": "متن"
+        },
+        "kind": {
+          "title": "نوع",
+          "options": {
+            "announcement": "اطلاعیه",
+            "news": "اخبار",
+            "event": "رویداد",
+            "urgent": "فوری"
+          }
+        },
+        "status": {
+          "title": "وضعیت",
+          "options": {
+            "draft": "پیش‌نویس",
+            "scheduled": "زمان‌بندی‌شده",
+            "published": "منتشرشده",
+            "cancelled": "لغوشده",
+            "archived": "بایگانی‌شده"
+          }
+        },
+        "author-user-id": {
+          "title": "نویسنده"
+        },
+        "publish-at": {
+          "title": "زمان انتشار"
+        },
+        "published-at": {
+          "title": "منتشر شده در"
+        },
+        "expires-at": {
+          "title": "انقضا"
+        },
+        "event-starts-at": {
+          "title": "شروع رویداد"
+        },
+        "event-ends-at": {
+          "title": "پایان رویداد"
+        },
+        "event-location": {
+          "title": "محل رویداد"
+        },
+        "is-pinned": {
+          "title": "سنجاق‌شده"
+        },
+        "pin-rank": {
+          "title": "رتبه سنجاق"
+        },
+        "pinned-until": {
+          "title": "سنجاق تا"
+        },
+        "allow-reactions": {
+          "title": "اجازه واکنش"
+        },
+        "allow-comments": {
+          "title": "اجازه نظر"
+        },
+        "notification-policy": {
+          "title": "سیاست اعلان",
+          "options": {
+            "in-app": "درون‌برنامه",
+            "selected-channels": "کانال‌های انتخابی",
+            "urgent-override": "لغو تنظیمات فوری"
+          }
+        },
+        "publication-version": {
+          "title": "نسخه انتشار"
+        }
+      }
+    },
+    "bulletin-audience": {
+      "title": "مخاطب",
+      "plural": "مخاطبان",
+      "fields": {
+        "post-id": {
+          "title": "پست"
+        },
+        "target-type": {
+          "title": "نوع مخاطب",
+          "options": {
+            "organization": "سازمان",
+            "user": "کاربر",
+            "role": "نقش",
+            "team": "تیم",
+            "business-unit": "واحد سازمانی",
+            "position": "سمت",
+            "job-definition": "تعریف شغل"
+          }
+        },
+        "target-id": {
+          "title": "مخاطب"
+        },
+        "mode": {
+          "title": "حالت",
+          "options": {
+            "include": "شامل",
+            "exclude": "مستثنی"
+          }
+        },
+        "resolved-at": {
+          "title": "زمان تعیین مخاطب"
+        },
+        "resolved-count": {
+          "title": "تعداد مخاطبان"
+        }
+      }
+    },
+    "bulletin-receipt": {
+      "title": "رسید",
+      "plural": "رسیدها",
+      "fields": {
+        "post-id": {
+          "title": "پست"
+        },
+        "user-id": {
+          "title": "کاربر"
+        },
+        "first-seen-at": {
+          "title": "اولین مشاهده"
+        },
+        "read-at": {
+          "title": "زمان خواندن"
+        },
+        "dismissed-at": {
+          "title": "زمان نادیده‌گرفتن"
+        }
+      }
+    }
+  },
+  "queries": {
+    "feed": {
+      "title": "خوراک اطلاعیه",
+      "description": "اطلاعیه‌های منتشرشده که مخاطب آن کاربر جاری است."
+    },
+    "unread-count": {
+      "title": "تعداد اطلاعیه‌های دیده‌نشده",
+      "description": "تعداد اطلاعیه‌های دیده‌نشده که مخاطب آن کاربر جاری است."
+    }
+  },
+  "commands": {
+    "mark-read": {
+      "title": "علامت خوانده‌شده",
+      "description": "خوانده شدن اطلاعیه توسط کاربر جاری را ثبت می‌کند."
+    }
+  },
+  "errors": {
+    "invalid-transition": "این اطلاعیه از وضعیت فعلی قابل تغییر نیست.",
+    "schedule-requires-future-publish-at": "اطلاعیه‌های زمان‌بندی‌شده باید زمان انتشار در آینده داشته باشند.",
+    "not-addressed": "این اطلاعیه برای شما مخاطب نشده است."
+  }
+}

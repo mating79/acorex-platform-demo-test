@@ -1,0 +1,594 @@
+{
+  "features": {
+    "manage-catalog": {
+      "title": "Manage AI Catalog",
+      "description": "Enable Intelligence configuration on the Platform Console (agents, assistants, models, endpoints, rules)."
+    }
+  },
+  "module": {
+    "title": "AI Management",
+    "description": "Manage AI providers and API keys",
+    "menus": {
+      "root": {
+        "title": "Intelligence"
+      },
+      "assists": {
+        "title": "Assistants"
+      },
+      "agents": {
+        "title": "Agents"
+      },
+      "models": {
+        "title": "Models"
+      },
+      "open-ai-endpoints": {
+        "title": "OpenAI Endpoints"
+      },
+      "rules": {
+        "title": "Rules"
+      },
+      "tools": {
+        "title": "Tools"
+      },
+      "settings": {
+        "title": "Intelligence Settings"
+      },
+      "ai-settings": {
+        "title": "Intelligence Settings"
+      }
+    },
+    "permissions": {
+      "title": "AI Management",
+      "description": "Access AI configuration and administration",
+      "manage": {
+        "title": "AI management",
+        "description": "Manage agents, assists, models, and OpenAI endpoints"
+      },
+      "assist-use": {
+        "title": "Use AI assistants",
+        "description": "Grant access to use specific AI assistants in chat and automations"
+      }
+    }
+  },
+  "support": {
+    "aria-label": "Open AI Support Chat",
+    "title": "AI Support"
+  },
+  "chat": {
+    "title": "AI Chat",
+    "placeholder": "Type your message...",
+    "send": "Send",
+    "sending": "Thinking…",
+    "empty-hint": "Start the conversation by typing a message below.",
+    "select-model": "Model",
+    "model-unavailable": "No chat model is configured for this assist.",
+    "select-assist": "Assist",
+    "chat-target-label": "Chat Target",
+    "picker-assist-prefix": "Assist:",
+    "picker-agent-prefix": "Agent:",
+    "assistant-thinking-label": "Model Reasoning",
+    "clarify-region": "Answer Required",
+    "clarify-other": "Other",
+    "clarify-other-placeholder": "Type your answer…",
+    "clarify-submit": "Continue",
+    "clarify-select-hint": "Select an option to continue.",
+    "clarify-other-required": "Enter a short answer for Other.",
+    "tools-ran": "Tools Executed",
+    "tool-io-details": "Tool Input and Output",
+    "tool-input": "Input",
+    "tool-output": "Output",
+    "tool-output-pending": "No result yet (still running or missing).",
+    "context-used": "Context Used",
+    "logs": "Logs",
+    "download-json": "Download JSON",
+    "messages-log-dialog-title": "Conversation Messages (JSON)",
+    "messages-log-main-transcript": "Main Transcript (JSON)",
+    "messages-log-delegated-missing": "No cached internal agent run for this call (current session only).",
+    "delegated-agent-detail": "Detail",
+    "delegated-agent-detail-aria": "Open Full Specialist Conversation and Tool Calls",
+    "delegated-agent-transcript-suffix": "Full Specialist Run",
+    "delegated-agent-transcript-aria": "Specialist Agent Transcript",
+    "delegated-agent-transcript-toolbar-aria": "Transcript Actions",
+    "context-meter-unknown": "—",
+    "tool-executing": "Running…",
+    "delegated-agent-reflecting": "Specialist Reviewing Tool Output…",
+    "specialist-delegation-context-json-label": "Recent Conversation (for context)",
+    "tool-done": "Done",
+    "agent-prefix": "Agent",
+    "agent-name-unknown": "Unknown Agent",
+    "agent-commands-executed": "Commands This Agent Ran",
+    "tool-run-again": "Run Again",
+    "tool-execute-dialog-title": "Run Tool",
+    "tool-execute-submit": "Execute",
+    "tool-execute-json-field": "Parameters (JSON)",
+    "tool-execute-done": "Command Completed",
+    "tool-execute-not-registered": "No command or query with this name is registered in the app.",
+    "tool-execute-skipped-builtin": "This assistant prompt tool cannot be run from here.",
+    "usage-prompt": "Prompt",
+    "usage-completion": "Completion",
+    "usage-cached": "Cached",
+    "cost-tooltip": "Estimated Session Cost (USD)",
+    "generated-image-aria-label": "Image Generated from Your Request",
+    "generated-speech-aria-label": "Audio Generated from Your Request",
+    "upload-images": "Images",
+    "upload-images-aria": "Attach Images to Send with Your Message",
+    "upload-audio": "Audio",
+    "upload-audio-aria": "Attach Audio Files to Send with Your Message",
+    "attached-image-aria-label": "Image Attached to Your Message",
+    "attached-audio-label": "Audio",
+    "audio-untitled": "Untitled Audio",
+    "upload-invalid-type": "Only image files are allowed.",
+    "upload-too-large": "Each image must be 20 MB or smaller.",
+    "upload-too-many": "You can attach at most 20 images per message.",
+    "upload-audio-invalid-type": "Only audio files are allowed.",
+    "upload-audio-too-large": "Each audio file must be 25 MB or smaller.",
+    "upload-audio-too-many": "You can attach at most 5 audio files per message.",
+    "upload-error": "Could not upload the image.",
+    "upload-audio-error": "Could not upload the audio file.",
+    "composer-images-count": "Image(s) Ready to Send",
+    "composer-audio-count": "Audio File(s) Ready to Send",
+    "composer-attachments-region": "Attachments for Your Next Message",
+    "composer-uploading": "Saving Attachments…",
+    "remove-draft-image": "Remove Image",
+    "remove-draft-audio": "Remove Audio",
+    "upload-documents": "Documents",
+    "upload-documents-aria": "Attach PDF or Text Files to Send with Your Message",
+    "attached-document-label": "Document",
+    "document-untitled": "Untitled Document",
+    "upload-documents-invalid-type": "Only supported document types are allowed (for example PDF, text, CSV, or JSON).",
+    "upload-documents-too-large": "Each document must be 35 MB or smaller.",
+    "upload-documents-too-many": "You can attach at most 10 documents per message.",
+    "upload-documents-error": "Could not upload the document.",
+    "composer-documents-count": "Document(s) Ready to Send",
+    "remove-draft-document": "Remove Document",
+    "documents-still-saving": "Documents are still saving. Please wait.",
+    "images-still-saving": "Images are still saving. Please wait.",
+    "audio-still-saving": "Audio files are still saving. Please wait."
+  },
+  "assist-popup": {
+    "placeholder": "Describe what you want the assistant to do…",
+    "generate": "Generate",
+    "generating": "Running…",
+    "composer-menu-aria": "Attachments and more",
+    "send": "Send",
+    "sending": "Running…",
+    "cancel": "Cancel",
+    "run-error": "The AI request failed. Try again or check AI settings."
+  },
+  "settings": {
+    "group": {
+      "nav-title": "Intelligence",
+      "title": "Intelligence Settings",
+      "description": "Store API keys and default assists for your tenant."
+    },
+    "section": {
+      "global-ai": {
+        "title": "Global AI Settings",
+        "description": "Default assist and system-wide instructions for AI chat."
+      },
+      "gemini": {
+        "title": "Google Gemini",
+        "description": "Configure the Google Gemini API key."
+      }
+    },
+    "default-assist": {
+      "name": {
+        "title": "Default Assist",
+        "description": "Pick an assist from the list. If none is selected, the assist named platform-assistant is used when it exists."
+      }
+    },
+    "global-system-prompt": {
+      "prefix": {
+        "title": "System Instruction",
+        "description": "Prepended when non-empty; assist and agent prompts follow.",
+        "placeholder": "e.g. Always follow company policy X. Never disclose internal IDs."
+      }
+    },
+    "gemini": {
+      "api-key": {
+        "title": "API Key",
+        "description": "Your Google AI Studio API key for Gemini.",
+        "placeholder": "Enter your Gemini API key"
+      }
+    }
+  },
+  "open-ai-endpoints": {
+    "entities": {
+      "endpoint": {
+        "title": "OpenAI Endpoint",
+        "plural": "OpenAI Endpoints",
+        "groups": {
+          "connection": {
+            "title": "Connection"
+          }
+        },
+        "fields": {
+          "api-base": {
+            "title": "API Base URL",
+            "description": "OpenAI-compatible base: full chat completions URL, or origin ending with /v1, or host only. Used for chat and derived image URL when model purpose is image."
+          },
+          "api-key": {
+            "title": "API Key",
+            "description": "Bearer token sent to this endpoint (store only trusted values)."
+          },
+          "stream": {
+            "title": "Stream Chat Completions",
+            "description": "When enabled, uses Server-Sent Events (SSE) streaming. Turn off for local providers that mishandle streaming or when you need a single JSON response for debugging."
+          }
+        }
+      }
+    }
+  },
+  "models": {
+    "entities": {
+      "model": {
+        "title": "AI Model",
+        "plural": "AI Models",
+        "groups": {
+          "configuration": {
+            "title": "Configuration"
+          }
+        },
+        "fields": {
+          "max-context-tokens": {
+            "title": "Max Context (Tokens)",
+            "description": "Total context window size for this model (input + output budget)."
+          },
+          "max-output-tokens": {
+            "title": "Max Output (Tokens)",
+            "description": "Maximum tokens the model may return in a single completion."
+          },
+          "max-input-tokens": {
+            "title": "Max Input (Tokens)",
+            "description": "Typical cap on user and history tokens per request (often near context minus reserved output)."
+          },
+          "input-price-per-million": {
+            "title": "Input Price (per 1M Tokens)",
+            "description": "USD per 1 million input tokens (reference pricing for estimation)."
+          },
+          "output-price-per-million": {
+            "title": "Output Price (per 1M Tokens)",
+            "description": "USD per 1 million output tokens (reference pricing for estimation)."
+          },
+          "cached-input-price-per-million": {
+            "title": "Cached Input Price (per 1M Tokens)",
+            "description": "USD per 1 million cached prompt tokens. Leave blank to use the regular input price."
+          },
+          "provider-id": "Provider ID",
+          "model-id": "Model ID",
+          "chat-transport": {
+            "title": "Chat Transport",
+            "options": {
+              "gemini": "Google Gemini",
+              "openai": "OpenAI-Compatible"
+            }
+          },
+          "open-ai-endpoint": {
+            "title": "OpenAI Endpoint",
+            "description": "Required when chat transport is OpenAI-compatible. Ignored for Gemini."
+          },
+          "open-ai-endpoint-is-disabled": {
+            "title": "OpenAI Endpoint Disabled (System)",
+            "description": "True when the linked OpenAI endpoint is disabled. Updated automatically; when true, the model cannot be enabled until the endpoint is enabled."
+          },
+          "api-model-id": {
+            "title": "API Model ID",
+            "description": "Exact model string sent to the provider (e.g. gpt-4o, gemini-2.5-flash). Shown as the technical name in lists."
+          },
+          "model-purpose": {
+            "title": "Model Purpose",
+            "description": "Chat models for the Assist catalog; image models use AiManagement:ChatGenerateImage; speech-to-text uses AiManagement:ChatTranscribeSpeech; text-to-speech uses AiManagement:ChatSynthesizeSpeech.",
+            "options": {
+              "chat": "Chat / Completion",
+              "image": "Image Generation",
+              "speech": "Speech to Text",
+              "tts": "Text to Speech"
+            }
+          },
+          "model-purposes": {
+            "title": "Model Capabilities",
+            "description": "One model can combine several capabilities (e.g. chat + vision + speech). Tags are colored in lists; pick from suggestions when editing.",
+            "placeholder": "Add capability tags (chat, vision, image, …)"
+          }
+        }
+      }
+    }
+  },
+  "tools": {
+    "entities": {
+      "tool": {
+        "title": "Tool",
+        "plural": "Tools",
+        "fields": {
+          "name": {
+            "title": "Tool Name"
+          },
+          "is-active": {
+            "title": "Active"
+          },
+          "parameters": {
+            "title": "Parameters Schema"
+          },
+          "handler-key": {
+            "title": "Handler Key"
+          },
+          "input-metadata": {
+            "title": "Input Metadata"
+          },
+          "result-metadata": {
+            "title": "Result Metadata"
+          }
+        },
+        "components": {
+          "meta-data-form": {
+            "title": "Tool Metadata"
+          }
+        }
+      }
+    }
+  },
+  "assists": {
+    "entities": {
+      "assist": {
+        "title": "Assist",
+        "plural": "Assists",
+        "groups": {
+          "profile": "Profile",
+          "ai-configuration": "AI Configuration",
+          "welcome-interaction": "Welcome Interaction",
+          "prompt-behaviour": "Prompt & Behaviour",
+          "output-contract": "Output Contract",
+          "registry-commands": "Command Registry",
+          "registry-queries": "Query Registry",
+          "mcp-servers": "MCP Servers",
+          "available-agents": "Available Agents"
+        },
+        "fields": {
+          "command-registry": {
+            "title": "Commands",
+            "description": "Add one row per command definition this assist may call directly in the same session. Set default argument values from the registry input schema; the model can override them per call.",
+            "item-label": "Command"
+          },
+          "query-registry": {
+            "title": "Queries",
+            "description": "Add one row per query definition this assist may call directly in the same session. Default input values are merged with the model's arguments at fetch time (model wins on conflicts).",
+            "item-label": "Query"
+          },
+          "mcp-servers": {
+            "title": "MCP Servers",
+            "description": "External MCP servers whose tools are exposed to this assist in the same session.",
+            "placeholder": "Select MCP servers…"
+          },
+          "output-contract": {
+            "title": "Output Contract",
+            "description": "JSON object: kind (string | object | array), optional transcriptSegment (when object), instruction, schema, schemaSummary, validationCommandName, structuredRetries. Default supervisor output contract for this assist; overridden per agent or per run."
+          },
+          "planning-mode": {
+            "title": "Planning Mode",
+            "description": "When to run one tool-free planning turn before the model may call tools. End users do not change this; it is configured per assist.",
+            "placeholder": "Select Planning Mode",
+            "options": {
+              "off": "Off",
+              "once": "Once (Always Plan First)",
+              "when-needed": "When Needed (heuristic)"
+            }
+          },
+          "system-prompt": {
+            "title": "System Prompt"
+          },
+          "rules": {
+            "title": "Rules",
+            "description": "Reusable system-prompt fragments from the Rules catalog (merged on each engine run). Display title; engine resolves by rule name.",
+            "placeholder": "Select rules…"
+          },
+          "knowledge-files": {
+            "title": "Knowledge Files",
+            "description": "Upload PDF documents or images to extend this assist's knowledge base."
+          },
+          "initial-messages": {
+            "title": "Initial Message"
+          },
+          "starter-prompts": {
+            "title": "Starter Prompts",
+            "description": "Optional suggested first messages (per locale) users can pick when starting a chat with this assist.",
+            "item-placeholder": "Suggested first message…"
+          },
+          "has-access-to-all-tools": {
+            "title": "Access to All Tools and Query"
+          },
+          "command-tools": {
+            "title": "Command Tools"
+          },
+          "query-tools": {
+            "title": "Query Tools"
+          },
+          "tools": {
+            "title": "Tools"
+          },
+          "model": {
+            "title": "Chat Model",
+            "description": "The AI model catalog row used for supervisor assist runs (end users do not pick a model in chat).",
+            "placeholder": "Select Chat Model"
+          },
+          "profession-image-url": {
+            "title": "Profile Photo"
+          },
+          "available-agents": {
+            "title": "Available Agents",
+            "description": "Add one row per AI agent this assist may delegate to. Set assist-locked and assist-default values per agent (see each agent’s parameter definitions). Reorder rows as needed."
+          }
+        }
+      }
+    },
+    "pages": {
+      "prompt": {
+        "title": "Prompt & Initial Messages",
+        "validation-invalid-json": "Initial messages must be valid JSON array."
+      }
+    }
+  },
+  "agents": {
+    "entities": {
+      "agent": {
+        "title": "Agent",
+        "plural": "Agents",
+        "groups": {
+          "prompt-behaviour": "Prompt & Behaviour",
+          "supervisor-delegation": "Supervisor Delegation",
+          "output-contract": "Output Contract",
+          "access": "Model and Limits",
+          "registry-commands": "Command Registry",
+          "registry-queries": "Query Registry"
+        },
+        "fields": {
+          "command-registry": {
+            "title": "Commands",
+            "description": "Add one row per command definition the specialist may run. Set default argument values from the registry input schema; the model can override them per call.",
+            "item-label": "Command"
+          },
+          "query-registry": {
+            "title": "Queries",
+            "description": "Add one row per query definition the specialist may use. Default input values are merged with the model’s arguments at fetch time (model wins on conflicts).",
+            "item-label": "Query"
+          },
+          "description": {
+            "description": "Short summary for lists and search. Full supervisor routing is built from the Supervisor Delegation fields below."
+          },
+          "supervisor-when-to-use": {
+            "title": "When to delegate",
+            "description": "Plain text for the supervisor LLM (not localized). Merged into the delegated tool description at runtime."
+          },
+          "supervisor-when-not-to-use": {
+            "title": "When not to delegate",
+            "description": "Intents where the supervisor must not call this specialist (e.g. greetings for current-time)."
+          },
+          "supervisor-chains-with": {
+            "title": "Chaining hints",
+            "description": "Optional order with other specialists (e.g. platform-entity first, then widget-form-layout)."
+          },
+          "supervisor-intent-tags": {
+            "title": "Intent tags",
+            "description": "Optional keywords for admin filtering; also appended to the supervisor tool description.",
+            "placeholder": "navigation, chart, crud…"
+          },
+          "model-entity": {
+            "title": "Default Model",
+            "description": "Optional. When set, this agent will use this catalog model instead of the user’s chat model (must still be allowed by the assist).",
+            "placeholder": "Select Model (Optional)"
+          },
+          "max-steps": {
+            "title": "Max Tool Rounds",
+            "description": "Maximum provider rounds inside this specialist run (default 5, max 50)."
+          },
+          "rules": {
+            "title": "Rules",
+            "description": "Reusable system-prompt fragments from the Rules catalog (merged on each engine run). Display title; engine resolves by rule name.",
+            "placeholder": "Select rules…"
+          },
+          "parameter-definitions": {
+            "title": "Supervisor Parameters",
+            "description": "Array of parameter definitions: each object has name, binding (supervisor | assist_locked | assist_default), and optional title, description, defaultValue. Leave empty for a single required string argument `query`. assist_locked values come from the assist row; assist_default fills missing supervisor args from the assist map; supervisor fields are filled by the supervisor model."
+          },
+          "output-contract": {
+            "title": "Output Contract",
+            "description": "Transcript segment preset for the specialist’s final message on delegated runs. Options come from registered segment providers. Leave empty for default string (prose/Markdown) replies.",
+            "kind": {
+              "title": "Output Kind",
+              "placeholder": "Select output kind",
+              "description": "JSON data primitive for the final deliverable: string (prose/Markdown text), object (JSON object), or array (JSON array). The engine builds system prompts and post-processing from this value.",
+              "options": {
+                "string": "String",
+                "object": "Object",
+                "array": "Array"
+              }
+            },
+            "transcript-segment": {
+              "title": "Transcript Segment",
+              "placeholder": "Select transcript mapping",
+              "description": "When kind is object: how the parsed JSON is mapped into chat transcript. text = generic JSON as text; node = inner AXPWidgetNode wrapped as chat node; followUp = suggestion chips envelope.",
+              "options": {
+                "text": "Text (generic JSON object)",
+                "node": "Chat node (AXPWidgetNode)",
+                "follow-up": "Follow-up chips",
+                "file": "Stored file (chat replay)"
+              }
+            },
+            "instruction": {
+              "title": "Output Instruction",
+              "placeholder": "e.g. Prefer block-layout root for chat tables.",
+              "description": "Optional domain-specific rules merged after engine output-contract defaults. Do not repeat kind, validation command, or envelope shape here — the engine injects those automatically."
+            },
+            "schema-summary": {
+              "title": "Schema Summary",
+              "description": "Short natural-language hint about the expected JSON shape. Shown in the system prompt and in retry messages when validation fails. Example: Root block-layout with mode view; children are form-field rows."
+            },
+            "schema-name": {
+              "title": "Provider Schema Name",
+              "description": "Label for the JSON schema when using provider json_schema response format. Example: FormLayoutOutput."
+            },
+            "schema-strict": {
+              "title": "Strict JSON Schema",
+              "description": "When enabled, asks the model provider to enforce the JSON schema strictly where supported (e.g. OpenAI structured outputs)."
+            },
+            "structured-retries": {
+              "title": "Structured Retries",
+              "description": "How many extra model turns to run after parse or validation failure (0–10). Default is 2 when empty. Example: 3 for widget node agents."
+            },
+            "validation-command-name": {
+              "title": "Validation Command",
+              "placeholder": "e.g. AiFormbuilder:ValidateLayoutJsonForAi",
+              "description": "Registry command the agent must call before the final widget JSON (object + transcript segment node). Example: AiFormbuilder:ValidateLayoutJsonForAi — when data.valid is true, the final text must be data.normalizedJson."
+            },
+            "provider-format-type": {
+              "title": "Provider Response Format",
+              "placeholder": "Derived from kind when empty",
+              "description": "Override the provider-native structured output hint. Leave empty to derive from kind (e.g. json_object for object/array). Use json_schema when you need strict schema binding.",
+              "options": {
+                "text": "Text",
+                "json-object": "JSON object",
+                "json-schema": "JSON schema"
+              }
+            },
+            "provider-format-name": {
+              "title": "Provider Schema Name Override",
+              "description": "Schema name sent to the provider when Provider Response Format is json_schema. Example: ChartLayoutOutput."
+            },
+            "provider-format-strict": {
+              "title": "Provider Strict Mode",
+              "description": "When enabled with json_schema format, turns on the provider’s strict schema mode where supported."
+            }
+          }
+        }
+      }
+    }
+  },
+  "rules": {
+    "entities": {
+      "rule": {
+        "title": "Rule",
+        "plural": "Rules",
+        "groups": {
+          "rule-content": "Rule Content"
+        },
+        "fields": {
+          "name": {
+            "description": "Programmatic key referenced from assists, agents, and engine run options (e.g. markdown)."
+          },
+          "markdown": {
+            "title": "Markdown",
+            "description": "Text merged into the system prompt when this rule is included."
+          }
+        }
+      }
+    }
+  },
+  "errors": {
+    "invalid-api-key": "The speech service rejected the API key. Check the endpoint key under Intelligence → OpenAI Endpoints.",
+    "rate-limited": "The speech service is busy. Please try again in a moment.",
+    "provider-unavailable": "Speech is temporarily unavailable. Please try again.",
+    "extract-document-text-failed": "Could not read the document. Try again or fill the fields yourself.",
+    "generate-image-failed": "Could not generate the image. Try again.",
+    "transcribe-speech-failed": "Could not transcribe the audio. Try again.",
+    "synthesize-speech-failed": "Could not generate speech. Try again."
+  }
+}

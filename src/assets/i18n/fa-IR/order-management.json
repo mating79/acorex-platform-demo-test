@@ -1,0 +1,259 @@
+{
+  "module": {
+    "title": "مدیریت سفارش",
+    "description": "مدیریت سفارشات خرید عمده، مشارکت اعضا و خریدهای دسته‌جمعی",
+    "permissions": {
+      "title": "مدیریت سفارش",
+      "description": "مجوزها و کنترل دسترسی مدیریت سفارش"
+    }
+  },
+  "bulk-buy-orders": {
+    "terms": {
+      "bulk-buy-order": "سفارش خرید عمده",
+      "bulk-buy-orders": "سفارشات خرید عمده",
+      "member-order": "سفارش عضو",
+      "member-orders": "سفارشات اعضا",
+      "available-orders": "سفارشات موجود",
+      "my-orders": "سفارشات من"
+    },
+    "menus": {
+      "bulk-buy-orders": {
+        "title": "سفارشات خرید عمده",
+        "description": "مدیریت سفارشات خرید عمده و اقلام"
+      },
+      "available-orders": {
+        "title": "سفارشات موجود",
+        "description": "مرور و عضویت در سفارشات خرید عمده موجود"
+      },
+      "my-orders": {
+        "title": "سفارشات من",
+        "description": "مشاهده و مدیریت سفارشات شما"
+      }
+    },
+    "entities": {
+      "bulk-buy-order": {
+        "title": "سفارش خرید عمده",
+        "plural": "سفارشات خرید عمده",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "order-details": "جزئیات سفارش",
+          "financial-info": "اطلاعات مالی"
+        },
+        "fields": {
+          "order-number": {
+            "title": "شماره سفارش",
+            "description": "شناسه یکتا برای سفارش خرید عمده",
+            "placeholder": "شماره سفارش را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "description": "عنوان یا نام سفارش خرید عمده",
+            "placeholder": "عنوان سفارش را وارد کنید"
+          },
+          "supplier": {
+            "title": "تأمین‌کننده",
+            "description": "تأمین‌کننده این سفارش خرید عمده"
+          },
+          "order-date": {
+            "title": "تاریخ سفارش",
+            "description": "تاریخ ایجاد سفارش"
+          },
+          "deadline-date": {
+            "title": "تاریخ مهلت",
+            "description": "آخرین تاریخ برای اضافه کردن اقلام یا عضویت در سفارش"
+          },
+          "freight-amount": {
+            "title": "هزینه حمل",
+            "description": "هزینه کل حمل برای سفارش"
+          },
+          "description": {
+            "title": "توضیحات",
+            "description": "توضیحات یا یادداشت‌های اضافی برای سفارش",
+            "placeholder": "توضیحات یا یادداشت را وارد کنید"
+          }
+        }
+      },
+      "bulk-buy-order-item": {
+        "title": "قلم سفارش",
+        "plural": "اقلام سفارش",
+        "groups": {
+          "order-info": "اطلاعات سفارش",
+          "product-info": "اطلاعات محصول",
+          "financial-info": "اطلاعات مالی"
+        },
+        "fields": {
+          "bulk-buy-order": {
+            "title": "سفارش خرید عمده",
+            "description": "سفارش خرید عمده والد"
+          },
+          "product": {
+            "title": "محصول",
+            "description": "محصول برای این قلم سفارش"
+          },
+          "size": {
+            "title": "حجم",
+            "description": "کل مقدار موجود در سفارش"
+          },
+          "quantity-in-order": {
+            "title": "مقدار در سفارش",
+            "description": "کل مقدار سفارش‌شده توسط همه اعضا"
+          },
+          "quantity-available": {
+            "title": "مقدار موجود",
+            "description": "مقدار باقی‌مانده موجود"
+          },
+          "price": {
+            "title": "قیمت",
+            "description": "قیمت هر واحد"
+          },
+          "unit": {
+            "title": "واحد",
+            "description": "واحد اندازه‌گیری",
+            "placeholder": "مثلاً: کیلوگرم، عدد، جعبه"
+          },
+          "total": {
+            "title": "جمع کل",
+            "description": "مبلغ کل شامل مالیات"
+          },
+          "per-unit-incl-gst": {
+            "title": "قیمت هر واحد (شامل مالیات)",
+            "description": "قیمت هر واحد شامل مالیات"
+          },
+          "tax-rate": {
+            "title": "نرخ مالیات",
+            "description": "درصد نرخ مالیات"
+          }
+        }
+      },
+      "member-order": {
+        "title": "سفارش عضو",
+        "plural": "سفارشات اعضا",
+        "groups": {
+          "order-info": "اطلاعات سفارش",
+          "member-info": "اطلاعات عضو",
+          "financial-info": "اطلاعات مالی"
+        },
+        "fields": {
+          "bulk-buy-order": {
+            "title": "سفارش خرید عمده",
+            "description": "سفارش خرید عمده والد"
+          },
+          "member": {
+            "title": "عضو",
+            "description": "عضو شرکت‌کننده در سفارش"
+          },
+          "product-total": {
+            "title": "جمع محصولات",
+            "description": "مبلغ کل برای همه محصولات"
+          },
+          "freight-share": {
+            "title": "سهم حمل",
+            "description": "سهم متناسب از هزینه حمل"
+          },
+          "total-owing": {
+            "title": "جمع بدهی",
+            "description": "مبلغ کل بدهی (جمع محصولات + سهم حمل)"
+          },
+          "paid-date": {
+            "title": "تاریخ پرداخت",
+            "description": "تاریخ پرداخت سفارش"
+          }
+        }
+      },
+      "member-order-line": {
+        "title": "خط سفارش",
+        "plural": "خطوط سفارش",
+        "groups": {
+          "order-info": "اطلاعات سفارش",
+          "product-info": "اطلاعات محصول",
+          "financial-info": "اطلاعات مالی"
+        },
+        "fields": {
+          "member-order": {
+            "title": "سفارش عضو",
+            "description": "سفارش عضو والد"
+          },
+          "bulk-buy-order-item": {
+            "title": "قلم سفارش",
+            "description": "قلم سفارش خرید عمده"
+          },
+          "quantity": {
+            "title": "مقدار",
+            "description": "مقدار سفارش‌شده توسط عضو"
+          },
+          "price": {
+            "title": "قیمت",
+            "description": "قیمت هر واحد"
+          },
+          "line-total": {
+            "title": "جمع خط",
+            "description": "مبلغ کل برای این خط شامل مالیات"
+          },
+          "tax-rate": {
+            "title": "نرخ مالیات",
+            "description": "درصد نرخ مالیات"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "title": "سفارشات خرید عمده",
+      "description": "مدیریت سفارشات خرید عمده و مشارکت اعضا",
+      "management": {
+        "title": "مدیریت سفارشات خرید عمده",
+        "description": "دسترسی کامل به مدیریت سفارشات خرید عمده"
+      },
+      "member": {
+        "title": "دسترسی عضو",
+        "description": "دسترسی به مشاهده و عضویت در سفارشات موجود"
+      }
+    },
+    "states": {
+      "open": "باز",
+      "closed": "بسته",
+      "cancelled": "لغو شده",
+      "pending": "در انتظار",
+      "confirmed": "تأیید شده",
+      "paid": "پرداخت شده"
+    },
+    "transitions": {
+      "close": "بستن",
+      "cancel": "لغو",
+      "confirm": "تأیید",
+      "mark-paid": "علامت‌گذاری به عنوان پرداخت شده"
+    },
+    "settings": {
+      "bulk-buy": {
+        "nav-title": "خرید عمده",
+        "title": "سفارشات خرید عمده",
+        "description": "تنظیمات مدیریت و پیکربندی سفارشات خرید عمده"
+      },
+      "tax": {
+        "title": "تنظیمات مالیات",
+        "description": "پیکربندی نرخ مالیات و محاسبات برای سفارشات خرید عمده",
+        "items": {
+          "tax-rate": {
+            "title": "نرخ مالیات (%)",
+            "description": "نرخ مالیات پیش‌فرض درصد برای سفارشات خرید عمده. این نرخ روی اقلام سفارش و سفارشات اعضا اعمال می‌شود."
+          }
+        }
+      }
+    }
+  },
+  "profile-page": {
+    "sections": {
+      "my-orders": {
+        "title": "سفارش‌های من",
+        "description": "سفارش‌های ثبت‌شده و روند پیشرفت آن‌ها را ببینید.",
+        "actions": {
+          "manage": "مشاهده سفارش‌های من"
+        }
+      }
+    },
+    "commands": {
+      "view-my-orders": {
+        "coming-soon": "سفارش‌های من به‌زودی در دسترس خواهند بود."
+      }
+    }
+  }
+}

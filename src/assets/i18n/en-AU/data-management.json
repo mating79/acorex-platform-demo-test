@@ -1,0 +1,641 @@
+{
+  "datasources": {
+    "availability-options": {
+      "title": "Availability",
+      "columns": {
+        "value": {
+          "title": "Value"
+        },
+        "title": {
+          "title": "Title"
+        }
+      },
+      "samples": {
+        "24-7": "24/7",
+        "business-hours": "Business Hours",
+        "weekdays": "Weekdays Only",
+        "weekends": "Weekends Only",
+        "limited-hours": "Limited Hours"
+      }
+    }
+  },
+  "module": {
+    "title": "Data Management",
+    "description": "Manage queries, data sources, and metadata definitions",
+    "menus": {
+      "root": {
+        "title": "Data Definitions",
+        "description": "Manage data definitions"
+      }
+    }
+  },
+  "features": {
+    "data-management": {
+      "title": "Data Management",
+      "description": "Enable data management module functionality"
+    },
+    "queries": {
+      "title": "Queries",
+      "description": "Enable query management functionality"
+    },
+    "data-sources": {
+      "title": "Data Sources",
+      "description": "Enable data source management functionality"
+    },
+    "metadata-definitions": {
+      "title": "Metadata Definitions",
+      "description": "Enable metadata definition management functionality"
+    },
+    "equipments": {
+      "title": "Equipments",
+      "description": "Enable equipment and equipment category management"
+    },
+    "tags": {
+      "title": "Tags",
+      "description": "Enable tag management functionality"
+    }
+  },
+  "queries": {
+    "terms": {
+      "query": "Query",
+      "queries": "Queries",
+      "category": "Query Category",
+      "categories": "Query Categories"
+    },
+    "entities": {
+      "query": {
+        "title": "Query",
+        "plural": "Queries",
+        "groups": {
+          "basic-info": {
+            "title": "Basic Information"
+          },
+          "query": {
+            "title": "Query Builder"
+          }
+        },
+        "fields": {
+          "dataSource": {
+            "title": "Data Source"
+          },
+          "query": {
+            "title": "Query"
+          }
+        }
+      }
+    },
+    "menus": {
+      "queries": {
+        "title": "Queries",
+        "description": "Manage data queries"
+      }
+    },
+    "permissions": {
+      "queries": {
+        "title": "Queries",
+        "actions": {
+          "manage": {
+            "title": "Manage Queries",
+            "description": "Manage all query operations"
+          },
+          "view": {
+            "title": "View Queries",
+            "description": "View queries"
+          },
+          "create": {
+            "title": "Create Query",
+            "description": "Create new queries"
+          },
+          "edit": {
+            "title": "Edit Query",
+            "description": "Edit existing queries"
+          },
+          "delete": {
+            "title": "Delete Queries",
+            "description": "Delete queries"
+          }
+        }
+      }
+    }
+  },
+  "data-sources": {
+    "terms": {
+      "data-source": "Data Source",
+      "data-sources": "Data Sources",
+      "category": "Data Source Category",
+      "categories": "Data Source Categories",
+      "source-type": "Source Type",
+      "output-type": "Output Type",
+      "source-static": "Source Static",
+      "columns": "Columns",
+      "filters": "Filters",
+      "table": "Table",
+      "text": "Text",
+      "static": "Static",
+      "samples": "Samples",
+      "entity": "Entity"
+    },
+    "entities": {
+      "data-source": {
+        "title": "Data Source",
+        "plural": "Data Sources"
+      }
+    },
+    "menus": {
+      "data-sources": {
+        "title": "Data Sources",
+        "description": "Manage data sources"
+      }
+    },
+    "permissions": {
+      "data-sources": {
+        "title": "Data Sources",
+        "actions": {
+          "manage": {
+            "title": "Manage Data Sources",
+            "description": "Manage all data source operations"
+          },
+          "view": {
+            "title": "View Data Sources",
+            "description": "View data sources"
+          },
+          "create": {
+            "title": "Create Data Source",
+            "description": "Create new data sources"
+          },
+          "edit": {
+            "title": "Edit Data Source",
+            "description": "Edit existing data sources"
+          },
+          "delete": {
+            "title": "Delete Data Sources",
+            "description": "Delete data sources"
+          }
+        }
+      }
+    }
+  },
+  "metadata-definitions": {
+    "terms": {
+      "metadata-definition": "MetaData Definition",
+      "metadata-definitions": "MetaData Definitions",
+      "category": "MetaData Definition Category",
+      "categories": "MetaData Definition Categories",
+      "parent": "Parent",
+      "interface": "Interface"
+    },
+    "entities": {
+      "metadata-definition": {
+        "title": "MetaData Definition",
+        "plural": "MetaData Definitions",
+        "actions": {
+          "preview": {
+            "title": "Preview Interface"
+          }
+        },
+        "groups": {
+          "presentation": "Presentation"
+        }
+      }
+    },
+    "components": {
+      "meta-data-form": {
+        "title": "Meta Data Form",
+        "description": "Display and edit metadata form fields"
+      },
+      "meta-data-configurator": {
+        "label": "MetaData definition"
+      },
+      "meta-data-builder": {
+        "title": "Meta Data Builder",
+        "description": "Configure metadata groups and fields for dynamic forms"
+      },
+      "meta-data-selector": {
+        "title": "Meta Data Selector",
+        "description": "Select and configure metadata items from available categories",
+        "basic-info": {
+          "title": "Basic Info",
+          "name-duplicate": "A field with this name already exists. Please choose a unique name."
+        },
+        "default-section-badge": "Default Section",
+        "available-items": "Available Items",
+        "selected-items": "Selected Items",
+        "select-from-tree": "Select items from the category tree",
+        "configure-selected": "Configure selected items",
+        "click-add-to-select": "Click 'Add' button to select items",
+        "categories": "Categories",
+        "select-items": "Select Meta Data Items",
+        "edit-items": "Edit Meta Data Items",
+        "select-from-available": "Select from available metadata definitions",
+        "search-placeholder": "Search metadata items...",
+        "items-selected": "items selected",
+        "required": "Required",
+        "placeholder": "Placeholder",
+        "placeholder-hint": "Enter placeholder text",
+        "tree-loading": "Loading tree...",
+        "dialogs": {
+          "group-name-placeholder": "e.g. contact-details, section_1",
+          "group-name-duplicate": {
+            "title": "Duplicate Group Name",
+            "message": "A group with this name already exists. Please choose a unique name."
+          },
+          "group-title": {
+            "message": "Enter a name for the group",
+            "placeholder": "Group name..."
+          },
+          "delete-group": {
+            "message": "Are you sure you want to delete this group? All fields in this group will be removed."
+          }
+        },
+        "empty-states": {
+          "no-items-selected": {
+            "title": "No Items Selected",
+            "description": "No metadata items have been selected yet. Click the 'Add Meta Data' button to start selecting items from available metadata definitions."
+          },
+          "no-items-found": {
+            "title": "No Items Found",
+            "description": "No items match your current search criteria. Try adjusting your search terms."
+          },
+          "no-metadata-definitions": {
+            "title": "No Metadata Definitions",
+            "description": "No metadata definitions are available to display in this form. Please configure metadata definitions first."
+          },
+          "no-groups": {
+            "title": "No Groups",
+            "description": "No metadata groups have been created yet. Click 'Add Group' to create your first group."
+          },
+          "empty-group": {
+            "title": "No Fields",
+            "description": "This group has no fields yet. Click 'Add Field' to add metadata fields."
+          }
+        }
+      },
+      "query-builder": {
+        "title": "Query Builder",
+        "terms": {
+          "group": "Group",
+          "condition": "Condition",
+          "rule": "Rule"
+        },
+        "tabs": {
+          "columns": {
+            "title": "Columns"
+          },
+          "where": {
+            "title": "Where"
+          },
+          "sort": {
+            "title": "Sort"
+          },
+          "group-by": {
+            "title": "Group By"
+          },
+          "aggregate": {
+            "title": "Aggregate"
+          },
+          "raw": {
+            "title": "Raw Query"
+          },
+          "output": {
+            "title": "Output"
+          }
+        },
+        "sections": {
+          "columns": {
+            "title": "Select Columns",
+            "placeholder": "Select columns to include in the query"
+          },
+          "where": {
+            "title": "Where Clause",
+            "description": "Build filter conditions and groups"
+          },
+          "sort": {
+            "title": "Sort Rules",
+            "field-placeholder": "Select field",
+            "empty-state": "No sort rules defined. Click 'Add Sort Rule' to add sorting."
+          },
+          "group-by": {
+            "title": "Group By",
+            "placeholder": "Select columns to group by"
+          },
+          "aggregate": {
+            "title": "Aggregate Functions",
+            "category-placeholder": "Filter by category",
+            "search-placeholder": "Search functions...",
+            "function-placeholder": "Select function",
+            "field-placeholder": "Select field",
+            "alias-placeholder": "Alias (optional)",
+            "distinct-label": "DISTINCT",
+            "empty-state": "No aggregate functions defined. Click 'Add Aggregate' to add aggregation."
+          },
+          "raw-query": {
+            "title": "Raw Query",
+            "language-placeholder": "Select query language",
+            "placeholder": "Enter your raw SQL query here...",
+            "help-text": "Write your query in {language} syntax. Changes here will sync with the structured query builder."
+          },
+          "output": {
+            "title": "Output Type",
+            "description": "Select the expected structure of the query result",
+            "placeholder": "Select output type",
+            "types": {
+              "value": {
+                "title": "Single Value",
+                "description": "Returns a single value result (e.g., COUNT, SUM, AVG)"
+              },
+              "table": {
+                "title": "Table",
+                "description": "Returns a table result with items array and total count"
+              },
+              "object": {
+                "title": "Object",
+                "description": "Returns a single object/item record"
+              }
+            }
+          }
+        },
+        "validation": {
+          "aggregate-without-group-by": "Aggregate functions (MIN, MAX, SUM, AVG, COUNT) are typically used with GROUP BY. Without GROUP BY, they will aggregate the entire result set.",
+          "group-by-without-aggregate": "GROUP BY is defined but no aggregate functions are used. Consider adding aggregate functions or removing GROUP BY.",
+          "aggregate-columns-warning": "When using aggregate functions without GROUP BY, all columns in SELECT should be aggregate functions."
+        },
+        "condition": {
+          "select-field": "Select field",
+          "select-field-first": "Select a field first",
+          "fill-by-user": "Fill value by user (parameter)"
+        },
+        "empty-states": {
+          "no-conditions": {
+            "title": "No Query Conditions",
+            "description": "No query conditions have been defined yet. Add conditions to build your query."
+          },
+          "no-conditions-or-groups": {
+            "title": "No Conditions or Groups",
+            "description": "No conditions or groups have been added yet. Start building your query by adding conditions or groups."
+          },
+          "empty-group": {
+            "title": "Empty Group",
+            "description": "This group is empty. Add conditions or nested groups to organize your query logic."
+          }
+        },
+        "actions": {
+          "add-condition": {
+            "title": "Add Condition",
+            "description": "Add a new condition to the query"
+          },
+          "add-nested": {
+            "title": "Add Nested",
+            "description": "Add a nested aggregate function"
+          },
+          "add-group": {
+            "title": "Add Group",
+            "description": "Add a new group to organize query conditions"
+          },
+          "add-rule": {
+            "title": "Add Rule",
+            "description": "Add a new rule to the query"
+          },
+          "add-inner-group": {
+            "title": "Add Inner Group",
+            "description": "Add a nested group inside the current group"
+          },
+          "add-sort-rule": {
+            "title": "Add Sort Rule",
+            "description": "Add a new sort rule"
+          },
+          "select-all": {
+            "title": "Select All",
+            "description": "Select all items"
+          },
+          "clear-all": {
+            "title": "Clear All",
+            "description": "Clear all selections"
+          },
+          "remove": {
+            "title": "Remove",
+            "description": "Remove this item from the query"
+          },
+          "add-aggregate": {
+            "title": "Add Aggregate",
+            "description": "Add a new aggregate function"
+          },
+          "add": {
+            "title": "Add",
+            "description": "Add this item"
+          },
+          "format-query": {
+            "title": "Format Query",
+            "description": "Format and beautify the SQL query"
+          },
+          "clear": {
+            "title": "Clear",
+            "description": "Clear the query"
+          },
+          "cancel": {
+            "title": "Cancel",
+            "description": "Cancel this operation"
+          }
+        }
+      },
+      "query": {
+        "actions": {
+          "execute": {
+            "title": "Execute Query",
+            "description": "Execute the query and view results"
+          }
+        },
+        "messages": {
+          "execute-failed": {
+            "title": "Query Execution Failed",
+            "content": "Failed to execute query \"{{queryName}}\". The query returned no results."
+          },
+          "execute-error": {
+            "title": "Query Execution Error",
+            "content": "An error occurred while executing the query: {{error}}"
+          }
+        },
+        "components": {
+          "execute-query-dialog": {
+            "title": "Query Result"
+          }
+        }
+      },
+      "column-filter-selector": {
+        "title": "Column Filter Selector",
+        "empty-states": {
+          "no-filter-selected": {
+            "title": "No Filter Selected",
+            "description": "No filter has been selected for this column. Select a filter to customize the data display."
+          }
+        }
+      }
+    },
+    "actions": {
+      "add-meta-data": {
+        "title": "Add Meta Data"
+      },
+      "add-group": {
+        "title": "Add Group"
+      },
+      "edit-group": {
+        "title": "Edit Group"
+      },
+      "delete-group": {
+        "title": "Delete Group"
+      },
+      "add-field": {
+        "title": "Add Field"
+      },
+      "preview": {
+        "title": "Preview"
+      },
+      "select": {
+        "title": "Select"
+      },
+      "add-selected": {
+        "title": "Add Selected"
+      },
+      "configure-meta-data": {
+        "title": "Meta Data Configuration"
+      }
+    },
+    "menus": {
+      "metadata-definitions": {
+        "title": "Metadata",
+        "description": "Manage metadata definitions"
+      }
+    },
+    "permissions": {
+      "metadata-definitions": {
+        "title": "Metadata Definitions",
+        "actions": {
+          "manage": {
+            "title": "Manage Metadata Definitions",
+            "description": "Manage all metadata definition operations"
+          },
+          "view": {
+            "title": "View Metadata Definitions",
+            "description": "View metadata definitions"
+          },
+          "create": {
+            "title": "Create Metadata Definition",
+            "description": "Create new metadata definitions"
+          },
+          "edit": {
+            "title": "Edit Metadata Definition",
+            "description": "Edit existing metadata definitions"
+          },
+          "delete": {
+            "title": "Delete Metadata Definitions",
+            "description": "Delete metadata definitions"
+          }
+        }
+      }
+    }
+  },
+  "equipments": {
+    "terms": {
+      "equipment": "Equipment",
+      "equipments": "Equipments",
+      "category": "Equipment Category",
+      "categories": "Equipment Categories"
+    },
+    "entities": {
+      "equipment": {
+        "title": "Equipment",
+        "plural": "Equipments",
+        "components": {
+          "meta-data-form": {
+            "title": "Equipment Meta Data"
+          }
+        }
+      },
+      "equipment-category": {
+        "title": "Equipment Category",
+        "plural": "Equipment Categories"
+      }
+    },
+    "menus": {
+      "equipments": {
+        "title": "Equipments",
+        "description": "Manage equipments"
+      },
+      "equipment-categories": {
+        "title": "Equipment Categories",
+        "description": "Manage equipment categories"
+      }
+    },
+    "permissions": {
+      "equipments": {
+        "title": "Equipments",
+        "actions": {
+          "manage": {
+            "title": "Manage Equipments",
+            "description": "Manage all equipment operations"
+          },
+          "view": {
+            "title": "View Equipments",
+            "description": "View equipments"
+          },
+          "create": {
+            "title": "Create Equipment",
+            "description": "Create new equipment"
+          },
+          "edit": {
+            "title": "Edit Equipment",
+            "description": "Edit existing equipment"
+          },
+          "delete": {
+            "title": "Delete Equipments",
+            "description": "Delete equipments"
+          }
+        }
+      }
+    }
+  },
+  "tags": {
+    "terms": {
+      "tag": "Tag",
+      "tags": "Tags"
+    },
+    "entities": {
+      "tag": {
+        "title": "Tag",
+        "plural": "Tags"
+      }
+    },
+    "menus": {
+      "tags": {
+        "title": "Tags",
+        "description": "Manage tags"
+      }
+    },
+    "permissions": {
+      "tags": {
+        "title": "Tags",
+        "actions": {
+          "manage": {
+            "title": "Manage Tags",
+            "description": "Manage all tag operations"
+          },
+          "view": {
+            "title": "View Tags",
+            "description": "View tags"
+          },
+          "create": {
+            "title": "Create Tag",
+            "description": "Create new tags"
+          },
+          "edit": {
+            "title": "Edit Tag",
+            "description": "Edit existing tags"
+          },
+          "delete": {
+            "title": "Delete Tags",
+            "description": "Delete tags"
+          }
+        }
+      }
+    }
+  }
+}

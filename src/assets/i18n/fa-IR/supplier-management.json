@@ -1,0 +1,115 @@
+{
+  "module": {
+    "title": "مدیریت تأمین‌کنندگان",
+    "description": "مدیریت تأمین‌کنندگان و روابط تأمین‌کننده",
+    "menus": {
+      "root": {
+        "title": "مدیریت تأمین‌کنندگان",
+        "description": "مدیریت تمام اطلاعات مرتبط با تأمین‌کنندگان"
+      }
+    }
+  },
+  "suppliers": {
+    "terms": {
+      "supplier": "تأمین‌کننده",
+      "suppliers": "تأمین‌کنندگان"
+    },
+    "entities": {
+      "supplier": {
+        "title": "تأمین‌کننده",
+        "plural": "تأمین‌کنندگان",
+        "fields": {
+          "supplier-code": {
+            "title": "کد تأمین‌کننده",
+            "description": "کد شناسه یکتای تأمین‌کننده",
+            "placeholder": "کد تأمین‌کننده را وارد کنید"
+          },
+          "person": {
+            "title": "شخص",
+            "description": "اطلاعات شخص مرتبط",
+            "placeholder": "شخص را انتخاب کنید"
+          },
+          "supplier-type": {
+            "title": "نوع",
+            "description": "طبقه‌بندی نوع",
+            "placeholder": "نوع را انتخاب کنید"
+          },
+          "segment": {
+            "title": "بخش",
+            "description": "طبقه‌بندی بخش",
+            "placeholder": "بخش را انتخاب کنید"
+          },
+          "since": {
+            "title": "تأمین‌کننده از تاریخ",
+            "description": "تاریخ شروع رابطه با تأمین‌کننده",
+            "placeholder": "تاریخ را انتخاب کنید"
+          },
+          "is-preferred": {
+            "title": "تأمین‌کننده ترجیحی",
+            "description": "وضعیت تأمین‌کننده ترجیحی"
+          },
+          "rating": {
+            "title": "امتیاز",
+            "description": "امتیاز عملکرد تأمین‌کننده (0-5)",
+            "placeholder": "امتیاز را وارد کنید"
+          },
+          "payment-terms": {
+            "title": "شرایط پرداخت",
+            "description": "شرایط پرداخت پیش‌فرض برای این تأمین‌کننده",
+            "placeholder": "شرایط پرداخت را انتخاب کنید"
+          },
+          "default-currency": {
+            "title": "ارز پیش‌فرض",
+            "description": "ارز پیش‌فرض برای معاملات با این تأمین‌کننده",
+            "placeholder": "ارز را انتخاب کنید"
+          },
+          "purchasing-manager": {
+            "title": "مدیر خرید",
+            "description": "مدیر خرید اختصاص داده شده",
+            "placeholder": "مدیر خرید را انتخاب کنید"
+          }
+        },
+        "groups": {
+          "profile": "پروفایل",
+          "basic-info": "اطلاعات پایه",
+          "supplier-profile": "پروفایل تأمین‌کننده",
+          "financial-info": "اطلاعات مالی",
+          "additional-info": "اطلاعات اضافی"
+        },
+        "components": {
+          "meta-data-form": {
+            "title": "اطلاعات اضافی"
+          }
+        }
+      }
+    }
+  },
+  "permissions": {
+    "supplier-management": {
+      "manage": { "title": "مدیریت تأمین‌کنندگان" },
+      "supplier": {
+        "manage": {
+          "title": "مدیریت تأمین‌کنندگان",
+          "description": "دسترسی کامل به مدیریت تأمین‌کنندگان"
+        },
+        "view": {
+          "title": "مشاهده تأمین‌کنندگان",
+          "description": "مشاهده اطلاعات تأمین‌کننده"
+        },
+        "create": {
+          "title": "ایجاد تأمین‌کننده",
+          "description": "ایجاد تأمین‌کنندگان جدید"
+        },
+        "update": {
+          "title": "به‌روزرسانی تأمین‌کننده",
+          "description": "به‌روزرسانی اطلاعات تأمین‌کننده"
+        },
+        "delete": {
+          "title": "حذف تأمین‌کنندگان",
+          "description": "حذف تأمین‌کنندگان"
+        }
+      }
+    }
+  }
+}
+

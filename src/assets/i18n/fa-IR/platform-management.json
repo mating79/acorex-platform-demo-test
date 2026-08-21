@@ -1,0 +1,1709 @@
+{
+  "module": {
+    "title": "مدیریت پلتفرم",
+    "description": "مدیریت تنظیمات سراسری پلتفرم، منوها و توکن‌ها",
+    "menus": {
+      "root": {
+        "title": "پلتفرم",
+        "description": "مدیریت و پیکربندی پلتفرم"
+      }
+    }
+  },
+  "presence": {
+    "queries": {
+      "user-activity": {
+        "title": "فعالیت حضور کاربر",
+        "description": "زمان سپری‌شده در وضعیت آنلاین، غایب، مشغول و آفلاین در یک بازه."
+      },
+      "tenant-activity": {
+        "title": "فعالیت حضور مستأجر",
+        "description": "چند کاربر در یک بازه آنلاین، غایب یا مشغول بوده‌اند."
+      }
+    }
+  },
+  "reports": {
+    "category": {
+      "title": "نشست‌ها و حضور",
+      "description": "نشست‌ها، حضور و فعالیت حساب کاربری."
+    },
+    "user-activity-timeline": {
+      "title": "جدول زمانی نشست و حضور",
+      "description": "تاریخچه نشست و حضور: جدول زمانی رویدادها، خلاصه، نمودار روزانه، سگمنت‌های حضور و غایب در برابر مشغول."
+    },
+    "tenant-presence-overview": {
+      "title": "خلاصه حضور مستأجر",
+      "description": "کاربران متصل، مجموع وضعیت‌ها و روند روزانه آنلاین برای مستأجر."
+    },
+    "parameters": {
+      "user-activity-filters": {
+        "title": "فیلترهای فعالیت",
+        "description": "کاربر و بازه تاریخ برای نماهای فعالیت و حضور"
+      },
+      "tenant-presence-filters": {
+        "title": "فیلترهای حضور",
+        "description": "بازه تاریخ برای فعالیت حضور مستأجر"
+      },
+      "user": {
+        "title": "کاربر",
+        "description": "کاربر برای گزارش"
+      },
+      "users": {
+        "title": "کاربر",
+        "description": "کاربر برای گزارش"
+      },
+      "date-range": {
+        "title": "بازه تاریخ",
+        "description": "بازه گزارش برای فعالیت و حضوری که با این دوره هم‌پوشانی دارند"
+      }
+    },
+    "columns": {
+      "display-name": "نام نمایشی",
+      "username": "نام کاربری",
+      "day": "روز",
+      "status": "وضعیت",
+      "source": "منبع",
+      "event-type": "رویداد",
+      "occurred-at": "زمان رخداد",
+      "detail": "جزئیات",
+      "device-name": "دستگاه",
+      "ip-address": "آدرس IP",
+      "session-status": "وضعیت نشست",
+      "started-at": "شروع",
+      "ended-at": "پایان",
+      "duration-hours": "مدت (ساعت)",
+      "online-hours": "آنلاین (ساعت)",
+      "away-hours": "غایب (ساعت)",
+      "busy-hours": "مشغول (ساعت)",
+      "offline-hours": "آفلاین (ساعت)",
+      "online-percent": "درصد آنلاین",
+      "away-auto-hours": "غایب خودکار (ساعت)",
+      "away-manual-hours": "غایب دستی (ساعت)",
+      "busy-manual-hours": "مشغول دستی (ساعت)",
+      "connected-user-count": "کاربران متصل",
+      "online-user-count": "کاربران آنلاین",
+      "away-user-count": "کاربران غایب",
+      "busy-user-count": "کاربران مشغول",
+      "last-status": "آخرین وضعیت"
+    }
+  },
+  "features": {
+    "menu-customization": {
+      "title": "سفارشی‌سازی منو",
+      "description": "اجازه به کاربران برای سفارشی‌سازی ساختار و سازماندهی منو"
+    },
+    "auto-check-updates": {
+      "title": "بررسی خودکار به‌روزرسانی‌ها",
+      "description": "بررسی خودکار به‌روزرسانی‌های پلتفرم و اطلاع‌رسانی به کاربران"
+    },
+    "max-tokens": {
+      "title": "حداکثر توکن‌ها",
+      "description": "حداکثر تعداد توکن‌های مجاز در سیستم"
+    }
+  },
+  "menu-management": {
+    "terms": {
+      "menu": "منو",
+      "menus": "منوها"
+    },
+    "menus": {
+      "user": {
+        "title": "مدیریت منوها",
+        "description": "مدیریت سفارشی‌سازی‌های منوی شخصی"
+      },
+      "tenant": {
+        "title": "مدیریت منوها",
+        "description": "مدیریت سفارشی‌سازی‌های منوی سازمان"
+      }
+    },
+    "components": {
+      "menu-list": {
+        "title": "مدیریت منوها",
+        "description": "مدیریت منوهای برنامه و سفارشی‌سازی ساختار منو",
+        "empty-states": {
+          "no-data": {
+            "title": "هیچ ردیف منو یافت نشد",
+            "description": "با افزودن یک ردیف منو جدید شروع کنید یا منتظر بارگذاری ارائه‌دهندگان بمانید"
+          },
+          "loading": {
+            "title": "در حال بارگذاری منوها...",
+            "description": "لطفاً منتظر بمانید تا ساختار منو بارگذاری شود"
+          },
+          "error": {
+            "title": "خطا در بارگذاری منوها",
+            "description": "خطایی در هنگام بارگذاری ردیف‌های منو رخ داد"
+          }
+        }
+      },
+      "menu-customizer-popup": {
+        "title": "سفارشی‌سازی منو"
+      },
+      "add-dialog": {
+        "title": "افزودن ردیف منو",
+        "description": "ایجاد یک ردیف منو جدید"
+      },
+      "edit-dialog": {
+        "title": "ویرایش ردیف منو",
+        "description": "ویرایش ویژگی‌های ردیف منو"
+      }
+    },
+    "states": {
+      "built-in": "پیش‌فرض",
+      "custom": "سفارشی",
+      "hidden": "مخفی",
+      "divider": "جداکننده",
+      "group": "گروه"
+    },
+    "fields": {
+      "name": "نام",
+      "text": "متن",
+      "icon": "آیکون",
+      "path": "مسیر",
+      "priority": "اولویت",
+      "description": "توضیحات"
+    },
+    "actions": {
+      "add-root": {
+        "title": "افزودن منوی اصلی",
+        "description": "افزودن یک ردیف منو در سطح اصلی"
+      },
+      "add-child": {
+        "title": "افزودن زیرمنو",
+        "description": "افزودن یک زیرمنو"
+      },
+      "show": {
+        "title": "نمایش",
+        "description": "نمایش این ردیف منو"
+      },
+      "hide": {
+        "title": "مخفی کردن",
+        "description": "مخفی کردن این ردیف منو"
+      },
+      "reset": {
+        "title": "بازنشانی همه",
+        "description": "بازنشانی تمام سفارشی‌سازی‌های منو",
+        "confirm": {
+          "title": "بازنشانی سفارشی‌سازی‌ها",
+          "message": "آیا از بازنشانی تمام سفارشی‌سازی‌های منو اطمینان دارید؟ این عملیات قابل بازگشت نیست."
+        }
+      },
+      "collapse": {
+        "title": "بستن همه",
+        "description": "بستن تمام ردیف‌های منو"
+      },
+      "expand": {
+        "title": "باز کردن همه",
+        "description": "باز کردن تمام ردیف‌های منو"
+      },
+      "move-up": {
+        "title": "انتقال به بالا",
+        "description": "انتقال ردیف منو به بالا"
+      },
+      "move-down": {
+        "title": "انتقال به پایین",
+        "description": "انتقال ردیف منو به پایین"
+      },
+      "move-to-parent": {
+        "title": "انتقال به سطح بالاتر",
+        "description": "انتقال ردیف منو به سطح والد"
+      },
+      "delete": {
+        "title": "حذف",
+        "description": "حذف این ردیف منو",
+        "confirm": {
+          "message": "آیا از حذف این ردیف منو اطمینان دارید؟"
+        }
+      },
+      "customize-menu": {
+        "title": "سفارشی‌سازی منو",
+        "description": "سفارشی‌سازی ساختار منو برای این ردیف"
+      }
+    },
+    "messages": {
+      "success": {
+        "save": "ردیف منو با موفقیت ذخیره شد",
+        "delete": "ردیف منو با موفقیت حذف شد",
+        "show": "ردیف منو با موفقیت نمایش داده شد",
+        "hide": "ردیف منو با موفقیت مخفی شد",
+        "reorder": "ردیف‌های منو با موفقیت مرتب شدند",
+        "reset": "سفارشی‌سازی‌ها با موفقیت بازنشانی شدند",
+        "customization-saved": "سفارشی‌سازی‌های منو با موفقیت ذخیره شدند"
+      },
+      "error": {
+        "load": "خطا در بارگذاری ردیف‌های منو",
+        "save": "خطا در ذخیره ردیف منو",
+        "delete": "خطا در حذف ردیف منو",
+        "show": "خطا در نمایش ردیف منو",
+        "hide": "خطا در مخفی کردن ردیف منو",
+        "move": "نمی‌توانید ردیف منو را در یک گره برگی با مسیر رها کنید",
+        "reorder": "خطا در مرتب‌سازی ردیف‌های منو",
+        "sync": "خطا در همگام‌سازی تغییرات منو",
+        "reset": "خطا در بازنشانی سفارشی‌سازی‌ها"
+      },
+      "info": {
+        "no-name": "این ردیف منو نام ندارد و قابل سفارشی‌سازی نیست"
+      }
+    },
+    "permissions": {
+      "menu-management": {
+        "title": "مدیریت منوها",
+        "actions": {
+          "manage": {
+            "title": "مدیریت منوها",
+            "description": "دسترسی کامل به مدیریت منوها"
+          },
+          "view": {
+            "title": "مشاهده منوها",
+            "description": "مشاهده ساختار منو"
+          },
+          "create": {
+            "title": "ایجاد ردیف منو",
+            "description": "ایجاد ردیف منوی جدید"
+          },
+          "edit": {
+            "title": "ویرایش ردیف منو",
+            "description": "ویرایش ردیف‌های منوی موجود"
+          },
+          "delete": {
+            "title": "حذف ردیف منو",
+            "description": "حذف ردیف‌های منو"
+          }
+        }
+      }
+    }
+  },
+  "tokens": {
+    "terms": {
+      "token": "توکن",
+      "tokens": "توکن‌ها",
+      "data-type": "نوع داده",
+      "value": "مقدار"
+    },
+    "entities": {
+      "token": {
+        "title": "توکن",
+        "plural": "توکن‌ها",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "value": "مقدار"
+        },
+        "fields": {
+          "kind": {
+            "title": "نوع/دسته"
+          },
+          "data-type": {
+            "title": "نوع داده"
+          },
+          "format": {
+            "title": "قالب"
+          },
+          "expression": {
+            "title": "عبارت"
+          },
+          "sample-value": {
+            "title": "مقدار نمونه",
+            "placeholder": "مقدار نمونه برای پیش‌نمایش قالب"
+          },
+          "is-sensitive": {
+            "title": "حساس"
+          },
+          "mask-pattern": {
+            "title": "الگوی پنهان‌سازی"
+          }
+        },
+        "actions": {
+          "execute": {
+            "title": "اجرای توکن"
+          }
+        }
+      }
+    },
+    "components": {
+      "execute-token-dialog": {
+        "title": "نتیجه اجرای توکن",
+        "fields": {
+          "token-name": {
+            "title": "نام توکن"
+          },
+          "value": {
+            "title": "مقدار"
+          }
+        }
+      }
+    },
+    "messages": {
+      "execute-failed": {
+        "title": "خطا در اجرای توکن",
+        "content": "توکن \"{{tokenName}}\" یافت نشد یا مقداری برنگرداند"
+      },
+      "execute-error": {
+        "title": "خطا در اجرای توکن",
+        "content": "خطا در اجرای توکن: {{error}}"
+      }
+    },
+    "permissions": {
+      "token": {
+        "title": "توکن‌ها",
+        "manage": {
+          "title": "مدیریت توکن‌ها",
+          "description": "دسترسی کامل به مدیریت توکن‌ها"
+        },
+        "view": {
+          "title": "مشاهده توکن‌ها",
+          "description": "مشاهده توکن‌ها"
+        },
+        "create": {
+          "title": "ایجاد توکن",
+          "description": "ایجاد توکن‌های جدید"
+        },
+        "edit": {
+          "title": "ویرایش توکن",
+          "description": "ویرایش توکن‌ها"
+        },
+        "delete": {
+          "title": "حذف توکن‌ها",
+          "description": "حذف توکن‌ها"
+        }
+      }
+    }
+  },
+  "permissions": {
+    "manage": {
+      "title": "مدیریت پلتفرم",
+      "description": "مدیریت تنظیمات و پیکربندی سراسری پلتفرم"
+    }
+  },
+  "definitions": {
+    "terms": {
+      "title": "تعاریف"
+    },
+    "relations": {
+      "title": "روابط",
+      "terms": {
+        "title": "روابط",
+        "relation-definition": "تعریف رابطه"
+      },
+      "columns": {
+        "id": "شناسه",
+        "type": "نوع",
+        "kind": "گونه",
+        "source": "مبدأ",
+        "target": "مقصد",
+        "typeLabel": "نوع",
+        "kindLabel": "گونه",
+        "sourceLabel": "مبدأ",
+        "targetLabel": "مقصد"
+      },
+      "actions": {
+        "create": {
+          "title": "ایجاد تعریف رابطه",
+          "description": "ایجاد تعریف رابطه جدید"
+        },
+        "view": {
+          "title": "مشاهده",
+          "description": "مشاهده جزئیات تعریف رابطه"
+        },
+        "edit": {
+          "title": "ویرایش تعریف رابطه",
+          "description": "ویرایش تعریف رابطه"
+        },
+        "delete": {
+          "title": "حذف",
+          "description": "حذف تعریف رابطه",
+          "confirm-message": "آیا از حذف این تعریف رابطه اطمینان دارید؟ این عملیات قابل بازگشت نیست."
+        }
+      },
+      "components": {
+        "list": {
+          "description": "مدیریت تعاریف رابطه. روابط در یک مجموعه جداگانه ذخیره می‌شوند (مثل جدول join در MySQL).",
+          "search-placeholder": "جستجو بر اساس شناسه، مبدأ یا مقصد...",
+          "empty-states": {
+            "loading": {
+              "title": "در حال بارگذاری تعاریف رابطه...",
+              "description": "لطفاً منتظر بمانید"
+            },
+            "error": {
+              "title": "خطا در بارگذاری",
+              "description": "خطایی در هنگام بارگذاری تعاریف رابطه رخ داد"
+            },
+            "no-data": {
+              "title": "هیچ تعریف رابطه‌ای یافت نشد",
+              "description": "اولین تعریف رابطه را ایجاد کنید"
+            },
+            "not-available": {
+              "title": "تعاریف رابطه در دسترس نیست",
+              "description": "مدیریت تعاریف رابطه فقط هنگام استفاده از Dexie یا Firestore به‌عنوان منبع تعریف موجودیت در دسترس است"
+            }
+          }
+        }
+      },
+      "detail": {
+        "sections": {
+          "basic-info": "اطلاعات پایه",
+          "source": "مبدأ",
+          "target": "مقصد"
+        },
+        "fields": {
+          "type": "نوع",
+          "kind": "گونه",
+          "is-required": "الزامی",
+          "source-module": "ماژول مبدأ",
+          "source-entity": "موجودیت مبدأ",
+          "source-key": "کلید مبدأ",
+          "target-module": "ماژول مقصد",
+          "target-entity": "موجودیت مقصد",
+          "target-key": "کلید مقصد",
+          "source-label": "مبدأ",
+          "target-label": "مقصد",
+          "cardinality-values": {
+            "one-to-one": "یک‌به‌یک",
+            "one-to-many": "یک‌به‌چند",
+            "many-to-many": "چند‌به‌چند"
+          },
+          "kind-values": {
+            "association": "ارتباط",
+            "composition": "ترکیب",
+            "aggregation": "تجمیع"
+          }
+        }
+      },
+      "messages": {
+        "success": {
+          "create": "تعریف رابطه با موفقیت ایجاد شد",
+          "update": "تعریف رابطه با موفقیت به‌روزرسانی شد",
+          "delete": "تعریف رابطه با موفقیت حذف شد"
+        },
+        "error": {
+          "delete": "خطا در حذف تعریف رابطه"
+        }
+      }
+    },
+    "commands": {
+      "title": "دستورات",
+      "detail": {
+        "sections": {
+          "basic-info": "اطلاعات پایه",
+          "description": "توضیحات",
+          "catalog-metadata": "متادیتای کاتالوگ",
+          "input-parameters": "پارامترهای ورودی",
+          "output-parameters": "پارامترهای خروجی"
+        },
+        "pages": {
+          "input-parameters": "پارامترهای ورودی",
+          "output-parameters": "پارامترهای خروجی"
+        },
+        "fields": {
+          "catalog-title": "عنوان کاتالوگ",
+          "execution-mode": "حالت اجرا",
+          "outcomes-definition": "خروجی‌ها (متادیتا)",
+          "ai-metadata": "متادیتای AI",
+          "capabilities": "قابلیت‌ها (ابزارگذاری)",
+          "param-name": "نام",
+          "param-title": "عنوان",
+          "param-schema": "اسکیما",
+          "param-description": "توضیحات"
+        }
+      }
+    },
+    "queries": {
+      "title": "پرس‌وجوها",
+      "detail": {
+        "sections": {
+          "basic-info": "اطلاعات پایه",
+          "description": "توضیحات",
+          "catalog-metadata": "متادیتای کاتالوگ",
+          "input-parameters": "پارامترهای ورودی",
+          "output-parameters": "پارامترهای خروجی"
+        },
+        "pages": {
+          "input-parameters": "پارامترهای ورودی",
+          "output-parameters": "پارامترهای خروجی"
+        },
+        "fields": {
+          "catalog-title": "عنوان کاتالوگ",
+          "execution-mode": "حالت اجرا",
+          "capabilities": "قابلیت‌ها (ابزارگذاری)",
+          "ai-metadata": "متادیتای AI",
+          "param-name": "نام",
+          "param-title": "عنوان",
+          "param-schema": "اسکیما",
+          "param-description": "توضیحات"
+        }
+      }
+    },
+    "modules": {
+      "title": "ماژول‌ها",
+      "detail": {
+        "pages": {
+          "overview": "نمای کلی",
+          "entities": "موجودیت‌ها",
+          "aggregates": "آگریگیت‌ها",
+          "relations": "روابط",
+          "menus": "تعاریف منو"
+        },
+        "fields": {
+          "icon": "آیکون",
+          "entity-count": "تعداد موجودیت",
+          "feature-count": "تعداد ویژگی",
+          "relation-count": "تعداد رابطه",
+          "features": "ویژگی‌ها",
+          "feature-name": "نام ویژگی",
+          "feature-title": "عنوان ویژگی",
+          "feature-default-value": "مقدار پیش‌فرض",
+          "relation-source": "مبدا",
+          "relation-target": "مقصد",
+          "type": "نوع",
+          "kind": "ماهیت"
+        }
+      }
+    },
+    "aggregates": {
+      "title": "آگریگیت‌ها",
+      "detail": {
+        "pages": {
+          "overview": "نمای کلی",
+          "entities": "موجودیت‌ها"
+        },
+        "fields": {
+          "module": "ماژول",
+          "aggregate-name": "نام آگریگیت",
+          "entity-count": "تعداد موجودیت"
+        }
+      }
+    },
+    "entities": {
+      "title": "موجودیت‌ها",
+      "terms": {
+        "title": "موجودیت‌ها",
+        "entity-definition": "تعریف موجودیت"
+      },
+      "columns": {
+        "module": "ماژول",
+        "name": "نام",
+        "title": "عنوان"
+      },
+      "actions": {
+        "create": {
+          "title": "ایجاد تعریف موجودیت",
+          "description": "ایجاد تعریف موجودیت جدید"
+        },
+        "view": {
+          "title": "مشاهده",
+          "description": "مشاهده جزئیات تعریف موجودیت"
+        },
+        "edit": {
+          "title": "ویرایش تعریف موجودیت",
+          "description": "ویرایش تعریف موجودیت"
+        },
+        "delete": {
+          "title": "حذف",
+          "description": "حذف تعریف موجودیت",
+          "confirm-message": "آیا از حذف این تعریف موجودیت اطمینان دارید؟ این عملیات قابل بازگشت نیست."
+        }
+      },
+      "components": {
+        "list": {
+          "description": "مدیریت تعاریف موجودیت بارگذاری‌شده از Dexie یا Firestore. ایجاد، ویرایش یا حذف تعاریف.",
+          "search-placeholder": "جستجو بر اساس نام یا ماژول...",
+          "empty-states": {
+            "loading": {
+              "title": "در حال بارگذاری تعاریف موجودیت...",
+              "description": "لطفاً منتظر بمانید"
+            },
+            "error": {
+              "title": "خطا در بارگذاری",
+              "description": "خطایی در هنگام بارگذاری تعاریف موجودیت رخ داد"
+            },
+            "no-data": {
+              "title": "هیچ تعریف موجودیتی یافت نشد",
+              "description": "اولین تعریف موجودیت را ایجاد کنید یا seed را اجرا کنید تا از فایل‌های JSON بارگذاری شود"
+            },
+            "not-available": {
+              "title": "تعاریف موجودیت در دسترس نیست",
+              "description": "مدیریت تعاریف موجودیت فقط هنگام استفاده از Dexie یا Firestore به‌عنوان منبع تعریف موجودیت در دسترس است"
+            }
+          }
+        }
+      },
+      "detail": {
+        "pages": {
+          "overview": "نمای کلی",
+          "fields": "فیلدها و اسکیما",
+          "interfaces": "رابط‌ها و چیدمان",
+          "configuration": "پیکربندی",
+          "menus": "پیوندهای منو"
+        },
+        "tabs": {
+          "create": "ایجاد",
+          "update": "ویرایش",
+          "single": "نمای تکی",
+          "list": "نمای لیست"
+        },
+        "sections": {
+          "basic-info": "اطلاعات عمومی",
+          "fields": "فیلدها",
+          "groups": "گروه‌ها",
+          "columns": "ستون‌ها",
+          "formats": "فرمت‌های نمایش",
+          "plugins": "پلاگین‌ها",
+          "interfaces-master-single": "Master — نمای تکی",
+          "interfaces-master-list": "Master — نمای لیست",
+          "interfaces-master-create": "Master — فرم ایجاد",
+          "interfaces-master-update": "Master — فرم ویرایش",
+          "interfaces-detail-list": "Detail — لیست",
+          "related-entities": "موجودیت‌های مرتبط"
+        },
+        "fields": {
+          "name": "نام",
+          "title": "عنوان",
+          "aggregate-root-id": "ریشه آگریگیت",
+          "module": "ماژول",
+          "icon": "آیکون",
+          "type": "نوع",
+          "format-individual": "فرمت مفرد",
+          "format-plural": "فرمت جمع",
+          "format-lookup": "فرمت نمایش lookup",
+          "format-display-name": "فرمت نام نمایشی",
+          "format-search-title": "عنوان نتیجه جستجو",
+          "format-search-description": "توضیح نتیجه جستجو",
+          "field-name": "نام فیلد",
+          "field-title": "عنوان فیلد",
+          "field-schema": "اسکیما",
+          "field-description": "توضیحات",
+          "field-flags": "پرچم فیلد (قابل خالی، فقط‌خواندنی)",
+          "field-default-value": "مقدار پیش‌فرض",
+          "add-from-property-definition": "افزودن از تعریف ویژگی",
+          "add-from-schema-definition": "افزودن از تعریف اسکیما",
+          "field-nullable": "قابل خالی",
+          "field-readonly": "فقط خواندنی",
+          "fields": "فیلدها",
+          "groups": "گروه‌ها",
+          "group-id": "شناسه گروه",
+          "group-title": "عنوان گروه",
+          "group-description": "توضیحات",
+          "group-permissions": "مجوزها",
+          "group-icon": "آیکن",
+          "columns": "ستون‌ها",
+          "columns-selector-placeholder": "یک ستون انتخاب کنید…",
+          "formats": "فرمت‌ها",
+          "plugins": "پلاگین‌ها",
+          "related-entities": "موجودیت‌های مرتبط",
+          "interface-single-title": "عنوان نمای تکی",
+          "interface-single-description": "توضیح نمای تکی",
+          "interface-single-sections": "بخش‌های نمای تکی",
+          "interface-single-properties": "ویژگی‌های نمای تکی",
+          "interface-single-actions": "اقدامات نمای تکی",
+          "interface-list-title": "عنوان نمای لیست",
+          "interface-list-description": "توضیح نمای لیست",
+          "interface-list-actions": "اقدامات نمای لیست",
+          "interface-list-views": "نماهای پرس‌وجو",
+          "interface-list-table-columns": "ستون‌های جدول لیست",
+          "interface-create-title": "عنوان فرم ایجاد",
+          "interface-create-description": "توضیح فرم ایجاد",
+          "interface-create-sections": "بخش‌های فرم ایجاد",
+          "interface-create-properties": "ویژگی‌های فرم ایجاد",
+          "interface-create-steps": "گام‌های ویزارد",
+          "interface-create-quick-create": "ایجاد سریع (lookup)",
+          "interface-update-title": "عنوان فرم ویرایش",
+          "interface-update-description": "توضیح فرم ویرایش",
+          "interface-update-sections": "بخش‌های فرم ویرایش",
+          "interface-update-properties": "ویژگی‌های فرم ویرایش",
+          "interface-detail-title": "عنوان لیست جزئیات",
+          "interface-detail-description": "توضیح لیست جزئیات",
+          "interface-detail-columns": "ستون‌های لیست جزئیات",
+          "interface-detail-actions": "اقدامات لیست جزئیات",
+          "interface-property-data-path": "مسیر داده",
+          "interface-property-permissions": "مجوزها",
+          "interface-property-layout": "چیدمان",
+          "interface-action-name": "نام اقدام",
+          "interface-action-title": "عنوان اقدام",
+          "interface-action-command": "دستور",
+          "interface-action-type": "نوع اقدام",
+          "interface-action-priority": "اولویت",
+          "interface-action-scope": "دامنه",
+          "interface-action-hidden": "مخفی",
+          "interface-action-items": "زیراقدامات",
+          "interface-query-name": "نام نما",
+          "interface-query-title": "عنوان نما",
+          "interface-query-fixed": "ثابت",
+          "interface-query-columns": "ستون‌ها",
+          "interface-query-conditions": "شرایط",
+          "interface-query-sorts": "مرتب‌سازی",
+          "interface-column-hidden": "مخفی",
+          "interface-column-show-as": "نمایش به‌صورت",
+          "interface-column-sort": "مرتب‌سازی",
+          "interface-column-options": "گزینه‌های ستون",
+          "interface-step-id": "شناسه گام",
+          "interface-step-title": "عنوان گام",
+          "interface-step-description": "توضیح گام"
+        }
+      },
+      "editor": {
+        "placeholder": "JSON تعریف موجودیت را وارد یا ویرایش کنید. باید شامل موارد زیر باشد: name، module، fields (آرایه)، groups."
+      },
+      "messages": {
+        "success": {
+          "create": "تعریف موجودیت با موفقیت ایجاد شد",
+          "update": "تعریف موجودیت با موفقیت به‌روزرسانی شد",
+          "delete": "تعریف موجودیت با موفقیت حذف شد"
+        },
+        "error": {
+          "delete": "خطا در حذف تعریف موجودیت"
+        }
+      }
+    },
+    "interfaces": {
+      "title": "رابط‌ها",
+      "terms": {
+        "title": "رابط‌ها",
+        "interface-definition": "تعریف رابط"
+      },
+      "columns": {
+        "name": "نام",
+        "title": "عنوان"
+      },
+      "actions": {
+        "create": {
+          "title": "ایجاد تعریف رابط",
+          "description": "ایجاد تعریف رابط جدید"
+        },
+        "view": {
+          "title": "مشاهده",
+          "description": "مشاهده جزئیات تعریف رابط"
+        },
+        "edit": {
+          "title": "ویرایش تعریف رابط",
+          "description": "ویرایش تعریف رابط"
+        },
+        "delete": {
+          "title": "حذف",
+          "description": "حذف تعریف رابط",
+          "confirm-message": "آیا از حذف این تعریف رابط اطمینان دارید؟ این عملیات قابل بازگشت نیست."
+        }
+      },
+      "list": {
+        "views": {
+          "form-element": "عناصر فرم",
+          "dashboard-widget": "ویجت‌های داشبورد",
+          "form-template": "قالب‌های فرم",
+          "property-editor": "ویرایشگرهای ویژگی",
+          "meta-data": "متاداده",
+          "setting-widget": "ویجت‌های تنظیمات",
+          "entity-widget": "ویجت‌های موجودیت",
+          "utility-widget": "ویجت‌های کمکی"
+        }
+      },
+      "components": {
+        "list": {
+          "description": "مدیریت تعاریف رابط ویجت. ایجاد، ویرایش یا حذف تعاریف رابط.",
+          "search-placeholder": "جستجو بر اساس نام یا عنوان...",
+          "empty-states": {
+            "loading": {
+              "title": "در حال بارگذاری تعاریف رابط...",
+              "description": "لطفاً منتظر بمانید"
+            },
+            "error": {
+              "title": "خطا در بارگذاری",
+              "description": "خطایی در هنگام بارگذاری تعاریف رابط رخ داد"
+            },
+            "no-data": {
+              "title": "هیچ تعریف رابطی یافت نشد",
+              "description": "اولین تعریف رابط را ایجاد کنید یا seed را اجرا کنید تا از رجیستری ویجت بارگذاری شود"
+            },
+            "not-available": {
+              "title": "تعاریف رابط در دسترس نیست",
+              "description": "مدیریت تعاریف رابط فقط هنگام استفاده از Dexie یا Firestore به‌عنوان منبع تعریف موجودیت در دسترس است"
+            }
+          }
+        }
+      },
+      "detail": {
+        "pages": {
+          "overview": "نمای کلی",
+          "option-definitions": "تعاریف گزینه"
+        },
+        "sections": {
+          "basic-info": "اطلاعات عمومی",
+          "configuration": "پیکربندی",
+          "categories": "دسته‌بندی‌ها",
+          "groups": "گروه‌ها"
+        },
+        "fields": {
+          "name": "نام",
+          "title": "عنوان",
+          "type": "نوع",
+          "icon": "آیکون",
+          "description": "توضیحات",
+          "option-name": "نام گزینه",
+          "option-title": "عنوان گزینه",
+          "option-schema": "اسکیما",
+          "option-description": "توضیحات"
+        }
+      },
+      "editor": {
+        "placeholder": "JSON تعریف رابط را وارد یا ویرایش کنید. باید شامل موارد زیر باشد: name، title، optionDefinitions (آرایه)."
+      },
+      "messages": {
+        "success": {
+          "create": "تعریف رابط با موفقیت ایجاد شد",
+          "update": "تعریف رابط با موفقیت به‌روزرسانی شد",
+          "delete": "تعریف رابط با موفقیت حذف شد"
+        },
+        "error": {
+          "delete": "خطا در حذف تعریف رابط"
+        }
+      }
+    },
+    "schemas": {
+      "title": "اسکیماها",
+      "terms": {
+        "title": "اسکیماها",
+        "schema-definition": "تعریف اسکیما"
+      },
+      "columns": {
+        "name": "نام",
+        "title": "عنوان"
+      },
+      "actions": {
+        "create": {
+          "title": "ایجاد تعریف اسکیما",
+          "description": "ایجاد تعریف اسکیما جدید"
+        },
+        "view": {
+          "title": "مشاهده",
+          "description": "مشاهده جزئیات تعریف اسکیما"
+        },
+        "edit": {
+          "title": "ویرایش تعریف اسکیما",
+          "description": "ویرایش تعریف اسکیما"
+        },
+        "delete": {
+          "title": "حذف",
+          "description": "حذف تعریف اسکیما",
+          "confirm-message": "آیا از حذف این تعریف اسکیما اطمینان دارید؟ این عملیات قابل بازگشت نیست."
+        }
+      },
+      "components": {
+        "list": {
+          "description": "مدیریت تعاریف اسکیما. ایجاد، ویرایش یا حذف اسکیماهای فیلد.",
+          "search-placeholder": "جستجو بر اساس نام یا عنوان...",
+          "empty-states": {
+            "loading": {
+              "title": "در حال بارگذاری تعاریف اسکیما...",
+              "description": "لطفاً منتظر بمانید"
+            },
+            "error": {
+              "title": "خطا در بارگذاری",
+              "description": "خطایی در هنگام بارگذاری تعاریف اسکیما رخ داد"
+            },
+            "no-data": {
+              "title": "هیچ تعریف اسکیما یافت نشد",
+              "description": "اولین تعریف اسکیما را ایجاد کنید یا seed را اجرا کنید تا از فایل‌های mock بارگذاری شود"
+            },
+            "not-available": {
+              "title": "تعاریف اسکیما در دسترس نیست",
+              "description": "مدیریت تعاریف اسکیما فقط هنگام استفاده از Dexie یا Firestore به‌عنوان منبع تعریف موجودیت در دسترس است"
+            }
+          }
+        }
+      },
+      "detail": {
+        "pages": {
+          "overview": "نمای کلی"
+        },
+        "sections": {
+          "basic-info": "اطلاعات پایه",
+          "interface": "رابط",
+          "validations": "اعتبارسنجی‌ها",
+          "features": "ویژگی‌ها"
+        },
+        "fields": {
+          "name": "نام",
+          "title": "عنوان",
+          "description": "توضیحات",
+          "features-searchable-enabled": "قابل جستجو",
+          "features-searchable-full-text": "جستجوی متن کامل",
+          "features-filterable-enabled": "قابل فیلتر",
+          "features-filterable-inline": "فیلتر درون‌خطی",
+          "features-sortable-enabled": "قابل مرتب‌سازی",
+          "features-auditable-enabled": "قابل ممیزی"
+        }
+      },
+      "editor": {
+        "placeholder": "JSON تعریف اسکیما را وارد یا ویرایش کنید. باید شامل موارد زیر باشد: name، title، interface (با name و options)."
+      },
+      "messages": {
+        "success": {
+          "create": "تعریف اسکیما با موفقیت ایجاد شد",
+          "update": "تعریف اسکیما با موفقیت به‌روزرسانی شد",
+          "delete": "تعریف اسکیما با موفقیت حذف شد"
+        },
+        "error": {
+          "delete": "خطا در حذف تعریف اسکیما"
+        }
+      }
+    },
+    "properties": {
+      "title": "ویژگی‌ها",
+      "terms": {
+        "title": "ویژگی‌ها",
+        "property-definition": "تعریف ویژگی"
+      },
+      "columns": {
+        "name": "نام",
+        "title": "عنوان"
+      },
+      "actions": {
+        "create": {
+          "title": "ایجاد تعریف ویژگی",
+          "description": "ایجاد تعریف ویژگی جدید"
+        },
+        "view": {
+          "title": "مشاهده",
+          "description": "مشاهده جزئیات تعریف ویژگی"
+        },
+        "edit": {
+          "title": "ویرایش تعریف ویژگی",
+          "description": "ویرایش تعریف ویژگی"
+        },
+        "delete": {
+          "title": "حذف",
+          "description": "حذف تعریف ویژگی",
+          "confirm-message": "آیا از حذف این تعریف ویژگی اطمینان دارید؟ این عملیات قابل بازگشت نیست."
+        }
+      },
+      "components": {
+        "list": {
+          "description": "مدیریت تعاریف ویژگی گلوبال (id، title، name و غیره). ایجاد، ویرایش یا حذف تعاریف ویژگی.",
+          "search-placeholder": "جستجو بر اساس شناسه، نام یا عنوان...",
+          "empty-states": {
+            "loading": {
+              "title": "در حال بارگذاری تعاریف ویژگی...",
+              "description": "لطفاً منتظر بمانید"
+            },
+            "error": {
+              "title": "خطا در بارگذاری",
+              "description": "خطایی در هنگام بارگذاری تعاریف ویژگی رخ داد"
+            },
+            "no-data": {
+              "title": "هیچ تعریف ویژگی یافت نشد",
+              "description": "اولین تعریف ویژگی را ایجاد کنید یا seed را اجرا کنید تا از فایل‌های mock بارگذاری شود"
+            },
+            "not-available": {
+              "title": "تعاریف ویژگی در دسترس نیست",
+              "description": "مدیریت تعاریف ویژگی فقط هنگام استفاده از Dexie یا Firestore به‌عنوان منبع تعریف موجودیت در دسترس است"
+            }
+          }
+        }
+      },
+      "detail": {
+        "pages": {
+          "overview": "نمای کلی"
+        },
+        "sections": {
+          "basic-info": "اطلاعات پایه",
+          "features": "ویژگی‌ها",
+          "entity-binding": "اتصال به موجودیت"
+        },
+        "fields": {
+          "name": "نام",
+          "title": "عنوان",
+          "description": "توضیحات",
+          "nullable": "قابل خالی",
+          "readonly": "فقط خواندنی",
+          "domain-actions": "اقدام‌های دامنه",
+          "domain-action-event": "رویداد",
+          "domain-action-side": "سمت",
+          "domain-action-condition": "شرط",
+          "domain-action-expression": "عبارت"
+        }
+      },
+      "messages": {
+        "success": {
+          "create": "تعریف ویژگی با موفقیت ایجاد شد",
+          "update": "تعریف ویژگی با موفقیت به‌روزرسانی شد",
+          "delete": "تعریف ویژگی با موفقیت حذف شد"
+        },
+        "error": {
+          "delete": "خطا در حذف تعریف ویژگی"
+        }
+      }
+    },
+    "plugins": {
+      "title": "پلاگین‌ها",
+      "terms": {
+        "title": "پلاگین‌ها",
+        "plugin-definition": "تعریف پلاگین"
+      },
+      "columns": {
+        "name": "نام",
+        "title": "عنوان"
+      },
+      "actions": {
+        "create": {
+          "title": "ایجاد تعریف پلاگین",
+          "description": "ایجاد تعریف پلاگین جدید"
+        },
+        "view": {
+          "title": "مشاهده",
+          "description": "مشاهده جزئیات تعریف پلاگین"
+        },
+        "edit": {
+          "title": "ویرایش تعریف پلاگین",
+          "description": "ویرایش تعریف پلاگین"
+        },
+        "delete": {
+          "title": "حذف",
+          "description": "حذف تعریف پلاگین",
+          "confirm-message": "آیا از حذف این تعریف پلاگین اطمینان دارید؟ این عملیات قابل بازگشت نیست."
+        }
+      },
+      "components": {
+        "list": {
+          "description": "مدیریت تعاریف پلاگین (history، lock، status و غیره). ایجاد، ویرایش یا حذف تعاریف پلاگین.",
+          "search-placeholder": "جستجو بر اساس نام یا عنوان...",
+          "empty-states": {
+            "loading": {
+              "title": "در حال بارگذاری تعاریف پلاگین...",
+              "description": "لطفاً منتظر بمانید"
+            },
+            "error": {
+              "title": "خطا در بارگذاری",
+              "description": "خطایی در هنگام بارگذاری تعاریف پلاگین رخ داد"
+            },
+            "no-data": {
+              "title": "هیچ تعریف پلاگینی یافت نشد",
+              "description": "اولین تعریف پلاگین را ایجاد کنید یا seed را اجرا کنید تا از فایل‌های mock بارگذاری شود"
+            },
+            "not-available": {
+              "title": "تعاریف پلاگین در دسترس نیست",
+              "description": "مدیریت تعاریف پلاگین فقط هنگام استفاده از Dexie یا Firestore به‌عنوان منبع تعریف موجودیت در دسترس است"
+            }
+          }
+        }
+      },
+      "detail": {
+        "pages": {
+          "overview": "نمای کلی"
+        },
+        "sections": {
+          "basic-info": "اطلاعات پایه",
+          "options": "گزینه‌ها"
+        },
+        "fields": {
+          "name": "نام",
+          "title": "عنوان",
+          "description": "توضیحات",
+          "icon": "آیکون",
+          "options": "گزینه‌ها",
+          "option-interface": "رابط (ویجت)",
+          "option-name": "نام گزینه",
+          "option-title": "عنوان گزینه",
+          "option-schema": "اسکیما",
+          "option-description": "توضیحات"
+        }
+      },
+      "messages": {
+        "success": {
+          "create": "تعریف پلاگین با موفقیت ایجاد شد",
+          "update": "تعریف پلاگین با موفقیت به‌روزرسانی شد",
+          "delete": "تعریف پلاگین با موفقیت حذف شد"
+        },
+        "error": {
+          "delete": "خطا در حذف تعریف پلاگین"
+        }
+      }
+    },
+    "validations": {
+      "title": "اعتبارسنجی‌ها",
+      "terms": {
+        "title": "اعتبارسنجی‌ها",
+        "validation-definition": "تعریف قانون اعتبارسنجی"
+      },
+      "columns": {
+        "name": "نام",
+        "title": "عنوان",
+        "runAt": "محل اجرا"
+      },
+      "actions": {
+        "create": {
+          "title": "ایجاد تعریف اعتبارسنجی",
+          "description": "ایجاد تعریف اعتبارسنجی جدید"
+        },
+        "view": {
+          "title": "مشاهده",
+          "description": "مشاهده جزئیات تعریف اعتبارسنجی"
+        },
+        "edit": {
+          "title": "ویرایش تعریف اعتبارسنجی",
+          "description": "ویرایش تعریف اعتبارسنجی"
+        },
+        "delete": {
+          "title": "حذف",
+          "description": "حذف تعریف اعتبارسنجی",
+          "confirm-message": "آیا از حذف این تعریف اعتبارسنجی اطمینان دارید؟ این عملیات قابل بازگشت نیست."
+        }
+      },
+      "components": {
+        "list": {
+          "description": "مدیریت تعاریف قوانین اعتبارسنجی (variable-name، unique). ایجاد، ویرایش یا حذف تعاریف اعتبارسنجی.",
+          "search-placeholder": "جستجو بر اساس نام یا عنوان...",
+          "empty-states": {
+            "loading": {
+              "title": "در حال بارگذاری تعاریف اعتبارسنجی...",
+              "description": "لطفاً منتظر بمانید"
+            },
+            "error": {
+              "title": "خطا در بارگذاری",
+              "description": "خطایی در هنگام بارگذاری تعاریف اعتبارسنجی رخ داد"
+            },
+            "no-data": {
+              "title": "هیچ تعریف اعتبارسنجی یافت نشد",
+              "description": "اولین تعریف اعتبارسنجی را ایجاد کنید یا seed را اجرا کنید تا از فایل‌های mock بارگذاری شود"
+            },
+            "not-available": {
+              "title": "تعاریف اعتبارسنجی در دسترس نیست",
+              "description": "مدیریت تعاریف اعتبارسنجی فقط هنگام استفاده از Dexie یا Firestore به‌عنوان منبع تعریف موجودیت در دسترس است"
+            }
+          }
+        }
+      },
+      "detail": {
+        "pages": {
+          "overview": "نمای کلی",
+          "option-definitions": "تعاریف گزینه"
+        },
+        "sections": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "name": "نام",
+          "title": "عنوان",
+          "description": "توضیحات",
+          "run-at": "محل اجرا",
+          "run-at-values": {
+            "client": "سمت کلاینت",
+            "server": "سمت سرور",
+            "both": "هر دو"
+          },
+          "option-name": "نام گزینه",
+          "option-title": "عنوان گزینه",
+          "option-schema": "اسکیما",
+          "option-description": "توضیحات"
+        }
+      },
+      "messages": {
+        "success": {
+          "create": "تعریف اعتبارسنجی با موفقیت ایجاد شد",
+          "update": "تعریف اعتبارسنجی با موفقیت به‌روزرسانی شد",
+          "delete": "تعریف اعتبارسنجی با موفقیت حذف شد"
+        },
+        "error": {
+          "delete": "خطا در حذف تعریف اعتبارسنجی"
+        }
+      }
+    },
+    "menus": {
+      "title": "تعاریف منو",
+      "terms": {
+        "title": "تعاریف منو",
+        "menu-definition": "تعریف منو"
+      },
+      "columns": {
+        "name": "نام",
+        "text": "متن",
+        "attachParentName": "منوی والد",
+        "refId": "شناسه مرجع",
+        "refType": "نوع مرجع"
+      },
+      "actions": {
+        "create": {
+          "title": "ایجاد تعریف منو",
+          "description": "ایجاد ردیف منوی داینامیک جدید"
+        },
+        "view": {
+          "title": "مشاهده",
+          "description": "مشاهده تعریف منو"
+        },
+        "edit": {
+          "title": "ویرایش تعریف منو",
+          "description": "ویرایش تعریف منو"
+        },
+        "delete": {
+          "title": "حذف",
+          "description": "حذف تعریف منو",
+          "confirm-message": "آیا از حذف این تعریف منو اطمینان دارید؟ این عملیات قابل بازگشت نیست."
+        }
+      },
+      "components": {
+        "list": {
+          "description": "مدیریت ردیف‌های منو بارگذاری‌شده از ذخیره‌سازی. توسط provider منوی زمان اجرا استفاده می‌شود.",
+          "search-placeholder": "جستجو بر اساس نام یا متن...",
+          "empty-states": {
+            "loading": {
+              "title": "در حال بارگذاری تعاریف منو...",
+              "description": "لطفاً منتظر بمانید"
+            },
+            "error": {
+              "title": "خطا در بارگذاری",
+              "description": "خطایی در هنگام بارگذاری تعاریف منو رخ داد"
+            },
+            "no-data": {
+              "title": "هیچ تعریف منویی یافت نشد",
+              "description": "تعریف منو ایجاد کنید یا seeder را اجرا کنید"
+            },
+            "not-available": {
+              "title": "تعاریف منو در دسترس نیست",
+              "description": "مدیریت تعاریف منو فقط هنگام استفاده از Dexie یا Firestore به‌عنوان منبع تعریف موجودیت در دسترس است"
+            }
+          }
+        }
+      },
+      "detail": {
+        "sections": {
+          "basic-info": "اطلاعات پایه",
+          "placement": "جایگاه",
+          "navigation": "مسیریابی",
+          "policy": "سیاست دسترسی",
+          "command-meta": "فرمان و نشان",
+          "linking": "اتصال به ماژول / موجودیت"
+        },
+        "fields": {
+          "name": "کلید منو",
+          "text": "متن",
+          "description": "توضیحات",
+          "icon": "آیکون",
+          "priority": "اولویت",
+          "type": "نوع ردیف",
+          "type-values": {
+            "menu": "منو",
+            "group": "گروه",
+            "break": "جداکننده"
+          },
+          "attach-parent-name": "نام منوی والد",
+          "path": "مسیر (مستقیم)",
+          "entity-list-module": "ماژول لیست موجودیت",
+          "entity-list-entity": "نام موجودیت لیست",
+          "policy-features": "کلیدهای ویژگی لازم",
+          "policy-permissions": "کلیدهای مجوز لازم",
+          "feature-key": "کلید ویژگی",
+          "permission-key": "کلید مجوز",
+          "badge-key": "کلید نشان",
+          "command-kind": "نوع فرمان",
+          "command-kind-values": {
+            "none": "بدون فرمان",
+            "navigate": "مسیریابی روتر",
+            "execute": "اجرای فرمان"
+          },
+          "command-path": "مسیر route",
+          "command-navigate-extras": "پارامترهای اضافی مسیریابی (کلید / مقدار)",
+          "command-execute-name": "نام فرمان",
+          "command-execute-options": "گزینه‌های فرمان (کلید / مقدار)",
+          "kv-key": "کلید",
+          "kv-value": "مقدار (برای غیرمتن از JSON استفاده کنید)",
+          "ref-module": "ماژول (تعریف)",
+          "ref-entity": "تعریف موجودیت (اختیاری)",
+          "module-ref": "محدوده ماژول (برای فیلتر)"
+        }
+      },
+      "messages": {
+        "success": {
+          "create": "تعریف منو با موفقیت ایجاد شد",
+          "update": "تعریف منو با موفقیت به‌روزرسانی شد",
+          "delete": "تعریف منو با موفقیت حذف شد"
+        },
+        "error": {
+          "delete": "خطا در حذف تعریف منو"
+        }
+      }
+    },
+    "permissionGroups": {
+      "title": "گروه‌های مجوز",
+      "terms": {
+        "title": "گروه‌های مجوز",
+        "permission-group": "گروه مجوز"
+      },
+      "columns": {
+        "name": "کلید گروه",
+        "title": "عنوان"
+      },
+      "actions": {
+        "create": {
+          "title": "ایجاد گروه مجوز",
+          "description": "تعریف گروه مجوز در مخزن تعاریف موجودیت"
+        },
+        "view": {
+          "title": "مشاهده",
+          "description": "مشاهده گروه مجوز"
+        },
+        "edit": {
+          "title": "ویرایش گروه مجوز",
+          "description": "ویرایش گروه مجوز"
+        },
+        "delete": {
+          "title": "حذف",
+          "description": "حذف گروه مجوز",
+          "confirm-message": "آیا از حذف این گروه مجوز اطمینان دارید؟ این عملیات قابل بازگشت نیست."
+        }
+      },
+      "components": {
+        "list": {
+          "description": "مدیریت گروه‌های مجوز بارگذاری‌شده از Dexie یا Firestore. توسط provider تعاریف مجوز در زمان اجرا استفاده می‌شود.",
+          "search-placeholder": "جستجو بر اساس نام یا عنوان...",
+          "empty-states": {
+            "loading": {
+              "title": "در حال بارگذاری گروه‌های مجوز...",
+              "description": "لطفاً منتظر بمانید"
+            },
+            "error": {
+              "title": "خطا در بارگذاری",
+              "description": "خطایی در هنگام بارگذاری گروه‌های مجوز رخ داد"
+            },
+            "no-data": {
+              "title": "هیچ گروه مجوزی یافت نشد",
+              "description": "یک گروه مجوز ایجاد کنید یا تعاریف را در مخزن اضافه کنید"
+            },
+            "not-available": {
+              "title": "گروه‌های مجوز در دسترس نیستند",
+              "description": "مدیریت گروه مجوز فقط هنگام استفاده از Dexie یا Firestore به‌عنوان منبع تعریف موجودیت فعال است"
+            }
+          }
+        }
+      },
+      "detail": {
+        "sections": {
+          "basic-info": "اطلاعات پایه",
+          "permissions": "مجوزهای ریشه"
+        },
+        "fields": {
+          "name": "کلید گروه",
+          "title": "عنوان",
+          "description": "توضیحات",
+          "permissions": "مجوزهای ریشه (حداکثر یک سطح فرزند مطابق fluent API). ویژگی‌های لازم: مقادیر جدا شده با ویرگول."
+        },
+        "columns": {
+          "permission-name": "کلید مجوز",
+          "permission-title": "عنوان",
+          "permission-description": "توضیحات",
+          "required-features": "ویژگی‌های لازم",
+          "child-permissions": "مجوزهای فرزند"
+        }
+      },
+      "messages": {
+        "success": {
+          "create": "گروه مجوز با موفقیت ایجاد شد",
+          "update": "گروه مجوز با موفقیت به‌روزرسانی شد",
+          "delete": "گروه مجوز با موفقیت حذف شد"
+        },
+        "error": {
+          "delete": "خطا در حذف گروه مجوز"
+        }
+      }
+    }
+  },
+  "entity-definitions": {
+    "entities": {
+      "entity-definition": {
+        "title": "تعریف موجودیت",
+        "title-plural": "تعاریف موجودیت",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "schema": "طرحواره"
+        },
+        "fields": {
+          "module-id": {
+            "title": "ماژول"
+          },
+          "aggregate-id": {
+            "title": "تجمیع"
+          },
+          "definition": {
+            "title": "تعریف"
+          },
+          "layout": {
+            "title": "چیدمان"
+          },
+          "content": {
+            "title": "محتوا"
+          }
+        }
+      }
+    }
+  },
+  "menus": {
+    "platform-definitions": {
+      "title": "تعاریف پلتفرم"
+    },
+    "entity-definitions": {
+      "title": "تعاریف موجودیت"
+    },
+    "command-definitions": {
+      "title": "تعریف دستورات"
+    },
+    "query-definitions": {
+      "title": "تعریف کوئری‌ها"
+    },
+    "plugin-definitions": {
+      "title": "تعریف افزونه‌ها"
+    },
+    "widgets": {
+      "title": "ویجت‌ها"
+    }
+  },
+  "command-definitions": {
+    "entities": {
+      "command-definition": {
+        "title": "تعریف دستور",
+        "title-plural": "تعریف دستورات",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "schema": "طرحواره"
+        },
+        "fields": {
+          "execution-mode": {
+            "title": "حالت اجرا"
+          },
+          "capabilities": {
+            "title": "قابلیت‌ها"
+          },
+          "inputs": {
+            "title": "طرحواره ورودی"
+          },
+          "outputs": {
+            "title": "طرحواره خروجی"
+          },
+          "outcomes": {
+            "title": "نتایج"
+          }
+        }
+      }
+    }
+  },
+  "query-definitions": {
+    "entities": {
+      "query-definition": {
+        "title": "تعریف کوئری",
+        "title-plural": "تعریف کوئری‌ها",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "schema": "طرحواره"
+        },
+        "views": {
+          "my-query": "کوئری‌های من",
+          "system-query": "کوئری‌های سیستمی"
+        },
+        "actions": {
+          "create": {
+            "entity": "داده موجودیت",
+            "static-list": "فهرست ثابت",
+            "external-api": "API خارجی",
+            "advanced": "پیشرفته"
+          }
+        },
+        "fields": {
+          "execution-mode": {
+            "title": "حالت اجرا"
+          },
+          "kind": {
+            "title": "نوع نتیجه (Kind)"
+          },
+          "result-type": {
+            "title": "نوع نتیجه"
+          },
+          "value-type": {
+            "title": "نوع مقدار"
+          },
+          "by-key-query": {
+            "title": "کوئری کلید"
+          },
+          "capabilities": {
+            "title": "قابلیت‌ها"
+          },
+          "binding": {
+            "title": "بایندینگ"
+          },
+          "args": {
+            "title": "آرگومان‌ها"
+          },
+          "filter": {
+            "title": "فیلتر"
+          },
+          "sort": {
+            "title": "مرتب‌سازی"
+          },
+          "paging": {
+            "title": "صفحه‌بندی"
+          },
+          "columns": {
+            "title": "ستون‌ها"
+          },
+          "ai-metadata": {
+            "title": "متادیتای هوش مصنوعی"
+          }
+        }
+      }
+    },
+    "wizard": {
+      "create": {
+        "titles": {
+          "entity": "ایجاد کوئری موجودیت",
+          "static-list": "ایجاد کوئری فهرست ثابت",
+          "external-api": "ایجاد کوئری API خارجی",
+          "advanced": "ایجاد کوئری پیشرفته"
+        },
+        "steps": {
+          "source": "منبع",
+          "entity": "موجودیت",
+          "fields": "فیلدها و روابط",
+          "contract": "قرارداد"
+        },
+        "fields": {
+          "entity": "موجودیت",
+          "fields": "فیلدها و روابط",
+          "host-fields": "فیلدها",
+          "value": "مقدار",
+          "title": "عنوان",
+          "connection": "اتصال",
+          "method": "متد",
+          "path": "مسیر",
+          "request": "درخواست",
+          "sample": "نمونه پاسخ",
+          "status": "وضعیت",
+          "response": "پاسخ"
+        },
+        "import": {
+          "title": "وارد کردن درخواست",
+          "placeholder": "یک دستور cURL، فراخوانی fetch، درخواست HTTP خام، JSON یا URL را بچسبانید.",
+          "apply": "اعمال"
+        },
+        "rest-api-generator": {
+          "title": "سازنده REST API",
+          "description": "درخواست REST را به‌صورت بصری پیکربندی کنید یا از cURL وارد کنید."
+        },
+        "methods": {
+          "get": "GET",
+          "post": "POST"
+        },
+        "placeholders": {
+          "contract": "این مرحله در فاز بعد پیاده می‌شود.",
+          "advanced": "ترکیب داده موجودیت با API خارجی در فاز بعد در دسترس خواهد بود.",
+          "entity-fields": "مشخص کنید این کوئری کدام پراپرتی‌ها را باید بخواند.",
+          "fields-next": "بعد از ادامه، پراپرتی‌ها و روابط موجودیت انتخاب‌شده لود می‌شوند.",
+          "selected-entity-hint": "برای انتخاب موجودیت دیگر، قبلی را بزنید.",
+          "related-to": "مرتبط با {{name}}",
+          "api-fields-next": "بعد از ادامه، این درخواست ارسال می‌شود. اگر موفق باشد، می‌توانید فیلدها را از روی پاسخ انتخاب کنید.",
+          "selected-api-hint": "برای تغییر درخواست، قبلی را بزنید.",
+          "api-fields": "مشخص کنید این کوئری کدام پراپرتی‌های پاسخ را باید برگرداند.",
+          "api-test-ok": "درخواست با وضعیت {{status}} موفق بود. فیلدهایی که باید نگه داشته شوند را انتخاب کنید."
+        },
+        "items-hint": "هر تعداد ردیف که لازم است اضافه کنید. حداقل یک مقدار لازم است.",
+        "errors": {
+          "entity-required": "برای ادامه یک موجودیت انتخاب کنید.",
+          "entity-load-failed": "تعریف این موجودیت بارگذاری نشد.",
+          "fields-required": "برای ادامه حداقل یک فیلد یا رابطه انتخاب کنید.",
+          "static-required": "برای ادامه حداقل یک مقدار آیتم وارد کنید.",
+          "api-connection-required": "برای ادامه یک اتصال انتخاب کنید.",
+          "api-path-required": "برای ادامه مسیر درخواست را وارد کنید.",
+          "api-url-required": "برای ادامه آدرس درخواست را وارد کنید.",
+          "parse-failed": "این درخواست قابل تبدیل نبود. قالب را بررسی کنید و دوباره تلاش کنید.",
+          "api-test-failed": "درخواست موفق نبود ({{status}}). آدرس، متد و بدنه را بررسی کنید.",
+          "api-test-network": "درخواست ارسال نشد. آدرس را بررسی کنید و دوباره تلاش کنید."
+        }
+      }
+    }
+  },
+  "plugin-definitions": {
+    "entities": {
+      "plugin-definition": {
+        "title": "تعریف پلاگین",
+        "title-plural": "تعریف پلاگین‌ها",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "schema": "طرحواره"
+        },
+        "fields": {
+          "source-module": {
+            "title": "ماژول مبدأ"
+          },
+          "order": {
+            "title": "ترتیب"
+          },
+          "options": {
+            "title": "طرحواره گزینه‌ها"
+          },
+          "contributions": {
+            "title": "مشارکت‌ها"
+          },
+          "ai-metadata": {
+            "title": "متادیتای هوش مصنوعی"
+          }
+        }
+      }
+    }
+  },
+  "widgets": {
+    "entities": {
+      "widget": {
+        "title": "ویجت",
+        "title-plural": "ویجت‌ها",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "schema": "طرحواره"
+        },
+        "fields": {
+          "type": {
+            "title": "نوع"
+          },
+          "data-type": {
+            "title": "نوع داده"
+          },
+          "source-module": {
+            "title": "ماژول مبدأ"
+          },
+          "icon": {
+            "title": "آیکون"
+          },
+          "groups": {
+            "title": "گروه‌ها"
+          },
+          "inputs": {
+            "title": "طرحواره ورودی"
+          },
+          "outputs": {
+            "title": "طرحواره خروجی"
+          },
+          "ai-metadata": {
+            "title": "متادیتای هوش مصنوعی"
+          },
+          "metadata": {
+            "title": "متادیتای کامل"
+          }
+        }
+      }
+    },
+    "entity-access-policies": {
+      "entities": {
+        "entity-access-policy": {
+          "title": "سیاست دسترسی موجودیت",
+          "title-plural": "سیاست‌های دسترسی موجودیت",
+          "groups": {
+            "basic-info": "اطلاعات پایه"
+          },
+          "fields": {
+            "entity-name": {
+              "title": "نام موجودیت"
+            },
+            "read": {
+              "title": "عبارت خواندن"
+            },
+            "write": {
+              "title": "عبارت نوشتن"
+            },
+            "enabled": {
+              "title": "فعال"
+            }
+          }
+        }
+      }
+    }
+  }
+}

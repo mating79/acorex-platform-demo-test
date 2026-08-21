@@ -1,0 +1,309 @@
+{
+  "module": {
+    "title": "مدیریت مستأجر",
+    "description": "مدیریت مستأجران، تنظیمات و دسترسی‌های آن‌ها",
+    "menus": {
+      "root": {
+        "title": "مدیریت مستأجر",
+        "description": "مدیریت مستأجران و تنظیمات آن‌ها"
+      }
+    }
+  },
+  "features": {
+    "tenant-management": {
+      "title": "مدیریت مستأجر",
+      "description": "فعال‌سازی قابلیت مدیریت مستأجر"
+    }
+  },
+  "tenants": {
+    "terms": {
+      "tenant": "مستأجر",
+      "tenants": "مستأجران"
+    },
+    "entities": {
+      "tenant": {
+        "title": "مستأجر",
+        "plural": "مستأجران",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "branding": "برندینگ",
+          "contact-info": "اطلاعات تماس",
+          "location-info": "اطلاعات موقعیت",
+          "domain-info": "اطلاعات دامنه",
+          "administrative": "اداری"
+        },
+        "fields": {
+          "name": {
+            "title": "نام",
+            "description": "شناسه یکتا برای مستأجر",
+            "placeholder": "نام مستأجر را وارد کنید (مثال: acorex-tenant)"
+          },
+          "title": {
+            "title": "عنوان",
+            "description": "نام نمایشی مستأجر",
+            "placeholder": "عنوان مستأجر را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "description": "توضیحات کامل مستأجر",
+            "placeholder": "توضیحات مستأجر را وارد کنید"
+          },
+          "logo": {
+            "title": "لوگو",
+            "description": "تصویر لوگوی مستأجر",
+            "placeholder": "لوگوی مستأجر را آپلود کنید"
+          },
+          "email": {
+            "title": "ایمیل",
+            "description": "آدرس ایمیل اصلی",
+            "placeholder": "آدرس ایمیل را وارد کنید"
+          },
+          "phone": {
+            "title": "تلفن",
+            "description": "شماره تلفن تماس",
+            "placeholder": "شماره تلفن را وارد کنید"
+          },
+          "website": {
+            "title": "وب‌سایت",
+            "description": "آدرس وب‌سایت",
+            "placeholder": "آدرس وب‌سایت را وارد کنید"
+          },
+          "support-email": {
+            "title": "ایمیل پشتیبانی",
+            "description": "آدرس ایمیل پشتیبانی",
+            "placeholder": "آدرس ایمیل پشتیبانی را وارد کنید"
+          },
+          "country": {
+            "title": "کشور",
+            "description": "موقعیت کشور",
+            "placeholder": "کشور را انتخاب کنید"
+          },
+          "state": {
+            "title": "استان/ایالت",
+            "description": "استان یا ایالت",
+            "placeholder": "استان/ایالت را انتخاب کنید"
+          },
+          "city": {
+            "title": "شهر",
+            "description": "موقعیت شهر",
+            "placeholder": "شهر را انتخاب کنید"
+          },
+          "timezone": {
+            "title": "منطقه زمانی",
+            "description": "منطقه زمانی مستأجر",
+            "placeholder": "منطقه زمانی را انتخاب کنید"
+          },
+          "language": {
+            "title": "زبان",
+            "description": "زبان پیش‌فرض",
+            "placeholder": "زبان را انتخاب کنید"
+          },
+          "domain": {
+            "title": "دامنه",
+            "description": "نام دامنه اصلی",
+            "placeholder": "نام دامنه را وارد کنید (مثال: example.com)"
+          },
+          "subdomain": {
+            "title": "زیردامنه",
+            "description": "پیشوند زیردامنه",
+            "placeholder": "زیردامنه را وارد کنید (مثال: tenant1)"
+          },
+          "expiry-date": {
+            "title": "تاریخ انقضا",
+            "description": "تاریخ انقضای اشتراک مستأجر",
+            "placeholder": "تاریخ انقضا را انتخاب کنید"
+          },
+          "is-platform": {
+            "title": "مستأجر پلتفرم",
+            "description": "این مستأجر را به‌عنوان اپراتور پلتفرم (کنسول پلتفرم) علامت‌گذاری می‌کند"
+          },
+          "industry": {
+            "title": "صنعت",
+            "description": "صنعت اصلی برای بسته‌های شروع و مقادیر پیش‌فرض",
+            "placeholder": "صنعت را انتخاب کنید"
+          },
+          "max-users": {
+            "title": "حداکثر کاربران",
+            "description": "حداکثر تعداد کاربران مجاز",
+            "placeholder": "حداکثر کاربران را وارد کنید"
+          },
+          "max-storage": {
+            "title": "حداکثر ذخیره‌سازی (گیگابایت)",
+            "description": "حداکثر ذخیره‌سازی به گیگابایت",
+            "placeholder": "حداکثر ذخیره‌سازی را وارد کنید"
+          }
+        }
+      },
+      "resource-share": {
+        "title": "اشتراک منبع",
+        "plural": "اشتراک‌های منبع",
+        "fields": {
+          "resource-info": {
+            "title": "منبع"
+          },
+          "share-info": {
+            "title": "اشتراک"
+          }
+        }
+      },
+      "tenant-user-app-access": {
+        "title": "دسترسی کاربر مستأجر به برنامه",
+        "plural": "دسترسی‌های کاربر مستأجر به برنامه",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "tenant-user": {
+            "title": "کاربر مستأجر"
+          },
+          "tenant": {
+            "title": "مستأجر"
+          },
+          "application": {
+            "title": "برنامه"
+          },
+          "start-date": {
+            "title": "تاریخ شروع"
+          },
+          "end-date": {
+            "title": "تاریخ پایان"
+          }
+        }
+      },
+      "tenant-user": {
+        "title": "کاربر مستأجر",
+        "plural": "کاربران مستأجر",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "membership-details": "جزئیات عضویت"
+        },
+        "fields": {
+          "tenant": {
+            "title": "مستأجر",
+            "description": "مستأجری که این کاربر به آن تعلق دارد",
+            "placeholder": "مستأجر را انتخاب کنید"
+          },
+          "user": {
+            "title": "کاربر",
+            "description": "حساب کاربری",
+            "placeholder": "کاربر را انتخاب کنید"
+          },
+          "role": {
+            "title": "نقش",
+            "description": "نقش اختصاص داده شده به این کاربر در مستأجر",
+            "placeholder": "نقش را انتخاب کنید"
+          },
+          "status": {
+            "title": "وضعیت",
+            "description": "وضعیت فعلی کاربر مستأجر",
+            "placeholder": "وضعیت را انتخاب کنید"
+          },
+          "start-date": {
+            "title": "تاریخ شروع",
+            "description": "تاریخ شروع عضویت کاربر",
+            "placeholder": "تاریخ شروع را انتخاب کنید"
+          },
+          "end-date": {
+            "title": "تاریخ پایان",
+            "description": "تاریخ پایان عضویت کاربر",
+            "placeholder": "تاریخ پایان را انتخاب کنید"
+          },
+          "username": {
+            "title": "نام کاربری",
+            "description": "نام کاربری برای حساب کاربری جدید",
+            "placeholder": "نام کاربری یا ایمیل را وارد کنید"
+          },
+          "password": {
+            "title": "رمز عبور",
+            "description": "رمز عبور برای حساب کاربری جدید",
+            "placeholder": "رمز عبور را وارد کنید"
+          },
+          "is-account-holder": {
+            "title": "صاحب حساب",
+            "description": "این کاربر را به عنوان صاحب حساب (مالک) مستأجر علامت‌گذاری کنید"
+          }
+        }
+      },
+      "related-entities": {
+        "owner-user": {
+          "title": "کاربر مالک"
+        },
+        "subscriptions": {
+          "title": "اشتراک‌ها"
+        },
+        "tenant-users": {
+          "title": "کاربران مستأجر"
+        }
+      }
+    },
+    "permissions": {
+      "tenants": {
+        "title": "مستأجران",
+        "actions": {
+          "view": {
+            "title": "@general:actions.view.title"
+          },
+          "create": {
+            "title": "@general:actions.create.title"
+          },
+          "edit": {
+            "title": "@general:actions.edit.title"
+          },
+          "delete": {
+            "title": "@general:actions.delete.title"
+          },
+          "manage": {
+            "title": "مدیریت مستأجر"
+          }
+        }
+      }
+    },
+    "actions": {
+      "create-tenant": {
+        "title": "ایجاد مستأجر",
+        "description": "ایجاد مستأجر جدید در سیستم"
+      },
+      "create-tenant-user": {
+        "title": "ایجاد کاربر مستأجر",
+        "description": "ایجاد کاربر جدید و اختصاص آن به مستأجر"
+      },
+      "transfer-ownership": {
+        "title": "انتقال مالکیت",
+        "description": "انتقال مالکیت صاحب حساب به کاربر دیگر"
+      }
+    },
+    "messages": {
+      "create-tenant-user": {
+        "success": "کاربر مستأجر با موفقیت ایجاد شد"
+      }
+    },
+    "states": {
+      "active": "فعال",
+      "inactive": "غیرفعال",
+      "suspended": "معلق",
+      "pending": "در انتظار"
+    },
+    "transitions": {
+      "activate": "فعال‌سازی",
+      "deactivate": "غیرفعال‌سازی",
+      "suspend": "تعلیق",
+      "resume": "از سرگیری"
+    },
+    "settings": {
+      "tenant": {
+        "group": {
+          "nav-title": "مستأجر",
+          "title": "تنظیمات مستأجر",
+          "description": "پیکربندی تنظیمات و ترجیحات خاص مستأجر"
+        },
+        "sections": {
+          "general": {
+            "title": "تنظیمات عمومی",
+            "description": "گزینه‌های پیکربندی پایه مستأجر"
+          }
+        }
+      }
+    }
+  }
+}
+

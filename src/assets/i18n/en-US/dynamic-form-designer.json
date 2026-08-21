@@ -1,0 +1,126 @@
+{
+  "feature": {
+    "title": "Dynamic Form Designer",
+    "description": "Design and build dynamic forms with drag-and-drop interface"
+  },
+  "terms": {
+    "row": "Row",
+    "column": "Column",
+    "position": "Position"
+  },
+  "components": {
+    "designer": {
+      "title": "Dynamic Form Designer",
+      "default-section-badge": "(Default Section)",
+      "modes": {
+        "designer": "Designer",
+        "preview": "Preview"
+      }
+    },
+    "groups": {
+      "title": "Groups",
+      "empty-states": {
+        "no-groups": {
+          "title": "No Groups Created Yet",
+          "description": "Create groups to organize your form fields. Click 'Add Group' to get started."
+        },
+        "empty-group": {
+          "title": "No Fields in This Group",
+          "description": "Drag fields here or use 'Add Field' to add fields to this group."
+        }
+      },
+      "add-dialog": {
+        "title": "Add Group",
+        "group-name": "Group Name",
+        "group-name-placeholder": "Enter group name (used as identifier)",
+        "group-title": "Group Title",
+        "group-title-placeholder": "Enter group display title",
+        "group-description": "Group Description",
+        "group-description-placeholder": "Enter group description (optional)",
+        "group-style": "Group Style",
+        "group-style-options": {
+          "container": "Container (Minimal)",
+          "card": "Card",
+          "fieldset": "Fieldset",
+          "group": "Group Line"
+        }
+      },
+      "edit-dialog": {
+        "title": "Edit Group: {{groupName}}"
+      }
+    },
+    "fields": {
+      "title": "Fields",
+      "empty-states": {
+        "no-fields": {
+          "title": "No Fields Added Yet. Add a Field to Get Started.",
+          "description": "No form fields have been added yet. Click the 'Add Field' button to start adding fields to your form."
+        }
+      },
+      "add-dialog": {
+        "title": "Add Field to {{groupName}}",
+        "field-title": "Field Title",
+        "field-title-placeholder": "Enter field title",
+        "widget-type": "Widget Type",
+        "widget-type-placeholder": "Select widget type"
+      },
+      "edit-dialog": {
+        "title": "Edit Field: {{fieldName}}"
+      },
+      "layout-dialog": {
+        "title": "Field Layout Settings - {{fieldName}}",
+        "configuration-title": "Responsive Layout Configuration (12-Column Grid)",
+        "sm-col-span": "Small Screens - Column Span",
+        "sm-col-span-placeholder": "How many columns to span (1-12)",
+        "sm-col-start": "Small Screens - Column Start",
+        "sm-col-start-placeholder": "Starting column position (1-12)",
+        "md-col-span": "Medium Screens - Column Span",
+        "md-col-span-placeholder": "How many columns to span (1-12)",
+        "md-col-start": "Medium Screens - Column Start",
+        "md-col-start-placeholder": "Starting column position (1-12)",
+        "lg-col-span": "Large Screens - Column Span",
+        "lg-col-span-placeholder": "How many columns to span (1-12)",
+        "lg-col-start": "Large Screens - Column Start",
+        "lg-col-start-placeholder": "Starting column position (1-12)",
+        "xl-col-span": "Extra Large Screens - Column Span",
+        "xl-col-span-placeholder": "How many columns to span (1-12)",
+        "xl-col-start": "Extra Large Screens - Column Start",
+        "xl-col-start-placeholder": "Starting column position (1-12)",
+        "xxl-col-span": "2x Large Screens - Column Span",
+        "xxl-col-span-placeholder": "How many columns to span (1-12)",
+        "xxl-col-start": "2x Large Screens - Column Start",
+        "xxl-col-start-placeholder": "Starting column position (1-12)",
+        "xxxl-col-span": "3x Large Screens - Column Span",
+        "xxxl-col-span-placeholder": "How many columns to span (1-12)",
+        "xxxl-col-start": "3x Large Screens - Column Start",
+        "xxxl-col-start-placeholder": "Starting column position (1-12)"
+      }
+    },
+    "preview": {
+      "title": "Form Preview"
+    }
+  },
+  "actions": {
+    "add-group": {
+      "title": "Add Group"
+    },
+    "add-field": {
+      "title": "Add Field"
+    },
+    "preview": {
+      "title": "Preview"
+    },
+    "edit-group": {
+      "title": "Edit Group"
+    },
+    "remove-group": {
+      "title": "Remove Group"
+    },
+    "layout-settings": {
+      "title": "Layout Settings"
+    },
+    "configure-field-layout": {
+      "title": "Configure Field Layout (colSpan, colStart)"
+    }
+  }
+}

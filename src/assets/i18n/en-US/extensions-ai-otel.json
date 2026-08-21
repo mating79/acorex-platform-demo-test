@@ -1,0 +1,26 @@
+{
+  "pages": {
+    "trace-ai": {
+      "title": "AI",
+      "not-found": "Trace not found.",
+      "empty": "This trace has no AI spans.",
+      "duration": "Duration",
+      "model": "Model",
+      "provider": "Provider",
+      "input-tokens": "Input Tokens",
+      "output-tokens": "Output Tokens",
+      "steps": "Model Calls",
+      "tools": "Tool Calls",
+      "transcript": "Transcript",
+      "input": "Input",
+      "output": "Output",
+      "no-transcript": "Prompt and completion were not recorded for this trace.",
+      "no-steps": "No model-call spans were recorded.",
+      "no-tools": "No tool-call spans were recorded.",
+      "finish-reason": "Finish Reason",
+      "time-to-first-chunk": "Time to First Chunk",
+      "tool-call-id": "Tool Call ID",
+      "unavailable": "N/A"
+    }
+  }
+}

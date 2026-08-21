@@ -1,0 +1,1029 @@
+{
+  "search": "جستجو",
+  "yes": "بله",
+  "no": "خیر",
+  "confirm": "تایید",
+  "accept": "تایید",
+  "decline": "رد",
+  "okay": "باشه",
+  "cancel": "لغو",
+  "canceled": "لغو شد",
+  "failed": "ناموفق",
+  "remove": "حذف",
+  "edit": "ویرایش",
+  "delete": "حذف",
+  "create": "ایجاد",
+  "configs": "پیکره بندی",
+  "no-result-found": "نتیجه ای یافت نشد",
+  "no-result-for": "نتیجه ای برای &nbsp<b>\"${exp}\" یافت نشد.</b>",
+  "searching": "درحال جستجو ...",
+  "save": "ذخیره",
+  "save-as": "ذخیره به عنوان...",
+  "title": "عنوان",
+  "description": "توضیحات",
+  "name": "نام",
+  "uniquename": "نام یکتا",
+  "size": "اندازه",
+  "add-item": "ردیف جدید",
+  "color": "رنگ",
+  "display": "نمایش",
+  "min-value": "کمترین مقدار",
+  "value": "مقدار",
+  "max-value": "بیشترین مقدار",
+  "refresh-rate": "نرخ بروزرسانی",
+  "condition": "شرط",
+  "loading": "در حال بارگذاری",
+  "required": "الزامی",
+  "firstname": "اسم",
+  "next": "بعدی",
+  "prev": "قبلی",
+  "noRecord": "رکوردی یافت نشد",
+  "error": {
+    "message": "خطا: {{message}}"
+  },
+  "dateTime": {
+    "set": "تنظیم",
+    "today": "امروز",
+    "now": "الان",
+    "hour": "ساعت",
+    "minute": "دقیقه",
+    "second": "ثانیه",
+    "date": "تاریخ",
+    "time": "زمان",
+    "millisecond": "میلی ثانیه",
+    "Seconds": "ثانیه ها",
+    "Minutes": "دقیقه ها",
+    "month": "ماه",
+    "Months": "ماه ها",
+    "week": "هفته",
+    "Hours": "ساعت ها",
+    "day": "روز",
+    "Days": "روز ها",
+    "year": "سال",
+    "Years": "سال ها",
+    "weekdays": {
+      "short": {
+        "0": "ی",
+        "1": "د",
+        "2": "س",
+        "3": "چ",
+        "4": "پ",
+        "5": "ج",
+        "6": "ش"
+      },
+      "long": {
+        "0": "یکشنبه",
+        "1": "دوشنبه",
+        "2": "سه شنبه",
+        "3": "چهارشنبه",
+        "4": "پنجشنبه",
+        "5": "جمعه",
+        "6": "شنبه"
+      }
+    },
+    "months": {
+      "gregorian": {
+        "short": {
+          "0": "ژانویه",
+          "1": "فوریه",
+          "2": "مارس",
+          "3": "آوریل",
+          "4": "مه",
+          "5": "ژوئن",
+          "6": "ژوئیه",
+          "7": "اوت",
+          "8": "سپتامبر",
+          "9": "اکتبر",
+          "10": "نوامبر",
+          "11": "دسامبر"
+        },
+        "long": {
+          "0": "ژانویه",
+          "1": "فوریه",
+          "2": "مارس",
+          "3": "آوریل",
+          "4": "مه",
+          "5": "ژوئن",
+          "6": "ژوئیه",
+          "7": "اوت",
+          "8": "سپتامبر",
+          "9": "اکتبر",
+          "10": "نوامبر",
+          "11": "دسامبر"
+        }
+      },
+      "solar-hijri": {
+        "short": {
+          "0": "فروردین",
+          "1": "اردیبهشت",
+          "2": "خرداد",
+          "3": "تیر",
+          "4": "مرداد",
+          "5": "شهریور",
+          "6": "مهر",
+          "7": "آبان",
+          "8": "آذر",
+          "9": "دی",
+          "10": "بهمن",
+          "11": "اسفند"
+        },
+        "long": {
+          "0": "فروردین",
+          "1": "اردیبهشت",
+          "2": "خرداد",
+          "3": "تیر",
+          "4": "مرداد",
+          "5": "شهریور",
+          "6": "مهر",
+          "7": "آبان",
+          "8": "آذر",
+          "9": "دی",
+          "10": "بهمن",
+          "11": "اسفند"
+        }
+      }
+    },
+    "dayTime": {
+      "am": "am",
+      "pm": "pm",
+      "m": "m",
+      "a": "a",
+      "p": "p"
+    },
+    "duration": {
+      "format_second": "{0} ثانیه(s)",
+      "format_minute": "{0} دقیقه(s)",
+      "daily": "روزانه",
+      "daily-timeline": "خط زمانی روزانه",
+      "multi-day-timeline": "خط زمانی چند روزه",
+      "weekly": "هفتگی",
+      "weekly-timeline": "خط زمانی هفتگی",
+      "monthly": "ماهانه",
+      "monthly-timeline": "خط زمانی ماهانه",
+      "yearly": "سالانه",
+      "yearly-timeline": "خط زمانی سالانه",
+      "all-day": "کل روز",
+      "agenda": "دستور کار"
+    }
+  },
+  "validation": {
+    "messages": {
+      "title": "لطفا این خطاها را بررسی کنید(s):",
+      "required": "\"<b>{{ title }}</b>\" اجباری است!",
+      "email": "!لطفا یک ایمیل معتبر وارد کنید",
+      "phone": "!لطفا یک شماره معتبر وارد کنید",
+      "invalid-rull-name": "خطای اعتبارسنجی: &nbsp<b>\"{{ name }}\"</b>"
+    }
+  },
+  "selectbox": {
+    "popover": {
+      "title": "انتخاب کنید ..."
+    }
+  },
+  "datepicker": {
+    "popover": {
+      "title": "انتخاب تاریخ ..."
+    }
+  },
+  "datapager": {
+    "info": {
+      "text": "[page] از [totalPages] صفحه ( [totalItems] رکورد)"
+    }
+  },
+  "uploader": {
+    "zone": {
+      "text": "برای آپلود فایل را رها کنید",
+      "drag": "بکشید یا رها کنید یا ",
+      "choose": "فایل را انتخاب کنید",
+      "to-upload": " ",
+      "uploadFile": "آپلود فایل",
+      "uploadFiles": "آپلود فایل ها"
+    }
+  },
+  "action-sheet": {
+    "title": "اکشن شیت"
+  },
+  "comment": {
+    "view": "مشاهده",
+    "reply": "پاسخ",
+    "replies": "پاسخ‌ها"
+  },
+  "custom": "سفارشی",
+  "every": "هر",
+  "between": "بین",
+  "and": "و",
+  "select-second": "انتخاب ثانیه( ها)",
+  "select-minute": "انتخاب دقیقه( ها)",
+  "select-month": "انتخاب ماه( ها)",
+  "select-hour": "انتخاب ساعت( ها)",
+  "select-day": "انتخاب روز( ها)",
+  "select-year": "انتخاب سال( ها)",
+  "second-starting": "ثانیه(هایی) که شروع میشوند از ثانیه",
+  "minute-starting": "دقیقه(هایی) که شروع میشوند از دقیقه",
+  "month-starting": "ماه(هایی) که شروع میشوند از ماه",
+  "hour-starting": "ساعت(هایی) که شروع میشوند از ساعت",
+  "year-starting": "سال(هایی) که شروع میشوند از سال",
+  "specific-second": "ثانیه(های) به خصوص (انتخاب یکی یا بیشتر)",
+  "specific-minute": "دقیقه(های) به خصوص (انتخاب یکی یا بیشتر)",
+  "specific-month": "ماه(های) به خصوص (انتخاب یکی یا بیشتر)",
+  "specific-hour": "ساعت(های) به خصوص (انتخاب یکی یا بیشتر)",
+  "specific-year": "سال(های) به خصوص (انتخاب یکی یا بیشتر)",
+  "base-on-week": "بر اساس هفته",
+  "on-the-last": "در آخرین",
+  "of-the-month": "ماه",
+  "on-the": "در",
+  "st": "امین",
+  "of-month": "ماه",
+  "base-on-month": "بر اساس ماه",
+  "on-the-last-day-of-the-month": "در آخرین روز ماه",
+  "day-before-the-end-of-the-month": "روز(های) قبل از اتمام ماه",
+  "st-of-the-month": "ام ماه",
+  "specific-day-of-month": "روز(های) به خصوص از ماه(انتخاب یک مورد یا بیشنر)",
+  "specific-day-of-week": "روز(های) به خصوص از هفته(انتخاب یک مورد یا بیشنر)",
+  "day-starting-on": "روزی(های) که شروع میشود در",
+  "more-notification": "و {{ number }} اعلان دیگر...",
+  "more-toast": "و {{ number }} اعلان دیگر...",
+  "at-least-8-characters": "حداقل هشت کاراکتر",
+  "english-upper-case-letter": "استفاده از حروف بزرگ",
+  "english-lower-case-letter": "استفاده از حروف کوچک",
+  "special-character": "استفاده از کاراکتر های ویژه (%,$, ...)",
+  "digits": "استفاده از اعداد",
+  "fragile": "شکننده",
+  "weak": "ضعیف",
+  "good": "خوب",
+  "strong": "قوی",
+  "unbreakable": "مستحکم",
+  "more-items": "{{ number }} بیشتر",
+  "rrule": {
+    "general": "عمومی",
+    "freq": "فرکانس (FREQ)",
+    "dtstart": "شروع در (DTSTART)",
+    "until": "پایان در (UNTIL)",
+    "count": "تعداد (COUNT)",
+    "interval": "فاصله (INTERVAL)",
+    "tzid": "منطقه زمانی (TZID)",
+    "by-weekday": "بر اساس روز هفته",
+    "wkst": "شروع هفته (WKST)",
+    "by-weekday-rule": "بر اساس روز هفته (BYWEEKDAY)",
+    "by-month": "بر اساس ماه",
+    "by-month-rule": "بر اساس ماه (BYMONTH)",
+    "by-month-day": "بر اساس روز ماه (BYMONTHDAY)",
+    "by-year": "بر اساس سال",
+    "by-year-day": "بر اساس روز سال (BYYEARDAY)",
+    "by-week-no": "بر اساس شماره هفته (BYWEEKNO)",
+    "by-time": "بر اساس زمان",
+    "by-hour": "بر اساس ساعت (BYHOUR)",
+    "by-minute": "بر اساس دقیقه (BYMINUTE)",
+    "by-second": "بر اساس ثانیه (BYSECOND)",
+    "advanced": "پیشرفته",
+    "by-set-pos": "بر اساس موقعیت مجموعه (BYSETPOS)",
+    "reset": "بازنشانی",
+    "text": "متن",
+    "string": "رشته",
+    "occurrences": "تا {{ repeat }} تکرار"
+  },
+  "pages": {
+    "resource-appointment": {
+      "page-title": "قرار ملاقات منابع",
+      "page-description": "مشاهده و مدیریت قرارهای منابع در بازه زمانی."
+    }
+  },
+  "permission-groups": {
+    "people-organization": {
+      "title": "افراد و سازمان",
+      "description": "ساختار سازمانی، نیروی کار و قابلیت‌های مرتبط با افراد."
+    },
+    "learning": {
+      "title": "یادگیری",
+      "description": "دوره‌ها، آموزش، گواهینامه‌ها و راه‌اندازی یادگیری."
+    },
+    "safety-risk": {
+      "title": "ایمنی و ریسک",
+      "description": "ایمنی محیط کار، ریسک، سلامت و ارزیابی‌ها."
+    },
+    "finance": {
+      "title": "مالی",
+      "description": "داده‌های اصلی مالی، مالیات، شرایط پرداخت و راه‌اندازی مالی."
+    },
+    "projects-work": {
+      "title": "پروژه‌ها و کار",
+      "description": "پروژه‌ها، کارها، برگه‌های زمانی و قابلیت‌های اجرای کار."
+    },
+    "assets-maintenance": {
+      "title": "دارایی‌ها و نگهداری",
+      "description": "دارایی‌ها، نگهداری، اندازه‌گیری‌ها و راه‌اندازی مرتبط."
+    },
+    "collaboration": {
+      "title": "همکاری",
+      "description": "گفتگوها، جلسات، تقویم‌ها، ارتباطات، رزروها و میز خدمت."
+    },
+    "content-documents": {
+      "title": "محتوا و اسناد",
+      "description": "اسناد، محتوا، قالب‌های فرم و راه‌اندازی مرتبط."
+    },
+    "insights-reporting": {
+      "title": "بینش و گزارش‌گیری",
+      "description": "گزارش‌ها، پرس‌وجوهای داده و بینش فعالیت."
+    },
+    "applications-platform": {
+      "title": "برنامه‌ها و پلتفرم",
+      "description": "کاتالوگ برنامه، مستأجران، پوسته پلتفرم، زبان‌ها، شناسه‌ها و ابزارهای توسعه."
+    },
+    "administration": {
+      "title": "مدیریت",
+      "description": "امنیت، تنظیمات، یکپارچه‌سازی‌ها، گردش‌کار، قوانین، هوش مصنوعی، داشبوردها، کارها و مشاهده‌پذیری."
+    },
+    "administration-security-access": {
+      "title": "امنیت و دسترسی",
+      "description": "کاربران، نقش‌ها، نشست‌ها و سیاست‌های امنیتی."
+    },
+    "administration-settings": {
+      "title": "تنظیمات",
+      "description": "تنظیمات برنامه مستأجر."
+    },
+    "administration-integrations": {
+      "title": "یکپارچه‌سازی‌ها",
+      "description": "اتصال‌دهنده‌ها، اتصال‌ها و اقدامات یکپارچه‌سازی."
+    },
+    "administration-workflow": {
+      "title": "گردش‌کار",
+      "description": "تعاریف گردش‌کار و اقدامات گردش‌کار."
+    },
+    "administration-rules": {
+      "title": "قوانین",
+      "description": "قوانین کسب‌وکار و اقدامات قوانین."
+    },
+    "administration-ai": {
+      "title": "هوش مصنوعی",
+      "description": "پیکربندی هوش مصنوعی و استفاده از دستیار."
+    },
+    "administration-dashboards": {
+      "title": "داشبوردها",
+      "description": "داشبوردهای عملیاتی و مدیریتی."
+    },
+    "administration-jobs": {
+      "title": "کارها",
+      "description": "کارهای پس‌زمینه و اقدامات کار."
+    },
+    "administration-observability": {
+      "title": "مشاهده‌پذیری",
+      "description": "بینش سیستم و نظارت عملیاتی."
+    },
+    "sales-and-customers": {
+      "title": "فروش و مشتریان",
+      "description": "مشتریان، فروش، محصولات، سفارش‌ها و اشتراک‌ها."
+    },
+    "sales-and-customers-customers": {
+      "title": "مشتریان",
+      "description": "داده‌های اصلی مشتری و راه‌اندازی مشتریان."
+    },
+    "sales-and-customers-sales": {
+      "title": "فروش",
+      "description": "سرنخ‌ها، فرصت‌ها و فعالیت‌های فروش."
+    },
+    "sales-and-customers-products": {
+      "title": "محصولات",
+      "description": "کاتالوگ محصولات و پیشنهادها."
+    },
+    "sales-and-customers-orders": {
+      "title": "سفارش‌ها",
+      "description": "سفارش‌ها و اجرای سفارش."
+    },
+    "sales-and-customers-subscriptions": {
+      "title": "اشتراک‌ها",
+      "description": "طرح‌های اشتراک و تمدیدها."
+    },
+    "suppliers-procurement": {
+      "title": "تأمین‌کنندگان و تدارکات",
+      "description": "تأمین‌کنندگان، پیمانکاران جزء و عملیات تدارکات."
+    },
+    "suppliers-procurement-suppliers": {
+      "title": "تأمین‌کنندگان و پیمانکاران جزء",
+      "description": "تأمین‌کنندگان، پیمانکاران جزء، تدارکات و راه‌اندازی خرید."
+    },
+    "people-organization-structure": {
+      "title": "سازمان و ساختار",
+      "description": "چارت سازمانی، تیم‌ها، مشاغل و راه‌اندازی افراد."
+    },
+    "people-organization-workforce": {
+      "title": "نیروی کار",
+      "description": "اشخاص، کارکنان و اقدامات کارکنان."
+    },
+    "people-organization-attendance": {
+      "title": "حضور و غیاب",
+      "description": "برنامه‌ها، نشست‌ها و اقدامات حضور و غیاب."
+    },
+    "safety-risk-workplace-safety": {
+      "title": "ایمنی محیط کار",
+      "description": "سوابق ایمنی محیط کار و راه‌اندازی ایمنی."
+    },
+    "safety-risk-risk": {
+      "title": "ریسک",
+      "description": "ثبت ریسک و کنترل‌های ریسک."
+    },
+    "safety-risk-health": {
+      "title": "سلامت",
+      "description": "سوابق سلامت و قابلیت‌های مرتبط."
+    },
+    "safety-risk-assessments": {
+      "title": "ارزیابی‌ها",
+      "description": "ارزیابی‌های ایمنی و ریسک."
+    },
+    "projects-work-projects": {
+      "title": "پروژه‌ها",
+      "description": "پروژه‌ها و راه‌اندازی پروژه."
+    },
+    "projects-work-tasks": {
+      "title": "کارها",
+      "description": "کارها و مشاهده کار در میان مسئولان."
+    },
+    "projects-work-time-tracking": {
+      "title": "ثبت زمان",
+      "description": "برگه‌های زمانی، تأییدها و گزارش‌های زمان."
+    },
+    "assets-maintenance-assets": {
+      "title": "دارایی‌ها",
+      "description": "داده‌های اصلی دارایی و راه‌اندازی دارایی."
+    },
+    "assets-maintenance-maintenance": {
+      "title": "نگهداری",
+      "description": "برنامه‌ها و کارهای نگهداری."
+    },
+    "collaboration-conversations": {
+      "title": "گفتگوها",
+      "description": "گفتگوها و راه‌اندازی همکاری."
+    },
+    "collaboration-scheduling": {
+      "title": "زمان‌بندی",
+      "description": "تقویم‌ها، جلسات و رزروها."
+    },
+    "collaboration-communications": {
+      "title": "ارتباطات",
+      "description": "ارتباطات خروجی و کانال‌ها."
+    },
+    "collaboration-help-desk": {
+      "title": "میز خدمت",
+      "description": "تیکت‌ها و درخواست‌های میز خدمت."
+    },
+    "content-documents-documents": {
+      "title": "اسناد",
+      "description": "کتابخانه‌های اسناد و راه‌اندازی اسناد."
+    },
+    "content-documents-content": {
+      "title": "محتوا",
+      "description": "محتوای مدیریت‌شده و صفحات."
+    },
+    "content-documents-form-templates": {
+      "title": "قالب‌های فرم",
+      "description": "قالب‌های فرم قابل استفاده مجدد."
+    },
+    "insights-reporting-reports": {
+      "title": "گزارش‌ها",
+      "description": "گزارش‌ها و راه‌اندازی گزارش‌گیری."
+    },
+    "insights-reporting-activity-insight": {
+      "title": "بینش فعالیت",
+      "description": "نمایش و مدیریت بینش فعالیت."
+    },
+    "insights-reporting-data": {
+      "title": "داده",
+      "description": "پرس‌وجوها و مجموعه‌های داده."
+    },
+    "applications-platform-applications": {
+      "title": "برنامه‌ها",
+      "description": "کاتالوگ برنامه و صفحات فرود."
+    },
+    "applications-platform-tenancy-shell": {
+      "title": "مستأجر و پوسته",
+      "description": "مستأجران و پوسته پلتفرم."
+    },
+    "applications-platform-configuration": {
+      "title": "پیکربندی",
+      "description": "تنظیمات پلتفرم، زبان‌ها و شناسه‌ها."
+    },
+    "applications-platform-dev-tools": {
+      "title": "ابزارهای توسعه",
+      "description": "ابزارهای توسعه پلتفرم."
+    }
+  },
+  "people-organization": {
+    "permissions": {
+      "access": {
+        "title": "دسترسی به افراد و سازمان",
+        "description": "ورود به بخش افراد و سازمان."
+      },
+      "view-organization": {
+        "title": "مشاهده سازمان",
+        "description": "مشاهده ساختار سازمانی، چارت و جایگاه‌ها."
+      },
+      "maintain-organization": {
+        "title": "نگهداری سازمان",
+        "description": "نگهداری ساختار سازمانی، چارت، جایگاه‌ها روی ساختار و انتساب افراد."
+      },
+      "maintain-teams": {
+        "title": "نگهداری تیم‌ها",
+        "description": "ایجاد و نگهداری تیم‌ها و عضویت‌ها."
+      },
+      "maintain-employees": {
+        "title": "نگهداری کارکنان",
+        "description": "ایجاد و نگهداری پرونده اصلی کارکنان."
+      },
+      "manage-employee-actions": {
+        "title": "مدیریت اقدامات کارکنان",
+        "description": "اجرای فرایندهای مرتبط با کارکنان مانند مرخصی و رویدادهای چرخه خدمت."
+      },
+      "maintain-persons": {
+        "title": "نگهداری اشخاص",
+        "description": "ایجاد و نگهداری پرونده اصلی اشخاص."
+      },
+      "maintain-attendance": {
+        "title": "نگهداری حضور و غیاب",
+        "description": "ایجاد و نگهداری برنامه‌ها، جلسات حضور و داده‌های اصلی مرتبط."
+      },
+      "manage-attendance-actions": {
+        "title": "مدیریت اقدامات حضور و غیاب",
+        "description": "اجرای فرایندهایی مانند ورود و خروج، مشاهده تیم و اصلاحات."
+      },
+      "design-jobs": {
+        "title": "طراحی مشاغل",
+        "description": "طراحی تعاریف شغل و معماری شغلی مرتبط."
+      },
+      "setup": {
+        "title": "راه‌اندازی داده‌های پایه",
+        "description": "نگهداری داده‌های پایه افراد و سازمان."
+      }
+    }
+  },
+  "learning": {
+    "permissions": {
+      "access": {
+        "title": "دسترسی به یادگیری",
+        "description": "ورود به بخش یادگیری."
+      },
+      "maintain-learning": {
+        "title": "نگهداری یادگیری",
+        "description": "ایجاد و نگهداری دوره‌ها، آموزش‌ها، ثبت‌نام‌ها و گواهینامه‌ها."
+      },
+      "setup": {
+        "title": "راه‌اندازی داده‌های پایه",
+        "description": "نگهداری انواع، فهرست‌ها و داده‌های پایه یادگیری."
+      }
+    }
+  },
+  "safety-risk": {
+    "permissions": {
+      "access": {
+        "title": "دسترسی به ایمنی و ریسک",
+        "description": "ورود به بخش ایمنی و ریسک."
+      },
+      "maintain-safety": {
+        "title": "نگهداری ایمنی",
+        "description": "ایجاد و نگهداری طرح‌های ایمنی، خطرات و کنترل‌ها."
+      },
+      "maintain-risk": {
+        "title": "نگهداری ریسک",
+        "description": "ایجاد و نگهداری ماتریس‌ها، رتبه‌ها و داده‌های ریسک."
+      },
+      "maintain-health": {
+        "title": "نگهداری سلامت",
+        "description": "ایجاد و نگهداری پروفایل‌ها، شرایط و رویدادهای سلامت."
+      },
+      "maintain-assessments": {
+        "title": "نگهداری ارزیابی‌ها",
+        "description": "ایجاد و نگهداری بانک سؤال، پرسشنامه‌ها و پرونده‌های ارزیابی."
+      },
+      "setup": {
+        "title": "راه‌اندازی داده‌های پایه",
+        "description": "نگهداری داده‌های پایه ایمنی، ریسک، سلامت و ارزیابی."
+      }
+    }
+  },
+  "finance": {
+    "permissions": {
+      "access": {
+        "title": "دسترسی به مالی",
+        "description": "ورود به بخش مالی."
+      },
+      "maintain-finance": {
+        "title": "نگهداری مالی",
+        "description": "ایجاد و نگهداری داده‌های اصلی مالی مانند ارز، مالیات و شرایط پرداخت."
+      },
+      "setup": {
+        "title": "راه‌اندازی داده‌های پایه",
+        "description": "نگهداری داده‌های پایه و تقویم‌های مالی."
+      }
+    }
+  },
+  "sales-customers": {
+    "permissions": {
+      "access": {
+        "title": "دسترسی به فروش و مشتریان",
+        "description": "ورود به بخش فروش و مشتریان."
+      },
+      "maintain-customers": {
+        "title": "نگهداری مشتریان",
+        "description": "ایجاد و نگهداری حساب‌ها و داده‌های اصلی مشتری."
+      },
+      "maintain-sales": {
+        "title": "نگهداری فروش",
+        "description": "ایجاد و نگهداری سرنخ‌ها، فرصت‌ها و فعالیت‌های فروش."
+      },
+      "maintain-products": {
+        "title": "نگهداری محصولات",
+        "description": "ایجاد و نگهداری محصولات و اقلام کاتالوگ."
+      },
+      "maintain-orders": {
+        "title": "نگهداری سفارش‌ها",
+        "description": "ایجاد و نگهداری سفارش‌ها و اسناد فروش مرتبط."
+      },
+      "maintain-subscriptions": {
+        "title": "نگهداری اشتراک‌ها",
+        "description": "ایجاد و نگهداری اشتراک‌ها و طرح‌های اشتراک."
+      },
+      "setup": {
+        "title": "راه‌اندازی داده‌های پایه",
+        "description": "نگهداری داده‌های پایه فروش و مشتری."
+      }
+    }
+  },
+  "procurement": {
+    "permissions": {
+      "access": {
+        "title": "دسترسی به تأمین‌کنندگان و تدارکات",
+        "description": "ورود به بخش تأمین‌کنندگان و تدارکات."
+      },
+      "maintain-suppliers": {
+        "title": "نگهداری تأمین‌کنندگان",
+        "description": "ایجاد و نگهداری تأمین‌کنندگان."
+      },
+      "maintain-procurement": {
+        "title": "نگهداری تدارکات",
+        "description": "ایجاد و نگهداری اقلام تدارکات و داده‌های خرید."
+      },
+      "setup": {
+        "title": "راه‌اندازی داده‌های پایه",
+        "description": "نگهداری داده‌های پایه تدارکات."
+      }
+    }
+  },
+  "assets-maintenance": {
+    "permissions": {
+      "access": {
+        "title": "دسترسی به دارایی‌ها و نگهداری",
+        "description": "ورود به بخش دارایی‌ها و نگهداری."
+      },
+      "maintain-assets": {
+        "title": "نگهداری دارایی‌ها",
+        "description": "ایجاد و نگهداری دارایی‌ها."
+      },
+      "maintain-maintenance": {
+        "title": "نگهداری تعمیرات",
+        "description": "ایجاد و نگهداری برنامه‌ها، کارها و داده‌های خرابی."
+      },
+      "setup": {
+        "title": "راه‌اندازی داده‌های پایه",
+        "description": "نگهداری داده‌های پایه دارایی، نگهداری و اندازه‌گیری."
+      }
+    }
+  },
+  "collaboration": {
+    "permissions": {
+      "access": {
+        "title": "دسترسی به همکاری",
+        "description": "ورود به بخش همکاری."
+      },
+      "maintain-conversations": {
+        "title": "نگهداری گفتگوها",
+        "description": "ایجاد و نگهداری گفتگوها."
+      },
+      "maintain-meetings": {
+        "title": "نگهداری جلسات",
+        "description": "ایجاد و نگهداری جلسات."
+      },
+      "maintain-calendars": {
+        "title": "نگهداری تقویم‌ها",
+        "description": "ایجاد و نگهداری تقویم‌ها و مناسبت‌ها."
+      },
+      "maintain-communications": {
+        "title": "نگهداری ارتباطات",
+        "description": "ارسال و مدیریت ارتباطات مانند ایمیل."
+      },
+      "maintain-reservations": {
+        "title": "نگهداری رزروها",
+        "description": "ایجاد و نگهداری رزروها."
+      },
+      "maintain-help-desk": {
+        "title": "نگهداری میز خدمت",
+        "description": "ایجاد و نگهداری درخواست‌های میز خدمت."
+      },
+      "view-bulletins": {
+        "title": "مشاهده اطلاعیه‌ها",
+        "description": "باز کردن فید اطلاعیه‌های سازمان و خواندن پست‌های مربوط به کاربر."
+      },
+      "maintain-bulletins": {
+        "title": "نگهداری اطلاعیه‌ها",
+        "description": "ایجاد و ویرایش پیش‌نویس اطلاعیه‌ها."
+      },
+      "publish-bulletins": {
+        "title": "انتشار اطلاعیه‌ها",
+        "description": "زمان‌بندی، انتشار، سنجاق و بایگانی پست‌های اطلاعیه."
+      },
+      "moderate-bulletin-discussions": {
+        "title": "نظارت بر بحث اطلاعیه‌ها",
+        "description": "پنهان‌کردن نظرها و مدیریت واکنش‌ها در پست‌های اطلاعیه."
+      },
+      "setup": {
+        "title": "راه‌اندازی داده‌های پایه",
+        "description": "نگهداری داده‌های پایه همکاری."
+      }
+    }
+  },
+  "content-documents": {
+    "permissions": {
+      "access": {
+        "title": "دسترسی به محتوا و اسناد",
+        "description": "ورود به بخش محتوا و اسناد."
+      },
+      "maintain-documents": {
+        "title": "نگهداری اسناد",
+        "description": "ایجاد و نگهداری اسناد و درایورهای سند."
+      },
+      "maintain-content": {
+        "title": "نگهداری محتوا",
+        "description": "ایجاد و نگهداری محتوا مانند تبلیغات و قالب‌های متن."
+      },
+      "maintain-form-templates": {
+        "title": "نگهداری قالب‌های فرم",
+        "description": "ایجاد و نگهداری قالب‌های فرم."
+      },
+      "setup": {
+        "title": "راه‌اندازی داده‌های پایه",
+        "description": "نگهداری داده‌های پایه محتوا و اسناد."
+      }
+    }
+  },
+  "insights-reporting": {
+    "permissions": {
+      "access": {
+        "title": "دسترسی به بینش و گزارش‌گیری",
+        "description": "ورود به بخش بینش و گزارش‌گیری."
+      },
+      "maintain-reports": {
+        "title": "نگهداری گزارش‌ها",
+        "description": "ایجاد و نگهداری گزارش‌ها و دسته‌بندی گزارش."
+      },
+      "maintain-data": {
+        "title": "نگهداری داده",
+        "description": "ایجاد و نگهداری پرس‌وجوها، منابع داده و فراداده."
+      },
+      "view-activity-insight": {
+        "title": "مشاهده بینش فعالیت",
+        "description": "مشاهده رویدادها و خط زمانی فعالیت."
+      },
+      "manage-activity-insight": {
+        "title": "مدیریت بینش فعالیت",
+        "description": "مدیریت سیاست‌ها و تنظیمات بینش فعالیت."
+      },
+      "setup": {
+        "title": "راه‌اندازی داده‌های پایه",
+        "description": "نگهداری داده‌های پایه بینش و گزارش‌گیری."
+      }
+    }
+  },
+  "projects-work": {
+    "permissions": {
+      "access": {
+        "title": "دسترسی به پروژه‌ها و کار",
+        "description": "ورود به بخش پروژه‌ها و کار."
+      },
+      "maintain-projects": {
+        "title": "نگهداری پروژه‌ها",
+        "description": "ایجاد و نگهداری پروژه‌ها."
+      },
+      "maintain-tasks": {
+        "title": "نگهداری کارها",
+        "description": "کار با کارها و برد وظایف."
+      },
+      "view-all-tasks": {
+        "title": "مشاهده همه کارها",
+        "description": "مشاهده و فیلتر کارها در بین همه مسئولان."
+      },
+      "maintain-timesheets": {
+        "title": "نگهداری برگه‌های زمانی",
+        "description": "ثبت و نگهداری ساعات و دوره‌های زمانی شخصی."
+      },
+      "manage-timesheet-actions": {
+        "title": "مدیریت اقدامات برگه زمانی",
+        "description": "تأیید برگه‌های زمانی، مشاهده تیم و اعمال اصلاحات مدیریتی."
+      },
+      "view-timesheet-reports": {
+        "title": "مشاهده گزارش‌های برگه زمانی",
+        "description": "مشاهده و خروجی گرفتن از گزارش‌های برگه زمانی."
+      },
+      "setup": {
+        "title": "راه‌اندازی داده‌های پایه",
+        "description": "نگهداری داده‌های پایه پروژه، کار و برگه زمانی."
+      }
+    }
+  },
+  "applications-platform": {
+    "permissions": {
+      "access": {
+        "title": "دسترسی به برنامه‌ها و پلتفرم",
+        "description": "ورود به بخش برنامه‌ها و پلتفرم."
+      },
+      "maintain-applications": {
+        "title": "نگهداری برنامه‌ها",
+        "description": "ایجاد و نگهداری برنامه‌ها، یادداشت‌های انتشار و شرایط برنامه."
+      },
+      "maintain-tenants": {
+        "title": "نگهداری مستأجران",
+        "description": "ایجاد و نگهداری مستأجران."
+      },
+      "maintain-platform-shell": {
+        "title": "نگهداری پوسته پلتفرم",
+        "description": "نگهداری توکن‌ها، منوها و پیکربندی پوسته پلتفرم."
+      },
+      "maintain-landing-pages": {
+        "title": "نگهداری صفحات فرود",
+        "description": "ایجاد و نگهداری صفحات فرود و دسته‌بندی‌ها."
+      },
+      "maintain-identifiers": {
+        "title": "نگهداری شناسه‌ها",
+        "description": "نگهداری قوانین شناسه و تولید شناسه."
+      },
+      "maintain-tenant-settings": {
+        "title": "نگهداری تنظیمات مستأجر",
+        "description": "نگهداری تنظیمات برنامهٔ مستأجر."
+      },
+      "maintain-platform-settings": {
+        "title": "نگهداری تنظیمات پلتفرم",
+        "description": "نگهداری تنظیمات سراسری پلتفرم."
+      },
+      "maintain-locales": {
+        "title": "نگهداری زبان‌ها و مناطق",
+        "description": "نگهداری زبان‌ها و مناطق زمانی."
+      },
+      "use-dev-tools": {
+        "title": "استفاده از ابزارهای توسعه",
+        "description": "استفاده از کاوشگر پلتفرم و ابزارهای اشکال‌زدایی."
+      }
+    }
+  },
+  "administration": {
+    "permissions": {
+      "access": {
+        "title": "دسترسی به مدیریت",
+        "description": "ورود به بخش مدیریت."
+      },
+      "maintain-users-and-roles": {
+        "title": "نگهداری کاربران و نقش‌ها",
+        "description": "ایجاد و نگهداری حساب‌های کاربری، نقش‌ها، انتساب نقش و گزارش‌های مرتبط با دسترسی امنیتی."
+      },
+      "manage-sessions": {
+        "title": "مدیریت نشست‌ها",
+        "description": "مشاهده و پایان دادن به نشست‌های دستگاه."
+      },
+      "maintain-policies": {
+        "title": "نگهداری سیاست‌ها",
+        "description": "ایجاد و نگهداری سیاست‌های امنیتی."
+      },
+      "view-integrations": {
+        "title": "مشاهده یکپارچه‌سازی‌ها",
+        "description": "مشاهده ارائه‌دهندگان، اتصالات و وضعیت سلامت یکپارچه‌سازی."
+      },
+      "maintain-connections": {
+        "title": "نگهداری اتصالات",
+        "description": "ایجاد و نگهداری اتصالات یکپارچه‌سازی."
+      },
+      "manage-integration-actions": {
+        "title": "مدیریت اقدامات یکپارچه‌سازی",
+        "description": "اجرای همگام‌سازی، درون‌ریزی و اقدامات مرتبط با اتصال‌دهنده‌ها."
+      },
+      "maintain-workflows": {
+        "title": "نگهداری گردش‌کارها",
+        "description": "ایجاد و نگهداری تعاریف گردش‌کار."
+      },
+      "manage-workflow-actions": {
+        "title": "مدیریت اقدامات گردش‌کار",
+        "description": "اجرای اقداماتی مانند انتساب مجدد وظایف گردش‌کار."
+      },
+      "view-rules": {
+        "title": "مشاهده قوانین",
+        "description": "مشاهده مجموعه‌های قوانین و پیکربندی قوانین."
+      },
+      "maintain-rules": {
+        "title": "نگهداری قوانین",
+        "description": "ایجاد و نگهداری مجموعه‌های قوانین."
+      },
+      "manage-rule-actions": {
+        "title": "مدیریت اقدامات قوانین",
+        "description": "انتشار، ارزیابی و شبیه‌سازی مجموعه‌های قوانین."
+      },
+      "maintain-ai": {
+        "title": "نگهداری هوش مصنوعی",
+        "description": "پیکربندی دستیارها، مدل‌ها و تنظیمات مرتبط با هوش مصنوعی."
+      },
+      "use-ai-assist": {
+        "title": "استفاده از دستیار هوش مصنوعی",
+        "description": "استفاده از دستیارهای هوش مصنوعی و قابلیت‌های مرتبط."
+      },
+      "maintain-dashboards": {
+        "title": "نگهداری داشبوردها",
+        "description": "ایجاد و نگهداری داشبوردها."
+      },
+      "view-jobs": {
+        "title": "مشاهده کارها",
+        "description": "مشاهده کارهای پس‌زمینه، زمان‌بندی‌ها و داشبورد کارها."
+      },
+      "manage-job-actions": {
+        "title": "مدیریت اقدامات کارها",
+        "description": "لغو، تلاش مجدد، حذف، بازپخش و مدیریت زمان‌بندی کارها."
+      },
+      "view-observability": {
+        "title": "مشاهده مشاهده‌پذیری",
+        "description": "مشاهده لاگ‌ها، ردگیری‌ها، متریک‌ها و خطاها."
+      },
+      "maintain-observability": {
+        "title": "نگهداری مشاهده‌پذیری",
+        "description": "مدیریت هشدارها، نماهای ذخیره‌شده، لاگ حسابرسی و اقدامات مدیریتی مشاهده‌پذیری."
+      }
+    }
+  },
+  "version-history": {
+    "entities": {
+      "version-stream": {
+        "title": "جریان نسخه",
+        "plural": "جریان‌های نسخه",
+        "fields": {
+          "entity-type": { "title": "نوع موجودیت" },
+          "entity-id": { "title": "شناسه موجودیت" },
+          "created-at": { "title": "تاریخ ایجاد" }
+        }
+      },
+      "version-entry": {
+        "title": "ورودی نسخه",
+        "plural": "ورودی‌های نسخه",
+        "groups": {
+          "change": "تغییر",
+          "payload": "داده"
+        },
+        "fields": {
+          "stream": { "title": "جریان" },
+          "version-number": { "title": "نسخه" },
+          "change-type": { "title": "نوع تغییر" },
+          "changed-by": { "title": "تغییر توسط" },
+          "changed-by-name": { "title": "نام تغییر‌دهنده" },
+          "changed-at": { "title": "زمان تغییر" },
+          "summary": { "title": "خلاصه" },
+          "change-lines": { "title": "خطوط تغییر" },
+          "snapshot": { "title": "اسنپ‌شات" },
+          "patch": { "title": "پچ" }
+        }
+      }
+    },
+    "change-types": {
+      "create": "ایجاد",
+      "update": "به‌روزرسانی",
+      "delete": "حذف"
+    },
+    "settings": {
+      "group": {
+        "title": "تاریخچه نسخه",
+        "description": "تنظیمات نگهداری و ثبت تاریخچه تغییرات موجودیت‌ها"
+      },
+      "retention": {
+        "title": "نگهداری",
+        "description": "مدت نگهداری تاریخچه نسخه در پایگاه داده تاریخچه",
+        "items": {
+          "enabled": {
+            "title": "فعال‌سازی پاکسازی نگهداری",
+            "description": "حذف خودکار ورودی‌های نسخه قدیمی‌تر از دوره نگهداری"
+          },
+          "period": {
+            "title": "دوره نگهداری (روز)",
+            "description": "تعداد روز نگهداری ورودی‌های تاریخچه نسخه"
+          },
+          "batch-size": {
+            "title": "اندازه دسته پاکسازی",
+            "description": "حداکثر تعداد ورودی حذف‌شده در هر دسته پاکسازی"
+          },
+          "purge-cron": {
+            "title": "زمان‌بندی پاکسازی (Cron)",
+            "description": "عبارت Cron برای کار پاکسازی نگهداری"
+          }
+        }
+      },
+      "capture": {
+        "title": "ثبت",
+        "description": "کنترل آنچه در تاریخچه نسخه نوشته می‌شود",
+        "items": {
+          "skip-empty": {
+            "title": "رد کردن پچ‌های خالی",
+            "description": "در به‌روزرسانی بدون تغییر فیلدهای کسب‌وکار، نسخه ایجاد نشود"
+          }
+        }
+      }
+    }
+  }
+}

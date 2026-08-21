@@ -1,0 +1,74 @@
+{
+  "module": {
+    "title": "Procurement Management",
+    "description": "Manage supplier-product relationships, pricing, and procurement processes"
+  },
+  "supplier-products": {
+    "terms": {
+      "supplier": "Supplier",
+      "suppliers": "Suppliers"
+    },
+    "entities": {
+      "supplier-product": {
+        "title": "Supplier Product",
+        "plural": "Supplier Products",
+        "groups": {
+          "supplier-product-info": "Supplier Product Information",
+          "pricing-terms": "Pricing & Terms"
+        },
+        "fields": {
+          "supplier": {
+            "title": "Supplier"
+          },
+          "product": {
+            "title": "Product"
+          },
+          "unit-price": {
+            "title": "Unit Price",
+            "description": "Price per unit from this supplier"
+          },
+          "currency": {
+            "title": "Currency"
+          },
+          "payment-terms": {
+            "title": "Payment Terms"
+          },
+          "minimum-order-quantity": {
+            "title": "Minimum Order Quantity",
+            "description": "Minimum quantity required for order"
+          },
+          "lead-time-days": {
+            "title": "Lead Time (Days)",
+            "description": "Number of days to deliver"
+          },
+          "priority": {
+            "title": "Priority",
+            "description": "Supplier priority ranking (1 = highest priority)"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "supplier-products": {
+        "title": "Supplier Products",
+        "actions": {
+          "view": {
+            "title": "@general:actions.view.title"
+          },
+          "create": {
+            "title": "@general:actions.create.title"
+          },
+          "edit": {
+            "title": "@general:actions.edit.title"
+          },
+          "delete": {
+            "title": "@general:actions.delete.title"
+          },
+          "manage": {
+            "title": "@general:actions.manage.title"
+          }
+        }
+      }
+    }
+  }
+}

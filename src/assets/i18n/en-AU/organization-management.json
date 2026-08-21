@@ -1,0 +1,851 @@
+{
+  "module": {
+    "title": "Organization Management",
+    "description": "Manage organizational structure, job definitions, teams, and hierarchies",
+    "menus": {
+      "root": {
+        "title": "Organization",
+        "description": "Teams, positions, business units, and organization chart"
+      },
+      "configuration": {
+        "title": "Organization",
+        "description": "Job definitions, responsibilities, and reference data"
+      }
+    },
+    "permissions": {
+      "title": "Organization Management",
+      "description": "Full access to organization management features"
+    }
+  },
+  "teams": {
+    "terms": {
+      "team": "Team",
+      "teams": "Teams"
+    },
+    "entities": {
+      "team": {
+        "title": "Team",
+        "plural": "Teams",
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Unique team code (e.g. TEAM-ENG)"
+          }
+        }
+      }
+    },
+    "menus": {
+      "teams": {
+        "title": "Teams",
+        "description": "Manage teams and team members"
+      }
+    },
+    "related-entities": {
+      "members": {
+        "title": "Members"
+      },
+      "business-units": {
+        "title": "Business Units"
+      }
+    }
+  },
+  "team-business-units": {
+    "entities": {
+      "team-business-unit": {
+        "title": "Team–Business Unit Link",
+        "plural": "Team–Business Unit Links",
+        "fields": {
+          "team": {
+            "title": "Team"
+          },
+          "business-unit": {
+            "title": "Business Unit"
+          },
+          "is-primary": {
+            "title": "Primary",
+            "description": "Turn on when this business unit is the team's primary home in the org chart (reporting and defaults)."
+          },
+          "effective-from": {
+            "title": "Effective From"
+          },
+          "effective-to": {
+            "title": "Effective To"
+          }
+        }
+      }
+    }
+  },
+  "team-member-roles": {
+    "terms": {
+      "team-member-role": "Team Member Role",
+      "team-member-roles": "Team Member Roles"
+    },
+    "entities": {
+      "team-member-role": {
+        "title": "Team Member Role",
+        "plural": "Team Member Roles"
+      }
+    },
+    "menus": {
+      "team-member-roles": {
+        "title": "Team Member Roles",
+        "description": "Manage team member roles"
+      }
+    }
+  },
+  "team-members": {
+    "terms": {
+      "team-member": "Team Member",
+      "team-members": "Team Members"
+    },
+    "entities": {
+      "team-member": {
+        "title": "Team Member",
+        "plural": "Team Members",
+        "fields": {
+          "team": {
+            "title": "Team",
+            "description": "The team this member belongs to"
+          },
+          "employee": {
+            "title": "Employee",
+            "description": "The employee who is a member of the team"
+          },
+          "role": {
+            "title": "Role",
+            "description": "The role of the employee in the team"
+          }
+        }
+      }
+    }
+  },
+  "positions": {
+    "terms": {
+      "position": "Position",
+      "positions": "Positions"
+    },
+    "entities": {
+      "position": {
+        "title": "Position",
+        "plural": "Positions",
+        "groups": {
+          "organizational-details": "Organizational Details"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "description": "Unique code identifier for the position",
+            "placeholder": "Unique position code (e.g. POS-ENG-001)"
+          },
+          "job-level": {
+            "title": "Job Seniority Level",
+            "description": "Seniority grade for this position (independent of managerial seat status)"
+          },
+          "job-definition": {
+            "title": "Job Definition",
+            "description": "Job definition associated with this position"
+          },
+          "business-unit": {
+            "title": "Business Unit",
+            "description": "Business unit this position belongs to"
+          },
+          "capacity": {
+            "title": "Capacity",
+            "description": "Maximum number of employees that can be assigned to this position"
+          },
+          "is-manager": {
+            "title": "Managerial Seat",
+            "description": "Indicates whether this position is a people-management seat in the organization chart"
+          }
+        }
+      }
+    },
+    "menus": {
+      "positions": {
+        "title": "Positions",
+        "description": "Manage organizational positions"
+      }
+    }
+  },
+  "job-definitions": {
+    "terms": {
+      "job-definition": "Job Definition",
+      "job-definitions": "Job Definitions"
+    },
+    "entities": {
+      "job-definition": {
+        "title": "Job Definition",
+        "plural": "Job Definitions",
+        "fields": {
+          "responsibilities": {
+            "title": "Responsibilities",
+            "description": "Responsibilities associated with this job definition"
+          },
+          "responsibility-weight": {
+            "title": "Weight",
+            "description": "Weight/importance of the responsibility (0-100)"
+          },
+          "skills": {
+            "title": "Skill Requirements",
+            "description": "Required skill levels for each skill in this job definition"
+          },
+          "job-levels": {
+            "title": "Required Job Levels",
+            "description": "Job levels that are required for this job definition"
+          },
+          "categories": {
+            "title": "Categories",
+            "description": "Categories this job definition belongs to"
+          },
+          "job-definitions-category": {
+            "title": "Job Definitions Category",
+            "description": "Category classification for the job definition"
+          }
+        },
+        "groups": {
+          "responsibilities": "Responsibilities",
+          "skills": "Skills"
+        }
+      }
+    },
+    "components": {
+      "responsibilities-matrix": {
+        "title": "Responsibility / Responsibility Level",
+        "actions": {
+          "choose-responsibilities": {
+            "title": "Choose Responsibilities",
+            "description": "Select responsibilities to add to the matrix"
+          }
+        },
+        "messages": {
+          "loading-responsibility-levels": "Loading responsibility levels..."
+        }
+      }
+    },
+    "menus": {
+      "job-definitions": {
+        "title": "Job Definitions",
+        "description": "Manage organizational job definitions"
+      }
+    }
+  },
+  "job-levels": {
+    "terms": {
+      "job-level": "Job Seniority Level",
+      "job-levels": "Job Seniority Levels"
+    },
+    "entities": {
+      "job-level": {
+        "title": "Job Seniority Level",
+        "plural": "Job Seniority Levels",
+        "fields": {
+          "level": {
+            "title": "Hierarchy Order",
+            "description": "Numeric order used to sort seniority levels from lowest to highest"
+          }
+        }
+      }
+    },
+    "menus": {
+      "job-levels": {
+        "title": "Job Seniority Levels",
+        "description": "Manage organizational seniority levels"
+      }
+    }
+  },
+  "responsibilities": {
+    "terms": {
+      "responsibility": "Responsibility",
+      "responsibilities": "Responsibilities"
+    },
+    "entities": {
+      "responsibility": {
+        "title": "Responsibility",
+        "plural": "Responsibilities",
+        "fields": {
+          "categories": {
+            "title": "Categories",
+            "description": "Categories this responsibility belongs to"
+          }
+        }
+      }
+    },
+    "menus": {
+      "responsibilities": {
+        "title": "Responsibilities",
+        "description": "Manage organizational responsibilities"
+      }
+    }
+  },
+  "responsibility-levels": {
+    "terms": {
+      "responsibility-level": "Responsibility Level",
+      "responsibility-levels": "Responsibility Levels"
+    },
+    "entities": {
+      "responsibility-level": {
+        "title": "Responsibility Level",
+        "plural": "Responsibility Levels",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "level": {
+            "title": "Level",
+            "placeholder": "Numeric level"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Describe capabilities at this level"
+          }
+        }
+      }
+    },
+    "menus": {
+      "responsibility-levels": {
+        "title": "Responsibility Levels",
+        "description": "Manage organizational responsibility levels"
+      }
+    }
+  },
+  "business-units": {
+    "terms": {
+      "business-unit": "Business Unit",
+      "business-units": "Business Units",
+      "individual-title": "Business Unit"
+    },
+    "entities": {
+      "business-unit": {
+        "title": "Business Unit",
+        "plural": "Business Units",
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Unique business unit code (e.g. BU-HQ)"
+          },
+          "relation-info": {
+            "title": "Relation Info",
+            "description": "Relationship information for this business unit"
+          },
+          "positions": {
+            "title": "Positions",
+            "description": "Positions within this business unit"
+          },
+          "head-position": {
+            "title": "Head Position",
+            "description": "Manager position that leads this unit (must be flagged as manager; used for manager resolution and org chart fallbacks)"
+          }
+        },
+        "groups": {
+          "relation-info": "Relation Info",
+          "classification": "Classification & Geography"
+        }
+      }
+    },
+    "menus": {
+      "business-units": {
+        "title": "Business Units",
+        "description": "Manage business units"
+      }
+    },
+    "related-entities": {
+      "teams": {
+        "title": "Teams"
+      }
+    }
+  },
+  "business-unit-types": {
+    "terms": {
+      "business-unit-type": "Business Unit Type",
+      "business-unit-types": "Business Unit Types"
+    },
+    "entities": {
+      "business-unit-type": {
+        "title": "Business Unit Type",
+        "plural": "Business Unit Types",
+        "fields": {
+          "is-location-based": {
+            "title": "Location Based",
+            "description": "Indicates if this business unit type is tied to geography (regions, branches)."
+          },
+          "allows-direct-positions": {
+            "title": "Allows Direct Positions",
+            "description": "When enabled, business units of this type can hold org positions and a head position."
+          }
+        }
+      }
+    },
+    "menus": {
+      "business-unit-types": {
+        "title": "Business Unit Types",
+        "description": "Manage business unit types"
+      }
+    }
+  },
+  "companies": {
+    "entities": {
+      "company": {
+        "title": "Company",
+        "plural": "Companies"
+      }
+    }
+  },
+  "organization-chart": {
+    "terms": {
+      "chart": "Chart",
+      "hierarchy-chart": "Hierarchy Chart"
+    },
+    "entities": {
+      "chart": {
+        "plural": "Organization Hierarchy Charts",
+        "fields": {
+          "name": {
+            "title": "Name"
+          },
+          "version": {
+            "title": "Version"
+          },
+          "structure": {
+            "title": "Structure"
+          }
+        },
+        "actions": {
+          "view-chart": {
+            "title": "View Chart"
+          }
+        }
+      }
+    },
+    "components": {
+      "chart": {
+        "title": "Organization Hierarchy Chart",
+        "description": "Clear and dynamic view of your organization's structure",
+        "empty-states": {
+          "no-data": {
+            "title": "No Chart Data",
+            "description": "Generate a chart to view your organization structure"
+          }
+        },
+        "detail-panel": {
+          "title": "Node Details",
+          "details-section": "Details",
+          "empty": "Select a node on the chart to see details here.",
+          "no-rows": "No additional details are available for this node."
+        },
+        "search-placeholder": "Find a node on the chart…"
+      },
+      "generate-dialog": {
+        "title": "Generate Organization Chart",
+        "message": "Configure the chart generation options",
+        "fields": {
+          "mode": {
+            "label": "Chart Mode",
+            "description": "Select the type of organizational chart to generate"
+          },
+          "show-vacant-leaf-seats": {
+            "label": "Show Vacant Seats",
+            "description": "When off, empty positions with no assignee are hidden (only applies to leaf seat cards under each unit, not the unit head line on the card)."
+          }
+        }
+      }
+    },
+    "menus": {
+      "chart": {
+        "title": "Hierarchy Chart",
+        "description": "View organizational hierarchy chart"
+      }
+    },
+    "actions": {
+      "print": {
+        "title": "Print",
+        "description": "Print the organizational chart"
+      },
+      "generate": {
+        "title": "Generate",
+        "description": "Generate a new organizational chart"
+      },
+      "reset": {
+        "title": "Reset",
+        "description": "Reset chart configuration"
+      }
+    },
+    "commands": {
+      "generate": {
+        "loading": {
+          "title": "Generating Organization Chart",
+          "description": "Building the hierarchy from business units, positions, and assignments. This may take a moment."
+        },
+        "messages": {
+          "success": "Organization chart generated successfully.",
+          "failed": "Failed to generate organization chart."
+        }
+      },
+      "add-position": {
+        "type-not-allowed": "This business unit type does not allow direct positions."
+      }
+    },
+    "states": {
+      "preparing-document": "Preparing Document",
+      "rendering-chart-image": "Rendering chart image",
+      "finalizing-image-processing": "Finalizing image processing",
+      "downloading-image": "Downloading image",
+      "process-complete": "Process complete",
+      "failed-to-generate-chart-image": "Failed to generate chart image"
+    },
+    "options": {
+      "mode": {
+        "structure": "Organizational Structure",
+        "location": "Geographic Location",
+        "reporting": "Reporting Hierarchy",
+        "positionHierarchy": "Position Hierarchy"
+      }
+    },
+    "communication-submenu": {
+      "title": "Communication"
+    },
+    "layout-submenu": {
+      "title": "View & Layout"
+    },
+    "structure-submenu": {
+      "title": "Structure"
+    },
+    "employee-submenu": {
+      "title": "Employee"
+    },
+    "node-actions": {
+      "more": "More",
+      "add": "Add New ...",
+      "no-actions": "No actions available",
+      "add-new-bu-with-type": "Add New {{type}}",
+      "add-new-position": "Add New Position",
+      "select-position": "Select Position",
+      "assign-employee-confirm": {
+        "title": "Assign an Employee?",
+        "message": "The position was added to this unit. Do you want to assign an employee to this position now?"
+      },
+      "assign-head-after-bu-create": {
+        "title": "Assign Unit Head?",
+        "message": "The business unit was created. Do you want to assign an employee as the unit head now?"
+      },
+      "assign-head-missing-head-position": {
+        "title": "No Head Position",
+        "message": "This unit has no head position set. Set a head position for the unit, then use Assign Manager on the chart."
+      },
+      "navigate-to-team-after-create": {
+        "title": "Open team details?",
+        "message": "The team was created and linked to this unit. Do you want to open the team record now?",
+        "message-link-failed": "The team was created, but it could not be linked to this unit. Do you still want to open the team record?"
+      },
+      "modify": "Modify",
+      "modify-position": "Modify Position",
+      "assign-employee-to-position": "Assign Employee",
+      "assign-new-employee-to-position": "Replace Assignee",
+      "remove-from-unit": "Remove From Unit",
+      "remove-from-unit-confirm": {
+        "title": "Remove Seat from Unit?",
+        "message": "This position will be removed from this business unit. If someone is assigned, their assignment will end."
+      },
+      "replace-assignee-confirm": {
+        "title": "Replace Assignee?",
+        "message": "The current assignment will end. You will then choose an employee for this seat."
+      },
+      "modify-employee": "Modify Employee",
+      "remove": "Remove",
+      "toggle-detail-panel": "Toggle Details Panel",
+      "expand": "Expand",
+      "collapse": "Collapse",
+      "open": "Open",
+      "open-root-organization-record": "Open Organization Profile",
+      "open-organization-record": "Open Business Unit Profile",
+      "open-position-record": "Open Position Profile",
+      "move-business-unit": "Move Business Unit",
+      "add-new-team": "Add New Team",
+      "add-additional-assignee": "Assign Another Seat",
+      "hr-workflows": "HR Workflows",
+      "hr-workflow-transfer": "Transfer",
+      "hr-workflow-promotion": "Promotion",
+      "hr-workflow-offboarding": "Offboarding",
+      "schedule-meeting": "Schedule Meeting",
+      "add-to-team": "Add to Team",
+      "add-to-team-select-team": "Select Team",
+      "add-note": "Add Note",
+      "placeholders": {
+        "add-note": {
+          "title": "Notes",
+          "message": "Notes on chart nodes are not available yet. This action will open the note composer in a future release."
+        },
+        "hr-workflow": {
+          "title": "HR workflows",
+          "transfer": "Transfer workflows are not configured yet.",
+          "promotion": "Promotion workflows are not configured yet.",
+          "offboarding": "Offboarding workflows are not configured yet."
+        },
+        "schedule-meeting": {
+          "title": "Schedule Meeting",
+          "message": "Calendar scheduling from the org chart is not available yet."
+        }
+      }
+    },
+    "nodes": {
+      "company": "Company",
+      "vacant": "Vacant",
+      "head-prefix": "Head",
+      "demo-organization": "Demo Organization",
+      "employee": "Employee",
+      "position": "Position",
+      "region": "Region",
+      "assign": "Assign",
+      "reassign": "Reassign",
+      "direct-reports": "Direct Reports",
+      "team-members": "Team Members"
+    }
+  },
+  "team": {
+    "permissions": {
+      "title": "Teams",
+      "description": "Manage teams and team members",
+      "view": {
+        "title": "View Teams",
+        "description": "View teams and team members"
+      },
+      "create": {
+        "title": "Create Team",
+        "description": "Create new teams"
+      },
+      "edit": {
+        "title": "Edit Team",
+        "description": "Edit existing teams"
+      },
+      "delete": {
+        "title": "Delete Teams",
+        "description": "Delete teams"
+      },
+      "manage": {
+        "title": "Manage Teams",
+        "description": "Full access to manage teams"
+      }
+    }
+  },
+  "position": {
+    "permissions": {
+      "title": "Positions",
+      "description": "Manage organizational positions",
+      "view": {
+        "title": "View Positions",
+        "description": "View positions"
+      },
+      "create": {
+        "title": "Create Position",
+        "description": "Create new positions"
+      },
+      "edit": {
+        "title": "Edit Position",
+        "description": "Edit existing positions"
+      },
+      "delete": {
+        "title": "Delete Positions",
+        "description": "Delete positions"
+      },
+      "manage": {
+        "title": "Manage Positions",
+        "description": "Full access to manage positions"
+      }
+    }
+  },
+  "job-definition": {
+    "permissions": {
+      "title": "Job Definitions",
+      "description": "Manage organizational job definitions",
+      "view": {
+        "title": "View Job Definitions",
+        "description": "View job definitions"
+      },
+      "create": {
+        "title": "Create Job Definition",
+        "description": "Create new job definitions"
+      },
+      "edit": {
+        "title": "Edit Job Definition",
+        "description": "Edit existing job definitions"
+      },
+      "delete": {
+        "title": "Delete Job Definitions",
+        "description": "Delete job definitions"
+      },
+      "manage": {
+        "title": "Manage Job Definitions",
+        "description": "Full access to manage job definitions"
+      }
+    }
+  },
+  "job-level": {
+    "permissions": {
+      "title": "Job Levels",
+      "description": "Manage organizational job levels",
+      "manage": {
+        "title": "Manage Job Levels",
+        "description": "Full access to manage job levels"
+      }
+    }
+  },
+  "responsibility": {
+    "permissions": {
+      "title": "Responsibilities",
+      "description": "Manage organizational responsibilities",
+      "manage": {
+        "title": "Manage Responsibilities",
+        "description": "Full access to manage responsibilities"
+      }
+    }
+  },
+  "responsibility-level": {
+    "permissions": {
+      "title": "Responsibility Levels",
+      "description": "Manage organizational responsibility levels",
+      "manage": {
+        "title": "Manage Responsibility Levels",
+        "description": "Full access to manage responsibility levels"
+      }
+    }
+  },
+  "business-unit": {
+    "permissions": {
+      "title": "Business Units",
+      "description": "Manage business units",
+      "view": {
+        "title": "View Business Units",
+        "description": "View business units"
+      },
+      "create": {
+        "title": "Create Business Unit",
+        "description": "Create new business units"
+      },
+      "edit": {
+        "title": "Edit Business Unit",
+        "description": "Edit existing business units"
+      },
+      "delete": {
+        "title": "Delete Business Units",
+        "description": "Delete business units"
+      },
+      "manage": {
+        "title": "Manage Business Units",
+        "description": "Full access to manage business units"
+      }
+    }
+  },
+  "business-unit-type": {
+    "permissions": {
+      "title": "Business Unit Types",
+      "description": "Manage business unit types",
+      "manage": {
+        "title": "Manage Business Unit Types",
+        "description": "Full access to manage business unit types"
+      }
+    }
+  },
+  "chart": {
+    "permissions": {
+      "title": "Organization Chart",
+      "description": "View and manage organizational charts",
+      "manage": {
+        "title": "Manage Organizational Charts",
+        "description": "Full access to manage organizational charts"
+      }
+    }
+  },
+  "chart-configuration": {
+    "components": {
+      "chart-configuration": {
+        "title": "Organization Hierarchy Chart Configuration",
+        "description": "Customize your organization's hierarchical relationships"
+      }
+    },
+    "menus": {
+      "chart-configuration": {
+        "title": "Hierarchy Chart Configuration",
+        "description": "Configure hierarchy chart settings"
+      }
+    }
+  },
+  "settings": {
+    "sections": {
+      "organization-settings": {
+        "nav-title": "Company Information",
+        "title": "Company Information",
+        "description": "Manage organizational preferences."
+      },
+      "branding": {
+        "title": "Branding",
+        "description": "Configure company branding."
+      },
+      "branding-name": {
+        "title": "Company Name",
+        "description": "Specify the official name of the company."
+      },
+      "branding-name-display": {
+        "title": "Display Company Name",
+        "description": "Show the company name in the application."
+      },
+      "branding-trading-name": {
+        "title": "Company Trading Name",
+        "description": "Specify the company trading name."
+      },
+      "branding-trading-name-display": {
+        "title": "Display Trading Name",
+        "description": "Show the company trading name in the application."
+      },
+      "branding-logo": {
+        "title": "Company Logo",
+        "description": "Upload the company logo."
+      },
+      "branding-color": {
+        "title": "Branding Color",
+        "description": "Choose the primary brand color for the company."
+      },
+      "branding-copyright": {
+        "title": "Copyright Text",
+        "description": "Text displayed in the footer of the application."
+      },
+      "branding-bio": {
+        "title": "Company Bio",
+        "description": "A short description of the company."
+      },
+      "registration": {
+        "title": "Legal & Registration",
+        "description": "Company registration and licensing details."
+      },
+      "business-registration-number": {
+        "title": "Business Registration Number",
+        "description": "The business registration number issued by the relevant authority."
+      },
+      "company-registration-number": {
+        "title": "Company Registration Number",
+        "description": "The official company registration number."
+      },
+      "licence-number": {
+        "title": "Licence Number",
+        "description": "The company licence or permit number."
+      },
+      "hierarchy-chart": {
+        "title": "Hierarchy Chart",
+        "description": "Your preferences when opening the organization hierarchy chart."
+      },
+      "hierarchy-chart-mode": {
+        "title": "Default Chart Mode",
+        "description": "Which chart view loads first (you can change it anytime from the chart page)."
+      },
+      "hierarchy-chart-show-vacant": {
+        "title": "Show Vacant Seats by Default",
+        "description": "When on, vacant leaf seats appear in organizational and geographic modes."
+      },
+      "hierarchy-chart-viewport": {
+        "title": "Saved Chart Pan and Zoom",
+        "description": "Automatically stores your last pan position and zoom for each chart mode. You can clear this field in settings to reset the default view."
+      },
+      "address": {
+        "description": "Manage company address details."
+      }
+    }
+  }
+}

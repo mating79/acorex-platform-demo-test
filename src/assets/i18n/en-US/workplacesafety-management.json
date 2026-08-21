@@ -1,0 +1,1436 @@
+{
+  "module": {
+    "title": "Hazard Management",
+    "description": "Define and manage workplace hazards and related assessment templates.",
+    "menus": {
+      "workplace-safety": "Workplace Safety",
+      "hazards": "Hazards",
+      "hazard-registers": "Hazard Registers"
+    },
+    "permissions": {
+      "title": "Hazard Management",
+      "description": "Permissions for hazard library and hazard register records."
+    }
+  },
+  "hazards": {
+    "permissions": {
+      "hazard": {
+        "management": {
+          "title": "Manage hazards",
+          "description": "Full access to hazard library records."
+        },
+        "view": {
+          "title": "View hazards",
+          "description": "View hazard library records."
+        },
+        "create": {
+          "title": "Create hazards",
+          "description": "Create hazard library records."
+        },
+        "update": {
+          "title": "Update hazards",
+          "description": "Update hazard library records."
+        },
+        "delete": {
+          "title": "Delete hazards",
+          "description": "Delete hazard library records."
+        }
+      }
+    },
+    "entities": {
+      "hazard": {
+        "title": "Hazard",
+        "plural": "Hazards",
+        "groups": {
+          "basic-info": "Basic Information",
+          "chemical-compliance": "Chemical Compliance",
+          "assessment-compliance": "Assessment & Compliance",
+          "control-measures": "Control Measures",
+          "hazard-metadata": "Hazard Metadata"
+        },
+        "components": {
+          "meta-data-form": {
+            "title": "Hazard Metadata"
+          }
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter hazard code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter hazard title"
+          },
+          "description": {
+            "placeholder": "Optional description"
+          },
+          "category-id": {
+            "title": "Category",
+            "placeholder": "Category identifier"
+          },
+          "template-id": {
+            "title": "Questionnaire Template"
+          },
+          "safety-data-sheet-available": {
+            "title": "Safety Data Sheet"
+          },
+          "ghs-ids": {
+            "title": "GHS - Global Harminsation System"
+          },
+          "metadata-json": {
+            "title": "Metadata (JSON)",
+            "placeholder": "Optional JSON metadata"
+          },
+          "status": {
+            "title": "Status",
+            "options": {
+              "draft": "Draft",
+              "active": "Active",
+              "inactive": "Inactive",
+              "archived": "Archived"
+            }
+          }
+        }
+      }
+    }
+  },
+  "risk-ratings": {
+    "permissions": {
+      "risk-rating": {
+        "management": {
+          "title": "Manage risk ratings",
+          "description": "Full access to risk rating reference data."
+        }
+      }
+    },
+    "entities": {
+      "risk-rating": {
+        "title": "Risk Rating",
+        "plural": "Risk Ratings",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter risk rating code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter risk rating title"
+          },
+          "level-number": {
+            "title": "Level Number",
+            "placeholder": "Enter level number"
+          },
+          "description": {
+            "placeholder": "Optional description"
+          }
+        }
+      }
+    }
+  },
+  "control-measure-types": {
+    "permissions": {
+      "control-measure-type": {
+        "management": {
+          "title": "Manage Control Hierarchies",
+          "description": "Full access to control hierarchy definitions and their level items."
+        },
+        "view": {
+          "title": "View Control Hierarchies",
+          "description": "View control hierarchy definitions and their level items."
+        },
+        "create": {
+          "title": "Create Control Hierarchies",
+          "description": "Create control hierarchy definitions and their level items."
+        },
+        "update": {
+          "title": "Update Control Hierarchies",
+          "description": "Update control hierarchy definitions and their level items."
+        },
+        "delete": {
+          "title": "Delete Control Hierarchies",
+          "description": "Delete control hierarchy definitions and their level items."
+        }
+      }
+    },
+    "entities": {
+      "control-measure-type": {
+        "title": "Control Hierarchy",
+        "plural": "Control Hierarchies",
+        "groups": {
+          "visualization": "Hierarchy Diagram",
+          "basic-info": "Basic Information",
+          "hierarchy-levels": "Hierarchy Levels"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter control hierarchy code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter control hierarchy title"
+          },
+          "description": {
+            "placeholder": "Optional description"
+          },
+          "items": {
+            "title": "Hierarchy Levels"
+          },
+          "status": {
+            "title": "Status",
+            "options": {
+              "draft": "Draft",
+              "active": "Active",
+              "inactive": "Inactive",
+              "archived": "Archived"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "control-hierarchy-diagram": {
+        "title": "Hierarchy of Control",
+        "widget-title": "Control Hierarchy Diagram",
+        "widget-description": "Visualizes active control hierarchy levels in vertical, horizontal, or chevron layouts.",
+        "most-effective": "Most Effective",
+        "least-effective": "Least Effective",
+        "fields": {
+          "view-type": {
+            "title": "View Type"
+          }
+        },
+        "view-types": {
+          "horizontal": "Horizontal cards",
+          "vertical": "Vertical pyramid",
+          "horizontal-chevron": "Horizontal chevron"
+        }
+      }
+    }
+  },
+  "control-measures": {
+    "permissions": {
+      "control-measure": {
+        "management": {
+          "title": "Manage Control Measures",
+          "description": "Full access to workplace control measure records."
+        },
+        "view": {
+          "title": "View Control Measures",
+          "description": "View workplace control measure records."
+        },
+        "create": {
+          "title": "Create Control Measures",
+          "description": "Create workplace control measure records."
+        },
+        "update": {
+          "title": "Update Control Measures",
+          "description": "Update workplace control measure records."
+        },
+        "delete": {
+          "title": "Delete Control Measures",
+          "description": "Delete workplace control measure records."
+        }
+      }
+    },
+    "entities": {
+      "control-measure": {
+        "title": "Control Measure",
+        "plural": "Control Measures",
+        "groups": {
+          "basic-info": "Basic Information",
+          "instruction": "Instructions"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter control measure code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter control measure title"
+          },
+          "instruction": {
+            "title": "Instruction",
+            "placeholder": "Describe how to apply this control measure"
+          },
+          "status": {
+            "title": "Status",
+            "options": {
+              "active": "Active",
+              "inactive": "Inactive",
+              "archived": "Archived"
+            }
+          }
+        }
+      }
+    }
+  },
+  "ppe-items": {
+    "permissions": {
+      "ppe-item": {
+        "management": {
+          "title": "Manage PPE Items",
+          "description": "Full access to personal protective equipment library records."
+        },
+        "view": {
+          "title": "View PPE Items",
+          "description": "View personal protective equipment library records."
+        },
+        "create": {
+          "title": "Create PPE Items",
+          "description": "Create personal protective equipment library records."
+        },
+        "update": {
+          "title": "Update PPE Items",
+          "description": "Update personal protective equipment library records."
+        },
+        "delete": {
+          "title": "Delete PPE Items",
+          "description": "Delete personal protective equipment library records."
+        }
+      }
+    },
+    "entities": {
+      "ppe-item": {
+        "title": "PPE Item",
+        "plural": "PPE Items",
+        "groups": {
+          "basic-info": "Basic Information",
+          "compliance": "Compliance & Usage"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter PPE item code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter PPE item title"
+          },
+          "description": {
+            "placeholder": "Optional description"
+          },
+          "serial-number": {
+            "title": "Serial Number",
+            "placeholder": "Enter serial number"
+          },
+          "icon": {
+            "title": "Icon Image"
+          },
+          "status": {
+            "title": "Status",
+            "options": {
+              "draft": "Draft",
+              "active": "Active",
+              "inactive": "Inactive",
+              "archived": "Archived"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "ppe-item-viewer": {
+        "widget-title": "PPE Item Viewer",
+        "widget-description": "Display selectable PPE items from the PPE library with image, title, and serial number.",
+        "empty": "No PPE items selected. Configure PPE Items in the widget settings.",
+        "fields": {
+          "ppe-items": {
+            "title": "PPE Items"
+          },
+          "layout": {
+            "title": "Layout"
+          }
+        },
+        "layouts": {
+          "horizontal": "Horizontal",
+          "vertical": "Vertical"
+        }
+      }
+    }
+  },
+  "hazard-ppe-rules": {
+    "permissions": {
+      "hazard-ppe-rule": {
+        "management": {
+          "title": "Manage Hazard PPE Rules",
+          "description": "Full access to hazard PPE requirement rules."
+        },
+        "view": {
+          "title": "View Hazard PPE Rules",
+          "description": "View hazard PPE requirement rules."
+        },
+        "create": {
+          "title": "Create Hazard PPE Rules",
+          "description": "Create hazard PPE requirement rules."
+        },
+        "update": {
+          "title": "Update Hazard PPE Rules",
+          "description": "Update hazard PPE requirement rules."
+        },
+        "delete": {
+          "title": "Delete Hazard PPE Rules",
+          "description": "Delete hazard PPE requirement rules."
+        }
+      }
+    },
+    "entities": {
+      "hazard-ppe-rule": {
+        "title": "Hazard PPE Rule",
+        "plural": "Hazard PPE Rules",
+        "groups": {
+          "basic-info": "Basic Information",
+          "configuration": "Configuration",
+          "notes": "Notes & Instructions"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter rule code"
+          },
+          "hazard-id": {
+            "title": "Hazard"
+          },
+          "ppe-item-id": {
+            "title": "PPE Item"
+          },
+          "requirement-type": {
+            "title": "Requirement Type",
+            "options": {
+              "required": "Required",
+              "recommended": "Recommended",
+              "conditional": "Conditional"
+            }
+          },
+          "condition-note": {
+            "title": "Condition Note",
+            "placeholder": "When this PPE applies"
+          },
+          "usage-instruction": {
+            "title": "Usage Instruction",
+            "placeholder": "How to wear or use the PPE"
+          },
+          "sort-order": {
+            "title": "Sort Order",
+            "placeholder": "Display order"
+          },
+          "status": {
+            "title": "Status",
+            "options": {
+              "active": "Active",
+              "inactive": "Inactive"
+            }
+          }
+        }
+      }
+    }
+  },
+  "hazard-risk-ppe-rules": {
+    "permissions": {
+      "hazard-risk-ppe-rule": {
+        "management": {
+          "title": "Manage Hazard Risk PPE Rules",
+          "description": "Full access to hazard risk PPE requirement rules."
+        },
+        "view": {
+          "title": "View Hazard Risk PPE Rules",
+          "description": "View hazard risk PPE requirement rules."
+        },
+        "create": {
+          "title": "Create Hazard Risk PPE Rules",
+          "description": "Create hazard risk PPE requirement rules."
+        },
+        "update": {
+          "title": "Update Hazard Risk PPE Rules",
+          "description": "Update hazard risk PPE requirement rules."
+        },
+        "delete": {
+          "title": "Delete Hazard Risk PPE Rules",
+          "description": "Delete hazard risk PPE requirement rules."
+        }
+      }
+    },
+    "entities": {
+      "hazard-risk-ppe-rule": {
+        "title": "Hazard Risk PPE Rule",
+        "plural": "Hazard Risk PPE Rules",
+        "groups": {
+          "basic-info": "Basic Information",
+          "configuration": "Configuration",
+          "notes": "Notes & Instructions"
+        },
+        "fields": {
+          "hazard-risk-id": {
+            "title": "Hazard Risk"
+          },
+          "ppe-item-id": {
+            "title": "PPE Item"
+          },
+          "requirement-type": {
+            "title": "Requirement Type",
+            "options": {
+              "required": "Required",
+              "recommended": "Recommended",
+              "conditional": "Conditional"
+            }
+          },
+          "condition-note": {
+            "title": "Condition Note",
+            "placeholder": "When this PPE applies"
+          },
+          "usage-instruction": {
+            "title": "Usage Instruction",
+            "placeholder": "How to wear or use the PPE"
+          },
+          "status": {
+            "title": "Status",
+            "options": {
+              "active": "Active",
+              "inactive": "Inactive"
+            }
+          }
+        }
+      }
+    }
+  },
+  "hazard-risks": {
+    "permissions": {
+      "hazard-risk": {
+        "management": {
+          "title": "Manage Hazard Risks",
+          "description": "Full access to hazard risk scenarios."
+        },
+        "view": {
+          "title": "View Hazard Risks",
+          "description": "View hazard risk scenarios."
+        },
+        "create": {
+          "title": "Create Hazard Risks",
+          "description": "Create hazard risk scenarios."
+        },
+        "update": {
+          "title": "Update Hazard Risks",
+          "description": "Update hazard risk scenarios."
+        },
+        "delete": {
+          "title": "Delete Hazard Risks",
+          "description": "Delete hazard risk scenarios."
+        }
+      }
+    },
+    "entities": {
+      "hazard-risk": {
+        "title": "Hazard Risk",
+        "plural": "Hazard Risks",
+        "groups": {
+          "basic-info": "Basic Information",
+          "risk-assessment": "Risk Assessment",
+          "control-measures": "Control Measures"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter hazard risk code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter hazard risk title"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Describe the risk scenario"
+          },
+          "hazard-id": {
+            "title": "Hazard"
+          },
+          "risk-matrix-id": {
+            "title": "Risk Matrix"
+          },
+          "default-initial-risk-rating-id": {
+            "title": "Initial Risk Rating"
+          },
+          "default-residual-risk-rating-id": {
+            "title": "Residual Risk Rating"
+          },
+          "status": {
+            "title": "Status",
+            "options": {
+              "active": "Active",
+              "inactive": "Inactive"
+            }
+          }
+        }
+      }
+    }
+  },
+  "hazard-registers": {
+    "permissions": {
+      "hazard-register": {
+        "management": {
+          "title": "Manage hazard registers",
+          "description": "Full access to hazard register records."
+        },
+        "view": {
+          "title": "View hazard registers",
+          "description": "View hazard register records."
+        },
+        "create": {
+          "title": "Create hazard registers",
+          "description": "Create hazard register records."
+        },
+        "update": {
+          "title": "Update hazard registers",
+          "description": "Update hazard register records."
+        },
+        "delete": {
+          "title": "Delete hazard registers",
+          "description": "Delete hazard register records."
+        }
+      }
+    },
+    "entities": {
+      "hazard-register": {
+        "title": "Hazard Register",
+        "plural": "Hazard Registers",
+        "groups": {
+          "basic-info": "Basic Information",
+          "hazard-link": "Linked Hazard",
+          "context": "Context"
+        },
+        "components": {
+          "category-meta-data-form": {
+            "title": "Hazard Category Additional Information"
+          },
+          "hazard-meta-data-form": {
+            "title": "Hazard Additional Information"
+          }
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter register code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter register title"
+          },
+          "description": {
+            "placeholder": "Optional description"
+          },
+          "register-type": {
+            "title": "Hazard Category"
+          },
+          "hazard-id": {
+            "title": "Hazard"
+          },
+          "context-type": {
+            "title": "Context type",
+            "options": {
+              "asset": "Asset",
+              "site": "Site",
+              "work-order": "Work order",
+              "project": "Project"
+            }
+          },
+          "context-id": {
+            "title": "Context ID",
+            "placeholder": "Enter context identifier"
+          }
+        }
+      }
+    }
+  },
+  "safety-plans": {
+    "messages": {
+      "publish": {
+        "success": "The safety plan was published successfully.",
+        "already-published": "This safety plan is already published.",
+        "not-found": "The safety plan could not be found.",
+        "id-required": "A safety plan id is required to publish.",
+        "no-sections": "This Safety Plan cannot be published because it has no sections. Add at least one section and try again.",
+        "no-sections": "This Safety Plan cannot be published because it has no sections. Add at least one section and try again."
+      },
+      "section-structure": {
+        "confirm-replace": {
+          "title": "Replace Section Structure?",
+          "message": "Changing the plan type will replace the current section structure with the defaults for the new type. Continue?"
+        },
+        "confirm-change-plan-type": {
+          "title": "Change Plan Type?",
+          "message": "Changing the Plan Type will discard all existing sections and their selected values. The default sections for the new Plan Type will be loaded. Do you want to continue?"
+        },
+        "required-section-missing": "A required default section is missing from this safety plan.",
+        "section-type-not-allowed": "One or more sections use a section type that is not allowed for this plan type.",
+        "duplicate-non-repeatable": "The non-repeatable section type \"{{sectionTypeTitle}}\" appears more than once.",
+        "invalid-type-template-duplicate": "The selected plan type’s section template lists the non-repeatable section type \"{{sectionTypeTitle}}\" more than once. Update the plan type sections and try again.",
+        "invalid-sort-order": "Section sort order is invalid or contains duplicates.",
+        "load-failed": "Could not load the section structure for this plan type. You can try again or continue and add sections manually.",
+        "change-plan-type-failed": "Could not change the plan type. Existing sections were left unchanged.",
+        "same-plan-type": "Select a different plan type to continue.",
+        "draft-only": "Plan type can only be changed while the safety plan is in Draft status."
+      }
+    },
+    "actions": {
+      "change-plan-type": {
+        "title": "Change Plan Structure",
+        "dialog": {
+          "title": "Change Plan Type",
+          "fields": {
+            "plan-type": {
+              "title": "Plan Type",
+              "placeholder": "Select a Plan Type"
+            }
+          },
+          "actions": {
+            "continue": "Continue"
+          },
+          "success": "The plan type was changed and default sections were loaded."
+        }
+      }
+    },
+    "permissions": {
+      "safety-plan": {
+        "management": {
+          "title": "Manage Safety Plans",
+          "description": "Full access to workplace safety plan records."
+        },
+        "view": {
+          "title": "View Safety Plans",
+          "description": "View workplace safety plan records."
+        },
+        "create": {
+          "title": "Create Safety Plans",
+          "description": "Create workplace safety plan records."
+        },
+        "update": {
+          "title": "Update Safety Plans",
+          "description": "Update workplace safety plan records."
+        },
+        "delete": {
+          "title": "Delete Safety Plans",
+          "description": "Delete workplace safety plan records."
+        }
+      }
+    },
+    "entities": {
+      "safety-plan": {
+        "title": "Safety Plan",
+        "plural": "Safety Plans",
+        "groups": {
+          "basic-info": "Basic Information",
+          "configuration": "Configuration",
+          "publication": "Publication"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Auto-generated on save"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter safety plan title"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Optional description of the plan purpose"
+          },
+          "plan-type": {
+            "title": "Plan Type",
+            "options": {
+              "swms": "SWMS",
+              "jsa": "JSA",
+              "sop": "SOP",
+              "take5": "Take 5",
+              "permit": "Permit",
+              "checklist": "Checklist"
+            }
+          },
+          "safety-plan-type": {
+            "title": "Safety Plan Type"
+          },
+          "safety-plan-type": {
+            "title": "Plan Type"
+          },
+          "allow-clone": {
+            "title": "Allow Reuse as New Plan"
+          },
+          "published-at": {
+            "title": "Published At"
+          },
+          "published-by": {
+            "title": "Published By"
+          },
+          "status": {
+            "title": "Status",
+            "options": {
+              "pending": "Pending",
+              "published": "Published",
+              "archived": "Archived"
+            }
+          }
+        },
+        "pages": {
+          "sections": {
+            "title": "Safety Sections",
+            "save-plan-first": "Save the safety plan first to manage its sections.",
+            "select-plan-type-first": "Select a safety plan type to load the default section structure.",
+            "loading": "Loading section structure…"
+          }
+        }
+      }
+    }
+  },
+  "safety-plan-sections": {
+    "messages": {
+      "duplicate-section-type": "This section type already exists in the Safety Plan.",
+      "confirm-change-work-step": {
+        "title": "Change Work Step?",
+        "message": "Changing the Work Step will clear all existing table rows for this section. Do you want to continue?"
+      },
+      "work-step-required": {
+        "message": "Select a Work Step on this section before adding rows."
+      }
+    },
+    "permissions": {
+      "safety-plan-section": {
+        "management": {
+          "title": "Manage Safety Plan Sections",
+          "description": "Full access to safety plan section records."
+        },
+        "view": {
+          "title": "View Safety Plan Sections",
+          "description": "View safety plan section records."
+        },
+        "create": {
+          "title": "Create Safety Plan Sections",
+          "description": "Create safety plan section records."
+        },
+        "update": {
+          "title": "Update Safety Plan Sections",
+          "description": "Update safety plan section records."
+        },
+        "delete": {
+          "title": "Delete Safety Plan Sections",
+          "description": "Delete safety plan section records."
+        }
+      }
+    },
+    "entities": {
+      "safety-plan-section": {
+        "title": "Safety Plan Section",
+        "plural": "Safety Plan Sections",
+        "actions": {
+          "add-section": {
+            "title": "Add Section"
+          },
+          "add-item": {
+            "title": "Add Item"
+          },
+          "add-row": {
+            "title": "Add Row"
+          }
+        },
+        "groups": {
+          "plan-folder": "Safety Plan",
+          "section-content": "Section Details",
+          "items": "Section Items"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Auto-generated on save"
+          },
+          "safety-plan": {
+            "title": "Safety Plan"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter section title"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Optional section description"
+          },
+          "section-type": {
+            "title": "Section Type"
+          },
+          "work-step": {
+            "title": "Work Step"
+          },
+          "item-ids": {
+            "title": "Items",
+            "placeholder": "Choose items from the list...",
+            "parent-required-placeholder": "Select hazards in a previous section first"
+          },
+          "source-type-section": {
+            "title": "Source Type Section"
+          },
+          "sort-order": {
+            "title": "Sort Order"
+          }
+        }
+      }
+    }
+  },
+  "safety-plan-types": {
+    "permissions": {
+      "safety-plan-type": {
+        "management": {
+          "title": "Manage Safety Plan Types",
+          "description": "Full access to safety plan type configuration."
+        },
+        "view": {
+          "title": "View Safety Plan Types",
+          "description": "View safety plan type configuration."
+        },
+        "create": {
+          "title": "Create Safety Plan Types",
+          "description": "Create safety plan type configuration."
+        },
+        "update": {
+          "title": "Update Safety Plan Types",
+          "description": "Update safety plan type configuration."
+        },
+        "delete": {
+          "title": "Delete Safety Plan Types",
+          "description": "Delete safety plan type configuration."
+        }
+      }
+    },
+    "entities": {
+      "safety-plan-type": {
+        "title": "Safety Plan Type",
+        "plural": "Safety Plan Types",
+        "groups": {
+          "basic-info": "Basic Information",
+          "sections": "Sections"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Auto-generated on save"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter safety plan type title"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Optional description of this plan type"
+          },
+          "sections": {
+            "title": "Sections"
+          }
+        }
+      }
+    }
+  },
+  "safety-plan-type-sections": {
+    "messages": {
+      "duplicate-default-section": "Only one default section is allowed for this safety plan type."
+    },
+    "permissions": {
+      "safety-plan-type-section": {
+        "management": {
+          "title": "Manage Safety Plan Type Sections",
+          "description": "Full access to safety plan type section configuration."
+        },
+        "view": {
+          "title": "View Safety Plan Type Sections",
+          "description": "View safety plan type section configuration."
+        },
+        "create": {
+          "title": "Create Safety Plan Type Sections",
+          "description": "Create safety plan type section configuration."
+        },
+        "update": {
+          "title": "Update Safety Plan Type Sections",
+          "description": "Update safety plan type section configuration."
+        },
+        "delete": {
+          "title": "Delete Safety Plan Type Sections",
+          "description": "Delete safety plan type section configuration."
+        }
+      }
+    },
+    "entities": {
+      "safety-plan-type-section": {
+        "title": "Safety Plan Type Section",
+        "plural": "Safety Plan Type Sections",
+        "groups": {
+          "basic-info": "Basic Information",
+          "sections": "Sections"
+        },
+        "fields": {
+          "safety-plan-type": {
+            "title": "Safety Plan Type"
+          },
+          "section-type": {
+            "title": "Section Type"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter Section Title"
+          },
+          "sort-order": {
+            "title": "Sort Order"
+          },
+          "is-default": {
+            "title": "Default Section"
+          }
+        }
+      }
+    }
+  },
+  "safety-plan-types": {
+    "permissions": {
+      "safety-plan-type": {
+        "management": {
+          "title": "Manage Safety Plan Types",
+          "description": "Full access to safety plan type configuration."
+        },
+        "view": {
+          "title": "View Safety Plan Types",
+          "description": "View safety plan type configuration."
+        },
+        "create": {
+          "title": "Create Safety Plan Types",
+          "description": "Create safety plan type configuration."
+        },
+        "update": {
+          "title": "Update Safety Plan Types",
+          "description": "Update safety plan type configuration."
+        },
+        "delete": {
+          "title": "Delete Safety Plan Types",
+          "description": "Delete safety plan type configuration."
+        }
+      }
+    },
+    "entities": {
+      "safety-plan-type": {
+        "title": "Safety Plan Type",
+        "plural": "Safety Plan Types",
+        "groups": {
+          "basic-info": "Basic Information",
+          "sections": "Sections"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Auto-generated on save"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter safety plan type title"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Optional description of this plan type"
+          },
+          "sections": {
+            "title": "Sections"
+          }
+        }
+      }
+    }
+  },
+  "safety-plan-type-sections": {
+    "messages": {
+      "duplicate-default-section": "Only one default section is allowed for this safety plan type."
+    },
+    "permissions": {
+      "safety-plan-type-section": {
+        "management": {
+          "title": "Manage Safety Plan Type Sections",
+          "description": "Full access to safety plan type section configuration."
+        },
+        "view": {
+          "title": "View Safety Plan Type Sections",
+          "description": "View safety plan type section configuration."
+        },
+        "create": {
+          "title": "Create Safety Plan Type Sections",
+          "description": "Create safety plan type section configuration."
+        },
+        "update": {
+          "title": "Update Safety Plan Type Sections",
+          "description": "Update safety plan type section configuration."
+        },
+        "delete": {
+          "title": "Delete Safety Plan Type Sections",
+          "description": "Delete safety plan type section configuration."
+        }
+      }
+    },
+    "entities": {
+      "safety-plan-type-section": {
+        "title": "Safety Plan Type Section",
+        "plural": "Safety Plan Type Sections",
+        "groups": {
+          "basic-info": "Basic Information",
+          "sections": "Sections"
+        },
+        "fields": {
+          "safety-plan-type": {
+            "title": "Safety Plan Type"
+          },
+          "section-type": {
+            "title": "Section Type"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter Section Title"
+          },
+          "sort-order": {
+            "title": "Sort Order"
+          },
+          "is-default": {
+            "title": "Default Section"
+          }
+        }
+      }
+    }
+  },
+  "safety-plan-work-steps": {
+    "permissions": {
+      "safety-plan-work-step": {
+        "management": {
+          "title": "Manage Safety Plan Work Steps",
+          "description": "Full access to safety plan work-process step records."
+        },
+        "view": {
+          "title": "View Safety Plan Work Steps",
+          "description": "View safety plan work-process step records."
+        },
+        "create": {
+          "title": "Create Safety Plan Work Steps",
+          "description": "Create safety plan work-process step records."
+        },
+        "update": {
+          "title": "Update Safety Plan Work Steps",
+          "description": "Update safety plan work-process step records."
+        },
+        "delete": {
+          "title": "Delete Safety Plan Work Steps",
+          "description": "Delete safety plan work-process step records."
+        }
+      }
+    },
+    "entities": {
+      "safety-plan-work-step": {
+        "title": "Work Step",
+        "plural": "Work Steps",
+        "actions": {
+          "add-step": {
+            "title": "Add Step"
+          },
+          "edit-step": {
+            "title": "Edit Step"
+          }
+        },
+        "groups": {
+          "plan-folder": "Safety Plan",
+          "step-content": "Step Details",
+          "hazards": "Hazards And Controls"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Auto-generated on save"
+          },
+          "safety-plan": {
+            "title": "Safety Plan"
+          },
+          "safety-plan-section": {
+            "title": "Safety Plan Section"
+          },
+          "task": {
+            "title": "Job Task",
+            "placeholder": "Describe the job task or procedure step"
+          },
+          "responsible-person": {
+            "title": "Responsible Person",
+            "placeholder": "Enter the responsible person or role"
+          },
+          "sort-order": {
+            "title": "Sort Order"
+          },
+          "hazard": {
+            "title": "Hazard"
+          },
+          "hazard-text": {
+            "title": "Hazard",
+            "placeholder": "Describe the hazard for this step"
+          },
+          "initial-risk": {
+            "title": "Initial Risk",
+            "placeholder": "e.g. 3H"
+          },
+          "residual-risk": {
+            "title": "Residual Risk",
+            "placeholder": "e.g. 2M"
+          },
+          "control-measures": {
+            "title": "Control Measures",
+            "placeholder": "Describe control measures for this hazard"
+          },
+          "hazard-responsible-person": {
+            "title": "Responsible Person",
+            "placeholder": "Enter the responsible person for this hazard"
+          }
+        }
+      }
+    }
+  },
+  "safety-plan-work-steps": {
+    "permissions": {
+      "safety-plan-work-step": {
+        "management": {
+          "title": "Manage Safety Plan Work Steps",
+          "description": "Full access to safety plan work-step records."
+        },
+        "view": {
+          "title": "View Safety Plan Work Steps",
+          "description": "View safety plan work-step records."
+        },
+        "create": {
+          "title": "Create Safety Plan Work Steps",
+          "description": "Create safety plan work-step records."
+        },
+        "update": {
+          "title": "Update Safety Plan Work Steps",
+          "description": "Update safety plan work-step records."
+        },
+        "delete": {
+          "title": "Delete Safety Plan Work Steps",
+          "description": "Delete safety plan work-step records."
+        }
+      }
+    },
+    "entities": {
+      "safety-plan-work-step": {
+        "title": "Work Step",
+        "plural": "Work Steps",
+        "actions": {
+          "add-step": {
+            "title": "Add Step"
+          },
+          "edit-step": {
+            "title": "Edit Step"
+          }
+        },
+        "groups": {
+          "plan-folder": "Safety Plan",
+          "step-content": "Step Details",
+          "hazards": "Hazards And Controls"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Auto-generated on save"
+          },
+          "safety-plan": {
+            "title": "Safety Plan"
+          },
+          "safety-plan-section": {
+            "title": "Safety Plan Section"
+          },
+          "task": {
+            "title": "Job Task",
+            "placeholder": "Describe the job task or procedure step"
+          },
+          "responsible-person": {
+            "title": "Responsible Person",
+            "placeholder": "Enter the responsible person or role"
+          },
+          "sort-order": {
+            "title": "Sort Order"
+          },
+          "hazard-text": {
+            "title": "Hazard",
+            "placeholder": "Describe the hazard for this step"
+          },
+          "initial-risk": {
+            "title": "Initial Risk",
+            "placeholder": "e.g. 3H"
+          },
+          "residual-risk": {
+            "title": "Residual Risk",
+            "placeholder": "e.g. 2M"
+          },
+          "control-measures": {
+            "title": "Control Measures",
+            "placeholder": "Describe control measures for this hazard"
+          },
+          "hazard-responsible-person": {
+            "title": "Responsible Person",
+            "placeholder": "Enter the responsible person for this hazard"
+          }
+        }
+      }
+    }
+  },
+  "section-types": {
+    "permissions": {
+      "section-type": {
+        "management": {
+          "title": "Manage Section Types",
+          "description": "Full access to safety plan section type reference data."
+        },
+        "view": {
+          "title": "View Section Types",
+          "description": "View safety plan section type reference data."
+        },
+        "create": {
+          "title": "Create Section Types",
+          "description": "Create safety plan section type reference data."
+        },
+        "update": {
+          "title": "Update Section Types",
+          "description": "Update safety plan section type reference data."
+        },
+        "delete": {
+          "title": "Delete Section Types",
+          "description": "Delete safety plan section type reference data."
+        },
+        "view": {
+          "title": "View Section Types",
+          "description": "View safety plan section type reference data."
+        },
+        "create": {
+          "title": "Create Section Types",
+          "description": "Create safety plan section type reference data."
+        },
+        "update": {
+          "title": "Update Section Types",
+          "description": "Update safety plan section type reference data."
+        },
+        "delete": {
+          "title": "Delete Section Types",
+          "description": "Delete safety plan section type reference data."
+        }
+      }
+    },
+    "entities": {
+      "section-type": {
+        "title": "Section Type",
+        "plural": "Section Types",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Auto-generated on save"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter section type title"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Enter section type description"
+          },
+          "item-entity-name": {
+            "title": "Item entity name",
+            "placeholder": "e.g. WorkplaceSafetyManagement.Hazard"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Enter section type description"
+          }
+        }
+      }
+    }
+  },
+  "work-step-types": {
+    "entities": {
+      "work-step-type": {
+        "title": "Work Step",
+        "plural": "Work Steps",
+        "groups": {
+          "basic-info": "Basic Information",
+          "columns": "Table Columns"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Auto-generated on Save"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter Work Step Title"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Enter Work Step Description"
+          },
+          "column-title": {
+            "title": "Column Title"
+          },
+          "section-type": {
+            "title": "Section Type"
+          }
+        }
+      }
+    }
+  },
+  "safety-plan-work-steps": {
+    "entities": {
+      "safety-plan-work-step": {
+        "title": "Safety Plan Work Step",
+        "plural": "Safety Plan Work Steps",
+        "actions": {
+          "add-work-step": {
+            "title": "Add Work Step"
+          }
+        },
+        "groups": {
+          "plan-folder": "Safety Plan",
+          "basic-info": "Basic Information",
+          "table-content": "Step Table"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Auto-generated on Save"
+          },
+          "safety-plan": {
+            "title": "Safety Plan"
+          },
+          "safety-plan-section": {
+            "title": "Safety Plan Section"
+          },
+          "work-step-type": {
+            "title": "Work Step"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter Work Step Title"
+          },
+          "description": {
+            "title": "Description"
+          },
+          "sort-order": {
+            "title": "Sort Order"
+          },
+          "rows": {
+            "title": "Table Rows"
+          },
+          "cells": {
+            "title": "Cells"
+          },
+          "text-value": {
+            "title": "Text Value"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "module": {
+    "title": "بینش فعالیت",
+    "description": "ردیابی فعالیت‌های معنادار کاربر و سیستم در پلتفرم",
+    "menus": {
+      "root": {
+        "title": "بینش فعالیت",
+        "description": "مشاهده رویدادها و خط زمانی فعالیت"
+      },
+      "events": {
+        "title": "رویدادهای فعالیت",
+        "description": "مرور رویدادهای ردیابی‌شده"
+      },
+      "timelines": {
+        "title": "خط زمانی",
+        "description": "خط زمانی نشست، سفر و موجودیت"
+      },
+      "policies": {
+        "title": "سیاست‌ها",
+        "description": "سیاست‌های ردیابی، پنهان‌سازی، نمونه‌گیری و نگهداری"
+      }
+    }
+  },
+  "groups": {
+    "general": "عمومی",
+    "correlation": "همبستگی",
+    "context": "زمینه",
+    "outcome": "نتیجه",
+    "policy": "سیاست"
+  },
+  "entities": {
+    "activity-event": {
+      "title": "رویداد فعالیت",
+      "plural": "رویدادهای فعالیت"
+    },
+    "tracking-rule": {
+      "title": "قانون ردیابی",
+      "plural": "قوانین ردیابی"
+    },
+    "saved-view": {
+      "title": "نمای ذخیره‌شده",
+      "plural": "نماهای ذخیره‌شده"
+    },
+    "retention-policy": {
+      "title": "سیاست نگهداری",
+      "plural": "سیاست‌های نگهداری"
+    },
+    "masking-policy": {
+      "title": "سیاست پنهان‌سازی",
+      "plural": "سیاست‌های پنهان‌سازی"
+    },
+    "sampling-policy": {
+      "title": "سیاست نمونه‌گیری",
+      "plural": "سیاست‌های نمونه‌گیری"
+    },
+    "data-source": {
+      "title": "منبع داده",
+      "plural": "منابع داده"
+    }
+  },
+  "fields": {
+    "id": "شناسه",
+    "name": "نام رویداد",
+    "type": "نوع",
+    "category": "دسته",
+    "timestamp": "زمان",
+    "session-id": "شناسه نشست",
+    "journey-id": "شناسه سفر",
+    "user-id": "شناسه کاربر",
+    "tenant-id": "شناسه مستأجر",
+    "application-id": "شناسه برنامه",
+    "request-id": "شناسه درخواست",
+    "trace-id": "شناسه ردیابی",
+    "source": "منبع",
+    "route": "مسیر",
+    "module": "ماژول",
+    "entity-name": "نام موجودیت",
+    "entity-id": "شناسه موجودیت",
+    "command-name": "نام دستور",
+    "query-name": "نام پرس‌وجو",
+    "status": "وضعیت",
+    "duration-ms": "مدت (میلی‌ثانیه)",
+    "severity": "شدت",
+    "enabled": "فعال",
+    "event-pattern": "الگوی رویداد",
+    "sampling-rate": "نرخ نمونه‌گیری",
+    "priority": "اولویت",
+    "data-type": "نوع داده",
+    "retention-days": "روزهای نگهداری",
+    "denylist-fields": "فیلدهای ممنوع",
+    "max-property-bytes": "حداکثر بایت ویژگی",
+    "provider": "ارائه‌دهنده",
+    "connection-url": "آدرس اتصال",
+    "query-json": "JSON پرس‌وجو",
+    "is-default": "نمای پیش‌فرض"
+  },
+  "permissions": {
+    "group": {
+      "title": "بینش فعالیت",
+      "description": "مجوزهای ردیابی فعالیت و خط زمانی"
+    },
+    "events": {
+      "view": {
+        "title": "مشاهده رویدادهای فعالیت",
+        "description": "مرور داده‌های رویداد فعالیت"
+      }
+    },
+    "timelines": {
+      "view": {
+        "title": "مشاهده خط زمانی",
+        "description": "مشاهده خط زمانی نشست، سفر و موجودیت"
+      }
+    },
+    "policies": {
+      "manage": {
+        "title": "مدیریت سیاست‌ها",
+        "description": "پیکربندی ردیابی، پنهان‌سازی و نگهداری"
+      }
+    }
+  },
+  "settings": {
+    "group": {
+      "title": "بینش فعالیت",
+      "description": "پیکربندی ردیابی فعالیت، بافر و حریم خصوصی در سطح پلتفرم"
+    },
+    "tracking": {
+      "title": "ردیابی",
+      "description": "فعال یا غیرفعال کردن ردیابی فعالیت برای پلتفرم",
+      "items": {
+        "enabled": {
+          "title": "فعال‌سازی ردیابی فعالیت",
+          "description": "روشن یا خاموش کردن ردیابی فعالیت برای پلتفرم"
+        }
+      }
+    },
+    "buffer": {
+      "title": "بافر",
+      "description": "کنترل نحوه دسته‌بندی و ارسال رویدادهای فعالیت به سرور",
+      "items": {
+        "flush-interval": {
+          "title": "فاصله ارسال",
+          "description": "فاصله زمانی ارسال رویدادهای بافر شده به سرور (میلی‌ثانیه)"
+        },
+        "max-batch-size": {
+          "title": "حداکثر اندازه دسته",
+          "description": "حداکثر تعداد رویداد در هر درخواست bulk"
+        },
+        "max-payload-bytes": {
+          "title": "حداکثر اندازه بار",
+          "description": "حداکثر اندازه بار در هر درخواست bulk (بایت)"
+        },
+        "max-queue-size": {
+          "title": "حداکثر اندازه صف",
+          "description": "حداکثر تعداد رویداد نگهداری‌شده در بافر کلاینت"
+        },
+        "flush-on-hidden": {
+          "title": "ارسال هنگام مخفی شدن تب",
+          "description": "ارسال رویدادهای بافر شده هنگام مخفی شدن تب مرورگر"
+        },
+        "use-beacon": {
+          "title": "استفاده از Beacon برای ارسال نهایی",
+          "description": "استفاده از API beacon مرورگر برای ارسال نهایی هنگام بستن صفحه"
+        }
+      }
+    },
+    "privacy": {
+      "title": "حریم خصوصی",
+      "description": "گزینه‌های پنهان‌سازی، نمونه‌گیری و ردیابی محتوا",
+      "items": {
+        "masking-enabled": {
+          "title": "فعال‌سازی پنهان‌سازی",
+          "description": "پنهان‌سازی فیلدهای حساس قبل از ارسال رویدادها"
+        },
+        "sampling-enabled": {
+          "title": "فعال‌سازی نمونه‌گیری",
+          "description": "نمونه‌گیری از رویدادها برای کاهش حجم و حفظ بینش"
+        },
+        "track-ai-content": {
+          "title": "ردیابی محتوای هوش مصنوعی",
+          "description": "شامل کردن محتوای مرتبط با هوش مصنوعی در رویدادهای ردیابی‌شده"
+        }
+      }
+    }
+  }
+}

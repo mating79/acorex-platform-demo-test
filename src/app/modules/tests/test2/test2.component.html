@@ -1,0 +1,27 @@
+<div class="p-10">
+  <axp-widgets-container
+    class="flex flex-col gap-4 p-4"
+    [context]="context()"
+    (onContextChanged)="log($event)"
+  >
+    @for (w of nodes(); track w.type) {
+      <div class="border rounded-md p-3 bg-lightest">
+        <div class="text-xs mb-2">{{ w.type }}</div>
+        <div class="grid grid-cols-3 gap-3">
+          <div>
+            <div class="text-2xs mb-1">view</div>
+            <ng-container axp-widget-renderer [node]="w.node" [mode]="'view'"></ng-container>
+          </div>
+          <div>
+            <div class="text-2xs mb-1">edit</div>
+            <ng-container axp-widget-renderer [node]="w.node" [mode]="'edit'"></ng-container>
+          </div>
+          <div>
+            <div class="text-2xs mb-1">designer</div>
+            <ng-container axp-widget-renderer [node]="w.node" [mode]="'designer'"></ng-container>
+          </div>
+        </div>
+      </div>
+    }
+  </axp-widgets-container>
+</div>

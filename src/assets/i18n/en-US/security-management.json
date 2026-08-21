@@ -1,0 +1,577 @@
+{
+  "module": {
+    "title": "Security Management",
+    "description": "Manage users, roles, sessions, policies, and security settings",
+    "menus": {
+      "root": {
+        "title": "Security",
+        "description": "Security and access management"
+      }
+    },
+    "permissions": {
+      "title": "Security Management",
+      "description": "Manage all aspects of security",
+      "actions": {
+        "manage": {
+          "title": "Manage Security",
+          "description": "Full security management access"
+        }
+      }
+    }
+  },
+  "features": {
+    "manage-roles": {
+      "title": "Manage Roles",
+      "description": "Enable role management functionality"
+    },
+    "manage-users": {
+      "title": "Manage Users",
+      "description": "Enable user management functionality"
+    },
+    "max-total-users": {
+      "title": "Max Total Users",
+      "description": "Maximum number of total users allowed in the system"
+    },
+    "manage-sessions": {
+      "title": "Manage Sessions",
+      "description": "Enable session management functionality"
+    },
+    "manage-policies": {
+      "title": "Manage Policies",
+      "description": "Enable policy management functionality"
+    },
+    "manage-identity-providers": {
+      "title": "Manage Identity Providers",
+      "description": "Enable identity provider management on the Platform Console"
+    }
+  },
+  "users": {
+    "terms": {
+      "user": "User",
+      "users": "Users"
+    },
+    "entities": {
+      "user": {
+        "title": "User",
+        "plural": "Users",
+        "search-result-description": "User account, access state, and sign-in readiness",
+        "pages": {
+          "roles": {
+            "title": "Roles",
+            "description": "Assign roles for the current tenant and application workspace.",
+            "save-user-first": {
+              "title": "Save The User First",
+              "description": "Create and save the user before assigning roles for this workspace."
+            }
+          }
+        },
+        "fields": {
+          "password": {
+            "title": "Password",
+            "description": "Credential used for sign-in (set or reset by admins as allowed by policy).",
+            "placeholder": "Enter password"
+          },
+          "pin-code": {
+            "title": "Security PIN",
+            "description": "PIN used to confirm sensitive actions for this user."
+          },
+          "roles": {
+            "title": "Roles",
+            "description": "Roles that grant permissions to this user.",
+            "placeholder": "Select roles"
+          },
+          "effective-state": {
+            "title": "Effective Access Status",
+            "column": "State",
+            "description": "Overall state for lists and operations, derived from the account lifecycle and sign-in gate."
+          },
+          "account-lifecycle": {
+            "title": "Account Lifecycle",
+            "description": "Provisioning state controlled by an administrator."
+          },
+          "access-state": {
+            "title": "Sign-In Access",
+            "description": "Whether sign-in is allowed, blocked by security, or blocked until credentials are renewed. Updates follow the transitions defined for this field; the authentication layer may also change it."
+          },
+          "home-tenant": {
+            "title": "Home Tenant",
+            "description": "Directory-owning tenant for this identity. Admins in this tenant may update profile fields such as display name, email, and avatar."
+          },
+          "password-changed-at": {
+            "title": "Password Changed At",
+            "description": "When the password was last changed."
+          },
+          "pin-changed-at": {
+            "title": "PIN Changed At",
+            "description": "When the security PIN was last changed."
+          },
+          "last-sign-in-at": {
+            "title": "Last Sign-In At",
+            "description": "When this user last signed in successfully."
+          },
+          "password-reset": {
+            "title": "Password Reset Challenge",
+            "description": "Internal one-time password reset token state."
+          }
+        },
+        "actions": {
+          "send-password-reset": {
+            "title": "Send Password Reset Email",
+            "confirm-title": "Send Password Reset Email",
+            "confirm-message": "Send a password reset email to {{user}}?",
+            "success": {
+              "title": "Email Sent",
+              "description": "Password reset email sent."
+            },
+            "error": {
+              "title": "Send Failed",
+              "description": "Failed to send password reset email."
+            }
+          },
+          "view-effective-permissions": {
+            "title": "View Effective Permissions"
+          },
+          "view-effective-roles": {
+            "title": "View Effective Roles"
+          }
+        },
+        "groups": {
+          "authorizations": "Authorizations",
+          "account-access": "Account and Access State"
+        },
+        "account": {
+          "descriptions": {
+            "pending": "Invitation sent or account created but not yet activated.",
+            "active": "Account is enabled for normal use subject to sign-in rules.",
+            "suspended": "Temporarily on hold; administrators can restore when appropriate.",
+            "inactive": "Disabled by an administrator; not in day-to-day use until re-enabled.",
+            "archived": "Closed or retained for history; not intended for interactive use."
+          }
+        },
+        "states": {
+          "pending": "Pending activation",
+          "active": "Active",
+          "suspended": "Suspended",
+          "inactive": "Disabled",
+          "archived": "Archived"
+        },
+        "transitions": {
+          "activate": "Activate account",
+          "cancel-invitation": "Cancel invitation",
+          "suspend": "Suspend account",
+          "restore": "Restore access",
+          "disable": "Disable account",
+          "enable": "Enable account",
+          "archive": "Archive account",
+          "restore-archived": "Restore from archive"
+        },
+        "access": {
+          "descriptions": {
+            "allowed": "Sign-in is permitted when the account lifecycle also allows access.",
+            "blocked": "Sign-in is denied by security policy or the authentication layer (e.g. lockout).",
+            "expired": "The password or primary credential must be renewed before sign-in."
+          },
+          "states": {
+            "allowed": "Sign-In Allowed",
+            "blocked": "Sign-In Blocked",
+            "expired": "Credential Expired"
+          },
+          "transitions": {
+            "block-sign-in": "Block sign-in",
+            "require-credential-renewal": "Require credential renewal",
+            "unblock-sign-in": "Allow sign-in",
+            "restore-after-credential-renewal": "Allow sign-in after credential renewal"
+          }
+        },
+        "effective": {
+          "states": {
+            "pending": "Pending Activation",
+            "active": "Active",
+            "sign-in-blocked": "Sign-In Blocked",
+            "credential-expired": "Credential Expired",
+            "suspended": "Suspended",
+            "inactive": "Disabled",
+            "archived": "Archived"
+          },
+          "descriptions": {
+            "pending": "User must complete activation before normal access.",
+            "active": "Account and sign-in gate allow normal use.",
+            "sign-in-blocked": "Access is denied at sign-in even if the account is otherwise enabled.",
+            "credential-expired": "Primary credential is no longer valid until renewal.",
+            "suspended": "Account is temporarily suspended by an administrator.",
+            "inactive": "Account is disabled by an administrator.",
+            "archived": "Account is archived or closed."
+          }
+        }
+      }
+    },
+    "permissions": {
+      "title": "User Management",
+      "view": {
+        "title": "View Users",
+        "description": "View user information"
+      },
+      "create": {
+        "title": "Create User",
+        "description": "Create new users"
+      },
+      "edit": {
+        "title": "Edit User",
+        "description": "Edit user information"
+      },
+      "delete": {
+        "title": "Delete Users",
+        "description": "Delete users"
+      },
+      "manage": {
+        "title": "Manage Users",
+        "description": "Full user management access"
+      }
+    }
+  },
+  "roles": {
+    "terms": {
+      "role": "Role",
+      "roles": "Roles"
+    },
+    "entities": {
+      "role": {
+        "title": "Role",
+        "plural": "Roles",
+        "search-result-description": "Role identity used for membership and access",
+        "pages": {
+          "permissions": {
+            "title": "Permissions",
+            "save-role-first": {
+              "title": "Save The Role First",
+              "description": "Create and save the role before assigning permissions for this workspace."
+            }
+          }
+        },
+        "actions": {
+          "view-role-holders": {
+            "title": "View Role Holders"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "title": "Role Management",
+      "view": {
+        "title": "View Roles",
+        "description": "View role information"
+      },
+      "create": {
+        "title": "Create Role",
+        "description": "Create new roles"
+      },
+      "edit": {
+        "title": "Edit Role",
+        "description": "Edit role information"
+      },
+      "delete": {
+        "title": "Delete Roles",
+        "description": "Delete roles"
+      },
+      "manage": {
+        "title": "Manage Roles",
+        "description": "Full role management access"
+      }
+    }
+  },
+  "role-permissions": {
+    "entities": {
+      "role-permission": {
+        "title": "Role Permission",
+        "plural": "Role Permissions",
+        "fields": {
+          "role": {
+            "title": "Role"
+          }
+        }
+      }
+    }
+  },
+  "user-roles": {
+    "entities": {
+      "user-role": {
+        "title": "User Role",
+        "plural": "User Roles",
+        "fields": {
+          "user": {
+            "title": "User"
+          }
+        }
+      }
+    }
+  },
+  "sessions": {
+    "terms": {
+      "session": "Session",
+      "sessions": "Sessions",
+      "device-sessions": "Device Sessions"
+    },
+    "entities": {
+      "session": {
+        "title": "Session",
+        "plural": "Sessions",
+        "search-result-description": "Active device and login session information",
+        "fields": {
+          "tenant": {
+            "title": "Tenant"
+          },
+          "user": {
+            "title": "User"
+          },
+          "application": {
+            "title": "Application Name"
+          },
+          "client-name": {
+            "title": "Client Name"
+          },
+          "location": {
+            "title": "Location"
+          },
+          "ip-address": {
+            "title": "IP Address"
+          },
+          "last-login-date": {
+            "title": "Last Login Date"
+          },
+          "logged-out-at": {
+            "title": "Logged Out At"
+          },
+          "operating-system": {
+            "title": "Operating System"
+          },
+          "device-name": {
+            "title": "Device Name"
+          }
+        },
+        "groups": {
+          "device": "Device",
+          "session": "Session"
+        }
+      }
+    },
+    "permissions": {
+      "title": "Device Session Management",
+      "view": {
+        "title": "View Device Sessions",
+        "description": "View device session information"
+      },
+      "terminate": {
+        "title": "Terminate Device Session",
+        "description": "Terminate active device sessions"
+      },
+      "manage": {
+        "title": "Manage Device Sessions",
+        "description": "Full device session management access"
+      }
+    }
+  },
+  "policies": {
+    "terms": {
+      "policy": "Policy",
+      "policies": "Policies"
+    },
+    "entities": {
+      "policy": {
+        "title": "Policy",
+        "plural": "Policies",
+        "search-result-description": "Security policy and access rule configuration"
+      }
+    },
+    "permissions": {
+      "title": "Policy Management",
+      "view": {
+        "title": "View Policies",
+        "description": "View policy information"
+      },
+      "create": {
+        "title": "Create Policy",
+        "description": "Create new policies"
+      },
+      "edit": {
+        "title": "Edit Policy",
+        "description": "Edit policy information"
+      },
+      "delete": {
+        "title": "Delete Policies",
+        "description": "Delete policies"
+      },
+      "manage": {
+        "title": "Manage Policies",
+        "description": "Full policy management access"
+      }
+    }
+  },
+  "identity-providers": {
+    "terms": {
+      "identity-provider": "Identity Provider",
+      "identity-providers": "Identity Providers"
+    },
+    "entities": {
+      "identity-provider": {
+        "title": "Identity Provider",
+        "plural": "Identity Providers",
+        "search-result-description": "External sign-in broker (Google, Microsoft, OIDC, SAML)",
+        "groups": {
+          "endpoints": "Endpoints",
+          "credentials": "Credentials"
+        },
+        "fields": {
+          "key": {
+            "title": "Key"
+          },
+          "priority": {
+            "title": "Priority"
+          },
+          "icon": {
+            "title": "Icon"
+          },
+          "authorization-url": {
+            "title": "Authorization URL"
+          },
+          "token-url": {
+            "title": "Token URL"
+          },
+          "user-info-url": {
+            "title": "User Info URL"
+          },
+          "scopes": {
+            "title": "Scopes"
+          },
+          "issuer-url": {
+            "title": "Issuer URL"
+          },
+          "client-id": {
+            "title": "Client ID"
+          },
+          "client-secret": {
+            "title": "Client Secret"
+          }
+        }
+      }
+    }
+  },
+  "profile": {
+    "terms": {
+      "profile": "Profile",
+      "profiles": "Profiles"
+    },
+    "entities": {
+      "profile": {
+        "title": "Profile",
+        "plural": "Profiles",
+        "search-result-description": "User profile and personal information",
+        "fields": {
+          "national-code": {
+            "title": "National Code"
+          },
+          "password": {
+            "title": "Password"
+          }
+        }
+      }
+    }
+  },
+  "reports": {
+    "administration-category": {
+      "title": "Administration",
+      "description": "User access, permissions, sessions, and account activity audit reports."
+    },
+    "category": {
+      "title": "Access History",
+      "description": "Historical roles and permissions reconstructed from Change History."
+    },
+    "user-effective-roles-history": {
+      "title": "User Role History",
+      "description": "Roles a user held that overlap the selected date range."
+    },
+    "user-effective-permissions-history": {
+      "title": "User Permission History",
+      "description": "Permissions a user held that overlap the selected date range."
+    },
+    "role-holders-history": {
+      "title": "Users by Role",
+      "description": "Users who held a role that overlaps the selected date range."
+    },
+    "permission-holders-history": {
+      "title": "Users by Permission",
+      "description": "Users who held a permission that overlaps the selected date range."
+    },
+    "user-password-change-history": {
+      "title": "Password Change History",
+      "description": "Last recorded password change for this user when it falls in the selected date range."
+    },
+    "parameters": {
+      "permission-search": {
+        "title": "Permission",
+        "description": "Search by permission title, description, or key (contains).",
+        "placeholder": "Search permission title, description, or key"
+      },
+      "permission-key": {
+        "title": "Permission",
+        "description": "Exact permission key to find historical holders (for example Administration:Permission:MaintainUsersAndRoles).",
+        "placeholder": "Domain:Permission:Capability"
+      },
+      "password-change-filters": {
+        "title": "Password Change Filters",
+        "description": "User and date range for password change history."
+      }
+    },
+    "columns": {
+      "role-name": "Role Name",
+      "role-title": "Role Title",
+      "permission": "Permission",
+      "username": "Username",
+      "display-name": "Display Name",
+      "valid-from": "Valid From",
+      "valid-to": "Valid To",
+      "application-id": "Application",
+      "event-type": "Event",
+      "occurred-at": "Occurred At",
+      "device-name": "Device",
+      "browser": "Browser",
+      "operating-system": "Operating System",
+      "ip-address": "IP Address",
+      "client-name": "Client",
+      "location": "Location",
+      "session-status": "Session Status",
+      "password-changed-at": "Password Changed At"
+    },
+    "notes": {
+      "v1-grant-assignment-only": "v1 reconstructs UserRole and RolePermission grant history only; tenant membership is assumed."
+    }
+  },
+  "permissions-feature": {
+    "terms": {
+      "permissions": "Permissions",
+      "permissions-editor": "Permissions Editor"
+    },
+    "components": {
+      "permissions-editor": {
+        "search": {
+          "placeholder": "Search permissions..."
+        },
+        "empty-states": {
+          "no-permissions": {
+            "title": "No Permissions Assigned",
+            "description": "No permissions have been assigned to this role yet. Add permissions to define access rights."
+          },
+          "no-results": {
+            "title": "No Permissions Found",
+            "description": "Try a different search term or clear the search to browse permissions by module."
+          }
+        }
+      }
+    },
+    "actions": {
+      "assign": {
+        "title": "Assign Permissions",
+        "description": "Select which permissions to assign."
+      }
+    }
+  }
+}

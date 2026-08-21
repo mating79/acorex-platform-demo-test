@@ -1,0 +1,212 @@
+{
+  "module": {
+    "title": "میز کمک",
+    "description": "مدیریت مسائل میز کمک، انواع مسائل و ارائه منابع پشتیبانی",
+    "menus": {
+      "root": {
+        "title": "میز کمک",
+        "description": "دسترسی به تمامی قابلیت‌های میز کمک"
+      }
+    }
+  },
+  "reported-issues": {
+    "terms": {
+      "reported-issue": "مسئله گزارش‌شده",
+      "reported-issues": "مسائل گزارش‌شده"
+    },
+    "states": {
+      "new": "جدید",
+      "in-progress": "در حال انجام",
+      "pending": "در انتظار",
+      "resolved": "حل شده",
+      "closed": "بسته شده"
+    },
+    "entities": {
+      "reported-issue": {
+        "title": "مسئله گزارش‌شده",
+        "plural": "مسائل گزارش‌شده"
+      }
+    },
+    "components": {
+      "reported-issues-list": {
+        "title": "مسائل گزارش‌شده",
+        "groups": {
+          "main": "اصلی",
+          "details": "جزئیات",
+          "system": "سیستم",
+          "comments": "نظرات"
+        },
+        "fields": {
+          "user": "کاربر",
+          "issue-type": "نوع مسئله",
+          "priority": "اولویت",
+          "title": "عنوان",
+          "description": "توضیحات",
+          "attachments": "پیوست‌ها",
+          "status": "وضعیت",
+          "system-info": "اطلاعات سیستم",
+          "error-logs": "گزارش خطاها",
+          "created-at": "ایجاد شده در"
+        }
+      }
+    },
+    "actions": {
+      "download-log": {
+        "title": "دانلود گزارش"
+      }
+    },
+    "menus": {
+      "reported-issues": {
+        "title": "مسائل گزارش‌شده",
+        "description": "مدیریت تمام مسائل گزارش‌شده"
+      }
+    },
+    "permissions": {
+      "reported-issues": {
+        "title": "مسائل گزارش‌شده",
+        "actions": {
+          "manage": {
+            "title": "مدیریت مسائل گزارش‌شده",
+            "description": "دسترسی کامل به مدیریت مسائل گزارش‌شده"
+          },
+          "view": {
+            "title": "مشاهده مسائل گزارش‌شده",
+            "description": "مشاهده اطلاعات مسائل گزارش‌شده"
+          },
+          "create": {
+            "title": "ایجاد مسئله گزارش‌شده",
+            "description": "ایجاد مسائل گزارش‌شده جدید"
+          },
+          "edit": {
+            "title": "ویرایش مسئله گزارش‌شده",
+            "description": "ویرایش اطلاعات مسائل گزارش‌شده"
+          },
+          "delete": {
+            "title": "حذف مسائل گزارش‌شده",
+            "description": "حذف مسائل گزارش‌شده"
+          }
+        }
+      }
+    }
+  },
+  "issue-types": {
+    "terms": {
+      "issue-type": "نوع مسئله",
+      "issue-types": "انواع مسئله"
+    },
+    "entities": {
+      "issue-type": {
+        "title": "نوع مسئله",
+        "plural": "انواع مسئله",
+        "fields": {
+          "title": "عنوان",
+          "description": "توضیحات"
+        },
+        "groups": {
+          "main": "اصلی"
+        }
+      }
+    },
+    "menus": {
+      "issue-types": {
+        "title": "انواع مسئله",
+        "description": "مدیریت انواع مسئله"
+      }
+    }
+  },
+  "my-reported-issues": {
+    "terms": {
+      "my-reported-issue": "مسئله گزارش‌شده من",
+      "my-reported-issues": "مسائل گزارش‌شده من"
+    },
+    "entities": {
+      "my-reported-issue": {
+        "title": "مسئله گزارش‌شده من",
+        "plural": "مسائل گزارش‌شده من"
+      }
+    },
+    "menus": {
+      "my-reported-issues": {
+        "title": "درخواست‌ها و مسائل",
+        "description": "مشاهده مسائل گزارش‌شده شما"
+      }
+    },
+    "permissions": {
+      "my-reported-issues": {
+        "title": "مسائل گزارش‌شده من",
+        "actions": {
+          "manage": {
+            "title": "مدیریت مسائل گزارش‌شده من",
+            "description": "دسترسی کامل به مدیریت مسائل گزارش‌شده من"
+          },
+          "view": {
+            "title": "مشاهده مسائل گزارش‌شده من",
+            "description": "مشاهده اطلاعات مسائل گزارش‌شده من"
+          },
+          "create": {
+            "title": "ایجاد مسئله گزارش‌شده من",
+            "description": "ایجاد مسائل گزارش‌شده من جدید"
+          },
+          "edit": {
+            "title": "ویرایش مسئله گزارش‌شده من",
+            "description": "ویرایش اطلاعات مسائل گزارش‌شده من"
+          },
+          "delete": {
+            "title": "حذف مسائل گزارش‌شده من",
+            "description": "حذف مسائل گزارش‌شده من"
+          }
+        }
+      }
+    }
+  },
+  "report-new-issue": {
+    "terms": {
+      "report-new-issue": "گزارش یک مسئله",
+      "report-new-issues": "گزارش مسائل"
+    },
+    "entities": {
+      "report-new-issue": {
+        "title": "گزارش یک مسئله",
+        "plural": "گزارش مسائل"
+      }
+    },
+    "components": {
+      "report-new-issue-form": {
+        "title": "گزارش یک مسئله",
+        "fields": {
+          "issue-type": "نوع مسئله",
+          "priority": "اولویت",
+          "title": "عنوان",
+          "description": "توضیحات",
+          "attachments": "پیوست‌ها"
+        },
+        "attach-box-description": "می‌توانید صفحه خود را بارگذاری کنید",
+        "capture-screen": "گرفتن تصویر صفحه",
+        "capture-screen-error": "خطا در شروع ضبط صفحه. لطفاً مجوزها را بررسی کرده و دوباره تلاش کنید.",
+        "get-microphone-error": "دسترسی به میکروفون امکان‌پذیر نیست، ضبط بدون صدای میکروفون انجام می‌شود.",
+        "recording-time-limit": "محدودیت زمان ضبط (۵ دقیقه)"
+      }
+    },
+    "actions": {
+      "report-issue": {
+        "title": "گزارش یک مسئله"
+      }
+    }
+  },
+  "profile-page": {
+    "sections": {
+      "my-tickets": {
+        "title": "تیکت‌های من",
+        "description": "تیکت‌های پشتیبانی ارسالی خود را پیگیری کنید.",
+        "actions": {
+          "manage": "مشاهده تیکت‌های من"
+        }
+      }
+    },
+    "commands": {
+      "view-my-tickets": {
+        "coming-soon": "تیکت‌های من به‌زودی در دسترس خواهند بود."
+      }
+    }
+  }
+}

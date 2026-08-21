@@ -1,0 +1,249 @@
+{
+  "module": {
+    "title": "مدیریت مخاطبین",
+    "description": "مدیریت مخاطبین، روش‌های تماس و تماس‌های اضطراری",
+    "menus": {
+      "root": {
+        "title": "مدیریت مخاطبین",
+        "description": "مدیریت تمام اطلاعات مربوط به مخاطبین"
+      }
+    },
+    "terms": {
+      "customer": {
+        "title": "مشتری",
+        "plural": "مشتریان"
+      },
+      "vendor": {
+        "title": "تأمین‌کننده",
+        "plural": "تأمین‌کنندگان"
+      },
+      "supplier": {
+        "title": "تأمین‌کننده",
+        "plural": "تأمین‌کنندگان"
+      },
+      "partner": {
+        "title": "همکار",
+        "plural": "همکاران"
+      },
+      "employee": {
+        "title": "کارمند",
+        "plural": "کارمندان"
+      }
+    }
+  },
+  "contact-methods": {
+    "terms": {
+      "contact-method": "روش تماس",
+      "contact-methods": "روش‌های تماس",
+      "contact-method-type": "نوع روش تماس",
+      "contact-method-types": "انواع روش تماس"
+    },
+    "entities": {
+      "contact-method": {
+        "title": "روش تماس",
+        "plural": "روش‌های تماس",
+        "fields": {
+          "method-type-id": {
+            "title": "نوع روش",
+            "description": "نوع روش تماس",
+            "placeholder": "نوع روش تماس را انتخاب کنید"
+          }
+        }
+      },
+      "contact-method-type": {
+        "title": "نوع روش تماس",
+        "plural": "انواع روش تماس",
+        "fields": {}
+      }
+    },
+    "permissions": {
+      "contact-method-types": {
+        "title": "انواع روش تماس",
+        "description": "مدیریت انواع روش تماس",
+        "actions": {
+          "manage": {
+            "title": "مدیریت انواع روش تماس",
+            "description": "دسترسی کامل به مدیریت نوع روش تماس"
+          },
+          "view": {
+            "title": "مشاهده انواع روش تماس",
+            "description": "مشاهده اطلاعات نوع روش تماس"
+          },
+          "create": {
+            "title": "ایجاد نوع روش تماس",
+            "description": "ایجاد انواع جدید روش تماس"
+          },
+          "edit": {
+            "title": "ویرایش نوع روش تماس",
+            "description": "ویرایش اطلاعات نوع روش تماس"
+          },
+          "delete": {
+            "title": "حذف انواع روش تماس",
+            "description": "حذف انواع روش تماس"
+          }
+        }
+      }
+    }
+  },
+  "emergency-contacts": {
+    "terms": {
+      "emergency-contact": "تماس اضطراری",
+      "emergency-contacts": "تماس‌های اضطراری"
+    },
+    "entities": {
+      "emergency-contact": {
+        "title": "تماس اضطراری",
+        "plural": "تماس‌های اضطراری",
+        "fields": {
+          "phone-number": {
+            "title": "شماره تلفن",
+            "description": "شماره تلفن اضطراری اصلی",
+            "placeholder": "مثال: 110، +98-21-1234-5678"
+          },
+          "alternate-numbers": {
+            "title": "شماره‌های جایگزین",
+            "description": "شماره‌های تماس جایگزین",
+            "placeholder": "مثال: 110، +98-21-1234-5678"
+          },
+          "text-number": {
+            "title": "شماره پیامک",
+            "description": "شماره تماس برای پیامک",
+            "placeholder": "شماره پیامک در صورت وجود"
+          },
+          "website": {
+            "title": "وب‌سایت",
+            "description": "آدرس وب‌سایت رسمی",
+            "placeholder": "https://www.example.ir"
+          },
+          "email": {
+            "title": "ایمیل",
+            "description": "آدرس ایمیل تماس",
+            "placeholder": "contact@emergency.ir"
+          },
+          "is-national": {
+            "title": "پوشش ملی",
+            "description": "در سراسر کشور در دسترس است"
+          },
+          "is-regional": {
+            "title": "پوشش منطقه‌ای",
+            "description": "در مناطق خاص در دسترس است"
+          },
+          "is-local": {
+            "title": "پوشش محلی",
+            "description": "فقط در سطح محلی در دسترس است"
+          },
+          "languages": {
+            "title": "زبان‌های پشتیبانی‌شده",
+            "description": "زبان‌های پشتیبانی شده توسط این سرویس"
+          },
+          "is-text-capable": {
+            "title": "قابلیت پیامک",
+            "description": "پشتیبانی از پیامک کوتاه"
+          },
+          "is-video-call-capable": {
+            "title": "قابلیت تماس ویدیویی",
+            "description": "پشتیبانی از تماس ویدیویی"
+          },
+          "when-to-call": {
+            "title": "زمان تماس",
+            "description": "زمان مناسب برای استفاده از این تماس اضطراری",
+            "placeholder": "چه زمانی با این شماره تماس بگیرید"
+          },
+          "when-not-to-call": {
+            "title": "زمان عدم تماس",
+            "description": "زمانی که نباید از این تماس استفاده کرد",
+            "placeholder": "چه زمانی با این شماره تماس نگیرید"
+          },
+          "instructions": {
+            "title": "دستورالعمل‌ها",
+            "description": "دستورالعمل‌های ویژه برای تماس",
+            "placeholder": "دستورالعمل‌های ویژه برای تماس"
+          },
+          "show-on-dashboard": {
+            "title": "نمایش در داشبورد",
+            "description": "نمایش در داشبورد اصلی"
+          },
+          "requires-confirmation": {
+            "title": "نیاز به تأیید",
+            "description": "نیاز به تأیید قبل از تماس"
+          },
+          "is-quick-dial": {
+            "title": "شماره‌گیری سریع",
+            "description": "افزودن به لیست شماره‌گیری سریع"
+          }
+        },
+        "groups": {
+          "contact-info": "اطلاعات تماس",
+          "location-info": "اطلاعات موقعیت"
+        }
+      }
+    },
+    "search-commands": {
+      "create-emergency-contact": {
+        "title": "ایجاد تماس اضطراری",
+        "description": "ایجاد یک تماس اضطراری جدید."
+      }
+    },
+    "components": {
+      "emergency-contacts-page": {
+        "title": "تماس‌های اضطراری و شماره‌گیری سریع",
+        "description": "دسترسی سریع به تماس‌های اضطراری و شماره‌های مهم",
+        "empty-states": {
+          "no-emergency-contacts": {
+            "title": "هیچ تماس اضطراری موجود نیست",
+            "description": "هنوز هیچ تماس اضطراری پیکربندی نشده است. برای افزودن تماس‌های اضطراری با مدیر سیستم تماس بگیرید."
+          }
+        },
+        "sections": {
+          "quick-dial": "شماره‌گیری سریع",
+          "all-contacts": "همه تماس‌های اضطراری"
+        },
+        "actions": {
+          "call-now": "همین حالا تماس بگیر",
+          "send-text": "ارسال پیامک",
+          "visit-website": "مشاهده وب‌سایت",
+          "copy-number": "کپی شماره"
+        },
+        "labels": {
+          "priority": "اولویت",
+          "availability": "در دسترس بودن",
+          "coverage": "پوشش",
+          "capabilities": "قابلیت‌ها",
+          "last-verified": "آخرین تأیید"
+        },
+        "messages": {
+          "requires-confirmation-warning": "این تماس قبل از تماس نیاز به تأیید دارد",
+          "loading": "در حال بارگذاری تماس‌های اضطراری..."
+        }
+      }
+    },
+    "permissions": {
+      "emergency-contacts": {
+        "title": "تماس‌های اضطراری",
+        "description": "مدیریت تماس‌های اضطراری",
+        "actions": {
+          "manage": {
+            "title": "مدیریت تماس‌های اضطراری",
+            "description": "دسترسی کامل به مدیریت تماس اضطراری"
+          },
+          "view": {
+            "title": "مشاهده تماس‌های اضطراری",
+            "description": "مشاهده اطلاعات تماس اضطراری"
+          },
+          "create": {
+            "title": "ایجاد تماس اضطراری",
+            "description": "ایجاد تماس‌های اضطراری جدید"
+          },
+          "edit": {
+            "title": "ویرایش تماس اضطراری",
+            "description": "ویرایش اطلاعات تماس اضطراری"
+          },
+          "delete": {
+            "title": "حذف تماس‌های اضطراری",
+            "description": "حذف تماس‌های اضطراری"
+          }
+        }
+      }
+    }
+  }
+}

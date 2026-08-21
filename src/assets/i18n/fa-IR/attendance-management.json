@@ -1,0 +1,407 @@
+{
+  "module": {
+    "title": "مدیریت حضور و غیاب",
+    "description": "پیگیری حضور کارکنان، برنامه‌ها، اصلاحات و گزارش‌ها",
+    "permissions": {
+      "title": "مدیریت حضور و غیاب",
+      "description": "مدیریت پیگیری حضور، برنامه‌ها و گزارش‌گیری"
+    }
+  },
+  "features": {
+    "attendance-tracking": {
+      "title": "پیگیری حضور",
+      "description": "فعال‌سازی ورود، خروج و ثبت استراحت"
+    },
+    "attendance-correction": {
+      "title": "اصلاح حضور",
+      "description": "فعال‌سازی درخواست و تأیید اصلاح حضور"
+    },
+    "attendance-reporting": {
+      "title": "گزارش حضور",
+      "description": "فعال‌سازی تابلو تیمی و گزارش‌های حضور"
+    },
+    "schedule-management": {
+      "title": "مدیریت برنامه",
+      "description": "مدیریت برنامه کاری، شیفت‌ها و تخصیص به کارکنان"
+    }
+  },
+  "permissions": {
+    "group": {
+      "title": "مدیریت حضور و غیاب",
+      "description": "مدیریت پیگیری حضور، برنامه‌ها و گزارش‌گیری"
+    },
+    "work-schedule": {
+      "management": { "title": "برنامه‌های کاری", "description": "مدیریت تعریف برنامه‌های کاری" },
+      "view": { "title": "مشاهده برنامه‌های کاری" },
+      "create": { "title": "ایجاد برنامه کاری" },
+      "update": { "title": "ویرایش برنامه کاری" },
+      "delete": { "title": "حذف برنامه کاری" }
+    },
+    "shift": {
+      "management": { "title": "شیفت‌ها", "description": "مدیریت تعریف شیفت‌ها" },
+      "view": { "title": "مشاهده شیفت‌ها" },
+      "create": { "title": "ایجاد شیفت" },
+      "update": { "title": "ویرایش شیفت" },
+      "delete": { "title": "حذف شیفت" }
+    },
+    "employee-schedule-assignment": {
+      "management": { "title": "تخصیص برنامه", "description": "تخصیص برنامه کاری به کارکنان" },
+      "view": { "title": "مشاهده تخصیص‌ها" },
+      "create": { "title": "ایجاد تخصیص" },
+      "update": { "title": "ویرایش تخصیص" },
+      "delete": { "title": "حذف تخصیص" }
+    },
+    "attendance-session": {
+      "management": { "title": "جلسات حضور", "description": "مدیریت جلسات حضور" },
+      "view": { "title": "مشاهده جلسات حضور" },
+      "check-in-out": { "title": "ورود / خروج" },
+      "team-view": { "title": "مشاهده حضور تیم" }
+    },
+    "attendance-correction-request": {
+      "management": { "title": "درخواست‌های اصلاح", "description": "مدیریت درخواست‌های اصلاح حضور" },
+      "view": { "title": "مشاهده درخواست‌های اصلاح" },
+      "submit": { "title": "ارسال درخواست اصلاح" },
+      "approve": { "title": "تأیید درخواست‌های اصلاح" }
+    },
+    "attendance-report": {
+      "view": { "title": "مشاهده گزارش‌های حضور", "description": "مشاهده گزارش‌ها و تابلو تیمی" },
+      "export": { "title": "خروجی گرفتن از داده‌های حضور" }
+    }
+  },
+  "pages": {
+    "my-attendance": {
+      "title": "حضور من",
+      "actions": {
+        "check-in": "ورود",
+        "check-out": "خروج",
+        "break-start": "شروع استراحت",
+        "break-end": "پایان استراحت"
+      }
+    },
+    "team-attendance-board": {
+      "title": "تابلو حضور تیم"
+    },
+    "work-schedule-calendar": {
+      "title": "تقویم برنامه کاری",
+      "description": "نمایش شیفت‌های هفتگی و تعطیلات روی تقویم ماهانه"
+    }
+  },
+  "work-schedules": {
+    "menus": {
+      "work-schedules": {
+        "title": "برنامه‌های کاری"
+      }
+    },
+    "permissions": {
+      "work-schedules": {
+        "title": "برنامه‌های کاری",
+        "description": "مدیریت تعریف برنامه‌های کاری",
+        "actions": {
+          "view": { "title": "مشاهده" },
+          "create": { "title": "ایجاد" },
+          "edit": { "title": "ویرایش" },
+          "delete": { "title": "حذف" }
+        }
+      }
+    },
+    "entities": {
+      "work-schedule": {
+        "title": "برنامه کاری",
+        "plural": "برنامه‌های کاری",
+        "fields": {
+          "code": { "title": "کد" },
+          "name": { "title": "نام" },
+          "timezone": { "title": "منطقه زمانی" },
+          "is-default": { "title": "پیش‌فرض" },
+          "is-active": { "title": "فعال" }
+        }
+      }
+    }
+  },
+  "shifts": {
+    "menus": {
+      "shifts": {
+        "title": "شیفت‌ها"
+      }
+    },
+    "permissions": {
+      "shifts": {
+        "title": "شیفت‌ها",
+        "description": "مدیریت تعریف شیفت‌ها",
+        "actions": {
+          "view": { "title": "مشاهده" },
+          "create": { "title": "ایجاد" },
+          "edit": { "title": "ویرایش" },
+          "delete": { "title": "حذف" }
+        }
+      }
+    },
+    "entities": {
+      "shift": {
+        "title": "شیفت",
+        "plural": "شیفت‌ها",
+        "groups": {
+          "timing": "زمان‌بندی"
+        },
+        "fields": {
+          "work-schedule-id": { "title": "برنامه کاری" },
+          "code": { "title": "کد" },
+          "name": { "title": "نام" },
+          "day-of-week": {
+            "title": "روز هفته",
+            "options": {
+              "sunday": "یکشنبه",
+              "monday": "دوشنبه",
+              "tuesday": "سه‌شنبه",
+              "wednesday": "چهارشنبه",
+              "thursday": "پنج‌شنبه",
+              "friday": "جمعه",
+              "saturday": "شنبه"
+            }
+          },
+          "start-time": { "title": "شروع" },
+          "end-time": { "title": "پایان" },
+          "break-minutes": { "title": "استراحت (دقیقه)" },
+          "is-active": { "title": "فعال" }
+        }
+      }
+    }
+  },
+  "employee-schedule-assignments": {
+    "menus": {
+      "employee-schedule-assignments": {
+        "title": "تخصیص برنامه"
+      }
+    },
+    "permissions": {
+      "employee-schedule-assignments": {
+        "title": "تخصیص برنامه",
+        "description": "تخصیص برنامه کاری به کارکنان",
+        "actions": {
+          "view": { "title": "مشاهده" },
+          "create": { "title": "ایجاد" },
+          "edit": { "title": "ویرایش" },
+          "delete": { "title": "حذف" }
+        }
+      }
+    },
+    "entities": {
+      "employee-schedule-assignment": {
+        "title": "تخصیص برنامه",
+        "plural": "تخصیص‌های برنامه",
+        "fields": {
+          "employee-id": { "title": "کارمند" },
+          "work-schedule-id": { "title": "برنامه کاری" },
+          "effective-from": { "title": "از تاریخ" },
+          "effective-to": { "title": "تا تاریخ" },
+          "is-primary": { "title": "اصلی" }
+        }
+      }
+    }
+  },
+  "attendance-events": {
+    "entities": {
+      "attendance-event": {
+        "title": "رویداد حضور",
+        "plural": "رویدادهای حضور",
+        "groups": {
+          "details": "جزئیات"
+        },
+        "fields": {
+          "employee-id": { "title": "کارمند" },
+          "session-id": { "title": "جلسه" },
+          "event-type": { "title": "نوع رویداد" },
+          "occurred-at": { "title": "زمان وقوع" },
+          "source": { "title": "منبع" },
+          "location": { "title": "مکان" },
+          "notes": { "title": "یادداشت" },
+          "is-corrected": { "title": "اصلاح‌شده" }
+        }
+      }
+    }
+  },
+  "attendance-sessions": {
+    "states": {
+      "open": "باز",
+      "on-break": "در استراحت",
+      "closed": "بسته"
+    },
+    "transitions": {
+      "start-break": "شروع استراحت",
+      "end-break": "پایان استراحت",
+      "check-out": "خروج"
+    },
+    "permissions": {
+      "attendance-sessions": {
+        "title": "جلسات حضور",
+        "description": "مدیریت جلسات حضور",
+        "actions": {
+          "view": { "title": "مشاهده" },
+          "check-in-out": { "title": "ورود / خروج" },
+          "team-view": { "title": "نمای تیم" }
+        }
+      }
+    },
+    "entities": {
+      "attendance-session": {
+        "title": "جلسه حضور",
+        "plural": "جلسات حضور",
+        "groups": {
+          "timing": "زمان‌بندی"
+        },
+        "fields": {
+          "employee-id": { "title": "کارمند" },
+          "work-date": { "title": "تاریخ کاری" },
+          "status-id": { "title": "وضعیت" },
+          "shift-id": { "title": "شیفت" },
+          "check-in-at": { "title": "ورود" },
+          "check-out-at": { "title": "خروج" },
+          "total-work-seconds": { "title": "مدت کار" },
+          "total-break-seconds": { "title": "مدت استراحت" },
+          "timezone": { "title": "منطقه زمانی" }
+        }
+      }
+    }
+  },
+  "attendance-daily-summaries": {
+    "states": {
+      "draft": "پیش‌نویس",
+      "calculated": "محاسبه‌شده",
+      "needs-review": "نیاز به بررسی",
+      "locked": "قفل‌شده"
+    },
+    "transitions": {
+      "calculate": "محاسبه",
+      "flag-review": "علامت‌گذاری برای بررسی",
+      "lock": "قفل",
+      "resolve": "رفع"
+    },
+    "entities": {
+      "attendance-daily-summary": {
+        "title": "خلاصه روزانه",
+        "plural": "خلاصه‌های روزانه",
+        "groups": {
+          "metrics": "شاخص‌ها"
+        },
+        "fields": {
+          "employee-id": { "title": "کارمند" },
+          "work-date": { "title": "تاریخ کاری" },
+          "status-id": { "title": "وضعیت" },
+          "scheduled-seconds": { "title": "برنامه‌ریزی‌شده" },
+          "worked-seconds": { "title": "کارکرد" },
+          "break-seconds": { "title": "استراحت" },
+          "overtime-seconds": { "title": "اضافه‌کاری" },
+          "late-seconds": { "title": "تأخیر" },
+          "early-leave-seconds": { "title": "خروج زودهنگام" },
+          "absence-type": { "title": "نوع غیبت" },
+          "leave-request-id": { "title": "درخواست مرخصی" },
+          "is-holiday": { "title": "تعطیل" },
+          "notes": { "title": "یادداشت" }
+        }
+      }
+    }
+  },
+  "attendance-correction-requests": {
+    "menus": {
+      "attendance-correction-requests": {
+        "title": "درخواست‌های اصلاح"
+      }
+    },
+    "states": {
+      "draft": "پیش‌نویس",
+      "waiting-approval": "در انتظار تأیید",
+      "approved": "تأییدشده",
+      "rejected": "ردشده"
+    },
+    "transitions": {
+      "submit": "ارسال",
+      "approve": "تأیید",
+      "reject": "رد",
+      "reopen": "بازگشایی"
+    },
+    "permissions": {
+      "attendance-correction-requests": {
+        "title": "درخواست‌های اصلاح",
+        "description": "مدیریت درخواست‌های اصلاح حضور",
+        "actions": {
+          "view": { "title": "مشاهده" },
+          "submit": { "title": "ارسال" },
+          "approve": { "title": "تأیید" }
+        }
+      }
+    },
+    "entities": {
+      "attendance-correction-request": {
+        "title": "درخواست اصلاح",
+        "plural": "درخواست‌های اصلاح",
+        "groups": {
+          "review": "بررسی"
+        },
+        "fields": {
+          "employee-id": { "title": "کارمند" },
+          "work-date": { "title": "تاریخ کاری" },
+          "requested-by-id": { "title": "درخواست‌دهنده" },
+          "reason": { "title": "دلیل" },
+          "status-id": { "title": "وضعیت" },
+          "proposed-changes": { "title": "تغییرات پیشنهادی" },
+          "review-notes": { "title": "یادداشت بررسی" }
+        }
+      }
+    }
+  },
+  "overtime-records": {
+    "entities": {
+      "overtime-record": {
+        "title": "رکورد اضافه‌کاری",
+        "plural": "رکوردهای اضافه‌کاری",
+        "fields": {
+          "employee-id": { "title": "کارمند" },
+          "work-date": { "title": "تاریخ کاری" },
+          "overtime-seconds": { "title": "اضافه‌کاری" },
+          "approved-seconds": { "title": "اضافه‌کاری تأییدشده" },
+          "status-id": { "title": "وضعیت" },
+          "daily-summary-id": { "title": "خلاصه روزانه" },
+          "notes": { "title": "یادداشت" }
+        }
+      }
+    }
+  },
+  "attendance-policies": {
+    "menus": {
+      "attendance-policies": {
+        "title": "سیاست‌های حضور"
+      }
+    },
+    "entities": {
+      "attendance-policy": {
+        "title": "سیاست حضور",
+        "plural": "سیاست‌های حضور",
+        "groups": {
+          "rules": "قوانین"
+        },
+        "fields": {
+          "code": { "title": "کد" },
+          "name": { "title": "نام" },
+          "grace-period-minutes": { "title": "مهلت (دقیقه)" },
+          "auto-close-after-hours": { "title": "بستن خودکار پس از (ساعت)" },
+          "require-location": { "title": "الزام مکان" },
+          "allow-remote-check-in": { "title": "ورود از راه دور" },
+          "late-threshold-minutes": { "title": "آستانه تأخیر (دقیقه)" },
+          "overtime-threshold-minutes": { "title": "آستانه اضافه‌کاری (دقیقه)" },
+          "is-active": { "title": "فعال" }
+        }
+      }
+    }
+  },
+  "reports": {
+    "permissions": {
+      "reports": {
+        "title": "گزارش‌های حضور",
+        "description": "مشاهده و خروجی گزارش‌های حضور",
+        "actions": {
+          "export": { "title": "خروجی" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,506 @@
+{
+  "module": {
+    "title": "Customer Management",
+    "description": "Manage customers, leads, opportunities, and sales activities",
+    "menus": {
+      "root": {
+        "title": "CRM",
+        "description": "Customers, leads, opportunities, and sales activities"
+      }
+    }
+  },
+  "features": {
+    "customers": {
+      "title": "Customers",
+      "description": "Manage customer accounts and related customer information."
+    },
+    "sales": {
+      "title": "Sales CRM",
+      "description": "Manage leads, opportunities, pipelines, and sales activities."
+    }
+  },
+  "customers": {
+    "terms": {
+      "customer": "Customer",
+      "customers": "Customers"
+    },
+    "entities": {
+      "customer": {
+        "title": "Customer",
+        "plural": "Customers",
+        "search-result-description": "Customer and account information",
+        "fields": {
+          "customer-code": {
+            "title": "Code",
+            "description": "Unique customer identifier code",
+            "placeholder": "Enter customer code"
+          },
+          "person": {
+            "title": "Person",
+            "description": "Associated person information",
+            "placeholder": "Select person"
+          },
+          "customer-type": {
+            "title": "Customer Type",
+            "description": "Type of customer",
+            "placeholder": "Select customer type"
+          },
+          "segment": {
+            "title": "Segment",
+            "description": "Segment classification",
+            "placeholder": "Select segment"
+          },
+          "lifecycle-stage": {
+            "title": "Lifecycle Stage",
+            "description": "Customer lifecycle stage",
+            "placeholder": "Select lifecycle stage"
+          },
+          "territory": {
+            "title": "Territory",
+            "description": "Sales territory",
+            "placeholder": "Select territory"
+          },
+          "since": {
+            "title": "Customer Since",
+            "description": "Date customer relationship began",
+            "placeholder": "Select date"
+          },
+          "is-vip": {
+            "title": "VIP",
+            "description": "VIP customer status"
+          },
+          "integration-ref": {
+            "title": "Integration Link"
+          },
+          "account-manager": {
+            "title": "Account Manager",
+            "description": "Assigned account manager",
+            "placeholder": "Select account manager"
+          }
+        },
+        "groups": {
+          "profile": "Profile",
+          "sales": "Sales"
+        },
+        "components": {
+          "meta-data-form": {
+            "title": "Specifications"
+          }
+        },
+        "related-entities": {
+          "locations": {
+            "title": "Locations"
+          }
+        }
+      },
+      "customer-type": {
+        "title": "Customer Type",
+        "plural": "Customer Types",
+        "search-result-description": "Customer type classification",
+        "fields": {
+          "title": {
+            "title": "Title",
+            "description": "Customer type title",
+            "placeholder": "Enter title"
+          },
+          "description": {
+            "title": "Description",
+            "description": "Customer type description",
+            "placeholder": "Enter description"
+          }
+        },
+        "groups": {
+          "basic-info": "Basic Information"
+        }
+      },
+      "customer-segment": {
+        "title": "Customer Segment",
+        "plural": "Customer Segments",
+        "search-result-description": "Customer segment and classification",
+        "fields": {
+          "title": {
+            "title": "Title",
+            "description": "Segment title",
+            "placeholder": "Enter title"
+          },
+          "description": {
+            "title": "Description",
+            "description": "Segment description",
+            "placeholder": "Enter description"
+          }
+        },
+        "groups": {
+          "basic-info": "Basic Information"
+        }
+      }      
+    }
+  },
+  "leads": {
+    "terms": {
+      "lead": "Lead",
+      "leads": "Leads"
+    },
+    "entities": {
+      "lead": {
+        "title": "Lead",
+        "plural": "Leads",
+        "search-result-description": "Sales lead and prospect information",
+        "fields": {
+          "name": {
+            "title": "Name",
+            "description": "Lead name",
+            "placeholder": "Enter name"
+          },
+          "email": {
+            "title": "Email",
+            "description": "Email address",
+            "placeholder": "Enter email"
+          },
+          "phone": {
+            "title": "Phone",
+            "description": "Phone number",
+            "placeholder": "Enter phone"
+          },
+          "company": {
+            "title": "Company",
+            "description": "Company name",
+            "placeholder": "Enter company"
+          },
+          "status": {
+            "title": "Status",
+            "description": "Lead status",
+            "placeholder": "Select status"
+          },
+          "lifecycle-stage": {
+            "title": "Lifecycle Stage",
+            "description": "Lead lifecycle stage",
+            "placeholder": "Select lifecycle stage"
+          },
+          "owner": {
+            "title": "Owner",
+            "description": "Lead owner",
+            "placeholder": "Select owner"
+          },
+          "source": {
+            "title": "Source",
+            "description": "Lead source",
+            "placeholder": "Enter source"
+          }
+        },
+        "groups": {
+          "basic-info": "Basic Information"
+        }
+      }
+    }
+  },
+  "opportunities": {
+    "terms": {
+      "opportunity": "Opportunity",
+      "opportunities": "Opportunities"
+    },
+    "entities": {
+      "opportunity": {
+        "title": "Opportunity",
+        "plural": "Opportunities",
+        "search-result-description": "Sales opportunity and deal information",
+        "fields": {
+          "title": {
+            "title": "Title",
+            "description": "Opportunity title",
+            "placeholder": "Enter title"
+          },
+          "customer": {
+            "title": "Customer",
+            "description": "Associated customer",
+            "placeholder": "Select customer"
+          },
+          "contact": {
+            "title": "Contact",
+            "description": "Primary contact",
+            "placeholder": "Select contact"
+          },
+          "amount": {
+            "title": "Amount",
+            "description": "Deal amount",
+            "placeholder": "Enter amount"
+          },
+          "currency": {
+            "title": "Currency",
+            "description": "Currency code",
+            "placeholder": "Enter currency"
+          },
+          "probability": {
+            "title": "Probability",
+            "description": "Win probability percentage",
+            "placeholder": "Enter probability"
+          },
+          "expected-close": {
+            "title": "Expected Close",
+            "description": "Expected closing date",
+            "placeholder": "Select date"
+          },
+          "stage": {
+            "title": "Stage",
+            "description": "Current stage",
+            "placeholder": "Select stage"
+          },
+          "pipeline": {
+            "title": "Pipeline",
+            "description": "Sales pipeline",
+            "placeholder": "Select pipeline"
+          },
+          "owner": {
+            "title": "Owner",
+            "description": "Opportunity owner",
+            "placeholder": "Select owner"
+          }
+        },
+        "groups": {
+          "basic-info": "Basic Information"
+        }
+      },
+      "opportunity-stage": {
+        "title": "Opportunity Stage",
+        "plural": "Opportunity Stages",
+        "fields": {
+          "title": {
+            "title": "Title",
+            "description": "Stage title",
+            "placeholder": "Enter title"
+          },
+          "probability": {
+            "title": "Default Probability",
+            "description": "Default win probability for this stage",
+            "placeholder": "Enter probability"
+          },
+          "order": {
+            "title": "Order",
+            "description": "Display order",
+            "placeholder": "Enter order"
+          }
+        },
+        "groups": {
+          "basic-info": "Basic Information"
+        }
+      },
+      "sales-pipeline": {
+        "title": "Sales Pipeline",
+        "plural": "Sales Pipelines",
+        "fields": {
+          "title": {
+            "title": "Title",
+            "description": "Pipeline title",
+            "placeholder": "Enter title"
+          },
+          "description": {
+            "title": "Description",
+            "description": "Pipeline description",
+            "placeholder": "Enter description"
+          }
+        },
+        "groups": {
+          "basic-info": "Basic Information"
+        }
+      },
+      "deal-contact-role": {
+        "title": "Deal Contact Role",
+        "plural": "Deal Contact Roles",
+        "fields": {
+          "opportunity": {
+            "title": "Opportunity",
+            "description": "Associated opportunity",
+            "placeholder": "Select opportunity"
+          },
+          "contact": {
+            "title": "Contact",
+            "description": "Contact person",
+            "placeholder": "Select contact"
+          },
+          "role": {
+            "title": "Role",
+            "description": "Contact role in deal",
+            "placeholder": "Enter role"
+          }
+        },
+        "groups": {
+          "basic-info": "Basic Information"
+        }
+      }
+    }
+  },
+  "activities": {
+    "terms": {
+      "activity": "Activity",
+      "activities": "Activities",
+      "note": "Note",
+      "notes": "Notes"
+    },
+    "entities": {
+      "activity": {
+        "title": "Activity",
+        "plural": "Activities",
+        "fields": {
+          "type": {
+            "title": "Type",
+            "description": "Activity type",
+            "placeholder": "Select type"
+          },
+          "subject": {
+            "title": "Subject",
+            "description": "Activity subject",
+            "placeholder": "Enter subject"
+          },
+          "due-date": {
+            "title": "Due Date",
+            "description": "Due date",
+            "placeholder": "Select date"
+          },
+          "status": {
+            "title": "Status",
+            "description": "Activity status",
+            "placeholder": "Select status"
+          },
+          "outcome": {
+            "title": "Outcome",
+            "description": "Activity outcome",
+            "placeholder": "Enter outcome"
+          },
+          "customer": {
+            "title": "Customer",
+            "description": "Related customer",
+            "placeholder": "Select customer"
+          },
+          "opportunity": {
+            "title": "Opportunity",
+            "description": "Related opportunity",
+            "placeholder": "Select opportunity"
+          },
+          "contact": {
+            "title": "Contact",
+            "description": "Related contact",
+            "placeholder": "Select contact"
+          }
+        },
+        "groups": {
+          "basic-info": "Basic Information"
+        }
+      },
+      "note": {
+        "title": "Note",
+        "plural": "Notes",
+        "fields": {
+          "content": {
+            "title": "Content",
+            "description": "Note content",
+            "placeholder": "Enter note content"
+          },
+          "customer": {
+            "title": "Customer",
+            "description": "Related customer",
+            "placeholder": "Select customer"
+          },
+          "opportunity": {
+            "title": "Opportunity",
+            "description": "Related opportunity",
+            "placeholder": "Select opportunity"
+          },
+          "contact": {
+            "title": "Contact",
+            "description": "Related contact",
+            "placeholder": "Select contact"
+          }
+        },
+        "groups": {
+          "basic-info": "Basic Information"
+        }
+      }
+    }
+  },
+  "configuration": {
+    "terms": {
+      "lifecycle-stage": "Lifecycle Stage",
+      "lifecycle-stages": "Lifecycle Stages",
+      "sales-territory": "Sales Territory",
+      "sales-territories": "Sales Territories"
+    },
+    "entities": {
+      "lifecycle-stage": {
+        "title": "Lifecycle Stage",
+        "plural": "Lifecycle Stages",
+        "fields": {
+          "title": {
+            "title": "Title",
+            "description": "Stage title",
+            "placeholder": "Enter title"
+          },
+          "description": {
+            "title": "Description",
+            "description": "Stage description",
+            "placeholder": "Enter description"
+          }
+        },
+        "groups": {
+          "basic-info": "Basic Information"
+        }
+      },
+      "sales-territory": {
+        "title": "Sales Territory",
+        "plural": "Sales Territories",
+        "fields": {
+          "title": {
+            "title": "Title",
+            "description": "Territory title",
+            "placeholder": "Enter title"
+          },
+          "description": {
+            "title": "Description",
+            "description": "Territory description",
+            "placeholder": "Enter description"
+          }
+        },
+        "groups": {
+          "basic-info": "Basic Information"
+        }
+      }
+    }
+  },
+  "permissions": {
+    "customer-management": {
+      "manage": { "title": "Customer Management" },
+          "lead": {
+            "view": {
+              "title": "View Leads",
+              "description": "View lead information"
+            }
+          },
+          "opportunity": {
+            "view": {
+              "title": "View Opportunities",
+              "description": "View opportunity information"
+            }
+          },
+          "customer": {
+            "manage": {
+          "title": "Manage Customers",
+          "description": "Full customer management access"
+        },
+        "view": {
+          "title": "View Customers",
+          "description": "View customer information"
+        },
+        "create": {
+          "title": "Create Customer",
+          "description": "Create new customers"
+        },
+        "update": {
+          "title": "Update Customer",
+          "description": "Update customer information"
+        },
+        "delete": {
+          "title": "Delete Customers",
+          "description": "Delete customers"
+        }
+      }
+    }
+  }
+}

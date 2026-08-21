@@ -1,0 +1,1078 @@
+{
+  "module": {
+    "title": "Learning Management",
+    "description": "Plan, deliver, and track organizational learning initiatives.",
+    "menus": {
+      "root": {
+        "title": "Learning",
+        "description": "Skills, courses, trainings, enrollments, and certificates"
+      },
+      "configuration": {
+        "title": "Learning",
+        "description": "Skill levels, course types, training definitions, licenses, and compliance rules"
+      }
+    },
+    "terms": {
+      "skills": "Skills",
+      "courses": "Courses",
+      "trainings": "Trainings",
+      "enrollments": "Enrollments",
+      "certificates": "Certificates",
+      "licenses": "Licenses",
+      "learning-paths": "Learning Paths",
+      "compliance": "Compliance"
+    }
+  },
+  "skills": {
+    "menus": {
+      "root": {
+        "title": "Skills"
+      }
+    },
+    "entities": {
+      "skill-category": {
+        "title": "Skill Category",
+        "plural": "Skill Categories",
+        "search-description": "Classification for skills and learning assets.",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "name": {
+            "title": "Category Name",
+            "placeholder": "Enter category name"
+          },
+          "parent-id": {
+            "title": "Parent Category"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Describe how this category should be used"
+          }
+        }
+      },
+      "skill": {
+        "title": "Skill",
+        "plural": "Skills",
+        "groups": {
+          "basic-info": "Basic Information",
+          "classification": "Classification"
+        },
+        "fields": {
+          "name": {
+            "title": "Technical Name",
+            "placeholder": "Unique programmatic key"
+          },
+          "title": {
+            "title": "Skill Title",
+            "placeholder": "Enter skill title"
+          },
+          "code": {
+            "title": "Skill Code",
+            "placeholder": "Optional tracking code"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Explain the scope of this skill"
+          },
+          "category-ids": {
+            "title": "Categories"
+          }
+        }
+      },
+      "skill-level": {
+        "title": "Skill Level",
+        "plural": "Skill Levels",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "title": {
+            "title": "Level Title",
+            "placeholder": "Enter level title"
+          },
+          "level-number": {
+            "title": "Level Number",
+            "placeholder": "Numeric order"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Describe capabilities at this level"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "skill-category": {
+        "actions": {
+          "manage": {
+            "title": "Manage Skill Categories"
+          },
+          "view": {
+            "title": "View Skill Categories"
+          },
+          "create": {
+            "title": "Create Skill Categories"
+          },
+          "update": {
+            "title": "Edit Skill Categories"
+          },
+          "delete": {
+            "title": "Delete Skill Categories"
+          }
+        }
+      },
+      "skill": {
+        "actions": {
+          "manage": {
+            "title": "Manage Skills"
+          },
+          "view": {
+            "title": "View Skills"
+          },
+          "create": {
+            "title": "Create Skills"
+          },
+          "update": {
+            "title": "Edit Skills"
+          },
+          "delete": {
+            "title": "Delete Skills"
+          }
+        }
+      },
+      "skill-level": {
+        "actions": {
+          "manage": {
+            "title": "Manage Skill Levels"
+          },
+          "view": {
+            "title": "View Skill Levels"
+          },
+          "create": {
+            "title": "Create Skill Levels"
+          },
+          "update": {
+            "title": "Edit Skill Levels"
+          },
+          "delete": {
+            "title": "Delete Skill Levels"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-skill-level": {
+        "title": "Create Skill Level",
+        "description": "Create a new skill level."
+      },
+      "create-skill": {
+        "title": "Create Skill",
+        "description": "Create a new competency definition."
+      }
+    },
+    "components": {
+      "skill-matrix": {
+        "actions": {
+          "choose-skills": {
+            "title": "Choose Skills"
+          }
+        },
+        "messages": {
+          "loading-skill-levels": "Loading skill levels..."
+        }
+      }
+    }
+  },
+  "courses": {
+    "menus": {
+      "root": {
+        "title": "Courses"
+      }
+    },
+    "entities": {
+      "course-type": {
+        "title": "Course Type",
+        "plural": "Course Types",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "code": {
+            "title": "Type Code",
+            "placeholder": "Stable code for this course type"
+          },
+          "title": {
+            "title": "Display Title",
+            "placeholder": "Localized title shown in lists"
+          },
+          "delivery-mode": {
+            "title": "Delivery Mode",
+            "options": {
+              "online": "Online",
+              "classroom": "Classroom",
+              "blended": "Blended"
+            }
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Describe when to use this course type"
+          }
+        }
+      },
+      "course": {
+        "title": "Course",
+        "plural": "Courses",
+        "groups": {
+          "basic-info": "Basic Information",
+          "settings": "Settings",
+          "relationships": "Relationships"
+        },
+        "fields": {
+          "code": {
+            "title": "Course Code",
+            "placeholder": "Unique course identifier"
+          },
+          "title": {
+            "title": "Course Title",
+            "placeholder": "Enter course title"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Outline course objectives and overview"
+          },
+          "course-type-id": {
+            "title": "Course Type"
+          },
+          "duration-hours": {
+            "title": "Duration (Hours)",
+            "placeholder": "Total delivery time"
+          },
+          "is-active": {
+            "title": "Active"
+          },
+          "related-skill-ids": {
+            "title": "Related Skills"
+          },
+          "certificate-definition-ids": {
+            "title": "Certificate Definitions",
+            "placeholder": "Select certificate definitions to issue from this course"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "course-type": {
+        "actions": {
+          "manage": {
+            "title": "Manage Course Types"
+          },
+          "view": {
+            "title": "View Course Types"
+          },
+          "create": {
+            "title": "Create Course Types"
+          },
+          "update": {
+            "title": "Edit Course Types"
+          },
+          "delete": {
+            "title": "Delete Course Types"
+          }
+        }
+      },
+      "course": {
+        "actions": {
+          "manage": {
+            "title": "Manage Courses"
+          },
+          "view": {
+            "title": "View Courses"
+          },
+          "create": {
+            "title": "Create Courses"
+          },
+          "update": {
+            "title": "Edit Courses"
+          },
+          "delete": {
+            "title": "Delete Courses"
+          },
+          "publish": {
+            "title": "Publish Courses"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-course-type": {
+        "title": "Create Course Type",
+        "description": "Create a new course type."
+      },
+      "create-course": {
+        "title": "Create Course",
+        "description": "Create a new learning course."
+      }
+    }
+  },
+  "trainings": {
+    "menus": {
+      "root": {
+        "title": "Trainings"
+      }
+    },
+    "entities": {
+      "training-type": {
+        "title": "Training Type",
+        "plural": "Training Types",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "code": {
+            "title": "Format Code",
+            "placeholder": "Stable code for this training format"
+          },
+          "title": {
+            "title": "Display Title",
+            "placeholder": "Localized title shown in lists"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Describe this training format"
+          }
+        }
+      },
+      "training-definition": {
+        "title": "Training Definition",
+        "plural": "Training Definitions",
+        "groups": {
+          "basic-info": "Basic Information",
+          "defaults": "Default Settings"
+        },
+        "fields": {
+          "title": {
+            "title": "Definition Title",
+            "placeholder": "Name of the training program"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Explain the purpose and expected outcomes"
+          },
+          "course-id": {
+            "title": "Course"
+          },
+          "training-type-id": {
+            "title": "Training Type"
+          },
+          "default-duration-hours": {
+            "title": "Default Duration (Hours)",
+            "placeholder": "Typical delivery time for this program"
+          },
+          "default-capacity": {
+            "title": "Default Capacity",
+            "placeholder": "Suggested participant limit"
+          },
+          "default-location-id": {
+            "title": "Suggested Location"
+          },
+          "is-active": {
+            "title": "Active"
+          }
+        }
+      },
+      "training": {
+        "title": "Training",
+        "plural": "Trainings",
+        "groups": {
+          "basic-info": "Basic Information",
+          "schedule": "Schedule",
+          "logistics": "Logistics"
+        },
+        "fields": {
+          "training-definition-id": {
+            "title": "Training Definition"
+          },
+          "course-id": {
+            "title": "Course"
+          },
+          "training-type-id": {
+            "title": "Training Type"
+          },
+          "status": {
+            "title": "Status",
+            "options": {
+              "draft": "Draft",
+              "open": "Open",
+              "closed": "Closed",
+              "cancelled": "Cancelled"
+            }
+          },
+          "start-date": {
+            "title": "Start Date"
+          },
+          "end-date": {
+            "title": "End Date"
+          },
+          "capacity": {
+            "title": "Capacity",
+            "placeholder": "Maximum participants"
+          },
+          "location-id": {
+            "title": "Location"
+          },
+          "instructor-id": {
+            "title": "Instructor"
+          },
+          "notes": {
+            "title": "Notes",
+            "placeholder": "Add scheduling guidance or requirements"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "training-type": {
+        "actions": {
+          "manage": {
+            "title": "Manage Training Types"
+          },
+          "view": {
+            "title": "View Training Types"
+          },
+          "create": {
+            "title": "Create Training Types"
+          },
+          "update": {
+            "title": "Edit Training Types"
+          },
+          "delete": {
+            "title": "Delete Training Types"
+          }
+        }
+      },
+      "training-definition": {
+        "actions": {
+          "manage": {
+            "title": "Manage Training Definitions"
+          },
+          "view": {
+            "title": "View Training Definitions"
+          },
+          "create": {
+            "title": "Create Training Definitions"
+          },
+          "update": {
+            "title": "Edit Training Definitions"
+          },
+          "delete": {
+            "title": "Delete Training Definitions"
+          },
+          "publish": {
+            "title": "Publish Training Definitions"
+          }
+        }
+      },
+      "training": {
+        "actions": {
+          "manage": {
+            "title": "Manage Trainings"
+          },
+          "view": {
+            "title": "View Trainings"
+          },
+          "create": {
+            "title": "Create Trainings"
+          },
+          "update": {
+            "title": "Edit Trainings"
+          },
+          "delete": {
+            "title": "Delete Trainings"
+          },
+          "schedule": {
+            "title": "Schedule Trainings"
+          },
+          "close": {
+            "title": "Close Trainings"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-training-type": {
+        "title": "Create Training Type",
+        "description": "Create a new training type."
+      },
+      "create-training-definition": {
+        "title": "Create Training Definition",
+        "description": "Create a reusable training blueprint."
+      },
+      "schedule-training": {
+        "title": "Create Training",
+        "description": "Create a new training instance for a course."
+      }
+    }
+  },
+  "enrollments": {
+    "menus": {
+      "root": {
+        "title": "Enrollments"
+      }
+    },
+    "entities": {
+      "enrollment": {
+        "title": "Enrollment",
+        "plural": "Enrollments",
+        "groups": {
+          "basic-info": "Enrollment Details",
+          "workflow": "Workflow"
+        },
+        "fields": {
+          "employee-id": {
+            "title": "Employee"
+          },
+          "training-id": {
+            "title": "Training"
+          },
+          "status": {
+            "title": "Status",
+            "options": {
+              "requested": "Requested",
+              "approved": "Approved",
+              "enrolled": "Enrolled",
+              "completed": "Completed",
+              "failed": "Failed",
+              "cancelled": "Cancelled"
+            }
+          },
+          "workflow-instance-id": {
+            "title": "Workflow Instance"
+          },
+          "notes": {
+            "title": "Notes",
+            "placeholder": "Add enrollment notes or comments"
+          }
+        }
+      },
+      "attendance": {
+        "title": "Attendance",
+        "plural": "Attendance Records",
+        "groups": {
+          "basic-info": "Attendance"
+        },
+        "fields": {
+          "enrollment-id": {
+            "title": "Enrollment"
+          },
+          "session-date": {
+            "title": "Session Date"
+          },
+          "status": {
+            "title": "Status",
+            "options": {
+              "present": "Present",
+              "absent": "Absent",
+              "late": "Late"
+            }
+          },
+          "notes": {
+            "title": "Notes",
+            "placeholder": "Add attendance notes"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "enrollment": {
+        "actions": {
+          "manage": {
+            "title": "Manage Enrollments"
+          },
+          "view": {
+            "title": "View Enrollments"
+          },
+          "create": {
+            "title": "Create Enrollments"
+          },
+          "update": {
+            "title": "Edit Enrollments"
+          },
+          "delete": {
+            "title": "Delete Enrollments"
+          },
+          "process": {
+            "title": "Process Enrollment Workflow"
+          }
+        }
+      },
+      "attendance": {
+        "actions": {
+          "manage": {
+            "title": "Manage Attendance"
+          },
+          "view": {
+            "title": "View Attendance"
+          },
+          "create": {
+            "title": "Create Attendance"
+          },
+          "update": {
+            "title": "Edit Attendance"
+          },
+          "delete": {
+            "title": "Delete Attendance"
+          },
+          "record": {
+            "title": "Record Attendance"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-attendance": {
+        "title": "Create Attendance",
+        "description": "Create a new attendance record."
+      },
+      "create-enrollment": {
+        "title": "Create Enrollment",
+        "description": "Create a new enrollment for an employee in a training."
+      }
+    }
+  },
+  "certificates": {
+    "menus": {
+      "root": {
+        "title": "Certificates"
+      }
+    },
+    "entities": {
+      "certificate-type": {
+        "title": "Certificate Type",
+        "plural": "Certificate Types",
+        "groups": {
+          "basic-info": "Basic Information",
+          "template": "Template"
+        },
+        "fields": {
+          "code": {
+            "title": "Certificate Code",
+            "placeholder": "Stable code for this certificate type"
+          },
+          "title": {
+            "title": "Display Title",
+            "placeholder": "Localized title shown in lists"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Describe when this certificate should be issued"
+          },
+          "validity-days": {
+            "title": "Validity (Days)",
+            "placeholder": "Number of days before expiry"
+          },
+          "template-id": {
+            "title": "Document Template"
+          }
+        }
+      },
+      "certificate-definition": {
+        "title": "Certificate Definition",
+        "plural": "Certificate Definitions",
+        "groups": {
+          "basic-info": "Basic Information",
+          "configuration": "Configuration"
+        },
+        "fields": {
+          "title": {
+            "title": "Definition Title",
+            "placeholder": "Name of the certificate that will be issued"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Explain when the certificate should be granted"
+          },
+          "certificate-type-id": {
+            "title": "Certificate Type"
+          },
+          "course-id": {
+            "title": "Linked Course"
+          },
+          "validity-days": {
+            "title": "Validity (Days)",
+            "placeholder": "Override default validity if required"
+          },
+          "template-id": {
+            "title": "Document Template"
+          },
+          "is-active": {
+            "title": "Active"
+          }
+        }
+      },
+      "certificate": {
+        "title": "Certificate",
+        "plural": "Certificates",
+        "groups": {
+          "basic-info": "Certificate Details",
+          "validity": "Validity",
+          "documents": "Documents"
+        },
+        "fields": {
+          "certificate-definition-id": {
+            "title": "Certificate Definition"
+          },
+          "certificate-type-id": {
+            "title": "Certificate Type"
+          },
+          "employee-id": {
+            "title": "Employee"
+          },
+          "course-id": {
+            "title": "Course"
+          },
+          "issue-date": {
+            "title": "Issue Date"
+          },
+          "expiry-date": {
+            "title": "Expiry Date"
+          },
+          "file-id": {
+            "title": "Document File"
+          },
+          "notes": {
+            "title": "Notes",
+            "placeholder": "Add issuance context or remarks"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "certificate-type": {
+        "actions": {
+          "manage": {
+            "title": "Manage Certificate Types"
+          },
+          "view": {
+            "title": "View Certificate Types"
+          },
+          "create": {
+            "title": "Create Certificate Types"
+          },
+          "update": {
+            "title": "Edit Certificate Types"
+          },
+          "delete": {
+            "title": "Delete Certificate Types"
+          }
+        }
+      },
+      "certificate-definition": {
+        "actions": {
+          "manage": {
+            "title": "Manage Certificate Definitions"
+          },
+          "view": {
+            "title": "View Certificate Definitions"
+          },
+          "create": {
+            "title": "Create Certificate Definitions"
+          },
+          "update": {
+            "title": "Edit Certificate Definitions"
+          },
+          "delete": {
+            "title": "Delete Certificate Definitions"
+          },
+          "publish": {
+            "title": "Publish Certificate Definitions"
+          }
+        }
+      },
+      "certificate": {
+        "actions": {
+          "manage": {
+            "title": "Manage Certificates"
+          },
+          "view": {
+            "title": "View Certificates"
+          },
+          "create": {
+            "title": "Create Certificates"
+          },
+          "update": {
+            "title": "Edit Certificates"
+          },
+          "delete": {
+            "title": "Delete Certificates"
+          },
+          "issue": {
+            "title": "Issue Certificates"
+          },
+          "renew": {
+            "title": "Renew Certificates"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-certificate-type": {
+        "title": "Create Certificate Type",
+        "description": "Create a new certificate type."
+      },
+      "create-certificate-definition": {
+        "title": "Create Certificate Definition",
+        "description": "Configure a certificate template for future issuance."
+      },
+      "issue-certificate": {
+        "title": "Create Certificate",
+        "description": "Generate a certificate for an employee."
+      }
+    }
+  },
+  "licenses": {
+    "menus": {
+      "root": {
+        "title": "Licenses"
+      }
+    },
+    "entities": {
+      "license-type": {
+        "title": "License Type",
+        "plural": "License Types",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter title"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Describe how this license type should be used"
+          },
+          "is-active": {
+            "title": "Active"
+          }
+        }
+      },
+      "license": {
+        "title": "License",
+        "plural": "Licenses",
+        "groups": {
+          "validity": "Validity",
+          "requirements": "Requirements",
+          "authority": "Issuing Authority"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Stable code for this license definition"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Localized title shown in lists"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Describe when this license should be required"
+          },
+          "license-type-id": {
+            "title": "License Type"
+          },
+          "validity-period": {
+            "title": "Validity Period",
+            "placeholder": "Duration before expiry"
+          },
+          "validity-period-unit": {
+            "title": "Validity Unit",
+            "options": {
+              "day": "Day",
+              "month": "Month",
+              "year": "Year"
+            }
+          },
+          "renewal-notice-days": {
+            "title": "Renewal Notice (Days)",
+            "placeholder": "Days before expiry to send renewal notice"
+          },
+          "requires-renewal": {
+            "title": "Requires Renewal"
+          },
+          "requires-license-number": {
+            "title": "Requires License Number"
+          },
+          "requires-document": {
+            "title": "Requires Document"
+          },
+          "requires-verification": {
+            "title": "Requires Verification"
+          },
+          "issuing-authority-name": {
+            "title": "Issuing Authority",
+            "placeholder": "Name of the organization that issues this license"
+          },
+          "is-active": {
+            "title": "Active"
+          }
+        }
+      }
+    }
+  },
+  "learning-paths": {
+    "menus": {
+      "root": {
+        "title": "Learning Paths"
+      }
+    },
+    "entities": {
+      "learning-path": {
+        "title": "Learning Path",
+        "plural": "Learning Paths",
+        "groups": {
+          "basic-info": "Basic Information",
+          "settings": "Settings"
+        },
+        "fields": {
+          "code": {
+            "title": "Path Code",
+            "placeholder": "Stable identifier for this learning path"
+          },
+          "title": {
+            "title": "Path Title",
+            "placeholder": "Localized title shown to learners"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Describe the learning journey"
+          },
+          "is-active": {
+            "title": "Active"
+          }
+        }
+      },
+      "learning-path-course": {
+        "title": "Learning Path Course",
+        "plural": "Learning Path Courses",
+        "groups": {
+          "basic-info": "Sequence Item"
+        },
+        "fields": {
+          "learning-path-id": {
+            "title": "Learning Path"
+          },
+          "course-id": {
+            "title": "Course"
+          },
+          "order-index": {
+            "title": "Order"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "learning-path": {
+        "actions": {
+          "manage": {
+            "title": "Manage Learning Paths"
+          },
+          "view": {
+            "title": "View Learning Paths"
+          },
+          "create": {
+            "title": "Create Learning Paths"
+          },
+          "update": {
+            "title": "Edit Learning Paths"
+          },
+          "delete": {
+            "title": "Delete Learning Paths"
+          },
+          "publish": {
+            "title": "Publish Learning Paths"
+          },
+          "assign": {
+            "title": "Assign Learning Paths"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-learning-path": {
+        "title": "Create Learning Path",
+        "description": "Create a curated learning journey."
+      }
+    }
+  },
+  "compliance": {
+    "menus": {
+      "root": {
+        "title": "Compliance Rules"
+      }
+    },
+    "entities": {
+      "mandatory-training-rule": {
+        "title": "Mandatory Training Rule",
+        "plural": "Mandatory Training Rules",
+        "groups": {
+          "basic-info": "Basic Information",
+          "settings": "Settings"
+        },
+        "fields": {
+          "position-id": {
+            "title": "Position"
+          },
+          "course-id": {
+            "title": "Course"
+          },
+          "frequency-months": {
+            "title": "Frequency (Months)",
+            "placeholder": "Repeat interval in months"
+          },
+          "is-active": {
+            "title": "Active"
+          },
+          "notes": {
+            "title": "Notes",
+            "placeholder": "Add compliance notes or requirements"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-mandatory-training-rule": {
+        "title": "Create Mandatory Training Rule",
+        "description": "Create a new mandatory training rule."
+      }
+    },
+    "permissions": {
+      "mandatory-training-rule": {
+        "actions": {
+          "manage": {
+            "title": "Manage Mandatory Training Rules"
+          },
+          "view": {
+            "title": "View Mandatory Training Rules"
+          },
+          "create": {
+            "title": "Create Mandatory Training Rules"
+          },
+          "update": {
+            "title": "Edit Mandatory Training Rules"
+          },
+          "delete": {
+            "title": "Delete Mandatory Training Rules"
+          },
+          "activate": {
+            "title": "Activate Mandatory Training Rules"
+          }
+        }
+      }
+    }
+  }
+}

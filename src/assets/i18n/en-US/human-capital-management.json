@@ -1,0 +1,631 @@
+{
+  "module": {
+    "title": "Human Resources Management",
+    "description": "Manage staff, skills, employment types, and leave requests",
+    "menus": {
+      "root": {
+        "title": "Human Resources Management",
+        "description": "Human capital management"
+      }
+    },
+    "permissions": {
+      "title": "Human Capital Management",
+      "description": "Manage all aspects of human capital management"
+    }
+  },
+  "employees": {
+    "terms": {
+      "employee": "Employee",
+      "employees": "Employees"
+    },
+    "states": {
+      "active": "Active",
+      "on-leave": "On Leave",
+      "suspended": "Suspended",
+      "terminated": "Terminated",
+      "pending": "Pending"
+    },
+    "transitions": {
+      "activate": "Activate",
+      "start-leave": "Start Leave",
+      "return-from-leave": "Return from Leave",
+      "suspend": "Suspend",
+      "resume": "Resume",
+      "terminate": "Terminate"
+    },
+    "entities": {
+      "employee": {
+        "title": "Employee",
+        "plural": "Employees",
+        "search-result-description": "Employee and staff information",
+        "fields": {
+          "firstname": "First Name",
+          "lastname": "Last Name",
+          "email": "Email",
+          "employee-code": "Employee Code",
+          "role-id": "Role",
+          "position-id": "Position",
+          "employment-type-id": "Employment Type",
+          "hire-date": "Hire Date",
+          "manager": "Manager",
+          "manager-id": "Manager",
+          "primary-position": "Primary Position",
+          "primary-position-placeholder": "Calculated from active position assignments",
+          "primary-position-description": "This value is automatically populated from the employee's active primary position assignment.",
+          "active-position": "Active Position",
+          "manager-id-placeholder": "Calculated from the reporting structure",
+          "manager-id-description": "This value is automatically populated from the employee's current reporting structure.",
+          "primary-business-unit": "Business Unit",
+          "primary-business-unit-placeholder": "Calculated from active primary position assignment",
+          "primary-business-unit-description": "This value is automatically populated from the business unit linked to the employee's active primary position assignment.",
+          "signature": "Signature",
+          "job-definition": "Job Definition",
+          "integration-ref": "Integration Link"
+        },
+        "groups": {
+          "personal-information": "Personal Information",
+          "organizational-structure": "Organizational Structure",
+          "employment-profile": "Employment Profile",
+          "signature": "Signature"
+        },
+        "formats": {
+          "profile-display-name": "Profile"
+        },
+        "related-entities": {
+          "position-assignments": "Position Assignments",
+          "positions": "Positions",
+          "lifecycle-events": "Lifecycle Events",
+          "lifecycle-event-start": {
+            "title": "Start"
+          },
+          "leave-request-start": {
+            "title": "Request leave"
+          },
+          "login-credentials": "Login Credentials"
+        }
+      }
+    },
+    "menus": {
+      "employees": {
+        "title": "Employees",
+        "description": "Manage employees"
+      }
+    },
+    "permissions": {
+      "employees": {
+        "title": "Employee Management",
+        "description": "Manage employee records",
+        "actions": {
+          "view": {
+            "title": "View Employees",
+            "description": "View employee information"
+          },
+          "create": {
+            "title": "Create Employee",
+            "description": "Create new employees"
+          },
+          "edit": {
+            "title": "Edit Employee",
+            "description": "Edit employee information"
+          },
+          "delete": {
+            "title": "Delete Employees",
+            "description": "Delete employees"
+          }
+        }
+      }
+    }
+  },
+  "employment-types": {
+    "terms": {
+      "employment-type": "Employment Type",
+      "employment-types": "Employment Types"
+    },
+    "entities": {
+      "employment-type": {
+        "title": "Employment Type",
+        "plural": "Employment Types",
+        "search-result-description": "Employment type and contract reference",
+        "fields": {
+          "title": "Title",
+          "description": "Description"
+        },
+        "groups": {
+          "basic-info": "Basic Info"
+        }
+      }
+    },
+    "menus": {
+      "employment-types": {
+        "title": "Employment Types",
+        "description": "Manage employment types"
+      }
+    },
+    "permissions": {
+      "employment-types": {
+        "title": "Employment Type Management",
+        "description": "Manage employment types",
+        "actions": {
+          "view": {
+            "title": "View Employment Types",
+            "description": "View employment type information"
+          },
+          "create": {
+            "title": "Create Employment Type",
+            "description": "Create new employment types"
+          },
+          "edit": {
+            "title": "Edit Employment Type",
+            "description": "Edit employment type information"
+          },
+          "delete": {
+            "title": "Delete Employment Types",
+            "description": "Delete employment types"
+          }
+        }
+      }
+    }
+  },
+  "position-assignments": {
+    "terms": {
+      "position-assignment": "Position Assignment",
+      "position-assignments": "Position Assignments"
+    },
+    "entities": {
+      "position-assignment": {
+        "title": "Position Assignment",
+        "plural": "Position Assignments",
+        "search-result-description": "Employee position and organizational assignment",
+        "actions": {
+          "assign": {
+            "title": "Assign",
+            "description": "Create a new position assignment"
+          },
+          "revoke": {
+            "title": "Revoke",
+            "description": "End an active position assignment",
+            "confirm": {
+              "title": "Revoke Position Assignment",
+              "message": "Are you sure you want to revoke selected position assignment(s)?"
+            }
+          }
+        },
+        "fields": {
+          "employee-id": "Employee",
+          "position-id": "Position",
+          "status-id": "Status",
+          "scope-type": "Scope Type",
+          "scope": "Scope"
+        },
+        "groups": {
+          "assignment": "Assignment"
+        }
+      }
+    },
+    "states": {
+      "active": "Active",
+      "scheduled": "Scheduled",
+      "expired": "Expired",
+      "revoked": "Revoked"
+    },
+    "menus": {
+      "position-assignments": {
+        "title": "Position Assignments",
+        "description": "Manage position assignments"
+      }
+    },
+    "permissions": {
+      "position-assignments": {
+        "title": "Position Assignment Management",
+        "description": "Manage position assignments",
+        "actions": {
+          "view": {
+            "title": "View Position Assignments",
+            "description": "View position assignment information"
+          },
+          "create": {
+            "title": "Create Position Assignment",
+            "description": "Create new position assignments"
+          },
+          "edit": {
+            "title": "Edit Position Assignment",
+            "description": "Edit position assignment information"
+          },
+          "delete": {
+            "title": "Delete Position Assignments",
+            "description": "Delete position assignments"
+          }
+        }
+      }
+    }
+  },
+  "organization-chart": {
+    "node-actions": {
+      "position-assignment": "Manager",
+      "assign-manager": "Assign Manager",
+      "change-manager": "Change Manager",
+      "revoke-manager-assignment": "Revoke Manager Assignment",
+      "revoke-manager-assignment-confirm-title": "Revoke Manager Assignment",
+      "revoke-manager-assignment-confirm-message": "Are you sure you want to end this manager assignment now?",
+      "select-employee": "Select Employee"
+    }
+  },
+  "leave-types": {
+    "terms": {
+      "leave-type": "Leave Type",
+      "leave-types": "Leave Types"
+    },
+    "entities": {
+      "leave-type": {
+        "title": "Leave Type",
+        "plural": "Leave Types",
+        "search-result-description": "Leave type and time-off configuration",
+        "fields": {
+          "title": "Title",
+          "description": "Description"
+        },
+        "groups": {
+          "basic-info": "Basic Info"
+        }
+      }
+    },
+    "menus": {
+      "leave-types": {
+        "title": "Leave Types",
+        "description": "Manage leave types"
+      }
+    },
+    "permissions": {
+      "leave-types": {
+        "title": "Leave Type Management",
+        "description": "Manage leave types",
+        "actions": {
+          "view": {
+            "title": "View Leave Types",
+            "description": "View leave type information"
+          },
+          "create": {
+            "title": "Create Leave Type",
+            "description": "Create new leave types"
+          },
+          "edit": {
+            "title": "Edit Leave Type",
+            "description": "Edit leave type information"
+          },
+          "delete": {
+            "title": "Delete Leave Types",
+            "description": "Delete leave types"
+          }
+        }
+      }
+    }
+  },
+  "lifecycle-event-types": {
+    "terms": {
+      "lifecycle-event-type": "Employee Event Type",
+      "lifecycle-event-types": "Employee Event Types"
+    },
+    "entities": {
+      "lifecycle-event-type": {
+        "title": "Employee Event Type",
+        "plural": "Employee Event Types",
+        "search-result-description": "Workflow template and default parameters for employee lifecycle events.",
+        "fields": {
+          "title": "Title",
+          "description": "Description"
+        }
+      }
+    },
+    "menus": {
+      "lifecycle-event-types": {
+        "title": "Employee Event Types",
+        "description": "Configure onboarding, separation, and other employee event templates."
+      }
+    },
+    "permissions": {
+      "lifecycle-event-types": {
+        "title": "Employee Event Type Management",
+        "description": "Manage employee event types.",
+        "actions": {
+          "view": {
+            "title": "View Employee Event Types",
+            "description": "View employee event type definitions."
+          },
+          "create": {
+            "title": "Create Employee Event Type",
+            "description": "Create new employee event types."
+          },
+          "edit": {
+            "title": "Edit Employee Event Type",
+            "description": "Edit employee event type definitions."
+          },
+          "delete": {
+            "title": "Delete Employee Event Types",
+            "description": "Delete employee event types."
+          }
+        }
+      }
+    }
+  },
+  "leave-requests": {
+    "terms": {
+      "leave-request": "Leave Request",
+      "leave-requests": "Leave Requests"
+    },
+    "entities": {
+      "leave-request": {
+        "title": "Leave Request",
+        "plural": "Leave Requests",
+        "search-result-description": "Employee leave and time-off request",
+        "fields": {
+          "leave-type-id": "Leave Type",
+          "duration-days": "Duration (days)",
+          "reason": "Reason",
+          "manager-note": "Manager note",
+          "status": "Status"
+        },
+        "groups": {
+          "basic-info": "Basic Info",
+          "request-details": "Request Details"
+        }
+      }
+    },
+    "components": {
+      "rejection-dialog": {
+        "title": "Reject Leave Request",
+        "message": "Please provide a reason for rejecting this leave request.",
+        "fields": {
+          "reason-label": "Rejection Reason",
+          "reason-placeholder": "Enter the reason for rejection...",
+          "reason-description": "Please provide a clear reason for rejecting this leave request.",
+          "note-label": "Additional Notes",
+          "note-placeholder": "Add any additional notes or comments...",
+          "note-description": "Optional additional information about the rejection."
+        }
+      },
+      "cancellation-dialog": {
+        "title": "Cancel Leave Request",
+        "message": "Please provide a reason for cancelling this leave request.",
+        "fields": {
+          "reason-label": "Cancellation Reason",
+          "reason-placeholder": "Enter the reason for cancellation...",
+          "reason-description": "Please provide a clear reason for cancelling this leave request.",
+          "note-label": "Additional Notes",
+          "note-placeholder": "Add any additional notes or comments...",
+          "note-description": "Optional additional information about the cancellation."
+        },
+        "actions": {
+          "submit-text": "Cancel Leave Request",
+          "cancel-text": "Keep Request"
+        }
+      },
+      "approval-dialog": {
+        "title": "Approve Leave Request",
+        "message": "You can add optional notes when approving this leave request.",
+        "fields": {
+          "note-label": "Approval Notes",
+          "note-placeholder": "Add any notes or comments...",
+          "note-description": "Optional notes about the approval decision."
+        }
+      }
+    },
+    "states": {
+      "waiting-approval": "Waiting Approval",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "cancelled": "Cancelled"
+    },
+    "tasks": {
+      "task-title": "{{employeeDisplayName}} — {{leaveTypeTitle}}",
+      "actions": {
+        "review": "Review",
+        "reject": "Reject"
+      },
+      "manager-approval": {
+        "description": "Review leave request for {{employeeDisplayName}} ({{leaveTypeTitle}}), {{startDate}} to {{endDate}} ({{durationDays}} days). Approve or reject when ready."
+      }
+    },
+    "messages": {
+      "request-not-implemented": "This leave type is not set up with a workflow yet.",
+      "leave-request-start-cancelled": "Starting the leave request was cancelled.",
+      "sign-off": "Review the leave request details and sign off to approve.",
+      "rejection": "Provide a reason for rejecting this leave request.",
+      "replace-open": {
+        "confirm": {
+          "title": "Leave request already in progress",
+          "message": "A pending {{leaveTypeTitle}} request already exists for this employee. Close it and start a new one? The current approval flow will be cancelled."
+        }
+      }
+    },
+    "menus": {
+      "leave-requests": {
+        "title": "Leave Requests",
+        "description": "Manage leave requests"
+      },
+      "appointment-board": {
+        "title": "Appointment Board",
+        "description": "Manage appointment board"
+      }
+    },
+    "permissions": {
+      "leave-requests": {
+        "title": "Leave Request Management",
+        "description": "Manage leave requests",
+        "actions": {
+          "view": {
+            "title": "View Leave Requests",
+            "description": "View leave request information"
+          },
+          "create": {
+            "title": "Create Leave Request",
+            "description": "Create new leave requests"
+          },
+          "edit": {
+            "title": "Edit Leave Request",
+            "description": "Edit leave request information"
+          },
+          "delete": {
+            "title": "Delete Leave Requests",
+            "description": "Delete leave requests"
+          }
+        }
+      }
+    }
+  },
+  "lifecycle-events": {
+    "states": {
+      "in-progress": "In Progress",
+      "completed": "Completed",
+      "cancelled": "Cancelled"
+    },
+    "transitions": {
+      "await-sign-off": "Await Sign-off",
+      "complete": "Complete"
+    },
+    "messages": {
+      "event-not-implemented": "This lifecycle event is not set up yet.",
+      "lifecycle-start-cancelled": "Starting the lifecycle event was cancelled.",
+      "sign-off": "Review the questionnaire answers and sign off to apply the configured employee status.",
+      "rejection": "Provide a reason for rejecting this lifecycle event.",
+      "replace-open": {
+        "confirm": {
+          "title": "Lifecycle event already in progress",
+          "message": "An in-progress {{eventTypeTitle}} already exists for this employee. Close it and start a new one? The current checklist and approvals will be cancelled."
+        }
+      }
+    },
+    "tasks": {
+      "task-title": "{{eventTypeTitle}} — {{employeeDisplayName}}",
+      "questionnaire": {
+        "description": "Complete the questionnaire for {{employeeDisplayName}} ({{eventTypeTitle}}). Effective date: {{effectiveDate}}. Use Open questionnaire when ready."
+      },
+      "manager-approval": {
+        "description": "Review questionnaire answers for {{employeeDisplayName}} ({{eventTypeTitle}}) and sign off or reject to apply the configured employee status. Effective date: {{effectiveDate}}."
+      }
+    },
+    "entities": {
+      "lifecycle-event": {
+        "title": "Lifecycle Event",
+        "plural": "Lifecycle Events",
+        "search-result-description": "Onboarding, separation, or another guided employee lifecycle event.",
+        "groups": {
+          "event-details": "Details"
+        },
+        "fields": {
+          "event-type-id": "Event",
+          "assigned-to-user-id": "Assigned To",
+          "pinned-workflow-version": "Workflow Version",
+          "workflow-instance-id": "Workflow Instance",
+          "effective-date": "Date",
+          "notes": "Notes"
+        }
+      }
+    },
+    "menus": {
+      "lifecycle-events": {
+        "title": "Lifecycle Events",
+        "description": "Track onboarding, separation, and similar employee lifecycle events."
+      }
+    },
+    "permissions": {
+      "lifecycle-events": {
+        "title": "Lifecycle Event Management",
+        "description": "Manage lifecycle event instances (onboarding, separation, and similar flows).",
+        "actions": {
+          "view": {
+            "title": "View Lifecycle Events",
+            "description": "View lifecycle event instances."
+          },
+          "create": {
+            "title": "Create Lifecycle Event",
+            "description": "Start a new lifecycle event for an employee."
+          },
+          "edit": {
+            "title": "Edit Lifecycle Event",
+            "description": "Edit lifecycle event instances."
+          },
+          "delete": {
+            "title": "Delete Lifecycle Events",
+            "description": "Delete lifecycle event instances."
+          }
+        }
+      }
+    }
+  },
+  "features": {
+    "employee-management": {
+      "title": "Employee Management",
+      "description": "Manage employees, employment types, and position assignments"
+    },
+    "leave-management": {
+      "title": "Leave Management",
+      "description": "Manage leave types and leave requests"
+    },
+    "lifecycle-management": {
+      "title": "Employment Flows",
+      "description": "Configure process templates and track employment flows such as onboarding and separation."
+    }
+  },
+  "settings": {
+    "nav-title": "Human Capital",
+    "title": "Human Capital Settings",
+    "description": "Settings for human capital management module"
+  },
+  "catalog-scopes": {
+    "hr": {
+      "title": "Human Resources",
+      "description": "Questionnaires, question bank items, and workflow definitions for employee lifecycle and leave management."
+    }
+  },
+  "task-providers": {
+    "leave-request": {
+      "title": "Leave Requests",
+      "description": "Tasks related to leave requests"
+    }
+  },
+  "profile-page": {
+    "groups": {
+      "documents": {
+        "title": "Documents",
+        "empty": "No documents are available for your profile."
+      }
+    },
+    "sections": {
+      "my-leave-requests": {
+        "title": "My Leave Requests",
+        "description": "Review time-off requests and their approval status.",
+        "actions": {
+          "manage": "View My Leave Requests"
+        }
+      }
+    },
+    "commands": {
+      "view-my-leave-requests": {
+        "coming-soon": "Leave requests will be available soon."
+      },
+      "edit-personal-info": {
+        "dialog": {
+          "title": "Basic Information"
+        },
+        "messages": {
+          "success": "Your information was updated.",
+          "required-name": "First name and last name are required.",
+          "no-employee": "No employee profile is linked to your account.",
+          "person-not-found": "Your personal record could not be loaded."
+        }
+      },
+      "edit-signature": {
+        "dialog": {
+          "title": "Signature"
+        },
+        "messages": {
+          "success": "Your signature was saved.",
+          "removed": "Your signature was removed.",
+          "required": "Draw your signature before saving.",
+          "no-employee": "No employee profile is linked to your account.",
+          "employee-not-found": "Your employee record could not be loaded."
+        }
+      }
+    }
+  }
+}

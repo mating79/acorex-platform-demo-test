@@ -1,0 +1,66 @@
+{
+  "feature": {
+    "title": "Layout Designer",
+    "description": "Design and build layouts with widgets and data sources"
+  },
+  "property-editor": {
+    "placeholders": {
+      "default-value-plain-text": "Text to use when the bound field is empty",
+      "default-value-large-text": "Multi-line text to use when the field is empty",
+      "default-value-rich-text": "Formatted default content when the field is empty",
+      "default-value-select": "Choose the option to pre-select",
+      "default-value-number": "Numeric value to use when the field is empty",
+      "number-min-value": "Smallest number allowed (leave empty for no minimum)",
+      "number-max-value": "Largest number allowed (leave empty for no maximum)"
+    }
+  },
+  "components": {
+    "data-sources": {
+      "title": "Data Sources",
+      "empty-states": {
+        "no-data-sources": {
+          "title": "No Data Sources Found",
+          "description": "No data sources are available in this document. Add a data source to start building your layout."
+        }
+      }
+    },
+    "outline": {
+      "title": "Outline",
+      "empty-states": {
+        "no-widgets": {
+          "title": "No Widgets Found",
+          "description": "No widgets have been added to this page yet. Add widgets to start building your layout."
+        }
+      }
+    },
+    "history": {
+      "title": "History",
+      "empty-states": {
+        "no-changes": {
+          "title": "No Changes Made",
+          "description": "No changes have been made to this layout yet. Start editing to see your changes here."
+        }
+      }
+    }
+  },
+  "keyboard-shortcuts": {
+    "groups": {
+      "file": "File",
+      "edit": "Edit",
+      "run": "Run"
+    },
+    "new": "New Document",
+    "save": "Save",
+    "save-as": "Save As",
+    "preview": "Preview",
+    "preview-window": "Preview in Separate Window",
+    "undo": "Undo",
+    "redo": "Redo",
+    "copy": "Copy",
+    "cut": "Cut",
+    "paste": "Paste",
+    "clone": "Clone",
+    "delete-widget": "Delete Widget",
+    "insert-widget": "Insert Widget"
+  }
+}

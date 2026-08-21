@@ -1,0 +1,71 @@
+{
+  "feature": {
+    "title": "Activity Log",
+    "description": "Track and display activity history for entities"
+  },
+  "terms": {
+    "created-at": "Created At",
+    "created-by": "Created By",
+    "modified-at": "Modified At",
+    "modified-by": "Modified By",
+    "deleted-at": "Deleted At",
+    "deleted-by": "Deleted By",
+    "created-by-title": "Created by {{user}} on {{date}}",
+    "updated-by-title": "Modified by {{user}} on {{date}}",
+    "deleted-by-title": "Deleted by {{user}} on {{date}}"
+  },
+  "components": {
+    "activity-log": {
+      "title": "Activity Log",
+      "description": "View entity activity history",
+      "empty-states": {
+        "no-history": {
+          "title": "No Activity",
+          "description": "No activity has been recorded."
+        }
+      }
+    },
+    "compare-view": {
+      "title": "Compare View",
+      "description": "Compare differences between records",
+      "show-only-differences": "Show Only Differences",
+      "differences-found": "Differences Found",
+      "values-match": "Values Match"
+    }
+  },
+  "changes": {
+    "added": "added",
+    "removed": "removed",
+    "replaced": "replaced",
+    "renamed": "renamed",
+    "metadata-updated": "metadata updated",
+    "updated": "updated",
+    "unknown-field": "{{name}}"
+  },
+  "actions": {
+    "view-history": {
+      "title": "Change History",
+      "description": "View change history"
+    },
+    "rename": {
+      "title": "Rename",
+      "description": "Rename this item"
+    },
+    "restore": {
+      "title": "Restore",
+      "description": "Restore previous version"
+    },
+    "make-copy": {
+      "title": "Make a Copy",
+      "description": "Create a copy of this item"
+    },
+    "compare-changes": {
+      "title": "Compare Changes",
+      "description": "Compare changes between versions"
+    },
+    "compare-records": {
+      "title": "Compare Records",
+      "description": "Compare different records"
+    }
+  }
+}

@@ -1,0 +1,459 @@
+{
+  "module": {
+    "title": "مدیریت جیرا",
+    "description": "مدیریت نمونه‌های جیرا، پروژه‌ها، ایشوها و لاگ کار",
+    "menus": {
+      "configuration": {
+        "title": "مدیریت جیرا"
+      }
+    }
+  },
+  "integration": {
+    "display-name": "Atlassian Jira",
+    "description": "اتصال به Jira Cloud یا نسخه self-hosted برای پیگیری ایشو و همگام‌سازی.",
+    "connect": {
+      "instance-picker": {
+        "title": "انتخاب نمونه Jira",
+        "empty": "هیچ نمونه Jira فعالی پیکربندی نشده است. ابتدا یک نمونه ایجاد کنید.",
+        "fields": {
+          "instance": "نمونه Jira"
+        },
+        "actions": {
+          "continue": "ادامه"
+        }
+      },
+      "pat-dialog": {
+        "title": "اتصال با توکن دسترسی شخصی",
+        "fields": {
+          "display-name": "نام نمایشی",
+          "instance-url": "آدرس نمونه",
+          "token": "توکن دسترسی شخصی"
+        },
+        "placeholders": {
+          "display-name": "Jira",
+          "instance-url": "https://jira.example.com",
+          "token": "توکن دسترسی شخصی را وارد کنید"
+        },
+        "actions": {
+          "save": "ذخیره اتصال"
+        }
+      },
+      "oauth-dialog": {
+        "title": "اتصال با OAuth 2.0",
+        "actions": {
+          "connect": "اتصال"
+        }
+      }
+    },
+    "auth": {
+      "pat": {
+        "label": "توکن دسترسی شخصی",
+        "base-url": { "placeholder": "https://jira.example.com" },
+        "token": { "placeholder": "توکن دسترسی شخصی" },
+        "instructions": "در Jira به Profile → Personal access tokens بروید (یا Account settings → Security → API tokens). توکن با scope مورد نیاز بسازید و اینجا وارد کنید."
+      },
+      "basic": {
+        "label": "نام کاربری و رمز عبور",
+        "base-url": { "placeholder": "https://jira.example.com" },
+        "username": { "placeholder": "نام کاربری" },
+        "password": { "placeholder": "رمز عبور" },
+        "instructions": "برای Jira self-hosted که basic authentication فعال است از نام کاربری و رمز عبور استفاده کنید. در صورت امکان PAT را ترجیح دهید."
+      },
+      "api-token": {
+        "label": "توکن API (Cloud)",
+        "site-url": { "placeholder": "https://your-domain.atlassian.net" },
+        "email": { "placeholder": "ایمیل حساب" },
+        "token": { "placeholder": "توکن API" },
+        "instructions": "در id.atlassian.com → Security → API tokens توکن بسازید. ایمیل حساب Atlassian و توکن API را برای Jira Cloud وارد کنید."
+      },
+      "oauth": {
+        "label": "OAuth 2.0",
+        "instructions": "برای Jira Cloud به Atlassian هدایت می‌شوید. وارد شوید و scopeهای درخواستی را تأیید کنید.",
+        "not-implemented": "OAuth Jira Cloud هنوز در دسترس نیست. از PAT، Basic یا API token استفاده کنید."
+      }
+    }
+  },
+  "settings": {
+    "jira": {
+      "section-title": "جیرا",
+      "section-description": "حساب Jira خود را برای پیگیری ایشو و همگام‌سازی متصل کنید.",
+      "connection-title": "حساب",
+      "connection-description": "روش احراز هویت را انتخاب کنید و اتصال Jira را ذخیره کنید."
+    }
+  },
+  "permissions": {
+    "group": {
+      "title": "مدیریت جیرا",
+      "description": "پیکربندی یکپارچه‌سازی جیرا و داده‌های mirror شده"
+    },
+    "management": {
+      "title": "مدیریت جیرا",
+      "description": "دسترسی کامل به موجودیت‌های پیکربندی جیرا"
+    },
+    "jira-instance": {
+      "view": { "title": "مشاهده نمونه‌های جیرا" },
+      "create": { "title": "ایجاد نمونه جیرا" },
+      "update": { "title": "ویرایش نمونه جیرا" },
+      "delete": { "title": "حذف نمونه جیرا" }
+    },
+    "jira-project": {
+      "view": { "title": "مشاهده پروژه‌های جیرا" },
+      "create": { "title": "ایجاد پروژه جیرا" },
+      "update": { "title": "ویرایش پروژه جیرا" },
+      "delete": { "title": "حذف پروژه جیرا" }
+    },
+    "jira-issue": {
+      "view": { "title": "مشاهده ایشوهای جیرا" },
+      "create": { "title": "ایجاد ایشو جیرا" },
+      "update": { "title": "ویرایش ایشو جیرا" },
+      "delete": { "title": "حذف ایشو جیرا" }
+    },
+    "jira-worklog": {
+      "view": { "title": "مشاهده لاگ کار" },
+      "create": { "title": "ایجاد لاگ کار" },
+      "update": { "title": "ویرایش لاگ کار" },
+      "delete": { "title": "حذف لاگ کار" }
+    },
+    "catalog": {
+      "view": { "title": "مشاهده کاتالوگ‌های جیرا" },
+      "manage": { "title": "مدیریت کاتالوگ‌های جیرا" }
+    },
+    "project-import": {
+      "execute": { "title": "ورود پروژه از جیرا" }
+    },
+    "project-sync": {
+      "execute": { "title": "همگام‌سازی پروژه با جیرا" }
+    }
+  },
+  "actions": {
+    "import-from-jira": {
+      "title": "ورود از جیرا"
+    },
+    "sync": {
+      "title": "همگام‌سازی"
+    }
+  },
+  "import": {
+    "not-connected": {
+      "title": "برای وارد کردن پروژه‌ها Jira را متصل کنید",
+      "message": "Jira برای این tenant متصل نیست. برای اتصال حساب، مدیریت ← یکپارچه‌سازی‌ها را باز کنید و دوباره وارد کردن را امتحان کنید."
+    },
+    "no-connection-for-instance": "برای نمونه انتخاب‌شده اتصال Jira پیدا نشد. ابتدا در تنظیمات → یکپارچه‌سازی‌ها آن را متصل کنید.",
+    "success": "{{imported}} پروژه وارد و {{updated}} پروژه به‌روزرسانی شد.",
+    "success-single": "«{{title}}» از Jira وارد شد.",
+    "selector": {
+      "title": "انتخاب پروژه Jira"
+    },
+    "dialog": {
+      "title": "ورود پروژه از Jira",
+      "submit": "ورود پروژه"
+    },
+    "loading": {
+      "fetch": {
+        "title": "در حال بارگذاری از Jira",
+        "status": "در حال کش کردن پروژه‌ها…"
+      },
+      "import": {
+        "title": "در حال ورود پروژه",
+        "status": "در حال ایجاد پروژه پلتفرم…"
+      }
+    },
+    "popup": {
+      "title": "ورود پروژه‌ها از جیرا",
+      "confirm": "ورود موارد انتخاب‌شده",
+      "empty": "پروژه‌ای از جیرا دریافت نشد.",
+      "default-project-type": "نوع پروژه پیش‌فرض برای ورودهای جدید",
+      "columns": {
+        "key": "کلید",
+        "name": "نام",
+        "strategy": "استراتژی همگام‌سازی"
+      }
+    },
+    "sync-strategy": {
+      "title": "استراتژی همگام‌سازی",
+      "options": {
+        "remoteOverride": "جیرا بر محلی اولویت دارد",
+        "localOverride": "حفظ مقادیر محلی",
+        "merge": "ادغام (پر کردن فیلدهای خالی محلی)"
+      },
+      "remoteOverride": "جیرا بر محلی اولویت دارد",
+      "localOverride": "حفظ مقادیر محلی",
+      "merge": "ادغام (پر کردن فیلدهای خالی محلی)"
+    }
+  },
+  "sync": {
+    "success": "پروژه با موفقیت با جیرا همگام‌سازی شد.",
+    "loading": {
+      "title": "همگام‌سازی با Jira",
+      "status": "در حال به‌روزرسانی پروژه از Jira…"
+    }
+  },
+  "project-links": {
+    "entities": {
+      "project-link": {
+        "title": "لینک پروژه",
+        "plural": "لینک‌های پروژه"
+      }
+    }
+  },
+  "instances": {
+    "entities": {
+      "instance": {
+        "title": "نمونه جیرا",
+        "plural": "نمونه‌های جیرا",
+        "groups": {
+          "connection": "اتصال",
+          "cloud-auth": "احراز هویت Cloud",
+          "self-hosted-auth": "احراز هویت Self-Hosted",
+          "sync": "همگام‌سازی"
+        },
+        "fields": {
+          "deployment-type": {
+            "title": "نوع استقرار",
+            "options": {
+              "cloud": "Atlassian Cloud",
+              "self-hosted": "Self-Hosted / Data Center"
+            }
+          },
+          "site-url": { "title": "آدرس سایت" },
+          "base-url": { "title": "آدرس پایه" },
+          "email": { "title": "ایمیل حساب" },
+          "api-token": { "title": "توکن API" },
+          "cloud-id": { "title": "شناسه Cloud" },
+          "auth-type": {
+            "title": "نوع احراز هویت",
+            "options": {
+              "pat": "توکن دسترسی شخصی",
+              "basic": "نام کاربری و رمز عبور"
+            }
+          },
+          "personal-access-token": { "title": "توکن دسترسی شخصی" },
+          "username": { "title": "نام کاربری" },
+          "password": { "title": "رمز عبور" },
+          "verify-ssl": { "title": "بررسی گواهی SSL" },
+          "api-version": { "title": "نسخه REST API" },
+          "is-active": { "title": "فعال" },
+          "admin-token": {
+            "title": "توکن همگام‌سازی ادمین",
+            "description": "توکن دسترسی شخصی که در mock برای دریافت داده از جیرا استفاده می‌شود."
+          },
+          "last-sync-at": { "title": "آخرین همگام‌سازی" }
+        },
+        "actions": {
+          "sync": {
+            "title": "همگام‌سازی از جیرا",
+            "loading": {
+              "title": "در حال همگام‌سازی داده‌های جیرا",
+              "description": "دریافت پروژه‌ها، issueها و کاتالوگ‌ها از نمونه جیرای راه‌دور."
+            },
+            "messages": {
+              "missing-instance": "شناسه نمونه جیرا الزامی است.",
+              "success": "{{projects}} پروژه و {{issues}} issue از جیرا همگام‌سازی شد.",
+              "failed": "همگام‌سازی جیرا ناموفق بود.",
+              "network-error": "اتصال به جیرا برقرار نشد. CORS، آدرس پایه و توکن را بررسی کنید."
+            }
+          }
+        }
+      }
+    }
+  },
+  "projects": {
+    "statuses": {
+      "active": "فعال",
+      "archived": "بایگانی‌شده",
+      "sync-error": "خطای همگام‌سازی"
+    },
+    "transitions": {
+      "archive": "بایگانی",
+      "activate": "فعال‌سازی",
+      "mark-sync-error": "ثبت خطای همگام‌سازی",
+      "resolve-sync-error": "رفع خطای همگام‌سازی"
+    },
+    "entities": {
+      "project": {
+        "title": "پروژه جیرا",
+        "plural": "پروژه‌های جیرا",
+        "groups": {
+          "jira-meta": "متادیتای جیرا",
+          "lead": "مسئول پروژه",
+          "platform-link": "پروژه پلتفرم",
+          "sync": "تنظیمات همگام‌سازی"
+        },
+        "fields": {
+          "platform-project": { "title": "پروژه پلتفرم" },
+          "sync-strategy": {
+            "title": "استراتژی همگام‌سازی",
+            "options": {
+              "remote-override": "جیرا بر محلی اولویت دارد",
+              "local-override": "حفظ مقادیر محلی",
+              "merge": "ادغام (پر کردن فیلدهای خالی)"
+            }
+          },
+          "last-sync-at": { "title": "آخرین همگام‌سازی" },
+          "jira-instance": { "title": "نمونه جیرا" },
+          "jira-project-id": { "title": "شناسه پروژه در جیرا" },
+          "key": { "title": "کلید پروژه" },
+          "name": { "title": "نام پروژه" },
+          "project-type-key": { "title": "کلید نوع پروژه" },
+          "style": { "title": "سبک" },
+          "simplified": { "title": "ساده‌شده (Team-Managed)" },
+          "lead-account-id": { "title": "شناسه حساب مسئول" },
+          "lead-display-name": { "title": "نام نمایشی مسئول" },
+          "avatar-url": { "title": "آدرس آواتار" }
+        }
+      }
+    }
+  },
+  "issue-types": {
+    "entities": {
+      "issue-type": {
+        "title": "نوع ایشو",
+        "plural": "انواع ایشو",
+        "groups": {
+          "jira-meta": "متادیتای جیرا"
+        },
+        "fields": {
+          "jira-instance": { "title": "نمونه جیرا" },
+          "jira-issue-type-id": { "title": "شناسه نوع ایشو در جیرا" },
+          "name": { "title": "نام" },
+          "subtask": { "title": "زیروظیفه" },
+          "hierarchy-level": { "title": "سطح سلسله‌مراتب" },
+          "icon-url": { "title": "آدرس آیکون" }
+        }
+      }
+    }
+  },
+  "fields": {
+    "entities": {
+      "field": {
+        "title": "فیلد جیرا",
+        "plural": "فیلدهای جیرا",
+        "groups": {
+          "schema": "اسکیمای فیلد"
+        },
+        "fields": {
+          "jira-instance": { "title": "نمونه جیرا" },
+          "jira-field-id": { "title": "شناسه فیلد در جیرا" },
+          "name": { "title": "نام" },
+          "custom": { "title": "فیلد سفارشی" },
+          "field-type": { "title": "نوع فیلد" },
+          "schema": { "title": "اسکیما (JSON)" }
+        }
+      }
+    }
+  },
+  "project-issue-types": {
+    "entities": {
+      "project-issue-type": {
+        "title": "نوع ایشو پروژه",
+        "plural": "انواع ایشو پروژه",
+        "fields": {
+          "project": { "title": "پروژه" },
+          "issue-type": { "title": "نوع ایشو" }
+        }
+      }
+    }
+  },
+  "project-issue-type-fields": {
+    "entities": {
+      "project-issue-type-field": {
+        "title": "فیلد نوع ایشو پروژه",
+        "plural": "فیلدهای نوع ایشو پروژه",
+        "groups": {
+          "config": "پیکربندی فیلد"
+        },
+        "fields": {
+          "project": { "title": "پروژه" },
+          "issue-type": { "title": "نوع ایشو" },
+          "field": { "title": "فیلد" },
+          "required": { "title": "الزامی" },
+          "has-default-value": { "title": "دارای مقدار پیش‌فرض" },
+          "default-value": { "title": "مقدار پیش‌فرض (JSON)" },
+          "allowed-values": { "title": "مقادیر مجاز (JSON)" },
+          "order": { "title": "ترتیب نمایش" }
+        }
+      }
+    }
+  },
+  "workflow-statuses": {
+    "entities": {
+      "workflow-status": {
+        "title": "وضعیت گردش کار",
+        "plural": "وضعیت‌های گردش کار",
+        "fields": {
+          "project": { "title": "پروژه" },
+          "issue-type": { "title": "نوع ایشو" },
+          "jira-status-id": { "title": "شناسه وضعیت در جیرا" },
+          "name": { "title": "نام وضعیت" },
+          "status-category-key": {
+            "title": "دسته وضعیت",
+            "options": {
+              "new": "انجام نشده",
+              "indeterminate": "در حال انجام",
+              "done": "انجام شده"
+            }
+          },
+          "order": { "title": "ترتیب" }
+        }
+      }
+    }
+  },
+  "issues": {
+    "entities": {
+      "issue": {
+        "title": "ایشو جیرا",
+        "plural": "ایشوهای جیرا",
+        "groups": {
+          "relations": "روابط",
+          "people": "افراد",
+          "jira-meta": "متادیتای جیرا",
+          "custom": "داده سفارشی"
+        },
+        "fields": {
+          "jira-instance": { "title": "نمونه جیرا" },
+          "project": { "title": "پروژه" },
+          "issue-type": { "title": "نوع ایشو" },
+          "workflow-status": { "title": "وضعیت گردش کار" },
+          "jira-issue-id": { "title": "شناسه ایشو در جیرا" },
+          "jira-issue-key": { "title": "کلید ایشو" },
+          "summary": { "title": "خلاصه" },
+          "assignee-account-id": { "title": "شناسه حساب مسئول" },
+          "assignee-display-name": { "title": "مسئول" },
+          "reporter-account-id": { "title": "شناسه حساب گزارش‌دهنده" },
+          "reporter-display-name": { "title": "گزارش‌دهنده" },
+          "priority-name": { "title": "اولویت" },
+          "parent-issue": { "title": "ایشوی والد" },
+          "resolution-name": { "title": "نتیجه" },
+          "labels": { "title": "برچسب‌ها (JSON)" },
+          "custom-fields": { "title": "فیلدهای سفارشی (JSON)" },
+          "jira-created": { "title": "تاریخ ایجاد در جیرا" },
+          "jira-updated": { "title": "تاریخ به‌روزرسانی در جیرا" }
+        }
+      }
+    }
+  },
+  "worklogs": {
+    "entities": {
+      "worklog": {
+        "title": "لاگ کار",
+        "plural": "لاگ‌های کار",
+        "groups": {
+          "time": "زمان",
+          "jira-meta": "متادیتای جیرا"
+        },
+        "fields": {
+          "issue": { "title": "ایشو" },
+          "jira-worklog-id": { "title": "شناسه لاگ کار در جیرا" },
+          "author-account-id": { "title": "شناسه حساب نویسنده" },
+          "author-display-name": { "title": "نویسنده" },
+          "started": { "title": "شروع" },
+          "time-spent-seconds": { "title": "زمان صرف‌شده (ثانیه)" },
+          "time-spent-display": { "title": "زمان صرف‌شده" },
+          "comment": { "title": "توضیح" },
+          "jira-created": { "title": "تاریخ ایجاد در جیرا" },
+          "jira-updated": { "title": "تاریخ به‌روزرسانی در جیرا" }
+        }
+      }
+    }
+  }
+}

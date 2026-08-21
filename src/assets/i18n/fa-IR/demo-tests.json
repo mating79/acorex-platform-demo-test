@@ -1,0 +1,19 @@
+{
+  "ai-direct": {
+    "title": "گفتگوی مستقیم با AI",
+    "description": "بدون لایه چت مکالمه، مستقیم با موتور AI صحبت کنید.",
+    "description-with-timing": "آخرین پاسخ {{elapsed}} میلی‌ثانیه. اولین توکن {{firstToken}} میلی‌ثانیه.",
+    "description-with-elapsed": "آخرین پاسخ {{elapsed}} میلی‌ثانیه.",
+    "assist-label": "دستیار",
+    "assist-unknown": "دستیار پیش‌فرض",
+    "empty": "یک پیام متنی بفرستید. این صفحه مستقیم موتور AI را صدا می‌زند — بدون مکالمه و بدون فایل.",
+    "placeholder": "پیام را بنویسید",
+    "timing": {
+      "elapsed": "{{ms}} میلی‌ثانیه",
+      "first-token": "اولین توکن {{ms}} میلی‌ثانیه"
+    },
+    "errors": {
+      "run-failed": "موتور AI نتوانست این پاسخ را کامل کند."
+    }
+  }
+}

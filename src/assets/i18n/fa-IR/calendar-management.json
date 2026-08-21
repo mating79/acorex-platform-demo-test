@@ -1,0 +1,415 @@
+{
+  "module": {
+    "title": "مدیریت تقویم",
+    "description": "مدیریت تقویم‌ها، مناسبت‌ها و تعطیلات",
+    "menus": {
+      "root": {
+        "title": "مدیریت تقویم",
+        "description": "مدیریت تقویم‌ها و مناسبت‌ها"
+      },
+      "foundation-group": {
+        "title": "تقویم‌ها",
+        "description": "پیکربندی تقویم و انواع مناسبت"
+      }
+    }
+  },
+  "calendars": {
+    "week-days": {
+      "sunday": "یکشنبه",
+      "monday": "دوشنبه",
+      "tuesday": "سه‌شنبه",
+      "wednesday": "چهارشنبه",
+      "thursday": "پنج‌شنبه",
+      "friday": "جمعه",
+      "saturday": "شنبه"
+    },
+    "calendar-systems": {
+      "gregorian": "تقویم میلادی",
+      "solar-hijri": "تقویم هجری شمسی"
+    },
+    "terms": {
+      "calendar": "تقویم",
+      "calendars": "تقویم‌ها"
+    },
+    "entities": {
+      "calendar": {
+        "title": "تقویم",
+        "plural": "تقویم‌ها",
+        "fields": {
+          "calendar-type": {
+            "title": "نوع تقویم",
+            "description": "نوع تقویم",
+            "placeholder": "نوع تقویم را انتخاب کنید"
+          },
+          "parent-calendar": {
+            "title": "تقویم والد",
+            "description": "تقویم والد برای ارث‌بری",
+            "placeholder": "تقویم والد را انتخاب کنید"
+          },
+          "scope-type": {
+            "title": "نوع دامنه",
+            "description": "نوع دامنه",
+            "placeholder": "نوع دامنه را انتخاب کنید"
+          },
+          "scope-entity-id": {
+            "title": "شناسه نهاد دامنه",
+            "description": "شناسه نهاد برای دامنه",
+            "placeholder": "شناسه نهاد را وارد کنید"
+          },
+          "weekend-pattern": {
+            "title": "روزهای تعطیل آخر هفته",
+            "description": "الگوی روزهای تعطیل آخر هفته"
+          },
+          "first-day-of-week": {
+            "title": "اولین روز هفته",
+            "description": "روز شروع هفته"
+          },
+          "working-hours-config": {
+            "title": "پیکربندی ساعات کاری",
+            "description": "پیکربندی برای ساعات کاری"
+          },
+          "is-template": {
+            "title": "الگو است",
+            "description": "علامت‌گذاری به عنوان تقویم الگو"
+          }
+        },
+        "groups": {
+          "classification": "طبقه‌بندی",
+          "inheritance": "ارث‌بری",
+          "scope-settings": "تنظیمات دامنه",
+          "week-configuration": "پیکربندی هفته",
+          "working-hours": "ساعات کاری"
+        }
+      }
+    },
+    "permissions": {
+      "calendar": {
+        "title": "تقویم‌ها",
+        "actions": {
+          "manage": {
+            "title": "مدیریت تقویم‌ها",
+            "description": "دسترسی کامل به مدیریت تقویم"
+          },
+          "view": {
+            "title": "مشاهده تقویم‌ها",
+            "description": "مشاهده اطلاعات تقویم"
+          },
+          "create": {
+            "title": "ایجاد تقویم‌ها",
+            "description": "ایجاد تقویم‌های جدید"
+          },
+          "update": {
+            "title": "به‌روزرسانی تقویم‌ها",
+            "description": "به‌روزرسانی اطلاعات تقویم"
+          },
+          "delete": {
+            "title": "حذف تقویم‌ها",
+            "description": "حذف تقویم‌ها"
+          },
+          "admin": {
+            "title": "مدیریت سامانه تقویم",
+            "description": "دسترسی کامل به مدیریت سامانه تقویم"
+          }
+        }
+      }
+    }
+  },
+  "calendar-types": {
+    "terms": {
+      "calendar-type": "نوع تقویم",
+      "calendar-types": "انواع تقویم"
+    },
+    "entities": {
+      "calendar-type": {
+        "title": "نوع تقویم",
+        "plural": "انواع تقویم",
+        "fields": {
+          "code": {
+            "title": "کد نوع تقویم",
+            "description": "کد یکتا برای نوع تقویم",
+            "placeholder": "کد نوع تقویم را وارد کنید"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "calendar-type": {
+        "title": "انواع تقویم",
+        "actions": {
+          "manage": {
+            "title": "مدیریت انواع تقویم",
+            "description": "دسترسی کامل به مدیریت نوع تقویم"
+          },
+          "view": {
+            "title": "مشاهده انواع تقویم",
+            "description": "مشاهده اطلاعات نوع تقویم"
+          },
+          "create": {
+            "title": "ایجاد انواع تقویم",
+            "description": "ایجاد انواع جدید تقویم"
+          },
+          "update": {
+            "title": "به‌روزرسانی انواع تقویم",
+            "description": "به‌روزرسانی اطلاعات نوع تقویم"
+          },
+          "delete": {
+            "title": "حذف انواع تقویم",
+            "description": "حذف انواع تقویم"
+          }
+        }
+      }
+    }
+  },
+  "date-exceptions": {
+    "terms": {
+      "date-exception": "استثنای تاریخ",
+      "date-exceptions": "استثناهای تاریخ"
+    },
+    "entities": {
+      "date-exception": {
+        "title": "استثنای تاریخ",
+        "plural": "استثناهای تاریخ",
+        "fields": {
+          "exception-type": {
+            "title": "نوع استثنا",
+            "description": "نوع استثنا",
+            "placeholder": "نوع استثنا را انتخاب کنید"
+          },
+          "calendar-id": {
+            "title": "تقویم",
+            "description": "تقویم مرتبط",
+            "placeholder": "تقویم را انتخاب کنید"
+          },
+          "is-recurring": {
+            "title": "تکرارشونده است",
+            "description": "آیا استثنا تکرار می‌شود"
+          },
+          "recurrence-rule-id": {
+            "title": "قانون تکرار",
+            "description": "قانون برای تکرار",
+            "placeholder": "قانون تکرار را انتخاب کنید"
+          },
+          "overrides-parent": {
+            "title": "جایگزین والد می‌شود",
+            "description": "جایگزینی تنظیمات تقویم والد"
+          },
+          "start-time": {
+            "title": "زمان شروع",
+            "description": "زمان شروع استثنا",
+            "placeholder": "زمان شروع را انتخاب کنید"
+          },
+          "end-time": {
+            "title": "زمان پایان",
+            "description": "زمان پایان استثنا",
+            "placeholder": "زمان پایان را انتخاب کنید"
+          },
+          "is-all-day": {
+            "title": "تمام روز",
+            "description": "استثنای تمام روز"
+          },
+          "end-date": {
+            "title": "تاریخ پایان",
+            "description": "تاریخ پایان استثنا",
+            "placeholder": "تاریخ پایان را انتخاب کنید"
+          }
+        },
+        "groups": {
+          "date-time": "تاریخ و زمان",
+          "recurrence": "تکرار",
+          "override-settings": "تنظیمات جایگزینی"
+        }
+      }
+    }
+  },
+  "calendar-occasions": {
+    "terms": {
+      "calendar-occasion": "مناسبت تقویم",
+      "calendar-occasions": "مناسبت‌های تقویم"
+    },
+    "entities": {
+      "calendar-occasion": {
+        "title": "مناسبت تقویم",
+        "plural": "مناسبت‌های تقویم",
+        "fields": {
+          "calendar": {
+            "title": "تقویم",
+            "description": "تقویم مرتبط",
+            "placeholder": "تقویم را انتخاب کنید"
+          },
+          "type": {
+            "title": "نوع مناسبت",
+            "description": "نوع مناسبت",
+            "placeholder": "نوع مناسبت را انتخاب کنید"
+          },
+          "is-recurring": {
+            "title": "تکرارشونده است",
+            "description": "آیا مناسبت تکرار می‌شود"
+          },
+          "recurrence-rule": {
+            "title": "قانون تکرار",
+            "description": "قانون برای تکرار",
+            "placeholder": "قانون تکرار را انتخاب کنید"
+          },
+          "start-time": {
+            "title": "زمان شروع",
+            "description": "زمان شروع مناسبت",
+            "placeholder": "زمان شروع را انتخاب کنید"
+          },
+          "end-time": {
+            "title": "زمان پایان",
+            "description": "زمان پایان مناسبت",
+            "placeholder": "زمان پایان را انتخاب کنید"
+          },
+          "is-all-day": {
+            "title": "تمام روز",
+            "description": "مناسبت تمام روز"
+          },
+          "is-public-holiday": {
+            "title": "تعطیل رسمی",
+            "description": "آیا این مناسبت در تقویم مربوطه تعطیل رسمی است"
+          }
+        },
+        "groups": {
+          "date-time": "تاریخ و زمان",
+          "recurrence": "تکرار"
+        }
+      }
+    },
+    "permissions": {
+      "calendar-occasion": {
+        "title": "مناسبت‌های تقویم",
+        "actions": {
+          "manage": {
+            "title": "مدیریت مناسبت‌های تقویم",
+            "description": "دسترسی کامل به مدیریت مناسبت تقویم"
+          },
+          "view": {
+            "title": "مشاهده مناسبت‌های تقویم",
+            "description": "مشاهده اطلاعات مناسبت تقویم"
+          },
+          "create": {
+            "title": "ایجاد مناسبت‌های تقویم",
+            "description": "ایجاد مناسبت‌های جدید تقویم"
+          },
+          "update": {
+            "title": "به‌روزرسانی مناسبت‌های تقویم",
+            "description": "به‌روزرسانی اطلاعات مناسبت تقویم"
+          },
+          "delete": {
+            "title": "حذف مناسبت‌های تقویم",
+            "description": "حذف مناسبت‌های تقویم"
+          }
+        }
+      }
+    }
+  },
+  "calendar-occasion-types": {
+    "terms": {
+      "calendar-occasion-type": "نوع مناسبت تقویم",
+      "calendar-occasion-types": "انواع مناسبت تقویم"
+    },
+    "entities": {
+      "calendar-occasion-type": {
+        "title": "نوع مناسبت تقویم",
+        "plural": "انواع مناسبت تقویم",
+        "fields": {
+          "is-default": {
+            "title": "پیش‌فرض است",
+            "description": "نوع مناسبت پیش‌فرض"
+          },
+          "is-public-holiday": {
+            "title": "تعطیل رسمی",
+            "description": "مقدار پیش‌فرض تعطیل رسمی برای مناسبت‌های جدید این نوع"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "calendar-occasion-type": {
+        "title": "انواع مناسبت تقویم",
+        "actions": {
+          "manage": {
+            "title": "مدیریت انواع مناسبت تقویم",
+            "description": "دسترسی کامل به مدیریت نوع مناسبت تقویم"
+          },
+          "view": {
+            "title": "مشاهده انواع مناسبت تقویم",
+            "description": "مشاهده اطلاعات نوع مناسبت تقویم"
+          },
+          "create": {
+            "title": "ایجاد انواع مناسبت تقویم",
+            "description": "ایجاد انواع جدید مناسبت تقویم"
+          },
+          "update": {
+            "title": "به‌روزرسانی انواع مناسبت تقویم",
+            "description": "به‌روزرسانی اطلاعات نوع مناسبت تقویم"
+          },
+          "delete": {
+            "title": "حذف انواع مناسبت تقویم",
+            "description": "حذف انواع مناسبت تقویم"
+          }
+        }
+      }
+    }
+  },
+  "calendar-scopes": {
+    "terms": {
+      "calendar-scope": "دامنه تقویم",
+      "calendar-scopes": "دامنه‌های تقویم"
+    },
+    "entities": {
+      "calendar-scope": {
+        "title": "دامنه تقویم",
+        "plural": "دامنه‌های تقویم",
+        "fields": {
+          "calendar-id": {
+            "title": "تقویم",
+            "description": "تقویم مرتبط",
+            "placeholder": "تقویم را انتخاب کنید"
+          },
+          "scope-type": {
+            "title": "نوع دامنه",
+            "description": "نوع دامنه",
+            "placeholder": "نوع دامنه را انتخاب کنید"
+          },
+          "scope-entity-id": {
+            "title": "شناسه نهاد دامنه",
+            "description": "شناسه نهاد برای دامنه",
+            "placeholder": "شناسه نهاد را وارد کنید"
+          },
+          "permissions": {
+            "title": "مجوزها",
+            "description": "مجوزهای دامنه"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "calendar-scope": {
+        "title": "دامنه‌های تقویم",
+        "actions": {
+          "manage": {
+            "title": "مدیریت دامنه‌های تقویم",
+            "description": "دسترسی کامل به مدیریت دامنه تقویم"
+          },
+          "view": {
+            "title": "مشاهده دامنه‌های تقویم",
+            "description": "مشاهده اطلاعات دامنه تقویم"
+          },
+          "create": {
+            "title": "ایجاد دامنه‌های تقویم",
+            "description": "ایجاد دامنه‌های جدید تقویم"
+          },
+          "update": {
+            "title": "به‌روزرسانی دامنه‌های تقویم",
+            "description": "به‌روزرسانی اطلاعات دامنه تقویم"
+          },
+          "delete": {
+            "title": "حذف دامنه‌های تقویم",
+            "description": "حذف دامنه‌های تقویم"
+          }
+        }
+      }
+    }
+  }
+}

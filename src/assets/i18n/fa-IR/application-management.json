@@ -1,0 +1,326 @@
+{
+  "module": {
+    "title": "مدیریت برنامه‌ها",
+    "description": "مدیریت برنامه‌ها و نسخه‌ها",
+    "menus": {
+      "root": {
+        "title": "مدیریت برنامه‌ها",
+        "description": "مدیریت برنامه‌ها و اجزای آنها"
+      },
+      "terms-page": {
+        "title": "شرایط و ضوابط",
+        "description": "مرور شرایط و ضوابط"
+      }
+    }
+  },
+  "permissions": {
+    "manage": {
+      "title": "مدیریت برنامه‌ها",
+      "description": "مدیریت برنامه‌ها و نسخه‌ها"
+    }
+  },
+  "features": {
+    "application-management": {
+      "title": "مدیریت برنامه‌ها",
+      "description": "فعال‌سازی قابلیت مدیریت برنامه‌ها"
+    }
+  },
+  "applications": {
+    "terms": {
+      "application": "برنامه",
+      "applications": "برنامه‌ها"
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت برنامه‌ها",
+        "description": "مدیریت برنامه‌ها، نسخه‌ها و ورژن‌ها"
+      }
+    },
+    "entities": {
+      "application": {
+        "title": "برنامه",
+        "plural": "برنامه‌ها",
+        "fields": {
+          "code": {
+            "title": "کد",
+            "description": "کد شناسه یکتا برای برنامه",
+            "placeholder": "کد برنامه را وارد کنید (مثال: SM)"
+          },
+          "title": {
+            "title": "عنوان",
+            "description": "عنوان برنامه",
+            "placeholder": "عنوان برنامه را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "description": "توضیحات برنامه",
+            "placeholder": "توضیحات برنامه را وارد کنید"
+          },
+          "version": {
+            "title": "نسخه",
+            "description": "شماره نسخه برنامه",
+            "placeholder": "نسخه را وارد کنید (مثال: 1.0.0)"
+          },
+          "category": {
+            "title": "دسته‌بندی",
+            "description": "دسته‌بندی یا نوع برنامه",
+            "placeholder": "دسته‌بندی را وارد کنید"
+          },
+          "tags": {
+            "title": "برچسب‌ها",
+            "description": "برچسب‌ها برای دسته‌بندی و جستجو",
+            "placeholder": "برچسب‌ها را وارد کنید"
+          },
+          "icon": {
+            "title": "آیکون",
+            "description": "شناسه یا کلاس آیکون برنامه",
+            "placeholder": "کلاس آیکون را وارد کنید (مثال: fa-cube)"
+          },
+          "logo": {
+            "title": "لوگو",
+            "description": "تصویر لوگوی برنامه",
+            "placeholder": "لوگوی برنامه را آپلود کنید"
+          },
+          "color": {
+            "title": "رنگ",
+            "description": "رنگ اصلی برنامه",
+            "placeholder": "رنگ را انتخاب کنید"
+          },
+          "url": {
+            "title": "آدرس",
+            "description": "آدرس یا لینک برنامه",
+            "placeholder": "آدرس برنامه را وارد کنید"
+          },
+          "documentation-url": {
+            "title": "آدرس مستندات",
+            "description": "لینک به مستندات برنامه",
+            "placeholder": "آدرس مستندات را وارد کنید"
+          },
+          "support-email": {
+            "title": "ایمیل پشتیبانی",
+            "description": "آدرس ایمیل تماس پشتیبانی",
+            "placeholder": "ایمیل پشتیبانی را وارد کنید"
+          },
+          "release-date": {
+            "title": "تاریخ انتشار",
+            "description": "تاریخ انتشار برنامه",
+            "placeholder": "تاریخ انتشار را انتخاب کنید"
+          },
+          "is-public": {
+            "title": "عمومی",
+            "description": "آیا برنامه به صورت عمومی در دسترس است",
+            "placeholder": "دسترسی عمومی را انتخاب کنید"
+          },
+          "edition": {
+            "title": "نسخه",
+            "description": "نسخه برنامه",
+            "placeholder": "نسخه را انتخاب کنید"
+          }
+        },
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "branding": "برندینگ",
+          "links": "لینک‌ها و تماس",
+          "metadata": "متادیتا",
+          "editions": "نسخه‌ها"
+        }
+      }
+    },
+    "states": {
+      "active": "فعال",
+      "inactive": "غیرفعال",
+      "suspended": "معلق",
+      "pending": "در انتظار"
+    },
+    "transitions": {
+      "activate": "فعال‌سازی",
+      "deactivate": "غیرفعال‌سازی",
+      "suspend": "تعلیق",
+      "resume": "از سرگیری"
+    }
+  },
+  "editions": {
+    "terms": {
+      "edition": "نسخه",
+      "editions": "نسخه‌ها"
+    },
+    "entities": {
+      "edition": {
+        "title": "نسخه",
+        "plural": "نسخه‌ها",
+        "fields": {
+          "title": {
+            "title": "عنوان",
+            "description": "عنوان نسخه",
+            "placeholder": "عنوان نسخه را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "description": "توضیحات نسخه",
+            "placeholder": "توضیحات نسخه را وارد کنید"
+          },
+          "modules-and-features": {
+            "title": "ماژول‌ها و ویژگی‌ها",
+            "description": "انتخاب ماژول‌ها و پیکربندی ویژگی‌های آنها",
+            "placeholder": "ماژول‌ها و ویژگی‌ها را انتخاب کنید"
+          }
+        },
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "modules": "ماژول‌ها و ویژگی‌ها"
+        },
+        "related-entities": {
+          "subscriptions": {
+            "title": "اشتراک‌ها"
+          }
+        }
+      }
+    },
+    "modules-editor": {
+      "search-placeholder": "جستجوی ماژول‌ها و ویژگی‌ها",
+      "view-mode": {
+        "type": "بر اساس نوع",
+        "domain": "بر اساس دامنه"
+      },
+      "always-available": "همیشه در دسترس",
+      "loading": "در حال بارگذاری ماژول‌ها...",
+      "empty": "ماژولی با این جستجو یافت نشد",
+      "badges": {
+        "required": "الزامی",
+        "dependency": "وابستگی",
+        "dependency-required": "وابستگی الزامی",
+        "dependency-of": "وابستگی الزامی برای: {{modules}}"
+      },
+      "types": {
+        "platform": "پلتفرم",
+        "domain": "ماژول‌های دامنه",
+        "integration": "یکپارچه‌سازی‌ها"
+      },
+      "domains": {
+        "platform": "پلتفرم",
+        "human-capital": "سرمایه انسانی",
+        "project-management": "مدیریت پروژه",
+        "asset-maintenance": "دارایی و نگهداری",
+        "workplace-safety": "ایمنی محیط کار",
+        "assessment-learning": "ارزیابی و یادگیری",
+        "finance-commerce": "مالی و بازرگانی",
+        "customer-supplier": "مشتری و تأمین‌کننده",
+        "communication": "ارتباطات",
+        "ai": "هوش مصنوعی",
+        "content-documents": "محتوا و اسناد",
+        "data": "داده",
+        "operations": "عملیات",
+        "weather": "آب‌وهوا",
+        "source-control": "کنترل نسخه",
+        "general": "عمومی"
+      },
+      "settings": {
+        "view-mode": {
+          "title": "حالت نمایش ماژول‌های نسخه",
+          "description": "گروه‌بندی پیش‌فرض فهرست ماژول‌های نسخه (بر اساس نوع یا دامنه)."
+        }
+      }
+    }
+  },
+  "versionNumber": "شماره نسخه",
+  "changeLogs": "گزارش تغییرات",
+  "publishDate": "تاریخ انتشار",
+  "notifyUser": "اطلاع‌رسانی به کاربر",
+  "app-versions": {
+    "entities": {
+      "app-version": {
+        "title": "نسخه برنامه",
+        "plural": "نسخه‌های برنامه"
+      }
+    }
+  },
+  "release-notes": {
+    "terms": {
+      "release-note": "یادداشت انتشار",
+      "release-notes": "یادداشت‌های انتشار"
+    },
+    "menus": {
+      "release-notes": {
+        "title": "یادداشت‌های انتشار",
+        "description": "مدیریت یادداشت‌های انتشار منتشر شده"
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت یادداشت‌های انتشار",
+        "description": "دسترسی کامل به مدیریت یادداشت‌های انتشار"
+      }
+    }
+  },
+  "help": {
+    "menus": {
+      "help": {
+        "title": "راهنما",
+        "description": "راهنما و پشتیبانی برنامه"
+      },
+      "release-notes": {
+        "title": "یادداشت‌های انتشار",
+        "description": "مشاهده به‌روزرسانی‌های اخیر پلتفرم و اطلاعات انتشار"
+      }
+    }
+  },
+  "app-terms": {
+    "terms": {
+      "app-term": "شرایط و ضوابط",
+      "app-terms": "شرایط و ضوابط"
+    },
+    "entities": {
+      "app-term": {
+        "title": "شرایط و ضوابط",
+        "plural": "شرایط و ضوابط",
+        "fields": {
+          "content": {
+            "title": "محتوا",
+            "description": "محتوای شرایط و ضوابط",
+            "placeholder": "محتوای شرایط و ضوابط را وارد کنید"
+          },
+          "version": {
+            "title": "نسخه",
+            "description": "شماره نسخه",
+            "placeholder": "شماره نسخه را وارد کنید"
+          },
+          "effective-date": {
+            "title": "تاریخ اعتبار",
+            "description": "تاریخی که شرایط معتبر می‌شود",
+            "placeholder": "تاریخ اعتبار را انتخاب کنید"
+          }
+        }
+      }
+    },
+    "pages": {
+      "terms-page": {
+        "title": "شرایط و ضوابط",
+        "description": "لطفاً شرایط و ضوابط را با دقت مطالعه کنید."
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت شرایط و ضوابط",
+        "description": "دسترسی کامل به شرایط و ضوابط"
+      }
+    }
+  },
+  "application-info": {
+    "settings": {
+      "display-pattern": {
+        "title": "الگوی نمایش اطلاعات برنامه",
+        "description": "سفارشی‌سازی نحوه نمایش اطلاعات برنامه در پاورقی. از متغیرهای زیر استفاده کنید: {appTitle}, {version}",
+        "placeholder": "{appTitle} v{version}"
+      }
+    },
+    "menus": {
+      "release-notes": {
+        "title": "یادداشت‌های انتشار",
+        "description": "مشاهده به‌روزرسانی‌های اخیر پلتفرم و اطلاعات انتشار"
+      }
+    }
+  },
+  "app-startup": {
+    "checking-terms": "در حال بررسی شرایط و ضوابط..."
+  }
+}

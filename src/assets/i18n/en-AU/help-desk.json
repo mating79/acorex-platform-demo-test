@@ -1,0 +1,212 @@
+{
+  "module": {
+    "title": "Help Desk",
+    "description": "Manage help desk issues, issue types, and provide support resources",
+    "menus": {
+      "root": {
+        "title": "Help Desk",
+        "description": "Access all help desk features"
+      }
+    }
+  },
+  "reported-issues": {
+    "terms": {
+      "reported-issue": "Reported Issue",
+      "reported-issues": "Reported Issues"
+    },
+    "states": {
+      "new": "New",
+      "in-progress": "In Progress",
+      "pending": "Pending",
+      "resolved": "Resolved",
+      "closed": "Closed"
+    },
+    "entities": {
+      "reported-issue": {
+        "title": "Reported Issue",
+        "plural": "Reported Issues"
+      }
+    },
+    "components": {
+      "reported-issues-list": {
+        "title": "Reported Issues",
+        "groups": {
+          "main": "Main",
+          "details": "Details",
+          "system": "System",
+          "comments": "Comments"
+        },
+        "fields": {
+          "user": "User",
+          "issue-type": "Issue Type",
+          "priority": "Priority",
+          "title": "Title",
+          "description": "Description",
+          "attachments": "Attachments",
+          "status": "Status",
+          "system-info": "System Info",
+          "error-logs": "Error Logs",
+          "created-at": "Created At"
+        }
+      }
+    },
+    "actions": {
+      "download-log": {
+        "title": "Download Log"
+      }
+    },
+    "menus": {
+      "reported-issues": {
+        "title": "Reported Issues",
+        "description": "Manage all reported issues"
+      }
+    },
+    "permissions": {
+      "reported-issues": {
+        "title": "Reported Issues",
+        "actions": {
+          "manage": {
+            "title": "Manage Reported Issues",
+            "description": "Full reported issues management access"
+          },
+          "view": {
+            "title": "View Reported Issues",
+            "description": "View reported issue information"
+          },
+          "create": {
+            "title": "Create Reported Issue",
+            "description": "Create new reported issues"
+          },
+          "edit": {
+            "title": "Edit Reported Issue",
+            "description": "Edit reported issue information"
+          },
+          "delete": {
+            "title": "Delete Reported Issues",
+            "description": "Delete reported issues"
+          }
+        }
+      }
+    }
+  },
+  "issue-types": {
+    "terms": {
+      "issue-type": "Issue Type",
+      "issue-types": "Issue Types"
+    },
+    "entities": {
+      "issue-type": {
+        "title": "Issue Type",
+        "plural": "Issue Types",
+        "fields": {
+          "title": "Title",
+          "description": "Description"
+        },
+        "groups": {
+          "main": "Main"
+        }
+      }
+    },
+    "menus": {
+      "issue-types": {
+        "title": "Issue Types",
+        "description": "Manage issue types"
+      }
+    }
+  },
+  "my-reported-issues": {
+    "terms": {
+      "my-reported-issue": "My Reported Issue",
+      "my-reported-issues": "My Reported Issues"
+    },
+    "entities": {
+      "my-reported-issue": {
+        "title": "My Reported Issue",
+        "plural": "My Reported Issues"
+      }
+    },
+    "menus": {
+      "my-reported-issues": {
+        "title": "Requests & Issues",
+        "description": "View your reported issues"
+      }
+    },
+    "permissions": {
+      "my-reported-issues": {
+        "title": "My Reported Issues",
+        "actions": {
+          "manage": {
+            "title": "Manage My Reported Issues",
+            "description": "Full my reported issues management access"
+          },
+          "view": {
+            "title": "View My Reported Issues",
+            "description": "View my reported issue information"
+          },
+          "create": {
+            "title": "Create My Reported Issue",
+            "description": "Create new my reported issues"
+          },
+          "edit": {
+            "title": "Edit My Reported Issue",
+            "description": "Edit my reported issue information"
+          },
+          "delete": {
+            "title": "Delete My Reported Issues",
+            "description": "Delete my reported issues"
+          }
+        }
+      }
+    }
+  },
+  "report-new-issue": {
+    "terms": {
+      "report-new-issue": "Report an Issue",
+      "report-new-issues": "Report an Issues"
+    },
+    "entities": {
+      "report-new-issue": {
+        "title": "Report an Issue",
+        "plural": "Report an Issues"
+      }
+    },
+    "components": {
+      "report-new-issue-form": {
+        "title": "Report an Issue",
+        "fields": {
+          "issue-type": "Issue Type",
+          "priority": "Priority",
+          "title": "Title",
+          "description": "Description",
+          "attachments": "Attachments"
+        },
+        "attach-box-description": "You can upload your screen",
+        "capture-screen": "Capture Screen",
+        "capture-screen-error": "Error starting screen recording. Please check your permissions and try again.",
+        "get-microphone-error": "Could not get microphone access, recording without microphone audio.",
+        "recording-time-limit": "Recording time limit reached (5 minute)"
+      }
+    },
+    "actions": {
+      "report-issue": {
+        "title": "Report an Issue"
+      }
+    }
+  },
+  "profile-page": {
+    "sections": {
+      "my-tickets": {
+        "title": "My Tickets",
+        "description": "Track support tickets you have submitted.",
+        "actions": {
+          "manage": "View My Tickets"
+        }
+      }
+    },
+    "commands": {
+      "view-my-tickets": {
+        "coming-soon": "My tickets will be available soon."
+      }
+    }
+  }
+}

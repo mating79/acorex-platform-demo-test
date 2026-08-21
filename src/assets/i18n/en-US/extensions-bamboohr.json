@@ -1,0 +1,116 @@
+{
+  "module": {
+    "title": "BambooHR",
+    "description": "Connect BambooHR and sync employees into Human Capital Management",
+    "menus": {
+      "configuration": {
+        "title": "BambooHR"
+      }
+    }
+  },
+  "integration": {
+    "display-name": "BambooHR",
+    "description": "Connect to BambooHR to sync employees into the platform.",
+    "domain": {
+      "title": "Human Capital",
+      "description": "HRIS and workforce integrations"
+    },
+    "auth": {
+      "api-token": {
+        "label": "API Key",
+        "instructions": "Enter your BambooHR company domain and an API key from your BambooHR user profile. The API key is sent with HTTP Basic authentication.",
+        "company-domain": {
+          "placeholder": "your-company"
+        },
+        "api-key": {
+          "placeholder": "Paste your BambooHR API key"
+        }
+      }
+    },
+    "connect": {
+      "api-token-dialog": {
+        "title": "Connect BambooHR",
+        "configure-title": "Reconfigure BambooHR",
+        "instructions": "<p>Use the <strong>company subdomain</strong> from your BambooHR URL (for example, <code>acme</code> from <strong>acme.bamboohr.com</strong>) and an <strong>API key</strong> generated under your BambooHR profile.</p>",
+        "fields": {
+          "display-name": "Display Name",
+          "company-domain": "Company Domain",
+          "api-key": "API Key"
+        },
+        "placeholders": {
+          "display-name": "BambooHR",
+          "company-domain": "your-company",
+          "api-key": "Paste your BambooHR API key"
+        },
+        "actions": {
+          "save": "Save Connection"
+        }
+      },
+      "errors": {
+        "company-domain-required": "Company domain is required.",
+        "api-key-required": "API key is required."
+      }
+    }
+  },
+  "permissions": {
+    "group": {
+      "title": "BambooHR",
+      "description": "Configure BambooHR integration and employee sync"
+    },
+    "management": {
+      "title": "BambooHR Management",
+      "description": "Full access to BambooHR configuration"
+    },
+    "catalog": {
+      "view": {
+        "title": "View BambooHR Configuration"
+      }
+    },
+    "employee-import": {
+      "execute": {
+        "title": "Import Employees from BambooHR"
+      }
+    },
+    "employee-sync": {
+      "execute": {
+        "title": "Sync Employees with BambooHR"
+      }
+    }
+  },
+  "actions": {
+    "sync-from-bamboohr": {
+      "title": "Sync from BambooHR"
+    },
+    "sync": {
+      "title": "Sync with BambooHR"
+    }
+  },
+  "connect-required": {
+    "title": "BambooHR Not Connected",
+    "message": "Connect BambooHR in Administration → Integrations before syncing employees. Open integrations page now?"
+  },
+  "sync-all": {
+    "loading": {
+      "title": "Syncing Employees",
+      "status": "Pulling employees from BambooHR…"
+    },
+    "success": "BambooHR sync finished. Created {{created}}, updated {{updated}}, skipped {{skipped}}, errors {{errors}}."
+  },
+  "sync": {
+    "loading": {
+      "title": "Syncing Employee",
+      "status": "Updating from BambooHR…"
+    },
+    "success": "Employee synced from BambooHR."
+  },
+  "settings": {
+    "integrations": {
+      "section-title": "Human Capital",
+      "section-description": "Connect HRIS providers to sync employees into Human Capital Management.",
+      "connections-panel": {
+        "title": "Human Capital Providers",
+        "description": "Connect and configure BambooHR for employee sync."
+      }
+    }
+  }
+}

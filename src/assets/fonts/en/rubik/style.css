@@ -1,0 +1,8 @@
+@reference '@acorex/styles/themes/default.css';
+@font-face {
+  font-family: "rubik";
+  src: url("/assets/fonts/en/rubik/Rubik-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}

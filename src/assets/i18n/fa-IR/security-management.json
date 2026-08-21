@@ -1,0 +1,577 @@
+{
+  "module": {
+    "title": "مدیریت امنیت",
+    "description": "مدیریت کاربران، نقش‌ها، نشست‌ها، سیاست‌ها و تنظیمات امنیتی",
+    "menus": {
+      "root": {
+        "title": "امنیت",
+        "description": "مدیریت امنیت و دسترسی"
+      }
+    },
+    "permissions": {
+      "title": "مدیریت امنیت",
+      "description": "مدیریت تمام جنبه‌های امنیتی",
+      "actions": {
+        "manage": {
+          "title": "مدیریت امنیت",
+          "description": "دسترسی کامل به مدیریت امنیت"
+        }
+      }
+    }
+  },
+  "features": {
+    "manage-roles": {
+      "title": "مدیریت نقش‌ها",
+      "description": "فعال‌سازی قابلیت مدیریت نقش‌ها"
+    },
+    "manage-users": {
+      "title": "مدیریت کاربران",
+      "description": "فعال‌سازی قابلیت مدیریت کاربران"
+    },
+    "max-total-users": {
+      "title": "حداکثر تعداد کاربران",
+      "description": "حداکثر تعداد کل کاربران مجاز در سیستم"
+    },
+    "manage-sessions": {
+      "title": "مدیریت نشست‌ها",
+      "description": "فعال‌سازی قابلیت مدیریت نشست‌ها"
+    },
+    "manage-policies": {
+      "title": "مدیریت سیاست‌ها",
+      "description": "فعال‌سازی قابلیت مدیریت سیاست‌ها"
+    },
+    "manage-identity-providers": {
+      "title": "مدیریت ارائه‌دهندگان هویت",
+      "description": "فعال‌سازی مدیریت ارائه‌دهندگان هویت در کنسول پلتفرم"
+    }
+  },
+  "users": {
+    "terms": {
+      "user": "کاربر",
+      "users": "کاربران"
+    },
+    "entities": {
+      "user": {
+        "title": "کاربر",
+        "plural": "کاربران",
+        "search-result-description": "حساب کاربری، وضعیت دسترسی و آمادگی ورود",
+        "pages": {
+          "roles": {
+            "title": "نقش‌ها",
+            "description": "نقش‌های کاربر را برای فضای کاری مستأجر و برنامه فعلی تعیین کنید.",
+            "save-user-first": {
+              "title": "ابتدا کاربر را ذخیره کنید",
+              "description": "پیش از تخصیص نقش برای این فضای کاری، کاربر را ایجاد و ذخیره کنید."
+            }
+          }
+        },
+        "fields": {
+          "password": {
+            "title": "رمز عبور",
+            "description": "رمز ورود (توسط مدیر در چارچوب سیاست تنظیم یا بازنشانی می‌شود).",
+            "placeholder": "رمز عبور را وارد کنید"
+          },
+          "pin-code": {
+            "title": "پین امنیتی",
+            "description": "پین برای تأیید اقدامات حساس این کاربر."
+          },
+          "roles": {
+            "title": "نقش‌ها",
+            "description": "نقش‌هایی که مجوزهای این کاربر را تعیین می‌کنند.",
+            "placeholder": "نقش‌ها را انتخاب کنید"
+          },
+          "effective-state": {
+            "title": "وضعیت مؤثر دسترسی",
+            "column": "وضعیت",
+            "description": "خلاصه وضعیت برای فهرست و عملیات، از ترکیب چرخه عمر حساب و دروازه ورود."
+          },
+          "account-lifecycle": {
+            "title": "چرخه عمر حساب",
+            "description": "آمادگی حساب از نظر مدیریتی (توسط مدیر)."
+          },
+          "access-state": {
+            "title": "دسترسی ورود",
+            "description": "آیا ورود مجاز است، توسط امنیت مسدود شده، یا تا تمدید اعتبار مسدود است. به‌روزرسانی‌ها مطابق انتقال‌های تعریف‌شده برای این فیلد است؛ لایه احراز هویت هم ممکن است آن را تغییر دهد."
+          },
+          "home-tenant": {
+            "title": "مستأجر اصلی",
+            "description": "مستأجری که مالک فهرست این هویت است. مدیران این مستأجر می‌توانند فیلدهای پروفایل مانند نام نمایشی، ایمیل و تصویر را به‌روزرسانی کنند."
+          },
+          "password-changed-at": {
+            "title": "زمان تغییر رمز عبور",
+            "description": "آخرین زمانی که رمز عبور تغییر کرده است."
+          },
+          "pin-changed-at": {
+            "title": "زمان تغییر پین",
+            "description": "آخرین زمانی که پین امنیتی تغییر کرده است."
+          },
+          "last-sign-in-at": {
+            "title": "آخرین ورود",
+            "description": "آخرین ورود موفق این کاربر."
+          },
+          "password-reset": {
+            "title": "چالش بازنشانی رمز عبور",
+            "description": "وضعیت داخلی توکن یک‌بارمصرف بازنشانی رمز عبور."
+          }
+        },
+        "actions": {
+          "send-password-reset": {
+            "title": "ارسال ایمیل بازنشانی رمز عبور",
+            "confirm-title": "ارسال ایمیل بازنشانی رمز عبور",
+            "confirm-message": "ایمیل بازنشانی رمز عبور برای {{user}} ارسال شود؟",
+            "success": {
+              "title": "ایمیل ارسال شد",
+              "description": "ایمیل بازنشانی رمز عبور ارسال شد."
+            },
+            "error": {
+              "title": "ارسال ناموفق",
+              "description": "ارسال ایمیل بازنشانی رمز عبور ناموفق بود."
+            }
+          },
+          "view-effective-permissions": {
+            "title": "مشاهده مجوزهای مؤثر"
+          },
+          "view-effective-roles": {
+            "title": "مشاهده نقش‌های مؤثر"
+          }
+        },
+        "groups": {
+          "authorizations": "مجازسازی‌ها",
+          "account-access": "حساب و وضعیت دسترسی"
+        },
+        "account": {
+          "descriptions": {
+            "pending": "دعوت ارسال شده یا حساب ایجاد شده اما هنوز فعال نشده.",
+            "active": "حساب برای استفاده عادی فعال است مشروط به قوانین ورود.",
+            "suspended": "موقتاً متوقف؛ مدیر می‌تواند در صورت نیاز بازگرداند.",
+            "inactive": "توسط مدیر غیرفعال؛ تا فعال‌سازی مجدد در جریان روزمره نیست.",
+            "archived": "بسته یا نگهداری برای سوابق؛ برای استفاده تعاملی در نظر گرفته نشده."
+          }
+        },
+        "states": {
+          "pending": "در انتظار فعال‌سازی",
+          "active": "فعال",
+          "suspended": "معلق",
+          "inactive": "غیرفعال",
+          "archived": "بایگانی‌شده"
+        },
+        "transitions": {
+          "activate": "فعال‌سازی حساب",
+          "cancel-invitation": "لغو دعوت",
+          "suspend": "تعلیق حساب",
+          "restore": "بازگردانی دسترسی",
+          "disable": "غیرفعال‌سازی حساب",
+          "enable": "فعال‌سازی مجدد حساب",
+          "archive": "بایگانی حساب",
+          "restore-archived": "بازیابی از بایگانی"
+        },
+        "access": {
+          "descriptions": {
+            "allowed": "ورود مجاز است اگر چرخه عمر حساب هم اجازه دهد.",
+            "blocked": "ورود توسط سیاست امنیتی یا لایه احراز هویت رد می‌شود.",
+            "expired": "رمز یا اعتبار اصلی باید قبل از ورود تمدید شود."
+          },
+          "states": {
+            "allowed": "ورود مجاز",
+            "blocked": "ورود مسدود",
+            "expired": "اعتبار منقضی"
+          },
+          "transitions": {
+            "block-sign-in": "مسدود کردن ورود",
+            "require-credential-renewal": "الزام به تمدید اعتبار",
+            "unblock-sign-in": "مجاز کردن ورود",
+            "restore-after-credential-renewal": "مجاز کردن ورود پس از تمدید اعتبار"
+          }
+        },
+        "effective": {
+          "states": {
+            "pending": "در انتظار فعال‌سازی",
+            "active": "فعال",
+            "sign-in-blocked": "ورود مسدود",
+            "credential-expired": "اعتبار منقضی",
+            "suspended": "معلق",
+            "inactive": "غیرفعال",
+            "archived": "بایگانی‌شده"
+          },
+          "descriptions": {
+            "pending": "کاربر باید فعال‌سازی را کامل کند.",
+            "active": "حساب و ورود اجازه استفاده عادی می‌دهند.",
+            "sign-in-blocked": "در ورود رد می‌شود حتی اگر حساب از نظر مدیریتی فعال باشد.",
+            "credential-expired": "اعتبار اصلی تا زمان تمدید معتبر نیست.",
+            "suspended": "حساب موقتاً توسط مدیر معلق است.",
+            "inactive": "حساب توسط مدیر غیرفعال است.",
+            "archived": "حساب بایگانی یا بسته است."
+          }
+        }
+      }
+    },
+    "permissions": {
+      "title": "مدیریت کاربران",
+      "view": {
+        "title": "مشاهده کاربران",
+        "description": "مشاهده اطلاعات کاربران"
+      },
+      "create": {
+        "title": "ایجاد کاربر",
+        "description": "ایجاد کاربران جدید"
+      },
+      "edit": {
+        "title": "ویرایش کاربر",
+        "description": "ویرایش اطلاعات کاربران"
+      },
+      "delete": {
+        "title": "حذف کاربران",
+        "description": "حذف کاربران"
+      },
+      "manage": {
+        "title": "مدیریت کاربران",
+        "description": "دسترسی کامل به مدیریت کاربران"
+      }
+    }
+  },
+  "roles": {
+    "terms": {
+      "role": "نقش",
+      "roles": "نقش‌ها"
+    },
+    "entities": {
+      "role": {
+        "title": "نقش",
+        "plural": "نقش‌ها",
+        "search-result-description": "هویت نقش برای عضویت و دسترسی",
+        "pages": {
+          "permissions": {
+            "title": "مجوزها",
+            "save-role-first": {
+              "title": "ابتدا نقش را ذخیره کنید",
+              "description": "پیش از اختصاص مجوزها در این فضای کاری، نقش را ایجاد و ذخیره کنید."
+            }
+          }
+        },
+        "actions": {
+          "view-role-holders": {
+            "title": "مشاهده دارندگان نقش"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "title": "مدیریت نقش‌ها",
+      "view": {
+        "title": "مشاهده نقش‌ها",
+        "description": "مشاهده اطلاعات نقش‌ها"
+      },
+      "create": {
+        "title": "ایجاد نقش",
+        "description": "ایجاد نقش‌های جدید"
+      },
+      "edit": {
+        "title": "ویرایش نقش",
+        "description": "ویرایش اطلاعات نقش‌ها"
+      },
+      "delete": {
+        "title": "حذف نقش‌ها",
+        "description": "حذف نقش‌ها"
+      },
+      "manage": {
+        "title": "مدیریت نقش‌ها",
+        "description": "دسترسی کامل به مدیریت نقش‌ها"
+      }
+    }
+  },
+  "role-permissions": {
+    "entities": {
+      "role-permission": {
+        "title": "مجوز نقش",
+        "plural": "مجوزهای نقش",
+        "fields": {
+          "role": {
+            "title": "نقش"
+          }
+        }
+      }
+    }
+  },
+  "user-roles": {
+    "entities": {
+      "user-role": {
+        "title": "نقش کاربر",
+        "plural": "نقش‌های کاربر",
+        "fields": {
+          "user": {
+            "title": "کاربر"
+          }
+        }
+      }
+    }
+  },
+  "sessions": {
+    "terms": {
+      "session": "نشست",
+      "sessions": "نشست‌ها",
+      "device-sessions": "نشست‌های دستگاه"
+    },
+    "entities": {
+      "session": {
+        "title": "نشست",
+        "plural": "نشست‌ها",
+        "search-result-description": "اطلاعات نشست دستگاه و ورود فعال",
+        "fields": {
+          "tenant": {
+            "title": "Tenant"
+          },
+          "user": {
+            "title": "کاربر"
+          },
+          "application": {
+            "title": "نام برنامه"
+          },
+          "client-name": {
+            "title": "نام کلاینت"
+          },
+          "location": {
+            "title": "موقعیت"
+          },
+          "ip-address": {
+            "title": "آدرس IP"
+          },
+          "last-login-date": {
+            "title": "آخرین تاریخ ورود"
+          },
+          "logged-out-at": {
+            "title": "زمان خروج"
+          },
+          "operating-system": {
+            "title": "سیستم‌عامل"
+          },
+          "device-name": {
+            "title": "نام دستگاه"
+          }
+        },
+        "groups": {
+          "device": "دستگاه",
+          "session": "نشست"
+        }
+      }
+    },
+    "permissions": {
+      "title": "مدیریت نشست‌های دستگاه",
+      "view": {
+        "title": "مشاهده نشست‌های دستگاه",
+        "description": "مشاهده اطلاعات نشست‌های دستگاه"
+      },
+      "terminate": {
+        "title": "قطع نشست دستگاه",
+        "description": "قطع نشست‌های فعال دستگاه"
+      },
+      "manage": {
+        "title": "مدیریت نشست‌های دستگاه",
+        "description": "دسترسی کامل به مدیریت نشست‌های دستگاه"
+      }
+    }
+  },
+  "policies": {
+    "terms": {
+      "policy": "سیاست",
+      "policies": "سیاست‌ها"
+    },
+    "entities": {
+      "policy": {
+        "title": "سیاست",
+        "plural": "سیاست‌ها",
+        "search-result-description": "پیکربندی سیاست امنیتی و قوانین دسترسی"
+      }
+    },
+    "permissions": {
+      "title": "مدیریت سیاست‌ها",
+      "view": {
+        "title": "مشاهده سیاست‌ها",
+        "description": "مشاهده اطلاعات سیاست‌ها"
+      },
+      "create": {
+        "title": "ایجاد سیاست",
+        "description": "ایجاد سیاست‌های جدید"
+      },
+      "edit": {
+        "title": "ویرایش سیاست",
+        "description": "ویرایش اطلاعات سیاست‌ها"
+      },
+      "delete": {
+        "title": "حذف سیاست‌ها",
+        "description": "حذف سیاست‌ها"
+      },
+      "manage": {
+        "title": "مدیریت سیاست‌ها",
+        "description": "دسترسی کامل به مدیریت سیاست‌ها"
+      }
+    }
+  },
+  "identity-providers": {
+    "terms": {
+      "identity-provider": "ارائه‌دهنده هویت",
+      "identity-providers": "ارائه‌دهندگان هویت"
+    },
+    "entities": {
+      "identity-provider": {
+        "title": "ارائه‌دهنده هویت",
+        "plural": "ارائه‌دهندگان هویت",
+        "search-result-description": "کارگزار ورود خارجی (گوگل، مایکروسافت، OIDC، SAML)",
+        "groups": {
+          "endpoints": "نقاط پایانی",
+          "credentials": "اطلاعات اعتباری"
+        },
+        "fields": {
+          "key": {
+            "title": "کلید"
+          },
+          "priority": {
+            "title": "اولویت"
+          },
+          "icon": {
+            "title": "آیکون"
+          },
+          "authorization-url": {
+            "title": "آدرس مجوزدهی"
+          },
+          "token-url": {
+            "title": "آدرس توکن"
+          },
+          "user-info-url": {
+            "title": "آدرس اطلاعات کاربر"
+          },
+          "scopes": {
+            "title": "محدوده‌ها"
+          },
+          "issuer-url": {
+            "title": "آدرس Issuer"
+          },
+          "client-id": {
+            "title": "شناسه کلاینت"
+          },
+          "client-secret": {
+            "title": "رمز کلاینت"
+          }
+        }
+      }
+    }
+  },
+  "profile": {
+    "terms": {
+      "profile": "پروفایل",
+      "profiles": "پروفایل‌ها"
+    },
+    "entities": {
+      "profile": {
+        "title": "پروفایل",
+        "plural": "پروفایل‌ها",
+        "search-result-description": "اطلاعات پروفایل و اطلاعات شخصی کاربر",
+        "fields": {
+          "national-code": {
+            "title": "کد ملی"
+          },
+          "password": {
+            "title": "رمز عبور"
+          }
+        }
+      }
+    }
+  },
+  "reports": {
+    "administration-category": {
+      "title": "مدیریت",
+      "description": "گزارش‌های ممیزی دسترسی، مجوز، نشست و فعالیت حساب کاربری."
+    },
+    "category": {
+      "title": "تاریخچه دسترسی",
+      "description": "نقش‌ها و مجوزهای تاریخی که از تاریخچه تغییرات بازسازی می‌شوند."
+    },
+    "user-effective-roles-history": {
+      "title": "تاریخچه نقش کاربر",
+      "description": "نقش‌هایی که کاربر در بازه زمانی انتخاب‌شده داشته است."
+    },
+    "user-effective-permissions-history": {
+      "title": "تاریخچه مجوز کاربر",
+      "description": "مجوزهایی که کاربر در بازه زمانی انتخاب‌شده داشته است."
+    },
+    "role-holders-history": {
+      "title": "کاربران بر اساس نقش",
+      "description": "کاربرانی که در بازه زمانی انتخاب‌شده نقش مورد نظر را داشته‌اند."
+    },
+    "permission-holders-history": {
+      "title": "کاربران بر اساس مجوز",
+      "description": "کاربرانی که در بازه زمانی انتخاب‌شده مجوز مورد نظر را داشته‌اند."
+    },
+    "user-password-change-history": {
+      "title": "تاریخچه تغییر رمز عبور",
+      "description": "آخرین تغییر ثبت‌شده رمز عبور این کاربر در صورت قرار گرفتن در بازه انتخاب‌شده."
+    },
+    "parameters": {
+      "permission-search": {
+        "title": "مجوز",
+        "description": "جستجو بر اساس عنوان، توضیحات یا کلید مجوز (شامل).",
+        "placeholder": "جستجوی عنوان، توضیحات یا کلید مجوز"
+      },
+      "permission-key": {
+        "title": "مجوز",
+        "description": "کلید دقیق مجوز برای یافتن دارندگان تاریخی (مثال: Administration:Permission:MaintainUsersAndRoles).",
+        "placeholder": "Domain:Permission:Capability"
+      },
+      "password-change-filters": {
+        "title": "فیلترهای تغییر رمز عبور",
+        "description": "کاربر و بازه زمانی برای تاریخچه تغییر رمز عبور."
+      }
+    },
+    "columns": {
+      "role-name": "نام نقش",
+      "role-title": "عنوان نقش",
+      "permission": "مجوز",
+      "username": "نام کاربری",
+      "display-name": "نام نمایشی",
+      "valid-from": "از تاریخ",
+      "valid-to": "تا تاریخ",
+      "application-id": "برنامه",
+      "event-type": "رویداد",
+      "occurred-at": "زمان رخداد",
+      "device-name": "دستگاه",
+      "browser": "مرورگر",
+      "operating-system": "سیستم‌عامل",
+      "ip-address": "آدرس IP",
+      "client-name": "کلاینت",
+      "location": "موقعیت",
+      "session-status": "وضعیت نشست",
+      "password-changed-at": "زمان تغییر رمز عبور"
+    },
+    "notes": {
+      "v1-grant-assignment-only": "نسخه اول فقط تاریخچه تخصیص UserRole و RolePermission را بازسازی می‌کند؛ عضویت در مستأجر فرض می‌شود."
+    }
+  },
+  "permissions-feature": {
+    "terms": {
+      "permissions": "مجوزها",
+      "permissions-editor": "ویرایشگر مجوزها"
+    },
+    "components": {
+      "permissions-editor": {
+        "search": {
+          "placeholder": "جستجوی مجوزها..."
+        },
+        "empty-states": {
+          "no-permissions": {
+            "title": "هیچ مجوزی اختصاص داده نشده است",
+            "description": "هنوز هیچ مجوزی به این نقش اختصاص داده نشده است. برای تعریف دسترسی‌ها، مجوز اضافه کنید."
+          },
+          "no-results": {
+            "title": "مجوزی یافت نشد",
+            "description": "عبارت جستجو را تغییر دهید یا جستجو را پاک کنید تا مجوزها را بر اساس ماژول مرور کنید."
+          }
+        }
+      }
+    },
+    "actions": {
+      "assign": {
+        "title": "اختصاص مجوزها",
+        "description": "انتخاب کنید کدام مجوزها اختصاص داده شوند."
+      }
+    }
+  }
+}

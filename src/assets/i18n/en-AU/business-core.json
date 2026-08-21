@@ -1,0 +1,348 @@
+{
+  "module": {
+    "title": "Business Core",
+    "description": "Shared business master data for manufacturers, industries, business types, and business statuses used across modules.",
+    "menus": {
+      "root": {
+        "title": "Business",
+        "description": "Manufacturers, industries, business types, and statuses."
+      }
+    }
+  },
+  "manufacturers": {
+    "terms": {
+      "manufacturer": "Manufacturer",
+      "manufacturers": "Manufacturers"
+    },
+    "entities": {
+      "manufacturer": {
+        "title": "Manufacturer",
+        "plural": "Manufacturers",
+        "groups": {
+          "basic-info": "Basic Information",
+          "contact-info": "Contact Information"
+        },
+        "fields": {
+          "logo": {
+            "title": "Logo"
+          },
+          "country-of-origin": {
+            "title": "Country of Origin"
+          },
+          "website": {
+            "title": "Website"
+          },
+          "contact-email": {
+            "title": "Contact Email"
+          },
+          "contact-phone": {
+            "title": "Contact Phone"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manufacturer": {
+        "manage": {
+          "title": "Manage Manufacturers",
+          "description": "Full access to manage manufacturers"
+        }
+      }
+    }
+  },
+  "industries": {
+    "terms": {
+      "industry": "Industry",
+      "industries": "Industries"
+    },
+    "entities": {
+      "industry": {
+        "title": "Industry",
+        "plural": "Industries",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter industry code (e.g., MANUF, TECH)"
+          },
+          "title": {
+            "title": "Display Name",
+            "placeholder": "Enter industry title (e.g., Manufacturing, Technology)"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Enter industry description"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "industry": {
+        "manage": {
+          "title": "Manage Industries",
+          "description": "Full access to manage industries"
+        }
+      }
+    }
+  },
+  "business-types": {
+    "terms": {
+      "business-type": "Business Type",
+      "business-types": "Business Types"
+    },
+    "entities": {
+      "business-type": {
+        "title": "Business Type",
+        "plural": "Business Types",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter business type code (e.g., CORP, LLC)"
+          },
+          "title": {
+            "title": "Display Name",
+            "placeholder": "Enter business type title (e.g., Corporation, LLC)"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Enter business type description"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "business-type": {
+        "manage": {
+          "title": "Manage Business Types",
+          "description": "Full access to manage business types"
+        }
+      }
+    }
+  },
+  "business-statuses": {
+    "terms": {
+      "business-status": "Business Status",
+      "business-statuses": "Business Statuses"
+    },
+    "entities": {
+      "business-status": {
+        "title": "Business Status",
+        "plural": "Business Statuses",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter status code (e.g., ACTIVE, INACTIVE)"
+          },
+          "title": {
+            "title": "Display Name",
+            "placeholder": "Enter status title (e.g., Active, Inactive)"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Enter status description"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "business-status": {
+        "manage": {
+          "title": "Manage Business Statuses",
+          "description": "Full access to manage business statuses"
+        }
+      }
+    }
+  },
+  "party-types": {
+    "terms": {
+      "party-type": "Party Type",
+      "party-types": "Party Types"
+    },
+    "entities": {
+      "party-type": {
+        "title": "Party Type",
+        "plural": "Party Types",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter party type code (e.g., MANUF, DIST)"
+          },
+          "title": {
+            "title": "Display Name",
+            "placeholder": "Enter party type title (e.g., Manufacturer, Distributor)"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Enter party type description"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "party-type": {
+        "manage": {
+          "title": "Manage Party Types",
+          "description": "Full access to manage party types"
+        }
+      }
+    }
+  },
+  "party-segments": {
+    "terms": {
+      "party-segment": "Party Segment",
+      "party-segments": "Party Segments"
+    },
+    "entities": {
+      "party-segment": {
+        "title": "Party Segment",
+        "plural": "Party Segments",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "title": {
+            "title": "Display Name",
+            "placeholder": "Enter segment title (e.g., Strategic, Preferred)"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Enter segment description"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "party-segment": {
+        "manage": {
+          "title": "Manage Party Segments",
+          "description": "Full access to manage party segments"
+        }
+      }
+    }
+  },
+  "lifecycle-stages": {
+    "terms": {
+      "lifecycle-stage": "Lifecycle Stage",
+      "lifecycle-stages": "Lifecycle Stages"
+    },
+    "entities": {
+      "lifecycle-stage": {
+        "title": "Lifecycle Stage",
+        "plural": "Lifecycle Stages",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "title": {
+            "title": "Display Name",
+            "placeholder": "Enter stage title (e.g., Prospect, Active)"
+          },
+          "order": {
+            "title": "Sort Order",
+            "placeholder": "Display order"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Enter stage description"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "lifecycle-stage": {
+        "manage": {
+          "title": "Manage Lifecycle Stages",
+          "description": "Full access to manage lifecycle stages"
+        }
+      }
+    }
+  },
+  "parties": {
+    "terms": {
+      "party": "Party",
+      "parties": "Parties"
+    },
+    "entities": {
+      "party": {
+        "title": "Party",
+        "plural": "Parties",
+        "search-result-description": "Business counterparty (customer, supplier, vendor)",
+        "groups": {
+          "profile": "Profile",
+          "image": "Logo",
+          "phones": "Phones",
+          "emails": "Emails",
+          "addresses": "Addresses"
+        },
+        "fields": {
+          "code": {
+            "placeholder": "Enter party code (e.g., PARTY-202401-0100)"
+          },
+          "title": {
+            "title": "Display Name",
+            "placeholder": "Enter party name (e.g., company name)"
+          },
+          "description": {
+            "placeholder": "Enter party description"
+          },
+          "phone": {
+            "placeholder": "Enter phone number"
+          },
+          "email": {
+            "placeholder": "Enter email address"
+          },
+          "address-labels": {
+            "work": "Work",
+            "billing": "Billing",
+            "shipping": "Shipping",
+            "other": "Other"
+          }
+        },
+        "related-entities": {
+          "contacts": {
+            "title": "Contacts"
+          },
+          "locations": {
+            "title": "Locations"
+          }
+        }
+      }
+    }
+  },
+  "party-locations": {
+    "terms": {
+      "party-location": "Party Location",
+      "party-locations": "Party Locations"
+    },
+    "entities": {
+      "party-location": {
+        "title": "Party Location",
+        "plural": "Party Locations",
+        "search-result-description": "Location associated with a party (e.g., office, warehouse)",
+        "fields": {
+          "party": {
+            "title": "Party"
+          },
+          "location": {
+            "title": "Location"
+          },
+          "location-role": {
+            "title": "Role"
+          }
+        }
+      }
+    }
+  }
+}
+

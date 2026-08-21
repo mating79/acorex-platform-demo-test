@@ -1,0 +1,32 @@
+<div class="demo-section-items-builder-test p-4 h-full flex flex-col gap-4">
+  <div class="flex flex-wrap items-start justify-between gap-3">
+    <div>
+      <h2 class="text-xl font-semibold">Section items builder (meta-data simulation)</h2>
+      <p class="text-sm text-neutral-600 mt-1">
+        Uses <code class="text-xs">axp-section-items-builder</code> with the same patterns as
+        <code class="text-xs">axp-meta-data-selector-groups</code>: section property viewer, widget property viewer
+        for
+        items, unique section names, drag/drop. “Add field” is mocked (no meta-data API). “Add section” in the header
+        calls
+        <code class="text-xs">addSection()</code> like a page command.
+      </p>
+    </div>
+    <div class="flex flex-wrap gap-2">
+      <ax-button text="Add section (API)" color="primary" look="outline" (onClick)="addSectionViaApi()" />
+      <ax-button text="Reset sample" look="outline" color="default" (onClick)="resetSample()" />
+    </div>
+  </div>
+
+  <div class="flex-1 min-h-0 flex flex-col overflow-hidden">
+    <div class="flex-1 overflow-auto rounded-lg lightest-surface">
+      <axp-section-items-builder class="block h-full min-h-[360px]" [value]="builderValue()"
+        [definition]="definition" [readonly]="false" (valueChange)="onValueChange($event)" />
+    </div>
+
+    <details class="mt-3 rounded-md border p-3 text-sm">
+      <summary class="cursor-pointer font-medium">Current value (JSON)</summary>
+      <pre
+        class="mt-2 max-h-64 overflow-auto whitespace-pre-wrap break-all text-xs">{{ builderValue() | json }}</pre>
+    </details>
+  </div>
+</div>

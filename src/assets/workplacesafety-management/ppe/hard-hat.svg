@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Hard hat">
+  <path fill="#F59E0B" d="M8 36c0-12 10-20 24-20s24 8 24 20v6H8v-6z"/>
+  <path fill="#D97706" d="M12 42h40v4c0 4-8 8-20 8S12 50 12 46v-4z"/>
+  <rect fill="#FBBF24" x="28" y="10" width="8" height="8" rx="2"/>
+</svg>

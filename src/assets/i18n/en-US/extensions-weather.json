@@ -1,0 +1,30 @@
+{
+  "module": {
+    "title": "Weather",
+    "description": "Dashboard weather widgets and provider configuration"
+  },
+  "integration": {
+    "domain": {
+      "title": "Weather",
+      "description": "Connect weather data providers for tenant dashboard widgets."
+    }
+  },
+  "settings": {
+    "integrations": {
+      "section-title": "Weather",
+      "section-description": "Connect weather data providers for dashboard widgets.",
+      "connections-panel": {
+        "title": "Weather Providers",
+        "description": "Connect and configure WeatherAPI.com and OpenWeatherMap."
+      }
+    },
+    "provider": {
+      "section-title": "Provider",
+      "section-description": "Choose which connected weather integration supplies widget data.",
+      "active-provider": {
+        "title": "Active Weather Provider",
+        "description": "Tenant-wide provider used by all weather dashboard widgets."
+      }
+    }
+  }
+}

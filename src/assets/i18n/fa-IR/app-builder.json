@@ -1,0 +1,101 @@
+{
+  "module": {
+    "title": "سازنده اپ",
+    "description": "ساخت و انتشار صفحات لندینگ عمومی"
+  },
+  "pages": {
+    "entities": {
+      "landing-page": {
+        "title": "صفحه لندینگ",
+        "plural": "صفحات لندینگ",
+        "groups": {
+          "publishing": "انتشار"
+        },
+        "fields": {
+          "slug": {
+            "title": "نامک",
+            "placeholder": "my-page-slug"
+          },
+          "category": {
+            "title": "دسته‌بندی"
+          },
+          "is-home": {
+            "title": "صفحه اصلی"
+          },
+          "content": {
+            "title": "محتوا"
+          }
+        },
+        "pages": {
+          "designer": {
+            "title": "طراح"
+          }
+        }
+      }
+    }
+  },
+  "categories": {
+    "entities": {
+      "landing-page-category": {
+        "title": "دسته صفحه",
+        "plural": "دسته‌های صفحه",
+        "fields": {
+          "slug": {
+            "title": "نامک",
+            "placeholder": "category-slug"
+          }
+        }
+      }
+    }
+  },
+  "permissions": {
+    "manage": {
+      "title": "سازنده اپ",
+      "description": "مدیریت قابلیت‌های سازنده اپ"
+    },
+    "landing-page": {
+      "manage": {
+        "title": "صفحات لندینگ",
+        "description": "مدیریت صفحات لندینگ"
+      },
+      "view": {
+        "title": "مشاهده صفحات لندینگ",
+        "description": "مشاهده صفحات لندینگ"
+      },
+      "create": {
+        "title": "ایجاد صفحات لندینگ",
+        "description": "ایجاد صفحات لندینگ"
+      },
+      "edit": {
+        "title": "ویرایش صفحات لندینگ",
+        "description": "ویرایش صفحات لندینگ"
+      },
+      "delete": {
+        "title": "حذف صفحات لندینگ",
+        "description": "حذف صفحات لندینگ"
+      }
+    },
+    "landing-page-category": {
+      "manage": {
+        "title": "دسته‌های صفحه",
+        "description": "مدیریت دسته‌های صفحه"
+      },
+      "view": {
+        "title": "مشاهده دسته‌های صفحه",
+        "description": "مشاهده دسته‌های صفحه"
+      },
+      "create": {
+        "title": "ایجاد دسته‌های صفحه",
+        "description": "ایجاد دسته‌های صفحه"
+      },
+      "edit": {
+        "title": "ویرایش دسته‌های صفحه",
+        "description": "ویرایش دسته‌های صفحه"
+      },
+      "delete": {
+        "title": "حذف دسته‌های صفحه",
+        "description": "حذف دسته‌های صفحه"
+      }
+    }
+  }
+}

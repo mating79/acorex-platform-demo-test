@@ -1,0 +1,53 @@
+<axp-widgets-container
+  class="flex flex-col gap-2 p-4"
+  [context]="context()"
+  (onContextChanged)="log($event)"
+>
+  <div class="flex flex-col p-4 gap-2">
+    <div class="border border-solid border-gray-300 rounded p-4 mb-4">
+      <h3 class="text-lg font-semibold mb-2">Menu Permission Guard Test</h3>
+      <p class="text-sm mb-4">
+        In-app navigation to Manufacturers list (requires BusinessCore:Permission:Manufacturer.Management).
+      </p>
+      <ax-button
+        color="primary"
+        text="Go to /m/BusinessCore/e/Manufacturer/list"
+        (onClick)="navigateToManufacturerList()"
+      ></ax-button>
+    </div>
+    <ng-container axp-widget-renderer [node]="node1()" [mode]="'edit'"></ng-container>
+    <ng-container axp-widget-renderer [node]="node2()" [mode]="'edit'"></ng-container>
+    <ng-container axp-widget-renderer [node]="node3()" [mode]="'edit'"></ng-container>
+    <ng-container axp-widget-renderer [node]="node4()" [mode]="'edit'"></ng-container>
+    <ng-container axp-widget-renderer [node]="node5()" [mode]="'edit'"></ng-container>
+    <ng-container axp-widget-renderer [node]="node6()" [mode]="'edit'"></ng-container>
+    <ng-container axp-widget-renderer [node]="node7()" [mode]="'edit'"></ng-container>
+    <ng-container axp-widget-renderer [node]="node8()" [mode]="'edit'"></ng-container>
+    <ng-container axp-widget-renderer [node]="node9()" [mode]="'view'"></ng-container>
+    <ng-container axp-widget-renderer [node]="node10()" [mode]="'view'"></ng-container>
+    <ng-container axp-widget-renderer [node]="node11()" [mode]="'edit'"></ng-container>
+    <ng-container axp-widget-renderer [node]="node12()" [mode]="'edit'"></ng-container>
+    <ng-container axp-widget-renderer [node]="node13()" [mode]="'edit'"></ng-container>
+    <ng-container axp-widget-renderer [node]="node14()" [mode]="'edit'"></ng-container>
+
+    <!-- Connected Lists Widget Demos -->
+    <div class="border border-solid border-gray-300 rounded p-4 mt-4">
+      <h3 class="text-lg font-semibold mb-4">Connected Lists Widget Demo</h3>
+
+      <div class="mb-6">
+        <h4 class="text-md font-medium mb-2">Demo 1: Using string[] (IDs only)</h4>
+        <ng-container axp-widget-renderer [node]="node15()" [mode]="'edit'"></ng-container>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-md font-medium mb-2">Demo 2: Using AXPDragDropListItem[] (Full Objects)</h4>
+        <ng-container axp-widget-renderer [node]="node16()" [mode]="'edit'"></ng-container>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-md font-medium mb-2">Demo 3: Empty Initial Selection</h4>
+        <ng-container axp-widget-renderer [node]="node17()" [mode]="'edit'"></ng-container>
+      </div>
+    </div>
+  </div>
+</axp-widgets-container>

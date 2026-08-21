@@ -1,0 +1,308 @@
+{
+  "module": {
+    "title": "Tenant Management",
+    "description": "Manage tenants, their configurations, and access settings",
+    "menus": {
+      "root": {
+        "title": "Tenant Management",
+        "description": "Manage tenants and their settings"
+      }
+    }
+  },
+  "features": {
+    "tenant-management": {
+      "title": "Tenant Management",
+      "description": "Enable tenant management functionality"
+    }
+  },
+  "tenants": {
+    "terms": {
+      "tenant": "Tenant",
+      "tenants": "Tenants"
+    },
+    "entities": {
+      "tenant": {
+        "title": "Tenant",
+        "plural": "Tenants",
+        "groups": {
+          "basic-info": "Basic Information",
+          "branding": "Branding",
+          "contact-info": "Contact Information",
+          "location-info": "Location Information",
+          "domain-info": "Domain Information",
+          "administrative": "Administrative"
+        },
+        "fields": {
+          "name": {
+            "title": "Name",
+            "description": "Unique identifier for the tenant",
+            "placeholder": "Enter tenant name (e.g., acorex-tenant)"
+          },
+          "title": {
+            "title": "Title",
+            "description": "Display name of the tenant",
+            "placeholder": "Enter tenant title"
+          },
+          "description": {
+            "title": "Description",
+            "description": "Detailed description of the tenant",
+            "placeholder": "Enter tenant description"
+          },
+          "logo": {
+            "title": "Logo",
+            "description": "Tenant logo image",
+            "placeholder": "Upload tenant logo"
+          },
+          "email": {
+            "title": "Email",
+            "description": "Primary email address",
+            "placeholder": "Enter email address"
+          },
+          "phone": {
+            "title": "Phone",
+            "description": "Contact phone number",
+            "placeholder": "Enter phone number"
+          },
+          "website": {
+            "title": "Website",
+            "description": "Website URL",
+            "placeholder": "Enter website URL"
+          },
+          "support-email": {
+            "title": "Support Email",
+            "description": "Support email address",
+            "placeholder": "Enter support email address"
+          },
+          "country": {
+            "title": "Country",
+            "description": "Country location",
+            "placeholder": "Select country"
+          },
+          "state": {
+            "title": "State/Province",
+            "description": "State or province",
+            "placeholder": "Select state/province"
+          },
+          "city": {
+            "title": "City",
+            "description": "City location",
+            "placeholder": "Select city"
+          },
+          "timezone": {
+            "title": "Timezone",
+            "description": "Timezone for the tenant",
+            "placeholder": "Select timezone"
+          },
+          "language": {
+            "title": "Language",
+            "description": "Default language",
+            "placeholder": "Select language"
+          },
+          "domain": {
+            "title": "Domain",
+            "description": "Primary domain name",
+            "placeholder": "Enter domain name (e.g., example.com)"
+          },
+          "subdomain": {
+            "title": "Subdomain",
+            "description": "Subdomain prefix",
+            "placeholder": "Enter subdomain (e.g., tenant1)"
+          },
+          "expiry-date": {
+            "title": "Expiry Date",
+            "description": "Tenant subscription expiry date",
+            "placeholder": "Select expiry date"
+          },
+          "is-platform": {
+            "title": "Platform Tenant",
+            "description": "Marks this tenant as the platform operator (Platform Console)"
+          },
+          "industry": {
+            "title": "Industry",
+            "description": "Primary industry for starter packs and defaults",
+            "placeholder": "Select Industry"
+          },
+          "max-users": {
+            "title": "Max Users",
+            "description": "Maximum number of users allowed",
+            "placeholder": "Enter maximum users"
+          },
+          "max-storage": {
+            "title": "Max Storage (GB)",
+            "description": "Maximum storage in gigabytes",
+            "placeholder": "Enter maximum storage"
+          }
+        }
+      },
+      "resource-share": {
+        "title": "Resource Share",
+        "plural": "Resource Shares",
+        "fields": {
+          "resource-info": {
+            "title": "Resource"
+          },
+          "share-info": {
+            "title": "Share"
+          }
+        }
+      },
+      "tenant-user-app-access": {
+        "title": "Tenant User App Access",
+        "plural": "Tenant User App Accesses",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "tenant-user": {
+            "title": "Tenant User"
+          },
+          "tenant": {
+            "title": "Tenant"
+          },
+          "application": {
+            "title": "Application"
+          },
+          "start-date": {
+            "title": "Start Date"
+          },
+          "end-date": {
+            "title": "End Date"
+          }
+        }
+      },
+      "tenant-user": {
+        "title": "Tenant User",
+        "plural": "Tenant Users",
+        "groups": {
+          "basic-info": "Basic Information",
+          "membership-details": "Membership Details"
+        },
+        "fields": {
+          "tenant": {
+            "title": "Tenant",
+            "description": "The tenant this user belongs to",
+            "placeholder": "Select tenant"
+          },
+          "user": {
+            "title": "User",
+            "description": "The user account",
+            "placeholder": "Select user"
+          },
+          "role": {
+            "title": "Role",
+            "description": "The role assigned to this user in the tenant",
+            "placeholder": "Select role"
+          },
+          "status": {
+            "title": "Status",
+            "description": "Current status of the tenant user",
+            "placeholder": "Select status"
+          },
+          "start-date": {
+            "title": "Start Date",
+            "description": "Date when the user membership starts",
+            "placeholder": "Select start date"
+          },
+          "end-date": {
+            "title": "End Date",
+            "description": "Date when the user membership ends",
+            "placeholder": "Select end date"
+          },
+          "username": {
+            "title": "Username",
+            "description": "Username for the new user account",
+            "placeholder": "Enter username or email"
+          },
+          "password": {
+            "title": "Password",
+            "description": "Password for the new user account",
+            "placeholder": "Enter password"
+          },
+          "is-account-holder": {
+            "title": "Account Holder",
+            "description": "Mark this user as the account holder (owner) of the tenant"
+          }
+        }
+      },
+      "related-entities": {
+        "owner-user": {
+          "title": "Owner User"
+        },
+        "subscriptions": {
+          "title": "Subscriptions"
+        },
+        "tenant-users": {
+          "title": "Tenant Users"
+        }
+      }
+    },
+    "permissions": {
+      "tenants": {
+        "title": "Tenants",
+        "actions": {
+          "view": {
+            "title": "@general:actions.view.title"
+          },
+          "create": {
+            "title": "@general:actions.create.title"
+          },
+          "edit": {
+            "title": "@general:actions.edit.title"
+          },
+          "delete": {
+            "title": "@general:actions.delete.title"
+          },
+          "manage": {
+            "title": "Tenant Management"
+          }
+        }
+      }
+    },
+    "actions": {
+      "create-tenant": {
+        "title": "Create Tenant",
+        "description": "Create a new tenant in the system"
+      },
+      "create-tenant-user": {
+        "title": "Create Tenant User",
+        "description": "Create a new user and assign them to the tenant"
+      },
+      "transfer-ownership": {
+        "title": "Transfer Ownership",
+        "description": "Transfer account holder ownership to another user"
+      }
+    },
+    "messages": {
+      "create-tenant-user": {
+        "success": "Tenant user created successfully"
+      }
+    },
+    "states": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "suspended": "Suspended",
+      "pending": "Pending"
+    },
+    "transitions": {
+      "activate": "Activate",
+      "deactivate": "Deactivate",
+      "suspend": "Suspend",
+      "resume": "Resume"
+    },
+    "settings": {
+      "tenant": {
+        "group": {
+          "nav-title": "Tenant",
+          "title": "Tenant Settings",
+          "description": "Configure tenant-specific settings and preferences"
+        },
+        "sections": {
+          "general": {
+            "title": "General Settings",
+            "description": "Basic tenant configuration options"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,323 @@
+{
+  "module": {
+    "title": "مدیریت محلی‌سازی",
+    "description": "مدیریت زبان‌ها، محلی‌ها و مناطق زمانی",
+    "menus": {
+      "root": {
+        "title": "مدیریت محلی‌سازی",
+        "description": "مدیریت تنظیمات منطقه‌ای و محلی‌سازی"
+      },
+      "foundation-group": {
+        "title": "منطقه‌ای",
+        "description": "زبان‌ها و مناطق زمانی در پیکربندی"
+      }
+    },
+    "permissions": {
+      "title": "مدیریت محلی‌سازی",
+      "description": "مدیریت تمام جنبه‌های مدیریت محلی‌سازی"
+    }
+  },
+  "languages": {
+    "terms": {
+      "language": "زبان",
+      "languages": "زبان‌ها"
+    },
+    "entities": {
+      "language": {
+        "title": "زبان",
+        "plural": "زبان‌ها",
+        "fields": {
+          "native-title": "عنوان بومی",
+          "is-rtl": "راست‌به‌چپ"
+        }
+      }
+    },
+    "menus": {
+      "languages": {
+        "title": "زبان‌ها",
+        "description": "مدیریت زبان‌ها"
+      }
+    },
+    "permissions": {
+      "languages": {
+        "title": "مدیریت زبان‌ها",
+        "description": "مدیریت زبان‌ها",
+        "actions": {
+          "view": {
+            "title": "مشاهده زبان‌ها",
+            "description": "مشاهده اطلاعات زبان‌ها"
+          },
+          "create": {
+            "title": "ایجاد زبان",
+            "description": "ایجاد زبان‌های جدید"
+          },
+          "edit": {
+            "title": "ویرایش زبان",
+            "description": "ویرایش اطلاعات زبان‌ها"
+          },
+          "delete": {
+            "title": "حذف زبان",
+            "description": "حذف زبان‌ها"
+          }
+        }
+      }
+    }
+  },
+  "locales": {
+    "terms": {
+      "locale": "محلی",
+      "locales": "محلی‌ها"
+    },
+    "entities": {
+      "locale": {
+        "title": "محلی",
+        "plural": "محلی‌ها",
+        "fields": {
+          "language": "زبان",
+          "country-code": "کد کشور",
+          "is-default": "محلی پیش‌فرض"
+        }
+      }
+    },
+    "menus": {
+      "locales": {
+        "title": "محلی‌ها",
+        "description": "مدیریت محلی‌ها"
+      }
+    },
+    "permissions": {
+      "locales": {
+        "title": "مدیریت محلی‌ها",
+        "description": "مدیریت محلی‌ها",
+        "actions": {
+          "view": {
+            "title": "مشاهده محلی‌ها",
+            "description": "مشاهده اطلاعات محلی‌ها"
+          },
+          "create": {
+            "title": "ایجاد محلی",
+            "description": "ایجاد محلی‌های جدید"
+          },
+          "edit": {
+            "title": "ویرایش محلی",
+            "description": "ویرایش اطلاعات محلی‌ها"
+          },
+          "delete": {
+            "title": "حذف محلی",
+            "description": "حذف محلی‌ها"
+          }
+        }
+      }
+    }
+  },
+  "timezones": {
+    "terms": {
+      "timezone": "منطقه زمانی",
+      "timezones": "مناطق زمانی"
+    },
+    "entities": {
+      "timezone": {
+        "title": "منطقه زمانی",
+        "plural": "مناطق زمانی",
+        "fields": {
+          "abbreviation": "اختصار",
+          "standard-offset": "اختلاف با UTC (دقیقه)",
+          "region": "منطقه",
+          "supports-dst": "پشتیبانی از DST"
+        }
+      }
+    },
+    "menus": {
+      "timezones": {
+        "title": "مناطق زمانی",
+        "description": "مدیریت مناطق زمانی"
+      }
+    },
+    "permissions": {
+      "timezones": {
+        "title": "مدیریت مناطق زمانی",
+        "description": "مدیریت مناطق زمانی",
+        "actions": {
+          "view": {
+            "title": "مشاهده مناطق زمانی",
+            "description": "مشاهده اطلاعات مناطق زمانی"
+          },
+          "create": {
+            "title": "ایجاد منطقه زمانی",
+            "description": "ایجاد مناطق زمانی جدید"
+          },
+          "edit": {
+            "title": "ویرایش منطقه زمانی",
+            "description": "ویرایش اطلاعات مناطق زمانی"
+          },
+          "delete": {
+            "title": "حذف منطقه زمانی",
+            "description": "حذف مناطق زمانی"
+          }
+        }
+      }
+    }
+  },
+  "settings": {
+    "settings": {
+      "regional": {
+        "nav-title": "زبان و منطقه",
+        "title": "تنظیمات منطقه‌ای",
+        "description": "پیکربندی ترجیحات منطقه‌ای و زبانی.",
+        "datetime": {
+          "title": "تاریخ و زمان",
+          "description": "پیکربندی تنظیمات تاریخ و زمان.",
+          "timezone": {
+            "title": "منطقه زمانی",
+            "description": "تنظیم منطقه زمانی پیش‌فرض برای برنامه."
+          }
+        },
+        "region": {
+          "title": "منطقه",
+          "description": "پیکربندی فرمت منطقه‌ای و ترجیحات.",
+          "available-languages": {
+            "title": "زبان‌های در دسترس",
+            "description": "زبان‌هایی را انتخاب کنید که در سوییچر هدر و تنظیمات زبان کاربر نمایش داده می‌شوند. مستأجر می‌تواند این فهرست را بازنویسی کند."
+          },
+          "language": {
+            "title": "زبان نمایش",
+            "description": "تنظیم زبان نمایش مورد نظر برای کاربر."
+          },
+          "format": {
+            "title": "فرمت منطقه‌ای",
+            "description": "تنظیم فرمت منطقه‌ای برای اعداد، تاریخ‌ها و زمان‌ها."
+          },
+          "calendar": {
+            "title": "سیستم تقویم",
+            "description": "نحوه محاسبه و نمایش تاریخ‌ها را انتخاب کنید.",
+            "options": {
+              "gregorian": "تقویم میلادی",
+              "hijri": "تقویم هجری"
+            }
+          },
+          "calendar-events": {
+            "title": "تقویم‌های تعطیلات",
+            "description": "تقویم‌های تعطیلاتی که در تخته کار و نمای تقویم نمایش داده می‌شوند را انتخاب کنید."
+          },
+          "firstday": {
+            "title": "اولین روز هفته",
+            "description": "تنظیم اولین روز هفته.",
+            "options": {
+              "saturday": "شنبه",
+              "sunday": "یکشنبه",
+              "monday": "دوشنبه"
+            }
+          },
+          "workdays": {
+            "title": "روزهای کاری",
+            "description": "انتخاب روزهای کاری برای کاربر.",
+            "options": {
+              "monday": "دوشنبه",
+              "tuesday": "سه‌شنبه",
+              "wednesday": "چهارشنبه",
+              "thursday": "پنج‌شنبه",
+              "friday": "جمعه",
+              "saturday": "شنبه",
+              "sunday": "یکشنبه"
+            }
+          },
+          "multilanguage-support": {
+            "title": "فعال‌سازی پشتیبانی چندزبانه برای محتوا",
+            "description": "امکان وارد کردن متن‌های رایج (عنوان، توضیحات، یادداشت و موارد مشابه) به چند زبان را می‌دهد. اگر فقط از یک زبان استفاده می‌کنید، آن را خاموش کنید."
+          },
+          "shortdate": {
+            "title": "فرمت تاریخ کوتاه",
+            "description": "انتخاب فرمت تاریخ کوتاه.",
+            "options": {
+              "month-day-year": "ماه/روز/سال",
+              "day-month-year": "روز/ماه/سال",
+              "year-month-day": "سال-ماه-روز"
+            }
+          },
+          "longdate": {
+            "title": "فرمت تاریخ طولانی",
+            "description": "انتخاب فرمت تاریخ طولانی.",
+            "options": {
+              "month-day-year": "ماه روز، سال (آوریل 10، 2025)",
+              "weekday-month-day-year": "روز هفته، ماه روز، سال (پنج‌شنبه، آوریل 10، 2025)",
+              "year-month-day": "سال-ماه-روز (2025-04-10)"
+            }
+          },
+          "shorttime": {
+            "title": "فرمت زمان کوتاه",
+            "description": "انتخاب فرمت زمان کوتاه (12 ساعته یا 24 ساعته).",
+            "options": {
+              "12hour": "12 ساعته (ساعت:دقیقه ق.ظ/ب.ظ)",
+              "24hour": "24 ساعته (ساعت:دقیقه)"
+            }
+          },
+          "longtime": {
+            "title": "فرمت زمان طولانی",
+            "description": "انتخاب فرمت زمان طولانی (12 ساعته یا 24 ساعته).",
+            "options": {
+              "12hour": "12 ساعته (ساعت:دقیقه:ثانیه ق.ظ/ب.ظ)",
+              "24hour": "24 ساعته (ساعت:دقیقه:ثانیه)"
+            }
+          }
+        },
+        "units": {
+          "title": "واحدها",
+          "description": "پیکربندی واحدهای اندازه‌گیری و نمایش.",
+          "temperature": {
+            "title": "واحدهای دما",
+            "description": "انتخاب مقیاس دمای مورد نظر شما.",
+            "options": {
+              "celsius": "سلسیوس (°C)",
+              "fahrenheit": "فارنهایت (°F)",
+              "kelvin": "کلوین (K)"
+            }
+          },
+          "distance": {
+            "title": "واحدهای فاصله",
+            "description": "انتخاب واحد فاصله مورد نظر شما.",
+            "options": {
+              "kilometers": "کیلومتر (km)",
+              "miles": "مایل (mi)"
+            }
+          },
+          "weight": {
+            "title": "واحدهای وزن",
+            "description": "انتخاب واحد وزن مورد نظر شما.",
+            "options": {
+              "kilograms": "کیلوگرم (kg)",
+              "pounds": "پوند (lb)"
+            }
+          },
+          "volume": {
+            "title": "واحدهای حجم",
+            "description": "انتخاب واحد حجم مورد نظر شما.",
+            "options": {
+              "liters": "لیتر (L)",
+              "gallons": "گالن (gal)"
+            }
+          },
+          "speed": {
+            "title": "واحدهای سرعت",
+            "description": "انتخاب واحد سرعت مورد نظر شما.",
+            "options": {
+              "kmh": "کیلومتر در ساعت (km/h)",
+              "km/h": "کیلومتر در ساعت (km/h)",
+              "mph": "مایل در ساعت (mph)"
+            }
+          },
+          "area": {
+            "title": "واحدهای مساحت",
+            "description": "انتخاب واحد مساحت مورد نظر شما.",
+            "options": {
+              "square-meters": "متر مربع (m²)",
+              "square-feet": "فوت مربع (ft²)"
+            }
+          }
+        }
+      }
+    }
+  },
+  "app-startup": {
+    "applying-regional-settings": "در حال اعمال تنظیمات منطقه‌ای (پلتفرم، سازمان، کاربر)..."
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "integration": {
+    "display-name": "GitHub",
+    "description": "اتصال GitHub با توکن دسترسی شخصی برای مخازن و همگام‌سازی.",
+    "auth": {
+      "pat": {
+        "label": "توکن دسترسی شخصی",
+        "instructions": "<p>یک <strong>توکن دسترسی شخصی</strong> در GitHub بسازید و اینجا وارد کنید. از <a href=\"https://github.com/settings/personal-access-tokens/new\" target=\"_blank\" rel=\"noopener noreferrer\">Fine-grained tokens</a> یا <a href=\"https://github.com/settings/tokens/new\" target=\"_blank\" rel=\"noopener noreferrer\">توکن‌های کلاسیک</a> با scopeهای مخزن مورد نیاز استفاده کنید.</p>",
+        "token": {
+          "label": "توکن دسترسی شخصی",
+          "placeholder": "توکن دسترسی شخصی را وارد کنید"
+        }
+      }
+    },
+    "connect": {
+      "instructions": "<p>یک <strong>توکن دسترسی شخصی</strong> در GitHub بسازید و اینجا وارد کنید. از <a href=\"https://github.com/settings/personal-access-tokens/new\" target=\"_blank\" rel=\"noopener noreferrer\">Fine-grained tokens</a> یا <a href=\"https://github.com/settings/tokens/new\" target=\"_blank\" rel=\"noopener noreferrer\">توکن‌های کلاسیک</a> با scopeهای مخزن مورد نیاز، توکن بسازید و اتصال را ذخیره کنید.</p>",
+      "dialog": {
+        "title": "اتصال GitHub",
+        "reconfigure-title": "پیکربندی مجدد GitHub"
+      },
+      "fields": {
+        "display-name": "نام نمایشی"
+      },
+      "placeholders": {
+        "display-name": "GitHub"
+      },
+      "actions": {
+        "save": "ذخیره اتصال"
+      },
+      "messages": {
+        "token-required": "توکن دسترسی شخصی الزامی است."
+      }
+    }
+  },
+  "settings": {
+    "github": {
+      "section-title": "GitHub",
+      "section-description": "GitHub را برای کنترل سورس و همگام‌سازی متصل کنید.",
+      "connection-title": "اتصال",
+      "connection-description": "برای دسترسی به مخازن در سطح tenant از توکن دسترسی شخصی استفاده کنید."
+    }
+  }
+}

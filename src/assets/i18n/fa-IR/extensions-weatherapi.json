@@ -1,0 +1,48 @@
+{
+  "module": {
+    "title": "WeatherAPI.com",
+    "description": "یکپارچه‌سازی ارائه‌دهنده داده آب‌وهوا"
+  },
+  "integration": {
+    "display-name": "WeatherAPI.com",
+    "description": "WeatherAPI.com را برای تأمین ویجت‌های آب‌وهوا در داشبورد متصل کنید.",
+    "auth": {
+      "pat": {
+        "label": "کلید API",
+        "instructions": "در weatherapi.com یک کلید API بسازید و اینجا وارد کنید.",
+        "token": {
+          "placeholder": "کلید API WeatherAPI.com"
+        }
+      }
+    },
+    "connect": {
+      "pat-dialog": {
+        "title": "اتصال حساب",
+        "configure-title": "پیکربندی حساب",
+        "instructions": "در weatherapi.com یک کلید API بسازید و اینجا وارد کنید.",
+        "fields": {
+          "display-name": "نام نمایشی",
+          "api-key": "کلید API"
+        },
+        "placeholders": {
+          "display-name": "WeatherAPI.com",
+          "api-key": "کلید API WeatherAPI.com"
+        },
+        "actions": {
+          "save": "ذخیره اتصال"
+        },
+        "messages": {
+          "api-key-required": "کلید API الزامی است."
+        }
+      }
+    }
+  },
+  "settings": {
+    "weatherapi": {
+      "section-title": "WeatherAPI.com",
+      "section-description": "حساب WeatherAPI.com را برای ویجت‌های آب‌وهوا مستأجر متصل کنید.",
+      "connection-title": "حساب",
+      "connection-description": "کلید API مربوط به WeatherAPI.com را برای این مستأجر ذخیره کنید."
+    }
+  }
+}

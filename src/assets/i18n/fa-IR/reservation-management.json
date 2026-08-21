@@ -1,0 +1,563 @@
+{
+  "module": {
+    "title": "مدیریت رزرو",
+    "description": "مدیریت رزروها",
+    "menus": {
+      "root": {
+        "title": "مدیریت رزرو",
+        "description": "مدیریت رزرو"
+      }
+    },
+    "permissions": {
+      "title": "مدیریت رزرو",
+      "description": "مدیریت همهٔ جنبه‌های رزرو"
+    }
+  },
+
+  "reservation-plugin": {
+    "group": {
+      "title": "رزروها"
+    },
+    "property": {
+      "title": "رزروها"
+    }
+  },
+
+  "reservation-board": {
+    "page-title": "تابلوی رزرو"
+  },
+
+  "reservation-types": {
+    "terms": {
+      "reservation-type": "نوع رزرو",
+      "reservation-types": "انواع رزرو"
+    },
+    "entities": {
+      "reservation-type": {
+        "title": "نوع رزرو",
+        "plural": "انواع رزرو",
+        "groups": {
+          "basic-information": "اطلاعات پایه"
+        },
+        "fields": {
+          "name": {
+            "title": "نام",
+            "placeholder": "نام نوع رزرو را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان نوع رزرو را وارد کنید"
+          },
+          "resource-entity-ids": {
+            "title": "موجودیت‌های منبع"
+          },
+          "is-blocking": {
+            "title": "مسدودکننده است"
+          }
+        }
+      }
+    },
+    "menus": {
+      "reservation-types": {
+        "title": "انواع رزرو",
+        "description": "مدیریت انواع رزرو"
+      }
+    },
+    "permissions": {
+      "view": {
+        "title": "مشاهدهٔ انواع رزرو",
+        "description": "مشاهدهٔ اطلاعات نوع رزرو"
+      },
+      "create": {
+        "title": "ایجاد نوع رزرو",
+        "description": "ایجاد انواع رزرو جدید"
+      },
+      "edit": {
+        "title": "ویرایش نوع رزرو",
+        "description": "ویرایش اطلاعات نوع رزرو"
+      },
+      "delete": {
+        "title": "حذف انواع رزرو",
+        "description": "حذف انواع رزرو"
+      },
+      "manage": {
+        "title": "مدیریت انواع رزرو",
+        "description": "دسترسی کامل به مدیریت انواع رزرو"
+      }
+    }
+  },
+
+  "reservation-statuses": {
+    "terms": {
+      "reservation-status": "وضعیت رزرو",
+      "reservation-statuses": "وضعیت‌های رزرو"
+    },
+    "entities": {
+      "reservation-status": {
+        "title": "وضعیت رزرو",
+        "plural": "وضعیت‌های رزرو",
+        "groups": {
+          "basic-information": "اطلاعات پایه"
+        },
+        "fields": {
+          "name": {
+            "title": "نام",
+            "placeholder": "کد وضعیت را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان وضعیت را وارد کنید"
+          },
+          "color": {
+            "title": "رنگ"
+          },
+          "icon": {
+            "title": "آیکن",
+            "placeholder": "کلاس آیکن را وارد کنید (مثلاً fa-light fa-check)"
+          }
+        }
+      }
+    },
+    "menus": {
+      "reservation-statuses": {
+        "title": "وضعیت‌های رزرو",
+        "description": "مدیریت وضعیت‌های رزرو"
+      }
+    },
+    "permissions": {
+      "view": {
+        "title": "مشاهدهٔ وضعیت‌های رزرو",
+        "description": "مشاهدهٔ اطلاعات وضعیت رزرو"
+      },
+      "create": {
+        "title": "ایجاد وضعیت رزرو",
+        "description": "ایجاد وضعیت‌های رزرو جدید"
+      },
+      "edit": {
+        "title": "ویرایش وضعیت رزرو",
+        "description": "ویرایش اطلاعات وضعیت رزرو"
+      },
+      "delete": {
+        "title": "حذف وضعیت‌های رزرو",
+        "description": "حذف وضعیت‌های رزرو"
+      },
+      "manage": {
+        "title": "مدیریت وضعیت‌های رزرو",
+        "description": "دسترسی کامل به مدیریت وضعیت‌های رزرو"
+      }
+    }
+  },
+
+  "reservation-classes": {
+    "terms": {
+      "reservation-class": "کلاس رزرو",
+      "reservation-classes": "کلاس‌های رزرو"
+    },
+    "entities": {
+      "reservation-class": {
+        "title": "کلاس رزرو",
+        "plural": "کلاس‌های رزرو",
+        "groups": {
+          "basic-information": "اطلاعات پایه"
+        },
+        "tabs": {
+        },
+        "related-entities": {
+          "reservation-class-statuses": {
+            "title": "وضعیت‌های کلاس رزرو"
+          },
+          "reservation-status-transitions": {
+            "title": "گذارهای وضعیت رزرو"
+          }
+        },
+        "fields": {
+          "reservation-type-ids": {
+            "title": "انواع رزرو"
+          },
+          "name": {
+            "title": "نام",
+            "placeholder": "نام کلاس را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان کلاس را وارد کنید"
+          }
+        }
+      }
+    },
+    "menus": {
+      "reservation-classes": {
+        "title": "کلاس‌های رزرو",
+        "description": "مدیریت کلاس‌های رزرو"
+      }
+    },
+    "permissions": {
+      "view": {
+        "title": "مشاهدهٔ کلاس‌های رزرو",
+        "description": "مشاهدهٔ اطلاعات کلاس رزرو"
+      },
+      "create": {
+        "title": "ایجاد کلاس رزرو",
+        "description": "ایجاد کلاس‌های رزرو جدید"
+      },
+      "edit": {
+        "title": "ویرایش کلاس رزرو",
+        "description": "ویرایش اطلاعات کلاس رزرو"
+      },
+      "delete": {
+        "title": "حذف کلاس‌های رزرو",
+        "description": "حذف کلاس‌های رزرو"
+      },
+      "manage": {
+        "title": "مدیریت کلاس‌های رزرو",
+        "description": "دسترسی کامل به مدیریت کلاس‌های رزرو"
+      }
+    }
+  },
+
+  "reservations": {
+    "terms": {
+      "reservation": "رزرو",
+      "reservations": "رزروها"
+    },
+    "entities": {
+      "reservation": {
+        "title": "رزرو",
+        "plural": "رزروها",
+        "fields": {
+          "reservation-type-id": "نوع رزرو",
+          "reservation-resource-type-id": "نوع منبع رزرو",
+          "reservation-status-id": "وضعیت رزرو",
+          "resource-entity-id": {
+            "title": "موجودیت منبع",
+            "placeholder": "شناسهٔ موجودیت منبع را وارد کنید"
+          },
+          "resource-id": "منبع",
+          "start-date": "تاریخ شروع",
+          "end-date": "تاریخ پایان",
+          "requested-by-id": "درخواست‌کننده",
+          "requested-date": "تاریخ درخواست",
+          "approved-by-id": "تأییدکننده",
+          "approved-date": "تاریخ تأیید"
+        },
+        "groups": {
+          "reservatin-information": "اطلاعات رزرو",
+          "approve-information": "اطلاعات تأیید"
+        },
+        "related-entities": {}
+      }
+    },
+    "menus": {
+      "reservations": {
+        "title": "رزروها",
+        "description": "مدیریت رزروها"
+      }
+    },
+    "permissions": {
+      "reservations": {
+        "title": "مدیریت رزرو",
+        "description": "مدیریت سوابق رزرو",
+        "actions": {
+          "view": { "title": "مشاهدهٔ رزروها", "description": "مشاهدهٔ اطلاعات رزرو" },
+          "create": { "title": "ایجاد رزرو", "description": "ایجاد رزروهای جدید" },
+          "edit": { "title": "ویرایش رزرو", "description": "ویرایش اطلاعات رزرو" },
+          "delete": { "title": "حذف رزروها", "description": "حذف رزروها" }
+        }
+      }
+    }
+  },
+
+  "reservation-status-transitions": {
+    "terms": {
+      "reservation-status-transition": "گذار وضعیت رزرو",
+      "reservation-status-transitions": "گذارهای وضعیت رزرو"
+    },
+    "entities": {
+      "reservation-status-transition": {
+        "title": "گذار وضعیت رزرو",
+        "plural": "گذارهای وضعیت رزرو",
+        "groups": {
+          "basic-information": "اطلاعات پایه",
+          "transition-details": "جزئیات گذار"
+        },
+        "fields": {
+          "reservation-class-id": {
+            "title": "کلاس رزرو"
+          },
+          "from-status-id": {
+            "title": "از وضعیت"
+          },
+          "to-status-id": {
+            "title": "به وضعیت"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان گذار را وارد کنید"
+          },
+          "requires-permission": {
+            "title": "نیاز به مجوز",
+            "placeholder": "کلید مجوز را وارد کنید (مثلاً ReservationManagement:ReservationStatusTransition:Manage)"
+          },
+          "order": {
+            "title": "ترتیب"
+          }
+        }
+      }
+    },
+    "menus": {
+      "reservation-status-transitions": {
+        "title": "گذارهای وضعیت",
+        "description": "مدیریت گذارهای وضعیت رزرو"
+      }
+    },
+    "permissions": {
+      "view": {
+        "title": "مشاهدهٔ گذارهای وضعیت",
+        "description": "مشاهدهٔ اطلاعات گذار وضعیت رزرو"
+      },
+      "create": {
+        "title": "ایجاد گذار وضعیت",
+        "description": "ایجاد گذارهای وضعیت رزرو جدید"
+      },
+      "edit": {
+        "title": "ویرایش گذار وضعیت",
+        "description": "ویرایش اطلاعات گذار وضعیت رزرو"
+      },
+      "delete": {
+        "title": "حذف گذارهای وضعیت",
+        "description": "حذف گذارهای وضعیت رزرو"
+      },
+      "manage": {
+        "title": "مدیریت گذارهای وضعیت",
+        "description": "دسترسی کامل به مدیریت گذارهای وضعیت رزرو"
+      }
+    }
+  },
+
+  "reservation-events": {
+    "terms": {
+      "reservation-event": "رویداد رزرو",
+      "reservation-events": "رویدادهای رزرو"
+    },
+    "entities": {
+      "reservation-event": {
+        "title": "رویداد رزرو",
+        "plural": "رویدادهای رزرو",
+        "fields": {
+          "reservation-id": "رزرو",
+          "reservation-event-id": "رویداد رزرو",
+          "event-date": "تاریخ رویداد",
+          "actor-id": "کنش‌گر",
+          "from-status-id": "از وضعیت",
+          "to-status-id": "به وضعیت"
+        },
+        "groups": {
+          "basic-information": "اطلاعات پایه"
+        }
+      }
+    },
+    "menus": {
+      "reservation-events": {
+        "title": "رویدادهای رزرو",
+        "description": "مدیریت رویدادهای رزرو"
+      }
+    }
+  },
+
+  "event-types": {
+    "terms": {
+      "event-type": "نوع رویداد",
+      "event-types": "انواع رویداد"
+    },
+    "entities": {
+      "event-type": {
+        "title": "نوع رویداد",
+        "plural": "انواع رویداد",
+        "fields": {
+          "code": "کد",
+          "title": "عنوان"
+        },
+        "groups": {
+          "basic-information": "اطلاعات پایه",
+          "appearance": "ظاهر"
+        }
+      }
+    },
+    "menus": {
+      "event-types": {
+        "title": "انواع رویداد",
+        "description": "مدیریت انواع رویداد"
+      }
+    },
+    "permissions": {
+      "event-types": {
+        "title": "مدیریت نوع رویداد",
+        "description": "مدیریت انواع رویداد",
+        "actions": {
+          "view": { "title": "مشاهدهٔ انواع رویداد", "description": "مشاهدهٔ اطلاعات نوع رویداد" },
+          "create": { "title": "ایجاد نوع رویداد", "description": "ایجاد انواع رویداد جدید" },
+          "edit": { "title": "ویرایش نوع رویداد", "description": "ویرایش اطلاعات نوع رویداد" },
+          "delete": { "title": "حذف انواع رویداد", "description": "حذف انواع رویداد" }
+        }
+      }
+    }
+  },
+
+  "reservation-resource-types": {
+    "terms": {
+      "reservation-resource-type": "نوع منبع رزرو",
+      "reservation-resource-types": "انواع منبع رزرو"
+    },
+    "entities": {
+      "reservation-resource-type": {
+        "title": "نوع منبع رزرو",
+        "plural": "انواع منبع رزرو",
+        "groups": {
+          "basic-information": "اطلاعات پایه"
+        },
+        "fields": {
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان نوع منبع را وارد کنید"
+          },
+          "entity-id": {
+            "title": "موجودیت"
+          },
+          "reservation-class-id": {
+            "title": "کلاس رزرو"
+          }
+        }
+      }
+    },
+    "menus": {
+      "reservation-resource-types": {
+        "title": "انواع منبع رزرو",
+        "description": "مدیریت انواع منبع رزرو"
+      }
+    },
+    "permissions": {
+      "view": {
+        "title": "مشاهدهٔ انواع منبع",
+        "description": "مشاهدهٔ اطلاعات نوع منبع رزرو"
+      },
+      "create": {
+        "title": "ایجاد نوع منبع",
+        "description": "ایجاد انواع منبع رزرو جدید"
+      },
+      "edit": {
+        "title": "ویرایش نوع منبع",
+        "description": "ویرایش اطلاعات نوع منبع رزرو"
+      },
+      "delete": {
+        "title": "حذف انواع منبع",
+        "description": "حذف انواع منبع رزرو"
+      },
+      "manage": {
+        "title": "مدیریت انواع منبع",
+        "description": "دسترسی کامل به مدیریت انواع منبع رزرو"
+      }
+    }
+  },
+
+  "reservation-class-statuses": {
+    "terms": {
+      "reservation-class-status": "وضعیت کلاس رزرو",
+      "reservation-class-statuses": "وضعیت‌های کلاس رزرو"
+    },
+    "entities": {
+      "reservation-class-status": {
+        "title": "وضعیت کلاس رزرو",
+        "plural": "وضعیت‌های کلاس رزرو",
+        "groups": {
+          "basic-information": "وضعیت",
+          "status-settings": "تنظیمات وضعیت"
+        },
+        "fields": {
+          "reservation-class-id": {
+            "title": "کلاس رزرو"
+          },
+          "reservation-status-id": {
+            "title": "وضعیت رزرو"
+          },
+          "is-initial": {
+            "title": "اولیه است"
+          },
+          "is-final": {
+            "title": "نهایی است"
+          },
+          "order": {
+            "title": "ترتیب"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "view": {
+        "title": "مشاهدهٔ وضعیت‌های کلاس",
+        "description": "مشاهدهٔ اطلاعات وضعیت کلاس رزرو"
+      },
+      "create": {
+        "title": "ایجاد وضعیت کلاس",
+        "description": "ایجاد وضعیت‌های کلاس رزرو جدید"
+      },
+      "edit": {
+        "title": "ویرایش وضعیت کلاس",
+        "description": "ویرایش اطلاعات وضعیت کلاس رزرو"
+      },
+      "delete": {
+        "title": "حذف وضعیت‌های کلاس",
+        "description": "حذف وضعیت‌های کلاس رزرو"
+      },
+      "manage": {
+        "title": "مدیریت وضعیت‌های کلاس",
+        "description": "دسترسی کامل به مدیریت وضعیت‌های کلاس رزرو"
+      }
+    }
+  },
+
+  "reservation-class-types": {
+    "terms": {
+      "reservation-class-type": "نوع کلاس رزرو",
+      "reservation-class-types": "انواع کلاس رزرو"
+    },
+    "entities": {
+      "reservation-class-type": {
+        "title": "نوع کلاس رزرو",
+        "plural": "انواع کلاس رزرو",
+        "groups": {
+          "basic-information": "اطلاعات پایه"
+        },
+        "fields": {
+          "reservation-class-id": {
+            "title": "کلاس رزرو"
+          },
+          "reservation-type-id": {
+            "title": "نوع رزرو"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "view": {
+        "title": "مشاهدهٔ انواع کلاس",
+        "description": "مشاهدهٔ اطلاعات نوع کلاس رزرو"
+      },
+      "create": {
+        "title": "ایجاد نوع کلاس",
+        "description": "ایجاد انواع کلاس رزرو جدید"
+      },
+      "edit": {
+        "title": "ویرایش نوع کلاس",
+        "description": "ویرایش اطلاعات نوع کلاس رزرو"
+      },
+      "delete": {
+        "title": "حذف انواع کلاس",
+        "description": "حذف انواع کلاس رزرو"
+      },
+      "manage": {
+        "title": "مدیریت انواع کلاس",
+        "description": "دسترسی کامل به مدیریت انواع کلاس رزرو"
+      }
+    }
+  }
+}

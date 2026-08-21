@@ -1,0 +1,184 @@
+{
+  "module": {
+    "title": "Simpro",
+    "description": "اتصال Simpro Cloud و همگام‌سازی Jobها با پروژه‌های پلتفرم",
+    "menus": {
+      "configuration": {
+        "title": "Simpro"
+      }
+    }
+  },
+  "integration": {
+    "display-name": "Simpro",
+    "description": "اتصال به Simpro Cloud برای مدیریت Job و همگام‌سازی پروژه.",
+    "badges": {
+      "last-sync": "آخرین همگام‌سازی: {{datetime}}",
+      "never-synced": "هنوز همگام‌سازی نشده"
+    },
+    "auth": {
+      "client-credentials": {
+        "label": "اعتبارنامه کلاینت",
+        "instructions": "آدرس Build، شناسه شرکت و client ID و client secret از فایل کلید برنامه Simpro را وارد کنید. سرور با grant اعتبارنامه کلاینت OAuth2 توکن دسترسی دریافت می‌کند.",
+        "build-url": {
+          "label": "آدرس Build",
+          "placeholder": "https://your-build.simprosuite.com"
+        },
+        "company-id": {
+          "label": "شناسه شرکت",
+          "placeholder": "۰ برای build تک‌شرکتی"
+        },
+        "client-id": {
+          "label": "Client ID",
+          "placeholder": "Client ID مربوط به Simpro را وارد کنید"
+        },
+        "client-secret": {
+          "label": "Client Secret",
+          "placeholder": "Client Secret مربوط به Simpro را وارد کنید"
+        }
+      },
+      "oauth": {
+        "label": "OAuth 2.0",
+        "instructions": "آدرس Build، شناسه شرکت و اعتبارنامه OAuth (client ID و client secret) را از فایل کلید برنامه Simpro وارد کنید. پس از ذخیره، برای ورود و تأیید دسترسی به Simpro هدایت می‌شوید. توکن‌ها ذخیره و به‌صورت خودکار تمدید می‌شوند — برای هر ذخیره نیازی به تأیید مجدد نیست.",
+        "build-url": {
+          "label": "آدرس Build",
+          "placeholder": "https://your-build.simprosuite.com"
+        },
+        "company-id": {
+          "label": "شناسه شرکت",
+          "placeholder": "۰ برای build تک‌شرکتی"
+        },
+        "client-id": {
+          "label": "Client ID",
+          "placeholder": "Client ID مربوط به Simpro را وارد کنید"
+        },
+        "client-secret": {
+          "label": "Client Secret",
+          "placeholder": "Client Secret مربوط به Simpro را وارد کنید"
+        }
+      }
+    },
+    "connect": {
+      "instructions": "<p><strong>آدرس Build</strong> سیمپرو را وارد کنید (مثلاً <code>https://your-build.simprosuite.com</code>) به‌همراه <strong>شناسه شرکت</strong> و <strong>client ID</strong> / <strong>client secret</strong> از فایل کلید برنامه. پس از ذخیره، برای مجوزدهی به Simpro هدایت می‌شوید.</p>",
+      "dialog": {
+        "title": "اتصال Simpro",
+        "reconfigure-title": "پیکربندی مجدد Simpro"
+      },
+      "fields": {
+        "display-name": "نام نمایشی"
+      },
+      "placeholders": {
+        "display-name": "Simpro"
+      },
+      "actions": {
+        "save": "ذخیره اتصال",
+        "save-and-authorize": "ذخیره و تأیید دسترسی"
+      }
+    }
+  },
+  "permissions": {
+    "group": {
+      "title": "Simpro",
+      "description": "پیکربندی یکپارچه‌سازی Simpro و پیوندهای Job"
+    },
+    "management": {
+      "title": "مدیریت Simpro",
+      "description": "دسترسی کامل به پیکربندی Simpro"
+    },
+    "simpro-project": {
+      "view": { "title": "مشاهده پیوندهای Job" },
+      "create": { "title": "ایجاد پیوند Job" },
+      "update": { "title": "ویرایش پیوند Job" },
+      "delete": { "title": "حذف پیوند Job" }
+    },
+    "catalog": {
+      "view": { "title": "مشاهده پیکربندی Simpro" }
+    },
+    "project-import": {
+      "execute": { "title": "ورود Job از Simpro" }
+    },
+    "customer-import": {
+      "execute": { "title": "ورود مشتریان از Simpro" }
+    },
+    "project-sync": {
+      "execute": { "title": "همگام‌سازی پروژه با Simpro" }
+    }
+  },
+  "actions": {
+    "import-from-simpro": {
+      "title": "ورود از Simpro"
+    },
+    "sync": {
+      "title": "همگام‌سازی"
+    }
+  },
+  "import": {
+    "not-connected": {
+      "title": "برای وارد کردن Jobها Simpro را متصل کنید",
+      "message": "Simpro برای این tenant متصل نیست. برای اتصال حساب، مدیریت ← یکپارچه‌سازی‌ها را باز کنید و دوباره وارد کردن را امتحان کنید."
+    },
+    "success-single": "«{{title}}» از Simpro وارد شد.",
+    "success-multiple": "{{count}} کار از Simpro وارد شد.",
+    "selector": {
+      "title": "انتخاب Job از Simpro",
+      "pull-jobs": "دریافت Jobها"
+    },
+    "dialog": {
+      "title": "ورود Job از Simpro",
+      "submit": "ورود Job"
+    },
+    "loading": {
+      "fetch": {
+        "title": "بارگذاری از Simpro",
+        "status": "در حال کشیدن Jobها به حافظه…"
+      },
+      "import": {
+        "title": "ورود Job",
+        "status": "در حال ایجاد پروژه پلتفرم…"
+      }
+    },
+    "sync-strategy": {
+      "title": "استراتژی همگام‌سازی",
+      "options": {
+        "remoteOverride": "ریموت بر محلی اولویت دارد",
+        "localOverride": "مقادیر محلی حفظ شود",
+        "merge": "ادغام (پر کردن فیلدهای خالی محلی)"
+      }
+    }
+  },
+  "import-customers": {
+    "success-single": "«{{title}}» از Simpro وارد شد.",
+    "success-multiple": "{{count}} مشتری از Simpro وارد شد.",
+    "selector": {
+      "title": "انتخاب مشتری Simpro",
+      "pull-customers": "دریافت مشتریان"
+    },
+    "loading": {
+      "fetch": {
+        "title": "بارگذاری از Simpro",
+        "status": "در حال کشیدن مشتریان به حافظه…"
+      },
+      "import": {
+        "title": "ورود مشتری",
+        "status": "در حال ایجاد مشتری پلتفرم…"
+      }
+    }
+  },
+  "sync": {
+    "success": "پروژه با موفقیت با Simpro همگام‌سازی شد.",
+    "loading": {
+      "title": "همگام‌سازی با Simpro",
+      "status": "در حال به‌روزرسانی پروژه از Simpro…"
+    }
+  },
+  "errors": {
+    "company-id-zero-multi": "شناسه شرکت ۰ در buildهای چندشرکتی Simpro قابل استفاده نیست. مدیریت ← یکپارچه‌سازی‌ها ← پیکربندی Simpro را باز کنید و یک شناسه شرکت معتبر تنظیم کنید.",
+    "company-id-invalid": "شناسه شرکت تنظیم‌شده برای این build سیمپرو معتبر نیست. مدیریت ← یکپارچه‌سازی‌ها ← پیکربندی Simpro را باز کنید و شناسه شرکت را به‌روزرسانی کنید.",
+    "pull-jobs-failed": "دریافت Jobها از Simpro ناموفق بود.",
+    "pull-customers-failed": "دریافت مشتریان از Simpro ناموفق بود.",
+    "import-failed": "ورود از Simpro ناموفق بود.",
+    "import-customers-failed": "ورود مشتری از Simpro ناموفق بود.",
+    "sync-failed": "همگام‌سازی با Simpro ناموفق بود.",
+    "connect-failed": "اتصال Simpro ناموفق بود.",
+    "oauth-callback-failed": "مجوزدهی Simpro ناموفق بود."
+  }
+}

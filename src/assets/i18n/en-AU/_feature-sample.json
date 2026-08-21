@@ -1,0 +1,47 @@
+{
+  "feature": {
+    "title": "Feature Sample",
+    "description": "Sample standalone feature for common functionality"
+  },
+  "terms": {
+    "term-key1": "Term Key 1",
+    "term-key2": {
+      "sub-key": "Term Key 2 Sub Key"
+    }
+  },
+  "components": {
+    "component-key": {
+      "title": "Component Title",
+      "description": "Component description (sample help text).",
+      "empty-states": {
+        "no-data": {
+          "title": "No Data Found",
+          "description": "No data available"
+        }
+      }
+    }
+  },
+  "actions": {
+    "action-key": {
+      "title": "Action Title",
+      "description": "Action description (short hint for the user)."
+    }
+  },
+  "messages": {
+    "success": {
+      "message-key": "Success Message"
+    },
+    "error": {
+      "message-key": "Error Message"
+    },
+    "warning": {
+      "message-key": "Warning Message"
+    }
+  },
+  "states": {
+    "state-key": "State Label"
+  },
+  "validations": {
+    "validation-key": "Validation Message"
+  }
+}

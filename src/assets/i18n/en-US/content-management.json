@@ -1,0 +1,278 @@
+{
+  "module": {
+    "title": "Content Management",
+    "description": "Manage content, promotions, terms & conditions, and glossaries",
+    "menus": {
+      "root": {
+        "title": "Content Management",
+        "description": "Manage all content-related information"
+      }
+    }
+  },
+  "help-center": {
+    "terms": {
+      "help": "Help",
+      "help-center": "Help Center",
+      "tutorials": "Tutorials",
+      "about": "About"
+    },
+    "menus": {
+      "help": {
+        "title": "Help",
+        "description": "Application help and support"
+      },
+      "help-center": {
+        "title": "Help Center",
+        "description": "Access help center resources"
+      },
+      "tutorials": {
+        "title": "Tutorials",
+        "description": "View application tutorials"
+      },
+      "about": {
+        "title": "About",
+        "description": "About the application"
+      }
+    }
+  },
+  "promotions": {
+    "terms": {
+      "promotion": "Promotion",
+      "promotions": "Promotions",
+      "media": "Media",
+      "text": "Text"
+    },
+    "entities": {
+      "promotion": {
+        "title": "Promotion",
+        "plural": "Promotions",
+        "fields": {
+          "body": {
+            "title": "Body",
+            "description": "Promotion content body",
+            "placeholder": "Enter promotion content"
+          },
+          "content-type": {
+            "title": "Content Type",
+            "description": "Type of content",
+            "placeholder": "Select content type"
+          },
+          "placement": {
+            "title": "Placement",
+            "description": "Where to display the promotion",
+            "placeholder": "Select placement location"
+          },
+          "shape": {
+            "title": "Shape",
+            "description": "Display shape for media promotions",
+            "placeholder": "Select shape"
+          }
+        }
+      }
+    }
+  },
+  "templates": {
+    "terms": {
+      "template": "Template",
+      "templates": "Templates",
+      "text-template": "Text Template"
+    },
+    "channels": {
+      "print": "Print"
+    },
+    "entities": {
+      "text-template": {
+        "title": "Text Template",
+        "plural": "Text Templates",
+        "groups": {
+          "template-content": "Template Content"
+        },
+        "fields": {
+          "name": {
+            "title": "Name",
+            "description": "Unique name for the template",
+            "placeholder": "Enter template name"
+          },
+          "title": {
+            "title": "Title",
+            "description": "Display name of the template",
+            "placeholder": "Enter template title"
+          },
+          "kind": {
+            "title": "Kind",
+            "description": "Content template or master layout template.",
+            "options": {
+              "content": "Content",
+              "master": "Master"
+            }
+          },
+          "parent-id": {
+            "title": "Parent Template",
+            "description": "Optional master template that wraps this template body."
+          },
+          "parent": {
+            "title": "Parent Template"
+          },
+          "channel": {
+            "title": "Channel",
+            "description": "Delivery channel for the template",
+            "placeholder": "Select channel",
+            "options": {
+              "email": "Email",
+              "sms": "SMS",
+              "whatsapp": "WhatsApp",
+              "push": "Push",
+              "print": "Print"
+            }
+          },
+          "channels": {
+            "title": "Channels",
+            "description": "Template content per channel (Email, SMS, etc.)",
+            "placeholder": "Select channels and enter content"
+          },
+          "channel-select": {
+            "title": "Channels",
+            "description": "Select at least one channel",
+            "placeholder": "Select channels"
+          },
+          "subject": {
+            "title": "Subject",
+            "description": "Email subject line",
+            "placeholder": "Enter subject"
+          },
+          "body": {
+            "title": "Body",
+            "description": "Template body content with placeholders",
+            "placeholder": "Enter template body"
+          },
+          "body-format": {
+            "title": "Content Format",
+            "description": "Plain text or rich text (HTML)",
+            "placeholder": "Select format",
+            "options": {
+              "plain": "Plain Text",
+              "rich": "Rich Text (HTML)"
+            }
+          },
+          "body-placeholder": {
+            "plain": "Enter plain text. Use {{variableName}} for variables. Master templates must include [content].",
+            "rich": "Enter rich text. Use {{variableName}} for variables. Master templates must include [content]."
+          },
+          "category": {
+            "title": "Category",
+            "description": "Template category for grouping",
+            "placeholder": "Enter category"
+          }
+        }
+      }
+    },
+    "variables": {
+      "userName": "User Name",
+      "customerName": "Customer Name",
+      "orderId": "Order ID",
+      "totalAmount": "Total Amount",
+      "verificationCode": "Verification Code",
+      "resetLink": "Reset Link",
+      "expiryMinutes": "Expiry (minutes)"
+    },
+    "actions": {
+      "insert-variable": "Insert Variable",
+      "insert-content-slot": "Insert Content Slot",
+      "copy-from": "Copy from",
+      "configure-channel": "Configure Channel",
+      "edit": "Edit",
+      "preview": "Preview"
+    },
+    "messages": {
+      "preview-failed": {
+        "title": "Preview Unavailable",
+        "content": "Server preview failed. Showing a local preview instead."
+      }
+    },
+    "search": {
+      "create-text-template": {
+        "title": "Create Text Template",
+        "description": "Create a new email, SMS, or WhatsApp text template"
+      }
+    }
+  },
+  "glossaries": {
+    "terms": {
+      "glossary": "Glossary",
+      "glossaries": "Glossaries"
+    },
+    "entities": {
+      "glossary": {
+        "title": "Glossary",
+        "plural": "Glossaries",
+        "fields": {
+          "title": {
+            "title": "Title",
+            "description": "Glossary term title",
+            "placeholder": "Enter title"
+          },
+          "parent-id": {
+            "title": "Parent ID",
+            "description": "Parent glossary item",
+            "placeholder": "Select parent"
+          },
+          "translation": {
+            "title": "Translation",
+            "description": "Term translation",
+            "placeholder": "Enter translation"
+          }
+        }
+      }
+    }
+  },
+  "permissions": {
+    "manage": {
+      "title": "Content Management",
+      "description": "Full access to content management"
+    },
+    "promotion": {
+      "manage": {
+        "title": "Manage Promotions",
+        "description": "Full access to promotions"
+      },
+      "view": {
+        "title": "View Promotions",
+        "description": "View promotion details"
+      },
+      "create": {
+        "title": "Create Promotion",
+        "description": "Create new promotions"
+      },
+      "edit": {
+        "title": "Edit Promotion",
+        "description": "Edit existing promotions"
+      },
+      "delete": {
+        "title": "Delete Promotions",
+        "description": "Delete promotions"
+      }
+    },
+    "text-template": {
+      "manage": {
+        "title": "Manage Text Templates",
+        "description": "Full access to text templates"
+      },
+      "view": {
+        "title": "View Text Templates",
+        "description": "View text template details"
+      },
+      "create": {
+        "title": "Create Text Template",
+        "description": "Create new text templates"
+      },
+      "edit": {
+        "title": "Edit Text Templates",
+        "description": "Edit existing text templates"
+      },
+      "delete": {
+        "title": "Delete Text Templates",
+        "description": "Delete text templates"
+      }
+    }
+  }
+}

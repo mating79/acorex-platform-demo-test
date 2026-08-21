@@ -1,0 +1,261 @@
+<div class="test5-workflow-demo">
+  <header class="test5-workflow-demo__header">
+    <h1 class="test5-workflow-demo__title">Workflow designer (demo)</h1>
+    <p class="test5-workflow-demo__hint">
+      Drag activities onto the canvas. Move nodes from the body; resize when a
+      node is active. Connect blue (outbound) to green (inbound). This demo
+      models a production-grade
+      <strong>Register User + OTP</strong> orchestration with UI, backend,
+      security, and integration actions (rate-limit, fraud check, event
+      publishing). Multi-select works with <strong>Ctrl/Cmd + click</strong>;
+      drag one selected node to move all selected nodes.
+    </p>
+    <div class="test5-workflow-demo__actions">
+      <ax-button
+        [text]="demoReadonly() ? 'Enable editing' : 'Read-only mode'"
+        [look]="'outline'"
+        (onClick)="toggleReadonly()"
+      >
+      </ax-button>
+      <ax-button
+        [text]="'Load Register + OTP Flow'"
+        [look]="'outline'"
+        (onClick)="loadRegisterOtpTemplate()"
+      ></ax-button>
+      <ax-button
+        [text]="'Reset diagram'"
+        [look]="'outline'"
+        (onClick)="resetDiagram()"
+      ></ax-button>
+      <ax-button
+        [text]="'Arrange layout'"
+        [look]="'outline'"
+        (onClick)="arrangeLayout(wf)"
+      ></ax-button>
+    </div>
+  </header>
+
+  <div class="test5-workflow-demo__layout">
+    <aside class="test5-workflow-demo__sidebar">
+      <h2 class="test5-workflow-demo__sidebar-title">Activities</h2>
+      <p class="test5-workflow-demo__sidebar-hint">
+        Custom sidebar: each row uses <code>axpWorkflowPaletteItem</code> for
+        drag data.
+      </p>
+      <div class="test5-workflow-demo__palette">
+        @for (item of paletteItems; track item.type) {
+          <div
+            class="test5-workflow-demo__palette-row"
+            [class.test5-workflow-demo__palette-row--readonly]="demoReadonly()"
+            [axpWorkflowPaletteItem]="item"
+            [axpWorkflowPaletteDragDisabled]="demoReadonly()"
+            (axpWorkflowPaletteDragStart)="onPaletteDragStart($event)"
+            (axpWorkflowPaletteDragEnd)="onPaletteDragEnd($event)"
+            (click)="onPaletteClick(item)"
+            (dblclick)="onPaletteDoubleClick(item)"
+          >
+            <div class="test5-workflow-demo__palette-row-main">
+              @if (item.icon) {
+                <ax-icon
+                  class="test5-workflow-demo__palette-icon"
+                  [class]="item.icon"
+                ></ax-icon>
+              }
+              <span class="test5-workflow-demo__palette-title">{{
+                item.title
+              }}</span>
+            </div>
+          </div>
+        }
+      </div>
+    </aside>
+
+    <section class="test5-workflow-demo__canvas-wrap">
+      <axp-workflow-designer
+        #wf
+        [model]="model()"
+        (modelChange)="onModelChange($event)"
+        [paletteItems]="paletteItems"
+        [readonly]="demoReadonly()"
+        [canConnect]="canConnectDemo"
+        [gridSize]="gridSize()"
+        [snapToGrid]="snapToGrid()"
+        [showPortLabels]="showPortLabels()"
+        [backgroundPattern]="backgroundPattern()"
+        [connectionPreviewStyle]="connectionPreviewStyle()"
+        [nodeBodyTemplate]="
+          useCustomNodeBody() ? (customNodeTpl() ?? null) : null
+        "
+        (activationChange)="onDesignerActivation($event)"
+        (connectionCreated)="onConnectionCreated($event)"
+        (connectionRejected)="onConnectionRejected($event)"
+        (linkDragStart)="onLinkDragStart($event)"
+        (linkDragEnd)="onLinkDragEnd($event)"
+        (nodeDragStart)="onNodeDragStart($event)"
+        (nodeDragEnd)="onNodeDragEnd($event)"
+        (nodeClick)="onNodeClick($event)"
+        (nodeDoubleClick)="onNodeDoubleClick($event)"
+        (connectorClick)="onConnectorClick($event)"
+        (connectorDoubleClick)="onConnectorDoubleClick($event)"
+        (portPointerDown)="onPortPointerDown($event)"
+        (designerClick)="onDesignerClick()"
+        (designerDoubleClick)="onDesignerDoubleClick()"
+      />
+    </section>
+
+    <aside class="test5-workflow-demo__panel">
+      <h2 class="test5-workflow-demo__panel-title">Designer panel</h2>
+
+      <section class="test5-workflow-demo__panel-section">
+        <h3 class="test5-workflow-demo__panel-heading">Canvas</h3>
+        <label class="test5-workflow-demo__field">
+          <span>Grid size (px)</span>
+          <input
+            class="test5-workflow-demo__input"
+            type="number"
+            min="8"
+            max="80"
+            step="2"
+            [value]="gridSize()"
+            (change)="onGridSizeInput($event)"
+          />
+        </label>
+        <label
+          class="test5-workflow-demo__field test5-workflow-demo__field--row"
+        >
+          <input
+            type="checkbox"
+            [checked]="snapToGrid()"
+            (change)="setSnapFromCheckbox($event)"
+          />
+          <span>Snap to grid</span>
+        </label>
+        <label
+          class="test5-workflow-demo__field test5-workflow-demo__field--row"
+        >
+          <input
+            type="checkbox"
+            [checked]="showPortLabels()"
+            (change)="setShowPortLabelsFromCheckbox($event)"
+          />
+          <span>Show port labels</span>
+        </label>
+        <label class="test5-workflow-demo__field">
+          <span>Connection preview</span>
+          <select
+            class="test5-workflow-demo__select"
+            [value]="connectionPreviewStyle()"
+            (change)="onPreviewStyleChange($event)"
+          >
+            <option value="straight">Straight</option>
+            <option value="rounded">Rounded</option>
+            <option value="orthogonal">Orthogonal</option>
+          </select>
+        </label>
+        <label class="test5-workflow-demo__field">
+          <span>Background pattern</span>
+          <select
+            class="test5-workflow-demo__select"
+            [value]="backgroundPattern()"
+            (change)="onBackgroundPatternChange($event)"
+          >
+            <option value="dots">Dots</option>
+            <option value="line">Lines</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="test5-workflow-demo__panel-section">
+        <h3 class="test5-workflow-demo__panel-heading">Rules & template</h3>
+        <label
+          class="test5-workflow-demo__field test5-workflow-demo__field--row"
+        >
+          <input
+            type="checkbox"
+            [checked]="blockIntoStart()"
+            (change)="setBlockIntoStartFromCheckbox($event)"
+          />
+          <span>Block connections into Start</span>
+        </label>
+        <label
+          class="test5-workflow-demo__field test5-workflow-demo__field--row"
+        >
+          <input
+            type="checkbox"
+            [checked]="useCustomNodeBody()"
+            (change)="setCustomNodeBodyFromCheckbox($event)"
+          />
+          <span>Custom node body template</span>
+        </label>
+      </section>
+
+      <section class="test5-workflow-demo__panel-section">
+        <h3 class="test5-workflow-demo__panel-heading">Selection</h3>
+        <pre class="test5-workflow-demo__pre">{{
+          lastActivation() | json
+        }}</pre>
+      </section>
+
+      <section class="test5-workflow-demo__panel-section">
+        <div class="test5-workflow-demo__json-header">
+          <h3 class="test5-workflow-demo__panel-heading">JSON import/export</h3>
+          <div class="test5-workflow-demo__json-actions">
+            <ax-button
+              [text]="'Export'"
+              [look]="'blank'"
+              class="ax-sm"
+              (onClick)="exportModelToJson()"
+            ></ax-button>
+            <ax-button
+              [text]="'Import'"
+              [look]="'blank'"
+              class="ax-sm"
+              (onClick)="importModelFromJson()"
+            ></ax-button>
+          </div>
+        </div>
+        <textarea
+          class="test5-workflow-demo__json"
+          [value]="modelJson()"
+          (input)="onModelJsonInput($event)"
+          placeholder='{"nodes":[],"connectors":[]}'
+        ></textarea>
+      </section>
+
+      <section
+        class="test5-workflow-demo__panel-section test5-workflow-demo__panel-section--grow"
+      >
+        <div class="test5-workflow-demo__log-header">
+          <h3 class="test5-workflow-demo__panel-heading">Event log</h3>
+          <ax-button
+            [text]="'Clear'"
+            [look]="'blank'"
+            class="ax-sm"
+            (onClick)="clearLog()"
+          ></ax-button>
+        </div>
+        <div class="test5-workflow-demo__log">
+          @for (line of eventLog(); track $index) {
+            <div class="test5-workflow-demo__log-line">{{ line }}</div>
+          }
+        </div>
+      </section>
+    </aside>
+  </div>
+
+  <ng-template #customNode let-node="node">
+    <div class="test5-custom-node">
+      <span class="test5-custom-node__badge">{{
+        node.data?.['layer'] ?? 'layer'
+      }}</span>
+      <span class="test5-custom-node__title">{{ node.title }}</span>
+      <span class="test5-custom-node__meta">{{
+        node.data?.['action'] ?? node.type
+      }}</span>
+      <span class="test5-custom-node__meta"
+        >in {{ node.inboundPorts.length }} · out
+        {{ node.outboundPorts.length }}</span
+      >
+    </div>
+  </ng-template>
+</div>

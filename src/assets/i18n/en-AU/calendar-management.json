@@ -1,0 +1,415 @@
+{
+  "module": {
+    "title": "Calendar Management",
+    "description": "Manage calendars, occasions, and holiday schedules",
+    "menus": {
+      "root": {
+        "title": "Calendar Management",
+        "description": "Manage calendars and occasions"
+      },
+      "foundation-group": {
+        "title": "Calendars",
+        "description": "Calendar and occasion type configuration"
+      }
+    }
+  },
+  "calendars": {
+    "week-days": {
+      "sunday": "Sunday",
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday"
+    },
+    "calendar-systems": {
+      "gregorian": "Gregorian Calendar",
+      "solar-hijri": "Solar Hijri Calendar"
+    },
+    "terms": {
+      "calendar": "Calendar",
+      "calendars": "Calendars"
+    },
+    "entities": {
+      "calendar": {
+        "title": "Calendar",
+        "plural": "Calendars",
+        "fields": {
+          "calendar-type": {
+            "title": "Calendar Type",
+            "description": "Type of calendar",
+            "placeholder": "Select calendar type"
+          },
+          "parent-calendar": {
+            "title": "Parent Calendar",
+            "description": "Parent calendar for inheritance",
+            "placeholder": "Select parent calendar"
+          },
+          "scope-type": {
+            "title": "Scope Type",
+            "description": "Type of scope",
+            "placeholder": "Select scope type"
+          },
+          "scope-entity-id": {
+            "title": "Scope Entity ID",
+            "description": "Entity ID for scope",
+            "placeholder": "Enter entity ID"
+          },
+          "weekend-pattern": {
+            "title": "Weekend Days",
+            "description": "Pattern for weekend days"
+          },
+          "first-day-of-week": {
+            "title": "First Day of Week",
+            "description": "Starting day of the week"
+          },
+          "working-hours-config": {
+            "title": "Working Hours Configuration",
+            "description": "Configuration for working hours"
+          },
+          "is-template": {
+            "title": "Is Template",
+            "description": "Mark as template calendar"
+          }
+        },
+        "groups": {
+          "classification": "Classification",
+          "inheritance": "Inheritance",
+          "scope-settings": "Scope Settings",
+          "week-configuration": "Week Configuration",
+          "working-hours": "Working Hours"
+        }
+      }
+    },
+    "permissions": {
+      "calendar": {
+        "title": "Calendars",
+        "actions": {
+          "manage": {
+            "title": "Manage Calendars",
+            "description": "Full calendar management access"
+          },
+          "view": {
+            "title": "View Calendars",
+            "description": "View calendar information"
+          },
+          "create": {
+            "title": "Create Calendar",
+            "description": "Create new calendars"
+          },
+          "update": {
+            "title": "Update Calendar",
+            "description": "Update calendar information"
+          },
+          "delete": {
+            "title": "Delete Calendars",
+            "description": "Delete calendars"
+          },
+          "admin": {
+            "title": "Administer Calendars",
+            "description": "Full calendar administration access"
+          }
+        }
+      }
+    }
+  },
+  "calendar-types": {
+    "terms": {
+      "calendar-type": "Calendar Type",
+      "calendar-types": "Calendar Types"
+    },
+    "entities": {
+      "calendar-type": {
+        "title": "Calendar Type",
+        "plural": "Calendar Types",
+        "fields": {
+          "code": {
+            "title": "Calendar Type Code",
+            "description": "Unique code for calendar type",
+            "placeholder": "Enter calendar type code"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "calendar-type": {
+        "title": "Calendar Types",
+        "actions": {
+          "manage": {
+            "title": "Manage Calendar Types",
+            "description": "Full calendar type management access"
+          },
+          "view": {
+            "title": "View Calendar Types",
+            "description": "View calendar type information"
+          },
+          "create": {
+            "title": "Create Calendar Type",
+            "description": "Create new calendar types"
+          },
+          "update": {
+            "title": "Update Calendar Type",
+            "description": "Update calendar type information"
+          },
+          "delete": {
+            "title": "Delete Calendar Types",
+            "description": "Delete calendar types"
+          }
+        }
+      }
+    }
+  },
+  "date-exceptions": {
+    "terms": {
+      "date-exception": "Date Exception",
+      "date-exceptions": "Date Exceptions"
+    },
+    "entities": {
+      "date-exception": {
+        "title": "Date Exception",
+        "plural": "Date Exceptions",
+        "fields": {
+          "exception-type": {
+            "title": "Exception Type",
+            "description": "Type of exception",
+            "placeholder": "Select exception type"
+          },
+          "calendar-id": {
+            "title": "Calendar",
+            "description": "Associated calendar",
+            "placeholder": "Select calendar"
+          },
+          "is-recurring": {
+            "title": "Is Recurring",
+            "description": "Whether exception repeats"
+          },
+          "recurrence-rule-id": {
+            "title": "Recurrence Rule",
+            "description": "Rule for recurrence",
+            "placeholder": "Select recurrence rule"
+          },
+          "overrides-parent": {
+            "title": "Overrides Parent",
+            "description": "Override parent calendar settings"
+          },
+          "start-time": {
+            "title": "Start Time",
+            "description": "Exception start time",
+            "placeholder": "Select start time"
+          },
+          "end-time": {
+            "title": "End Time",
+            "description": "Exception end time",
+            "placeholder": "Select end time"
+          },
+          "is-all-day": {
+            "title": "All Day",
+            "description": "All day exception"
+          },
+          "end-date": {
+            "title": "End Date",
+            "description": "Exception end date",
+            "placeholder": "Select end date"
+          }
+        },
+        "groups": {
+          "date-time": "Date & Time",
+          "recurrence": "Recurrence",
+          "override-settings": "Override Settings"
+        }
+      }
+    }
+  },
+  "calendar-occasions": {
+    "terms": {
+      "calendar-occasion": "Calendar Occasion",
+      "calendar-occasions": "Calendar Occasions"
+    },
+    "entities": {
+      "calendar-occasion": {
+        "title": "Calendar Occasion",
+        "plural": "Calendar Occasions",
+        "fields": {
+          "calendar": {
+            "title": "Calendar",
+            "description": "Associated calendar",
+            "placeholder": "Select calendar"
+          },
+          "type": {
+            "title": "Occasion Type",
+            "description": "Type of occasion",
+            "placeholder": "Select occasion type"
+          },
+          "is-recurring": {
+            "title": "Is Recurring",
+            "description": "Whether occasion repeats"
+          },
+          "recurrence-rule": {
+            "title": "Recurrence Rule",
+            "description": "Rule for recurrence",
+            "placeholder": "Select recurrence rule"
+          },
+          "start-time": {
+            "title": "Start Time",
+            "description": "Occasion start time",
+            "placeholder": "Select start time"
+          },
+          "end-time": {
+            "title": "End Time",
+            "description": "Occasion end time",
+            "placeholder": "Select end time"
+          },
+          "is-all-day": {
+            "title": "All Day",
+            "description": "All day occasion"
+          },
+          "is-public-holiday": {
+            "title": "Public Holiday",
+            "description": "Whether this occasion is a public holiday on its calendar"
+          }
+        },
+        "groups": {
+          "date-time": "Date & Time",
+          "recurrence": "Recurrence"
+        }
+      }
+    },
+    "permissions": {
+      "calendar-occasion": {
+        "title": "Calendar Occasions",
+        "actions": {
+          "manage": {
+            "title": "Manage Calendar Occasions",
+            "description": "Full calendar occasion management access"
+          },
+          "view": {
+            "title": "View Calendar Occasions",
+            "description": "View calendar occasion information"
+          },
+          "create": {
+            "title": "Create Calendar Occasion",
+            "description": "Create new calendar occasions"
+          },
+          "update": {
+            "title": "Update Calendar Occasion",
+            "description": "Update calendar occasion information"
+          },
+          "delete": {
+            "title": "Delete Calendar Occasions",
+            "description": "Delete calendar occasions"
+          }
+        }
+      }
+    }
+  },
+  "calendar-occasion-types": {
+    "terms": {
+      "calendar-occasion-type": "Calendar Occasion Type",
+      "calendar-occasion-types": "Calendar Occasion Types"
+    },
+    "entities": {
+      "calendar-occasion-type": {
+        "title": "Calendar Occasion Type",
+        "plural": "Calendar Occasion Types",
+        "fields": {
+          "is-default": {
+            "title": "Is Default",
+            "description": "Default occasion type"
+          },
+          "is-public-holiday": {
+            "title": "Public Holiday",
+            "description": "Default public holiday flag for new occasions of this type"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "calendar-occasion-type": {
+        "title": "Calendar Occasion Types",
+        "actions": {
+          "manage": {
+            "title": "Manage Calendar Occasion Types",
+            "description": "Full calendar occasion type management access"
+          },
+          "view": {
+            "title": "View Calendar Occasion Types",
+            "description": "View calendar occasion type information"
+          },
+          "create": {
+            "title": "Create Calendar Occasion Type",
+            "description": "Create new calendar occasion types"
+          },
+          "update": {
+            "title": "Update Calendar Occasion Type",
+            "description": "Update calendar occasion type information"
+          },
+          "delete": {
+            "title": "Delete Calendar Occasion Types",
+            "description": "Delete calendar occasion types"
+          }
+        }
+      }
+    }
+  },
+  "calendar-scopes": {
+    "terms": {
+      "calendar-scope": "Calendar Scope",
+      "calendar-scopes": "Calendar Scopes"
+    },
+    "entities": {
+      "calendar-scope": {
+        "title": "Calendar Scope",
+        "plural": "Calendar Scopes",
+        "fields": {
+          "calendar-id": {
+            "title": "Calendar",
+            "description": "Associated calendar",
+            "placeholder": "Select calendar"
+          },
+          "scope-type": {
+            "title": "Scope Type",
+            "description": "Type of scope",
+            "placeholder": "Select scope type"
+          },
+          "scope-entity-id": {
+            "title": "Scope Entity ID",
+            "description": "Entity ID for scope",
+            "placeholder": "Enter entity ID"
+          },
+          "permissions": {
+            "title": "Permissions",
+            "description": "Scope permissions"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "calendar-scope": {
+        "title": "Calendar Scopes",
+        "actions": {
+          "manage": {
+            "title": "Manage Calendar Scopes",
+            "description": "Full calendar scope management access"
+          },
+          "view": {
+            "title": "View Calendar Scopes",
+            "description": "View calendar scope information"
+          },
+          "create": {
+            "title": "Create Calendar Scope",
+            "description": "Create new calendar scopes"
+          },
+          "update": {
+            "title": "Update Calendar Scope",
+            "description": "Update calendar scope information"
+          },
+          "delete": {
+            "title": "Delete Calendar Scopes",
+            "description": "Delete calendar scopes"
+          }
+        }
+      }
+    }
+  }
+}

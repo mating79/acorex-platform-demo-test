@@ -1,0 +1,1029 @@
+{
+  "search": "Search...",
+  "yes": "yes",
+  "no": "No",
+  "confirm": "Confirm",
+  "okay": "Okay",
+  "accept": "Accept",
+  "decline": "Decline",
+  "cancel": "Cancel",
+  "canceled": "Canceled",
+  "failed": "Failed",
+  "remove": "Remove",
+  "edit": "Edit",
+  "delete": "Delete",
+  "create": "Create",
+  "configs": "Configs",
+  "no-result-found": "No results found",
+  "no-result-for": "No results for &nbsp<b>\"{{ exp }}\"</b>",
+  "searching": "searching ...",
+  "save": "Save",
+  "save-as": "Save As...",
+  "title": "Title",
+  "description": "Description",
+  "name": "Name",
+  "uniquename": "Unique Name",
+  "size": "Size",
+  "add-item": "Add Item",
+  "color": "Color",
+  "display": "Display",
+  "min-value": "Min Value",
+  "value": "Value",
+  "max-value": "Max Value",
+  "refresh-rate": "Refresh Rate",
+  "condition": "Condition",
+  "loading": "loading",
+  "firstname": "Firstname",
+  "required": "Required",
+  "next": "Next",
+  "prev": "Previous",
+  "noRecord": "No Record Found",
+  "error": {
+    "message": "Error: {{ message }}"
+  },
+  "dateTime": {
+    "set": "Set",
+    "today": "Today",
+    "now": "Now",
+    "hour": "Hour",
+    "minute": "Minute",
+    "second": "Second",
+    "date": "Date",
+    "time": "Time",
+    "millisecond": "millisecond",
+    "Seconds": "Seconds",
+    "Minutes": "Minutes",
+    "month": "month",
+    "Months": "Months",
+    "week": "week",
+    "Hours": "Hours",
+    "day": "day",
+    "Days": "Days",
+    "year": "year",
+    "Years": "Years",
+    "weekdays": {
+      "short": {
+        "0": "Sun",
+        "1": "Mon",
+        "2": "Tue",
+        "3": "Wed",
+        "4": "Thu",
+        "5": "Fri",
+        "6": "Sat"
+      },
+      "long": {
+        "0": "Sunday",
+        "1": "Monday",
+        "2": "Tuesday",
+        "3": "Wednesday",
+        "4": "Thursday",
+        "5": "Friday",
+        "6": "Saturday"
+      }
+    },
+    "months": {
+      "gregorian": {
+        "short": {
+          "0": "Jan",
+          "1": "Feb",
+          "2": "Mar",
+          "3": "Apr",
+          "4": "May",
+          "5": "Jun",
+          "6": "Jul",
+          "7": "Aug",
+          "8": "Sep",
+          "9": "Oct",
+          "10": "Nov",
+          "11": "Dec"
+        },
+        "long": {
+          "0": "January",
+          "1": "February",
+          "2": "March",
+          "3": "April",
+          "4": "May",
+          "5": "June",
+          "6": "July",
+          "7": "August",
+          "8": "September",
+          "9": "October",
+          "10": "November",
+          "11": "December"
+        }
+      },
+      "solar-hijri": {
+        "short": {
+          "0": "Far",
+          "1": "Ordi",
+          "2": "Khor",
+          "3": "Tir",
+          "4": "Mordad",
+          "5": "Shah",
+          "6": "Mehr",
+          "7": "Aban",
+          "8": "Azar",
+          "9": "Dey",
+          "10": "Bah",
+          "11": "Esf"
+        },
+        "long": {
+          "0": "Farvardin",
+          "1": "Ordibehesht",
+          "2": "Khordad",
+          "3": "Tir",
+          "4": "Mordad",
+          "5": "Shahrivar",
+          "6": "Mehr",
+          "7": "Aban",
+          "8": "Azar",
+          "9": "Dey",
+          "10": "Bahman",
+          "11": "Esfand"
+        }
+      }
+    },
+    "dayTime": {
+      "am": "am",
+      "pm": "pm",
+      "m": "m",
+      "a": "a",
+      "p": "p"
+    },
+    "duration": {
+      "format_second": "{0} second(s)",
+      "format_minute": "{0} minute(s)",
+      "daily": "Daily",
+      "daily-timeline": "Daily Timeline",
+      "multi-day-timeline": "Multi-Day Timeline",
+      "weekly": "Weekly",
+      "weekly-timeline": "Weekly Timeline",
+      "monthly": "Monthly",
+      "monthly-timeline": "Monthly Timeline",
+      "yearly": "Yearly",
+      "yearly-timeline": "Yearly Timeline",
+      "all-day": "All Day",
+      "agenda": "Agenda"
+    }
+  },
+  "validation": {
+    "messages": {
+      "title": "Please fix the following error(s):",
+      "required": "{{ title }} is required",
+      "email": "Please enter a valid email address {{ title }}!",
+      "phone": "Please enter a valid phone number!",
+      "invalid-rull-name": "Invalid rule name: &nbsp<b>\"{{ name }}\"</b>"
+    }
+  },
+  "selectbox": {
+    "popover": {
+      "title": "Choose Items..."
+    }
+  },
+  "datepicker": {
+    "popover": {
+      "title": "Choose a Date..."
+    }
+  },
+  "datapager": {
+    "info": {
+      "text": "[page] of [totalPages] pages ([totalItems] items)"
+    }
+  },
+  "uploader": {
+    "zone": {
+      "text": "Drop files to upload them",
+      "drag": "Drag & Drop or ",
+      "choose": "Choose File",
+      "to-upload": " to Upload",
+      "uploadFile": "Upload File",
+      "uploadFiles": "Upload Files"
+    }
+  },
+  "action-sheet": {
+    "title": "Action Sheet..."
+  },
+  "comment": {
+    "view": "View",
+    "reply": "Reply",
+    "replies": "Replies"
+  },
+  "custom": "Custom",
+  "every": "Every",
+  "between": "between",
+  "and": "and",
+  "select-second": "select second(s)",
+  "select-minute": "select minute(s)",
+  "select-month": "select month(s)",
+  "select-hour": "select hour(s)",
+  "select-day": "select day(s)",
+  "select-year": "select year(s)",
+  "second-starting": "second(s) starting at second",
+  "minute-starting": "minute(s) starting at minute",
+  "month-starting": "month(s) starting at month",
+  "hour-starting": "hour(s) starting at hour",
+  "year-starting": "year(s) starting at year",
+  "specific-second": "Specific second(s) (choose one or many)",
+  "specific-minute": "Specific minute(s) (choose one or many)",
+  "specific-month": "Specific month(s) (choose one or many)",
+  "specific-hour": "Specific hour(s) (choose one or many)",
+  "specific-year": "Specific year(s) (choose one or many)",
+  "base-on-week": "Base on week",
+  "on-the-last": "On the last",
+  "of-the-month": "of the month",
+  "on-the": "On the",
+  "st": "st",
+  "of-month": "of month",
+  "base-on-month": "Base on Month",
+  "on-the-last-day-of-the-month": "On the Last day of the month",
+  "day-before-the-end-of-the-month": "day(s) before the end of the month",
+  "st-of-the-month": "st of the month",
+  "specific-day-of-month": "Specific day(s) of month (choose one or many)",
+  "specific-day-of-week": "Specific day(s) of week (choose one or many)",
+  "day-starting-on": "day(s) starting on",
+  "more-notification": "And {{ number }} more...",
+  "more-toast": "And {{ number }} more...",
+  "at-least-8-characters": "At least 8 characters",
+  "english-upper-case-letter": "English upper case letter",
+  "english-lower-case-letter": "English lower case letter",
+  "special-character": "Special character(%,#...)",
+  "digits": "Digits (0-9)",
+  "fragile": "Fragile",
+  "weak": "Weak",
+  "good": "Good",
+  "strong": "Strong",
+  "unbreakable": "Unbreakable",
+  "more-items": "{{ number }} more",
+  "rrule": {
+    "general": "General",
+    "freq": "Frequency (FREQ)",
+    "dtstart": "Starts On (DTSTART)",
+    "until": "Ends On (UNTIL)",
+    "count": "Count (COUNT)",
+    "interval": "Interval (INTERVAL)",
+    "tzid": "Timezone (TZID)",
+    "by-weekday": "By Weekday",
+    "wkst": "Weekday Start (WKST)",
+    "by-weekday-rule": "By Weekday (BYWEEKDAY)",
+    "by-month": "By Month",
+    "by-month-rule": "By Month (BYMONTH)",
+    "by-month-day": "By Month Day (BYMONTHDAY)",
+    "by-year": "By Year",
+    "by-year-day": "By Year Day (BYYEARDAY)",
+    "by-week-no": "By Week No (BYWEEKNO)",
+    "by-time": "By Time",
+    "by-hour": "By Hour (BYHOUR)",
+    "by-minute": "By Minute (BYMINUTE)",
+    "by-second": "By Second (BYSECOND)",
+    "advanced": "Advanced",
+    "by-set-pos": "By Set Position (BYSETPOS)",
+    "reset": "Reset",
+    "text": "Text",
+    "string": "String",
+    "occurrences": "Top {{ repeat }} Occurrences"
+  },
+  "pages": {
+    "resource-appointment": {
+      "page-title": "Resource Appointment",
+      "page-description": "View and manage resource appointments on the timeline."
+    }
+  },
+  "permission-groups": {
+    "people-organization": {
+      "title": "People & Organization",
+      "description": "Organization structure, workforce, and related people capabilities."
+    },
+    "learning": {
+      "title": "Learning",
+      "description": "Courses, training, certificates, and learning setup."
+    },
+    "safety-risk": {
+      "title": "Safety & Risk",
+      "description": "Workplace safety, risk, health, and assessments."
+    },
+    "finance": {
+      "title": "Finance",
+      "description": "Financial master data, taxes, payment terms, and finance setup."
+    },
+    "projects-work": {
+      "title": "Projects & Work",
+      "description": "Projects, tasks, timesheets, and related work delivery capabilities."
+    },
+    "assets-maintenance": {
+      "title": "Assets & Maintenance",
+      "description": "Assets, maintenance, measurements, and related setup."
+    },
+    "collaboration": {
+      "title": "Collaboration",
+      "description": "Conversations, meetings, calendars, communications, reservations, and help desk."
+    },
+    "content-documents": {
+      "title": "Content & Documents",
+      "description": "Documents, content, form templates, and related setup."
+    },
+    "insights-reporting": {
+      "title": "Insights & Reporting",
+      "description": "Reports, data queries, and activity insights."
+    },
+    "applications-platform": {
+      "title": "Applications & Platform",
+      "description": "Application catalog, tenants, platform shell, locales, identifiers, and developer tools."
+    },
+    "administration": {
+      "title": "Administration",
+      "description": "Security, settings, integrations, workflows, rules, AI, dashboards, jobs, and observability."
+    },
+    "administration-security-access": {
+      "title": "Security & Access",
+      "description": "Users, roles, sessions, and security policies."
+    },
+    "administration-settings": {
+      "title": "Settings",
+      "description": "Tenant application settings."
+    },
+    "administration-integrations": {
+      "title": "Integrations",
+      "description": "Connectors, connections, and integration actions."
+    },
+    "administration-workflow": {
+      "title": "Workflow",
+      "description": "Workflow definitions and workflow actions."
+    },
+    "administration-rules": {
+      "title": "Rules",
+      "description": "Business rules and rule actions."
+    },
+    "administration-ai": {
+      "title": "AI",
+      "description": "AI configuration and assist usage."
+    },
+    "administration-dashboards": {
+      "title": "Dashboards",
+      "description": "Operational and admin dashboards."
+    },
+    "administration-jobs": {
+      "title": "Jobs",
+      "description": "Background jobs and job actions."
+    },
+    "administration-observability": {
+      "title": "Observability",
+      "description": "System insight and operational monitoring."
+    },
+    "sales-and-customers": {
+      "title": "Sales & Customers",
+      "description": "Customers, sales CRM, products, orders, and subscriptions."
+    },
+    "sales-and-customers-customers": {
+      "title": "Customers",
+      "description": "Customer master data and customer setup."
+    },
+    "sales-and-customers-sales": {
+      "title": "Sales",
+      "description": "Leads, opportunities, and sales CRM activities."
+    },
+    "sales-and-customers-products": {
+      "title": "Products",
+      "description": "Product catalog and offerings."
+    },
+    "sales-and-customers-orders": {
+      "title": "Orders",
+      "description": "Orders and order fulfillment."
+    },
+    "sales-and-customers-subscriptions": {
+      "title": "Subscriptions",
+      "description": "Subscription plans and renewals."
+    },
+    "suppliers-procurement": {
+      "title": "Suppliers & Procurement",
+      "description": "Suppliers, subcontractors, and procurement operations."
+    },
+    "suppliers-procurement-suppliers": {
+      "title": "Suppliers & Subcontractors",
+      "description": "Suppliers, subcontractors, procurement, and purchasing setup."
+    },
+    "people-organization-structure": {
+      "title": "Organization & Structure",
+      "description": "Organization chart, teams, jobs, and people setup."
+    },
+    "people-organization-workforce": {
+      "title": "Workforce",
+      "description": "Individuals, employees, and employee actions."
+    },
+    "people-organization-attendance": {
+      "title": "Attendance",
+      "description": "Attendance schedules, sessions, and attendance actions."
+    },
+    "safety-risk-workplace-safety": {
+      "title": "Workplace Safety",
+      "description": "Workplace safety records and safety setup."
+    },
+    "safety-risk-risk": {
+      "title": "Risk",
+      "description": "Risk registers and risk controls."
+    },
+    "safety-risk-health": {
+      "title": "Health",
+      "description": "Health records and related capabilities."
+    },
+    "safety-risk-assessments": {
+      "title": "Assessments",
+      "description": "Safety and risk assessments."
+    },
+    "projects-work-projects": {
+      "title": "Projects",
+      "description": "Projects and project setup."
+    },
+    "projects-work-tasks": {
+      "title": "Tasks",
+      "description": "Tasks and cross-assignee task visibility."
+    },
+    "projects-work-time-tracking": {
+      "title": "Time Tracking",
+      "description": "Timesheets, approvals, and timesheet reports."
+    },
+    "assets-maintenance-assets": {
+      "title": "Assets",
+      "description": "Asset master data and asset setup."
+    },
+    "assets-maintenance-maintenance": {
+      "title": "Maintenance",
+      "description": "Maintenance plans and work."
+    },
+    "collaboration-conversations": {
+      "title": "Conversations",
+      "description": "Conversations and collaboration setup."
+    },
+    "collaboration-scheduling": {
+      "title": "Scheduling",
+      "description": "Calendars, meetings, and reservations."
+    },
+    "collaboration-communications": {
+      "title": "Communications",
+      "description": "Outbound and channel communications."
+    },
+    "collaboration-help-desk": {
+      "title": "Help Desk",
+      "description": "Help desk tickets and service requests."
+    },
+    "content-documents-documents": {
+      "title": "Documents",
+      "description": "Document libraries and document setup."
+    },
+    "content-documents-content": {
+      "title": "Content",
+      "description": "Managed content and pages."
+    },
+    "content-documents-form-templates": {
+      "title": "Form Templates",
+      "description": "Reusable form templates."
+    },
+    "insights-reporting-reports": {
+      "title": "Reports",
+      "description": "Reports and reporting setup."
+    },
+    "insights-reporting-activity-insight": {
+      "title": "Activity Insight",
+      "description": "Activity insight views and management."
+    },
+    "insights-reporting-data": {
+      "title": "Data",
+      "description": "Data queries and datasets."
+    },
+    "applications-platform-applications": {
+      "title": "Applications",
+      "description": "Application catalog and landing pages."
+    },
+    "applications-platform-tenancy-shell": {
+      "title": "Tenancy & Shell",
+      "description": "Tenants and platform shell."
+    },
+    "applications-platform-configuration": {
+      "title": "Configuration",
+      "description": "Platform settings, locales, and identifiers."
+    },
+    "applications-platform-dev-tools": {
+      "title": "Developer Tools",
+      "description": "Platform developer tools."
+    }
+  },
+  "people-organization": {
+    "permissions": {
+      "access": {
+        "title": "Access People & Organization",
+        "description": "Open the People & Organization area."
+      },
+      "view-organization": {
+        "title": "View Organization",
+        "description": "View organization structure, chart, and seats."
+      },
+      "maintain-organization": {
+        "title": "Maintain Organization",
+        "description": "Maintain organization structure, chart, positions on the structure, and seat assignments."
+      },
+      "maintain-teams": {
+        "title": "Maintain Teams",
+        "description": "Create and maintain teams and memberships."
+      },
+      "maintain-employees": {
+        "title": "Maintain Employees",
+        "description": "Create and maintain employee master records."
+      },
+      "manage-employee-actions": {
+        "title": "Manage Employee Actions",
+        "description": "Run processes on employees such as leave and lifecycle events."
+      },
+      "maintain-persons": {
+        "title": "Maintain Individuals",
+        "description": "Create and maintain person master records."
+      },
+      "maintain-attendance": {
+        "title": "Maintain Attendance",
+        "description": "Create and maintain attendance schedules, sessions, and related master data."
+      },
+      "manage-attendance-actions": {
+        "title": "Manage Attendance Actions",
+        "description": "Run attendance processes such as check-in, team view, and corrections."
+      },
+      "design-jobs": {
+        "title": "Design Jobs",
+        "description": "Design job definitions and related job architecture."
+      },
+      "setup": {
+        "title": "Setup Reference Data",
+        "description": "Maintain people and organization reference data."
+      }
+    }
+  },
+  "learning": {
+    "permissions": {
+      "access": {
+        "title": "Access Learning",
+        "description": "Open the Learning area."
+      },
+      "maintain-learning": {
+        "title": "Maintain Learning",
+        "description": "Create and maintain courses, training, enrollments, and certificates."
+      },
+      "setup": {
+        "title": "Setup Reference Data",
+        "description": "Maintain learning types, lookups, and reference data."
+      }
+    }
+  },
+  "safety-risk": {
+    "permissions": {
+      "access": {
+        "title": "Access Safety & Risk",
+        "description": "Open the Safety & Risk area."
+      },
+      "maintain-safety": {
+        "title": "Maintain Safety",
+        "description": "Create and maintain workplace safety plans, hazards, and controls."
+      },
+      "maintain-risk": {
+        "title": "Maintain Risk",
+        "description": "Create and maintain risk matrices, ratings, and related risk data."
+      },
+      "maintain-health": {
+        "title": "Maintain Health",
+        "description": "Create and maintain health profiles, conditions, and events."
+      },
+      "maintain-assessments": {
+        "title": "Maintain Assessments",
+        "description": "Create and maintain question banks, questionnaires, and assessment cases."
+      },
+      "setup": {
+        "title": "Setup Reference Data",
+        "description": "Maintain safety, risk, health, and assessment reference data."
+      }
+    }
+  },
+  "finance": {
+    "permissions": {
+      "access": {
+        "title": "Access Finance",
+        "description": "Open the Finance area."
+      },
+      "maintain-finance": {
+        "title": "Maintain Finance",
+        "description": "Create and maintain financial master data such as currencies, taxes, and payment terms."
+      },
+      "setup": {
+        "title": "Setup Reference Data",
+        "description": "Maintain finance reference data and calendars."
+      }
+    }
+  },
+  "sales-customers": {
+    "permissions": {
+      "access": {
+        "title": "Access Sales & Customers",
+        "description": "Open the Sales & Customers area."
+      },
+      "maintain-customers": {
+        "title": "Maintain Customers",
+        "description": "Create and maintain customer accounts and customer master data."
+      },
+      "maintain-sales": {
+        "title": "Maintain Sales",
+        "description": "Create and maintain leads, opportunities, and sales activities."
+      },
+      "maintain-products": {
+        "title": "Maintain Products",
+        "description": "Create and maintain products and catalog items."
+      },
+      "maintain-orders": {
+        "title": "Maintain Orders",
+        "description": "Create and maintain orders and related sales documents."
+      },
+      "maintain-subscriptions": {
+        "title": "Maintain Subscriptions",
+        "description": "Create and maintain subscriptions and subscription plans."
+      },
+      "setup": {
+        "title": "Setup Reference Data",
+        "description": "Maintain sales and customer reference data."
+      }
+    }
+  },
+  "procurement": {
+    "permissions": {
+      "access": {
+        "title": "Access Suppliers & Procurement",
+        "description": "Open the Suppliers & Procurement area."
+      },
+      "maintain-suppliers": {
+        "title": "Maintain Suppliers",
+        "description": "Create and maintain suppliers."
+      },
+      "maintain-procurement": {
+        "title": "Maintain Procurement",
+        "description": "Create and maintain procurement items and purchasing data."
+      },
+      "setup": {
+        "title": "Setup Reference Data",
+        "description": "Maintain procurement reference data."
+      }
+    }
+  },
+  "assets-maintenance": {
+    "permissions": {
+      "access": {
+        "title": "Access Assets & Maintenance",
+        "description": "Open the Assets & Maintenance area."
+      },
+      "maintain-assets": {
+        "title": "Maintain Assets",
+        "description": "Create and maintain assets."
+      },
+      "maintain-maintenance": {
+        "title": "Maintain Maintenance",
+        "description": "Create and maintain maintenance plans, work, and failure data."
+      },
+      "setup": {
+        "title": "Setup Reference Data",
+        "description": "Maintain assets, maintenance, and measurement reference data."
+      }
+    }
+  },
+  "collaboration": {
+    "permissions": {
+      "access": {
+        "title": "Access Collaboration",
+        "description": "Open the Collaboration area."
+      },
+      "maintain-conversations": {
+        "title": "Maintain Conversations",
+        "description": "Create and maintain conversations."
+      },
+      "maintain-meetings": {
+        "title": "Maintain Meetings",
+        "description": "Create and maintain meetings."
+      },
+      "maintain-calendars": {
+        "title": "Maintain Calendars",
+        "description": "Create and maintain calendars and occasions."
+      },
+      "maintain-communications": {
+        "title": "Maintain Communications",
+        "description": "Send and manage communications such as email."
+      },
+      "maintain-reservations": {
+        "title": "Maintain Reservations",
+        "description": "Create and maintain reservations."
+      },
+      "maintain-help-desk": {
+        "title": "Maintain Help Desk",
+        "description": "Create and maintain help desk issues."
+      },
+      "view-bulletins": {
+        "title": "View Announcements",
+        "description": "Open the organisation announcement feed and read addressed posts."
+      },
+      "maintain-bulletins": {
+        "title": "Maintain Announcements",
+        "description": "Create and edit announcement drafts."
+      },
+      "publish-bulletins": {
+        "title": "Publish Announcements",
+        "description": "Schedule, publish, pin, and archive announcement posts."
+      },
+      "moderate-bulletin-discussions": {
+        "title": "Moderate Announcement Discussions",
+        "description": "Hide comments and manage reactions on announcement posts."
+      },
+      "setup": {
+        "title": "Setup Reference Data",
+        "description": "Maintain collaboration reference data."
+      }
+    }
+  },
+  "content-documents": {
+    "permissions": {
+      "access": {
+        "title": "Access Content & Documents",
+        "description": "Open the Content & Documents area."
+      },
+      "maintain-documents": {
+        "title": "Maintain Documents",
+        "description": "Create and maintain documents and document drivers."
+      },
+      "maintain-content": {
+        "title": "Maintain Content",
+        "description": "Create and maintain content such as promotions and text templates."
+      },
+      "maintain-form-templates": {
+        "title": "Maintain Form Templates",
+        "description": "Create and maintain form templates."
+      },
+      "setup": {
+        "title": "Setup Reference Data",
+        "description": "Maintain content and document reference data."
+      }
+    }
+  },
+  "insights-reporting": {
+    "permissions": {
+      "access": {
+        "title": "Access Insights & Reporting",
+        "description": "Open the Insights & Reporting area."
+      },
+      "maintain-reports": {
+        "title": "Maintain Reports",
+        "description": "Create and maintain reports and report categories."
+      },
+      "maintain-data": {
+        "title": "Maintain Data",
+        "description": "Create and maintain queries, data sources, and metadata."
+      },
+      "view-activity-insight": {
+        "title": "View Activity Insight",
+        "description": "View activity events and timelines."
+      },
+      "manage-activity-insight": {
+        "title": "Manage Activity Insight",
+        "description": "Manage activity insight policies and administration."
+      },
+      "setup": {
+        "title": "Setup Reference Data",
+        "description": "Maintain insights and reporting reference data."
+      }
+    }
+  },
+  "projects-work": {
+    "permissions": {
+      "access": {
+        "title": "Access Projects & Work",
+        "description": "Open the Projects & Work area."
+      },
+      "maintain-projects": {
+        "title": "Maintain Projects",
+        "description": "Create and maintain projects."
+      },
+      "maintain-tasks": {
+        "title": "Maintain Tasks",
+        "description": "Work with tasks and the task board."
+      },
+      "view-all-tasks": {
+        "title": "View All Tasks",
+        "description": "View and filter tasks across all assignees."
+      },
+      "maintain-timesheets": {
+        "title": "Maintain Timesheets",
+        "description": "Enter and maintain personal time entries and timesheet periods."
+      },
+      "manage-timesheet-actions": {
+        "title": "Manage Timesheet Actions",
+        "description": "Approve timesheets, view team timesheets, and apply administrative adjustments."
+      },
+      "view-timesheet-reports": {
+        "title": "View Timesheet Reports",
+        "description": "View and export timesheet reports."
+      },
+      "setup": {
+        "title": "Setup Reference Data",
+        "description": "Maintain project, task, and timesheet reference data."
+      }
+    }
+  },
+  "applications-platform": {
+    "permissions": {
+      "access": {
+        "title": "Access Applications & Platform",
+        "description": "Open the Applications & Platform area."
+      },
+      "maintain-applications": {
+        "title": "Maintain Applications",
+        "description": "Create and maintain applications, release notes, and app terms."
+      },
+      "maintain-tenants": {
+        "title": "Maintain Tenants",
+        "description": "Create and maintain tenants."
+      },
+      "maintain-platform-shell": {
+        "title": "Maintain Platform Shell",
+        "description": "Maintain platform tokens, menus, and shell configuration."
+      },
+      "maintain-landing-pages": {
+        "title": "Maintain Landing Pages",
+        "description": "Create and maintain landing pages and categories."
+      },
+      "maintain-identifiers": {
+        "title": "Maintain Identifiers",
+        "description": "Maintain identifier rules and generation."
+      },
+      "maintain-tenant-settings": {
+        "title": "Maintain Tenant Settings",
+        "description": "Maintain tenant application settings."
+      },
+      "maintain-platform-settings": {
+        "title": "Maintain Platform Settings",
+        "description": "Maintain platform-wide settings."
+      },
+      "maintain-locales": {
+        "title": "Maintain Locales",
+        "description": "Maintain languages and timezones."
+      },
+      "use-dev-tools": {
+        "title": "Use Dev Tools",
+        "description": "Use platform explorer and debugging tools."
+      }
+    }
+  },
+  "administration": {
+    "permissions": {
+      "access": {
+        "title": "Access Administration",
+        "description": "Open the Administration area."
+      },
+      "maintain-users-and-roles": {
+        "title": "Maintain Users And Roles",
+        "description": "Create and maintain user accounts, roles, role assignments, and related security-access reports."
+      },
+      "manage-sessions": {
+        "title": "Manage Sessions",
+        "description": "View and terminate device sessions."
+      },
+      "maintain-policies": {
+        "title": "Maintain Policies",
+        "description": "Create and maintain security policies."
+      },
+      "view-integrations": {
+        "title": "View Integrations",
+        "description": "View integration providers, connections, and health."
+      },
+      "maintain-connections": {
+        "title": "Maintain Connections",
+        "description": "Create and maintain integration connections."
+      },
+      "manage-integration-actions": {
+        "title": "Manage Integration Actions",
+        "description": "Run connector sync, import, and related integration actions."
+      },
+      "maintain-workflows": {
+        "title": "Maintain Workflows",
+        "description": "Create and maintain workflow definitions."
+      },
+      "manage-workflow-actions": {
+        "title": "Manage Workflow Actions",
+        "description": "Run workflow actions such as reassigning tasks."
+      },
+      "view-rules": {
+        "title": "View Rules",
+        "description": "View rule sets and rule configuration."
+      },
+      "maintain-rules": {
+        "title": "Maintain Rules",
+        "description": "Create and maintain rule sets."
+      },
+      "manage-rule-actions": {
+        "title": "Manage Rule Actions",
+        "description": "Publish, evaluate, and simulate rule sets."
+      },
+      "maintain-ai": {
+        "title": "Maintain AI",
+        "description": "Configure AI assists, models, and related settings."
+      },
+      "use-ai-assist": {
+        "title": "Use AI Assist",
+        "description": "Use AI assists and related assistance features."
+      },
+      "maintain-dashboards": {
+        "title": "Maintain Dashboards",
+        "description": "Create and maintain dashboards."
+      },
+      "view-jobs": {
+        "title": "View Jobs",
+        "description": "View background jobs, schedules, and job dashboards."
+      },
+      "manage-job-actions": {
+        "title": "Manage Job Actions",
+        "description": "Cancel, retry, delete, replay, and manage job schedules."
+      },
+      "view-observability": {
+        "title": "View Observability",
+        "description": "View logs, traces, metrics, and errors."
+      },
+      "maintain-observability": {
+        "title": "Maintain Observability",
+        "description": "Manage alerts, saved views, audit logs, and observability admin actions."
+      }
+    }
+  },
+  "version-history": {
+    "entities": {
+      "version-stream": {
+        "title": "Version Stream",
+        "plural": "Version Streams",
+        "fields": {
+          "entity-type": { "title": "Entity Type" },
+          "entity-id": { "title": "Entity Id" },
+          "created-at": { "title": "Created At" }
+        }
+      },
+      "version-entry": {
+        "title": "Version Entry",
+        "plural": "Version Entries",
+        "groups": {
+          "change": "Change",
+          "payload": "Payload"
+        },
+        "fields": {
+          "stream": { "title": "Stream" },
+          "version-number": { "title": "Version" },
+          "change-type": { "title": "Change Type" },
+          "changed-by": { "title": "Changed By" },
+          "changed-by-name": { "title": "Changed By Name" },
+          "changed-at": { "title": "Changed At" },
+          "summary": { "title": "Summary" },
+          "change-lines": { "title": "Change Lines" },
+          "snapshot": { "title": "Snapshot" },
+          "patch": { "title": "Patch" }
+        }
+      }
+    },
+    "change-types": {
+      "create": "Create",
+      "update": "Update",
+      "delete": "Delete"
+    },
+    "settings": {
+      "group": {
+        "title": "Version History",
+        "description": "Retention and capture settings for entity change history"
+      },
+      "retention": {
+        "title": "Retention",
+        "description": "How long version history is kept in the history database",
+        "items": {
+          "enabled": {
+            "title": "Enable Retention Cleanup",
+            "description": "Automatically purge version entries older than the retention period"
+          },
+          "period": {
+            "title": "Retention Period (Days)",
+            "description": "Number of days to keep version history entries"
+          },
+          "batch-size": {
+            "title": "Purge Batch Size",
+            "description": "Maximum number of version entries deleted per purge batch"
+          },
+          "purge-cron": {
+            "title": "Purge Schedule (Cron)",
+            "description": "Cron expression for the retention purge job"
+          }
+        }
+      },
+      "capture": {
+        "title": "Capture",
+        "description": "Controls what is written to version history",
+        "items": {
+          "skip-empty": {
+            "title": "Skip Empty Patches",
+            "description": "Do not create a version when an update has no business-field changes"
+          }
+        }
+      }
+    }
+  }
+}

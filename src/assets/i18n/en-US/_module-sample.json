@@ -1,0 +1,114 @@
+{
+  "module": {
+    "title": "Module Sample",
+    "description": "Sample description for a module in this file.",
+    "terms": {
+      "shared-term": "Shared Term Value"
+    },
+    "menus": {
+      "root": {
+        "title": "Root Menu Title",
+        "description": "Description text for the root menu entry."
+      }
+    }
+  },
+  "feature-key": {
+    "terms": {
+      "term-key1": "Term Key 1",
+      "term-key2": {
+        "sub-key": "Term Key 2 Sub Key"
+      }
+    },
+    "menus": {
+      "menu-key": {
+        "title": "Menu Title",
+        "description": "Description text for a menu item."
+      }
+    },
+    "entities": {
+      "entity-key": {
+        "title": "Entity Title",
+        "plural": "Entities",
+        "fields": {
+          "field-key": {
+            "title": "Field Title",
+            "description": "Field description (help or hint text).",
+            "placeholder": "Field Placeholder"
+          }
+        },
+        "groups": {
+          "group-key": "Group Title"
+        }
+      }
+    },
+    "components": {
+      "component-key": {
+        "title": "Component Title",
+        "description": "Component description (help or hint text).",
+        "empty-states": {
+          "no-data": {
+            "title": "No Data Found",
+            "description": "No data available"
+          }
+        }
+      }
+    },
+    "settings": {
+      "section-key": {
+        "title": "Section Title",
+        "description": "Settings section description.",
+        "items": {
+          "item-key": {
+            "title": "Item Title",
+            "description": "Setting item description."
+          }
+        }
+      }
+    },
+    "permissions": {
+      "resource-key": {
+        "title": "Resource Title",
+        "actions": {
+          "view": {
+            "title": "View"
+          },
+          "create": {
+            "title": "Create"
+          },
+          "edit": {
+            "title": "Edit"
+          },
+          "delete": {
+            "title": "Delete"
+          },
+          "manage": {
+            "title": "Manage"
+          }
+        }
+      }
+    },
+    "actions": {
+      "action-key": {
+        "title": "Action Title",
+        "description": "Action description (short hint for the user)."
+      }
+    },
+    "messages": {
+      "success": {
+        "message-key": "Success Message"
+      },
+      "error": {
+        "message-key": "Error Message"
+      },
+      "warning": {
+        "message-key": "Warning Message"
+      }
+    },
+    "states": {
+      "state-key": "State Label"
+    },
+    "validations": {
+      "validation-key": "Validation Message"
+    }
+  }
+}

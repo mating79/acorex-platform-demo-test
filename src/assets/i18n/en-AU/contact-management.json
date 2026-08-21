@@ -1,0 +1,249 @@
+{
+  "module": {
+    "title": "Contact Management",
+    "description": "Manage contacts, contact methods, and emergency contacts",
+    "menus": {
+      "root": {
+        "title": "Contact Management",
+        "description": "Manage all contact-related information"
+      }
+    },
+    "terms": {
+      "customer": {
+        "title": "Customer",
+        "plural": "Customers"
+      },
+      "vendor": {
+        "title": "Vendor",
+        "plural": "Vendors"
+      },
+      "supplier": {
+        "title": "Supplier",
+        "plural": "Suppliers"
+      },
+      "partner": {
+        "title": "Partner",
+        "plural": "Partners"
+      },
+      "employee": {
+        "title": "Employee",
+        "plural": "Employees"
+      }
+    }
+  },
+  "contact-methods": {
+    "terms": {
+      "contact-method": "Contact Method",
+      "contact-methods": "Contact Methods",
+      "contact-method-type": "Contact Method Type",
+      "contact-method-types": "Contact Method Types"
+    },
+    "entities": {
+      "contact-method": {
+        "title": "Contact Method",
+        "plural": "Contact Methods",
+        "fields": {
+          "method-type-id": {
+            "title": "Method Type",
+            "description": "Type of contact method",
+            "placeholder": "Select contact method type"
+          }
+        }
+      },
+      "contact-method-type": {
+        "title": "Contact Method Type",
+        "plural": "Contact Method Types",
+        "fields": {}
+      }
+    },
+    "permissions": {
+      "contact-method-types": {
+        "title": "Contact Method Types",
+        "description": "Manage contact method types",
+        "actions": {
+          "manage": {
+            "title": "Manage Contact Method Types",
+            "description": "Full contact method type management access"
+          },
+          "view": {
+            "title": "View Contact Method Types",
+            "description": "View contact method type information"
+          },
+          "create": {
+            "title": "Create Contact Method Type",
+            "description": "Create new contact method types"
+          },
+          "edit": {
+            "title": "Edit Contact Method Type",
+            "description": "Edit contact method type information"
+          },
+          "delete": {
+            "title": "Delete Contact Method Types",
+            "description": "Delete contact method types"
+          }
+        }
+      }
+    }
+  },
+  "emergency-contacts": {
+    "terms": {
+      "emergency-contact": "Emergency Contact",
+      "emergency-contacts": "Emergency Contacts"
+    },
+    "entities": {
+      "emergency-contact": {
+        "title": "Emergency Contact",
+        "plural": "Emergency Contacts",
+        "fields": {
+          "phone-number": {
+            "title": "Phone Number",
+            "description": "Primary emergency phone number",
+            "placeholder": "e.g., 911, +1-800-273-8255"
+          },
+          "alternate-numbers": {
+            "title": "Alternate Numbers",
+            "description": "Alternative contact numbers",
+            "placeholder": "e.g., 911, +1-800-273-8255"
+          },
+          "text-number": {
+            "title": "Text Number",
+            "description": "SMS contact number",
+            "placeholder": "SMS number if available"
+          },
+          "website": {
+            "title": "Website",
+            "description": "Official website URL",
+            "placeholder": "https://www.example.gov"
+          },
+          "email": {
+            "title": "Email",
+            "description": "Contact email address",
+            "placeholder": "contact@emergency.gov"
+          },
+          "is-national": {
+            "title": "National Coverage",
+            "description": "Available nationwide"
+          },
+          "is-regional": {
+            "title": "Regional Coverage",
+            "description": "Available in specific regions"
+          },
+          "is-local": {
+            "title": "Local Coverage",
+            "description": "Available locally only"
+          },
+          "languages": {
+            "title": "Supported Languages",
+            "description": "Languages supported by this service"
+          },
+          "is-text-capable": {
+            "title": "Text Capable",
+            "description": "Supports SMS/text messaging"
+          },
+          "is-video-call-capable": {
+            "title": "Video Call Capable",
+            "description": "Supports video calling"
+          },
+          "when-to-call": {
+            "title": "When to Call",
+            "description": "When to use this emergency contact",
+            "placeholder": "When to call this emergency number"
+          },
+          "when-not-to-call": {
+            "title": "When Not to Call",
+            "description": "When not to use this contact",
+            "placeholder": "When NOT to call this number"
+          },
+          "instructions": {
+            "title": "Instructions",
+            "description": "Special calling instructions",
+            "placeholder": "Special instructions for calling"
+          },
+          "show-on-dashboard": {
+            "title": "Show On Dashboard",
+            "description": "Display on main dashboard"
+          },
+          "requires-confirmation": {
+            "title": "Requires Confirmation",
+            "description": "Requires confirmation before calling"
+          },
+          "is-quick-dial": {
+            "title": "Quick Dial",
+            "description": "Add to quick dial list"
+          }
+        },
+        "groups": {
+          "contact-info": "Contact Information",
+          "location-info": "Location Information"
+        }
+      }
+    },
+    "search-commands": {
+      "create-emergency-contact": {
+        "title": "Create Emergency Contact",
+        "description": "Create a new emergency contact."
+      }
+    },
+    "components": {
+      "emergency-contacts-page": {
+        "title": "Emergency Contacts & Quick Dial",
+        "description": "Access emergency contacts and important numbers quickly",
+        "empty-states": {
+          "no-emergency-contacts": {
+            "title": "No Emergency Contacts Available",
+            "description": "No emergency contacts have been configured yet. Contact your administrator to add emergency contacts."
+          }
+        },
+        "sections": {
+          "quick-dial": "Quick Dial",
+          "all-contacts": "All Emergency Contacts"
+        },
+        "actions": {
+          "call-now": "Call Now",
+          "send-text": "Send Text",
+          "visit-website": "Visit Website",
+          "copy-number": "Copy Number"
+        },
+        "labels": {
+          "priority": "Priority",
+          "availability": "Availability",
+          "coverage": "Coverage",
+          "capabilities": "Capabilities",
+          "last-verified": "Last Verified"
+        },
+        "messages": {
+          "requires-confirmation-warning": "This contact requires confirmation before calling",
+          "loading": "Loading emergency contacts..."
+        }
+      }
+    },
+    "permissions": {
+      "emergency-contacts": {
+        "title": "Emergency Contacts",
+        "description": "Manage emergency contacts",
+        "actions": {
+          "manage": {
+            "title": "Manage Emergency Contacts",
+            "description": "Full emergency contact management access"
+          },
+          "view": {
+            "title": "View Emergency Contacts",
+            "description": "View emergency contact information"
+          },
+          "create": {
+            "title": "Create Emergency Contact",
+            "description": "Create new emergency contacts"
+          },
+          "edit": {
+            "title": "Edit Emergency Contact",
+            "description": "Edit emergency contact information"
+          },
+          "delete": {
+            "title": "Delete Emergency Contacts",
+            "description": "Delete emergency contacts"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "datasources": {
+    "yes-no-options": {
+      "title": "Yes/No Options",
+      "columns": {
+        "value": {
+          "title": "Value"
+        },
+        "title": {
+          "title": "Title"
+        }
+      },
+      "samples": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    },
+    "rating-scale-options": {
+      "title": "Rating Scale Options",
+      "columns": {
+        "value": {
+          "title": "Value"
+        },
+        "title": {
+          "title": "Title"
+        },
+        "description": {
+          "title": "Description"
+        }
+      },
+      "samples": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "descriptions": {
+          "1": "Poor",
+          "2": "Fair",
+          "3": "Good",
+          "4": "Very Good",
+          "5": "Excellent"
+        }
+      }
+    },
+    "agreement-scale-options": {
+      "title": "Agreement Scale Options",
+      "columns": {
+        "value": {
+          "title": "Value"
+        },
+        "title": {
+          "title": "Title"
+        }
+      },
+      "samples": {
+        "strongly-disagree": "Strongly Disagree",
+        "disagree": "Disagree",
+        "neutral": "Neutral",
+        "agree": "Agree",
+        "strongly-agree": "Strongly Agree"
+      }
+    },
+    "frequency-options": {
+      "title": "Frequency Options",
+      "columns": {
+        "value": {
+          "title": "Value"
+        },
+        "title": {
+          "title": "Title"
+        }
+      },
+      "samples": {
+        "never": "Never",
+        "rarely": "Rarely",
+        "sometimes": "Sometimes",
+        "often": "Often",
+        "always": "Always"
+      }
+    },
+    "satisfaction-options": {
+      "title": "Satisfaction Options",
+      "columns": {
+        "value": {
+          "title": "Value"
+        },
+        "title": {
+          "title": "Title"
+        }
+      },
+      "samples": {
+        "very-dissatisfied": "Very Dissatisfied",
+        "dissatisfied": "Dissatisfied",
+        "neutral": "Neutral",
+        "satisfied": "Satisfied",
+        "very-satisfied": "Very Satisfied"
+      }
+    },
+    "priority-options": {
+      "title": "Priority Options",
+      "columns": {
+        "value": {
+          "title": "Value"
+        },
+        "title": {
+          "title": "Title"
+        }
+      },
+      "samples": {
+        "low": "Low",
+        "medium": "Medium",
+        "high": "High",
+        "critical": "Critical"
+      }
+    },
+    "yes-no-maybe-options": {
+      "title": "Yes / No / Maybe",
+      "columns": {
+        "value": { "title": "Value" },
+        "title": { "title": "Title" }
+      },
+      "samples": {
+        "yes": "Yes",
+        "no": "No",
+        "maybe": "Maybe"
+      }
+    },
+    "yes-no-na-options": {
+      "title": "Yes / No / N/A",
+      "columns": {
+        "value": { "title": "Value" },
+        "title": { "title": "Title" }
+      },
+      "samples": {
+        "yes": "Yes",
+        "no": "No",
+        "not-applicable": "Not applicable"
+      }
+    },
+    "gender-options": {
+      "title": "Gender",
+      "columns": {
+        "value": { "title": "Value" },
+        "title": { "title": "Title" }
+      },
+      "samples": {
+        "female": "Female",
+        "male": "Male",
+        "non-binary": "Non-binary",
+        "prefer-not-to-say": "Prefer not to say",
+        "other": "Other"
+      }
+    },
+    "rating-1-10-options": {
+      "title": "Rating (1–10)",
+      "columns": {
+        "value": { "title": "Value" },
+        "title": { "title": "Title" }
+      },
+      "samples": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    "nps-scale-options": {
+      "title": "Net Promoter Score (0–10)",
+      "columns": {
+        "value": { "title": "Value" },
+        "title": { "title": "Title" }
+      },
+      "samples": {
+        "0": "0",
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    }
+  }
+}

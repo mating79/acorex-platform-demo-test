@@ -1,0 +1,331 @@
+<article class="doc-layout">
+  <header>
+    <ax-heading>
+      <h1>Grid Layout Builder</h1>
+      <ax-subtitle>
+        A Grid Layout Builder component allows users to visually design and
+        customize grid-based layouts by arranging and resizing elements within a
+        defined grid structure.
+      </ax-subtitle>
+    </ax-heading>
+    <ax-alert color="primary">
+      <ax-icon></ax-icon>
+      <ax-title
+        >This Component uses
+        <a class="el-primary-link" href="https://gridstackjs.com/">GridStack</a>
+        as dependency!</ax-title
+      >
+    </ax-alert>
+  </header>
+
+  <section>
+    <ax-heading>
+      <h2>Overview</h2>
+      <ax-subtitle
+        >In this section, you can test different options of this component and
+        see the output in real time</ax-subtitle
+      >
+    </ax-heading>
+    <div class="flex h-full w-full flex-col gap-4">
+      <div class="flex min-h-80 grow flex-col flex-wrap gap-2 lg:flex-row">
+        <div class="select-none rounded-lg border p-4">
+          <ax-label>Grid Items</ax-label>
+          <div class="flex flex-row flex-wrap gap-6 lg:flex-col">
+            <div class="w-[75px]">
+              <div
+                class="draggable1 h-[80px] border-2 border-dashed border-success-400 p-2!"
+              >
+                Test
+              </div>
+            </div>
+            <div class="w-[75px]">
+              <img
+                class="draggable2 h-[80px] border-2 border-dashed border-success-400"
+                src="https://picsum.photos/id/8/150/160"
+                alt="Image"
+              />
+            </div>
+            <div>
+              <ax-breadcrumbs
+                class="draggable3 border-2 border-dashed border-success-400 p-2!"
+              >
+                <ax-breadcrumbs-item><a>Home</a></ax-breadcrumbs-item>
+                <ax-breadcrumbs-item><a>Categories</a></ax-breadcrumbs-item>
+              </ax-breadcrumbs>
+            </div>
+          </div>
+        </div>
+        <div class="grow rounded-lg border-2 border-dashed p-4">
+          <ax-label>Grid Container</ax-label>
+          <ax-grid-layout-container
+            class="rounded-md"
+            [options]="gridContainer()"
+            (onAdded)="onAdded($event)"
+            (onRemoved)="onRemoved($event)"
+            (onChange)="onChange($event)"
+            (onRender)="setRender()"
+          >
+            @for(i of items(); track i) {
+            <ax-grid-layout-widget [options]="i">
+              <span>Widget {{ i.id }} </span>
+            </ax-grid-layout-widget>
+
+            }
+          </ax-grid-layout-container>
+        </div>
+      </div>
+      <div>
+        <ax-label>Deletion Area:</ax-label>
+        <div
+          class="grid-layout-trash w-full rounded-lg border-2 border-dashed border-danger-400/70"
+        ></div>
+      </div>
+    </div>
+    <div class="flex grow flex-col justify-between gap-4">
+      <div class="flex flex-col gap-4">
+        <div>
+          <ax-label>Column Counts</ax-label>
+          <ax-number-box
+            [minValue]="1"
+            [maxValue]="12"
+            [(ngModel)]="columns"
+          ></ax-number-box>
+        </div>
+        <div>
+          <ax-label>Manage Items</ax-label>
+          <div class="flex flex-wrap gap-2 *:flex-1">
+            <ax-button
+              look="solid"
+              class="ax-sm"
+              color="default"
+              text="Add"
+              (onClick)="add()"
+            >
+              <ax-icon class="fa-regular fa-add"> </ax-icon>
+            </ax-button>
+            <ax-button
+              look="solid"
+              color="default"
+              text="Delete"
+              class="ax-sm"
+              (onClick)="remove()"
+              [disabled]="!children()"
+            >
+              <ax-icon class="fa-regular fa-minus"> </ax-icon
+            ></ax-button>
+          </div>
+        </div>
+
+        <div>
+          <ax-label>Features</ax-label>
+          <div class="flex flex-wrap gap-2 *:flex-1">
+            <ax-button
+              class="ax-sm"
+              look="solid"
+              color="default"
+              text="Reorder"
+              (onClick)="autoArrange()"
+              ><ax-icon class="fa-regular fa-bars"> </ax-icon
+            ></ax-button>
+            <!-- <ax-button class="ax-sm" look="solid" color="default" text="Rotate" (onClick)="rotate()"
+                  ><ax-icon class="fa-regular fa-rotate"> </ax-icon
+                ></ax-button> -->
+          </div>
+        </div>
+        <div>
+          <ax-label>Disable Move</ax-label>
+          <ax-switch [ngModel]="move()" (ngModelChange)="setlock()"></ax-switch>
+        </div>
+        <div>
+          <ax-label>Disable Resize</ax-label>
+          <ax-switch
+            [ngModel]="resize()"
+            (ngModelChange)="setResize()"
+          ></ax-switch>
+        </div>
+      </div>
+
+      <div class="flex-wrap pt-14">
+        <!-- <ax-button look="solid" class="mb-2 w-full ax-sm" color="default" text="Save" (onClick)="saveGrid()"
+              ><ax-icon class="fa-solid fa-download"></ax-icon
+            ></ax-button> -->
+        <div class="flex flex-wrap gap-2 *:ax-grow">
+          <!-- <ax-button look="solid" class="ax-sm" color="default" text="Load" (onClick)="loadGrid()"
+                ><ax-icon class="fa-solid fa-upload"></ax-icon
+              ></ax-button> -->
+          <ax-button
+            look="solid"
+            class="ax-sm"
+            color="default"
+            text="Clear"
+            (onClick)="clearGrid()"
+            ><ax-icon class="fa-solid fa-broom-wide"></ax-icon
+          ></ax-button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- Responsive Breakpoint Test Section                         -->
+  <!-- ========================================================= -->
+  <section>
+    <ax-heading>
+      <h2>Responsive Breakpoint Test</h2>
+      <ax-subtitle>
+        Tests per-breakpoint position persistence. Each widget stores
+        independent x/y/w/h for lg (12 cols), md (6 cols), and sm (1 col). Drag
+        widgets at one breakpoint, switch to another, and verify positions are
+        preserved when you switch back.
+      </ax-subtitle>
+    </ax-heading>
+
+    <ax-alert color="warning" class="mb-4">
+      <ax-title>How to test</ax-title>
+      <div>
+        1. Arrange widgets at <strong>lg</strong> breakpoint<br />
+        2. Click <strong>md</strong> button — positions should load from md
+        profile, NOT auto-reflow from lg<br />
+        3. Drag a widget at md<br />
+        4. Click <strong>lg</strong> — positions should be exactly as you left
+        them in step 1<br />
+        5. Click <strong>md</strong> — the drag from step 3 should be
+        preserved<br />
+        6. Try <strong>sm</strong> too. Each breakpoint is fully independent.
+      </div>
+    </ax-alert>
+
+    <div class="flex flex-col gap-4">
+      <!-- Breakpoint Controls -->
+      <div class="flex flex-wrap items-center gap-4">
+        <div class="flex items-center gap-2">
+          <ax-label>Force Breakpoint:</ax-label>
+          <ax-button
+            look="solid"
+            class="ax-sm"
+            [color]="responsiveBp() === 'lg' ? 'primary' : 'default'"
+            text="LG (12 cols)"
+            (onClick)="forceBreakpoint('lg')"
+          ></ax-button>
+          <ax-button
+            look="solid"
+            class="ax-sm"
+            [color]="responsiveBp() === 'md' ? 'primary' : 'default'"
+            text="MD (6 cols)"
+            (onClick)="forceBreakpoint('md')"
+          ></ax-button>
+          <ax-button
+            look="solid"
+            class="ax-sm"
+            [color]="responsiveBp() === 'sm' ? 'primary' : 'default'"
+            text="SM (1 col)"
+            (onClick)="forceBreakpoint('sm')"
+          ></ax-button>
+        </div>
+        <div class="flex items-center gap-2">
+          <span
+            class="rounded-md px-3 py-1 text-sm font-semibold"
+            [class]="isTransitioning() ? 'bg-warning-100 text-warning-700' : 'bg-success-100 text-success-700'"
+          >
+            {{ isTransitioning() ? 'Transitioning...' : 'Stable' }}
+          </span>
+          <span
+            class="rounded-md bg-primary-100 px-3 py-1 text-sm font-semibold text-primary-700"
+          >
+            Active: {{ responsiveBp() | uppercase }} — {{
+            responsiveGridOptions().column }} columns
+          </span>
+        </div>
+      </div>
+
+      <!-- Grid Container -->
+      <div
+        class="rounded-lg border-2 border-dashed p-4"
+        style="min-height: 500px"
+      >
+        <ax-grid-layout-container
+          class="rounded-md"
+          [options]="responsiveGridOptions()"
+          (onChange)="onResponsiveGridChange($event)"
+        >
+          @for (widget of resolvedWidgets(); track widget.config.id) {
+          <ax-grid-layout-widget [options]="widget.resolvedOptions">
+            <div
+              class="flex h-full w-full flex-col items-center justify-center gap-1 p-2"
+            >
+              <span class="text-sm font-bold">{{ widget.label }}</span>
+              <span class="text-xs opacity-60">
+                x:{{ widget.resolvedOptions.x }} y:{{ widget.resolvedOptions.y
+                }} w:{{ widget.resolvedOptions.width }} h:{{
+                widget.resolvedOptions.height }}
+              </span>
+            </div>
+            <ax-button color="primary" text="test"></ax-button>
+          </ax-grid-layout-widget>
+          }
+        </ax-grid-layout-container>
+      </div>
+
+      <!-- Live State & Log -->
+      <div class="flex flex-col gap-4 lg:flex-row">
+        <!-- Layout State Dump -->
+        <div class="flex-1 rounded-lg border p-4">
+          <div class="mb-2 flex items-center justify-between">
+            <ax-label
+              >Layout State ({{ responsiveBp() | uppercase }}
+              breakpoint)</ax-label
+            >
+          </div>
+          <pre
+            class="overflow-auto rounded bg-gray-50 p-3 text-xs"
+            style="max-height: 200px"
+          >
+{{ layoutDump() | json }}</pre
+          >
+        </div>
+
+        <!-- Event Log -->
+        <div class="flex-1 rounded-lg border p-4">
+          <div class="mb-2 flex items-center justify-between">
+            <ax-label>Event Log</ax-label>
+            <ax-button
+              look="flat"
+              class="ax-sm"
+              color="default"
+              text="Clear"
+              (onClick)="clearResponsiveLog()"
+            >
+            </ax-button>
+          </div>
+          <div
+            class="overflow-auto rounded bg-gray-50 p-3 font-mono text-xs"
+            style="max-height: 200px"
+          >
+            @for (log of responsiveLog(); track $index) {
+            <div
+              class="py-0.5"
+              [class.text-warning-600]="log.includes('BLOCKED')"
+            >
+              {{ log }}
+            </div>
+            } @empty {
+            <div class="text-gray-400">
+              No events yet. Try dragging a widget or switching breakpoints.
+            </div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <ax-heading>
+      <h3>Usage</h3>
+      <ax-subtitle
+        >A simple example of using
+        <code>ax-grid-layout-builder</code></ax-subtitle
+      >
+    </ax-heading>
+  </section>
+</article>

@@ -1,0 +1,44 @@
+{
+  "settings": {
+    "metadata-ocr": {
+      "group-title": "Metadata from Documents (AI)",
+      "group-description": "Optional shortcut after document uploads: suggest metadata values from readable text. Nothing is saved until the person submits.",
+      "section-title": "Quick Fill from Document Text",
+      "section-description": "AI reads supported documents (images, PDF, simple text files) and suggests matching metadata values you can accept or edit.",
+      "enabled-title": "Document Text Metadata Suggestions",
+      "enabled-description": "When enabled, after someone chooses a supported document with metadata fields, they are asked whether to run AI extraction. Declining keeps the empty metadata form; accepting fills suggestions they can edit before submit.",
+      "enabled-search-tags": "OCR, Metadata, Document Upload, AI Fill, Quick Fill, PDF",
+      "assist-id-title": "Assist for Document Reading (Optional)",
+      "assist-id-description": "Choose which assist reads the file and maps it to your fields. Leave blank to use the tenant default from AI settings.",
+      "assist-search-tags": "Assist, AI, Default Assist, OCR, Document Reading, Metadata, PDF"
+    }
+  },
+  "widgets": {
+    "metadata-ai-fill": {
+      "hint": "Use AI to suggest empty metadata fields from text in this document.",
+      "confirm": {
+        "title": "Fill Metadata from This Document?",
+        "message": "AI can read the selected document and suggest values for metadata fields. Do you want to continue?"
+      },
+      "ocr-running": "Reading Text from Document…",
+      "ocr-done": "Document text suggestions applied — review fields before submit.",
+      "ocr-failed": "Could not read the document. Try again or fill the fields yourself.",
+      "ocr-failed-prefix": "Document Read Could Not Complete:",
+      "toast-error-title": "Could Not Complete AI Fill",
+      "loading": {
+        "title": "Filling Metadata With AI",
+        "initial": "Preparing…",
+        "skip-button": "Skip",
+        "complete": "Suggestions applied — review fields before submit.",
+        "step-prefix": "{{current}}/{{total}} · {{phase}}",
+        "thinking": {
+          "preparing": "Gathering Attachments to Process…",
+          "resolving-assist": "Selecting Assistant and Model…",
+          "uploading": "Uploading Document for Reading…",
+          "extracting": "Reading the Document and Filling Metadata Fields…",
+          "mapping": "Inferring Metadata Field Values…"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "module": {
+    "title": "Fergus",
+    "description": "Connect Fergus and Sync Jobs with Platform Projects",
+    "menus": {
+      "configuration": {
+        "title": "Fergus"
+      }
+    }
+  },
+  "integration": {
+    "display-name": "Fergus",
+    "description": "Connect to Fergus for Job Management and Project Sync.",
+    "badges": {
+      "last-sync": "Last Sync: {{datetime}}",
+      "never-synced": "Not Synced Yet"
+    },
+    "auth": {
+      "pat": {
+        "label": "Personal Access Token",
+        "instructions": "Generate a Personal Access Token in Fergus under Settings → Integrations → Fergus API. Paste the token below to connect without OAuth app registration.",
+        "token": {
+          "label": "Personal Access Token",
+          "placeholder": "Paste Your Fergus Personal Access Token"
+        }
+      },
+      "oauth": {
+        "label": "OAuth 2.0",
+        "instructions": "Enter your Fergus OAuth client ID and client secret from a registered Fergus application. After saving, you will be redirected to Fergus to sign in and authorize this application. Tokens are stored and refreshed automatically.",
+        "client-id": {
+          "label": "Client ID",
+          "placeholder": "Paste Your Fergus OAuth Client ID"
+        },
+        "client-secret": {
+          "label": "Client Secret",
+          "placeholder": "Paste Your Fergus OAuth Client Secret"
+        }
+      }
+    },
+    "connect": {
+      "instructions": "<p>Choose an <strong>Auth Method</strong>, then fill the required fields. Prefer a Fergus <strong>Personal Access Token</strong> from <strong>Settings → Integrations → Fergus API</strong>, or use OAuth <strong>Client ID</strong> and <strong>Client Secret</strong> from a registered Fergus application.</p>",
+      "dialog": {
+        "title": "Connect Fergus",
+        "reconfigure-title": "Reconfigure Fergus"
+      },
+      "fields": {
+        "auth-method": "Auth Method",
+        "display-name": "Display Name"
+      },
+      "placeholders": {
+        "display-name": "Fergus"
+      },
+      "actions": {
+        "save": "Save Connection",
+        "save-and-authorize": "Save & Authorize"
+      },
+      "errors": {
+        "pat-required": "Personal Access Token is required.",
+        "client-id-required": "Client ID is required.",
+        "client-secret-required": "Client Secret is required."
+      }
+    }
+  },
+  "permissions": {
+    "group": {
+      "title": "Fergus",
+      "description": "Configure Fergus Integration and Job Links"
+    },
+    "management": {
+      "title": "Fergus Management",
+      "description": "Full Access to Fergus Configuration"
+    },
+    "fergus-project": {
+      "view": {
+        "title": "View Job Links"
+      },
+      "create": {
+        "title": "Create Job Links"
+      },
+      "update": {
+        "title": "Update Job Links"
+      },
+      "delete": {
+        "title": "Delete Job Links"
+      }
+    },
+    "catalog": {
+      "view": {
+        "title": "View Fergus Configuration"
+      }
+    },
+    "project-import": {
+      "execute": {
+        "title": "Import Jobs from Fergus"
+      }
+    },
+    "project-sync": {
+      "execute": {
+        "title": "Sync Project with Fergus"
+      }
+    }
+  },
+  "actions": {
+    "import-from-fergus": {
+      "title": "Import from Fergus"
+    },
+    "sync": {
+      "title": "Sync"
+    }
+  },
+  "import": {
+    "not-connected": {
+      "title": "Connect Fergus to Import Jobs",
+      "message": "Fergus is not connected for this tenant. Open Administration → Integrations to connect your account, then try importing again."
+    },
+    "success-single": "Imported \"{{title}}\" from Fergus.",
+    "selector": {
+      "title": "Select Fergus Job",
+      "pull-jobs": "Pull Jobs"
+    },
+    "dialog": {
+      "title": "Import Fergus Job",
+      "submit": "Import Job"
+    },
+    "loading": {
+      "fetch": {
+        "title": "Loading from Fergus",
+        "status": "Pulling Jobs into Cache…"
+      },
+      "import": {
+        "title": "Importing Job",
+        "status": "Creating Platform Project…"
+      }
+    },
+    "sync-strategy": {
+      "title": "Sync Strategy",
+      "options": {
+        "remoteOverride": "Remote Overrides Local",
+        "localOverride": "Keep Local Values",
+        "merge": "Merge (Fill Empty Local Fields)"
+      }
+    }
+  },
+  "sync": {
+    "success": "Project Synced with Fergus Successfully.",
+    "loading": {
+      "title": "Syncing with Fergus",
+      "status": "Updating Project from Fergus…"
+    }
+  }
+}

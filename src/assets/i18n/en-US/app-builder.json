@@ -1,0 +1,101 @@
+{
+  "module": {
+    "title": "App Builder",
+    "description": "Build and publish public landing pages"
+  },
+  "pages": {
+    "entities": {
+      "landing-page": {
+        "title": "Landing Page",
+        "plural": "Landing Pages",
+        "groups": {
+          "publishing": "Publishing"
+        },
+        "fields": {
+          "slug": {
+            "title": "Slug",
+            "placeholder": "my-page-slug"
+          },
+          "category": {
+            "title": "Category"
+          },
+          "is-home": {
+            "title": "Home Page"
+          },
+          "content": {
+            "title": "Content"
+          }
+        },
+        "pages": {
+          "designer": {
+            "title": "Designer"
+          }
+        }
+      }
+    }
+  },
+  "categories": {
+    "entities": {
+      "landing-page-category": {
+        "title": "Page Category",
+        "plural": "Page Categories",
+        "fields": {
+          "slug": {
+            "title": "Slug",
+            "placeholder": "category-slug"
+          }
+        }
+      }
+    }
+  },
+  "permissions": {
+    "manage": {
+      "title": "App Builder",
+      "description": "Manage app builder features"
+    },
+    "landing-page": {
+      "manage": {
+        "title": "Landing Pages",
+        "description": "Manage landing pages"
+      },
+      "view": {
+        "title": "View Landing Pages",
+        "description": "View landing pages"
+      },
+      "create": {
+        "title": "Create Landing Pages",
+        "description": "Create landing pages"
+      },
+      "edit": {
+        "title": "Edit Landing Pages",
+        "description": "Edit landing pages"
+      },
+      "delete": {
+        "title": "Delete Landing Pages",
+        "description": "Delete landing pages"
+      }
+    },
+    "landing-page-category": {
+      "manage": {
+        "title": "Page Categories",
+        "description": "Manage page categories"
+      },
+      "view": {
+        "title": "View Page Categories",
+        "description": "View page categories"
+      },
+      "create": {
+        "title": "Create Page Categories",
+        "description": "Create page categories"
+      },
+      "edit": {
+        "title": "Edit Page Categories",
+        "description": "Edit page categories"
+      },
+      "delete": {
+        "title": "Delete Page Categories",
+        "description": "Delete page categories"
+      }
+    }
+  }
+}

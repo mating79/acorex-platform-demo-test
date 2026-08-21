@@ -1,0 +1,90 @@
+@reference '@acorex/styles/themes/default.css';
+
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.demo-test-ai-direct-page__content {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  height: 100%;
+}
+
+.demo-test-ai-direct-page__shell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  height: 100%;
+  min-height: 0;
+  padding: 1rem;
+}
+
+.demo-test-ai-direct-page__status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.8125rem;
+  opacity: 0.8;
+}
+
+.demo-test-ai-direct-page__error {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--ax-danger, #c0392b);
+  white-space: pre-wrap;
+}
+
+.demo-test-ai-direct-page__transcript {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border: 1px solid var(--ax-border-color, rgba(0, 0, 0, 0.08));
+  border-radius: 0.75rem;
+}
+
+.demo-test-ai-direct-page__empty {
+  margin: auto;
+  max-width: 28rem;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.demo-test-ai-direct-page__bubble {
+  max-width: 72%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+}
+
+.demo-test-ai-direct-page__bubble--user {
+  align-self: flex-end;
+  background: var(--ax-primary, #2563eb);
+  color: #fff;
+}
+
+.demo-test-ai-direct-page__bubble--assistant {
+  align-self: flex-start;
+  background: var(--ax-surface, rgba(0, 0, 0, 0.06));
+}
+
+.demo-test-ai-direct-page__text {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.demo-test-ai-direct-page__composer {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+.demo-test-ai-direct-page__input {
+  flex: 1;
+}

@@ -1,0 +1,122 @@
+{
+  "settings": {
+    "telegram": {
+      "test": {
+        "action": "Send Test Message",
+        "dialog": {
+          "title": "Send Telegram Test Message",
+          "actions": {
+            "send": "Send Test Message"
+          },
+          "fields": {
+            "chat-id": {
+              "title": "Chat ID",
+              "placeholder": "Enter Telegram chat ID"
+            }
+          }
+        },
+        "messages": {
+          "chat-id-required": "Telegram chat ID is required.",
+          "success": "Test message sent successfully.",
+          "failed": "Telegram test failed."
+        }
+      },
+      "errors": {
+        "chat-id-required": "Telegram chat ID is required.",
+        "bot-token-not-configured": "Telegram is not connected yet. Connect Telegram in Administration → Integrations first.",
+        "tenant-required": "Tenant context is required to send a test message.",
+        "chat-not-found": "Telegram chat was not found. Verify the chat ID and make sure you have started a conversation with the bot.",
+        "bot-unauthorized": "Telegram rejected the bot token. Verify the token from BotFather.",
+        "bot-blocked": "The bot was blocked by this chat. Unblock the bot and try again.",
+        "bot-cannot-initiate": "The bot cannot message this chat until the user starts the bot or adds it to the group.",
+        "api-error": "Telegram could not send the message. Check bot settings and try again."
+      }
+    },
+    "tenant-integration": {
+      "section-title": "Communication",
+      "section-description": "Connect messaging providers used to send tenant communications.",
+      "connections-panel": {
+        "title": "Providers",
+        "description": "Connect Telegram, WhatsApp, and other communication providers for this tenant."
+      }
+    },
+    "user-integration": {
+      "section-title": "Telegram",
+      "section-description": "Connect your Telegram account to receive platform messages.",
+      "connection-title": "Account",
+      "connection-description": "Link Telegram so the platform can send you messages.",
+      "not-configured-badge": "Not Configured",
+      "not-configured-notice": "Telegram is not connected yet. Ask an administrator to connect Telegram in Administration → Integrations."
+    },
+    "delivery-channel": {
+      "title": "Telegram",
+      "description": "Receive communications on Telegram when your Telegram account is connected."
+    }
+  },
+  "integration": {
+    "display-name": "Telegram",
+    "description": "Connect a Telegram bot for outbound messages, or link your account to receive them.",
+    "domain": {
+      "title": "Communication",
+      "description": "Messaging providers for outbound communications."
+    },
+    "auth": {
+      "link": {
+        "label": "Telegram bot link",
+        "instructions": "Open your bot in Telegram and press Start to link your account."
+      }
+    },
+    "connect": {
+      "tenant": {
+        "dialog": {
+          "title": "Connect Telegram",
+          "configure-title": "Configure Telegram",
+          "instructions": "<p>Paste the bot token from <a href=\"https://t.me/BotFather\" target=\"_blank\" rel=\"noopener noreferrer\">@BotFather</a>.</p>",
+          "fields": {
+            "display-name": "Display Name",
+            "bot-token": "Bot Token"
+          },
+          "placeholders": {
+            "display-name": "Telegram",
+            "bot-token": "Enter bot token"
+          },
+          "actions": {
+            "save": "Save"
+          }
+        },
+        "messages": {
+          "bot-token-required": "Bot token is required.",
+          "success": "Telegram bot connected successfully."
+        }
+      },
+      "dialog": {
+        "title": "Connect Telegram",
+        "instructions": "<p>Click <strong>Connect</strong> to open the Telegram bot, press <strong>Start</strong>, and keep this window open while we confirm the connection.</p><p>If automatic linking does not work, paste your numeric chat ID below (from <a href=\"https://t.me/userinfobot\" target=\"_blank\" rel=\"noopener noreferrer\">@userinfobot</a>) and click <strong>Connect</strong>.</p>",
+        "manual-hint": "If automatic linking does not work, paste your numeric chat ID below (from @userinfobot) and click Connect.",
+        "fields": {
+          "chat-id": {
+            "title": "Chat ID (optional)",
+            "placeholder": "Enter numeric chat ID"
+          }
+        },
+        "actions": {
+          "connect": "Connect"
+        }
+      },
+      "messages": {
+        "expired": "The Telegram link expired. Try connecting again.",
+        "timeout": "Telegram connection timed out. Open the bot, press Start, and try again.",
+        "failed": "Telegram connection failed.",
+        "success": "Telegram account connected successfully."
+      }
+    }
+  },
+  "templates": {
+    "channels": {
+      "telegram": "Telegram",
+      "not-configured": {
+        "telegram": "Telegram is not connected yet. You can draft templates now, but messages will not send until Telegram is connected in Integrations."
+      }
+    }
+  }
+}

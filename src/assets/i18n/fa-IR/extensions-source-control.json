@@ -1,0 +1,144 @@
+{
+  "module": {
+    "title": "کنترل سورس",
+    "description": "اتصال پروژه‌های پلتفرم به مخازن Git"
+  },
+  "integration": {
+    "domain": {
+      "title": "کنترل سورس",
+      "description": "اتصال سرویس‌های میزبانی Git برای مخازن، همگام‌سازی و import."
+    }
+  },
+  "settings": {
+    "source-control": {
+      "group": {
+        "nav-title": "کنترل سورس",
+        "title": "کنترل سورس",
+        "description": "تعیین کنید کدام نوع پروژه‌ها می‌توانند به مخزن Git متصل شوند."
+      },
+      "section-title": "پیکربندی",
+      "section-description": "قابلیت‌های کنترل سورس را برای انواع پروژه مدیریت کنید.",
+      "enabled-project-types": {
+        "title": "انواع پروژه مجاز",
+        "description": "فقط پروژه‌هایی با این انواع می‌توانند مخزن Git لینک کنند. بدون تغییر کد، نوع‌های دیگر را اینجا اضافه کنید."
+      }
+    }
+  },
+  "entities": {
+    "project-source-control-link": {
+      "title": "لینک مخزن پروژه",
+      "plural": "لینک‌های مخزن پروژه",
+      "groups": {
+        "repository": "مخزن"
+      },
+      "fields": {
+        "project-id": { "title": "شناسه پروژه" },
+        "provider-id": { "title": "ارائه‌دهنده" },
+        "connection-id": { "title": "شناسه اتصال" },
+        "remote-id": { "title": "شناسه ریموت" },
+        "full-name": { "title": "مخزن" },
+        "web-url": { "title": "آدرس وب" },
+        "default-branch": { "title": "شاخه پیش‌فرض" },
+        "linked-at": { "title": "زمان لینک" }
+      }
+    }
+  },
+  "actions": {
+    "link-repository": {
+      "title": "لینک مخزن"
+    },
+    "unlink-repository": {
+      "title": "قطع لینک مخزن"
+    }
+  },
+  "pages": {
+    "repository": {
+      "title": "مخزن",
+      "linked": {
+        "summary": "این پروژه به یک مخزن Git متصل است.",
+        "badge": "متصل"
+      },
+      "fields": {
+        "provider": "ارائه‌دهنده",
+        "default-branch": "شاخه پیش‌فرض",
+        "web-url": "آدرس وب"
+      },
+      "actions": {
+        "back": "بازگشت",
+        "change": "تغییر مخزن",
+        "unlink": "قطع لینک مخزن"
+      },
+      "empty": {
+        "no-connection": {
+          "title": "ارائه‌دهنده Git متصل نیست",
+          "description": "قبل از لینک مخزن، GitHub یا GitLab را در Administration → Integrations متصل کنید."
+        }
+      },
+      "steps": {
+        "provider": {
+          "title": "انتخاب ارائه‌دهنده",
+          "description": "ارائه‌دهنده Git متصل را برای این پروژه انتخاب کنید."
+        },
+        "repositories": {
+          "title": "انتخاب مخزن",
+          "search-placeholder": "جستجوی مخزن بر اساس نام",
+          "empty": "مخزنی با این جستجو پیدا نشد. کلمه دیگری امتحان کنید."
+        }
+      },
+      "dialogs": {
+        "link": {
+          "title": "لینک مخزن",
+          "message": "مخزن {{fullName}} به این پروژه لینک شود؟"
+        },
+        "unlink": {
+          "title": "قطع لینک مخزن",
+          "message": "لینک {{fullName}} از این پروژه قطع شود؟"
+        }
+      },
+      "messages": {
+        "linked": "مخزن {{fullName}} با موفقیت لینک شد.",
+        "unlinked": "لینک مخزن با موفقیت قطع شد."
+      },
+      "commits": {
+        "title": "کامیت‌ها",
+        "description": "آخرین کامیت‌های شاخه انتخاب‌شده.",
+        "branch": {
+          "placeholder": "انتخاب شاخه"
+        },
+        "empty": {
+          "title": "کامیتی یافت نشد",
+          "description": "این شاخه هنوز کامیتی ندارد یا ارائه‌دهنده لیست خالی برگرداند."
+        },
+        "actions": {
+          "view": "مشاهده در ارائه‌دهنده"
+        }
+      }
+    }
+  },
+  "link-repository": {
+    "messages": {
+      "no-connection": "اتصال GitHub یا GitLab پیکربندی نشده است. ابتدا در Administration → Integrations یک provider را متصل کنید."
+    },
+    "dialog": {
+      "title": "لینک مخزن",
+      "instructions": "یک provider متصل را انتخاب کنید و مخزن مورد نظر را برای لینک به این پروژه جستجو کنید.",
+      "fields": {
+        "connection": "اتصال",
+        "search": "جستجو",
+        "repository": "مخزن"
+      },
+      "placeholders": {
+        "search": "برای فیلتر مخازن تایپ کنید"
+      },
+      "actions": {
+        "save": "لینک مخزن"
+      }
+    }
+  },
+  "unlink-repository": {
+    "dialog": {
+      "title": "قطع لینک مخزن",
+      "message": "لینک {{fullName}} از این پروژه قطع شود؟"
+    }
+  }
+}

@@ -1,0 +1,417 @@
+{
+  "module": {
+    "title": "مدیریت وظایف",
+    "description": "مدیریت وظایف، انتساب‌ها و ردیابی زمان"
+  },
+  "catalog-scopes": {
+    "tasks": {
+      "title": "جریان‌های کار وظایف",
+      "description": "تعاریف جریان کار برای نوع وظیفه"
+    }
+  },
+  "settings": {
+    "task-management": {
+      "group": {
+        "nav-title": "وظایف",
+        "title": "مدیریت وظایف",
+        "description": "ترجیحات مربوط به نماها و حالت‌های تختهٔ وظایف."
+      },
+      "taskboard": {
+        "section": {
+          "title": "تختهٔ وظایف",
+          "description": "تعیین کنید کدام چیدمان‌ها در تعویض‌گر نمای تختهٔ وظایف دیده شوند."
+        },
+        "parts": {
+          "calendar": {
+            "title": "حالت‌های تقویم",
+            "description": "انتخاب کنید کدام حالت‌های تقویم در تختهٔ وظایف در دسترس باشند.",
+            "mode-options": {
+              "day": "روزانه",
+              "week": "هفتگی",
+              "month": "ماهانه",
+              "agenda": "دستور کار"
+            }
+          },
+          "timeline": {
+            "title": "حالت‌های خط زمانی",
+            "description": "انتخاب کنید کدام حالت‌های خط زمانی در تختهٔ وظایف در دسترس باشند.",
+            "mode-options": {
+              "timeline-day": "خط زمانی روزانه",
+              "timeline-weekly": "خط زمانی هفتگی",
+              "timeline-month": "خط زمانی ماهانه",
+              "timeline-year": "خط زمانی سالانه"
+            }
+          },
+          "table": {
+            "title": "حالت‌های جدول",
+            "description": "انتخاب کنید کدام حالت‌های جدول در تختهٔ وظایف در دسترس باشند.",
+            "mode-options": {
+              "grid": "ساده",
+              "status-grouped-grid": "گروه‌بندی بر اساس وضعیت"
+            }
+          },
+          "kanban": {
+            "title": "حالت‌های کانبان",
+            "description": "انتخاب کنید کدام حالت‌های کانبان در تختهٔ وظایف در دسترس باشند.",
+            "mode-options": {
+              "kanban": "کانبان"
+            }
+          }
+        },
+        "color-by": {
+          "title": "رنگ‌آمیزی وظایف بر اساس",
+          "description": "رنگ پیش‌فرض نوار کناری ردیف‌ها و کارت‌های تخته وظایف.",
+          "due-date": "تاریخ سررسید",
+          "priority": "اولویت",
+          "status": "وضعیت"
+        }
+      }
+    }
+  },
+  "root-menu": "مدیریت وظایف",
+  "task": {
+    "individual-title": "وظیفه",
+    "plural-title": "وظایف",
+    "scheduling": "زمان‌بندی",
+    "classification": "طبقه‌بندی",
+    "tracking": "ردیابی",
+    "context": "زمینه",
+    "due-date": "تاریخ سررسید",
+    "start-date": "تاریخ شروع",
+    "completed-date": "تاریخ تکمیل",
+    "estimated-hours": "ساعت‌های تخمینی",
+    "actual-hours": "ساعت‌های واقعی",
+    "parent-task": "وظیفه والد",
+    "context-type": "نوع زمینه",
+    "subject": "موضوع",
+    "subject-type": "نوع موضوع",
+    "context-id": "شناسه زمینه",
+    "form-template": "قالب فرم",
+    "permissions": {
+      "task": {
+        "manage": {
+          "title": "مدیریت وظایف"
+        },
+        "view-all": {
+          "title": "مشاهده همه وظایف",
+          "description": "مشاهده و فیلتر وظایف همه مسئولان در تخته وظایف."
+        }
+      }
+    }
+  },
+  "task-type": {
+    "individual-title": "نوع وظیفه",
+    "plural-title": "انواع وظایف",
+    "configuration": "پیکربندی",
+    "allowed-context-types": "انواع زمینه مجاز",
+    "allowed-subject-types": "انواع موضوع مجاز",
+    "form-template": "قالب فرم",
+    "document-types": "نوع سند",
+    "features": {
+      "title": "ویژگی‌ها",
+      "has-checklist": "دارای چک‌لیست",
+      "has-time-tracking": "دارای ردیابی زمان",
+      "has-attachments": "دارای پیوست",
+      "has-dependencies": "دارای وابستگی‌ها",
+      "has-subtasks": "دارای زیروظایف"
+    },
+    "default-status": "وضعیت پیش‌فرض"
+  },
+  "task-type-categories": {
+    "title": "دسته نوع وظیفه",
+    "plural": "دسته‌های نوع وظیفه"
+  },
+  "task-status": {
+    "individual-title": "وضعیت وظیفه",
+    "plural-title": "وضعیت‌های وظیفه",
+    "configuration": "پیکربندی",
+    "workflow": "گردش کار",
+    "is-default": "پیش‌فرض است",
+    "is-final": "نهایی است",
+    "allowed-transitions": "انتقال‌های مجاز"
+  },
+  "task-checklist-item": {
+    "individual-title": "ردیف چک‌لیست",
+    "plural-title": "ردیف‌های چک‌لیست"
+  },
+  "checklist-item": {
+    "assignment": "واگذاری",
+    "status": "وضعیت",
+    "assigned-to": "واگذار شده به",
+    "due-date": "تاریخ سررسید",
+    "is-completed": "تکمیل شده است",
+    "completed-by": "تکمیل شده توسط",
+    "completed-at": "تکمیل شده در"
+  },
+  "task-assignment": {
+    "individual-title": "واگذاری وظیفه",
+    "plural-title": "واگذاری‌های وظیفه",
+    "assigned-to": "واگذار شده به",
+    "assigned-by": "واگذار شده توسط",
+    "assigned-at": "واگذار شده در"
+  },
+  "time-log": {
+    "individual-title": "ثبت زمان",
+    "plural-title": "ثبت‌های زمان",
+    "time-details": "جزئیات زمان",
+    "approval": "تأیید",
+    "start-time": "زمان شروع",
+    "end-time": "زمان پایان",
+    "duration": "مدت",
+    "is-approved": "تأیید شده است"
+  },
+  "task-dependency": {
+    "individual-title": "وابستگی وظیفه",
+    "plural-title": "وابستگی‌های وظیفه",
+    "depends-on-task": "وابسته به وظیفه",
+    "dependency-type": "نوع وابستگی",
+    "lag-days": "روزهای تأخیر"
+  },
+  "task-context": {
+    "individual-title": "زمینه وظیفه",
+    "plural-title": "زمینه‌های وظیفه",
+    "context-type": "نوع زمینه",
+    "subject": "موضوع",
+    "subject-type": "نوع موضوع",
+    "context-id": "شناسه زمینه",
+    "context-title": "عنوان زمینه",
+    "is-primary": "زمینه اصلی است"
+  },
+  "task-template": {
+    "individual-title": "قالب وظیفه",
+    "plural-title": "قالب‌های وظیفه",
+    "task-data": "داده وظیفه",
+    "template-data": "داده قالب",
+    "is-public": "عمومی است"
+  },
+  "task-board": {
+    "page-title": "تخته وظایف",
+    "all": "همه وظایف",
+    "calendar": "تقویم",
+    "table": "فهرست",
+    "kanban": "کانبان",
+    "widget-title": "عنوان ویجت",
+    "timeline": "خط زمانی",
+    "view-page-title": {
+      "calendar": {
+        "daily": "تقویم روزانه",
+        "weekly": "تقویم هفتگی",
+        "monthly": "تقویم ماهانه",
+        "agenda": "دستور کار"
+      },
+      "timeline": {
+        "daily": "خط زمانی روزانه",
+        "weekly": "خط زمانی هفتگی",
+        "monthly": "خط زمانی ماهانه",
+        "yearly": "خط زمانی سالانه"
+      },
+      "table": {
+        "simple": "فهرست وظایف",
+        "grouped": "وظایف بر اساس وضعیت"
+      },
+      "kanban": "تابلوی کانبان"
+    },
+    "navigator": {
+      "today": "امروز",
+      "current-week": "هفته جاری",
+      "current-month": "ماه جاری",
+      "current-year": "سال جاری",
+      "previous-period": "دوره قبل",
+      "next-period": "دوره بعد"
+    },
+    "shortcuts": {
+      "groups": {
+        "views": "نماها",
+        "panels": "پنل‌ها"
+      },
+      "go-to-today": "رفتن به امروز",
+      "dismiss-overlays": "بستن پنل یا پنجره",
+      "toggle-settings": "نمایش/مخفی کردن تنظیمات",
+      "previous-layout": "چیدمان قبلی",
+      "next-layout": "چیدمان بعدی",
+      "switch-to-calendar": "رفتن به تقویم",
+      "switch-to-timeline": "رفتن به خط زمان",
+      "switch-to-table": "رفتن به فهرست",
+      "switch-to-kanban": "رفتن به کانبان"
+    },
+    "view": {
+      "daily": "روزانه",
+      "daily-timeline": "خط زمان روزانه",
+      "multi-day-timeline": "خط زمان چند روزه",
+      "weekly": "هفتگی",
+      "weekly-timeline": "خط زمان هفتگی",
+      "monthly": "ماهانه",
+      "yearly": "سالانه",
+      "monthly-timeline": "خط زمان ماهانه",
+      "all-day": "تمام روز",
+      "agenda": "دستور کار",
+      "kanban": "کانبان",
+      "grid": "فهرست",
+      "status-grouped-grid": "وضعیت",
+      "time-grouped-grid": "گروه‌بندی بر اساس زمان",
+      "yearly-timeline": "خط زمان سالانه"
+    },
+    "detail-panel": {
+      "title": "جزئیات وظیفه",
+      "description": "توضیحات",
+      "start-date": "تاریخ شروع",
+      "end-date": "تاریخ پایان",
+      "status": "وضعیت",
+      "priority": "اولویت",
+      "no-task-selected": {
+        "title": "هیچ وظیفه‌ای انتخاب نشده",
+        "description": "لطفاً وظیفه‌ای را انتخاب کنید تا جزئیات آن را مشاهده کنید."
+      },
+      "reporter": "ارجاع دهنده",
+      "assignee": "واگذار شده به"
+    },
+    "grid-headers": {
+      "title": "عنوان",
+      "description": "توضیحات",
+      "start-date": "تاریخ شروع",
+      "due-date": "تاریخ سررسید",
+      "received": "تاریخ دریافت",
+      "priority": "اولویت",
+      "reporter": "ارجاع دهنده",
+      "assignee": "واگذار شده به",
+      "status": "وضعیت",
+      "type": "نوع",
+      "action-view": "مشاهده"
+    },
+    "filter": {
+      "title": "فیلتر",
+      "title-plural": "فیلترها",
+      "task-type": "نوع وظیفه",
+      "assignee": "واگذار شده به",
+      "unassigned": "بدون مسئول",
+      "reporter": "ارجاع دهنده",
+      "priority": "اولویت",
+      "due-status": "وضعیت سررسید",
+      "date-range": "بازه تاریخ",
+      "calendar-event-type": "تقویم‌های تعطیلات",
+      "calendars": "تقویم‌های تعطیلات"
+    },
+    "priority": {
+      "urgent": "فوری",
+      "high": "بالا",
+      "normal": "عادی",
+      "low": "پایین",
+      "no-priority": "بدون اولویت"
+    },
+    "due-status": {
+      "completed": "تکمیل‌شده",
+      "no-due-date": "بدون تاریخ سررسید",
+      "overdue": "گذشته از موعد",
+      "due-today": "سررسید امروز",
+      "due-tomorrow": "سررسید فردا",
+      "due-this-week": "سررسید این هفته",
+      "upcoming": "پیش‌رو"
+    },
+    "color-by": {
+      "due-date": "تاریخ سررسید",
+      "priority": "اولویت",
+      "status": "وضعیت"
+    },
+    "settings": {
+      "title": "تنظیمات",
+      "color-by": "رنگ‌بندی بر اساس"
+    }
+  },
+  "cartable": {
+    "menu-title": "کارتابل",
+    "page-title": "کارتابل",
+    "view-cards": "کارت",
+    "view-grid": "جدول",
+    "empty-state": {
+      "title": "موردی نیست",
+      "description": "در کارتابل شما وظیفهٔ استخری گردش کار وجود ندارد. وقتی در فهرست نامزدها باشید، موارد جدید اینجا نمایش داده می‌شوند."
+    },
+    "badge-pool": "استخر",
+    "badge-assigned": "واگذار به شما",
+    "open-actions": "اقدامات",
+    "col-title": "عنوان",
+    "col-type": "گردش کار",
+    "col-state": "وضعیت"
+  },
+  "dashboard-widgets": {
+    "widget-picker-category": {
+      "tasks": "وظایف"
+    },
+    "widget-picker-sub-categories": {
+      "shortcut": "میان‌برها",
+      "board": "بورد وظایف"
+    }
+  },
+  "task-process-definition": {
+    "permissions": {
+      "manage": {
+        "title": "مدیریت تعریف فرآیند",
+        "description": "دسترسی کامل به تعریف فرآیند"
+      },
+      "view": {
+        "title": "مشاهده تعریف فرآیند",
+        "description": "مجوز مشاهده تعریف فرآیند"
+      },
+      "create": {
+        "title": "ایجاد تعریف فرآیند",
+        "description": "مجوز ایجاد تعریف فرآیند"
+      },
+      "edit": {
+        "title": "ویرایش تعریف فرآیند",
+        "description": "مجوز ویرایش تعریف فرآیند"
+      },
+      "delete": {
+        "title": "حذف تعریف فرآیند",
+        "description": "مجوز حذف تعریف فرآیند"
+      },
+      "history": {
+        "title": "تاریخچه تعریف فرآیند",
+        "description": "مجوز مشاهده تاریخچه تعریف فرآیند"
+      },
+      "show-xml": {
+        "title": "نمایش فرایند",
+        "description": "مجوز نمایش XML فرایند"
+      }
+    }
+  },
+  "task-process-instance": {
+    "permissions": {
+      "manage": {
+        "title": "مدیریت فرآیند اجرایی",
+        "description": "دسترسی کامل به فرآیند اجرایی"
+      },
+      "view": {
+        "title": "مشاهده فرآیند اجرایی",
+        "description": "مجوز مشاهده فرآیند اجرایی"
+      },
+      "create": {
+        "title": "ایجاد فرآیند اجرایی",
+        "description": "مجوز ایجاد فرآیند اجرایی"
+      },
+      "edit": {
+        "title": "ویرایش فرآیند اجرایی",
+        "description": "مجوز ویرایش فرآیند اجرایی"
+      },
+      "delete": {
+        "title": "حذف فرآیند اجرایی",
+        "description": "مجوز حذف فرآیند اجرایی"
+      },
+      "history": {
+        "title": "تاریخچه فرآیند اجرایی",
+        "description": "مجوز مشاهده تاریخچه فرآیند اجرایی"
+      },
+      "attachments": {
+        "title": "مستندات فرآیند",
+        "description": "مجوز مشاهده مستندات فرآیند اجرایی"
+      },
+      "comments": {
+        "title": "نظرات فرآیند",
+        "description": "مجوز مشاهده نظرات فرآیند اجرایی"
+      },
+      "show-xml": {
+        "title": "نمایش فرایند",
+        "description": "مجوز نمایش XML فرآیند اجرایی"
+      }
+    }
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "module": {
+    "title": "مدیریت اشتراک",
+    "description": "مدیریت اشتراک‌ها برای مستأجران، نسخه‌های برنامه و سایر موجودیت‌ها",
+    "menus": {
+      "root": {
+        "title": "مدیریت اشتراک",
+        "description": "مدیریت اشتراک‌ها و پلن‌های اشتراک"
+      }
+    }
+  },
+  "features": {
+    "subscription-management": {
+      "title": "مدیریت اشتراک",
+      "description": "فعال‌سازی قابلیت مدیریت اشتراک"
+    },
+    "manage-subscriptions": {
+      "title": "مدیریت اشتراک‌ها",
+      "description": "فعال‌سازی مدیریت اشتراک‌ها و پلن‌ها در کنسول پلتفرم"
+    }
+  },
+  "subscriptions": {
+    "terms": {
+      "subscription": "اشتراک",
+      "subscriptions": "اشتراک‌ها",
+      "tenant": "مستأجر",
+      "application-edition": "نسخه برنامه"
+    },
+    "entities": {
+      "subscription": {
+        "title": "اشتراک",
+        "plural": "اشتراک‌ها",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "subscription-details": "جزئیات اشتراک"
+        },
+        "fields": {
+          "subscriber": {
+            "title": "مشترک",
+            "description": "موجودیتی که اشتراک می‌گیرد (مثلاً مستأجر)",
+            "placeholder": "مشترک را انتخاب کنید"
+          },
+          "plan": {
+            "title": "پلن اشتراک",
+            "description": "پلن اشتراک برای این اشتراک",
+            "placeholder": "پلن اشتراک را انتخاب کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "description": "عنوان اشتراک",
+            "placeholder": "عنوان اشتراک را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "description": "توضیحات اشتراک",
+            "placeholder": "توضیحات اشتراک را وارد کنید"
+          },
+          "start-date": {
+            "title": "تاریخ شروع",
+            "description": "تاریخ شروع اشتراک",
+            "placeholder": "تاریخ شروع را انتخاب کنید"
+          },
+          "end-date": {
+            "title": "تاریخ پایان",
+            "description": "تاریخ پایان اشتراک",
+            "placeholder": "تاریخ پایان را انتخاب کنید"
+          }
+        }
+      },
+      "subscription-plan": {
+        "title": "پلن اشتراک",
+        "plural": "پلن‌های اشتراک",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "title": {
+            "title": "عنوان",
+            "description": "عنوان پلن اشتراک",
+            "placeholder": "عنوان پلن را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "description": "توضیحات پلن اشتراک",
+            "placeholder": "توضیحات پلن را وارد کنید"
+          },
+          "code": {
+            "title": "کد",
+            "description": "کد یکتا برای پلن اشتراک",
+            "placeholder": "کد پلن را وارد کنید"
+          }
+        },
+        "related-entities": {
+          "items": {
+            "title": "ردیف‌های پلن"
+          }
+        }
+      },
+      "subscription-plan-item": {
+        "title": "ردیف پلن اشتراک",
+        "plural": "ردیف‌های پلن اشتراک",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "plan": {
+            "title": "پلن اشتراک",
+            "description": "پلن اشتراکی که این ردیف به آن تعلق دارد",
+            "placeholder": "پلن اشتراک را انتخاب کنید"
+          },
+          "subscribable-type": {
+            "title": "نوع موجودیت",
+            "description": "نوع موجودیتی که این ردیف برای آن است (مثلاً نسخه برنامه)",
+            "placeholder": "نوع موجودیت را انتخاب کنید"
+          },
+          "edition": {
+            "title": "نسخه برنامه",
+            "description": "نسخه برنامه‌ای که این ردیف به آن مرتبط است",
+            "placeholder": "نسخه برنامه را انتخاب کنید"
+          }
+        }
+      }
+    },
+    "states": {
+      "active": "فعال",
+      "expired": "منقضی شده",
+      "cancelled": "لغو شده",
+      "suspended": "تعلیق شده"
+    },
+    "transitions": {
+      "expire": "منقضی کردن",
+      "cancel": "لغو کردن",
+      "suspend": "تعلیق کردن",
+      "activate": "فعال کردن",
+      "renew": "تمدید کردن"
+    },
+    "permissions": {
+      "subscriptions": {
+        "title": "اشتراک‌ها",
+        "actions": {
+          "view": {
+            "title": "@general:actions.view.title"
+          },
+          "create": {
+            "title": "@general:actions.create.title"
+          },
+          "edit": {
+            "title": "@general:actions.edit.title"
+          },
+          "delete": {
+            "title": "@general:actions.delete.title"
+          },
+          "manage": {
+            "title": "مدیریت اشتراک‌ها"
+          }
+        }
+      },
+      "subscription-plans": {
+        "title": "پلن‌های اشتراک",
+        "actions": {
+          "view": {
+            "title": "@general:actions.view.title"
+          },
+          "create": {
+            "title": "@general:actions.create.title"
+          },
+          "edit": {
+            "title": "@general:actions.edit.title"
+          },
+          "delete": {
+            "title": "@general:actions.delete.title"
+          },
+          "manage": {
+            "title": "مدیریت پلن‌های اشتراک"
+          }
+        }
+      }
+    },
+    "actions": {
+      "create-subscription": {
+        "title": "ایجاد اشتراک",
+        "description": "ایجاد یک اشتراک جدید"
+      },
+      "create-subscription-plan": {
+        "title": "ایجاد پلن اشتراک",
+        "description": "ایجاد یک پلن اشتراک جدید"
+      }
+    }
+  }
+}

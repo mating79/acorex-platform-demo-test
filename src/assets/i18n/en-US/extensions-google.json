@@ -1,0 +1,33 @@
+{
+  "integration": {
+    "display-name": "Google",
+    "description": "Connect your Google account for Gmail and Calendar sync.",
+    "auth": {
+      "oauth": {
+        "label": "OAuth 2.0",
+        "instructions": "You will be redirected to Google to sign in and grant access to Gmail and Calendar. Use the account you want to sync."
+      }
+    },
+    "connect": {
+      "oauth-dialog": {
+        "title": "Connect With OAuth",
+        "instructions": "You will be redirected to Google to sign in and grant access to Gmail and Calendar. Use the account you want to sync."
+      },
+      "actions": {
+        "connect": "Connect"
+      }
+    }
+  },
+  "settings": {
+    "google": {
+      "section-title": "Google",
+      "section-description": "Connect your Google account and choose which services to sync.",
+      "connection-title": "Account",
+      "connection-description": "Sign in with Google to enable Gmail and Calendar sync.",
+      "gmail-enabled-title": "Gmail Sync",
+      "gmail-enabled-description": "Sync messages from your connected Gmail account.",
+      "calendar-enabled-title": "Calendar Sync",
+      "calendar-enabled-description": "Sync events from your connected Google Calendar."
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "integration": {
+    "display-name": "GitLab",
+    "description": "Connect GitLab Cloud or self-hosted instances with a personal access token.",
+    "auth": {
+      "pat": {
+        "label": "Personal Access Token",
+        "instructions": "<p>Enter your GitLab <strong>instance URL</strong> (for example, <code>https://gitlab.com</code> or your self-hosted URL) and a <strong>personal access token</strong>. Create a token under <a href=\"https://gitlab.com/-/user_settings/personal_access_tokens\" target=\"_blank\" rel=\"noopener noreferrer\">User settings → Access tokens</a> on GitLab.com, or <code>{your-instance}/-/user_settings/personal_access_tokens</code> on self-hosted GitLab. Include at least the <code>api</code> scope.</p>",
+        "instance-url": {
+          "label": "Instance URL",
+          "placeholder": "https://gitlab.com"
+        },
+        "token": {
+          "label": "Personal Access Token",
+          "placeholder": "Paste your personal access token"
+        }
+      }
+    },
+    "connect": {
+      "instructions": "<p>Enter your GitLab <strong>instance URL</strong> (for example, <code>https://gitlab.com</code> or your self-hosted URL) and a <strong>personal access token</strong>. Create a token under <a href=\"https://gitlab.com/-/user_settings/personal_access_tokens\" target=\"_blank\" rel=\"noopener noreferrer\">User settings → Access tokens</a> on GitLab.com, or <code>{your-instance}/-/user_settings/personal_access_tokens</code> on self-hosted GitLab. Include at least the <code>api</code> scope.</p>",
+      "dialog": {
+        "title": "Connect GitLab",
+        "reconfigure-title": "Reconfigure GitLab"
+      },
+      "fields": {
+        "display-name": "Display Name"
+      },
+      "placeholders": {
+        "display-name": "GitLab"
+      },
+      "actions": {
+        "save": "Save Connection"
+      },
+      "messages": {
+        "token-required": "Personal access token is required."
+      }
+    }
+  },
+  "settings": {
+    "gitlab": {
+      "section-title": "GitLab",
+      "section-description": "Connect GitLab for source control and sync.",
+      "connection-title": "Connection",
+      "connection-description": "Enter your GitLab instance URL and sign in with a personal access token."
+    }
+  }
+}

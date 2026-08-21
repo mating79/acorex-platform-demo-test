@@ -1,0 +1,506 @@
+{
+  "module": {
+    "title": "مدیریت مشتری",
+    "description": "مدیریت مشتریان، سرنخ‌ها، فرصت‌ها و فعالیت‌های فروش",
+    "menus": {
+      "root": {
+        "title": "CRM",
+        "description": "مشتریان، سرنخ‌ها، فرصت‌ها و فعالیت‌های فروش"
+      }
+    }
+  },
+  "features": {
+    "customers": {
+      "title": "مشتریان",
+      "description": "مدیریت حساب‌های مشتری و اطلاعات مرتبط با مشتری."
+    },
+    "sales": {
+      "title": "CRM فروش",
+      "description": "مدیریت سرنخ‌ها، فرصت‌ها، قیف فروش و فعالیت‌های فروش."
+    }
+  },
+  "customers": {
+    "terms": {
+      "customer": "مشتری",
+      "customers": "مشتریان"
+    },
+    "entities": {
+      "customer": {
+        "title": "مشتری",
+        "plural": "مشتریان",
+        "search-result-description": "اطلاعات مشتری و حساب",
+        "fields": {
+          "customer-code": {
+            "title": "کد",
+            "description": "کد شناسایی منحصربه‌فرد مشتری",
+            "placeholder": "کد مشتری را وارد کنید"
+          },
+          "person": {
+            "title": "شخص",
+            "description": "اطلاعات شخص مرتبط",
+            "placeholder": "شخص را انتخاب کنید"
+          },
+          "customer-type": {
+            "title": "نوع مشتری",
+            "description": "نوع مشتری",
+            "placeholder": "نوع مشتری را انتخاب کنید"
+          },
+          "segment": {
+            "title": "بخش",
+            "description": "طبقه‌بندی بخش",
+            "placeholder": "بخش را انتخاب کنید"
+          },
+          "lifecycle-stage": {
+            "title": "مرحله چرخه حیات",
+            "description": "مرحله چرخه حیات مشتری",
+            "placeholder": "مرحله چرخه حیات را انتخاب کنید"
+          },
+          "territory": {
+            "title": "منطقه",
+            "description": "منطقه فروش",
+            "placeholder": "منطقه را انتخاب کنید"
+          },
+          "since": {
+            "title": "از تاریخ مشتری شدن",
+            "description": "تاریخ شروع رابطه با مشتری",
+            "placeholder": "تاریخ را انتخاب کنید"
+          },
+          "is-vip": {
+            "title": "وی‌آی‌پی",
+            "description": "وضعیت مشتری VIP"
+          },
+          "integration-ref": {
+            "title": "پیوند یکپارچه‌سازی"
+          },
+          "account-manager": {
+            "title": "مدیر حساب",
+            "description": "مدیر حساب تخصیص‌یافته",
+            "placeholder": "مدیر حساب را انتخاب کنید"
+          }
+        },
+        "groups": {
+          "profile": "پروفایل",
+          "sales": "فروش"
+        },
+        "components": {
+          "meta-data-form": {
+            "title": "مشخصات"
+          }
+        },
+        "related-entities": {
+          "locations": {
+            "title": "مکان‌ها"
+          }
+        }
+      },
+      "customer-type": {
+        "title": "نوع مشتری",
+        "plural": "انواع مشتری",
+        "search-result-description": "طبقه‌بندی نوع مشتری",
+        "fields": {
+          "title": {
+            "title": "عنوان",
+            "description": "عنوان نوع مشتری",
+            "placeholder": "عنوان را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "description": "توضیحات نوع مشتری",
+            "placeholder": "توضیحات را وارد کنید"
+          }
+        },
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        }
+      },
+      "customer-segment": {
+        "title": "بخش مشتری",
+        "plural": "بخش‌های مشتری",
+        "search-result-description": "بخش و طبقه‌بندی مشتری",
+        "fields": {
+          "title": {
+            "title": "عنوان",
+            "description": "عنوان بخش",
+            "placeholder": "عنوان را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "description": "توضیحات بخش",
+            "placeholder": "توضیحات را وارد کنید"
+          }
+        },
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        }
+      }
+    }
+  },
+  "leads": {
+    "terms": {
+      "lead": "سرنخ",
+      "leads": "سرنخ‌ها"
+    },
+    "entities": {
+      "lead": {
+        "title": "سرنخ",
+        "search-result-description": "اطلاعات سرنخ فروش و مشتری احتمالی",
+        "plural": "سرنخ‌ها",
+        "fields": {
+          "name": {
+            "title": "نام",
+            "description": "نام سرنخ",
+            "placeholder": "نام را وارد کنید"
+          },
+          "email": {
+            "title": "ایمیل",
+            "description": "آدرس ایمیل",
+            "placeholder": "ایمیل را وارد کنید"
+          },
+          "phone": {
+            "title": "تلفن",
+            "description": "شماره تلفن",
+            "placeholder": "تلفن را وارد کنید"
+          },
+          "company": {
+            "title": "شرکت",
+            "description": "نام شرکت",
+            "placeholder": "شرکت را وارد کنید"
+          },
+          "status": {
+            "title": "وضعیت",
+            "description": "وضعیت سرنخ",
+            "placeholder": "وضعیت را انتخاب کنید"
+          },
+          "lifecycle-stage": {
+            "title": "مرحله چرخه حیات",
+            "description": "مرحله چرخه حیات سرنخ",
+            "placeholder": "مرحله چرخه حیات را انتخاب کنید"
+          },
+          "owner": {
+            "title": "مالک",
+            "description": "مالک سرنخ",
+            "placeholder": "مالک را انتخاب کنید"
+          },
+          "source": {
+            "title": "منبع",
+            "description": "منبع سرنخ",
+            "placeholder": "منبع را وارد کنید"
+          }
+        },
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        }
+      }
+    }
+  },
+  "opportunities": {
+    "terms": {
+      "opportunity": "فرصت",
+      "opportunities": "فرصت‌ها"
+    },
+    "entities": {
+      "opportunity": {
+        "title": "فرصت",
+        "plural": "فرصت‌ها",
+        "search-result-description": "اطلاعات فرصت فروش و معامله",
+        "fields": {
+          "title": {
+            "title": "عنوان",
+            "description": "عنوان فرصت",
+            "placeholder": "عنوان را وارد کنید"
+          },
+          "customer": {
+            "title": "مشتری",
+            "description": "مشتری مرتبط",
+            "placeholder": "مشتری را انتخاب کنید"
+          },
+          "contact": {
+            "title": "مخاطب",
+            "description": "مخاطب اصلی",
+            "placeholder": "مخاطب را انتخاب کنید"
+          },
+          "amount": {
+            "title": "مبلغ",
+            "description": "مبلغ معامله",
+            "placeholder": "مبلغ را وارد کنید"
+          },
+          "currency": {
+            "title": "ارز",
+            "description": "کد ارز",
+            "placeholder": "ارز را وارد کنید"
+          },
+          "probability": {
+            "title": "احتمال",
+            "description": "درصد احتمال موفقیت",
+            "placeholder": "احتمال را وارد کنید"
+          },
+          "expected-close": {
+            "title": "تاریخ پیش‌بینی‌شدهٔ خاتمه",
+            "description": "تاریخ پیش‌بینی‌شده برای خاتمه",
+            "placeholder": "تاریخ را انتخاب کنید"
+          },
+          "stage": {
+            "title": "مرحله",
+            "description": "مرحله فعلی",
+            "placeholder": "مرحله را انتخاب کنید"
+          },
+          "pipeline": {
+            "title": "قیف فروش",
+            "description": "قیف فروش",
+            "placeholder": "قیف فروش را انتخاب کنید"
+          },
+          "owner": {
+            "title": "مالک",
+            "description": "مالک فرصت",
+            "placeholder": "مالک را انتخاب کنید"
+          }
+        },
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        }
+      },
+      "opportunity-stage": {
+        "title": "مرحلهٔ فرصت",
+        "plural": "مراحل فرصت",
+        "fields": {
+          "title": {
+            "title": "عنوان",
+            "description": "عنوان مرحله",
+            "placeholder": "عنوان را وارد کنید"
+          },
+          "probability": {
+            "title": "احتمال پیش‌فرض",
+            "description": "احتمال پیش‌فرض موفقیت برای این مرحله",
+            "placeholder": "احتمال را وارد کنید"
+          },
+          "order": {
+            "title": "ترتیب",
+            "description": "ترتیب نمایش",
+            "placeholder": "ترتیب را وارد کنید"
+          }
+        },
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        }
+      },
+      "sales-pipeline": {
+        "title": "قیف فروش",
+        "plural": "قیف‌های فروش",
+        "fields": {
+          "title": {
+            "title": "عنوان",
+            "description": "عنوان قیف",
+            "placeholder": "عنوان را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "description": "توضیحات قیف",
+            "placeholder": "توضیحات را وارد کنید"
+          }
+        },
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        }
+      },
+      "deal-contact-role": {
+        "title": "نقش مخاطب در معامله",
+        "plural": "نقش‌های مخاطب در معامله",
+        "fields": {
+          "opportunity": {
+            "title": "فرصت",
+            "description": "فرصت مرتبط",
+            "placeholder": "فرصت را انتخاب کنید"
+          },
+          "contact": {
+            "title": "مخاطب",
+            "description": "شخص مخاطب",
+            "placeholder": "مخاطب را انتخاب کنید"
+          },
+          "role": {
+            "title": "نقش",
+            "description": "نقش مخاطب در معامله",
+            "placeholder": "نقش را وارد کنید"
+          }
+        },
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        }
+      }
+    }
+  },
+  "activities": {
+    "terms": {
+      "activity": "فعالیت",
+      "activities": "فعالیت‌ها",
+      "note": "یادداشت",
+      "notes": "یادداشت‌ها"
+    },
+    "entities": {
+      "activity": {
+        "title": "فعالیت",
+        "plural": "فعالیت‌ها",
+        "fields": {
+          "type": {
+            "title": "نوع",
+            "description": "نوع فعالیت",
+            "placeholder": "نوع را انتخاب کنید"
+          },
+          "subject": {
+            "title": "موضوع",
+            "description": "موضوع فعالیت",
+            "placeholder": "موضوع را وارد کنید"
+          },
+          "due-date": {
+            "title": "تاریخ سررسید",
+            "description": "تاریخ سررسید",
+            "placeholder": "تاریخ را انتخاب کنید"
+          },
+          "status": {
+            "title": "وضعیت",
+            "description": "وضعیت فعالیت",
+            "placeholder": "وضعیت را انتخاب کنید"
+          },
+          "outcome": {
+            "title": "نتیجه",
+            "description": "نتیجه فعالیت",
+            "placeholder": "نتیجه را وارد کنید"
+          },
+          "customer": {
+            "title": "مشتری",
+            "description": "مشتری مرتبط",
+            "placeholder": "مشتری را انتخاب کنید"
+          },
+          "opportunity": {
+            "title": "فرصت",
+            "description": "فرصت مرتبط",
+            "placeholder": "فرصت را انتخاب کنید"
+          },
+          "contact": {
+            "title": "مخاطب",
+            "description": "مخاطب مرتبط",
+            "placeholder": "مخاطب را انتخاب کنید"
+          }
+        },
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        }
+      },
+      "note": {
+        "title": "یادداشت",
+        "plural": "یادداشت‌ها",
+        "fields": {
+          "content": {
+            "title": "محتوا",
+            "description": "محتوای یادداشت",
+            "placeholder": "محتوای یادداشت را وارد کنید"
+          },
+          "customer": {
+            "title": "مشتری",
+            "description": "مشتری مرتبط",
+            "placeholder": "مشتری را انتخاب کنید"
+          },
+          "opportunity": {
+            "title": "فرصت",
+            "description": "فرصت مرتبط",
+            "placeholder": "فرصت را انتخاب کنید"
+          },
+          "contact": {
+            "title": "مخاطب",
+            "description": "مخاطب مرتبط",
+            "placeholder": "مخاطب را انتخاب کنید"
+          }
+        },
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        }
+      }
+    }
+  },
+  "configuration": {
+    "terms": {
+      "lifecycle-stage": "مرحلهٔ چرخه عمر",
+      "lifecycle-stages": "مراحل چرخه عمر",
+      "sales-territory": "ناحیهٔ فروش",
+      "sales-territories": "ناحیه‌های فروش"
+    },
+    "entities": {
+      "lifecycle-stage": {
+        "title": "مرحلهٔ چرخه عمر",
+        "plural": "مراحل چرخه عمر",
+        "fields": {
+          "title": {
+            "title": "عنوان",
+            "description": "عنوان مرحله",
+            "placeholder": "عنوان را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "description": "توضیحات مرحله",
+            "placeholder": "توضیحات را وارد کنید"
+          }
+        },
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        }
+      },
+      "sales-territory": {
+        "title": "ناحیهٔ فروش",
+        "plural": "ناحیه‌های فروش",
+        "fields": {
+          "title": {
+            "title": "عنوان",
+            "description": "عنوان ناحیه",
+            "placeholder": "عنوان را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "description": "توضیحات ناحیه",
+            "placeholder": "توضیحات را وارد کنید"
+          }
+        },
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        }
+      }
+    }
+  },
+  "permissions": {
+    "customer-management": {
+      "manage": { "title": "مدیریت مشتری" },
+      "lead": {
+        "view": {
+          "title": "مشاهده سرنخ‌ها",
+          "description": "مشاهده اطلاعات سرنخ"
+        }
+      },
+      "opportunity": {
+        "view": {
+          "title": "مشاهده فرصت‌ها",
+          "description": "مشاهده اطلاعات فرصت"
+        }
+      },
+      "customer": {
+        "manage": {
+          "title": "مدیریت مشتریان",
+          "description": "دسترسی کامل به مدیریت مشتریان"
+        },
+        "view": {
+          "title": "مشاهده مشتریان",
+          "description": "مشاهده اطلاعات مشتریان"
+        },
+        "create": {
+          "title": "ایجاد مشتری",
+          "description": "ایجاد مشتریان جدید"
+        },
+        "update": {
+          "title": "به‌روزرسانی مشتری",
+          "description": "به‌روزرسانی اطلاعات مشتریان"
+        },
+        "delete": {
+          "title": "حذف مشتریان",
+          "description": "حذف مشتریان"
+        }
+      }
+    }
+  }
+}

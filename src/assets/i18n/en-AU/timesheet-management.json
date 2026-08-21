@@ -1,0 +1,252 @@
+{
+  "module": {
+    "title": "Timesheet Management",
+    "description": "Log time against work items, submit periods, and run timesheet reports",
+    "menus": {
+      "configuration": {
+        "title": "Timesheet Configuration"
+      }
+    }
+  },
+  "features": {
+    "timesheet-entry": {
+      "title": "Timesheet Entry",
+      "description": "Enable personal time logging and work items"
+    },
+    "timesheet-approval": {
+      "title": "Timesheet Approval",
+      "description": "Enable period submission and manager approval"
+    },
+    "timesheet-reporting": {
+      "title": "Timesheet Reporting",
+      "description": "Enable timesheet and workforce reconciliation reports"
+    }
+  },
+  "pages": {
+    "my-timesheet": {
+      "title": "My Timesheet",
+      "empty-period": "No open timesheet period for the current week."
+    },
+    "approval-inbox": {
+      "title": "Timesheet Approval Inbox"
+    },
+    "team-timesheets": {
+      "title": "Team Timesheets"
+    }
+  },
+  "permissions": {
+    "group": {
+      "title": "Timesheet Management",
+      "description": "Manage timesheets, work items, and reporting"
+    },
+    "work-item": {
+      "management": { "title": "Work Items", "description": "Manage work item catalog" },
+      "view": { "title": "View work items" },
+      "create": { "title": "Create work items" },
+      "update": { "title": "Update work items" },
+      "delete": { "title": "Delete work items" }
+    },
+    "timesheet-period": {
+      "management": { "title": "Timesheet Periods", "description": "Manage timesheet periods" },
+      "view": { "title": "View timesheet periods" },
+      "create": { "title": "Create timesheet periods" },
+      "update": { "title": "Update timesheet periods" },
+      "delete": { "title": "Delete timesheet periods" },
+      "team-view": { "title": "View team timesheets" },
+      "approve": { "title": "Approve timesheets" },
+      "admin-adjust": { "title": "Adjust locked timesheets" }
+    },
+    "time-entry": {
+      "management": { "title": "Time Entries", "description": "Manage time entries" },
+      "view": { "title": "View time entries" },
+      "create": { "title": "Create time entries" },
+      "update": { "title": "Update time entries" },
+      "delete": { "title": "Delete time entries" }
+    },
+    "timesheet-correction": {
+      "management": { "title": "Timesheet Corrections" },
+      "view": { "title": "View corrections" },
+      "approve": { "title": "Approve corrections" }
+    },
+    "timesheet-policy": {
+      "management": { "title": "Timesheet Policies" },
+      "view": { "title": "View policies" }
+    },
+    "timesheet-report": {
+      "view": { "title": "View timesheet reports" },
+      "export": { "title": "Export timesheet data" }
+    }
+  },
+  "work-items": {
+    "entities": {
+      "work-item": {
+        "title": "Work Item",
+        "plural": "Work Items",
+        "groups": {
+          "source": "Source",
+          "assignment": "Assignment"
+        },
+        "fields": {
+          "code": { "title": "Code" },
+          "title": { "title": "Title" },
+          "source-type": {
+            "title": "Source Type",
+            "options": {
+              "internal": "Internal",
+              "jira": "Jira",
+              "task": "Task"
+            }
+          },
+          "source-ref": { "title": "Source Reference" },
+          "is-billable-default": { "title": "Billable by Default" },
+          "is-active": { "title": "Active" },
+          "employee-id": { "title": "Employee" },
+          "project-id": { "title": "Project" }
+        }
+      }
+    }
+  },
+  "timesheet-periods": {
+    "states": {
+      "draft": "Draft",
+      "waiting-approval": "Submitted",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "locked": "Locked"
+    },
+    "transitions": {
+      "submit": "Submit",
+      "approve": "Approve",
+      "reject": "Reject",
+      "reopen": "Reopen",
+      "lock": "Lock"
+    },
+    "entities": {
+      "timesheet-period": {
+        "title": "Timesheet Period",
+        "plural": "Timesheet Periods",
+        "groups": {
+          "period": "Period",
+          "totals": "Totals",
+          "approval": "Approval"
+        },
+        "fields": {
+          "employee-id": { "title": "Employee" },
+          "period-type": {
+            "title": "Period Type",
+            "options": {
+              "weekly": "Weekly",
+              "biweekly": "Biweekly",
+              "monthly": "Monthly"
+            }
+          },
+          "status": { "title": "Status" },
+          "status-id": { "title": "Status" },
+          "start-date": { "title": "Start Date" },
+          "end-date": { "title": "End Date" },
+          "total-seconds": { "title": "Total Hours" },
+          "timezone": { "title": "Timezone" },
+          "submitted-at": { "title": "Submitted At" },
+          "approved-at": { "title": "Approved At" },
+          "rejection-reason": { "title": "Rejection Reason" }
+        },
+        "states": {
+          "draft": "Draft",
+          "waiting-approval": "Submitted",
+          "approved": "Approved",
+          "rejected": "Rejected",
+          "locked": "Locked"
+        }
+      }
+    }
+  },
+  "time-entries": {
+    "entities": {
+      "time-entry": {
+        "title": "Time Entry",
+        "plural": "Time Entries",
+        "groups": {
+          "timing": "Timing",
+          "details": "Details"
+        },
+        "fields": {
+          "employee-id": { "title": "Employee" },
+          "period-id": { "title": "Timesheet Period" },
+          "work-item-id": { "title": "Work Item" },
+          "project-id": { "title": "Project" },
+          "started-at": { "title": "Started At" },
+          "ended-at": { "title": "Ended At" },
+          "duration": { "title": "Duration" },
+          "duration-seconds": { "title": "Duration (seconds)" },
+          "description": { "title": "Description" },
+          "is-billable": { "title": "Billable" },
+          "entry-date": { "title": "Date" },
+          "timezone": { "title": "Timezone" }
+        }
+      }
+    }
+  },
+  "timesheet-policies": {
+    "entities": {
+      "timesheet-policy": {
+        "title": "Timesheet Policy",
+        "plural": "Timesheet Policies",
+        "groups": {
+          "limits": "Limits",
+          "rules": "Rules"
+        },
+        "fields": {
+          "max-daily-hours": { "title": "Max Daily Hours" },
+          "max-weekly-hours": { "title": "Max Weekly Hours" },
+          "require-description": { "title": "Require Description" },
+          "allow-future-dates": { "title": "Allow Future Dates" },
+          "overlap-policy": {
+            "title": "Overlap Policy",
+            "options": {
+              "reject": "Reject",
+              "warn": "Warn"
+            }
+          },
+          "period-type-default": {
+            "title": "Default Period Type",
+            "options": {
+              "weekly": "Weekly",
+              "biweekly": "Biweekly",
+              "monthly": "Monthly"
+            }
+          },
+          "is-default": { "title": "Default Policy" }
+        }
+      }
+    }
+  },
+  "timesheet-corrections": {
+    "states": {
+      "waiting-approval": "Pending",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "transitions": {
+      "submit": "Submit",
+      "approve": "Approve",
+      "reject": "Reject",
+      "reopen": "Reopen"
+    },
+    "entities": {
+      "timesheet-correction": {
+        "title": "Timesheet Correction",
+        "plural": "Timesheet Corrections",
+        "groups": {
+          "changes": "Changes"
+        },
+        "fields": {
+          "period-id": { "title": "Timesheet Period" },
+          "requested-by-id": { "title": "Requested By" },
+          "reason": { "title": "Reason" },
+          "status-id": { "title": "Status" },
+          "changes": { "title": "Proposed Changes" }
+        }
+      }
+    }
+  }
+}

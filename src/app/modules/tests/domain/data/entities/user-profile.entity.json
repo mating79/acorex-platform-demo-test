@@ -1,0 +1,57 @@
+{
+  "name": "user-profile",
+  "title": "User Profile",
+  "type": 0,
+  "fields": [
+    {
+      "name": "userId",
+      "title": "User ID",
+      "description": "Reference to the user",
+      "schema": "uuid",
+      "features": {
+        "nullable": false,
+        "readOnly": true
+      }
+    },
+    {
+      "name": "avatar",
+      "title": "Avatar",
+      "description": "User profile picture",
+      "schema": "image-url",
+      "features": {
+        "nullable": true,
+        "readOnly": false
+      }
+    },
+    {
+      "name": "bio",
+      "title": "Biography",
+      "description": "User's bio or description",
+      "schema": "text-long",
+      "features": {
+        "nullable": true,
+        "readOnly": false
+      }
+    },
+    {
+      "name": "website",
+      "title": "Website",
+      "description": "User's personal or professional website",
+      "schema": "url",
+      "features": {
+        "nullable": true,
+        "readOnly": false
+      }
+    },
+    {
+      "name": "preferences",
+      "title": "User Preferences",
+      "description": "User's application preferences",
+      "schema": "json-object",
+      "features": {
+        "nullable": true,
+        "readOnly": false
+      }
+    }
+  ]
+}

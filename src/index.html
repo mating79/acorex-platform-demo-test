@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Demo</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+
+  <body>
+    <acorex-platform-root>
+      <div class="loading-container">
+        <div class="loading-content">
+          <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="assets/images/brand/platform/platform-icon-dark.svg" />
+            <img alt="Demo icon" src="assets/images/brand/platform/platform-icon-light.svg" width="80" style="margin: auto" />
+          </picture>
+
+          <div class="progress-bar">
+            <div class="progress-bar-value"></div>
+          </div>
+        </div>
+        <div class="loading-step">
+          <i class="fa-solid fa-spinner animate-twSpin animate-infinite"></i>
+          <span id="loadingText">Loading...</span>
+        </div>
+      </div>
+    </acorex-platform-root>
+    <script></script>
+  </body>
+</html>

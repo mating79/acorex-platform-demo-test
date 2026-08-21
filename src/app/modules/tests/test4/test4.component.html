@@ -1,0 +1,74 @@
+<div class="p-4 h-full flex flex-col gap-4">
+  <div class="flex gap-4 items-center">
+    <h2 class="text-xl font-semibold">Widget Field Configurator Test</h2>
+  </div>
+
+  <div class="flex-1 overflow-auto">
+    <div class="max-w-3xl mx-auto">
+      <!-- Field Configuration Form -->
+      <div class="lightest-surface rounded-lg shadow-md p-6">
+        <h3 class="text-lg font-semibold mb-4">Field Configuration</h3>
+
+        <!-- Basic Information -->
+        <div class="space-y-4 mb-6">
+          <ax-form-field>
+            <ax-label>Field Name</ax-label>
+            <ax-text-box [(ngModel)]="fieldName"
+              placeholder="Enter field name (e.g., voltage, temperature)"></ax-text-box>
+          </ax-form-field>
+
+          <ax-form-field>
+            <ax-label>Field Title</ax-label>
+            <ax-text-box [(ngModel)]="fieldTitle" placeholder="Enter field title"></ax-text-box>
+          </ax-form-field>
+
+          <ax-form-field>
+            <ax-label>Description</ax-label>
+            <ax-textarea [(ngModel)]="fieldDescription" placeholder="Enter field description"></ax-textarea>
+          </ax-form-field>
+        </div>
+
+        <!-- Widget Configuration -->
+        <div class="mb-6">
+          <h4 class="text-base font-medium mb-3">Widget Configuration</h4>
+
+          <axp-widget-field-configurator [(widget)]="widgetConfig" [fieldName]="fieldName()" [label]="'Widget Type'" />
+        </div>
+
+        <!-- Actions -->
+        <div class="flex gap-3 justify-end">
+          <ax-button text="Reset" look="ghost" (onClick)="resetConfiguration()" />
+          <ax-button text="Save Configuration" look="primary" (onClick)="saveConfiguration()" />
+        </div>
+      </div>
+
+      <!-- Preview Section -->
+      <div class="lightest-surface rounded-lg shadow-md p-6 mt-4">
+        <h3 class="text-lg font-semibold mb-4">Configuration Preview</h3>
+
+        <div class="space-y-2 text-sm">
+          <div class="flex gap-2">
+            <span class="font-medium w-32">Field Name:</span>
+            <span class="text-neutral-600">{{ fieldName() || '—' }}</span>
+          </div>
+
+          <div class="flex gap-2">
+            <span class="font-medium w-32">Field Title:</span>
+            <span class="text-neutral-600">{{ fieldTitle() || '—' }}</span>
+          </div>
+
+          <div class="flex gap-2">
+            <span class="font-medium w-32">Widget Type:</span>
+            <span class="text-neutral-600">{{ widgetConfig().type || '—' }}</span>
+          </div>
+
+          <div class="flex gap-2">
+            <span class="font-medium w-32">Widget Options:</span>
+            <pre
+              class="text-neutral-600 bg-neutral-100 p-2 rounded text-xs overflow-auto">{{ widgetConfig().options | json }}</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

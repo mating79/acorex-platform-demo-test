@@ -1,0 +1,323 @@
+{
+  "module": {
+    "title": "ریسک",
+    "description": "پیکربندی داده‌های مرجع ارزیابی ریسک مانند مقیاس‌های احتمال.",
+    "menus": {
+      "root": {
+        "title": "ریسک",
+        "description": "دسترسی به قابلیت‌های پیکربندی ریسک."
+      },
+      "risk": "ریسک"
+    },
+    "permissions": {
+      "title": "مدیریت ریسک",
+      "description": "دسترسی به قابلیت‌های مدیریت ریسک."
+    }
+  },
+  "risk-likelihoods": {
+    "terms": {
+      "risk-likelihood": "احتمال ریسک",
+      "risk-likelihoods": "احتمال‌های ریسک"
+    },
+    "menus": {
+      "root": {
+        "title": "احتمال‌های ریسک",
+        "description": "پیکربندی مقیاس‌های احتمال برای ارزیابی ریسک."
+      }
+    },
+    "entities": {
+      "risk-likelihood": {
+        "title": "احتمال ریسک",
+        "plural": "احتمال‌های ریسک",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "classification": "طبقه‌بندی"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "مثال: GLOBAL-RARE"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان احتمال را وارد کنید"
+          },
+          "description": {
+            "placeholder": "توضیح اختیاری برای زمان استفاده از این سطح احتمال"
+          },
+          "level-value": {
+            "title": "مقدار سطح",
+            "placeholder": "مقداری بین ۰ تا ۹۹ وارد کنید"
+          },
+          "status": {
+            "title": "وضعیت",
+            "options": {
+              "active": "فعال",
+              "inactive": "غیرفعال"
+            }
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت احتمال‌های ریسک",
+        "description": "دسترسی کامل به رکوردهای احتمال ریسک."
+      },
+      "view": {
+        "title": "مشاهده احتمال‌های ریسک",
+        "description": "مشاهده رکوردهای احتمال ریسک."
+      },
+      "create": {
+        "title": "ایجاد احتمال ریسک",
+        "description": "ایجاد رکوردهای احتمال ریسک."
+      },
+      "edit": {
+        "title": "ویرایش احتمال‌های ریسک",
+        "description": "ویرایش رکوردهای احتمال ریسک."
+      },
+      "delete": {
+        "title": "حذف احتمال‌های ریسک",
+        "description": "حذف رکوردهای احتمال ریسک."
+      }
+    }
+  },
+  "risk-severities": {
+    "terms": {
+      "risk-severity": "شدت ریسک",
+      "risk-severities": "شدت‌های ریسک"
+    },
+    "menus": {
+      "root": {
+        "title": "شدت‌های ریسک",
+        "description": "پیکربندی مقیاس‌های شدت برای ارزیابی ریسک."
+      }
+    },
+    "entities": {
+      "risk-severity": {
+        "title": "شدت ریسک",
+        "plural": "شدت‌های ریسک",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "classification": "طبقه‌بندی"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "مثال: GLOBAL-MINOR"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان شدت را وارد کنید"
+          },
+          "description": {
+            "placeholder": "توضیح اختیاری برای زمان استفاده از این سطح شدت"
+          },
+          "level-value": {
+            "title": "مقدار سطح",
+            "placeholder": "مقداری بین ۱ تا ۹۹ وارد کنید"
+          },
+          "status": {
+            "title": "وضعیت",
+            "options": {
+              "active": "فعال",
+              "inactive": "غیرفعال"
+            }
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت شدت‌های ریسک",
+        "description": "دسترسی کامل به رکوردهای شدت ریسک."
+      },
+      "view": {
+        "title": "مشاهده شدت‌های ریسک",
+        "description": "مشاهده رکوردهای شدت ریسک."
+      },
+      "create": {
+        "title": "ایجاد شدت ریسک",
+        "description": "ایجاد رکوردهای شدت ریسک."
+      },
+      "edit": {
+        "title": "ویرایش شدت‌های ریسک",
+        "description": "ویرایش رکوردهای شدت ریسک."
+      },
+      "delete": {
+        "title": "حذف شدت‌های ریسک",
+        "description": "حذف رکوردهای شدت ریسک."
+      }
+    }
+  },
+  "risk-ratings": {
+    "terms": {
+      "risk-rating": "رتبه ریسک",
+      "risk-ratings": "رتبه‌های ریسک"
+    },
+    "menus": {
+      "root": {
+        "title": "رتبه‌های ریسک",
+        "description": "پیکربندی سطوح رتبه‌بندی ریسک برای ارزیابی‌ها."
+      }
+    },
+    "entities": {
+      "risk-rating": {
+        "title": "رتبه ریسک",
+        "plural": "رتبه‌های ریسک",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "classification": "طبقه‌بندی"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "پس از ذخیره به‌صورت خودکار تولید می‌شود"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان رتبه ریسک را وارد کنید"
+          },
+          "description": {
+            "placeholder": "توضیح اختیاری برای زمان استفاده از این سطح رتبه‌بندی"
+          },
+          "level-value": {
+            "title": "مقدار سطح",
+            "placeholder": "مقداری بین ۱ تا ۹۹ وارد کنید"
+          },
+          "status": {
+            "title": "وضعیت",
+            "options": {
+              "active": "فعال",
+              "inactive": "غیرفعال"
+            }
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت رتبه‌های ریسک",
+        "description": "دسترسی کامل به رکوردهای رتبه ریسک."
+      },
+      "view": {
+        "title": "مشاهده رتبه‌های ریسک",
+        "description": "مشاهده رکوردهای رتبه ریسک."
+      },
+      "create": {
+        "title": "ایجاد رتبه ریسک",
+        "description": "ایجاد رکوردهای رتبه ریسک."
+      },
+      "edit": {
+        "title": "ویرایش رتبه‌های ریسک",
+        "description": "ویرایش رکوردهای رتبه ریسک."
+      },
+      "delete": {
+        "title": "حذف رتبه‌های ریسک",
+        "description": "حذف رکوردهای رتبه ریسک."
+      }
+    }
+  },
+  "risk-matrix-cells": {
+    "terms": {
+      "risk-matrix-cell": "سلول ماتریس ریسک",
+      "risk-matrix-cells": "سلول‌های ماتریس ریسک"
+    },
+    "menus": {
+      "root": {
+        "title": "سلول‌های ماتریس ریسک",
+        "description": "پیکربندی ترکیب احتمال و شدت با نگاشت به رتبه‌های ریسک."
+      }
+    },
+    "entities": {
+      "risk-matrix-cell": {
+        "title": "سلول ماتریس ریسک",
+        "plural": "سلول‌های ماتریس ریسک",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "classification": "طبقه‌بندی",
+          "matrix-definition": "تعریف ماتریس"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "پس از ذخیره به‌صورت خودکار تولید می‌شود"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان سلول ماتریس را وارد کنید"
+          },
+          "likelihood-id": {
+            "title": "احتمال"
+          },
+          "severity-id": {
+            "title": "شدت"
+          },
+          "matrix-orientation": {
+            "title": "جهت‌گیری ماتریس",
+            "options": {
+              "likelihood-rows": "احتمال در سطرها، شدت در ستون‌ها",
+              "severity-rows": "شدت در سطرها، احتمال در ستون‌ها"
+            }
+          },
+          "risk-rating-id": {
+            "title": "رتبه ریسک"
+          },
+          "matrix": {
+            "title": "ماتریس ریسک"
+          },
+          "status": {
+            "title": "وضعیت",
+            "options": {
+              "active": "فعال",
+              "inactive": "غیرفعال"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "risk-matrix": {
+        "titles": {
+          "likelihood-rows": "احتمال / شدت",
+          "severity-rows": "شدت / احتمال"
+        },
+        "messages": {
+          "loading": "در حال بارگذاری داده‌های ماتریس ریسک..."
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت سلول‌های ماتریس ریسک",
+        "description": "دسترسی کامل به رکوردهای سلول ماتریس ریسک."
+      },
+      "view": {
+        "title": "مشاهده سلول‌های ماتریس ریسک",
+        "description": "مشاهده رکوردهای سلول ماتریس ریسک."
+      },
+      "create": {
+        "title": "ایجاد سلول ماتریس ریسک",
+        "description": "ایجاد رکوردهای سلول ماتریس ریسک."
+      },
+      "edit": {
+        "title": "ویرایش سلول‌های ماتریس ریسک",
+        "description": "ویرایش رکوردهای سلول ماتریس ریسک."
+      },
+      "delete": {
+        "title": "حذف سلول‌های ماتریس ریسک",
+        "description": "حذف رکوردهای سلول ماتریس ریسک."
+      }
+    }
+  },
+  "catalog-scopes": {
+    "hazard": {
+      "title": "خطر",
+      "description": "ماتریس‌های ریسک زیست‌محیطی و عملیاتی برای ارزیابی خطر و کنترل مواجهه."
+    },
+    "ppe-items": {
+      "title": "اقلام PPE",
+      "description": "ماتریس‌های ریسک برای انتخاب تجهیزات حفاظت فردی و ریسک باقی‌مانده پس از اعمال کنترل‌ها."
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "module": {
+    "title": "Voice Command Shell"
+  },
+  "dialog": {
+    "title": "Voice Command",
+    "hint": "Tap the microphone, speak, then tap again to send."
+  },
+  "header": {
+    "open-title": "Voice Command ({{shortcut}})"
+  },
+  "search": {
+    "open": {
+      "title": "Voice Command",
+      "description": "Open the voice-first command shell from the header microphone or its keyboard shortcut."
+    }
+  },
+  "states": {
+    "idle": "Tap to speak",
+    "listening": "Listening…",
+    "thinking": "Thinking…",
+    "speaking": "Speaking…",
+    "confirm": "Please confirm",
+    "error": "Something went wrong"
+  },
+  "actions": {
+    "tap-to-talk": "Tap to Talk",
+    "submit": "Submit",
+    "keep-editing": "Keep Going",
+    "save-draft": "Save Draft",
+    "cancel-interview": "Cancel Interview",
+    "cancel-listen": "Cancel"
+  },
+  "command": {
+    "empty-reply": "I did not get a reply. Please try again."
+  },
+  "capabilities": {
+    "assessment-interview": "Assessment Questionnaire Interview"
+  },
+  "interview": {
+    "started": "Starting {{title}}. I will ask one question at a time.",
+    "question-counter": "Question {{current}} of {{total}}.",
+    "required": "This question is required.",
+    "options": "Options: {{options}}.",
+    "can-skip": "You can skip this question.",
+    "apply-failed": "I could not use that answer. Please try again.",
+    "empty-answer": "I did not catch an answer. Please say it again.",
+    "readonly": "That field cannot be changed.",
+    "unsupported-widget": "This question needs a photo, signature, or picker. Skip it or open the form.",
+    "comment-required": "A comment is required for this question.",
+    "draft-saved": "Draft saved.",
+    "submit-confirm": "All {{answered}} of {{total}} visible questions are answered. Submit now?",
+    "submit-cancelled": "Okay, we will keep the session open.",
+    "submit-failed": "Some required answers are missing. I will continue with those questions.",
+    "submitted": "Submitted. Thank you.",
+    "confirm-repeat": "Please say yes to submit, or no to continue."
+  },
+  "errors": {
+    "mic-unavailable": "Microphone is not available in this browser.",
+    "mic-denied": "Microphone access was denied.",
+    "empty-transcript": "I did not catch that. Please try again.",
+    "transcribe-failed": "Speech transcription failed.",
+    "assist-failed": "The assistant could not complete that request.",
+    "no-capability": "No voice capability could handle that request.",
+    "start-failed": "Could not start the interview.",
+    "apply-failed": "Could not apply that answer.",
+    "save-failed": "Could not save the draft.",
+    "submit-failed": "Could not submit the questionnaire.",
+    "case-not-found": "No matching assessment case was found.",
+    "questionnaire-not-found": "The questionnaire for this case was not found.",
+    "questionnaire-empty": "This questionnaire has no questions.",
+    "no-user": "You must be signed in to fill by voice."
+  }
+}

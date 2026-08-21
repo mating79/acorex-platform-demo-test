@@ -1,0 +1,475 @@
+{
+  "module": {
+    "title": "مدیریت اسناد",
+    "description": "مدیریت اسناد، پوشه‌ها و انواع فایل"
+  },
+  "features": {
+    "max-size-storage": {
+      "title": "حداکثر اندازه ذخیره‌سازی",
+      "description": "حداکثر اندازه مجاز برای ذخیره‌سازی اسناد (به بایت)"
+    }
+  },
+  "entities": {
+    "document": {
+      "title": "سند",
+      "title-plural": "اسناد",
+      "description": "یک سند یا فایل در سیستم",
+      "search-result-description": "اطلاعات سند و فایل",
+      "fields": {
+        "document-type": { "title": "نوع سند" },
+        "file-info": { "title": "اطلاعات فایل" },
+        "expiration-date": { "title": "تاریخ انقضا" },
+        "status": { "title": "وضعیت" },
+        "version": { "title": "نسخه" },
+        "meta-data-form": { "title": "فرم فراداده" },
+        "ref-type": { "title": "نوع مرجع" },
+        "ref-id": { "title": "شناسه مرجع" }
+      }
+    },
+    "documents": {
+      "title": "اسناد",
+      "title-plural": "اسناد"
+    },
+    "document-type": {
+      "title": "نوع سند",
+      "title-plural": "انواع سند",
+      "description": "پیکربندی انواع سند",
+      "search-result-description": "پیکربندی نوع و طبقه‌بندی سند"
+    },
+    "document-types": {
+      "title": "انواع سند",
+      "title-plural": "انواع سند"
+    },
+    "document-type-meta": {
+      "title": "متای نوع سند",
+      "title-plural": "متای نوع سند",
+      "description": "تعریف فراداده برای انواع سند"
+    },
+    "document-type-meta-value": {
+      "title": "مقدار متای نوع سند",
+      "title-plural": "مقادیر متای نوع سند",
+      "description": "مقادیر فراداده برای اسناد"
+    },
+    "document-type-status": {
+      "title": "وضعیت نوع سند",
+      "title-plural": "وضعیت‌های نوع سند",
+      "description": "تعاریف وضعیت برای انواع سند"
+    },
+    "review": {
+      "title": "بازبینی",
+      "title-plural": "بازبینی‌ها",
+      "description": "سوابق بازبینی سند"
+    },
+    "reviews": {
+      "title": "بازبینی‌ها",
+      "title-plural": "بازبینی‌ها"
+    },
+    "folder": {
+      "title": "پوشه",
+      "title-plural": "پوشه‌ها",
+      "description": "پوشه‌ای شامل اسناد و پوشه‌های دیگر",
+      "search-result-description": "پوشه سند و محل ذخیره‌سازی",
+      "fields": {
+        "inherit": { "title": "ارث‌بری" },
+        "size": { "title": "اندازه" },
+        "children-count": { "title": "تعداد زیرمجموعه" },
+        "items-count": { "title": "تعداد آیتم" },
+        "expired-items-count": { "title": "تعداد آیتم منقضی‌شده" },
+        "near-expiry-items-count": { "title": "تعداد آیتم نزدیک به انقضا" },
+        "document-types": { "title": "انواع سند" },
+        "ref-type": { "title": "نوع مرجع" },
+        "ref-id": { "title": "شناسه مرجع" }
+      }
+    },
+    "folders": {
+      "title": "پوشه‌ها",
+      "title-plural": "پوشه‌ها"
+    },
+    "document-shortcut": {
+      "title": "میانبر",
+      "title-plural": "میانبرها",
+      "fields": {
+        "folder": { "title": "پوشه" },
+        "target-document": { "title": "سند هدف" },
+        "target-folder": { "title": "پوشه هدف" }
+      }
+    }
+  },
+  "terms": {
+    "common": {
+      "type": "نوع",
+      "file": "فایل",
+      "files": "فایل‌ها",
+      "version": "نسخه",
+      "size": "اندازه",
+      "status": "وضعیت",
+      "comment": "توضیح",
+      "reviewer": "بازبین",
+      "meta-data": "فراداده",
+      "management": "مدیریت",
+      "gallery": "گالری",
+      "inherited": "به ارث رسیده",
+      "attachments": "ضمیمه‌ها",
+      "documents": "اسناد",
+      "documents-description": "{{ count }} مورد، {{ size }} استفاده شده",
+      "folders": "پوشه‌ها"
+    },
+    "workflow": {
+      "draft": "پیش‌نویس",
+      "pending": "در انتظار",
+      "approved": "تایید شده",
+      "approve": "تایید",
+      "rejected": "رد شده",
+      "reviewed": "بازبینی‌شده",
+      "completed": "تکمیل‌شده",
+      "pending-review": "در انتظار بازبینی"
+    },
+    "timestamps": {
+      "reviewed-at": "زمان بازبینی",
+      "modified-at": "زمان ویرایش",
+      "modified-by": "ویرایش‌شده توسط",
+      "viewed-at": "زمان مشاهده",
+      "signed-at": "زمان امضا"
+    },
+    "interactions": {
+      "has-viewed": "مشاهده شده",
+      "has-signed": "امضا شده",
+      "viewed-count": "تعداد مشاهده",
+      "signed-count": "تعداد امضا"
+    },
+    "document": {
+      "document-id": "سند",
+      "file-name": "نام فایل",
+      "enter-file-name": "نام فایل را وارد کنید",
+      "max-size": "حداکثر اندازه",
+      "is-encrypted": "رمزنگاری شده است",
+      "enable-versioning": "فعال‌سازی نسخه‌بندی",
+      "enable-expiration": "فعال‌سازی تاریخ انقضا",
+      "expiration-date": "تاریخ انقضا",
+      "expire-date": "تاریخ انقضا",
+      "requires-review": "نیازمند بازبینی",
+      "expiration-badge": {
+        "expired": "منقضی شده",
+        "expiring-soon": "نزدیک به انقضا",
+        "expired-tooltip": "این سند در تاریخ {{date}} منقضی شده است.",
+        "expiring-soon-tooltip": "این سند در تاریخ {{date}} منقضی می‌شود."
+      },
+      "folder-expiration-badge": {
+        "expired": "{{count}} منقضی‌شده",
+        "expiring-soon": "{{count}} نزدیک به انقضا",
+        "expired-tooltip": "{{count}} سند در این پوشه و زیرپوشه‌های آن منقضی شده‌اند.",
+        "expiring-soon-tooltip": "{{count}} سند در این پوشه و زیرپوشه‌های آن به‌زودی منقضی می‌شوند."
+      }
+    }
+  },
+  "actions": {
+    "add-item": "افزودن مورد",
+    "upload-file": "بارگذاری فایل",
+    "upload-files": "بارگذاری فایل‌ها",
+    "upload-folder": "بارگذاری پوشه",
+    "search": "جستجوی فایل‌ها و پوشه‌ها",
+    "sort-by-name": "مرتب‌سازی بر اساس نام",
+    "sort-by-date": "مرتب‌سازی بر اساس تاریخ",
+    "sort-by-size": "مرتب‌سازی بر اساس اندازه",
+    "sort-ascending": "صعودی",
+    "sort-descending": "نزولی",
+    "share": "اشتراک‌گذاری",
+    "create-folder": "ایجاد پوشه",
+    "update-folder": "به‌روزرسانی پوشه",
+    "rename": "تغییر نام",
+    "select-file": "انتخاب فایل",
+    "select-files": "انتخاب فایل‌ها",
+    "select-folder": "انتخاب پوشه",
+    "upload-from-device": "بارگذاری از دستگاه",
+    "choose-from-drive": "انتخاب از درایو",
+    "choose-from-organization": "انتخاب از سازمان",
+    "choose-folder-for-shortcut": "انتخاب پوشه برای میانبر",
+    "copy-to-destination": "کپی در پوشه",
+    "move-to-destination": "انتقال به پوشه",
+    "upload-options": {
+      "title": "گزینه‌های بارگذاری",
+      "attachment-type": "نوع ضمیمه",
+      "confirm-message": "آیا می‌خواهید فایل را کپی کنید؟ در صورت کلیک روی 'انصراف'، فایل به صورت ارجاعی ضمیمه می‌شود.",
+      "clone": "کپی فایل",
+      "clone-description": "ایجاد یک کپی از فایل",
+      "by-reference": "با ارجاع",
+      "by-reference-description": "لینک به فایل اصلی"
+    },
+    "open-file-viewer": "باز کردن نمایشگر فایل",
+    "open-gallery": "باز کردن نمایشگر فایل",
+    "edit": "ویرایش",
+    "remove": "حذف",
+    "revert": "بازگردانی",
+    "save-and-send": "ذخیره و ارسال",
+    "sent": "ارسال",
+    "edit-metadata": "ویرایش فراداده",
+    "refresh": "تازه‌سازی",
+    "advanced-search": "جستجوی پیشرفته"
+  },
+  "drive-choose": {
+    "subtitle": "پوشه‌ها را مرور کنید و فایل‌های مورد نیاز را انتخاب کنید.",
+    "subtitle-folder": "پوشه‌ها را مرور کنید و پوشه مقصد را انتخاب کنید.",
+    "loading": "در حال بارگذاری محتوای درایو…",
+    "selected-count": "{{count}} مورد انتخاب شده"
+  },
+  "menus": {
+    "my-drive": {
+      "title": "مستندات من",
+      "description": "اسناد شخصی شما"
+    },
+    "tenant-documents": {
+      "title": "مستندات سازمان",
+      "description": "اسناد مشترک در این اپلیکیشن"
+    },
+    "context": {
+      "open": "باز کردن",
+      "download": "دانلود",
+      "information": "اطلاعات",
+      "rename": "تغییر نام",
+      "properties": "ویژگی‌ها",
+      "lock": "قفل کردن",
+      "unlock": "باز کردن قفل",
+      "make-copy": "ایجاد کپی",
+      "copy-to": "کپی به",
+      "move-to": "انتقال به",
+      "delete": "حذف",
+      "create-shortcut": "ایجاد میانبر",
+      "upload": "بارگذاری",
+      "share": {
+        "share": "اشتراک‌گذاری",
+        "email": "اشتراک‌گذاری با ایمیل",
+        "link": "لینک"
+      },
+      "manage-versions": "مدیریت نسخه‌ها",
+      "upload-new-version": "بارگذاری نسخه جدید",
+      "show-version-history": "نمایش تاریخچه نسخه‌ها"
+    },
+    "layout": {
+      "group-by": "گروه‌بندی",
+      "group-by-type": "نوع",
+      "group-by-date": "تاریخ (به‌زودی)",
+      "sort": "مرتب‌سازی",
+      "views": "نماها",
+      "show-details-panel": "نمایش پنل جزئیات"
+    }
+  },
+  "view-modes": {
+    "large-tiles": "کاشی‌های بزرگ",
+    "small-tiles": "کاشی‌های کوچک",
+    "list": "لیست",
+    "details": "جزئیات",
+    "large-icons": "آیکون‌های بزرگ",
+    "small-icons": "آیکون‌های کوچک"
+  },
+  "file-types": {
+    "all": "همه فایل‌ها",
+    "archive": "آرشیو",
+    "audio": "صوت",
+    "code": "کد",
+    "document": "سند",
+    "image": "تصویر",
+    "video": "ویدیو"
+  },
+  "drive": {
+    "filters": {
+      "search": {
+        "title": "جستجوی فایل‌ها و پوشه‌ها"
+      },
+      "title": {
+        "title": "نام فایل یا پوشه"
+      },
+      "document-type": {
+        "title": "نوع سند"
+      },
+      "file-type": {
+        "title": "نوع فایل"
+      },
+      "file-types": {
+        "all": "همه فایل‌ها"
+      }
+    }
+  },
+  "scopes": {
+    "platform": {
+      "title": "درایو پلتفرم",
+      "description": "{{count}} مورد"
+    },
+    "user": {
+      "title": "مستندات من",
+      "description": "{{count}} مورد، {{size}} در دسترس"
+    },
+    "tenant": {
+      "title": "مستندات سازمان",
+      "description": "{{count}} مورد، {{size}} در دسترس"
+    }
+  },
+  "settings": {
+    "group": {
+      "title": "اسناد",
+      "description": "ترجیحات پیش‌فرض برای مرور اسناد و پوشه‌ها."
+    },
+    "sections": {
+      "explorer-layout": {
+        "title": "مرورگر سند",
+        "description": "چیدمان و ترتیب پیش‌فرض هنگام مرور پوشه‌ها."
+      }
+    },
+    "items": {
+      "view-mode": {
+        "title": "حالت نمایش پیش‌فرض",
+        "description": "نحوه نمایش موارد هنگام باز کردن یک پوشه.",
+        "options": {
+          "large-tiles": "کاشی‌های بزرگ",
+          "small-tiles": "کاشی‌های کوچک",
+          "list": "فهرست",
+          "details": "جزئیات",
+          "large-icons": "آیکن‌های بزرگ",
+          "small-icons": "آیکن‌های کوچک",
+          "attachment": "پیوست"
+        }
+      },
+      "sort-field": {
+        "title": "فیلد مرتب‌سازی پیش‌فرض",
+        "description": "ویژگی مورد استفاده برای ترتیب موارد در هر نمای پوشه.",
+        "options": {
+          "name": "نام",
+          "modified": "تاریخ تغییر",
+          "size": "اندازه"
+        }
+      },
+      "sort-direction": {
+        "title": "جهت مرتب‌سازی پیش‌فرض",
+        "description": "نمایش موارد مرتب‌شده به صورت صعودی یا نزولی.",
+        "options": {
+          "asc": "صعودی",
+          "desc": "نزولی"
+        }
+      },
+      "group-by-type": {
+        "title": "گروه‌بندی بر اساس نوع",
+        "description": "نمایش پوشه‌ها و فایل‌ها در بخش‌های جداگانه."
+      },
+      "detail-panel-open": {
+        "title": "نمایش پنل جزئیات",
+        "description": "پنل جزئیات کناری هنگام مرور پوشه‌ها باز بماند."
+      }
+    }
+  },
+  "workflows": {},
+  "dialogs": {
+    "attach-file": {
+      "title": "ضمیمه {{title}}",
+      "messages": {
+        "upload-failed": "پیوست کردن فایل انجام نشد. لطفاً با فایل کوچک‌تری دوباره تلاش کنید."
+      }
+    },
+    "rename": {
+      "name": "نام",
+      "name-placeholder": "نام جدید را وارد کنید"
+    },
+    "choose-document-type": {
+      "title": "انتخاب نوع سند",
+      "label": "انتخاب نوع سند"
+    },
+    "manage-version": {
+      "upload-new-version": "بارگذاری نسخه جدید"
+    }
+  },
+  "meta": {
+    "required": "اجباری",
+    "deleted": "حذف‌شده",
+    "optional": "اختیاری"
+  },
+  "empty-states": {
+    "no-items": {
+      "title": "موردی یافت نشد",
+      "description": "اینجا خالی است! برای مشاهده، فایلی بارگذاری کنید"
+    },
+    "no-metadata-items": {
+      "title": "هیچ مورد فراداده‌ای وجود ندارد",
+      "description": "هنوز هیچ مورد فراداده‌ای اضافه نشده است. برای پیکربندی ویژگی‌های سند، موارد فراداده را اضافه کنید."
+    }
+  },
+  "validation": {
+    "file-name": {
+      "required": "نام فایل الزامی است",
+      "invalid-characters": "نام فایل شامل کاراکترهای نامعتبر است. از این موارد خودداری کنید: < > : \" | ? * / \\",
+      "max-length": "نام فایل نمی‌تواند بیش از 255 کاراکتر باشد",
+      "min-length": "نام فایل نمی‌تواند خالی باشد",
+      "invalid-format": "نام فایل نمی‌تواند با فاصله یا نقطه شروع یا پایان یابد و نباید نام رزرو‌شده باشد"
+    }
+  },
+  "task-providers": {},
+  "permissions": {
+    "manage": {
+      "title": "مدیریت اسناد",
+      "description": "دسترسی کامل به قابلیت‌های مدیریت اسناد"
+    },
+    "document-type": {
+      "manage": {
+        "title": "مدیریت انواع سند",
+        "description": "دسترسی کامل به مدیریت انواع سند"
+      },
+      "view": {
+        "title": "مشاهده انواع سند",
+        "description": "مشاهده اطلاعات نوع سند"
+      },
+      "edit": {
+        "title": "ویرایش انواع سند",
+        "description": "ویرایش پیکربندی انواع سند"
+      },
+      "delete": {
+        "title": "حذف انواع سند",
+        "description": "حذف انواع سند"
+      },
+      "create": {
+        "title": "ایجاد نوع سند",
+        "description": "ایجاد انواع سند جدید"
+      }
+    },
+    "driver": {
+      "manage": {
+        "title": "مدیریت درایو اسناد",
+        "description": "دسترسی کامل به مدیریت درایو اسناد"
+      },
+      "view": {
+        "title": "مشاهده درایو اسناد",
+        "description": "مشاهده محتوای درایو اسناد"
+      },
+      "edit": {
+        "title": "ویرایش درایو اسناد",
+        "description": "ویرایش محتوای درایو اسناد"
+      },
+      "delete": {
+        "title": "حذف درایو اسناد",
+        "description": "حذف اسناد و پوشه‌ها"
+      },
+      "create": {
+        "title": "ایجاد درایو اسناد",
+        "description": "ایجاد اسناد و پوشه‌ها"
+      }
+    },
+    "review": {
+      "manage": {
+        "title": "مدیریت بازبینی سند",
+        "description": "دسترسی کامل به مدیریت بازبینی اسناد"
+      },
+      "view": {
+        "title": "مشاهده بازبینی سند",
+        "description": "مشاهده اطلاعات بازبینی سند"
+      },
+      "edit": {
+        "title": "ویرایش بازبینی سند",
+        "description": "ویرایش وضعیت بازبینی سند"
+      },
+      "delete": {
+        "title": "حذف بازبینی سند",
+        "description": "حذف بازبینی‌ها"
+      },
+      "create": {
+        "title": "ایجاد بازبینی سند",
+        "description": "ایجاد بازبینی سند"
+      }
+    }
+  }
+}

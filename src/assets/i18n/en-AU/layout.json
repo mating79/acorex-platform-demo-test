@@ -1,0 +1,212 @@
+{
+  "feature": {
+    "title": "Layout & Appearance",
+    "description": "Customize application layout and appearance settings"
+  },
+  "terms": {
+    "theme-modes": {
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "menu-modes": {
+      "vertical": "Vertical",
+      "horizontal": "Horizontal",
+      "compact": "Compact Style",
+      "full": "Full Labels"
+    },
+    "navigation-modes": {
+      "simple": "Simple (Single Page)",
+      "tabular": "Tabular (Internal Tabs)"
+    },
+    "font-sizes": {
+      "small": "Small",
+      "medium": "Medium",
+      "large": "Large",
+      "x-large": "Extra Large"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "nav-title": "Appearance",
+      "title": "Appearance Settings",
+      "description": "Customize the overall look and feel of the application.",
+      "items": {
+        "color": {
+          "title": "Brightness & Color",
+          "description": "Adjust the theme settings, including brightness, colors, and modes.",
+          "mode": {
+            "title": "Theme Mode",
+            "description": "Choose between Light and Dark theme modes."
+          },
+          "palette": {
+            "title": "Palette",
+            "description": "Choose a color palette for the application interface."
+          }
+        },
+        "layout": {
+          "title": "Scale & Layout",
+          "description": "Customize the application's layout and scaling options.",
+          "font": {
+            "title": "Font Style",
+            "description": "Choose a font style for the application."
+          },
+          "size": {
+            "title": "Font Size",
+            "description": "Adjust the font size for the application."
+          }
+        },
+        "root-menu": {
+          "title": "Main Menu",
+          "description": "Customize the application's main menu.",
+          "direction": {
+            "title": "Menu Direction",
+            "description": "Set the menu direction for the application."
+          },
+          "vertical-mode": {
+            "title": "Vertical Menu Style",
+            "description": "Choose compact icons only or full labels for the vertical menu."
+          },
+          "badge": {
+            "title": "Show Menu Badges",
+            "description": "Toggle visibility of notification badges in the menu."
+          }
+        },
+        "navigation": {
+          "title": "Navigation",
+          "description": "Configure how pages open inside the application.",
+          "mode": {
+            "title": "Navigation Mode",
+            "description": "Choose whether pages replace the current view or open as internal application tabs.",
+            "options": {
+              "simple": "Simple (Single Page)",
+              "tabular": "Tabular (Internal Tabs)"
+            }
+          },
+          "max-open-tabs": {
+            "title": "Open Tab Limit",
+            "description": "Maximum number of internal tabs that can be open at once in tabular mode."
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "file-chooser": {
+      "title": "File Chooser",
+      "pick-source": "Choose file source",
+      "actions": {
+        "choose": "Choose Files",
+        "clear": "Clear List"
+      },
+      "providers": {
+        "system": "Choose From Device",
+        "drive": "Choose From Drive",
+        "custom-demo": "Choose From Custom Provider"
+      },
+      "messages": {
+        "empty-list": "No Files Selected"
+      },
+      "zip-dialog": {
+        "title": "Bundle Files Into ZIP?",
+        "message": "You selected {{count}} files. Do you want to combine them into a single ZIP archive?"
+      },
+      "test10": {
+        "page-title": "File Chooser & Uploader",
+        "page-description": "Choose files with a custom provider, review the selection, then upload and track the result.",
+        "title": "Test 10 - Custom File Chooser Provider",
+        "description": "This page demonstrates a provider-driven file chooser. The custom provider opens a hosted popup and returns generated files.",
+        "popup-note": "Enter one filename per line. The provider will generate mock files from this list.",
+        "actions": {
+          "choose-files": "Choose Files",
+          "download": "Download",
+          "open-popup": "Open Chooser Popup API",
+          "list": "List",
+          "remove-first": "Remove First"
+        },
+        "sections": {
+          "choose": "Choose Files",
+          "choose-hint": "Pick a provider — device or drive — then select files.",
+          "choose-hooks-hint": "Image compression and ZIP bundling follow platform File Chooser settings (Experience → File Chooser).",
+          "selected-files": "Selected Files",
+          "selected-count": "{{count}} file(s) ready to upload",
+          "chosen-empty": "No files selected yet. Use the button above to choose files.",
+          "chooser-items": "Chooser Items",
+          "popup-result": "Popup Result"
+        },
+        "choose-and-upload": "Choose and Upload"
+      },
+      "states": {
+        "ready": "Ready",
+        "processing": "Processing",
+        "failed": "Failed",
+        "removed": "Removed"
+      }
+    },
+    "file-uploader": {
+      "title": "File Uploader",
+      "pick-source": "Choose upload destination",
+      "actions": {
+        "upload": "Upload Files",
+        "clear": "Clear List"
+      },
+      "providers": {
+        "system": "Upload to Device",
+        "drive": "Upload to Drive",
+        "custom-demo": "Upload to Custom Provider"
+      },
+      "messages": {
+        "empty-list": "No Files Uploaded"
+      },
+      "test10": {
+        "title": "Test 10 - Custom File Uploader Provider",
+        "description": "This page demonstrates a provider-driven file uploader. Files are chosen first, then passed to the uploader as chosen items.",
+        "popup-note": "Enter one filename per line. The provider will generate mock uploaded files from this list.",
+        "actions": {
+          "upload-files": "Upload Files",
+          "download": "Download"
+        },
+        "sections": {
+          "upload": "Upload",
+          "upload-hint": "Pick a destination — device or drive — then upload the selected files.",
+          "uploading": "Uploading files…",
+          "upload-result": "Upload Result",
+          "uploader-items": "Uploader Items",
+          "widget-panel-title": "Attachments Widget (Edit)",
+          "widget-panel-hint": "Entity file-uploader widget in edit mode — add, drag-and-drop, rename, and remove files."
+        }
+      },
+      "states": {
+        "attached": "Attached",
+        "uploaded": "Uploaded",
+        "uploading": "Uploading",
+        "ready": "Ready",
+        "processing": "Processing",
+        "failed": "Failed",
+        "removed": "Removed",
+        "remote": "Remote"
+      }
+    },
+    "user-card": {
+      "online": "Online",
+      "offline": "Offline",
+      "away": "Away",
+      "busy": "Busy",
+      "last-seen": "Last Seen {{datetime}}",
+      "away-for": "Away for {{duration}}",
+      "busy-for": "Busy for {{duration}}",
+      "duration": {
+        "less-than-a-minute": "Less Than a Minute",
+        "one-minute": "1 Minute",
+        "minutes": "{{count}} Minutes",
+        "one-hour": "1 Hour",
+        "hours": "{{count}} Hours",
+        "one-day": "1 Day",
+        "days": "{{count}} Days"
+      }
+    }
+  },
+  "app-startup": {
+    "applying-theme-settings": "Applying layout theme settings..."
+  }
+}

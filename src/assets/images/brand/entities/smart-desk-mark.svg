@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Smart Desk" viewBox="0 0 128 128" width="128" height="128" fill="none" shape-rendering="geometricPrecision" preserveAspectRatio="xMidYMid meet">
+  <!-- Headband -->
+  <path
+    d="M36 56 C36 32 92 32 92 56"
+    stroke="#00897B"
+    stroke-width="11"
+    stroke-linecap="round"
+    fill="none"
+  />
+  <!-- Ear cups -->
+  <rect x="24" y="50" width="20" height="36" rx="10" fill="#00897B"/>
+  <rect x="84" y="50" width="20" height="36" rx="10" fill="#00897B"/>
+  <!-- Support bubble (lower-right, clear of cups) -->
+  <path
+    d="M72 86 H102 C106.4 86 110 89.6 110 94 V104 C110 108.4 106.4 112 102 112 H90 L82 120 V112 H72 C67.6 112 64 108.4 64 104 V94 C64 89.6 67.6 86 72 86 Z"
+    fill="#00897B"
+  />
+</svg>

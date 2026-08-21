@@ -1,0 +1,150 @@
+{
+  "module": {
+    "title": "Rule Engine",
+    "description": "Author and evaluate business rule sets",
+    "menus": {
+      "root": {
+        "title": "Rule Engine",
+        "description": "Rule sets, decision tables, and evaluation runs"
+      }
+    },
+    "permissions": {
+      "title": "Rule Engine Management",
+      "description": "Manage rule sets and run evaluations",
+      "rule-set-view": {
+        "title": "View Rule Sets",
+        "description": "View rule sets and related assets"
+      },
+      "rule-set-manage": {
+        "title": "Manage Rule Sets",
+        "description": "Create and edit rule sets and rules"
+      },
+      "rule-set-publish": {
+        "title": "Publish Rule Sets",
+        "description": "Publish and rollback rule set versions"
+      },
+      "evaluate-run": {
+        "title": "Run Evaluation",
+        "description": "Evaluate published rule sets"
+      },
+      "evaluate-simulate": {
+        "title": "Simulate Evaluation",
+        "description": "Simulate draft or published rule sets"
+      }
+    }
+  },
+  "rule-sets": {
+    "menus": { "rule-sets": { "title": "Rule Sets" } },
+    "entities": {
+      "rule-set": {
+        "title": "Rule Set",
+        "plural": "Rule Sets",
+        "groups": { "basic-info": "Basic Info" },
+        "pages": {
+          "simulate": { "title": "Simulate" }
+        },
+        "fields": {
+          "name": { "title": "Name" },
+          "domain": { "title": "Domain" },
+          "version": { "title": "Version" },
+          "status": { "title": "Status" },
+          "title": { "title": "Title" },
+          "description": { "title": "Description" },
+          "hit-policy-default": { "title": "Default Hit Policy" },
+          "feature-flag": { "title": "Feature Flag" },
+          "enabled": { "title": "Enabled" }
+        }
+      }
+    }
+  },
+  "simulate": {
+    "menus": { "simulate": { "title": "Simulate" } },
+    "page": {
+      "title": "Simulate Rule Set",
+      "description": "Dry-run a rule pack against sample facts before publish"
+    },
+    "fields": {
+      "rule-set": "Rule Set",
+      "facts-json": "Facts (JSON)",
+      "result": "Result"
+    },
+    "actions": {
+      "run": "Run Simulate"
+    }
+  },
+  "rules": {
+    "menus": { "rules": { "title": "Rules" } },
+    "entities": {
+      "rule-definition": {
+        "title": "Rule Definition",
+        "plural": "Rule Definitions",
+        "groups": { "basic-info": "Basic Info" },
+        "fields": {
+          "rule-set-id": { "title": "Rule Set Id" },
+          "name": { "title": "Name" },
+          "enabled": { "title": "Enabled" },
+          "priority": { "title": "Priority" },
+          "salience": { "title": "Salience" },
+          "activation-group": { "title": "Activation Group" },
+          "severity": { "title": "Severity" },
+          "when-json": { "title": "When (JSON)" },
+          "then-json": { "title": "Then (JSON)" }
+        }
+      }
+    }
+  },
+  "tables": {
+    "menus": { "tables": { "title": "Decision Tables" } },
+    "entities": {
+      "decision-table": {
+        "title": "Decision Table",
+        "plural": "Decision Tables",
+        "groups": { "basic-info": "Basic Info" },
+        "fields": {
+          "rule-set-id": { "title": "Rule Set Id" },
+          "name": { "title": "Name" },
+          "hit-policy": { "title": "Hit Policy" },
+          "table-json": { "title": "Table JSON" }
+        }
+      }
+    }
+  },
+  "versions": {
+    "menus": { "versions": { "title": "Versions" } },
+    "entities": {
+      "rule-set-version": {
+        "title": "Rule Set Version",
+        "plural": "Rule Set Versions",
+        "groups": { "basic-info": "Basic Info" },
+        "fields": {
+          "rule-set-id": { "title": "Rule Set Id" },
+          "version": { "title": "Version" },
+          "status": { "title": "Status" },
+          "snapshot-json": { "title": "Snapshot JSON" },
+          "published-at": { "title": "Published At" },
+          "published-by": { "title": "Published By" }
+        }
+      }
+    }
+  },
+  "runs": {
+    "menus": { "runs": { "title": "Evaluation Runs" } },
+    "entities": {
+      "rule-evaluation-run": {
+        "title": "Evaluation Run",
+        "plural": "Evaluation Runs",
+        "groups": { "basic-info": "Basic Info" },
+        "fields": {
+          "rule-set-id": { "title": "Rule Set Id" },
+          "rule-set-version": { "title": "Rule Set Version" },
+          "mode": { "title": "Mode" },
+          "passed": { "title": "Passed" },
+          "duration-ms": { "title": "Duration (ms)" },
+          "facts-json": { "title": "Facts JSON" },
+          "result-json": { "title": "Result JSON" },
+          "correlation-id": { "title": "Correlation Id" }
+        }
+      }
+    }
+  }
+}

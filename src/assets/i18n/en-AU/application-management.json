@@ -1,0 +1,326 @@
+{
+  "module": {
+    "title": "Application Management",
+    "description": "Manage applications and editions",
+    "menus": {
+      "root": {
+        "title": "Applications Management",
+        "description": "Manage applications and their components"
+      },
+      "terms-page": {
+        "title": "Terms & Conditions",
+        "description": "Review terms and conditions"
+      }
+    }
+  },
+  "permissions": {
+    "manage": {
+      "title": "Applications Management",
+      "description": "Manage applications and editions"
+    }
+  },
+  "features": {
+    "application-management": {
+      "title": "Application Management",
+      "description": "Enable application management functionality"
+    }
+  },
+  "applications": {
+    "terms": {
+      "application": "Application",
+      "applications": "Applications"
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Applications",
+        "description": "Full access to applications management"
+      }
+    },
+    "entities": {
+      "application": {
+        "title": "Application",
+        "plural": "Applications",
+        "fields": {
+          "code": {
+            "title": "Code",
+            "description": "Unique identifier code for the application",
+            "placeholder": "Enter application code (e.g., SM)"
+          },
+          "title": {
+            "title": "Title",
+            "description": "Application title",
+            "placeholder": "Enter application title"
+          },
+          "description": {
+            "title": "Description",
+            "description": "Application description",
+            "placeholder": "Enter application description"
+          },
+          "version": {
+            "title": "Version",
+            "description": "Application version number",
+            "placeholder": "Enter version (e.g., 1.0.0)"
+          },
+          "category": {
+            "title": "Category",
+            "description": "Application category or type",
+            "placeholder": "Enter category"
+          },
+          "tags": {
+            "title": "Tags",
+            "description": "Tags for categorization and search",
+            "placeholder": "Enter tags"
+          },
+          "icon": {
+            "title": "Icon",
+            "description": "Application icon identifier or class",
+            "placeholder": "Enter icon class (e.g., fa-cube)"
+          },
+          "logo": {
+            "title": "Logo",
+            "description": "Application logo image",
+            "placeholder": "Upload application logo"
+          },
+          "color": {
+            "title": "Color",
+            "description": "Primary color for the application",
+            "placeholder": "Select color"
+          },
+          "url": {
+            "title": "URL",
+            "description": "Application URL or link",
+            "placeholder": "Enter application URL"
+          },
+          "documentation-url": {
+            "title": "Documentation URL",
+            "description": "Link to application documentation",
+            "placeholder": "Enter documentation URL"
+          },
+          "support-email": {
+            "title": "Support Email",
+            "description": "Support contact email address",
+            "placeholder": "Enter support email"
+          },
+          "release-date": {
+            "title": "Release Date",
+            "description": "Date when the application was released",
+            "placeholder": "Select release date"
+          },
+          "is-public": {
+            "title": "Public",
+            "description": "Whether the application is publicly available",
+            "placeholder": "Select public availability"
+          },
+          "edition": {
+            "title": "Edition",
+            "description": "Application edition",
+            "placeholder": "Select edition"
+          }
+        },
+        "groups": {
+          "basic-info": "Basic Information",
+          "branding": "Branding",
+          "links": "Links & Contact",
+          "metadata": "Metadata",
+          "editions": "Editions"
+        }
+      }
+    },
+    "states": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "suspended": "Suspended",
+      "pending": "Pending"
+    },
+    "transitions": {
+      "activate": "Activate",
+      "deactivate": "Deactivate",
+      "suspend": "Suspend",
+      "resume": "Resume"
+    }
+  },
+  "editions": {
+    "terms": {
+      "edition": "Edition",
+      "editions": "Editions"
+    },
+    "entities": {
+      "edition": {
+        "title": "Edition",
+        "plural": "Editions",
+        "fields": {
+          "title": {
+            "title": "Title",
+            "description": "Edition title",
+            "placeholder": "Enter edition title"
+          },
+          "description": {
+            "title": "Description",
+            "description": "Edition description",
+            "placeholder": "Enter edition description"
+          },
+          "modules-and-features": {
+            "title": "Modules & Features",
+            "description": "Select modules and configure their features",
+            "placeholder": "Select modules and features"
+          }
+        },
+        "groups": {
+          "basic-info": "Basic Information",
+          "modules": "Modules & Features"
+        },
+        "related-entities": {
+          "subscriptions": {
+            "title": "Subscriptions"
+          }
+        }
+      }
+    },
+    "modules-editor": {
+      "search-placeholder": "Search Modules And Features",
+      "view-mode": {
+        "type": "By Type",
+        "domain": "By Domain"
+      },
+      "always-available": "Always Available",
+      "loading": "Loading Modules...",
+      "empty": "No Modules Match Your Search",
+      "badges": {
+        "required": "Required",
+        "dependency": "Dependency",
+        "dependency-required": "Required Dependency",
+        "dependency-of": "Required Dependency Of: {{modules}}"
+      },
+      "types": {
+        "platform": "Platform",
+        "domain": "Domain Modules",
+        "integration": "Integrations"
+      },
+      "domains": {
+        "platform": "Platform",
+        "human-capital": "Human Capital",
+        "project-management": "Project Management",
+        "asset-maintenance": "Assets & Maintenance",
+        "workplace-safety": "Workplace Safety",
+        "assessment-learning": "Assessment & Learning",
+        "finance-commerce": "Finance & Commerce",
+        "customer-supplier": "Customers & Suppliers",
+        "communication": "Communication",
+        "ai": "AI",
+        "content-documents": "Content & Documents",
+        "data": "Data",
+        "operations": "Operations",
+        "weather": "Weather",
+        "source-control": "Source Control",
+        "general": "General"
+      },
+      "settings": {
+        "view-mode": {
+          "title": "Edition Modules View Mode",
+          "description": "Default grouping for the edition modules checklist (By Type or By Domain)."
+        }
+      }
+    }
+  },
+  "versionNumber": "Version Number",
+  "changeLogs": "Change Logs",
+  "publishDate": "Publish Date",
+  "notifyUser": "Notify User",
+  "app-versions": {
+    "entities": {
+      "app-version": {
+        "title": "Application Version",
+        "plural": "Application Versions"
+      }
+    }
+  },
+  "release-notes": {
+    "terms": {
+      "release-note": "Release Note",
+      "release-notes": "Release Notes"
+    },
+    "menus": {
+      "release-notes": {
+        "title": "Release Notes",
+        "description": "Manage published release notes"
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Release Notes",
+        "description": "Full access to release notes management"
+      }
+    }
+  },
+  "help": {
+    "menus": {
+      "help": {
+        "title": "Help",
+        "description": "Application help and support"
+      },
+      "release-notes": {
+        "title": "Release Notes",
+        "description": "View recent platform updates and release information"
+      }
+    }
+  },
+  "app-terms": {
+    "terms": {
+      "app-term": "Terms & Conditions",
+      "app-terms": "Terms & Conditions"
+    },
+    "entities": {
+      "app-term": {
+        "title": "Terms & Conditions",
+        "plural": "Terms & Conditions",
+        "fields": {
+          "content": {
+            "title": "Content",
+            "description": "Terms and conditions content",
+            "placeholder": "Enter terms and conditions content"
+          },
+          "version": {
+            "title": "Version",
+            "description": "Version number",
+            "placeholder": "Enter version number"
+          },
+          "effective-date": {
+            "title": "Effective Date",
+            "description": "Date when terms become effective",
+            "placeholder": "Select effective date"
+          }
+        }
+      }
+    },
+    "pages": {
+      "terms-page": {
+        "title": "Terms & Conditions",
+        "description": "Please review the terms and conditions carefully."
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Terms & Conditions",
+        "description": "Full access to terms & conditions"
+      }
+    }
+  },
+  "application-info": {
+    "settings": {
+      "display-pattern": {
+        "title": "Application Info Display Pattern",
+        "description": "Customize how application information is displayed in the footer. Use placeholders: {appTitle}, {version}",
+        "placeholder": "{appTitle} v{version}"
+      }
+    },
+    "menus": {
+      "release-notes": {
+        "title": "Release Notes",
+        "description": "View recent platform updates and release information"
+      }
+    }
+  },
+  "app-startup": {
+    "checking-terms": "Checking terms and conditions..."
+  }
+}

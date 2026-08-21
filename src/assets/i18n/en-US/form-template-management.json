@@ -1,0 +1,243 @@
+{
+  "module": {
+    "title": "Form Template Management",
+    "description": "Manage form templates, widgets, and categories",
+    "menus": {
+      "root": {
+        "title": "Form Templates",
+        "description": "Manage form templates and widgets"
+      }
+    }
+  },
+  "templates": {
+    "terms": {
+      "template": "Template",
+      "templates": "Templates",
+      "template-id": "Template ID",
+      "template-type": "Type",
+      "choose-template": "Choose Template",
+      "remove-template": "Remove Template",
+      "empty-template": "Empty Template"
+    },
+    "menus": {
+      "templates": {
+        "title": "Templates",
+        "description": "Manage form templates"
+      },
+      "forms": {
+        "title": "Forms",
+        "description": "Manage form templates"
+      },
+      "widgets": {
+        "title": "Widgets",
+        "description": "Manage widget templates"
+      }
+    },
+    "entities": {
+      "template": {
+        "title": "Template",
+        "plural": "Templates",
+        "fields": {
+          "code": {
+            "title": "Code",
+            "description": "Unique identifier for the template",
+            "placeholder": "Enter template code"
+          },
+          "title": {
+            "title": "Title",
+            "description": "Display name of the template",
+            "placeholder": "Enter template title"
+          },
+          "type": {
+            "title": "Type",
+            "description": "Template type (Form or Widget)",
+            "placeholder": "Select template type"
+          },
+          "template": {
+            "title": "Edit Template",
+            "description": "Design and edit template content"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "templates": {
+        "title": "Templates",
+        "actions": {
+          "view": {
+            "title": "View Templates",
+            "description": "View template information"
+          },
+          "edit": {
+            "title": "Edit Template",
+            "description": "Edit template configurations"
+          },
+          "delete": {
+            "title": "Delete Templates",
+            "description": "Delete templates"
+          },
+          "create": {
+            "title": "Create Template",
+            "description": "Create new templates"
+          },
+          "manage": {
+            "title": "Manage Templates",
+            "description": "Full template management access"
+          }
+        }
+      }
+    }
+  },
+  "categories": {
+    "terms": {
+      "category": "Category",
+      "categories": "Categories"
+    },
+    "entities": {
+      "category": {
+        "title": "Category",
+        "plural": "Categories",
+        "fields": {
+          "categoryId": {
+            "title": "Category ID",
+            "description": "Unique category identifier",
+            "placeholder": "Select category"
+          },
+          "parentId": {
+            "title": "Parent ID",
+            "description": "Parent category identifier",
+            "placeholder": "Select parent category"
+          },
+          "isArchived": {
+            "title": "Archived",
+            "description": "Archive status of the category"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "categories": {
+        "title": "Categories",
+        "actions": {
+          "view": {
+            "title": "View Categories",
+            "description": "View category information"
+          },
+          "edit": {
+            "title": "Edit Category",
+            "description": "Edit category configurations"
+          },
+          "delete": {
+            "title": "Delete Categories",
+            "description": "Delete categories"
+          },
+          "create": {
+            "title": "Create Category",
+            "description": "Create new categories"
+          },
+          "manage": {
+            "title": "Manage Categories",
+            "description": "Full category management access"
+          }
+        }
+      }
+    }
+  },
+  "designer": {
+    "terms": {
+      "designer": "Designer",
+      "design": "Design",
+      "widget": "Widget",
+      "widgets": "Widgets",
+      "form": "Form",
+      "forms": "Forms",
+      "start-design-template": "Start Design Template",
+      "edit-template": "Edit Template in Designer"
+    },
+    "components": {
+      "widget-picker": {
+        "title": "Widget Gallery",
+        "description": "Select a widget from the gallery",
+        "search-placeholder": "e.g. Button, Text, ...",
+        "tab-all": "All",
+        "selected-count": "{{count}} Selected",
+        "pinned-section-title": "Pinned"
+      },
+      "template-picker": {
+        "title": "Template Gallery",
+        "description": "Select a template from the gallery",
+        "search-placeholder": "Search templates...",
+        "clear-search": "Clear Search",
+        "empty-states": {
+          "no-templates": {
+            "title": "No Templates Found",
+            "description": "No templates are available in this category. Select a different category or use the search function."
+          },
+          "no-search-results": {
+            "title": "No Templates Found",
+            "description": "No templates match your search criteria. Try adjusting your search terms or browse categories."
+          },
+          "no-category-results": {
+            "title": "No Templates Found",
+            "description": "No templates are available in this category. Select a different category or use the search function."
+          }
+        }
+      }
+    },
+    "settings": {
+      "form-template": {
+        "title": "Form Template",
+        "description": "Settings related to form templates",
+        "items": {}
+      },
+      "designer": {
+        "title": "Designer",
+        "description": "Settings related to form templates designer",
+        "items": {
+          "history-panel": {
+            "title": "History Panel",
+            "description": "Enable or disable the history panel for forms"
+          },
+          "auto-save": {
+            "title": "Auto Save",
+            "description": "Auto save form information at regular intervals"
+          },
+          "auto-save-interval": {
+            "title": "Auto Save Interval",
+            "description": "Set the time interval (in minutes) for auto-saving form information"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "@form-template-management:module.title",
+        "actions": {
+          "manage": {
+            "title": "Manage Form Templates"
+          }
+        }
+      }
+    }
+  },
+  "designerAi": {
+    "menu": "AI Assistant…",
+    "dialog-title": "Form Designer Assistant",
+    "placeholder": "Describe the form you want or how to change the current layout…",
+    "no-ai-module": "AI is not available in this shell. Add or enable the AI Management module.",
+    "applied-hint": "The canvas was updated. Choose File → Save (Ctrl+S) to persist changes.",
+    "loading": {
+      "title": "Applying AI layout",
+      "applying": "Updating the designer canvas…",
+      "complete": "Layout applied.",
+      "run-title": "Generating layout",
+      "run-initial": "The model is producing and validating JSON. This may take a moment…"
+    }
+  },
+  "viewer": {
+    "terms": {
+      "view": "View",
+      "preview": "Preview"
+    }
+  }
+}

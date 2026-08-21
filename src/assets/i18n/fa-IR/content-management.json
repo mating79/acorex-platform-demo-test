@@ -1,0 +1,278 @@
+{
+  "module": {
+    "title": "مدیریت محتوا",
+    "description": "مدیریت محتوا، پروموشن‌ها، شرایط و ضوابط و واژه‌نامه‌ها",
+    "menus": {
+      "root": {
+        "title": "مدیریت محتوا",
+        "description": "مدیریت تمام اطلاعات مربوط به محتوا"
+      }
+    }
+  },
+  "help-center": {
+    "terms": {
+      "help": "راهنما",
+      "help-center": "مرکز راهنما",
+      "tutorials": "آموزش‌ها",
+      "about": "درباره"
+    },
+    "menus": {
+      "help": {
+        "title": "راهنما",
+        "description": "راهنمای برنامه و پشتیبانی"
+      },
+      "help-center": {
+        "title": "مرکز راهنما",
+        "description": "دسترسی به منابع مرکز راهنما"
+      },
+      "tutorials": {
+        "title": "آموزش‌ها",
+        "description": "مشاهده آموزش‌های برنامه"
+      },
+      "about": {
+        "title": "درباره",
+        "description": "درباره برنامه"
+      }
+    }
+  },
+  "promotions": {
+    "terms": {
+      "promotion": "پروموشن",
+      "promotions": "پروموشن‌ها",
+      "media": "رسانه",
+      "text": "متن"
+    },
+    "entities": {
+      "promotion": {
+        "title": "پروموشن",
+        "plural": "پروموشن‌ها",
+        "fields": {
+          "body": {
+            "title": "متن",
+            "description": "متن محتوای پروموشن",
+            "placeholder": "محتوای پروموشن را وارد کنید"
+          },
+          "content-type": {
+            "title": "نوع محتوا",
+            "description": "نوع محتوا",
+            "placeholder": "نوع محتوا را انتخاب کنید"
+          },
+          "placement": {
+            "title": "محل نمایش",
+            "description": "محل نمایش پروموشن",
+            "placeholder": "محل نمایش را انتخاب کنید"
+          },
+          "shape": {
+            "title": "شکل",
+            "description": "شکل نمایش برای پروموشن رسانه‌ای",
+            "placeholder": "شکل را انتخاب کنید"
+          }
+        }
+      }
+    }
+  },
+  "templates": {
+    "terms": {
+      "template": "قالب",
+      "templates": "قالب‌ها",
+      "text-template": "قالب متنی"
+    },
+    "channels": {
+      "print": "چاپ"
+    },
+    "entities": {
+      "text-template": {
+        "title": "قالب متنی",
+        "plural": "قالب‌های متنی",
+        "groups": {
+          "template-content": "محتوای قالب"
+        },
+        "fields": {
+          "name": {
+            "title": "نام",
+            "description": "نام یکتای قالب",
+            "placeholder": "نام قالب را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "description": "نام نمایشی قالب",
+            "placeholder": "عنوان قالب را وارد کنید"
+          },
+          "kind": {
+            "title": "نوع",
+            "description": "قالب محتوا یا قالب اصلی چیدمان.",
+            "options": {
+              "content": "محتوا",
+              "master": "اصلی"
+            }
+          },
+          "parent-id": {
+            "title": "قالب والد",
+            "description": "قالب اصلی اختیاری که بدنه این قالب را دربرمی‌گیرد."
+          },
+          "parent": {
+            "title": "قالب والد"
+          },
+          "channel": {
+            "title": "کانال",
+            "description": "کانال ارسال قالب",
+            "placeholder": "کانال را انتخاب کنید",
+            "options": {
+              "email": "ایمیل",
+              "sms": "اس‌ام‌اس",
+              "whatsapp": "واتساپ",
+              "push": "اعلان فوری",
+              "print": "چاپ"
+            }
+          },
+          "channels": {
+            "title": "کانال‌ها",
+            "description": "محتوای قالب به ازای هر کانال (ایمیل، اس‌ام‌اس و غیره)",
+            "placeholder": "کانال‌ها را انتخاب کنید و محتوا وارد کنید"
+          },
+          "channel-select": {
+            "title": "کانال‌ها",
+            "description": "حداقل یک کانال انتخاب کنید",
+            "placeholder": "کانال‌ها را انتخاب کنید"
+          },
+          "subject": {
+            "title": "موضوع",
+            "description": "موضوع ایمیل",
+            "placeholder": "موضوع را وارد کنید"
+          },
+          "body": {
+            "title": "متن",
+            "description": "محتوای قالب با متغیرها",
+            "placeholder": "متن قالب را وارد کنید"
+          },
+          "body-format": {
+            "title": "فرمت محتوا",
+            "description": "متن ساده یا فرمت شده (HTML)",
+            "placeholder": "فرمت را انتخاب کنید",
+            "options": {
+              "plain": "متن ساده",
+              "rich": "متن غنی (HTML)"
+            }
+          },
+          "body-placeholder": {
+            "plain": "متن ساده وارد کنید. از {{variableName}} برای متغیرها استفاده کنید. قالب‌های اصلی باید شامل [content] باشند.",
+            "rich": "متن غنی وارد کنید. از {{variableName}} برای متغیرها استفاده کنید. قالب‌های اصلی باید شامل [content] باشند."
+          },
+          "category": {
+            "title": "دسته‌بندی",
+            "description": "دسته‌بندی قالب",
+            "placeholder": "دسته‌بندی را وارد کنید"
+          }
+        }
+      }
+    },
+    "variables": {
+      "userName": "نام کاربر",
+      "customerName": "نام مشتری",
+      "orderId": "شناسه سفارش",
+      "totalAmount": "مبلغ کل",
+      "verificationCode": "کد تأیید",
+      "resetLink": "لینک بازنشانی",
+      "expiryMinutes": "مدت انقضا (دقیقه)"
+    },
+    "actions": {
+      "insert-variable": "درج متغیر",
+      "insert-content-slot": "درج جایگاه محتوا",
+      "copy-from": "کپی از",
+      "configure-channel": "پیکربندی کانال",
+      "edit": "ویرایش",
+      "preview": "پیش‌نمایش"
+    },
+    "messages": {
+      "preview-failed": {
+        "title": "پیش‌نمایش در دسترس نیست",
+        "content": "پیش‌نمایش سرور انجام نشد. به‌جای آن پیش‌نمایش محلی نمایش داده می‌شود."
+      }
+    },
+    "search": {
+      "create-text-template": {
+        "title": "ایجاد قالب متنی",
+        "description": "ایجاد قالب متنی جدید برای ایمیل، اس‌ام‌اس یا واتساپ"
+      }
+    }
+  },
+  "glossaries": {
+    "terms": {
+      "glossary": "واژه‌نامه",
+      "glossaries": "واژه‌نامه‌ها"
+    },
+    "entities": {
+      "glossary": {
+        "title": "واژه‌نامه",
+        "plural": "واژه‌نامه‌ها",
+        "fields": {
+          "title": {
+            "title": "عنوان",
+            "description": "عنوان اصطلاح واژه‌نامه",
+            "placeholder": "عنوان را وارد کنید"
+          },
+          "parent-id": {
+            "title": "شناسه والد",
+            "description": "مورد والد واژه‌نامه",
+            "placeholder": "والد را انتخاب کنید"
+          },
+          "translation": {
+            "title": "ترجمه",
+            "description": "ترجمه اصطلاح",
+            "placeholder": "ترجمه را وارد کنید"
+          }
+        }
+      }
+    }
+  },
+  "permissions": {
+    "manage": {
+      "title": "مدیریت محتوا",
+      "description": "دسترسی کامل به مدیریت محتوا"
+    },
+    "promotion": {
+      "manage": {
+        "title": "مدیریت پروموشن‌ها",
+        "description": "دسترسی کامل به پروموشن‌ها"
+      },
+      "view": {
+        "title": "مشاهده پروموشن‌ها",
+        "description": "مشاهده جزئیات پروموشن"
+      },
+      "create": {
+        "title": "ایجاد پروموشن",
+        "description": "ایجاد پروموشن جدید"
+      },
+      "edit": {
+        "title": "ویرایش پروموشن‌ها",
+        "description": "ویرایش پروموشن‌های موجود"
+      },
+      "delete": {
+        "title": "حذف پروموشن‌ها",
+        "description": "حذف پروموشن‌ها"
+      }
+    },
+    "text-template": {
+      "manage": {
+        "title": "مدیریت قالب‌های متنی",
+        "description": "دسترسی کامل به قالب‌های متنی"
+      },
+      "view": {
+        "title": "مشاهده قالب‌های متنی",
+        "description": "مشاهده جزئیات قالب متنی"
+      },
+      "create": {
+        "title": "ایجاد قالب متنی",
+        "description": "ایجاد قالب متنی جدید"
+      },
+      "edit": {
+        "title": "ویرایش قالب‌های متنی",
+        "description": "ویرایش قالب‌های متنی موجود"
+      },
+      "delete": {
+        "title": "حذف قالب‌های متنی",
+        "description": "حذف قالب‌های متنی"
+      }
+    }
+  }
+}

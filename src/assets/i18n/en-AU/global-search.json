@@ -1,0 +1,30 @@
+{
+  "feature": {
+    "title": "Global Search",
+    "description": "Search across the entire platform for commands, files, and content"
+  },
+  "terms": {
+    "pinned": "Pinned",
+    "recent": "Recent",
+    "clear": "Clear",
+    "search": "Search",
+    "search-anything": "Search Anything...",
+    "search-placeholder": "Search..."
+  },
+  "components": {
+    "search-box": {
+      "title": "Global Search",
+      "description": "Search for commands, files, and content",
+      "empty-states": {
+        "no-result": {
+          "title": "No Results Found",
+          "description": "We couldn't find anything matching your search. Please refine your keywords or try different terms."
+        },
+        "start": {
+          "title": "Looking for Something?",
+          "description": "Just start typing to search for commands, files, or anything else!"
+        }
+      }
+    }
+  }
+}

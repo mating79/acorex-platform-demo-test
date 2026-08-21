@@ -1,0 +1,259 @@
+{
+    "module": {
+        "title": "Order Management",
+        "description": "Manage bulk buy orders, member participation, and collective purchasing",
+        "permissions": {
+            "title": "Order Management",
+            "description": "Order management permissions and access control"
+        }
+    },
+    "bulk-buy-orders": {
+        "terms": {
+            "bulk-buy-order": "Bulk Buy Order",
+            "bulk-buy-orders": "Bulk Buy Orders",
+            "member-order": "Member Order",
+            "member-orders": "Member Orders",
+            "available-orders": "Available Orders",
+            "my-orders": "My Orders"
+        },
+        "menus": {
+            "bulk-buy-orders": {
+                "title": "Bulk Buy Orders",
+                "description": "Manage bulk buy orders and items"
+            },
+            "available-orders": {
+                "title": "Available Orders",
+                "description": "Browse and join available bulk buy orders"
+            },
+            "my-orders": {
+                "title": "My Orders",
+                "description": "View and manage your orders"
+            }
+        },
+        "entities": {
+            "bulk-buy-order": {
+                "title": "Bulk Buy Order",
+                "plural": "Bulk Buy Orders",
+                "groups": {
+                    "basic-info": "Basic Information",
+                    "order-details": "Order Details",
+                    "financial-info": "Financial Information"
+                },
+                "fields": {
+                    "order-number": {
+                        "title": "Order Number",
+                        "description": "Unique identifier for the bulk buy order",
+                        "placeholder": "Enter order number"
+                    },
+                    "title": {
+                        "title": "Title",
+                        "description": "Title or name of the bulk buy order",
+                        "placeholder": "Enter order title"
+                    },
+                    "supplier": {
+                        "title": "Supplier",
+                        "description": "Supplier for this bulk buy order"
+                    },
+                    "order-date": {
+                        "title": "Order Date",
+                        "description": "Date when the order was created"
+                    },
+                    "deadline-date": {
+                        "title": "Deadline Date",
+                        "description": "Last date to add items or join the order"
+                    },
+                    "freight-amount": {
+                        "title": "Freight Amount",
+                        "description": "Total freight cost for the order"
+                    },
+                    "description": {
+                        "title": "Description",
+                        "description": "Additional description or notes for the order",
+                        "placeholder": "Enter description or notes"
+                    }
+                }
+            },
+            "bulk-buy-order-item": {
+                "title": "Order Item",
+                "plural": "Order Items",
+                "groups": {
+                    "order-info": "Order Information",
+                    "product-info": "Product Information",
+                    "financial-info": "Financial Information"
+                },
+                "fields": {
+                    "bulk-buy-order": {
+                        "title": "Bulk Buy Order",
+                        "description": "Parent bulk buy order"
+                    },
+                    "product": {
+                        "title": "Product",
+                        "description": "Product for this order item"
+                    },
+                    "size": {
+                        "title": "Size",
+                        "description": "Total quantity available in the order"
+                    },
+                    "quantity-in-order": {
+                        "title": "Quantity in Order",
+                        "description": "Total quantity ordered by all members"
+                    },
+                    "quantity-available": {
+                        "title": "Quantity Available",
+                        "description": "Remaining quantity available"
+                    },
+                    "price": {
+                        "title": "Price",
+                        "description": "Price per unit"
+                    },
+                    "unit": {
+                        "title": "Unit",
+                        "description": "Unit of measurement",
+                        "placeholder": "e.g., kg, pcs, box"
+                    },
+                    "total": {
+                        "title": "Total",
+                        "description": "Total amount including tax"
+                    },
+                    "per-unit-incl-gst": {
+                        "title": "Per Unit (Incl. GST)",
+                        "description": "Price per unit including GST"
+                    },
+                    "tax-rate": {
+                        "title": "Tax Rate",
+                        "description": "Tax rate percentage"
+                    }
+                }
+            },
+            "member-order": {
+                "title": "Member Order",
+                "plural": "Member Orders",
+                "groups": {
+                    "order-info": "Order Information",
+                    "member-info": "Member Information",
+                    "financial-info": "Financial Information"
+                },
+                "fields": {
+                    "bulk-buy-order": {
+                        "title": "Bulk Buy Order",
+                        "description": "Parent bulk buy order"
+                    },
+                    "member": {
+                        "title": "Member",
+                        "description": "Member participating in the order"
+                    },
+                    "product-total": {
+                        "title": "Product Total",
+                        "description": "Total amount for all products"
+                    },
+                    "freight-share": {
+                        "title": "Freight Share",
+                        "description": "Proportional share of freight cost"
+                    },
+                    "total-owing": {
+                        "title": "Total Owing",
+                        "description": "Total amount owing (product total + freight share)"
+                    },
+                    "paid-date": {
+                        "title": "Paid Date",
+                        "description": "Date when the order was paid"
+                    }
+                }
+            },
+            "member-order-line": {
+                "title": "Order Line",
+                "plural": "Order Lines",
+                "groups": {
+                    "order-info": "Order Information",
+                    "product-info": "Product Information",
+                    "financial-info": "Financial Information"
+                },
+                "fields": {
+                    "member-order": {
+                        "title": "Member Order",
+                        "description": "Parent member order"
+                    },
+                    "bulk-buy-order-item": {
+                        "title": "Order Item",
+                        "description": "Bulk buy order item"
+                    },
+                    "quantity": {
+                        "title": "Quantity",
+                        "description": "Quantity ordered by the member"
+                    },
+                    "price": {
+                        "title": "Price",
+                        "description": "Price per unit"
+                    },
+                    "line-total": {
+                        "title": "Line Total",
+                        "description": "Total amount for this line including tax"
+                    },
+                    "tax-rate": {
+                        "title": "Tax Rate",
+                        "description": "Tax rate percentage"
+                    }
+                }
+            }
+        },
+        "permissions": {
+            "title": "Bulk Buy Orders",
+            "description": "Manage bulk buy orders and member participation",
+            "management": {
+                "title": "Manage Bulk Buy Orders",
+                "description": "Full access to manage bulk buy orders"
+            },
+            "member": {
+                "title": "Member Access",
+                "description": "Access to view and join available orders"
+            }
+        },
+        "states": {
+            "open": "Open",
+            "closed": "Closed",
+            "cancelled": "Cancelled",
+            "pending": "Pending",
+            "confirmed": "Confirmed",
+            "paid": "Paid"
+        },
+        "transitions": {
+            "close": "Close",
+            "cancel": "Cancel",
+            "confirm": "Confirm",
+            "mark-paid": "Mark as Paid"
+        },
+        "settings": {
+            "bulk-buy": {
+                "nav-title": "Bulk Buy Orders",
+                "title": "Bulk Buy Orders",
+                "description": "Settings for bulk buy order management and configuration"
+            },
+            "tax": {
+                "title": "Tax Settings",
+                "description": "Configure tax rates and calculations for bulk buy orders",
+                "items": {
+                    "tax-rate": {
+                        "title": "Tax Rate (%)",
+                        "description": "Default tax rate percentage for bulk buy orders. This rate is applied to order items and member orders."
+                    }
+                }
+            }
+        }
+    },
+    "profile-page": {
+        "sections": {
+            "my-orders": {
+                "title": "My Orders",
+                "description": "See orders you placed and follow their progress.",
+                "actions": {
+                    "manage": "View My Orders"
+                }
+            }
+        },
+        "commands": {
+            "view-my-orders": {
+                "coming-soon": "My orders will be available soon."
+            }
+        }
+    }
+}

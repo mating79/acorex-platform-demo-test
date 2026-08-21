@@ -1,0 +1,48 @@
+{
+  "feature": {
+    "title": "ویژگی نمونه",
+    "description": "ویژگی مستقل نمونه برای عملکرد مشترک"
+  },
+  "terms": {
+    "term-key1": "کلید عبارت ۱",
+    "term-key2": {
+      "sub-key": "کلید فرعی عبارت ۲"
+    }
+  },
+  "components": {
+    "component-key": {
+      "title": "عنوان کامپوننت",
+      "description": "توضیحات کامپوننت",
+      "empty-states": {
+        "no-data": {
+          "title": "داده‌ای یافت نشد",
+          "description": "داده‌ای در دسترس نیست"
+        }
+      }
+    }
+  },
+  "actions": {
+    "action-key": {
+      "title": "عنوان عملیات",
+      "description": "توضیحات عملیات"
+    }
+  },
+  "messages": {
+    "success": {
+      "message-key": "پیام موفقیت"
+    },
+    "error": {
+      "message-key": "پیام خطا"
+    },
+    "warning": {
+      "message-key": "پیام هشدار"
+    }
+  },
+  "states": {
+    "state-key": "برچسب وضعیت"
+  },
+  "validations": {
+    "validation-key": "پیام اعتبارسنجی"
+  }
+}
+

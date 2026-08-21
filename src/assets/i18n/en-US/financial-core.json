@@ -1,0 +1,607 @@
+{
+  "module": {
+    "title": "Financial Core",
+    "description": "Shared financial master data for accounting, sales, purchasing, billing, and payment flows.",
+    "menus": {
+      "root": {
+        "title": "Financial",
+        "description": "Currencies, taxation, payment terms, and fiscal configuration."
+      }
+    }
+  },
+  "currencies": {
+    "terms": {
+      "currency": "Currency",
+      "currencies": "Currencies"
+    },
+    "entities": {
+      "currency": {
+        "title": "Currency",
+        "plural": "Currencies",
+        "groups": {
+          "basic-info": "Basic Information",
+          "formatting": "Formatting"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter ISO code (e.g., USD)"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter currency title"
+          },
+          "symbol": {
+            "title": "Symbol",
+            "placeholder": "Enter currency symbol"
+          },
+          "iso-number": {
+            "title": "ISO Number",
+            "placeholder": "Enter ISO numeric code"
+          },
+          "decimal-places": {
+            "title": "Decimal Places",
+            "placeholder": "Number of fraction digits"
+          },
+          "thousand-separator": {
+            "title": "Thousand Separator",
+            "placeholder": "Separator character (e.g., ,)"
+          },
+          "decimal-separator": {
+            "title": "Decimal Separator",
+            "placeholder": "Separator character (e.g., .)"
+          },
+          "format-pattern": {
+            "title": "Format Pattern",
+            "placeholder": "Optional custom display pattern"
+          },
+          "is-default": {
+            "title": "Default Currency"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-currency": {
+        "title": "Create Currency",
+        "description": "Create a new currency."
+      }
+    },
+    "permissions": {
+      "currency": {
+        "title": "Currencies",
+        "actions": {
+          "manage": {
+            "title": "Manage Currencies"
+          }
+        }
+      }
+    }
+  },
+  "exchange-rates": {
+    "terms": {
+      "exchange-rate": "Exchange Rate",
+      "exchange-rates": "Exchange Rates"
+    },
+    "entities": {
+      "exchange-rate": {
+        "title": "Exchange Rate",
+        "plural": "Exchange Rates",
+        "groups": {
+          "basic-info": "Basic Information",
+          "valuation": "Valuation"
+        },
+        "fields": {
+          "pair-code": {
+            "title": "Pair",
+            "placeholder": "Format: USD/EUR"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter descriptive title"
+          },
+          "base-currency": {
+            "title": "Base Currency"
+          },
+          "quote-currency": {
+            "title": "Quote Currency"
+          },
+          "method": {
+            "title": "Method",
+            "options": {
+              "manual": "Manual",
+              "market": "Market",
+              "central-bank": "Central Bank"
+            }
+          },
+          "source": {
+            "title": "Source",
+            "placeholder": "Exchange source or provider"
+          },
+          "status": {
+            "title": "Status",
+            "options": {
+              "draft": "Draft",
+              "published": "Published",
+              "expired": "Expired"
+            }
+          },
+          "rate": {
+            "title": "Rate"
+          },
+          "inverse-rate": {
+            "title": "Inverse Rate"
+          },
+          "effective-from": {
+            "title": "Effective From"
+          },
+          "effective-to": {
+            "title": "Effective To"
+          }
+        }
+      }
+    },
+    "search": {
+      "capture-exchange-rate": {
+        "title": "Create Exchange Rate",
+        "description": "Create a new exchange rate."
+      }
+    },
+    "permissions": {
+      "exchange-rate": {
+        "title": "Exchange Rates",
+        "actions": {
+          "manage": {
+            "title": "Manage Exchange Rates"
+          }
+        }
+      }
+    }
+  },
+  "taxation": {
+    "entities": {
+      "tax-class": {
+        "title": "Tax Class",
+        "plural": "Tax Classes",
+        "groups": {
+          "basic-info": "Basic Information",
+          "configuration": "Configuration"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter class code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter class title"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Describe the class"
+          },
+          "type": {
+            "title": "Type",
+            "options": {
+              "vat": "VAT",
+              "sales": "Sales",
+              "withholding": "Withholding",
+              "service": "Service"
+            }
+          },
+          "default-rate": {
+            "title": "Default Rate"
+          },
+          "is-compound": {
+            "title": "Compound Calculation"
+          },
+          "priority": {
+            "title": "Priority"
+          }
+        }
+      },
+      "tax-region": {
+        "title": "Tax Region",
+        "plural": "Tax Regions",
+        "groups": {
+          "basic-info": "Basic Information",
+          "jurisdiction": "Jurisdiction"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter region code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter region title"
+          },
+          "country-code": {
+            "title": "Country Code",
+            "placeholder": "ISO country code"
+          },
+          "region-code": {
+            "title": "Region Code",
+            "placeholder": "Optional state or province code"
+          },
+          "tax-authority": {
+            "title": "Tax Authority",
+            "placeholder": "Authority or office name"
+          },
+          "default-currency": {
+            "title": "Default Currency"
+          },
+          "is-default": {
+            "title": "Default Region"
+          }
+        }
+      },
+      "tax-rule": {
+        "title": "Tax Rule",
+        "plural": "Tax Rules",
+        "groups": {
+          "basic-info": "Basic Information",
+          "calculation": "Calculation",
+          "effectivity": "Effectivity"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter rule code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter rule title"
+          },
+          "tax-region": {
+            "title": "Tax Region"
+          },
+          "tax-class": {
+            "title": "Tax Class"
+          },
+          "priority": {
+            "title": "Priority"
+          },
+          "calculation-method": {
+            "title": "Calculation Method",
+            "options": {
+              "percentage": "Percentage",
+              "fixed": "Fixed Amount",
+              "tiered": "Tiered"
+            }
+          },
+          "rate": {
+            "title": "Rate (%)"
+          },
+          "threshold-amount": {
+            "title": "Threshold Amount"
+          },
+          "condition-summary": {
+            "title": "Conditions",
+            "placeholder": "Describe conditions or filters"
+          },
+          "effective-from": {
+            "title": "Effective From"
+          },
+          "effective-to": {
+            "title": "Effective To"
+          }
+        }
+      }
+    },
+    "search": {
+      "define-tax-rule": {
+        "title": "Create Tax Rule",
+        "description": "Create a new tax rule for regions and classes."
+      },
+      "create-tax-class": {
+        "title": "Create Tax Class",
+        "description": "Create a new tax class."
+      },
+      "create-tax-region": {
+        "title": "Create Tax Region",
+        "description": "Create a new tax region."
+      }
+    },
+    "permissions": {
+      "tax-class": {
+        "title": "Tax Classes",
+        "actions": {
+          "manage": {
+            "title": "Manage Tax Classes"
+          }
+        }
+      },
+      "tax-region": {
+        "title": "Tax Regions",
+        "actions": {
+          "manage": {
+            "title": "Manage Tax Regions"
+          }
+        }
+      },
+      "tax-rule": {
+        "title": "Tax Rules",
+        "actions": {
+          "manage": {
+            "title": "Manage Tax Rules"
+          }
+        }
+      }
+    }
+  },
+  "payments": {
+    "entities": {
+      "payment-term": {
+        "title": "Payment Term",
+        "plural": "Payment Terms",
+        "groups": {
+          "basic-info": "Basic Information",
+          "schedule": "Schedule"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter term code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter term title"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Describe payment term"
+          },
+          "net-due-days": {
+            "title": "Net Due Days"
+          },
+          "discount-percent": {
+            "title": "Discount Percent"
+          },
+          "discount-days": {
+            "title": "Discount Days"
+          },
+          "grace-period-days": {
+            "title": "Grace Period Days"
+          },
+          "auto-renew": {
+            "title": "Auto Renew"
+          }
+        }
+      },
+      "payment-method": {
+        "title": "Payment Method",
+        "plural": "Payment Methods",
+        "groups": {
+          "basic-info": "Basic Information",
+          "capabilities": "Capabilities"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter method code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter method title"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Describe payment method"
+          },
+          "type": {
+            "title": "Type",
+            "options": {
+              "cash": "Cash",
+              "bank": "Bank Transfer",
+              "card": "Card",
+              "digital": "Digital Wallet"
+            }
+          },
+          "provider": {
+            "title": "Provider",
+            "placeholder": "Enter provider or bank"
+          },
+          "integration-type": {
+            "title": "Integration Type",
+            "options": {
+              "manual": "Manual",
+              "api": "API",
+              "file": "File Upload"
+            }
+          },
+          "fee-percent": {
+            "title": "Fee Percent"
+          },
+          "settlement-time-days": {
+            "title": "Settlement Days"
+          },
+          "supports-refunds": {
+            "title": "Supports Refunds"
+          },
+          "supports-recurring": {
+            "title": "Supports Recurring"
+          },
+          "instructions": {
+            "title": "Instructions",
+            "placeholder": "Optional payment instructions"
+          }
+        }
+      }
+    },
+    "search": {
+      "add-payment-method": {
+        "title": "Create Payment Method",
+        "description": "Create a new payment method."
+      },
+      "create-payment-term": {
+        "title": "Create Payment Term",
+        "description": "Create a new payment term."
+      }
+    },
+    "permissions": {
+      "payment-term": {
+        "title": "Payment Terms",
+        "actions": {
+          "manage": {
+            "title": "Manage Payment Terms"
+          }
+        }
+      },
+      "payment-method": {
+        "title": "Payment Methods",
+        "actions": {
+          "manage": {
+            "title": "Manage Payment Methods"
+          }
+        }
+      }
+    }
+  },
+  "calendars": {
+    "entities": {
+      "fiscal-calendar": {
+        "title": "Fiscal Calendar",
+        "plural": "Fiscal Calendars",
+        "groups": {
+          "basic-info": "Basic Information",
+          "timeline": "Timeline",
+          "controls": "Controls"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter calendar code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter calendar title"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Describe fiscal calendar"
+          },
+          "fiscal-year": {
+            "title": "Fiscal Year"
+          },
+          "start-date": {
+            "title": "Start Date"
+          },
+          "end-date": {
+            "title": "End Date"
+          },
+          "template-calendar": {
+            "title": "Template Calendar",
+            "placeholder": "Reference calendar identifier"
+          },
+          "closing-periods": {
+            "title": "Closing Periods"
+          },
+          "status": {
+            "title": "Status",
+            "options": {
+              "draft": "Draft",
+              "open": "Open",
+              "closed": "Closed"
+            }
+          },
+          "is-locked": {
+            "title": "Locked"
+          },
+          "is-default": {
+            "title": "Default Calendar"
+          }
+        }
+      }
+    },
+    "search": {
+      "publish-fiscal-calendar": {
+        "title": "Create Fiscal Calendar",
+        "description": "Create a new fiscal calendar."
+      }
+    },
+    "permissions": {
+      "fiscal-calendar": {
+        "title": "Fiscal Calendars",
+        "actions": {
+          "manage": {
+            "title": "Manage Fiscal Calendars"
+          },
+          "view": {
+            "title": "View Fiscal Calendars"
+          },
+          "create": {
+            "title": "Create Fiscal Calendars"
+          },
+          "update": {
+            "title": "Update Fiscal Calendars"
+          },
+          "delete": {
+            "title": "Delete Fiscal Calendars"
+          }
+        }
+      }
+    }
+  },
+  "dimensions": {
+    "entities": {
+      "financial-dimension": {
+        "title": "Financial Dimension",
+        "plural": "Financial Dimensions",
+        "groups": {
+          "basic-info": "Basic Information",
+          "hierarchy": "Hierarchy"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter dimension code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter dimension title"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Describe the dimension"
+          },
+          "dimension-type": {
+            "title": "Dimension Type",
+            "options": {
+              "cost-center": "Cost Center",
+              "profit-center": "Profit Center",
+              "project": "Project",
+              "product": "Product",
+              "region": "Region"
+            }
+          },
+          "parent": {
+            "title": "Parent Dimension"
+          },
+          "display-order": {
+            "title": "Display Order"
+          },
+          "is-leaf": {
+            "title": "Leaf Node"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-financial-dimension": {
+        "title": "Create Financial Dimension",
+        "description": "Create a new financial dimension."
+      }
+    },
+    "permissions": {
+      "financial-dimension": {
+        "title": "Financial Dimensions",
+        "actions": {
+          "manage": {
+            "title": "Manage Financial Dimensions"
+          }
+        }
+      }
+    }
+  }
+}

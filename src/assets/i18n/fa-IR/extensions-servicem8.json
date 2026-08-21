@@ -1,0 +1,149 @@
+{
+  "module": {
+    "title": "ServiceM8",
+    "description": "اتصال ServiceM8 و همگام‌سازی کارها با پروژه‌های پلتفرم",
+    "menus": {
+      "configuration": {
+        "title": "ServiceM8"
+      }
+    }
+  },
+  "integration": {
+    "display-name": "ServiceM8",
+    "description": "اتصال به ServiceM8 برای مدیریت کار و همگام‌سازی پروژه.",
+    "badges": {
+      "last-sync": "آخرین همگام‌سازی: {{datetime}}",
+      "never-synced": "هنوز همگام‌سازی نشده"
+    },
+    "auth": {
+      "client-credentials": {
+        "label": "اعتبارنامه کلاینت",
+        "instructions": "آدرس Build، شناسه شرکت و client ID و client secret از فایل کلید برنامه ServiceM8 را وارد کنید. سرور با grant اعتبارنامه کلاینت OAuth2 توکن دسترسی دریافت می‌کند.",
+        "client-id": {
+          "label": "شناسه برنامه",
+          "placeholder": "App ID سرویس‌ام۸ را وارد کنید"
+        },
+        "client-secret": {
+          "label": "رمز برنامه",
+          "placeholder": "App Secret سرویس‌ام۸ را وارد کنید"
+        }
+      },
+      "oauth": {
+        "label": "OAuth 2.0",
+        "instructions": "شناسه برنامه (App ID) و رمز برنامه (App Secret) را از افزونه توسعه‌دهنده ServiceM8 وارد کنید. پس از ذخیره، برای ورود و مجوزدهی به ServiceM8 هدایت می‌شوید. توکن‌ها به‌صورت خودکار ذخیره و تازه‌سازی می‌شوند.",
+        "client-id": {
+          "label": "شناسه برنامه",
+          "placeholder": "App ID سرویس‌ام۸ را وارد کنید"
+        },
+        "client-secret": {
+          "label": "رمز برنامه",
+          "placeholder": "App Secret سرویس‌ام۸ را وارد کنید"
+        }
+      }
+    },
+    "connect": {
+      "instructions": "<p><strong>شناسه برنامه (App ID)</strong> و <strong>رمز برنامه (App Secret)</strong> را از افزونه توسعه‌دهنده ServiceM8 وارد کنید. پس از ذخیره، برای ورود و مجوزدهی به ServiceM8 هدایت می‌شوید. توکن‌ها به‌صورت خودکار ذخیره و تازه‌سازی می‌شوند.</p>",
+      "dialog": {
+        "title": "اتصال ServiceM8",
+        "reconfigure-title": "پیکربندی مجدد ServiceM8"
+      },
+      "fields": {
+        "display-name": "نام نمایشی"
+      },
+      "placeholders": {
+        "display-name": "ServiceM8"
+      },
+      "actions": {
+        "save": "ذخیره اتصال",
+        "save-and-authorize": "ذخیره و تأیید دسترسی"
+      }
+    }
+  },
+  "permissions": {
+    "group": {
+      "title": "ServiceM8",
+      "description": "پیکربندی یکپارچه‌سازی ServiceM8 و پیوندهای Job"
+    },
+    "management": {
+      "title": "مدیریت ServiceM8",
+      "description": "دسترسی کامل به پیکربندی ServiceM8"
+    },
+    "servicem8-project": {
+      "view": {
+        "title": "مشاهده پیوندهای Job"
+      },
+      "create": {
+        "title": "ایجاد پیوند Job"
+      },
+      "update": {
+        "title": "ویرایش پیوند Job"
+      },
+      "delete": {
+        "title": "حذف پیوند Job"
+      }
+    },
+    "catalog": {
+      "view": {
+        "title": "مشاهده پیکربندی ServiceM8"
+      }
+    },
+    "project-import": {
+      "execute": {
+        "title": "ورود Job از ServiceM8"
+      }
+    },
+    "project-sync": {
+      "execute": {
+        "title": "همگام‌سازی پروژه با ServiceM8"
+      }
+    }
+  },
+  "actions": {
+    "import-from-servicem8": {
+      "title": "ورود از ServiceM8"
+    },
+    "sync": {
+      "title": "همگام‌سازی"
+    }
+  },
+  "import": {
+    "not-connected": {
+      "title": "برای وارد کردن Jobها ServiceM8 را متصل کنید",
+      "message": "ServiceM8 برای این tenant متصل نیست. برای اتصال حساب، مدیریت ← یکپارچه‌سازی‌ها را باز کنید و دوباره وارد کردن را امتحان کنید."
+    },
+    "success-single": "«{{title}}» از ServiceM8 وارد شد.",
+    "selector": {
+      "title": "انتخاب Job از ServiceM8",
+      "pull-jobs": "دریافت Jobها"
+    },
+    "dialog": {
+      "title": "ورود Job از ServiceM8",
+      "submit": "ورود Job"
+    },
+    "loading": {
+      "fetch": {
+        "title": "بارگذاری از ServiceM8",
+        "status": "در حال کشیدن Jobها به حافظه…"
+      },
+      "import": {
+        "title": "ورود Job",
+        "status": "در حال ایجاد پروژه پلتفرم…"
+      }
+    },
+    "sync-strategy": {
+      "title": "استراتژی همگام‌سازی",
+      "options": {
+        "remoteOverride": "ریموت بر محلی اولویت دارد",
+        "localOverride": "مقادیر محلی حفظ شود",
+        "merge": "ادغام (پر کردن فیلدهای خالی محلی)"
+      }
+    }
+  },
+  "sync": {
+    "success": "پروژه با موفقیت با ServiceM8 همگام‌سازی شد.",
+    "loading": {
+      "title": "همگام‌سازی با ServiceM8",
+      "status": "در حال به‌روزرسانی پروژه از ServiceM8…"
+    }
+  }
+}

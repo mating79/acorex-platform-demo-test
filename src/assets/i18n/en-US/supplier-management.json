@@ -1,0 +1,115 @@
+{
+  "module": {
+    "title": "Supplier Management",
+    "description": "Manage suppliers and supplier relationships",
+    "menus": {
+      "root": {
+        "title": "Supplier Management",
+        "description": "Manage all supplier-related information"
+      }
+    }
+  },
+  "suppliers": {
+    "terms": {
+      "supplier": "Supplier",
+      "suppliers": "Suppliers"
+    },
+    "entities": {
+      "supplier": {
+        "title": "Supplier",
+        "plural": "Suppliers",
+        "fields": {
+          "supplier-code": {
+            "title": "Supplier Code",
+            "description": "Unique supplier identifier code",
+            "placeholder": "Enter supplier code"
+          },
+          "person": {
+            "title": "Person",
+            "description": "Associated person information",
+            "placeholder": "Select person"
+          },
+          "supplier-type": {
+            "title": "Type",
+            "description": "Type classification",
+            "placeholder": "Select type"
+          },
+          "segment": {
+            "title": "Segment",
+            "description": "Segment classification",
+            "placeholder": "Select segment"
+          },
+          "since": {
+            "title": "Supplier Since",
+            "description": "Date supplier relationship began",
+            "placeholder": "Select date"
+          },
+          "is-preferred": {
+            "title": "Preferred Supplier",
+            "description": "Preferred supplier status"
+          },
+          "rating": {
+            "title": "Rating",
+            "description": "Supplier performance rating (0-5)",
+            "placeholder": "Enter rating"
+          },
+          "payment-terms": {
+            "title": "Payment Terms",
+            "description": "Default payment terms for this supplier",
+            "placeholder": "Select payment terms"
+          },
+          "default-currency": {
+            "title": "Default Currency",
+            "description": "Default currency for transactions with this supplier",
+            "placeholder": "Select currency"
+          },
+          "purchasing-manager": {
+            "title": "Purchasing Manager",
+            "description": "Assigned purchasing manager",
+            "placeholder": "Select purchasing manager"
+          }
+        },
+        "groups": {
+          "profile": "Profile",
+          "basic-info": "Basic Information",
+          "supplier-profile": "Supplier Profile",
+          "financial-info": "Financial Information",
+          "additional-info": "Additional Information"
+        },
+        "components": {
+          "meta-data-form": {
+            "title": "Additional Information"
+          }
+        }
+      }
+    }
+  },
+  "permissions": {
+    "supplier-management": {
+      "manage": { "title": "Supplier Management" },
+      "supplier": {
+        "manage": {
+          "title": "Manage Suppliers",
+          "description": "Full supplier management access"
+        },
+        "view": {
+          "title": "View Suppliers",
+          "description": "View supplier information"
+        },
+        "create": {
+          "title": "Create Supplier",
+          "description": "Create new suppliers"
+        },
+        "update": {
+          "title": "Update Supplier",
+          "description": "Update supplier information"
+        },
+        "delete": {
+          "title": "Delete Suppliers",
+          "description": "Delete suppliers"
+        }
+      }
+    }
+  }
+}
+

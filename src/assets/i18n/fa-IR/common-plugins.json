@@ -1,0 +1,90 @@
+{
+  "feature": {
+    "title": "افزونه‌های مشترک",
+    "description": "افزونه‌های موجودیت در سراسر پلتفرم"
+  },
+  "history": {
+    "title": "تاریخچه",
+    "description": "تاریخچه نسخه و ردپای حسابرسی"
+  },
+  "lock": {
+    "title": "قفل",
+    "description": "قفل برای جلوگیری از ویرایش همزمان"
+  },
+  "compare": {
+    "title": "مقایسه",
+    "description": "مقایسه نسخه‌ها و بازیابی"
+  },
+  "comments": {
+    "title": "نظرات",
+    "description": "نظرات و یادداشت روی رکوردها",
+    "options": {
+      "display": {
+        "title": "نمایش",
+        "description": "بخش (درون‌خطی) یا صفحه (زبانه جدا)"
+      },
+      "icon": {
+        "title": "آیکون",
+        "description": "آیکون صفحه نظرات"
+      },
+      "title": {
+        "title": "عنوان",
+        "description": "عنوان جایگزین برای بخش/صفحه نظرات"
+      }
+    }
+  },
+  "distribution": {
+    "title": "توزیع",
+    "description": "تنظیمات توزیع و هم‌رسانی"
+  },
+  "status": {
+    "title": "وضعیت",
+    "description": "مدیریت چرخه حیات وضعیت",
+    "options": {
+      "field": {
+        "title": "فیلد",
+        "description": "نام فیلد وضعیت در موجودیت"
+      },
+      "definition": {
+        "title": "تعریف",
+        "description": "کلید تعریف وضعیت (مثلاً common.status.task)"
+      },
+      "generate": {
+        "title": "تولید",
+        "description": "پیکربندی تولید نما (views.enabled)"
+      }
+    }
+  },
+  "policy": {
+    "title": "سیاست",
+    "description": "سیاست و کنترل دسترسی",
+    "options": {
+      "policy": {
+        "title": "سیاست",
+        "description": "شناسه سیاست"
+      }
+    }
+  },
+  "workflow": {
+    "title": "گردش کار",
+    "description": "گردش کار و فرآیند تأیید"
+  },
+  "documents": {
+    "title": "اسناد",
+    "description": "پیوست‌ها و انواع سند",
+    "options": {
+      "title": {
+        "title": "عنوان",
+        "description": "عنوان جایگزین صفحه"
+      },
+      "icon": {
+        "title": "آیکون",
+        "description": "آیکون جایگزین صفحه"
+      },
+      "documentTypeNames": {
+        "title": "انواع سند",
+        "description": "نام‌های مجاز نوع سند (محدودکننده ایجاد/آپلود)"
+      }
+    }
+  }
+}

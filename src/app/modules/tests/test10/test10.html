@@ -1,0 +1,196 @@
+<section class="axp-test10">
+  <header class="__header">
+    <h1 class="__title">{{ '@layout:components.file-chooser.test10.page-title' | translate | async }}</h1>
+    <p class="__description">{{ '@layout:components.file-chooser.test10.page-description' | translate | async }}</p>
+  </header>
+
+  <div class="__layout">
+    <div class="__panel">
+      <div class="__card lightest-surface">
+        <div class="__section">
+          <div class="__section-header">
+            <span class="__step">1</span>
+            <div class="__section-text">
+              <h2 class="__section-title">{{ '@layout:components.file-chooser.test10.sections.choose' | translate | async }}</h2>
+              <p class="__section-subtitle">
+                {{ '@layout:components.file-chooser.test10.sections.choose-hint' | translate | async }}
+              </p>
+              <p class="__section-note">
+                {{ '@layout:components.file-chooser.test10.sections.choose-hooks-hint' | translate | async }}
+              </p>
+            </div>
+          </div>
+
+          <ax-button
+            axpFileChooser
+            color="primary"
+            look="solid"
+            [text]="'@layout:components.file-chooser.test10.actions.choose-files' | translate | async"
+            [context]="createChooserContext()"
+            [items]="chooserItems()"
+            [busy]="isChoosing()"
+            (itemsChange)="onChooserItems($event)"
+            (busyChange)="isChoosing.set($event)"
+          >
+            <ax-prefix>
+              <ax-icon icon="fa-light fa-folder-open"></ax-icon>
+            </ax-prefix>
+          </ax-button>
+        </div>
+
+        <div class="__divider"></div>
+
+        <div class="__section">
+          <div class="__section-header">
+            <span class="__step">2</span>
+            <div class="__section-text">
+              <h2 class="__section-title">{{ '@layout:components.file-chooser.test10.sections.selected-files' | translate | async }}</h2>
+              @if (chooserItems().length) {
+                <p class="__section-subtitle">
+                  {{ '@layout:components.file-chooser.test10.sections.selected-count' | translate: { params: { count: chooserItems().length } } | async }}
+                </p>
+              }
+            </div>
+          </div>
+
+          @if (chooserItems().length) {
+            <ul class="__file-list">
+              @for (item of chooserItems(); track trackChooserItem(item)) {
+                <li class="__file-item">
+                  <span class="__file-icon" [class]="fileIconClass(extensionFromName(item.name))">
+                    <ax-icon [icon]="fileIcon(extensionFromName(item.name))"></ax-icon>
+                  </span>
+                  <div class="__file-meta">
+                    <span class="__file-name">{{ item.name }}</span>
+                    <span class="__file-details">
+                      <span class="__badge">{{ extensionFromName(item.name) || 'file' | uppercase }}</span>
+                      <span class="__file-size">{{ formatFileSize(item.size) }}</span>
+                    </span>
+                  </div>
+                  <!-- ----- Download chosen file ----- -->
+                  @if (canDownloadItem(item)) {
+                    <ax-button
+                      class="__file-action"
+                      color="default"
+                      look="blank"
+                      [title]="'@layout:components.file-chooser.test10.actions.download' | translate | async"
+                      (onClick)="downloadItem(item)"
+                    >
+                      <ax-icon icon="fa-light fa-download"></ax-icon>
+                    </ax-button>
+                  }
+                </li>
+              }
+            </ul>
+          } @else {
+            <div class="__empty lighter-surface">
+              <ax-icon class="__empty-icon" icon="fa-light fa-file-circle-plus"></ax-icon>
+              <p>{{ '@layout:components.file-chooser.test10.sections.chosen-empty' | translate | async }}</p>
+            </div>
+          }
+        </div>
+
+        <div class="__divider"></div>
+
+        <div class="__section">
+          <div class="__section-header">
+            <span class="__step">3</span>
+            <div class="__section-text">
+              <h2 class="__section-title">{{ '@layout:components.file-uploader.test10.sections.upload' | translate | async }}</h2>
+              <p class="__section-subtitle">
+                {{ '@layout:components.file-uploader.test10.sections.upload-hint' | translate | async }}
+              </p>
+            </div>
+          </div>
+
+          <ax-button
+            axpFileUploader
+            color="primary"
+            look="outline"
+            [text]="'@layout:components.file-uploader.test10.actions.upload-files' | translate | async"
+            [context]="createUploaderContext()"
+            [disabled]="!canUpload()"
+            [uploaded]="uploaderItems()"
+            [busy]="isUploading()"
+            (uploadedChange)="onUploaded($event)"
+            (busyChange)="isUploading.set($event)"
+          >
+            <ax-prefix>
+              <ax-icon icon="fa-light fa-cloud-arrow-up"></ax-icon>
+            </ax-prefix>
+          </ax-button>
+
+          @if (isUploading()) {
+            <div class="__upload-progress primary-surface">
+              <ax-loading></ax-loading>
+              <span>{{ '@layout:components.file-uploader.test10.sections.uploading' | translate | async }}</span>
+            </div>
+          }
+        </div>
+
+        @if (uploaderItems().length || uploadFinished()) {
+          <div class="__divider"></div>
+
+          <div class="__section">
+            <div class="__section-header">
+              <span class="__step __step--success">
+                <ax-icon icon="fa-solid fa-check"></ax-icon>
+              </span>
+              <div class="__section-text">
+                <h2 class="__section-title">{{ '@layout:components.file-uploader.test10.sections.upload-result' | translate | async }}</h2>
+              </div>
+            </div>
+
+            <ul class="__file-list">
+              @for (item of uploaderItems(); track trackUploadedItem(item)) {
+                <li class="__file-item __file-item--uploaded">
+                  <span class="__file-icon" [class]="fileIconClass(extensionFromName(item.name))">
+                    <ax-icon [icon]="fileIcon(extensionFromName(item.name))"></ax-icon>
+                  </span>
+                  <div class="__file-meta">
+                    <span class="__file-name">{{ item.name }}</span>
+                    <span class="__file-details">
+                      @if (item.size) {
+                        <span class="__file-size">{{ formatFileSize(item.size) }}</span>
+                      }
+                      <span class="__status" [class]="statusClass(item.status)">
+                        {{ statusLabel(item.status) | translate | async }}
+                      </span>
+                    </span>
+                  </div>
+                  <!-- ----- Download uploaded file ----- -->
+                  @if (canDownloadItem(item)) {
+                    <ax-button
+                      class="__file-action"
+                      color="default"
+                      look="blank"
+                      [title]="'@layout:components.file-uploader.test10.actions.download' | translate | async"
+                      (onClick)="downloadItem(item)"
+                    >
+                      <ax-icon icon="fa-light fa-download"></ax-icon>
+                    </ax-button>
+                  }
+                </li>
+              }
+            </ul>
+          </div>
+        }
+      </div>
+    </div>
+
+    <aside class="__panel">
+      <div class="__widget-card lightest-surface">
+        <div class="__widget-header">
+          <h2 class="__section-title">{{ '@layout:components.file-uploader.test10.sections.widget-panel-title' | translate | async }}</h2>
+          <p class="__section-subtitle">
+            {{ '@layout:components.file-uploader.test10.sections.widget-panel-hint' | translate | async }}
+          </p>
+        </div>
+
+        <axp-widgets-container [context]="widgetContext()" (onContextChanged)="onWidgetContextChanged($event)">
+          <ng-container axp-widget-renderer [node]="fileUploaderWidgetNode()" [mode]="'edit'"></ng-container>
+        </axp-widgets-container>
+      </div>
+    </aside>
+  </div>
+</section>

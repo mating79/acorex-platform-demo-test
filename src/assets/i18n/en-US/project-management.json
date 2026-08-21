@@ -1,0 +1,306 @@
+{
+  "module": {
+    "title": "Project Management",
+    "description": "Manage projects, tasks and resources",
+    "menus": {
+      "root": {
+        "title": "Project Management",
+        "description": "Manage projects, tasks and resources"
+      }
+    },
+    "permissions": {
+      "title": "Project Management",
+      "description": "Access project management features",
+      "project": {
+        "manage": {
+          "title": "Project management",
+          "description": "View and manage projects"
+        }
+      },
+      "project-type": {
+        "manage": {
+          "title": "Project type management",
+          "description": "Configure project types"
+        }
+      }
+    }
+  },
+  "projects": {
+    "terms": {
+      "title": "Project",
+      "plural": "Projects",
+      "projectName": "Title",
+      "projectNo": "Project No",
+      "description": "Description",
+      "projectTypeId": "Project Type",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "duedate": "Due Date",
+      "actualStartDate": "Actual Start",
+      "actualEndDate": "Actual End",
+      "projectWeight": "Project Weight",
+      "customerId": "Customer",
+      "location": "Location",
+      "locationAssignmentId": "Location"
+    },
+    "groups": {
+      "basic-information": "Basic Information",
+      "organization-parties": "Organization / Parties",
+      "schedule": "Schedule",
+      "project-status": "Project Status",
+      "customer-profile": "Customer Profile"
+    },
+    "project-types": {
+      "title": "Project Type",
+      "plural": "Project Types"
+    },
+    "project-type-categories": {
+      "title": "Project Type Category",
+      "plural": "Project Type Categories"
+    },
+    "project-type-allowed-task-types": {
+      "title": "Allowed Task Type",
+      "plural": "Allowed Task Types"
+    },
+    "project-type-role-types": {
+      "title": "Role Type",
+      "plural": "Role Types",
+      "projectTypeId": "Project Type",
+      "description": "Description"
+    },
+    "task-type": {
+      "individual-title": "Task Type",
+      "plural-title": "Task Types",
+      "configuration": "Configuration",
+      "allowed-context-types": "Allowed Context Types",
+      "form-template": "Form Template",
+      "features": {
+        "title": "Features",
+        "fields": {
+          "title": {
+            "title": "Title",
+            "description": "Task type title",
+            "placeholder": "Enter title"
+          },
+          "description": {
+            "title": "Description"
+          },
+          "default-status": "Default Status"
+        }
+      }
+    },
+    "project-members": {
+      "title": "Member",
+      "plural": "Members",
+      "emlployeeId": "Member",
+      "projectTypeRoleTypeId": "Role"
+    },
+    "tasks": {
+      "title": "Task",
+      "plural": "Tasks",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "parentTaskId": "Parent Task",
+      "supervisorId": "Supervisor",
+      "referenceType": "Reference Type",
+      "referenceId": "referenceId"
+    },
+    "search-commands": {
+      "create-project": {
+        "title": "Create Project",
+        "description": "Create a new project"
+      },
+      "create-project-type": {
+        "title": "Create Project Type",
+        "description": "Create a new project type"
+      }
+    },
+    "entities": {
+      "project": {
+        "components": {
+          "meta-data-form": {
+            "title": "Type-Specific Fields"
+          }
+        },
+        "related-entities": {
+          "task-start": {
+            "title": "Start Task"
+          }
+        }
+      }
+    },
+    "messages": {
+      "task-type-not-configured": "This task type has no workflow configured.",
+      "date-on-or-after-start-date": "Must be on or after the start date.",
+      "date-on-or-after-actual-start-date": "Must be on or after the actual start date."
+    },
+    "site-inspection": {
+      "setup": {
+        "title": "Start Site Inspection",
+        "questionnaire": "Questionnaire",
+        "assignee": "Assign To",
+        "sign-offs": "Sign-Off Reviewers (optional)",
+        "sign-off-help": "Select one or more managers or supervisors. Order is preserved for sequential review. Leave empty to skip sign-off."
+      },
+      "tasks": {
+        "board-title": "Site Inspection",
+        "conduct": {
+          "description": "Open the questionnaire and complete it on site. Use Save as draft in the questionnaire to continue later."
+        },
+        "sign-off": {
+          "description": "Review the submitted questionnaire, then sign off or reject."
+        },
+        "actions": {
+          "open-questionnaire": "Open Questionnaire",
+          "review": "Review"
+        }
+      },
+      "messages": {
+        "setup-cancelled": "Site inspection setup was cancelled.",
+        "setup-failed": "Could not start site inspection. Check questionnaire, assignee, and project members.",
+        "sign-off": "Sign off this site inspection before it can be closed.",
+        "rejection": "Reject this site inspection and provide a reason.",
+        "completed": "Site inspection completed.",
+        "rejected": "Site inspection was rejected during sign-off review."
+      }
+    },
+    "toolbox-talk": {
+      "setup": {
+        "title": "Start Toolbox Talk",
+        "questionnaire": "Questionnaire",
+        "assignee": "Assign To",
+        "sign-offs": "Sign-Off Reviewers (optional)",
+        "sign-off-help": "Select one or more managers or supervisors. Order is preserved for sequential review. Leave empty to skip sign-off."
+      },
+      "tasks": {
+        "board-title": "Toolbox Talk",
+        "conduct": {
+          "description": "Open the questionnaire and complete the toolbox talk. Use Save as draft in the questionnaire to continue later."
+        },
+        "sign-off": {
+          "description": "Review the submitted questionnaire, then sign off or reject."
+        },
+        "actions": {
+          "open-questionnaire": "Open Questionnaire",
+          "review": "Review"
+        }
+      },
+      "messages": {
+        "setup-cancelled": "Toolbox talk setup was cancelled.",
+        "setup-failed": "Could not start toolbox talk. Check questionnaire, assignee, and project members.",
+        "sign-off": "Sign off this toolbox talk before it can be closed.",
+        "rejection": "Reject this toolbox talk and provide a reason.",
+        "completed": "Toolbox talk completed.",
+        "rejected": "Toolbox talk was rejected during sign-off review."
+      }
+    },
+    "job-doc": {
+      "setup": {
+        "title": "Start Job Doc",
+        "questionnaire": "Questionnaire",
+        "assignee": "Assign To",
+        "sign-offs": "Sign-Off Reviewers (optional)",
+        "sign-off-help": "Select one or more managers or supervisors. Order is preserved for sequential review. Leave empty to skip sign-off."
+      },
+      "tasks": {
+        "board-title": "Job Doc",
+        "conduct": {
+          "description": "Open the questionnaire and complete it. Use Save as draft in the questionnaire to continue later."
+        },
+        "sign-off": {
+          "description": "Review the submitted questionnaire, then sign off or reject."
+        },
+        "actions": {
+          "open-questionnaire": "Open Questionnaire",
+          "review": "Review"
+        }
+      },
+      "messages": {
+        "setup-cancelled": "Job doc setup was cancelled.",
+        "setup-failed": "Could not start job doc. Check questionnaire, assignee, and project members.",
+        "sign-off": "Sign off this job doc before it can be closed.",
+        "rejection": "Reject this job doc and provide a reason.",
+        "completed": "Job doc completed.",
+        "rejected": "Job doc was rejected during sign-off review."
+      }
+    },
+    "swms": {
+      "setup": {
+        "title": "Start SWMS Completion",
+        "safety-plan": "Published SWMS Safety Plan",
+        "safety-plan-help": "Choose a published SWMS plan to copy into this job.",
+        "assignee": "Assign To",
+        "sign-offs": "Sign-Off Users (Optional)",
+        "sign-off-help": "Select managers or supervisors for sequential sign-off. Leave empty to skip to completion after lock.",
+        "add-sign-off-help": "Add more managers or supervisors to the sign-off queue."
+      },
+      "tasks": {
+        "board-title": "SWMS",
+        "draft": {
+          "description": "Complete or edit the job SWMS while it is in Draft. Save Draft to continue later, Submit to keep working, or Lock when ready for sign-off."
+        },
+        "locked": {
+          "description": "This SWMS is locked. Return it for modification or start sign-off."
+        },
+        "sign-off": {
+          "description": "Read and sign this SWMS, return it for modification, add signatories, or reassign."
+        },
+        "complete": {
+          "description": "All required sign-offs are done. Complete the job to archive, or add more signatories."
+        },
+        "return-reason": "Return Reason",
+        "actions": {
+          "save-draft": "Save Draft",
+          "submit": "Submit",
+          "lock": "Lock",
+          "return-for-modification": "Return for Modification",
+          "sign-off": "Sign Off",
+          "add-sign-off-user": "Add Sign-Off User",
+          "add-more-signatures": "Add More Signatures",
+          "reassign": "Reassign",
+          "complete-job": "Complete Job"
+        }
+      },
+      "messages": {
+        "setup-cancelled": "SWMS setup was cancelled.",
+        "setup-failed": "Could not start SWMS. Check the published plan, assignee, and project members.",
+        "sign-off": "Sign off this SWMS before it can be archived.",
+        "completed": "SWMS job completed and archived."
+      }
+    },
+    "catalog-scopes": {
+      "pm": {
+        "title": "Project management",
+        "description": "Workflows and catalogs for project tasks"
+      }
+    },
+    "meeting-participants": {
+      "states": {
+        "initial": "Initial"
+      }
+    }
+  },
+  "categories": {
+    "terms": {
+      "category": "Category",
+      "categories": "Categories"
+    },
+    "menus": {
+      "categories": {
+        "title": "Categories",
+        "description": "Manage project categories"
+      }
+    },
+    "entities": {
+      "project-management": {
+        "title": "Category",
+        "plural": "Categories",
+        "fields": {
+          "parent": {
+            "title": "Parent Category"
+          }
+        }
+      }
+    }
+  }
+}

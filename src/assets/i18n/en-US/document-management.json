@@ -1,0 +1,475 @@
+{
+  "module": {
+    "title": "Document Management",
+    "description": "Manage documents, folders, and file types"
+  },
+  "features": {
+    "max-size-storage": {
+      "title": "Max Size Storage",
+      "description": "Maximum storage size limit for documents (in bytes)"
+    }
+  },
+  "entities": {
+    "document": {
+      "title": "Document",
+      "title-plural": "Documents",
+      "description": "A document or file in the system",
+      "search-result-description": "Document and file information",
+      "fields": {
+        "document-type": { "title": "Document Type" },
+        "file-info": { "title": "File Info" },
+        "expiration-date": { "title": "Expiration Date" },
+        "status": { "title": "Status" },
+        "version": { "title": "Version" },
+        "meta-data-form": { "title": "Metadata Form" },
+        "ref-type": { "title": "Reference Type" },
+        "ref-id": { "title": "Reference Id" }
+      }
+    },
+    "documents": {
+      "title": "Documents",
+      "title-plural": "Documents"
+    },
+    "document-type": {
+      "title": "Document Type",
+      "title-plural": "Document Types",
+      "description": "Configuration for document types",
+      "search-result-description": "Document type and classification configuration"
+    },
+    "document-types": {
+      "title": "Document Types",
+      "title-plural": "Document Types"
+    },
+    "document-type-meta": {
+      "title": "Document Type Meta",
+      "title-plural": "Document Type Meta",
+      "description": "Metadata definition for document types"
+    },
+    "document-type-meta-value": {
+      "title": "Document Type Meta Value",
+      "title-plural": "Document Type Meta Values",
+      "description": "Metadata values for documents"
+    },
+    "document-type-status": {
+      "title": "Document Type Status",
+      "title-plural": "Document Type Statuses",
+      "description": "Status definitions for document types"
+    },
+    "review": {
+      "title": "Review",
+      "title-plural": "Reviews",
+      "description": "Document review records"
+    },
+    "reviews": {
+      "title": "Reviews",
+      "title-plural": "Reviews"
+    },
+    "folder": {
+      "title": "Folder",
+      "title-plural": "Folders",
+      "description": "A folder containing documents and other folders",
+      "search-result-description": "Document folder and storage location",
+      "fields": {
+        "inherit": { "title": "Inherit" },
+        "size": { "title": "Size" },
+        "children-count": { "title": "Children Count" },
+        "items-count": { "title": "Items Count" },
+        "expired-items-count": { "title": "Expired Items Count" },
+        "near-expiry-items-count": { "title": "Near Expiry Items Count" },
+        "document-types": { "title": "Document Types" },
+        "ref-type": { "title": "Reference Type" },
+        "ref-id": { "title": "Reference Id" }
+      }
+    },
+    "folders": {
+      "title": "Folders",
+      "title-plural": "Folders"
+    },
+    "document-shortcut": {
+      "title": "Shortcut",
+      "title-plural": "Shortcuts",
+      "fields": {
+        "folder": { "title": "Folder" },
+        "target-document": { "title": "Target Document" },
+        "target-folder": { "title": "Target Folder" }
+      }
+    }
+  },
+  "terms": {
+    "common": {
+      "type": "Type",
+      "file": "File",
+      "files": "Files",
+      "version": "Version",
+      "size": "Size",
+      "status": "Status",
+      "comment": "Comment",
+      "reviewer": "Reviewer",
+      "meta-data": "Meta Data",
+      "management": "Management",
+      "gallery": "Gallery",
+      "inherited": "Inherited",
+      "attachments": "Attachments",
+      "documents": "Documents",
+      "documents-description": "{{ count }} items, {{ size }} used",
+      "folders": "Folders"
+    },
+    "workflow": {
+      "draft": "Draft",
+      "pending": "Pending",
+      "approved": "Approved",
+      "approve": "Approve",
+      "rejected": "Rejected",
+      "reviewed": "Reviewed",
+      "completed": "Completed",
+      "pending-review": "Pending Review"
+    },
+    "timestamps": {
+      "reviewed-at": "Reviewed At",
+      "modified-at": "Modified At",
+      "modified-by": "Modified By",
+      "viewed-at": "Viewed At",
+      "signed-at": "Signed At"
+    },
+    "interactions": {
+      "has-viewed": "Has Viewed",
+      "has-signed": "Has Signed",
+      "viewed-count": "Viewed Count",
+      "signed-count": "Signed Count"
+    },
+    "document": {
+      "document-id": "Document",
+      "file-name": "File Name",
+      "enter-file-name": "Enter file name",
+      "max-size": "Max Size",
+      "is-encrypted": "Is Encrypted",
+      "enable-versioning": "Enable Versioning",
+      "enable-expiration": "Enable Expiration",
+      "expiration-date": "Expiration Date",
+      "expire-date": "Expire Date",
+      "requires-review": "Requires Review",
+      "expiration-badge": {
+        "expired": "Expired",
+        "expiring-soon": "Expiring Soon",
+        "expired-tooltip": "This document expired on {{date}}.",
+        "expiring-soon-tooltip": "This document expires on {{date}}."
+      },
+      "folder-expiration-badge": {
+        "expired": "{{count}} Expired",
+        "expiring-soon": "{{count}} Expiring Soon",
+        "expired-tooltip": "{{count}} documents in this folder and its subfolders have expired.",
+        "expiring-soon-tooltip": "{{count}} documents in this folder and its subfolders expire soon."
+      }
+    }
+  },
+  "actions": {
+    "add-item": "Add Item",
+    "upload-file": "Upload File",
+    "upload-files": "Upload Files",
+    "upload-folder": "Upload Folder",
+    "search": "Search files and folders",
+    "sort-by-name": "Sort by Name",
+    "sort-by-date": "Sort by Date",
+    "sort-by-size": "Sort by Size",
+    "sort-ascending": "Ascending",
+    "sort-descending": "Descending",
+    "share": "Share",
+    "create-folder": "Create Folder",
+    "update-folder": "Modify Folder",
+    "rename": "Rename",
+    "select-file": "Select File",
+    "select-files": "Select Files",
+    "select-folder": "Select Folder",
+    "upload-from-device": "Upload from Device",
+    "choose-from-drive": "Choose from Drive",
+    "choose-from-organization": "Choose from Organization",
+    "choose-folder-for-shortcut": "Choose folder for shortcut",
+    "copy-to-destination": "Copy to folder",
+    "move-to-destination": "Move to folder",
+    "upload-options": {
+      "title": "Upload Options",
+      "attachment-type": "Attachment Type",
+      "confirm-message": "Do you want to clone the file? If you click 'No' or 'Cancel', the file will be attached by reference.",
+      "clone": "Clone File",
+      "clone-description": "Create a copy of the file",
+      "by-reference": "By Reference",
+      "by-reference-description": "Link to the original file"
+    },
+    "open-file-viewer": "Open File Viewer",
+    "open-gallery": "Open File Viewer",
+    "edit": "Edit",
+    "remove": "Remove",
+    "revert": "Revert",
+    "save-and-send": "Save and Send",
+    "sent": "Send",
+    "edit-metadata": "Edit Metadata",
+    "refresh": "Refresh",
+    "advanced-search": "Advanced Search"
+  },
+  "drive-choose": {
+    "subtitle": "Browse folders and select the files you need.",
+    "subtitle-folder": "Browse folders and select a destination folder.",
+    "loading": "Loading drive contents…",
+    "selected-count": "{{count}} selected"
+  },
+  "menus": {
+    "my-drive": {
+      "title": "My Documents",
+      "description": "Your personal documents"
+    },
+    "tenant-documents": {
+      "title": "Company Documents",
+      "description": "Shared documents in this application"
+    },
+    "context": {
+      "open": "Open",
+      "download": "Download",
+      "information": "Information",
+      "rename": "Rename",
+      "properties": "Properties",
+      "lock": "Lock",
+      "unlock": "Unlock",
+      "make-copy": "Make a copy",
+      "copy-to": "Copy to",
+      "move-to": "Move to",
+      "delete": "Delete",
+      "create-shortcut": "Create shortcut",
+      "upload": "Upload",
+      "share": {
+        "share": "Share",
+        "email": "Share with email",
+        "link": "Link"
+      },
+      "manage-versions": "Manage versions",
+      "upload-new-version": "Upload new version",
+      "show-version-history": "Show version history"
+    },
+    "layout": {
+      "group-by": "Group by",
+      "group-by-type": "Type",
+      "group-by-date": "Date (coming soon)",
+      "sort": "Sort",
+      "views": "Views",
+      "show-details-panel": "Show Details Panel"
+    }
+  },
+  "view-modes": {
+    "large-tiles": "Large Tiles",
+    "small-tiles": "Small Tiles",
+    "list": "List",
+    "details": "Details",
+    "large-icons": "Large Icons",
+    "small-icons": "Small Icons"
+  },
+  "file-types": {
+    "all": "All Files",
+    "archive": "Archive",
+    "audio": "Audio",
+    "code": "Code",
+    "document": "Document",
+    "image": "Image",
+    "video": "Video"
+  },
+  "drive": {
+    "filters": {
+      "search": {
+        "title": "Search Files and Folders"
+      },
+      "title": {
+        "title": "File or Folder Name"
+      },
+      "document-type": {
+        "title": "Document Type"
+      },
+      "file-type": {
+        "title": "File Type"
+      },
+      "file-types": {
+        "all": "All Files"
+      }
+    }
+  },
+  "scopes": {
+    "platform": {
+      "title": "Platform Drive",
+      "description": "{{count}} Items"
+    },
+    "user": {
+      "title": "My Documents",
+      "description": "{{count}} Items, {{size}} available"
+    },
+    "tenant": {
+      "title": "Organization Documents",
+      "description": "{{count}} Items, {{size}} available"
+    }
+  },
+  "workflows": {},
+  "settings": {
+    "group": {
+      "title": "Documents",
+      "description": "Default preferences for browsing documents and folders."
+    },
+    "sections": {
+      "explorer-layout": {
+        "title": "Document Explorer",
+        "description": "Default layout and sort order when browsing folders."
+      }
+    },
+    "items": {
+      "view-mode": {
+        "title": "Default View Mode",
+        "description": "Controls how items appear when you open a folder.",
+        "options": {
+          "large-tiles": "Large Tiles",
+          "small-tiles": "Small Tiles",
+          "list": "List",
+          "details": "Details",
+          "large-icons": "Large Icons",
+          "small-icons": "Small Icons",
+          "attachment": "Attachment"
+        }
+      },
+      "sort-field": {
+        "title": "Default Sort Field",
+        "description": "Property used to order items in each folder view.",
+        "options": {
+          "name": "Name",
+          "modified": "Date Modified",
+          "size": "Size"
+        }
+      },
+      "sort-direction": {
+        "title": "Default Sort Direction",
+        "description": "Whether sorted items appear in ascending or descending order.",
+        "options": {
+          "asc": "Ascending",
+          "desc": "Descending"
+        }
+      },
+      "group-by-type": {
+        "title": "Group by Type",
+        "description": "Show folders and files in separate labeled sections."
+      },
+      "detail-panel-open": {
+        "title": "Show Details Panel",
+        "description": "Keep the side details panel open when browsing folders."
+      }
+    }
+  },
+  "dialogs": {
+    "attach-file": {
+      "title": "Attach {{title}}",
+      "messages": {
+        "upload-failed": "Could not attach the file. Please try again with a smaller file."
+      }
+    },
+    "rename": {
+      "name": "Name",
+      "name-placeholder": "Enter new name"
+    },
+    "choose-document-type": {
+      "title": "Choose Document Type",
+      "label": "Select Document Type"
+    },
+    "manage-version": {
+      "upload-new-version": "Upload New Version"
+    }
+  },
+  "meta": {
+    "required": "Required",
+    "deleted": "Deleted",
+    "optional": "Optional"
+  },
+  "empty-states": {
+    "no-items": {
+      "title": "No Items Found",
+      "description": "It's empty in here! Upload a file to see it listed"
+    },
+    "no-metadata-items": {
+      "title": "No Metadata Items",
+      "description": "No metadata items have been added yet. Add metadata items to configure document properties."
+    }
+  },
+  "validation": {
+    "file-name": {
+      "required": "File name is required",
+      "invalid-characters": "File name contains invalid characters. Avoid using: < > : \" | ? * / \\",
+      "max-length": "File name cannot exceed 255 characters",
+      "min-length": "File name cannot be empty",
+      "invalid-format": "File name cannot start or end with spaces or dots, and cannot be a reserved name"
+    }
+  },
+  "task-providers": {},
+  "permissions": {
+    "manage": {
+      "title": "Document Management",
+      "description": "Full access to document management features"
+    },
+    "document-type": {
+      "manage": {
+        "title": "Manage Document Types",
+        "description": "Full access to document type management"
+      },
+      "view": {
+        "title": "View Document Types",
+        "description": "View document type information"
+      },
+      "edit": {
+        "title": "Edit Document Type",
+        "description": "Edit document type configurations"
+      },
+      "delete": {
+        "title": "Delete Document Types",
+        "description": "Delete document types"
+      },
+      "create": {
+        "title": "Create Document Type",
+        "description": "Create new document types"
+      }
+    },
+    "driver": {
+      "manage": {
+        "title": "Manage Document Drive",
+        "description": "Full access to document drive management"
+      },
+      "view": {
+        "title": "View Document Drive",
+        "description": "View document drive contents"
+      },
+      "edit": {
+        "title": "Edit Document Drive",
+        "description": "Edit document drive contents"
+      },
+      "delete": {
+        "title": "Delete Document Drive",
+        "description": "Delete documents and folders"
+      },
+      "create": {
+        "title": "Create Document Drive",
+        "description": "Create documents and folders"
+      }
+    },
+    "review": {
+      "manage": {
+        "title": "Manage Document Review",
+        "description": "Full access to document review management"
+      },
+      "view": {
+        "title": "View Document Review",
+        "description": "View document review information"
+      },
+      "edit": {
+        "title": "Edit Document Review",
+        "description": "Edit document review status"
+      },
+      "delete": {
+        "title": "Delete Document Review",
+        "description": "Delete document reviews"
+      },
+      "create": {
+        "title": "Create Document Review",
+        "description": "Create document reviews"
+      }
+    }
+  }
+}

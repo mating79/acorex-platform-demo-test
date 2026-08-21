@@ -1,0 +1,490 @@
+{
+  "module": {
+    "title": "هسته اندازه‌گیری",
+    "description": "داده‌های پایه اندازه‌گیری مشترک برای موجودی، تولید، کنترل کیفیت و سایزبندی.",
+    "alias": "اندازه‌گیری",
+    "menus": {
+      "root": {
+        "title": "واحدها و اندازه‌ها",
+        "description": "انواع کمیت، واحدهای اندازه‌گیری، ابعاد، محدوده‌ها و جدول سایز."
+      }
+    }
+  },
+  "quantity-types": {
+    "terms": {
+      "quantity-type": "نوع کمیت",
+      "quantity-types": "انواع کمیت"
+    },
+    "entities": {
+      "quantity-type": {
+        "title": "نوع کمیت",
+        "plural": "انواع کمیت",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد نوع کمیت (مثلاً LENGTH، MASS)"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان نوع کمیت"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "نوع کمیت را توصیف کنید"
+          },
+          "base-unit": {
+            "title": "واحد پایه"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-quantity-type": {
+        "title": "ایجاد نوع کمیت",
+        "description": "تعریف نوع کمیت جدید."
+      }
+    },
+    "permissions": {
+      "quantity-type": {
+        "title": "انواع کمیت",
+        "manage": {
+          "title": "مدیریت انواع کمیت"
+        }
+      }
+    }
+  },
+  "units": {
+    "terms": {
+      "unit-of-measure": "واحد اندازه‌گیری",
+      "units-of-measure": "واحدهای اندازه‌گیری"
+    },
+    "entities": {
+      "unit-of-measure": {
+        "title": "واحد اندازه‌گیری",
+        "plural": "واحدهای اندازه‌گیری",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "configuration": "پیکربندی"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد واحد (مثلاً cm، mm، in)"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان واحد"
+          },
+          "symbol": {
+            "title": "نماد",
+            "placeholder": "نماد واحد (مثلاً m، kg، L)"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "واحد اندازه‌گیری را توصیف کنید"
+          },
+          "quantity-type": {
+            "title": "نوع کمیت"
+          },
+          "factor-to-base": {
+            "title": "ضریب به واحد پایه",
+            "placeholder": "ضریب تبدیل به واحد پایه (مثلاً 10 برای cm → mm)"
+          },
+          "precision": {
+            "title": "دقت",
+            "placeholder": "تعداد اعشار (0-10)"
+          },
+          "is-base": {
+            "title": "واحد پایه"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-unit-of-measure": {
+        "title": "ایجاد واحد اندازه‌گیری",
+        "description": "ثبت واحد اندازه‌گیری جدید."
+      }
+    },
+    "permissions": {
+      "unit-of-measure": {
+        "title": "واحدهای اندازه‌گیری",
+        "manage": {
+          "title": "مدیریت واحدهای اندازه‌گیری"
+        }
+      }
+    }
+  },
+  "conversions": {
+    "terms": {
+      "unit-conversion": "تبدیل واحد",
+      "unit-conversions": "تبدیل‌های واحد"
+    },
+    "entities": {
+      "unit-conversion": {
+        "title": "تبدیل واحد",
+        "plural": "تبدیل‌های واحد",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "conversion": "تبدیل"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد اختیاری (مثلاً M_TO_CM)"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیح تبدیل"
+          },
+          "from-unit": {
+            "title": "واحد مبدأ"
+          },
+          "to-unit": {
+            "title": "واحد مقصد"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان نمایش (مثلاً جعبه به عدد)"
+          },
+          "factor": {
+            "title": "ضریب",
+            "placeholder": "ضریب تبدیل (مثلاً ۱۰۰ برای m → cm)"
+          },
+          "conversion-factor": {
+            "title": "ضریب تبدیل",
+            "placeholder": "ضریب تبدیل (مثلاً ۱۰۰ برای m → cm)"
+          },
+          "operator": {
+            "title": "عملگر",
+            "options": {
+              "multiply": "ضرب",
+              "divide": "تقسیم"
+            }
+          }
+        }
+      }
+    },
+    "search": {
+      "create-unit-conversion": {
+        "title": "ایجاد تبدیل واحد",
+        "description": "تعریف قانون تبدیل واحد جدید."
+      }
+    },
+    "permissions": {
+      "unit-conversion": {
+        "title": "تبدیل‌های واحد",
+        "manage": {
+          "title": "مدیریت تبدیل‌های واحد"
+        }
+      }
+    }
+  },
+  "dimensions": {
+    "entities": {
+      "measurement-dimension": {
+        "title": "بُعد اندازه‌گیری",
+        "plural": "ابعاد اندازه‌گیری",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد بُعد (مثلاً FOOT_LENGTH، CHEST)"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان بُعد"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "بُعد اندازه‌گیری را توصیف کنید"
+          },
+          "quantity-type": {
+            "title": "نوع کمیت"
+          },
+          "default-uom": {
+            "title": "واحد پیش‌فرض"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-measurement-dimension": {
+        "title": "ایجاد بُعد اندازه‌گیری",
+        "description": "تعریف بُعد اندازه‌گیری جدید (محور)."
+      }
+    },
+    "permissions": {
+      "measurement-dimension": {
+        "title": "ابعاد اندازه‌گیری",
+        "manage": {
+          "title": "مدیریت ابعاد اندازه‌گیری"
+        }
+      }
+    }
+  },
+  "ranges": {
+    "entities": {
+      "measurement-range": {
+        "title": "محدوده اندازه‌گیری",
+        "plural": "محدوده‌های اندازه‌گیری",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "range-config": "پیکربندی محدوده"
+        },
+        "fields": {
+          "measurement-dimension": {
+            "title": "بُعد اندازه‌گیری"
+          },
+          "code": {
+            "title": "کد",
+            "placeholder": "کد اختیاری (مثلاً RANGE_26_27)"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان نمایش اختیاری"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "محدوده را توصیف کنید"
+          },
+          "unit": {
+            "title": "واحد"
+          },
+          "min": {
+            "title": "حداقل",
+            "placeholder": "مقدار حداقل"
+          },
+          "max": {
+            "title": "حداکثر",
+            "placeholder": "مقدار حداکثر"
+          },
+          "target": {
+            "title": "هدف",
+            "placeholder": "مقدار اسمی"
+          },
+          "range-type": {
+            "title": "نوع محدوده",
+            "options": {
+              "acceptable": "قابل قبول",
+              "preferred": "ترجیحی",
+              "tolerance": "تلرانس",
+              "ideal": "ایده‌ال"
+            }
+          },
+          "bound-type": {
+            "title": "نوع کران",
+            "options": {
+              "closed": "بسته",
+              "open": "باز",
+              "left-closed": "بسته از چپ",
+              "right-closed": "بسته از راست"
+            }
+          },
+          "step": {
+            "title": "گام",
+            "placeholder": "دقت (مثلاً 0.5)"
+          },
+          "priority": {
+            "title": "اولویت",
+            "placeholder": "ترتیب"
+          },
+          "is-reusable": {
+            "title": "قابل استفاده مجدد"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-measurement-range": {
+        "title": "ایجاد محدوده اندازه‌گیری",
+        "description": "تعریف محدوده اندازه‌گیری جدید."
+      }
+    },
+    "permissions": {
+      "measurement-range": {
+        "title": "محدوده‌های اندازه‌گیری",
+        "manage": {
+          "title": "مدیریت محدوده‌های اندازه‌گیری"
+        }
+      }
+    }
+  },
+  "sizes": {
+    "terms": {
+      "sizing-profile": "پروفایل سایزبندی",
+      "size-item": "ردیف سایز",
+      "sizing-dimension-usage": "کاربرد بعد سایزبندی",
+      "size-rule": "قانون سایز"
+    },
+    "entities": {
+      "sizing-profile": {
+        "title": "پروفایل سایزبندی",
+        "plural": "پروفایل‌های سایزبندی",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "configuration": "پیکربندی"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد جدول (مثلاً SHOES_MEN_US)"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان جدول (مثلاً سایز کفش مردانه US)"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "پروفایل سایزبندی را توصیف کنید"
+          },
+          "category": {
+            "title": "دسته‌بندی",
+            "placeholder": "مثلاً کفش، پوشاک"
+          },
+          "region": {
+            "title": "منطقه",
+            "placeholder": "مثلاً US، EU، UK"
+          },
+          "match-strategy": {
+            "title": "استراتژی تطابق",
+            "options": {
+              "primary-first": "اولویت با اصلی",
+              "all-required": "همه الزامی"
+            }
+          },
+          "enforce-no-overlap": {
+            "title": "عدم همپوشانی"
+          }
+        }
+      },
+      "sizing-dimension-usage": {
+        "title": "کاربرد بعد سایزبندی",
+        "plural": "کاربردهای بعد سایزبندی",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "sizing-profile": {
+            "title": "پروفایل سایزبندی"
+          },
+          "measurement-dimension": {
+            "title": "بُعد اندازه‌گیری"
+          },
+          "required": {
+            "title": "الزامی"
+          },
+          "primary": {
+            "title": "اصلی"
+          },
+          "sort-order": {
+            "title": "ترتیب",
+            "placeholder": "ترتیب ستون"
+          },
+          "priority": {
+            "title": "اولویت",
+            "placeholder": "اولویت تساوی"
+          }
+        }
+      },
+      "size-item": {
+        "title": "ردیف سایز",
+        "plural": "ردیف‌های سایز",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "sizing-profile": {
+            "title": "پروفایل سایزبندی"
+          },
+          "code": {
+            "title": "کد",
+            "placeholder": "کد سایز (مثلاً US 8.5، M)"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان نمایش اختیاری"
+          },
+          "sort-order": {
+            "title": "ترتیب",
+            "placeholder": "ترتیب سطر"
+          }
+        }
+      },
+      "size-rule": {
+        "title": "قانون سایز",
+        "plural": "قوانین سایز",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "sizing-profile": {
+            "title": "پروفایل سایزبندی"
+          },
+          "size-item": {
+            "title": "ردیف سایز"
+          },
+          "measurement-dimension": {
+            "title": "بُعد اندازه‌گیری"
+          },
+          "measurement-range": {
+            "title": "محدوده اندازه‌گیری"
+          },
+          "match-behavior": {
+            "title": "رفتار تطابق",
+            "options": {
+              "hard": "سخت",
+              "soft": "نرم",
+              "scoring": "امتیازی"
+            }
+          },
+          "priority": {
+            "title": "اولویت",
+            "placeholder": "درون ردیف سایز"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-sizing-profile": {
+        "title": "ایجاد پروفایل سایزبندی",
+        "description": "تعریف پروفایل سایزبندی جدید (سیستم سایزبندی)."
+      },
+      "create-size-item": {
+        "title": "ایجاد ردیف سایز",
+        "description": "افزودن گزینه سایز به پروفایل سایزبندی."
+      }
+    },
+    "permissions": {
+      "sizing-profile": {
+        "title": "پروفایل‌های سایزبندی",
+        "manage": {
+          "title": "مدیریت پروفایل‌های سایزبندی"
+        }
+      },
+      "sizing-dimension-usage": {
+        "title": "کاربردهای بعد سایزبندی",
+        "manage": {
+          "title": "مدیریت کاربردهای بعد سایزبندی"
+        }
+      },
+      "size-item": {
+        "title": "ردیف‌های سایز",
+        "manage": {
+          "title": "مدیریت ردیف‌های سایز"
+        }
+      },
+      "size-rule": {
+        "title": "قوانین سایز",
+        "manage": {
+          "title": "مدیریت قوانین سایز"
+        }
+      }
+    }
+  }
+}

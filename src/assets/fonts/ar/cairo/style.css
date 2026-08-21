@@ -1,0 +1,8 @@
+@reference '@acorex/styles/themes/default.css';
+@font-face {
+  font-family: "cairo";
+  src: url("/assets/fonts/ar/cairo/Cairo-VariableFont_slnt,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}

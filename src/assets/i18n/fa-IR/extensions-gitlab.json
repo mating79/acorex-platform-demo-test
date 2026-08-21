@@ -1,0 +1,47 @@
+{
+  "integration": {
+    "display-name": "GitLab",
+    "description": "اتصال GitLab Cloud یا self-hosted با توکن دسترسی شخصی.",
+    "auth": {
+      "pat": {
+        "label": "توکن دسترسی شخصی",
+        "instructions": "<p><strong>آدرس نمونه</strong> GitLab (مثلاً <code>https://gitlab.com</code> یا URL self-hosted) و <strong>توکن دسترسی شخصی</strong> را وارد کنید. در gitlab.com از <a href=\"https://gitlab.com/-/user_settings/personal_access_tokens\" target=\"_blank\" rel=\"noopener noreferrer\">User settings → Access tokens</a> و در self-hosted از <code>{your-instance}/-/user_settings/personal_access_tokens</code> توکن بسازید. حداقل scope <code>api</code> را فعال کنید.</p>",
+        "instance-url": {
+          "label": "آدرس نمونه",
+          "placeholder": "https://gitlab.com"
+        },
+        "token": {
+          "label": "توکن دسترسی شخصی",
+          "placeholder": "توکن دسترسی شخصی را وارد کنید"
+        }
+      }
+    },
+    "connect": {
+      "instructions": "<p><strong>آدرس نمونه</strong> GitLab (مثلاً <code>https://gitlab.com</code> یا URL self-hosted) و <strong>توکن دسترسی شخصی</strong> را وارد کنید. در gitlab.com از <a href=\"https://gitlab.com/-/user_settings/personal_access_tokens\" target=\"_blank\" rel=\"noopener noreferrer\">User settings → Access tokens</a> و در self-hosted از <code>{your-instance}/-/user_settings/personal_access_tokens</code> توکن بسازید. حداقل scope <code>api</code> را فعال کنید.</p>",
+      "dialog": {
+        "title": "اتصال GitLab",
+        "reconfigure-title": "پیکربندی مجدد GitLab"
+      },
+      "fields": {
+        "display-name": "نام نمایشی"
+      },
+      "placeholders": {
+        "display-name": "GitLab"
+      },
+      "actions": {
+        "save": "ذخیره اتصال"
+      },
+      "messages": {
+        "token-required": "توکن دسترسی شخصی الزامی است."
+      }
+    }
+  },
+  "settings": {
+    "gitlab": {
+      "section-title": "GitLab",
+      "section-description": "GitLab را برای کنترل سورس و همگام‌سازی متصل کنید.",
+      "connection-title": "اتصال",
+      "connection-description": "آدرس نمونه GitLab و توکن دسترسی شخصی را وارد کنید."
+    }
+  }
+}

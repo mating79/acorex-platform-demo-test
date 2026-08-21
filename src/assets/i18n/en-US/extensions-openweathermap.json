@@ -1,0 +1,48 @@
+{
+  "module": {
+    "title": "OpenWeatherMap",
+    "description": "OpenWeatherMap weather data provider integration"
+  },
+  "integration": {
+    "display-name": "OpenWeatherMap",
+    "description": "Connect OpenWeatherMap to power dashboard weather widgets.",
+    "auth": {
+      "pat": {
+        "label": "API key",
+        "instructions": "Create an API key at openweathermap.org and paste it below.",
+        "token": {
+          "placeholder": "OpenWeatherMap API key"
+        }
+      }
+    },
+    "connect": {
+      "pat-dialog": {
+        "title": "Connect Account",
+        "configure-title": "Configure Account",
+        "instructions": "Create an API key at openweathermap.org and paste it below.",
+        "fields": {
+          "display-name": "Display Name",
+          "api-key": "API Key"
+        },
+        "placeholders": {
+          "display-name": "OpenWeatherMap",
+          "api-key": "OpenWeatherMap API key"
+        },
+        "actions": {
+          "save": "Save Connection"
+        },
+        "messages": {
+          "api-key-required": "API key is required."
+        }
+      }
+    }
+  },
+  "settings": {
+    "openweathermap": {
+      "section-title": "OpenWeatherMap",
+      "section-description": "Connect your OpenWeatherMap account for tenant weather widgets.",
+      "connection-title": "Account",
+      "connection-description": "Save your OpenWeatherMap API key for this tenant."
+    }
+  }
+}

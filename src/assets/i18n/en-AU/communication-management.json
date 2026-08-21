@@ -1,0 +1,320 @@
+{
+  "module": {
+    "title": "Communication Management",
+    "permissions": {
+      "title": "Communication Management",
+      "description": "Manage outbound communications and delivery tracking."
+    }
+  },
+  "permissions": {
+    "management": {
+      "title": "Manage Communications",
+      "description": "View and manage communication records and deliveries."
+    },
+    "send": {
+      "title": "Send Communication",
+      "description": "Create communications through the send API."
+    },
+    "email": {
+      "show-dialog": {
+        "title": "Compose Email (Dialog)",
+        "description": "Open the send email dialog."
+      },
+      "send": {
+        "title": "Send Email",
+        "description": "Submit outbound email through the communication send API."
+      }
+    }
+  },
+  "in-app": {
+    "panel": {
+      "title": "Notification"
+    },
+    "page": {
+      "title": "Notifications",
+      "description": {
+        "none": "No in-app messages yet.",
+        "unread": "{{ unread }} unread of {{ total }} messages",
+        "all-read": "All {{ total }} messages read"
+      }
+    },
+    "tabs": {
+      "unread": "Unread",
+      "all": "All"
+    },
+    "actions": {
+      "refresh": "Refresh",
+      "mark-all-read": "Mark All as Read",
+      "mark-as-read": "Mark as Read",
+      "view-all": "View All",
+      "delete": "Delete",
+      "archive": "Archive",
+      "select-items": "Select Items",
+      "clear-filters": "Clear Filters"
+    },
+    "filters": {
+      "search": {
+        "title": "Search"
+      },
+      "read-status": {
+        "title": "Read Status"
+      },
+      "priority": {
+        "title": "Priority",
+        "options": {
+          "warning": "Warning",
+          "danger": "Danger",
+          "notice": "Notice"
+        }
+      },
+      "category": {
+        "title": "Category",
+        "options": {
+          "inbox": "Inbox",
+          "archive": "Archive"
+        }
+      }
+    },
+    "live-updates-offline": "Live updates unavailable — inbox refreshes when you open it or every minute.",
+    "state": {
+      "empty": {
+        "title": "No Messages",
+        "description": "In-app deliveries will appear here when you receive them."
+      },
+      "no-results": {
+        "title": "No Results Found",
+        "description": "Try adjusting your filters or search terms."
+      },
+      "all-caught-up": {
+        "title": "All Caught Up",
+        "description": "You have no unread in-app messages."
+      },
+      "error": {
+        "title": "Could Not Load Inbox"
+      }
+    }
+  },
+  "settings": {
+    "communication": {
+      "nav-title": "Communication",
+      "title": "Communication Settings",
+      "description": "Configuration for outbound communication channels.",
+      "smtp": {
+        "title": "SMTP Settings",
+        "description": "Platform SMTP defaults; tenants can override for their organization.",
+        "server": {
+          "title": "SMTP Server",
+          "description": "The address of the SMTP server."
+        },
+        "port": {
+          "title": "SMTP Port",
+          "description": "The port for connecting to the SMTP server."
+        },
+        "username": {
+          "title": "SMTP Username",
+          "description": "The username for SMTP server authentication."
+        },
+        "password": {
+          "title": "SMTP Password",
+          "description": "The password for SMTP server authentication."
+        },
+        "from-address": {
+          "title": "From Address",
+          "description": "The sender email address used for outbound communications."
+        },
+        "ssl": {
+          "title": "Use SSL",
+          "description": "Enable SSL for secure communication."
+        },
+        "tls": {
+          "title": "Use TLS",
+          "description": "Enable TLS for secure communication."
+        },
+        "test": {
+          "action": "Send Test Email",
+          "dialog": {
+            "title": "Send Test Email",
+            "actions": {
+              "send": "Send Test Email"
+            },
+            "fields": {
+              "recipient": {
+                "title": "Recipient Email",
+                "placeholder": "name@example.com"
+              }
+            }
+          },
+          "messages": {
+            "recipient-required": "Recipient email address is required.",
+            "success": "Test email sent successfully."
+          }
+        }
+      }
+    },
+    "user-notifications": {
+      "nav-title": "Notifications",
+      "title": "Communication Notifications",
+      "description": "Choose which channels can deliver messages to you.",
+      "delivery-channels": {
+        "title": "Delivery Channels",
+        "description": "Enable or disable how you receive communications on each channel.",
+        "in-app": {
+          "title": "In-App Messages",
+          "description": "Show messages in your in-app inbox."
+        },
+        "email": {
+          "title": "Email",
+          "description": "Receive communications by email."
+        }
+      }
+    }
+  },
+  "templates": {
+    "channels": {
+      "email": "Email",
+      "in-app": "In-App",
+      "not-configured": {
+        "email": "SMTP is not configured yet. You can draft templates now, but email will not send until server, port, and from address are saved."
+      }
+    }
+  },
+  "email": {
+    "dialog": {
+      "title": "Send Email",
+      "fields": {
+        "to": {
+          "title": "To",
+          "placeholder": "Recipient email addresses (comma-separated)"
+        },
+        "cc": {
+          "title": "Cc",
+          "placeholder": "Optional"
+        },
+        "bcc": {
+          "title": "Bcc",
+          "placeholder": "Optional"
+        },
+        "text-template": {
+          "title": "Text Template"
+        },
+        "subject": {
+          "title": "Subject",
+          "placeholder": "Email subject"
+        },
+        "body": {
+          "title": "Body",
+          "placeholder": "Compose the message using the rich text editor (HTML is stored for email)."
+        }
+      },
+      "messages": {
+        "required-fields": "To, subject, and body are required."
+      }
+    },
+    "template-picker": {
+      "title": "Choose Text Template"
+    },
+    "org-chart": {
+      "send-email": "Send Email",
+      "send-email-employee": "Send Email",
+      "private-email-top-executive": "Send Email to Chief Executive",
+      "send-email-position-occupant": "Send Email to Incumbent",
+      "group-email-bu": "Send Group Email",
+      "private-email-bu-head": "Send Private Email to Head",
+      "fallback-unit": "Business Unit",
+      "prefilled-subject-group": "Regarding {{unit}}",
+      "prefilled-subject-private": "Regarding {{unit}}",
+      "error-title": "Email Unavailable",
+      "errors": {
+        "load-employee": "Could not load this employee record.",
+        "no-head-employee": "This unit has no head employee assigned.",
+        "no-email": "No email address is available for this person.",
+        "no-business-unit": "Could not resolve this business unit.",
+        "no-members": "No recipient email addresses were found for this unit.",
+        "load-emails": "Could not load email addresses for this unit."
+      }
+    }
+  },
+  "widgets": {
+    "my-in-app-inbox-dashboard": {
+      "widget-title": "Notification",
+      "widget-description": "Shows recent unread in-app messages on your dashboard.",
+      "max-items": "Max Items",
+      "show-avatar": "Show Avatar",
+      "show-date": "Show Date"
+    }
+  },
+  "entities": {
+    "communication": {
+      "title": "Communication",
+      "plural": "Communications",
+      "groups": {
+        "message": "Message",
+        "routing": "Routing"
+      },
+      "fields": {
+        "message-subject": "Subject",
+        "message-body": "Body",
+        "primary-channel": "Primary Channel",
+        "recipient-summary": "Recipient Summary",
+        "definition-key": "Definition Key",
+        "correlation-id": "Correlation ID",
+        "idempotency-key": "Idempotency Key"
+      },
+      "actions": {
+        "preview": {
+          "title": "Preview Message",
+          "dialog": {
+            "title": "Message Preview"
+          },
+          "messages": {
+            "error-title": "Message Unavailable",
+            "not-found": "This communication could not be found."
+          }
+        }
+      },
+      "states": {
+        "pending": "Pending",
+        "processing": "Processing",
+        "completed": "Completed",
+        "failed": "Failed",
+        "cancelled": "Cancelled"
+      }
+    },
+    "communication-delivery": {
+      "title": "Delivery",
+      "plural": "Deliveries",
+      "groups": {
+        "tracking": "Delivery Tracking",
+        "timeline": "Timeline"
+      },
+      "fields": {
+        "communication-id": "Communication ID",
+        "channel": "Channel",
+        "provider-key": "Provider",
+        "recipient-user-id": "Recipient User ID",
+        "recipient-address": "Recipient Address",
+        "provider-message-id": "Provider Message ID",
+        "sent-at": "Sent At",
+        "delivered-at": "Delivered At",
+        "seen-at": "Seen At",
+        "read-at": "Read At",
+        "replied-at": "Replied At",
+        "is-pinned": "Pinned",
+        "archived-at": "Archived At",
+        "timeline-summary": "Timeline"
+      },
+      "states": {
+        "pending": "Pending",
+        "queued": "Queued",
+        "processing": "Processing",
+        "accepted": "Accepted",
+        "sent": "Sent",
+        "delivered": "Delivered",
+        "failed": "Failed",
+        "retry-scheduled": "Retry Scheduled",
+        "cancelled": "Cancelled",
+        "dead-lettered": "Dead Lettered"
+      }
+    }
+  }
+}

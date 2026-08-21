@@ -1,0 +1,298 @@
+{
+  "module": {
+    "title": "Background Jobs",
+    "description": "Monitor and manage background jobs and schedules",
+    "menus": {
+      "root": {
+        "title": "Background Jobs",
+        "description": "Background jobs and schedules"
+      }
+    },
+    "permissions": {
+      "title": "Background Job Management",
+      "description": "Access to background jobs, attempts, and schedules"
+    }
+  },
+  "settings": {
+    "group": {
+      "title": "Background Jobs",
+      "description": "Platform settings for background job execution and retention"
+    },
+    "retention": {
+      "title": "Retention",
+      "description": "Hard-delete expired terminal jobs and attempts after a retention period",
+      "items": {
+        "enabled": {
+          "title": "Enable Retention Purge",
+          "description": "When enabled, a system job periodically removes expired jobs"
+        },
+        "default-days": {
+          "title": "Default Retention (Days)",
+          "description": "Terminal jobs older than this are permanently deleted"
+        },
+        "dead-letter-days": {
+          "title": "Dead-Letter Retention (Days)",
+          "description": "Dead-lettered jobs are kept longer before purge"
+        },
+        "batch-size": {
+          "title": "Purge Batch Size",
+          "description": "Maximum jobs deleted per purge run"
+        },
+        "purge-cron": {
+          "title": "Purge Schedule (Cron)",
+          "description": "Cron expression for the system retention purge job"
+        }
+      }
+    }
+  },
+  "jobs": {
+    "menus": {
+      "jobs": {
+        "title": "Jobs",
+        "description": "Monitor background jobs"
+      }
+    },
+    "entities": {
+      "background-job": {
+        "title": "Background Job",
+        "plural": "Background Jobs",
+        "groups": {
+          "overview": "Overview",
+          "execution": "Execution",
+          "data": "Data"
+        },
+        "fields": {
+          "title": { "title": "Title" },
+          "command": { "title": "Command" },
+          "executed-at": { "title": "Executed At" },
+          "job-type": { "title": "Job Type" },
+          "status": { "title": "Status" },
+          "trigger": { "title": "Trigger" },
+          "progress": { "title": "Progress" },
+          "current-attempt": { "title": "Current Attempt" },
+          "max-attempts": { "title": "Max Attempts" },
+          "finished-at": { "title": "Finished At" },
+          "completed-at": { "title": "Completed At" },
+          "duration": { "title": "Duration" },
+          "result-message": { "title": "Result Message" },
+          "payload": { "title": "Payload" },
+          "result": { "title": "Result" },
+          "parent-job-id": { "title": "Parent Job" }
+        },
+        "related-entities": {
+          "attempts": { "title": "Attempts" },
+          "child-jobs": { "title": "Child Jobs" }
+        },
+        "states": {
+          "created": "Created",
+          "scheduled": "Scheduled",
+          "queued": "Queued",
+          "running": "Running",
+          "paused": "Paused",
+          "completed": "Completed",
+          "failed": "Failed",
+          "cancelled": "Cancelled",
+          "dead-lettered": "Dead-Lettered"
+        },
+        "triggers": {
+          "schedule": "Schedule",
+          "manual": "Manual",
+          "event": "Event",
+          "system": "System"
+        }
+      }
+    },
+    "actions": {
+      "cancel": { "title": "Cancel Job" },
+      "retry": { "title": "Retry Job" }
+    },
+    "errors": {
+      "not-found": "Background job {{jobId}} was not found.",
+      "retry-invalid-status": "Job {{jobId}} cannot be retried while status is {{status}}. Use replay dead-letter for dead-lettered jobs.",
+      "not-dead-lettered": "Job {{jobId}} is not dead-lettered (status: {{status}})."
+    },
+    "commands": {
+      "retry": {
+        "messages": {
+          "success": "Retry queued.",
+          "failed": "Failed to retry background job."
+        }
+      },
+      "cancel": {
+        "messages": {
+          "completed": "Cancellation completed.",
+          "requested": "Cancellation requested.",
+          "failed": "Failed to cancel background job."
+        }
+      }
+    },
+    "permissions": {
+      "view": {
+        "title": "View Jobs",
+        "description": "View jobs and attempt history"
+      },
+      "cancel": {
+        "title": "Cancel Job",
+        "description": "Cancel a running or queued job"
+      },
+      "retry": {
+        "title": "Retry Job",
+        "description": "Retry a failed job"
+      },
+      "delete": {
+        "title": "Delete Job",
+        "description": "Permanently delete a job and its attempts"
+      },
+      "replay-dead-letter": {
+        "title": "Replay Dead-Lettered Job",
+        "description": "Replay a dead-lettered job as a new job"
+      }
+    }
+  },
+  "attempts": {
+    "entities": {
+      "background-job-attempt": {
+        "title": "Job Attempt",
+        "plural": "Job Attempts",
+        "groups": {
+          "overview": "Overview"
+        },
+        "fields": {
+          "job-id": { "title": "Job" },
+          "attempt-number": { "title": "Attempt" },
+          "trigger": { "title": "Trigger" },
+          "status": { "title": "Status" },
+          "worker-id": { "title": "Worker" },
+          "started-at": { "title": "Started At" },
+          "completed-at": { "title": "Completed At" },
+          "duration-ms": { "title": "Duration (ms)" },
+          "error": { "title": "Error" }
+        },
+        "states": {
+          "queued": "Queued",
+          "running": "Running",
+          "succeeded": "Succeeded",
+          "failed": "Failed",
+          "cancelled": "Cancelled",
+          "timed-out": "Timed Out",
+          "abandoned": "Abandoned"
+        }
+      }
+    }
+  },
+  "schedules": {
+    "menus": {
+      "schedules": {
+        "title": "Schedules",
+        "description": "Manage recurring job schedules"
+      }
+    },
+    "entities": {
+      "background-job-schedule": {
+        "title": "Job Schedule",
+        "plural": "Job Schedules",
+        "groups": {
+          "basic-info": "Basic Information",
+          "command": "Command",
+          "recurrence": "Recurrence",
+          "policies": "Policies",
+          "runtime": "Runtime"
+        },
+        "fields": {
+          "title": { "title": "Title" },
+          "description": { "title": "Description" },
+          "command": { "title": "Command" },
+          "command-key": { "title": "Command Key" },
+          "tenant-id": { "title": "Tenant" },
+          "application-id": { "title": "Application" },
+          "job-type": { "title": "Job Type" },
+          "enabled": { "title": "Enabled" },
+          "source": { "title": "Source" },
+          "cron": { "title": "Cron Expression" },
+          "timezone": { "title": "Timezone" },
+          "concurrency-policy": { "title": "Concurrency Policy" },
+          "missed-run-policy": { "title": "Missed Run Policy" },
+          "default-visibility": { "title": "Default Visibility" },
+          "failure-threshold": { "title": "Failure Threshold" },
+          "failure-action": { "title": "Failure Action" },
+          "reset-failures-after-success": { "title": "Reset Failures After Success" },
+          "status": { "title": "Status" },
+          "payload": { "title": "Payload" },
+          "next-run-at": { "title": "Next Run" },
+          "last-triggered-at": { "title": "Last Run" },
+          "consecutive-failures": { "title": "Consecutive Failures" }
+        },
+        "options": {
+          "concurrency": {
+            "skip-if-running": "Skip If Running",
+            "queue": "Queue"
+          },
+          "missed-run": {
+            "skip": "Skip",
+            "catch-up-one": "Catch Up One"
+          },
+          "source": {
+            "system": "System",
+            "integration": "Integration",
+            "user": "User"
+          },
+          "visibility": {
+            "initiator": "Initiator",
+            "tenant-admin": "Tenant Admin",
+            "silent": "Silent"
+          },
+          "failure-action": {
+            "pause": "Pause Schedule",
+            "disable": "Disable Schedule",
+            "alert": "Alert Only"
+          }
+        },
+        "status": {
+          "active": "Active",
+          "pause": "Paused",
+          "disabled": "Disabled"
+        },
+        "transitions": {
+          "pause": "Pause",
+          "resume": "Resume",
+          "disable": "Disable",
+          "enable": "Enable"
+        }
+      }
+    },
+    "actions": {
+      "run-now": { "title": "Run Now" },
+      "bulk-run-now": {
+        "title": "Run Selected",
+        "confirm": {
+          "title": "Run Selected Schedules",
+          "message": "Run the selected schedules now?"
+        }
+      }
+    },
+    "commands": {
+      "run-now": {
+        "messages": {
+          "success": {
+            "title": "Job Started",
+            "description": "{{name}} was started and is queued to run."
+          },
+          "failed": {
+            "title": "Run Failed",
+            "description": "Could not start {{name}}."
+          }
+        }
+      }
+    },
+    "permissions": {
+      "view": {
+        "title": "View Schedules",
+        "description": "View job schedules"
+      },
+      "manage": {
+        "title": "Manage Schedules",
+        "description": "Create, update, and delete job schedules"
+      }
+    }
+  }
+}

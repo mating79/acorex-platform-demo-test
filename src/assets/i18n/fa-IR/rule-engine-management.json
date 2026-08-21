@@ -1,0 +1,150 @@
+{
+  "module": {
+    "title": "موتور قوانین",
+    "description": "تعریف و ارزیابی مجموعه‌های قوانین کسب‌وکار",
+    "menus": {
+      "root": {
+        "title": "موتور قوانین",
+        "description": "مجموعه قوانین، جداول تصمیم و تاریخچه ارزیابی"
+      }
+    },
+    "permissions": {
+      "title": "مدیریت موتور قوانین",
+      "description": "مدیریت مجموعه قوانین و اجرای ارزیابی",
+      "rule-set-view": {
+        "title": "مشاهده مجموعه قوانین",
+        "description": "مشاهده مجموعه قوانین و دارایی‌های مرتبط"
+      },
+      "rule-set-manage": {
+        "title": "مدیریت مجموعه قوانین",
+        "description": "ایجاد و ویرایش مجموعه قوانین و قوانین"
+      },
+      "rule-set-publish": {
+        "title": "انتشار مجموعه قوانین",
+        "description": "انتشار و بازگشت نسخه مجموعه قوانین"
+      },
+      "evaluate-run": {
+        "title": "اجرای ارزیابی",
+        "description": "ارزیابی مجموعه‌های منتشرشده"
+      },
+      "evaluate-simulate": {
+        "title": "شبیه‌سازی ارزیابی",
+        "description": "شبیه‌سازی مجموعه‌های پیش‌نویس یا منتشرشده"
+      }
+    }
+  },
+  "rule-sets": {
+    "menus": { "rule-sets": { "title": "مجموعه‌های قوانین" } },
+    "entities": {
+      "rule-set": {
+        "title": "مجموعه قوانین",
+        "plural": "مجموعه‌های قوانین",
+        "groups": { "basic-info": "اطلاعات پایه" },
+        "pages": {
+          "simulate": { "title": "شبیه‌سازی" }
+        },
+        "fields": {
+          "name": { "title": "نام" },
+          "domain": { "title": "دامنه" },
+          "version": { "title": "نسخه" },
+          "status": { "title": "وضعیت" },
+          "title": { "title": "عنوان" },
+          "description": { "title": "توضیحات" },
+          "hit-policy-default": { "title": "سیاست برخورد پیش‌فرض" },
+          "feature-flag": { "title": "پرچم قابلیت" },
+          "enabled": { "title": "فعال" }
+        }
+      }
+    }
+  },
+  "simulate": {
+    "menus": { "simulate": { "title": "شبیه‌سازی" } },
+    "page": {
+      "title": "شبیه‌سازی مجموعه قوانین",
+      "description": "اجرای آزمایشی پک قوانین روی حقایق نمونه قبل از انتشار"
+    },
+    "fields": {
+      "rule-set": "مجموعه قوانین",
+      "facts-json": "حقایق (JSON)",
+      "result": "نتیجه"
+    },
+    "actions": {
+      "run": "اجرای شبیه‌سازی"
+    }
+  },
+  "rules": {
+    "menus": { "rules": { "title": "قوانین" } },
+    "entities": {
+      "rule-definition": {
+        "title": "تعریف قانون",
+        "plural": "تعاریف قوانین",
+        "groups": { "basic-info": "اطلاعات پایه" },
+        "fields": {
+          "rule-set-id": { "title": "شناسه مجموعه" },
+          "name": { "title": "نام" },
+          "enabled": { "title": "فعال" },
+          "priority": { "title": "اولویت" },
+          "salience": { "title": "اهمیت" },
+          "activation-group": { "title": "گروه فعال‌سازی" },
+          "severity": { "title": "شدت" },
+          "when-json": { "title": "شرط (JSON)" },
+          "then-json": { "title": "اقدام (JSON)" }
+        }
+      }
+    }
+  },
+  "tables": {
+    "menus": { "tables": { "title": "جداول تصمیم" } },
+    "entities": {
+      "decision-table": {
+        "title": "جدول تصمیم",
+        "plural": "جداول تصمیم",
+        "groups": { "basic-info": "اطلاعات پایه" },
+        "fields": {
+          "rule-set-id": { "title": "شناسه مجموعه" },
+          "name": { "title": "نام" },
+          "hit-policy": { "title": "سیاست برخورد" },
+          "table-json": { "title": "JSON جدول" }
+        }
+      }
+    }
+  },
+  "versions": {
+    "menus": { "versions": { "title": "نسخه‌ها" } },
+    "entities": {
+      "rule-set-version": {
+        "title": "نسخه مجموعه قوانین",
+        "plural": "نسخه‌های مجموعه قوانین",
+        "groups": { "basic-info": "اطلاعات پایه" },
+        "fields": {
+          "rule-set-id": { "title": "شناسه مجموعه" },
+          "version": { "title": "نسخه" },
+          "status": { "title": "وضعیت" },
+          "snapshot-json": { "title": "اسنپ‌شات JSON" },
+          "published-at": { "title": "زمان انتشار" },
+          "published-by": { "title": "منتشرکننده" }
+        }
+      }
+    }
+  },
+  "runs": {
+    "menus": { "runs": { "title": "اجراهای ارزیابی" } },
+    "entities": {
+      "rule-evaluation-run": {
+        "title": "اجرای ارزیابی",
+        "plural": "اجراهای ارزیابی",
+        "groups": { "basic-info": "اطلاعات پایه" },
+        "fields": {
+          "rule-set-id": { "title": "شناسه مجموعه" },
+          "rule-set-version": { "title": "نسخه مجموعه" },
+          "mode": { "title": "حالت" },
+          "passed": { "title": "موفق" },
+          "duration-ms": { "title": "مدت (میلی‌ثانیه)" },
+          "facts-json": { "title": "حقایق JSON" },
+          "result-json": { "title": "نتیجه JSON" },
+          "correlation-id": { "title": "شناسه همبستگی" }
+        }
+      }
+    }
+  }
+}

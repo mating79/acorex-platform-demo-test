@@ -1,0 +1,129 @@
+{
+  "settings": {
+    "whatsapp": {
+      "test": {
+        "action": "Send Test Message",
+        "dialog": {
+          "title": "Send WhatsApp Test Message",
+          "actions": {
+            "send": "Send Test Message"
+          },
+          "fields": {
+            "phone-number": {
+              "title": "Phone Number",
+              "placeholder": "Enter E.164 phone number (e.g. 15551234567)"
+            }
+          }
+        },
+        "messages": {
+          "phone-number-required": "WhatsApp phone number is required.",
+          "success": "Test message sent successfully.",
+          "failed": "WhatsApp test failed."
+        }
+      },
+      "errors": {
+        "phone-number-required": "WhatsApp phone number is required.",
+        "access-token-not-configured": "WhatsApp is not connected yet. Connect WhatsApp in Administration → Integrations first.",
+        "phone-number-id-not-configured": "WhatsApp phone number ID is missing. Reconnect WhatsApp in Administration → Integrations.",
+        "tenant-required": "Tenant context is required to send a test message.",
+        "recipient-not-found": "WhatsApp could not deliver to this phone number. Verify the number and opt-in status.",
+        "unauthorized": "Meta rejected the access token. Verify the token and WhatsApp Business permissions.",
+        "outside-window": "Free-form messages are only allowed inside the 24-hour customer service window. Use an approved template outside that window.",
+        "api-error": "WhatsApp could not send the message. Check Meta settings and try again."
+      }
+    },
+    "tenant-integration": {
+      "section-title": "Communication",
+      "section-description": "Connect messaging providers used to send tenant communications.",
+      "connections-panel": {
+        "title": "Providers",
+        "description": "Connect Telegram, WhatsApp, and other communication providers for this tenant."
+      }
+    },
+    "user-integration": {
+      "section-title": "WhatsApp",
+      "section-description": "Connect your WhatsApp number to receive platform messages.",
+      "connection-title": "Account",
+      "connection-description": "Link a WhatsApp phone number so the platform can send you messages.",
+      "not-configured-badge": "Not Configured",
+      "not-configured-notice": "WhatsApp is not connected yet. Ask an administrator to connect WhatsApp in Administration → Integrations."
+    },
+    "delivery-channel": {
+      "title": "WhatsApp",
+      "description": "Receive communications on WhatsApp when your WhatsApp account is connected."
+    }
+  },
+  "integration": {
+    "display-name": "WhatsApp",
+    "description": "Connect WhatsApp Cloud API for outbound messages, or link your number to receive them.",
+    "domain": {
+      "title": "Communication",
+      "description": "Messaging providers for outbound communications."
+    },
+    "auth": {
+      "link": {
+        "label": "WhatsApp phone number",
+        "instructions": "Enter the E.164 phone number that should receive platform WhatsApp messages."
+      }
+    },
+    "connect": {
+      "tenant": {
+        "dialog": {
+          "title": "Connect WhatsApp",
+          "configure-title": "Configure WhatsApp",
+          "instructions": "<p>Enter your Meta WhatsApp Cloud API credentials from the Meta developer console.</p>",
+          "fields": {
+            "display-name": "Display Name",
+            "access-token": "Access Token",
+            "phone-number-id": "Phone Number ID",
+            "webhook-verify-token": "Webhook Verify Token",
+            "app-secret": "App Secret"
+          },
+          "placeholders": {
+            "display-name": "WhatsApp",
+            "access-token": "Enter access token",
+            "phone-number-id": "Enter phone number ID",
+            "webhook-verify-token": "Optional verify token",
+            "app-secret": "Optional app secret"
+          },
+          "actions": {
+            "save": "Save"
+          }
+        },
+        "messages": {
+          "credentials-required": "Access token and phone number ID are required.",
+          "success": "WhatsApp Cloud API connected successfully."
+        }
+      },
+      "dialog": {
+        "title": "Connect WhatsApp",
+        "instructions": "<p>Enter the <strong>E.164 phone number</strong> that should receive platform WhatsApp messages (digits with country code, optional leading +).</p><p>The recipient must have opted in to messages from your WhatsApp Business number. Free-form text only works inside the 24-hour customer service window.</p>",
+        "fields": {
+          "phone-number": {
+            "title": "Phone Number",
+            "placeholder": "15551234567"
+          },
+          "display-name": {
+            "title": "Display Name (Optional)",
+            "placeholder": "Optional label"
+          }
+        },
+        "actions": {
+          "connect": "Connect"
+        }
+      },
+      "messages": {
+        "failed": "WhatsApp connection failed.",
+        "success": "WhatsApp number connected successfully."
+      }
+    }
+  },
+  "templates": {
+    "channels": {
+      "whatsapp": "WhatsApp",
+      "not-configured": {
+        "whatsapp": "WhatsApp is not connected yet. You can draft templates now, but messages will not send until WhatsApp is connected in Administration → Integrations."
+      }
+    }
+  }
+}

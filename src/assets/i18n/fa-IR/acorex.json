@@ -1,0 +1,755 @@
+{
+  "common": {
+    "actions": {
+      "cancel": "لغو",
+      "canceled": "لغو شد",
+      "next": "بعدی",
+      "prev": "قبلی",
+      "retry": "تلاش مجدد",
+      "uploading": "در حال آپلود",
+      "search": "جستجو",
+      "add": "افزودن"
+    },
+    "form": {
+      "title": "عنوان",
+      "name": "نام",
+      "size": "اندازه",
+      "color": "رنگ",
+      "display": "نمایش",
+      "value": "مقدار"
+    },
+    "status": {
+      "loading": "در حال بارگذاری",
+      "failed": "خطا",
+      "completed": "تکمیل شد",
+      "processing": "در حال پردازش"
+    },
+    "general": {
+      "custom": "سفارشی",
+      "and": "و",
+      "between": "بین",
+      "every": "هر",
+      "no-result-found": "نتیجه ای یافت نشد",
+      "more-items": "{{ number }} بیشتر",
+      "no-record": "رکوردی یافت نشد",
+      "no-data-yet": "هنوز داده ای بارگذاری نشده است.",
+      "full-screen": "تمام صفحه",
+      "clear": "پاک کردن",
+      "close": "بستن",
+      "close-all": "بستن همه"
+    },
+    "notifications": {
+      "more": "و {{ number }} اعلان دیگر..."
+    }
+  },
+  "error": {
+    "message": "خطا: {{ message }}"
+  },
+  "validation": {
+    "messages": {
+      "title": "لطفا این خطاها را بررسی کنید(s):",
+      "required": "\"<b>{{ title }}</b>\" اجباری است!",
+      "email": "!لطفا یک ایمیل معتبر وارد کنید",
+      "phone": "!لطفا یک شماره معتبر وارد کنید",
+      "invalid-rull-name": "خطای اعتبارسنجی: <b>\"{{ name }}\"</b>",
+      "min": "مقدار باید بزرگ‌تر از {{ value }} باشد",
+      "max": "مقدار باید کوچک‌تر از {{ value }} باشد"
+    }
+  },
+  "dataTable": {
+    "rowCommandColumn": {
+      "emptyStateText": "رکوردی یافت نشد"
+    },
+    "rowHighlight": {
+      "new": "جدید"
+    }
+  },
+  "password-strength": {
+    "rules": {
+      "at-least-8-characters": "حداقل هشت کاراکتر",
+      "english-upper-case-letter": "استفاده از حروف بزرگ",
+      "english-lower-case-letter": "استفاده از حروف کوچک",
+      "special-character": "استفاده از کاراکتر های ویژه (%,$, ...)",
+      "digits": "استفاده از اعداد"
+    },
+    "levels": {
+      "fragile": "شکننده",
+      "weak": "ضعیف",
+      "good": "خوب",
+      "strong": "قوی",
+      "unbreakable": "مستحکم"
+    }
+  },
+  "scheduler": {
+    "time-units": {
+      "select-second": "انتخاب ثانیه( ها)",
+      "select-minute": "انتخاب دقیقه( ها)",
+      "select-hour": "انتخاب ساعت( ها)",
+      "select-day": "انتخاب روز( ها)",
+      "select-month": "انتخاب ماه( ها)",
+      "select-year": "انتخاب سال( ها)"
+    },
+    "starting-at": {
+      "second": "ثانیه(هایی) که شروع میشوند از ثانیه",
+      "minute": "دقیقه(هایی) که شروع میشوند از دقیقه",
+      "hour": "ساعت(هایی) که شروع میشوند از ساعت",
+      "day": "روزی(های) که شروع میشود در",
+      "month": "ماه(هایی) که شروع میشوند از ماه",
+      "year": "سال(هایی) که شروع میشوند از سال"
+    },
+    "specific": {
+      "second": "ثانیه(های) به خصوص (انتخاب یکی یا بیشتر)",
+      "minute": "دقیقه(های) به خصوص (انتخاب یکی یا بیشتر)",
+      "hour": "ساعت(های) به خصوص (انتخاب یکی یا بیشتر)",
+      "day-of-month": "روز(های) به خصوص از ماه(انتخاب یک مورد یا بیشنر)",
+      "day-of-week": "روز(های) به خصوص از هفته(انتخاب یک مورد یا بیشنر)",
+      "month": "ماه(های) به خصوص (انتخاب یکی یا بیشتر)",
+      "year": "سال(های) به خصوص (انتخاب یکی یا بیشتر)"
+    },
+    "base-on-week": "بر اساس هفته",
+    "base-on-month": "بر اساس ماه",
+    "of-the-month": "ماه",
+    "on-the": "در",
+    "on-the-last": "در آخرین",
+    "on-the-last-day-of-the-month": "در آخرین روز ماه",
+    "day-before-the-end-of-the-month": "روز(های) قبل از اتمام ماه",
+    "ordinal-suffix": "امین",
+    "ordinal-suffix-of-month": "ام ماه"
+  },
+  "dateTime": {
+    "set": "تنظیم",
+    "today": "امروز",
+    "now": "الان",
+    "date": "تاریخ",
+    "time": "زمان",
+    "units": {
+      "millisecond": "میلی ثانیه",
+      "second": "ثانیه",
+      "seconds": "ثانیه ها",
+      "minute": "دقیقه",
+      "minutes": "دقیقه ها",
+      "hour": "ساعت",
+      "hours": "ساعت ها",
+      "day": "روز",
+      "days": "روز ها",
+      "week": "هفته",
+      "month": "ماه",
+      "months": "ماه ها",
+      "year": "سال",
+      "years": "سال ها"
+    },
+    "weekdays": {
+      "short": { "0": "ی", "1": "د", "2": "س", "3": "چ", "4": "پ", "5": "ج", "6": "ش" },
+      "long": {
+        "0": "یکشنبه",
+        "1": "دوشنبه",
+        "2": "سه شنبه",
+        "3": "چهارشنبه",
+        "4": "پنجشنبه",
+        "5": "جمعه",
+        "6": "شنبه"
+      }
+    },
+    "months": {
+      "gregorian": {
+        "short": {
+          "0": "ژانویه",
+          "1": "فوریه",
+          "2": "مارس",
+          "3": "آوریل",
+          "4": "مه",
+          "5": "ژوئن",
+          "6": "ژوئیه",
+          "7": "اوت",
+          "8": "سپتامبر",
+          "9": "اکتبر",
+          "10": "نوامبر",
+          "11": "دسامبر"
+        },
+        "long": {
+          "0": "ژانویه",
+          "1": "فوریه",
+          "2": "مارس",
+          "3": "آوریل",
+          "4": "مه",
+          "5": "ژوئن",
+          "6": "ژوئیه",
+          "7": "اوت",
+          "8": "سپتامبر",
+          "9": "اکتبر",
+          "10": "نوامبر",
+          "11": "دسامبر"
+        }
+      },
+      "solar-hijri": {
+        "short": {
+          "0": "فروردین",
+          "1": "اردیبهشت",
+          "2": "خرداد",
+          "3": "تیر",
+          "4": "مرداد",
+          "5": "شهریور",
+          "6": "مهر",
+          "7": "آبان",
+          "8": "آذر",
+          "9": "دی",
+          "10": "بهمن",
+          "11": "اسفند"
+        },
+        "long": {
+          "0": "فروردین",
+          "1": "اردیبهشت",
+          "2": "خرداد",
+          "3": "تیر",
+          "4": "مرداد",
+          "5": "شهریور",
+          "6": "مهر",
+          "7": "آبان",
+          "8": "آذر",
+          "9": "دی",
+          "10": "بهمن",
+          "11": "اسفند"
+        }
+      }
+    },
+    "day-period": {
+      "am": "am",
+      "pm": "pm",
+      "m": "m",
+      "a": "a",
+      "p": "p"
+    },
+    "duration": {
+      "format-second": "{0} ثانیه(s)",
+      "format-minute": "{0} دقیقه(s)",
+      "daily": "روزانه",
+      "daily-timeline": "خط زمانی روزانه",
+      "multi-day-timeline": "خط زمانی چند روزه",
+      "weekly": "هفتگی",
+      "weekly-timeline": "خط زمانی هفتگی",
+      "monthly": "ماهانه",
+      "monthly-timeline": "خط زمانی ماهانه",
+      "yearly": "سالانه",
+      "yearly-timeline": "خط زمانی سالانه",
+      "all-day": "کل روز",
+      "agenda": "دستور کار"
+    }
+  },
+  "selectbox": {
+    "popover": {
+      "title": "انتخاب کنید ..."
+    }
+  },
+  "datapager": {
+    "info": {
+      "text": "[page] از [totalPages] صفحه ( [totalItems] رکورد)"
+    }
+  },
+  "uploader": {
+    "zone": {
+      "text": "برای آپلود فایل را رها کنید",
+      "drag": "بکشید یا رها کنید یا ",
+      "choose": "فایل را انتخاب کنید",
+      "to-upload": " ",
+      "uploadFile": "آپلود فایل",
+      "uploadFiles": "آپلود فایل ها"
+    }
+  },
+  "comment": {
+    "replies": "پاسخ‌ها",
+    "reply": "پاسخ",
+    "view": "نمایش",
+    "hide": "مخفی کردن"
+  },
+  "paint": {
+    "tools": {
+      "pen": "قلم",
+      "highlight": "ماژیک",
+      "eraser": "پاک کن"
+    },
+    "actions": {
+      "reset": "مجدد"
+    }
+  },
+  "image-editor": {
+    "crop": "برش",
+    "undo": "بازگشت به عقب",
+    "redo": "بازگشت به جلو",
+    "rotate-left": "چرخش چپ",
+    "rotate-right": "چرخش راست",
+    "rotate": "چرخش"
+  },
+  "time": {
+    "right-now": "همین الان",
+    "just-now": "همین الان",
+    "left": "بعد",
+    "ago": "پیش",
+    "second": "ثانیه",
+    "seconds": "ثانیه",
+    "minute": "دقیقه",
+    "minutes": "دقیقه",
+    "hour": "ساعت",
+    "hours": "ساعت",
+    "day": "روز",
+    "days": "روز",
+    "month": "ماه",
+    "months": "ماه",
+    "week": "هفته",
+    "weeks": "هفته",
+    "year": "سال",
+    "years": "سال",
+    "an-hour": "یک ساعت",
+    "a-day": "یک روز",
+    "a-month": "یک ماه",
+    "a-year": "یک سال"
+  },
+  "chat": {
+    "text": "متن",
+    "image": "تصویر",
+    "video": "ویدیو",
+    "audio": "صوت",
+    "voice": "پیام صوتی",
+    "file": "فایل",
+    "location": "مکان",
+    "sticker": "استیکر",
+    "poll": "نظرسنجی",
+    "system": "پیام سیستمی",
+    "message": "پیام",
+    "bot": "ربات",
+    "tabs": {
+      "all": "همه",
+      "private": "خصوصی",
+      "groups": "گروه‌ها",
+      "channels": "کانال‌ها",
+      "bots": "ربات‌ها",
+      "unread": "خوانده‌نشده",
+      "archived": "بایگانی",
+      "emoji": "ایموجی",
+      "stickers": "استیکرها"
+    },
+    "actions": {
+      "search": "جستجو",
+      "speach-to-text": "تبدیل صوت به متن",
+      "conversation-info": "جزئیات گفتگو",
+      "mute": "بی‌صدا کردن",
+      "unmute": "خروج از حالت بی‌صدا",
+      "archive": "بایگانی",
+      "unarchive": "خروج از بایگانی",
+      "delete": "حذف",
+      "leave-and-delete": "خروج و حذف",
+      "block": "مسدود کردن",
+      "unblock": "رفع مسدودیت",
+      "copy": "کپی",
+      "reply": "پاسخ",
+      "edit": "ویرایش",
+      "forward": "ارسال مجدد",
+      "cancel": "لغو",
+      "save": "ذخیره",
+      "send": "ارسال",
+      "stop": "توقف",
+      "stopping": "در حال توقف...",
+      "close": "بستن",
+      "react": "واکنش",
+      "choose-reaction": "انتخاب واکنش",
+      "add-reaction": "افزودن واکنش",
+      "scroll-to-bottom": "رفتن به انتهای پیام‌ها",
+      "remove-attachment": "حذف پیوست",
+      "back": "بازگشت",
+      "next": "بعدی",
+      "create": "ایجاد",
+      "new-conversation": "گفت‌وگوی جدید",
+      "emoji-and-stickers": "ایموجی و استیکر",
+      "mark-as-read": "علامت‌گذاری به‌عنوان خوانده‌شده",
+      "pin": "سنجاق کردن",
+      "unpin": "برداشتن از سنجاق",
+      "choose-image": "انتخاب تصویر",
+      "change-image": "تغییر تصویر",
+      "upload-image": "بارگذاری تصویر",
+      "remove-image": "حذف تصویر"
+    },
+    "tooltips": {
+      "search-in-conversation": "جستجو در گفتگو",
+      "toggle-notifications": "تغییر وضعیت اعلان‌ها",
+      "pin-conversation": "سنجاق کردن گفتگو",
+      "mark-conversation-as-read": "علامت‌گذاری گفتگو به‌عنوان خوانده‌شده",
+      "leave-and-delete-group": "خروج و حذف این گروه",
+      "delete-conversation": "حذف این گفتگو",
+      "block-conversation": "مسدود کردن این گفتگو",
+      "send-image": "ارسال تصویر",
+      "send-video": "ارسال ویدیو",
+      "attach-file": "پیوست فایل",
+      "record-voice-message": "ضبط پیام صوتی",
+      "send-audio-file": "ارسال فایل صوتی",
+      "send-location": "ارسال موقعیت مکانی"
+    },
+    "placeholders": {
+      "search-conversations": "جستجو در گفتگوها...",
+      "search-users": "جستجوی کاربران...",
+      "group-title-required": "عنوان گروه را وارد کنید... (الزامی)",
+      "select-conversation": "یک گفتگو انتخاب کنید",
+      "type-message": "پیام بنویسید..."
+    },
+    "status": {
+      "no-messages": "پیامی وجود ندارد",
+      "no-conversation-selected": "گفتگویی انتخاب نشده است",
+      "loading-messages": "در حال بارگذاری پیام‌ها...",
+      "loading-older-messages": "در حال بارگذاری پیام‌های قدیمی‌تر...",
+      "loading-more": "در حال بارگذاری بیشتر...",
+      "edited": "ویرایش‌شده",
+      "someone-typing": "کسی در حال تایپ است...",
+      "typing": "در حال تایپ...",
+      "user-is-typing": "{{ userName }} در حال تایپ است...",
+      "people-typing": "{{ count }} نفر در حال تایپ هستند...",
+      "online": "آنلاین",
+      "offline": "خارج از دسترس",
+      "last-seen": "آخرین بازدید: {{ value }}",
+      "sending": "در حال ارسال...",
+      "sent": "ارسال شد",
+      "delivered": "تحویل شد",
+      "read": "خوانده شد",
+      "failed-to-send": "ارسال ناموفق بود"
+    },
+    "dialog": {
+      "forward-message": {
+        "title": "ارسال مجدد پیام",
+        "selected-count": "ارسال مجدد پیام ({{ count }} انتخاب شده)",
+        "no-conversations-search": "هیچ گفتگویی با جستجوی شما یافت نشد.",
+        "no-conversations-available": "گفتگوی دیگری برای ارسال مجدد وجود ندارد."
+      },
+      "new-conversation": {
+        "title": "گفتگوی جدید",
+        "group-details": "جزئیات گروه",
+        "selected-count": "گفتگوی جدید ({{ count }} انتخاب شده)",
+        "no-users-search": "کاربری با جستجوی شما یافت نشد.",
+        "no-users-available": "کاربری در دسترس نیست."
+      },
+      "delete-message": {
+        "title": "حذف پیام",
+        "for-everyone": "این پیام برای همه حذف شود؟",
+        "default": "این پیام حذف شود؟"
+      },
+      "delete-conversation": {
+        "title": "حذف گفتگو",
+        "message": "گفت‌وگوی «{{ conversationTitle }}» حذف شود؟"
+      }
+    },
+    "notifications": {
+      "message-forwarded": "پیام به {{ count }} گفتگو ارسال شد"
+    },
+    "errors": {
+      "failed-to-create-conversation": "ایجاد گفتگو ناموفق بود. دوباره تلاش کنید.",
+      "failed-to-forward-message": "ارسال مجدد پیام ناموفق بود. دوباره تلاش کنید.",
+      "upload-failed": "آپلود ناموفق بود",
+      "empty-file": "آپلود فایل خالی امکان‌پذیر نیست",
+      "file-size-exceeds-limit": "حجم فایل از محدودیت {{ sizeMb }} مگابایت بیشتر است",
+      "file-type-not-allowed": "نوع فایل \"{{ fileType }}\" مجاز نیست"
+    },
+    "fallbacks": {
+      "unknown-user": "کاربر ناشناس",
+      "someone": "کسی",
+      "you": "شما",
+      "this-conversation": "این گفتگو"
+    },
+    "members": {
+      "title": "اعضا ({{ count }})",
+      "count": "{{ count }} عضو",
+      "subscribers-count": "{{ count }} مشترک"
+    },
+    "forwarded": {
+      "from": "ارسال شده از {{ senderName }}",
+      "from-with-conversation": "ارسال شده از {{ senderName }} ({{ conversationTitle }})"
+    },
+    "empty": {
+      "no-messages-yet": "هنوز پیامی وجود ندارد",
+      "inbox": "صندوق ورودی شما",
+      "no-conversation-selected-title": "گفتگویی انتخاب نشده است",
+      "no-conversation-open": "هیچ گفت‌وگویی باز نیست",
+      "select-conversation-description": "برای شروع پیام‌رسانی، یک گفتگو از نوار کناری انتخاب کنید",
+      "no-conversation-description": "برای خواندن و ارسال پیام، یک گفتگو از لیست انتخاب کنید یا در صورت نیاز گفتگوی جدیدی شروع کنید.",
+      "eyebrow": {
+        "direct-message": "پیام مستقیم",
+        "group-chat": "گفتگوی گروهی",
+        "channel": "کانال",
+        "assistant": "دستیار",
+        "conversation": "گفتگو"
+      },
+      "description": {
+        "private-prefix": "گفتگوی خصوصی را با",
+        "group-prefix": "گفتگوی گروهی را در",
+        "channel-prefix": "گفتگوی کانال را در",
+        "bot-prefix": "گفتگوی ربات را در",
+        "conversation-prefix": "گفتگو را در"
+      },
+      "no-emojis-found": "ایموجی‌ای پیدا نشد",
+      "no-stickers-available": "استیکری موجود نیست"
+    },
+    "composer": {
+      "editing-message": "در حال ویرایش پیام",
+      "replying-to": "پاسخ به"
+    },
+    "avatar": {
+      "preview": "پیش‌نمایش آواتار"
+    },
+    "pickers": {
+      "common": {
+        "add-more": "افزودن بیشتر",
+        "remove": "حذف",
+        "caption-optional": "افزودن کپشن (اختیاری)",
+        "release-to-upload": "برای بارگذاری رها کنید",
+        "click-to-browse": "یا برای انتخاب کلیک کنید"
+      },
+      "images": {
+        "title": "ارسال تصویر",
+        "drop-to-attach": "تصاویر را رها کنید",
+        "select": "انتخاب تصویر",
+        "selected-count": "{{ count }} تصویر انتخاب شده",
+        "send-count": "ارسال {{ count }} تصویر"
+      },
+      "videos": {
+        "title": "ارسال ویدیو",
+        "drop-to-attach": "ویدیوها را رها کنید",
+        "select": "انتخاب ویدیو",
+        "selected-count": "{{ count }} ویدیو انتخاب شده",
+        "send-count": "ارسال {{ count }} ویدیو"
+      },
+      "audio": {
+        "title": "ارسال فایل صوتی",
+        "drop-to-attach": "فایل‌های صوتی را رها کنید",
+        "select": "انتخاب فایل صوتی",
+        "selected-count": "{{ count }} فایل صوتی انتخاب شده",
+        "send-count": "ارسال {{ count }} فایل صوتی"
+      },
+      "files": {
+        "title": "پیوست فایل",
+        "drop-here": "فایل‌ها را اینجا رها کنید",
+        "select": "انتخاب فایل",
+        "selected-count": "{{ count }} فایل انتخاب شده",
+        "uploading-progress": "در حال بارگذاری... {{ progress }}٪",
+        "uploading-count": "در حال بارگذاری {{ count }} فایل...",
+        "uploaded": "بارگذاری شد",
+        "send-count": "ارسال {{ count }} فایل",
+        "ready-count": "{{ ready }} از {{ total }} آماده"
+      },
+      "location": {
+        "title": "ارسال موقعیت مکانی",
+        "coordinates": "مختصات",
+        "send": "ارسال موقعیت مکانی"
+      }
+    },
+    "voice-recorder": {
+      "title": "پیام صوتی",
+      "tap-to-start": "برای شروع ضبط لمس کنید",
+      "recording": "در حال ضبط",
+      "transcribing": "در حال تبدیل گفتار به متن..."
+    },
+    "renderer-state": {
+      "message-status": "وضعیت پیام",
+      "retry": "تلاش مجدد",
+      "try-again": "دوباره تلاش کنید",
+      "could-not-load-content": "بارگذاری محتوا ممکن نشد.",
+      "could-not-send-message": "ارسال پیام ممکن نشد."
+    },
+    "info-panel": {
+      "tabs": {
+        "about": "درباره",
+        "settings": "تنظیمات",
+        "members-count": "اعضا ({{ count }})",
+        "profile": "پروفایل",
+        "manage": "مدیریت"
+      },
+      "stats": {
+        "members": "اعضا",
+        "unread": "خوانده‌نشده",
+        "type": "نوع"
+      },
+      "timeline": {
+        "created": "ایجاد شده",
+        "last-activity": "آخرین فعالیت"
+      },
+      "placeholders": {
+        "search-members": "جستجوی اعضا...",
+        "enter-group-title": "عنوان گروه را وارد کنید"
+      },
+      "member": "عضو",
+      "group-details": {
+        "title": "جزئیات گروه",
+        "group-title": "عنوان گروه"
+      },
+      "actions": {
+        "save-changes": "ذخیره تغییرات",
+        "reset-to-default": "بازنشانی به پیش‌فرض",
+        "leave-conversation": "ترک گفتگو"
+      },
+      "settings": {
+        "notifications": "اعلان‌ها",
+        "notifications-description": "اعلان پیام‌های جدید را دریافت کنید",
+        "show-preview": "نمایش پیش‌نمایش",
+        "show-preview-description": "پیش‌نمایش پیام در اعلان‌ها نمایش داده شود",
+        "archived": "بایگانی‌شده",
+        "archived-description": "این گفتگو از لیست پنهان شود"
+      },
+      "background": {
+        "title": "پس‌زمینه گفتگو",
+        "description": "برای این گفتگو یک رنگ یا گرادیان انتخاب کنید.",
+        "set-label": "تنظیم پس‌زمینه {{ label }}",
+        "presets": {
+          "default": "پیش‌فرض",
+          "graphite": "گرافیتی",
+          "olive": "زیتونی",
+          "sky": "آسمانی",
+          "aurora": "شفق",
+          "sunset": "غروب"
+        }
+      },
+      "types": {
+        "private-chat": "گفتگوی خصوصی",
+        "group-conversation": "گفتگوی گروهی",
+        "channel": "کانال"
+      },
+      "toasts": {
+        "left-conversation": "گفتگو را ترک کردید",
+        "deleted-conversation": "گفتگو با موفقیت حذف شد",
+        "group-updated": "جزئیات گروه با موفقیت به‌روزرسانی شد",
+        "failed-group-update": "به‌روزرسانی جزئیات گروه ناموفق بود",
+        "background-updated": "پس‌زمینه به‌روزرسانی شد",
+        "background-reset": "پس‌زمینه به حالت پیش‌فرض بازنشانی شد",
+        "failed-background-update": "به‌روزرسانی پس‌زمینه ناموفق بود",
+        "settings-saved": "تنظیمات با موفقیت ذخیره شد"
+      },
+      "time": {
+        "today": "امروز",
+        "yesterday": "دیروز",
+        "days-ago": "{{ count }} روز پیش",
+        "weeks-ago": "{{ count }} هفته پیش",
+        "months-ago": "{{ count }} ماه پیش",
+        "years-ago": "{{ count }} سال پیش"
+      }
+    },
+    "aria": {
+      "message-list": "فهرست پیام‌ها",
+      "messages": "پیام‌ها",
+      "conversation-interface": "رابط گفتگو",
+      "conversation-list": "فهرست گفتگوها",
+      "active-conversation": "گفتگوی فعال",
+      "message-label": "{{ prefix }} در {{ time }}: {{ text }}{{ status }}",
+      "messages-from-date": "پیام‌های {{ date }}"
+    },
+    "time": {
+      "just-now": "همین الان",
+      "minutes-ago": "{{ count }} دقیقه پیش",
+      "hours-ago": "{{ count }} ساعت پیش",
+      "days-ago": "{{ count }} روز پیش"
+    },
+    "sidebar": {
+      "empty-title": "هنوز گفتگویی وجود ندارد",
+      "empty-search": "هیچ گفتگویی با جستجوی شما پیدا نشد. کلیدواژه دیگری امتحان کنید.",
+      "empty-default": "برای شروع گفتگو، یک گفتگوی جدید ایجاد کنید!"
+    }
+  },
+  "schedulerPicker": {
+    "labels": {
+      "repeatEvery": "تکرار هر",
+      "weekdaysOnly": "فقط روزهای کاری",
+      "onDays": "در روزها",
+      "selectDays": "انتخاب روزها",
+      "occurrence": "وقوع",
+      "selectMonths": "انتخاب ماه‌ها",
+      "startCondition": "شرط شروع",
+      "startDate": "تاریخ شروع",
+      "endCondition": "شرط پایان",
+      "numberOfOccurrences": "تعداد تکرار",
+      "endDate": "تاریخ پایان",
+      "includeDates": "تاریخ‌های شامل",
+      "excludeDates": "تاریخ‌های مستثنا",
+      "timezone": "منطقه زمانی",
+      "time": "زمان"
+    },
+    "placeholders": {
+      "selectInclusionDate": "انتخاب تاریخ شامل",
+      "selectExclusionDate": "انتخاب تاریخ مستثنا"
+    },
+    "messages": {
+      "noIncludedDates": "تاریخ شاملی وجود ندارد",
+      "noExcludedDates": "تاریخ مستثنایی وجود ندارد"
+    },
+    "startCondition": {
+      "now": "اکنون",
+      "byDate": "بر اساس تاریخ"
+    },
+    "endCondition": {
+      "never": "هرگز",
+      "afterOccurrences": "پس از تعداد تکرار",
+      "byDate": "بر اساس تاریخ"
+    },
+    "units": {
+      "hour": { "singular": "ساعت", "plural": "ساعت" },
+      "day": { "singular": "روز", "plural": "روز" },
+      "week": { "singular": "هفته", "plural": "هفته" },
+      "month": { "singular": "ماه", "plural": "ماه" },
+      "year": { "singular": "سال", "plural": "سال" }
+    },
+    "positions": {
+      "first": "اول",
+      "second": "دوم",
+      "third": "سوم",
+      "fourth": "چهارم",
+      "last": "آخر"
+    },
+    "days": {
+      "sunday": "یکشنبه",
+      "monday": "دوشنبه",
+      "tuesday": "سه‌شنبه",
+      "wednesday": "چهارشنبه",
+      "thursday": "پنجشنبه",
+      "friday": "جمعه",
+      "saturday": "شنبه"
+    },
+    "months": {
+      "january": "ژانویه",
+      "february": "فوریه",
+      "march": "مارس",
+      "april": "آوریل",
+      "may": "مه",
+      "june": "ژوئن",
+      "july": "ژوئیه",
+      "august": "اوت",
+      "september": "سپتامبر",
+      "october": "اکتبر",
+      "november": "نوامبر",
+      "december": "دسامبر"
+    },
+    "naturalLanguage": {
+      "everyHourly": "هر {{count}} ساعت",
+      "everyDaily": "هر {{count}} روز",
+      "everyWeekly": "هر {{count}} هفته",
+      "everyMonthly": "هر {{count}} ماه",
+      "everyYearly": "هر {{count}} سال",
+      "onDays": "در {{days}}",
+      "onThe": "در",
+      "onDaysPlural": "در روزهای",
+      "onDay": "در روز",
+      "in": "در",
+      "startingFrom": "از تاریخ {{date}}",
+      "forOccurrences": "به مدت {{count}} تکرار",
+      "until": "تا {{date}}"
+    },
+    "validation": {
+      "modeRequired": "حالت تکرار الزامی است",
+      "intervalRequired": "بازه تکرار الزامی است",
+      "intervalTooSmall": "بازه باید حداقل {{min}} باشد",
+      "intervalTooLarge": "بازه باید حداکثر {{max}} باشد",
+      "cannotCombineDayAndOccurrence": "ترکیب روز ماه و وقوع مجاز نیست",
+      "tooManyExclusions": "تعداد تاریخ‌های مستثنا زیاد است (حداکثر {{max}})",
+      "tooManyInclusions": "تعداد تاریخ‌های شامل زیاد است (حداکثر {{max}})",
+      "endDateInPast": "تاریخ پایان نمی‌تواند در گذشته باشد",
+      "endDateTooFar": "تاریخ پایان نمی‌تواند بعد از {{maxDate}} باشد"
+    },
+    "ordinals": {
+      "1st": "اول",
+      "2nd": "دوم",
+      "3rd": "سوم",
+      "4th": "چهارم",
+      "last": "آخر"
+    }
+  }
+}

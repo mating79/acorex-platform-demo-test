@@ -1,0 +1,382 @@
+{
+  "module": {
+    "title": "System Insight",
+    "description": "Monitor platform activity, audit trails, and operational signals",
+    "menus": {
+      "root": {
+        "title": "System Insight",
+        "description": "Explore audit logs and system events"
+      }
+    }
+  },
+  "groups": {
+    "general": "General",
+    "event": "Event",
+    "http": "HTTP",
+    "correlation": "Correlation",
+    "context": "Context",
+    "attributes": "Attributes"
+  },
+  "entities": {
+    "log-entry": { "title": "Log Entry", "plural": "Logs", "views": { "slow": { "title": "Slow" } } },
+    "http-request-log": { "title": "HTTP Request Log", "plural": "HTTP Request Logs" },
+    "job-execution-log": { "title": "Job Execution Log", "plural": "Job Execution Logs" },
+    "trace-entry": {
+      "title": "Trace",
+      "plural": "Traces",
+      "views": {
+        "slow": { "title": "Slow" },
+        "command": { "title": "Commands" },
+        "query": { "title": "Queries" },
+        "entity": { "title": "Entities" },
+        "error": { "title": "Errors" }
+      }
+    },
+    "trace-span": { "title": "Trace Span", "plural": "Trace Spans" },
+    "error-event": { "title": "Error Event", "plural": "Errors" },
+    "slow-request": { "title": "Slow Request", "plural": "Slow Requests" },
+    "metric-point": { "title": "Metric", "plural": "Metrics" },
+    "saved-view": { "title": "Saved View", "plural": "Saved Views" },
+    "alert-rule": { "title": "Alert Rule", "plural": "Alert Rules" },
+    "observability-data-source": { "title": "Data Source", "plural": "Data Sources" },
+    "retention-policy": { "title": "Retention Policy", "plural": "Retention Policies" },
+    "dashboard-widget-config": { "title": "Dashboard Widget", "plural": "Dashboard Widgets" }
+  },
+  "fields": {
+    "id": "Identifier",
+    "timestamp": "Timestamp",
+    "level": "Level",
+    "message": "Message",
+    "request-id": "Request ID",
+    "trace-id": "Trace ID",
+    "span-id": "Span ID",
+    "user-id": "User ID",
+    "tenant-id": "Tenant ID",
+    "application-id": "Application ID",
+    "service-name": "Service Name",
+    "module": "Module",
+    "entity": "Entity",
+    "operation": "Operation",
+    "kind": "Kind",
+    "source": "Source",
+    "method": "Method",
+    "url": "URL",
+    "status-code": "Status Code",
+    "duration": "Duration (ms)",
+    "severity-number": "Severity Number",
+    "attributes": "Attributes",
+    "job-id": "Job ID",
+    "job-name": "Job Name",
+    "status": "Status",
+    "error": "Error",
+    "start-time": "Start Time",
+    "span-count": "Span Count",
+    "has-error": "Has Error",
+    "error-type": "Error Type",
+    "fingerprint": "Fingerprint",
+    "threshold-ms": "Threshold (ms)",
+    "metric-name": "Metric Name",
+    "metric-type": "Metric Type",
+    "value": "Value",
+    "title": "Title",
+    "description": "Description",
+    "entity-full-name": "Entity",
+    "is-default": "Default",
+    "is-shared": "Shared",
+    "name": "Name",
+    "enabled": "Enabled",
+    "threshold": "Threshold",
+    "window-minutes": "Window (minutes)",
+    "severity": "Severity",
+    "last-triggered-at": "Last Triggered At",
+    "data-source-type": "Data Type",
+    "provider": "Provider",
+    "data-type": "Data Type",
+    "retention-days": "Retention Days",
+    "widget-type": "Widget Type",
+    "dashboard-key": "Dashboard Key",
+    "order": "Order"
+  },
+  "actions": {
+    "export": { "title": "Export" },
+    "clear-logs": { "title": "Clear logs" },
+    "clear-logs-confirm": {
+      "title": "Clear logs",
+      "message": "Delete all log entries matching the current filters for this tenant? This cannot be undone."
+    },
+    "clear-logs-success": "{{ deleted }} log entries deleted.",
+    "create-alert": { "title": "Create Alert" },
+    "view-trace": { "title": "View Trace" },
+    "view-timeline": { "title": "View Timeline" }
+  },
+  "permissions": {
+    "group": {
+      "title": "System Insight",
+      "description": "Manage access to observability and monitoring features"
+    },
+    "logs": {
+      "view": { "title": "View Logs", "description": "Browse runtime log entries" },
+      "export": { "title": "Export Logs", "description": "Export log data for offline analysis" }
+    },
+    "traces": {
+      "view": { "title": "View Traces", "description": "Browse distributed traces" }
+    },
+    "metrics": {
+      "view": { "title": "View Metrics", "description": "Browse metrics and time-series data" }
+    },
+    "errors": {
+      "view": { "title": "View Errors", "description": "Browse error events" }
+    },
+    "saved-views": {
+      "manage": { "title": "Manage Saved Views", "description": "Create and manage saved filter views" }
+    },
+    "alerts": {
+      "manage": { "title": "Manage Alerts", "description": "Configure alert rules and notifications" }
+    },
+    "admin": {
+      "title": "System Insight Admin",
+      "description": "Full administrative access to System Insight"
+    },
+    "audit-log": {
+      "manage": {
+        "title": "Manage Audit Logs",
+        "description": "Configure audit log settings and maintenance"
+      }
+    }
+  },
+  "pages": {
+    "metrics": {
+      "title": "Metrics Overview",
+      "loading": "Loading metrics..."
+    },
+    "trace-timeline": {
+      "title": "Timeline",
+      "back-to-traces": "Back to Traces",
+      "trace-id": "Trace ID",
+      "duration": "Duration",
+      "loading": "Loading Trace...",
+      "not-found": "Trace not found.",
+      "view-logs": "View Related Logs",
+      "timeline": "Timeline",
+      "spans": "Spans"
+    },
+    "trace-flow": {
+      "title": "Flow",
+      "duration": "Duration",
+      "not-found": "Trace not found.",
+      "empty": "No spans available for this trace.",
+      "next-middleware": "Next Middleware",
+      "input": "Input",
+      "output": "Output",
+      "no-input": "No input snapshot was captured for this span.",
+      "no-output": "No output snapshot was captured for this span.",
+      "attributes": "Attributes",
+      "events": "Events",
+      "span-id": "Span ID",
+      "parent-span-id": "Parent Span ID"
+    }
+  },
+  "logs": {
+    "terms": {
+      "log": "Log",
+      "logs": "Logs",
+      "audit-log": "Audit Log",
+      "audit-logs": "Audit Logs",
+      "retention": "Retention",
+      "storage": "Storage",
+      "alert": "Alert",
+      "performance": "Performance"
+    },
+    "entities": {
+      "audit-log": {
+        "title": "Audit Log",
+        "plural": "Audit Logs",
+        "description": "System-wide audit trail entries captured by System Insight",
+        "formats": {
+          "search-result": {
+            "description": "System Insight audit entry"
+          }
+        },
+        "groups": {
+          "general": "General",
+          "user": "User",
+          "client": "Client",
+          "impersonator": "Impersonator",
+          "actions": "Actions",
+          "entity-changes": "Entity Changes",
+          "extra": "Additional Data"
+        },
+        "fields": {
+          "id": { "title": "Identifier", "description": "Unique identifier for the log entry" },
+          "application-name": {
+            "title": "Application Name",
+            "description": "Source application that produced the log"
+          },
+          "execution-time": { "title": "Execution Time", "description": "Timestamp when the action was executed" },
+          "execution-duration": {
+            "title": "Execution Duration",
+            "description": "Total time spent executing the action (ms)"
+          },
+          "comments": { "title": "Comments", "description": "Additional notes captured with the log entry" },
+          "tenant-id": { "title": "Tenant ID", "description": "Identifier of the tenant executing the action" },
+          "tenant-name": { "title": "Tenant Name", "description": "Display name of the tenant" },
+          "user-id": { "title": "User ID", "description": "Identifier of the user performing the action" },
+          "user-name": { "title": "User Name", "description": "Display name of the user" },
+          "client-ip-address": {
+            "title": "Client IP Address",
+            "description": "IP address of the client that triggered the action"
+          },
+          "client-name": { "title": "Client Name", "description": "Client application name" },
+          "client-id": { "title": "Client ID", "description": "Client identifier" },
+          "browser-info": { "title": "Browser Info", "description": "User agent string provided by the client" },
+          "http-method": { "title": "HTTP Method", "description": "HTTP method used for the request" },
+          "url": { "title": "Request URL", "description": "Endpoint that was requested" },
+          "http-status-code": { "title": "HTTP Status Code", "description": "HTTP status code returned by the server" },
+          "http-status": { "title": "HTTP Status", "description": "Human-readable status text" },
+          "correlation-id": {
+            "title": "Correlation ID",
+            "description": "Correlation identifier for tracing related requests"
+          },
+          "exceptions": { "title": "Exceptions", "description": "Exception details captured for the request" },
+          "impersonator-user-id": {
+            "title": "Impersonator User ID",
+            "description": "Identifier of the impersonating user"
+          },
+          "impersonator-user-name": {
+            "title": "Impersonator User Name",
+            "description": "Display name of the impersonating user"
+          },
+          "impersonator-tenant-id": {
+            "title": "Impersonator Tenant ID",
+            "description": "Tenant identifier of the impersonator"
+          },
+          "impersonator-tenant-name": {
+            "title": "Impersonator Tenant Name",
+            "description": "Tenant name of the impersonator"
+          },
+          "extra-properties": {
+            "title": "Extra Properties",
+            "description": "Additional metadata recorded with the log entry"
+          },
+          "actions": { "title": "Actions", "description": "Service calls that were executed within the request" },
+          "entity-changes": {
+            "title": "Entity Changes",
+            "description": "Entity modifications performed as part of the request"
+          }
+        },
+        "views": {
+          "single": { "title": "Log Details" },
+          "auth-logs": { "title": "Authentication Logs" }
+        }
+      }
+    },
+    "settings": {
+      "group": {
+        "title": "System Insight",
+        "description": "Configure how audit logs are stored, monitored, and optimized at the platform level"
+      },
+      "retention": {
+        "title": "Retention Policy",
+        "description": "Control how long runtime logs remain in Elasticsearch and the in-memory buffer",
+        "items": {
+          "enabled": {
+            "title": "Enable Retention",
+            "description": "Automatically purge logs after the specified period"
+          },
+          "period": {
+            "title": "Retention Period (Days)",
+            "description": "Number of days to keep logs before deletion"
+          },
+          "batch-size": {
+            "title": "Purge Batch Size",
+            "description": "Maximum number of Elasticsearch documents removed per scheduled purge run"
+          },
+          "purge-cron": {
+            "title": "Purge Schedule (Cron)",
+            "description": "Cron expression for the System Insight log retention background job"
+          }
+        }
+      },
+      "storage": {
+        "title": "Critical Error File Fallback",
+        "description": "Persist error and fatal logs to disk when Elasticsearch is unavailable",
+        "items": {
+          "critical-file-enabled": {
+            "title": "Enable File Fallback",
+            "description": "Append error and fatal runtime logs to a local JSONL file"
+          },
+          "location": {
+            "title": "File Directory",
+            "description": "Directory where critical-errors.jsonl is written",
+            "placeholder": "./logs/acorex"
+          }
+        }
+      },
+      "level": {
+        "title": "Log Level",
+        "description": "Define the minimum severity captured by default",
+        "items": {
+          "default": {
+            "title": "Default Log Level",
+            "description": "Baseline log level applied to all modules",
+            "options": {
+              "error": "Error",
+              "warn": "Warning",
+              "info": "Information",
+              "debug": "Debug",
+              "trace": "Trace"
+            }
+          }
+        }
+      },
+      "performance": {
+        "title": "Performance",
+        "description": "Tune log indexing and slow-request detection",
+        "items": {
+          "slow-request-threshold": {
+            "title": "Slow Request Threshold",
+            "description": "Minimum request duration in milliseconds to classify as a slow request"
+          },
+          "async": {
+            "title": "Asynchronous Logging",
+            "description": "Batch Elasticsearch indexing to reduce request latency"
+          },
+          "batch-size": {
+            "title": "Indexer Batch Size",
+            "description": "Number of log entries indexed per Elasticsearch bulk request"
+          },
+          "flush-interval": {
+            "title": "Indexer Flush Interval",
+            "description": "How often batched logs are sent to Elasticsearch"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "group": {
+        "title": "System Insight",
+        "description": "Manage access to system insight monitoring features"
+      },
+      "audit-log": {
+        "manage": {
+          "title": "Manage Audit Logs",
+          "description": "Allow configuring audit log settings and maintenance"
+        },
+        "actions": {
+          "view": {
+            "title": "View Logs",
+            "description": "Allow users to browse audit log entries"
+          },
+          "export": {
+            "title": "Export Logs",
+            "description": "Allow exporting audit log data for offline analysis"
+          },
+          "purge": {
+            "title": "Purge Logs",
+            "description": "Allow deleting or purging audit log records"
+          }
+        }
+      }
+    }
+  }
+}

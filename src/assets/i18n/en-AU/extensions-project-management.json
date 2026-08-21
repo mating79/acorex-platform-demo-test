@@ -1,0 +1,67 @@
+{
+  "module": {
+    "title": "Project Management",
+    "description": "Shared project-management integration domain and connectors"
+  },
+  "integration": {
+    "domain": {
+      "title": "Project Management",
+      "description": "Connect external project management systems for issues, time tracking, and project sync."
+    }
+  },
+  "settings": {
+    "project-management": {
+      "group": {
+        "nav-title": "Project Management",
+        "title": "Project Management",
+        "description": "Configure project management integration defaults for this tenant."
+      },
+      "section-title": "Configuration",
+      "section-description": "Tenant-wide defaults used by connected project management providers.",
+      "default-project-type": {
+        "title": "Default Project Type",
+        "description": "Pre-selects the project type in import dialogs for connected project management providers."
+      }
+    },
+    "integrations": {
+      "section-title": "Project Management",
+      "section-description": "Connect Jira, Simpro, ServiceM8, Fergus, and other project management providers.",
+      "connections-panel": {
+        "title": "Project Management Providers",
+        "description": "Connect and configure external project management integrations."
+      },
+      "default-project-type": {
+        "title": "Default Project Type",
+        "description": "Pre-selects the project type in import dialogs for connected project management providers."
+      }
+    }
+  },
+  "integration-remote-record": {
+    "entities": {
+      "record": {
+        "title": "Remote record",
+        "plural": "Remote records",
+        "groups": {
+          "remote": "Remote details",
+          "cache": "Cache"
+        },
+        "fields": {
+          "provider-id": { "title": "Provider" },
+          "connection-display-name": { "title": "Connection" },
+          "resource-type": { "title": "Resource type" },
+          "connection-id": { "title": "Connection ID" },
+          "remote-id": { "title": "Remote ID" },
+          "order-no": { "title": "Order #" },
+          "stage": { "title": "Stage" },
+          "customer-name": { "title": "Customer" },
+          "site-name": { "title": "Site" },
+          "due-date": { "title": "Due date" },
+          "payload-json": { "title": "Payload" },
+          "remote-fetched-at": { "title": "Fetched at" },
+          "is-active": { "title": "Active" },
+          "is-linked": { "title": "Linked" }
+        }
+      }
+    }
+  }
+}

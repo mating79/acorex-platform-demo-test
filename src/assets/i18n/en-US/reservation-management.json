@@ -1,0 +1,563 @@
+{
+  "module": {
+    "title": "Reservation Management",
+    "description": "Manage reservations",
+    "menus": {
+      "root": {
+        "title": "Reservation Management",
+        "description": "Reservation management"
+      }
+    },
+    "permissions": {
+      "title": "Reservation Management",
+      "description": "Manage all aspects of reservation management"
+    }
+  },
+
+  "reservation-plugin": {
+    "group": {
+      "title": "Reservations"
+    },
+    "property": {
+      "title": "Reservations"
+    }
+  },
+
+  "reservation-board": {
+    "page-title": "Reservation Board"
+  },
+
+  "reservation-types": {
+    "terms": {
+      "reservation-type": "Reservation Type",
+      "reservation-types": "Reservation Types"
+    },
+    "entities": {
+      "reservation-type": {
+        "title": "Reservation Type",
+        "plural": "Reservation Types",
+        "groups": {
+          "basic-information": "Basic Information"
+        },
+        "fields": {
+          "name": {
+            "title": "Name",
+            "placeholder": "Enter reservation type's name"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter reservation type title"
+          },
+          "resource-entity-ids": {
+            "title": "Resource Entities"
+          },
+          "is-blocking": {
+            "title": "Is Blocking"
+          }
+        }
+      }
+    },
+    "menus": {
+      "reservation-types": {
+        "title": "Reservation Types",
+        "description": "Manage reservation types"
+      }
+    },
+    "permissions": {
+      "view": {
+        "title": "View Reservation Types",
+        "description": "View reservation type information"
+      },
+      "create": {
+        "title": "Create Reservation Type",
+        "description": "Create new reservation types"
+      },
+      "edit": {
+        "title": "Edit Reservation Type",
+        "description": "Edit reservation type information"
+      },
+      "delete": {
+        "title": "Delete Reservation Types",
+        "description": "Delete reservation types"
+      },
+      "manage": {
+        "title": "Manage Reservation Types",
+        "description": "Full reservation type management access"
+      }
+    }
+  },
+
+  "reservation-statuses": {
+    "terms": {
+      "reservation-status": "Reservation Status",
+      "reservation-statuses": "Reservation Statuses"
+    },
+    "entities": {
+      "reservation-status": {
+        "title": "Reservation Status",
+        "plural": "Reservation Statuses",
+        "groups": {
+          "basic-information": "Basic Information"
+        },
+        "fields": {
+          "name": {
+            "title": "Name",
+            "placeholder": "Enter status code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter status title"
+          },
+          "color": {
+            "title": "Color"
+          },
+          "icon": {
+            "title": "Icon",
+            "placeholder": "Enter icon class (e.g., fa-light fa-check)"
+          }
+        }
+      }
+    },
+    "menus": {
+      "reservation-statuses": {
+        "title": "Reservation Statuses",
+        "description": "Manage reservation statuses"
+      }
+    },
+    "permissions": {
+      "view": {
+        "title": "View Reservation Statuses",
+        "description": "View reservation status information"
+      },
+      "create": {
+        "title": "Create Reservation Status",
+        "description": "Create new reservation statuses"
+      },
+      "edit": {
+        "title": "Edit Reservation Status",
+        "description": "Edit reservation status information"
+      },
+      "delete": {
+        "title": "Delete Reservation Statuses",
+        "description": "Delete reservation statuses"
+      },
+      "manage": {
+        "title": "Manage Reservation Statuses",
+        "description": "Full reservation status management access"
+      }
+    }
+  },
+
+  "reservation-classes": {
+    "terms": {
+      "reservation-class": "Reservation Class",
+      "reservation-classes": "Reservation Classes"
+    },
+    "entities": {
+      "reservation-class": {
+        "title": "Reservation Class",
+        "plural": "Reservation Classes",
+        "groups": {
+          "basic-information": "Basic Information"
+        },
+        "tabs": {
+        },
+        "related-entities": {
+          "reservation-class-statuses": {
+            "title": "Reservation Class Statuses"
+          },
+          "reservation-status-transitions": {
+            "title": "Reservation Status Transitions"
+          }
+        },
+        "fields": {
+          "reservation-type-ids": {
+            "title": "Reservation Types"
+          },
+          "name": {
+            "title": "Name",
+            "placeholder": "Enter class name"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter class title"
+          }
+        }
+      }
+    },
+    "menus": {
+      "reservation-classes": {
+        "title": "Reservation Classes",
+        "description": "Manage reservation classes"
+      }
+    },
+    "permissions": {
+      "view": {
+        "title": "View Reservation Classes",
+        "description": "View reservation class information"
+      },
+      "create": {
+        "title": "Create Reservation Class",
+        "description": "Create new reservation classes"
+      },
+      "edit": {
+        "title": "Edit Reservation Class",
+        "description": "Edit reservation class information"
+      },
+      "delete": {
+        "title": "Delete Reservation Classes",
+        "description": "Delete reservation classes"
+      },
+      "manage": {
+        "title": "Manage Reservation Classes",
+        "description": "Full reservation class management access"
+      }
+    }
+  },
+
+  "reservations": {
+    "terms": {
+      "reservation": "Reservation",
+      "reservations": "Reservations"
+    },
+    "entities": {
+      "reservation": {
+        "title": "Reservation",
+        "plural": "Reservations",
+        "fields": {
+          "reservation-type-id": "Reservation Type",
+          "reservation-resource-type-id": "Reservation Resource Type",
+          "reservation-status-id": "Reservation Status",
+          "resource-entity-id": {
+            "title": "Resource Entity",
+            "placeholder": "Enter resource entity ID"
+          },
+          "resource-id": "Resource",
+          "start-date": "Start Date",
+          "end-date": "End Date",
+          "requested-by-id": "Requested By",
+          "requested-date": "Requested Date",
+          "approved-by-id": "Approved By",
+          "approved-date": "Approved Date"
+        },
+        "groups": {
+          "reservatin-information": "Reservation Information",
+          "approve-information": "Approve Information"
+        },
+        "related-entities": {}
+      }
+    },
+    "menus": {
+      "reservations": {
+        "title": "Reservations",
+        "description": "Manage reservations"
+      }
+    },
+    "permissions": {
+      "reservations": {
+        "title": "Reservation Management",
+        "description": "Manage reservation records",
+        "actions": {
+          "view": { "title": "View Reservations", "description": "View reservation information" },
+          "create": { "title": "Create Reservation", "description": "Create new reservations" },
+          "edit": { "title": "Edit Reservation", "description": "Edit reservation information" },
+          "delete": { "title": "Delete Reservations", "description": "Delete reservations" }
+        }
+      }
+    }
+  },
+
+  "reservation-status-transitions": {
+    "terms": {
+      "reservation-status-transition": "Reservation Status Transition",
+      "reservation-status-transitions": "Reservation Status Transitions"
+    },
+    "entities": {
+      "reservation-status-transition": {
+        "title": "Reservation Status Transition",
+        "plural": "Reservation Status Transitions",
+        "groups": {
+          "basic-information": "Basic Information",
+          "transition-details": "Transition Details"
+        },
+        "fields": {
+          "reservation-class-id": {
+            "title": "Reservation Class"
+          },
+          "from-status-id": {
+            "title": "From Status"
+          },
+          "to-status-id": {
+            "title": "To Status"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter transition title"
+          },
+          "requires-permission": {
+            "title": "Requires Permission",
+            "placeholder": "Enter permission key (e.g., ReservationManagement:ReservationStatusTransition:Manage)"
+          },
+          "order": {
+            "title": "Order"
+          }
+        }
+      }
+    },
+    "menus": {
+      "reservation-status-transitions": {
+        "title": "Status Transitions",
+        "description": "Manage reservation status transitions"
+      }
+    },
+    "permissions": {
+      "view": {
+        "title": "View Status Transitions",
+        "description": "View reservation status transition information"
+      },
+      "create": {
+        "title": "Create Status Transition",
+        "description": "Create new reservation status transitions"
+      },
+      "edit": {
+        "title": "Edit Status Transition",
+        "description": "Edit reservation status transition information"
+      },
+      "delete": {
+        "title": "Delete Status Transitions",
+        "description": "Delete reservation status transitions"
+      },
+      "manage": {
+        "title": "Manage Status Transitions",
+        "description": "Full reservation status transition management access"
+      }
+    }
+  },
+
+  "reservation-events": {
+    "terms": {
+      "reservation-event": "Reservation Event",
+      "reservation-events": "Reservation Events"
+    },
+    "entities": {
+      "reservation-event": {
+        "title": "Reservation Event",
+        "plural": "Reservation Events",
+        "fields": {
+          "reservation-id": "Reservation",
+          "reservation-event-id": "Reservation Event",
+          "event-date": "Event Date",
+          "actor-id": "Actor",
+          "from-status-id": "From Status",
+          "to-status-id": "To Status"
+        },
+        "groups": {
+          "basic-information": "Basic Information"
+        }
+      }
+    },
+    "menus": {
+      "reservation-events": {
+        "title": "Reservation Events",
+        "description": "Manage reservation events"
+      }
+    }
+  },
+
+  "event-types": {
+    "terms": {
+      "event-type": "Event Type",
+      "event-types": "Event Types"
+    },
+    "entities": {
+      "event-type": {
+        "title": "Event Type",
+        "plural": "Event Types",
+        "fields": {
+          "code": "Code",
+          "title": "Title"
+        },
+        "groups": {
+          "basic-information": "Basic Information",
+          "appearance": "Appearance"
+        }
+      }
+    },
+    "menus": {
+      "event-types": {
+        "title": "Event Types",
+        "description": "Manage event types"
+      }
+    },
+    "permissions": {
+      "event-types": {
+        "title": "Event Type Management",
+        "description": "Manage event types",
+        "actions": {
+          "view": { "title": "View Event Types", "description": "View event type information" },
+          "create": { "title": "Create Event Type", "description": "Create new event types" },
+          "edit": { "title": "Edit Event Type", "description": "Edit event type information" },
+          "delete": { "title": "Delete Event Types", "description": "Delete event types" }
+        }
+      }
+    }
+  },
+
+  "reservation-resource-types": {
+    "terms": {
+      "reservation-resource-type": "Reservation Resource Type",
+      "reservation-resource-types": "Reservation Resource Types"
+    },
+    "entities": {
+      "reservation-resource-type": {
+        "title": "Reservation Resource Type",
+        "plural": "Reservation Resource Types",
+        "groups": {
+          "basic-information": "Basic Information"
+        },
+        "fields": {
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter resource type title"
+          },
+          "entity-id": {
+            "title": "Entity"
+          },
+          "reservation-class-id": {
+            "title": "Reservation Class"
+          }
+        }
+      }
+    },
+    "menus": {
+      "reservation-resource-types": {
+        "title": "Reservation Resource Types",
+        "description": "Manage reservation resource types"
+      }
+    },
+    "permissions": {
+      "view": {
+        "title": "View Resource Types",
+        "description": "View reservation resource type information"
+      },
+      "create": {
+        "title": "Create Resource Type",
+        "description": "Create new reservation resource types"
+      },
+      "edit": {
+        "title": "Edit Resource Type",
+        "description": "Edit reservation resource type information"
+      },
+      "delete": {
+        "title": "Delete Resource Types",
+        "description": "Delete reservation resource types"
+      },
+      "manage": {
+        "title": "Manage Resource Types",
+        "description": "Full reservation resource type management access"
+      }
+    }
+  },
+
+  "reservation-class-statuses": {
+    "terms": {
+      "reservation-class-status": "Reservation Class Status",
+      "reservation-class-statuses": "Reservation Class Statuses"
+    },
+    "entities": {
+      "reservation-class-status": {
+        "title": "Reservation Class Status",
+        "plural": "Reservation Class Statuses",
+        "groups": {
+          "basic-information": "Status",
+          "status-settings": "Status Settings"
+        },
+        "fields": {
+          "reservation-class-id": {
+            "title": "Reservation Class"
+          },
+          "reservation-status-id": {
+            "title": "Reservation Status"
+          },
+          "is-initial": {
+            "title": "Is Initial"
+          },
+          "is-final": {
+            "title": "Is Final"
+          },
+          "order": {
+            "title": "Order"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "view": {
+        "title": "View Class Statuses",
+        "description": "View reservation class status information"
+      },
+      "create": {
+        "title": "Create Class Status",
+        "description": "Create new reservation class statuses"
+      },
+      "edit": {
+        "title": "Edit Class Status",
+        "description": "Edit reservation class status information"
+      },
+      "delete": {
+        "title": "Delete Class Statuses",
+        "description": "Delete reservation class statuses"
+      },
+      "manage": {
+        "title": "Manage Class Statuses",
+        "description": "Full reservation class status management access"
+      }
+    }
+  },
+
+  "reservation-class-types": {
+    "terms": {
+      "reservation-class-type": "Reservation Class Type",
+      "reservation-class-types": "Reservation Class Types"
+    },
+    "entities": {
+      "reservation-class-type": {
+        "title": "Reservation Class Type",
+        "plural": "Reservation Class Types",
+        "groups": {
+          "basic-information": "Basic Information"
+        },
+        "fields": {
+          "reservation-class-id": {
+            "title": "Reservation Class"
+          },
+          "reservation-type-id": {
+            "title": "Reservation Type"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "view": {
+        "title": "View Class Types",
+        "description": "View reservation class type information"
+      },
+      "create": {
+        "title": "Create Class Type",
+        "description": "Create new reservation class types"
+      },
+      "edit": {
+        "title": "Edit Class Type",
+        "description": "Edit reservation class type information"
+      },
+      "delete": {
+        "title": "Delete Class Types",
+        "description": "Delete reservation class types"
+      },
+      "manage": {
+        "title": "Manage Class Types",
+        "description": "Full reservation class type management access"
+      }
+    }
+  }
+}

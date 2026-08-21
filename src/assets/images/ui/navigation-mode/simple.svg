@@ -1,0 +1,17 @@
+<svg width="200" height="132" viewBox="0 0 200 132" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 0.5H190C195.247 0.500001 199.5 4.7533 199.5 10V122C199.5 127.247 195.247 131.5 190 131.5H10C4.7533 131.5 0.5 127.247 0.5 122V10C0.5 4.7533 4.75329 0.5 10 0.5Z" fill="#F5F5F6"/>
+<path d="M10 0.5H190C195.247 0.500001 199.5 4.7533 199.5 10V122C199.5 127.247 195.247 131.5 190 131.5H10C4.7533 131.5 0.5 127.247 0.5 122V10C0.5 4.7533 4.75329 0.5 10 0.5Z" stroke="#E5E5E5"/>
+<rect x="199" y="13" width="1.25" height="198" transform="rotate(90 199 13)" fill="#E5E5E5"/>
+<rect x="13" y="24" width="174" height="1.25" fill="#E5E5E5"/>
+<circle cx="18" cy="18" r="2" fill="#FB2C36"/>
+<circle cx="24" cy="18" r="2" fill="#F0B100"/>
+<circle cx="30" cy="18" r="2" fill="#00C950"/>
+<rect x="18" y="32" width="48" height="4" rx="1.25" fill="#D4D4D4"/>
+<rect x="140" y="30" width="20" height="6.88" rx="1.88" fill="#F5F5F6"/>
+<rect x="162" y="30" width="20" height="6.88" rx="1.88" fill="#2B7FFF"/>
+<path d="M18 44C18 41.7909 19.7909 40 22 40H178C180.209 40 182 41.7909 182 44V114C182 116.209 180.209 118 178 118H22C19.7909 118 18 116.209 18 114V44Z" fill="#FAFAFA"/>
+<rect x="26" y="52" width="64" height="4" rx="1.25" fill="#F0F0F1"/>
+<rect x="26" y="62" width="120" height="4" rx="1.25" fill="#F0F0F1"/>
+<rect x="26" y="72" width="96" height="4" rx="1.25" fill="#F0F0F1"/>
+<rect x="26" y="82" width="108" height="4" rx="1.25" fill="#F0F0F1"/>
+</svg>

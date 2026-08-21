@@ -1,0 +1,641 @@
+{
+  "datasources": {
+    "availability-options": {
+      "title": "دسترسی",
+      "columns": {
+        "value": {
+          "title": "مقدار"
+        },
+        "title": {
+          "title": "عنوان"
+        }
+      },
+      "samples": {
+        "24-7": "۲۴/۷",
+        "business-hours": "ساعات اداری",
+        "weekdays": "فقط روزهای کاری",
+        "weekends": "فقط آخر هفته",
+        "limited-hours": "ساعات محدود"
+      }
+    }
+  },
+  "module": {
+    "title": "مدیریت داده",
+    "description": "مدیریت کوئری‌ها، منابع داده و تعاریف مقادیر ویژگی",
+    "menus": {
+      "root": {
+        "title": "تعریف داده",
+        "description": "مدیریت تعاریف داده"
+      }
+    }
+  },
+  "features": {
+    "data-management": {
+      "title": "مدیریت داده",
+      "description": "فعال‌سازی قابلیت‌های ماژول مدیریت داده"
+    },
+    "queries": {
+      "title": "کوئری‌ها",
+      "description": "فعال‌سازی قابلیت‌های مدیریت کوئری"
+    },
+    "data-sources": {
+      "title": "منابع داده",
+      "description": "فعال‌سازی قابلیت‌های مدیریت منابع داده"
+    },
+    "metadata-definitions": {
+      "title": "تعاریف مقادیر ویژگی",
+      "description": "فعال‌سازی قابلیت‌های مدیریت تعاریف مقادیر ویژگی"
+    },
+    "equipments": {
+      "title": "تجهیزات",
+      "description": "فعال‌سازی مدیریت تجهیزات و دسته‌بندی تجهیزات"
+    },
+    "tags": {
+      "title": "برچسب‌ها",
+      "description": "فعال‌سازی قابلیت‌های مدیریت برچسب"
+    }
+  },
+  "queries": {
+    "terms": {
+      "query": "کوئری",
+      "queries": "کوئری‌ها",
+      "category": "دسته کوئری",
+      "categories": "دسته‌های کوئری"
+    },
+    "entities": {
+      "query": {
+        "title": "کوئری",
+        "plural": "کوئری‌ها",
+        "groups": {
+          "basic-info": {
+            "title": "اطلاعات پایه"
+          },
+          "query": {
+            "title": "سازنده کوئری"
+          }
+        },
+        "fields": {
+          "dataSource": {
+            "title": "منبع داده"
+          },
+          "query": {
+            "title": "کوئری"
+          }
+        }
+      }
+    },
+    "menus": {
+      "queries": {
+        "title": "کوئری‌ها",
+        "description": "مدیریت کوئری‌های داده"
+      }
+    },
+    "permissions": {
+      "queries": {
+        "title": "کوئری‌ها",
+        "actions": {
+          "manage": {
+            "title": "مدیریت کوئری",
+            "description": "مدیریت تمام عملیات کوئری"
+          },
+          "view": {
+            "title": "@general:actions.view.title",
+            "description": "مشاهده کوئری‌ها"
+          },
+          "create": {
+            "title": "@general:actions.create.title",
+            "description": "ایجاد کوئری جدید"
+          },
+          "edit": {
+            "title": "@general:actions.edit.title",
+            "description": "ویرایش کوئری‌های موجود"
+          },
+          "delete": {
+            "title": "@general:actions.delete.title",
+            "description": "حذف کوئری‌ها"
+          }
+        }
+      }
+    }
+  },
+  "data-sources": {
+    "terms": {
+      "data-source": "منبع داده",
+      "data-sources": "منابع داده",
+      "category": "دسته منبع داده",
+      "categories": "دسته‌های منبع داده",
+      "source-type": "نوع منبع",
+      "output-type": "نوع خروجی",
+      "source-static": "منبع ایستا",
+      "columns": "ستون‌ها",
+      "filters": "فیلترها",
+      "table": "جدول",
+      "text": "متن",
+      "static": "ایستا",
+      "samples": "نمونه‌ها",
+      "entity": "نهاد"
+    },
+    "entities": {
+      "data-source": {
+        "title": "منبع داده",
+        "plural": "منابع داده"
+      }
+    },
+    "menus": {
+      "data-sources": {
+        "title": "منابع داده",
+        "description": "مدیریت منابع داده"
+      }
+    },
+    "permissions": {
+      "data-sources": {
+        "title": "منابع داده",
+        "actions": {
+          "manage": {
+            "title": "مدیریت منبع داده",
+            "description": "مدیریت تمام عملیات منبع داده"
+          },
+          "view": {
+            "title": "@general:actions.view.title",
+            "description": "مشاهده منابع داده"
+          },
+          "create": {
+            "title": "@general:actions.create.title",
+            "description": "ایجاد منبع داده جدید"
+          },
+          "edit": {
+            "title": "@general:actions.edit.title",
+            "description": "ویرایش منابع داده موجود"
+          },
+          "delete": {
+            "title": "@general:actions.delete.title",
+            "description": "حذف منابع داده"
+          }
+        }
+      }
+    }
+  },
+  "metadata-definitions": {
+    "terms": {
+      "metadata-definition": "تعریف مقادیر ویژگی",
+      "metadata-definitions": "تعریف‌های مقادیر ویژگی",
+      "category": "دسته تعریف مقادیر ویژگی",
+      "categories": "دسته‌های تعریف مقادیر ویژگی",
+      "parent": "والد",
+      "interface": "رابط"
+    },
+    "entities": {
+      "metadata-definition": {
+        "title": "تعریف مقادیر ویژگی",
+        "plural": "تعریف‌های مقادیر ویژگی",
+        "actions": {
+          "preview": {
+            "title": "پیش‌نمایش رابط"
+          }
+        },
+        "groups": {
+          "presentation": "نمایش"
+        }
+      }
+    },
+    "components": {
+      "meta-data-form": {
+        "title": "مقادیر ویژگی",
+        "description": "نمایش و ویرایش فیلدهای فرم مقادیر ویژگی"
+      },
+      "meta-data-configurator": {
+        "label": "تعریف مقدار ویژگی"
+      },
+      "meta-data-builder": {
+        "title": "سازنده مقادیر ویژگی",
+        "description": "پیکربندی گروه‌ها و فیلدهای مقادیر ویژگی برای فرم‌های پویا"
+      },
+      "meta-data-selector": {
+        "title": "انتخاب‌گر مقادیر ویژگی",
+        "description": "انتخاب و پیکربندی موارد مقادیر ویژگی از دسته‌های موجود",
+        "basic-info": {
+          "title": "اطلاعات پایه",
+          "name-duplicate": "فیلدی با این نام از قبل وجود دارد. لطفاً یک نام یکتا انتخاب کنید."
+        },
+        "default-section-badge": "بخش پیش‌فرض",
+        "available-items": "موارد موجود",
+        "selected-items": "موارد انتخاب‌شده",
+        "select-from-tree": "انتخاب موارد از درخت دسته‌ها",
+        "configure-selected": "پیکربندی موارد انتخاب‌شده",
+        "click-add-to-select": "برای انتخاب موارد، دکمه 'افزودن' را کلیک کنید",
+        "categories": "دسته‌ها",
+        "select-items": "انتخاب موارد مقادیر ویژگی",
+        "edit-items": "ویرایش موارد مقادیر ویژگی",
+        "select-from-available": "انتخاب از تعاریف مقادیر ویژگی موجود",
+        "search-placeholder": "جستجوی موارد مقادیر ویژگی...",
+        "items-selected": "مورد انتخاب‌شده",
+        "required": "اجباری",
+        "placeholder": "مکان‌نما",
+        "placeholder-hint": "متن مکان‌نما را وارد کنید",
+        "tree-loading": "در حال بارگذاری درخت...",
+        "dialogs": {
+          "group-name-placeholder": "مثال: contact-details، section_1",
+          "group-name-duplicate": {
+            "title": "نام گروه تکراری",
+            "message": "گروهی با این نام از قبل وجود دارد. لطفاً یک نام یکتا انتخاب کنید."
+          },
+          "group-title": {
+            "message": "نام گروه را وارد کنید",
+            "placeholder": "نام گروه..."
+          },
+          "delete-group": {
+            "message": "آیا مطمئن هستید که می‌خواهید این گروه را حذف کنید؟ تمام فیلدهای این گروه حذف خواهند شد."
+          }
+        },
+        "empty-states": {
+          "no-items-selected": {
+            "title": "هیچ موردی انتخاب نشده است",
+            "description": "هنوز هیچ مورد مقادیر ویژگی‌ای انتخاب نشده است. برای شروع انتخاب از تعاریف مقادیر ویژگی موجود، دکمه 'افزودن مقادیر ویژگی' را کلیک کنید."
+          },
+          "no-items-found": {
+            "title": "هیچ موردی یافت نشد",
+            "description": "هیچ موردی با معیارهای جستجوی فعلی مطابقت ندارد. شرایط جستجو را تغییر دهید."
+          },
+          "no-metadata-definitions": {
+            "title": "هیچ تعریف مقادیر ویژگی‌ای وجود ندارد",
+            "description": "هیچ تعریف مقادیر ویژگی‌ای برای نمایش در این فرم موجود نیست. لطفاً ابتدا تعاریف مقادیر ویژگی را پیکربندی کنید."
+          },
+          "no-groups": {
+            "title": "هیچ گروهی وجود ندارد",
+            "description": "هنوز هیچ گروه مقادیر ویژگی‌ای ایجاد نشده است. برای ایجاد اولین گروه خود، 'افزودن گروه' را کلیک کنید."
+          },
+          "empty-group": {
+            "title": "بدون فیلد",
+            "description": "این گروه هنوز هیچ فیلدی ندارد. برای افزودن فیلدهای مقادیر ویژگی، 'افزودن فیلد' را کلیک کنید."
+          }
+        }
+      },
+      "query-builder": {
+        "title": "سازنده کوئری",
+        "terms": {
+          "group": "گروه",
+          "condition": "شرط",
+          "rule": "قاعده"
+        },
+        "tabs": {
+          "columns": {
+            "title": "ستون‌ها"
+          },
+          "where": {
+            "title": "شرط"
+          },
+          "sort": {
+            "title": "مرتب‌سازی"
+          },
+          "group-by": {
+            "title": "گروه‌بندی"
+          },
+          "aggregate": {
+            "title": "تجمیع"
+          },
+          "raw": {
+            "title": "کوئری خام"
+          },
+          "output": {
+            "title": "خروجی"
+          }
+        },
+        "sections": {
+          "columns": {
+            "title": "انتخاب ستون‌ها",
+            "placeholder": "ستون‌های مورد نظر برای کوئری را انتخاب کنید"
+          },
+          "where": {
+            "title": "شرط WHERE",
+            "description": "ساخت شرط‌ها و گروه‌های فیلتر"
+          },
+          "sort": {
+            "title": "قوانین مرتب‌سازی",
+            "field-placeholder": "انتخاب فیلد",
+            "empty-state": "هیچ قانون مرتب‌سازی تعریف نشده است. برای افزودن مرتب‌سازی، 'افزودن قانون مرتب‌سازی' را کلیک کنید."
+          },
+          "group-by": {
+            "title": "گروه‌بندی",
+            "placeholder": "ستون‌های مورد نظر برای گروه‌بندی را انتخاب کنید"
+          },
+          "aggregate": {
+            "title": "توابع تجمیع",
+            "category-placeholder": "فیلتر بر اساس دسته",
+            "search-placeholder": "جستجوی توابع...",
+            "function-placeholder": "انتخاب تابع",
+            "field-placeholder": "انتخاب فیلد",
+            "alias-placeholder": "نام مستعار (اختیاری)",
+            "distinct-label": "متمایز",
+            "empty-state": "هیچ تابع تجمیعی تعریف نشده است. برای افزودن تجمیع، 'افزودن تجمیع' را کلیک کنید."
+          },
+          "raw-query": {
+            "title": "کوئری خام",
+            "language-placeholder": "انتخاب زبان کوئری",
+            "placeholder": "کوئری SQL خود را اینجا وارد کنید...",
+            "help-text": "کوئری خود را با سینتکس {language} بنویسید. تغییرات اینجا با سازنده کوئری ساختاریافته همگام می‌شود."
+          },
+          "output": {
+            "title": "نوع خروجی",
+            "description": "ساختار مورد انتظار نتیجه کوئری را انتخاب کنید",
+            "placeholder": "انتخاب نوع خروجی",
+            "types": {
+              "value": {
+                "title": "مقدار واحد",
+                "description": "یک مقدار واحد برمی‌گرداند (مثل COUNT, SUM, AVG)"
+              },
+              "table": {
+                "title": "جدول",
+                "description": "یک نتیجه جدولی با آرایه ردیف‌ها و تعداد کل برمی‌گرداند"
+              },
+              "object": {
+                "title": "شیء",
+                "description": "یک ساختار شیء سفارشی برمی‌گرداند"
+              }
+            }
+          }
+        },
+        "validation": {
+          "aggregate-without-group-by": "توابع تجمیع (MIN, MAX, SUM, AVG, COUNT) معمولاً با GROUP BY استفاده می‌شوند. بدون GROUP BY، آن‌ها کل مجموعه نتایج را تجمیع می‌کنند.",
+          "group-by-without-aggregate": "GROUP BY تعریف شده اما هیچ تابع تجمیعی استفاده نشده است. توصیه می‌شود توابع تجمیع اضافه کنید یا GROUP BY را حذف کنید.",
+          "aggregate-columns-warning": "هنگام استفاده از توابع تجمیع بدون GROUP BY، تمام ستون‌های SELECT باید توابع تجمیع باشند."
+        },
+        "condition": {
+          "select-field": "انتخاب فیلد",
+          "select-field-first": "ابتدا یک فیلد انتخاب کنید",
+          "fill-by-user": "مقداردهی توسط کاربر (پارامتر)"
+        },
+        "empty-states": {
+          "no-conditions": {
+            "title": "هیچ شرطی برای کوئری نیست",
+            "description": "هنوز هیچ شرطی برای کوئری تعریف نشده است. برای ساخت کوئری خود شرط اضافه کنید."
+          },
+          "no-conditions-or-groups": {
+            "title": "بدون شرط یا گروه",
+            "description": "هنوز هیچ شرط یا گروهی اضافه نشده است. با افزودن شرط‌ها یا گروه‌ها ساخت کوئری را آغاز کنید."
+          },
+          "empty-group": {
+            "title": "گروه خالی",
+            "description": "این گروه خالی است. برای سازمان‌دهی منطق کوئری خود شرط‌ها یا گروه‌های تو در تو اضافه کنید."
+          }
+        },
+        "actions": {
+          "add-condition": {
+            "title": "افزودن شرط",
+            "description": "افزودن یک شرط جدید به کوئری"
+          },
+          "add-group": {
+            "title": "افزودن گروه",
+            "description": "افزودن یک گروه جدید برای سازمان‌دهی شرط‌های کوئری"
+          },
+          "add-rule": {
+            "title": "افزودن قاعده",
+            "description": "افزودن یک قاعده جدید به کوئری"
+          },
+          "add-inner-group": {
+            "title": "افزودن گروه تو در تو",
+            "description": "افزودن یک گروه تو در تو در داخل گروه فعلی"
+          },
+          "add-nested": {
+            "title": "افزودن تودرتو",
+            "description": "افزودن یک تابع تجمیعی تودرتو"
+          },
+          "remove": {
+            "title": "حذف",
+            "description": "حذف این مورد از کوئری"
+          },
+          "add-sort-rule": {
+            "title": "افزودن قانون مرتب‌سازی",
+            "description": "افزودن یک قانون مرتب‌سازی جدید"
+          },
+          "select-all": {
+            "title": "انتخاب همه",
+            "description": "انتخاب همه موارد"
+          },
+          "clear-all": {
+            "title": "پاک کردن همه",
+            "description": "پاک کردن همه انتخاب‌ها"
+          },
+          "add-aggregate": {
+            "title": "افزودن تجمیع",
+            "description": "افزودن یک تابع تجمیع جدید"
+          },
+          "add": {
+            "title": "افزودن",
+            "description": "افزودن این مورد"
+          },
+          "format-query": {
+            "title": "فرمت کردن کوئری",
+            "description": "فرمت و زیباسازی کوئری SQL"
+          },
+          "clear": {
+            "title": "پاک کردن",
+            "description": "پاک کردن کوئری"
+          },
+          "cancel": {
+            "title": "لغو",
+            "description": "لغو این عملیات"
+          }
+        }
+      },
+      "query": {
+        "actions": {
+          "execute": {
+            "title": "اجرای کوئری",
+            "description": "اجرای کوئری و مشاهده نتایج"
+          }
+        },
+        "messages": {
+          "execute-failed": {
+            "title": "اجرای کوئری ناموفق",
+            "content": "اجرای کوئری \"{{queryName}}\" ناموفق بود. کوئری هیچ نتیجه‌ای برنگرداند."
+          },
+          "execute-error": {
+            "title": "خطای اجرای کوئری",
+            "content": "خطایی در حین اجرای کوئری رخ داد: {{error}}"
+          }
+        },
+        "components": {
+          "execute-query-dialog": {
+            "title": "نتیجه کوئری"
+          }
+        }
+      },
+      "column-filter-selector": {
+        "title": "انتخاب‌گر فیلتر ستون",
+        "empty-states": {
+          "no-filter-selected": {
+            "title": "هیچ فیلتری انتخاب نشده است",
+            "description": "هیچ فیلتری برای این ستون انتخاب نشده است. برای سفارشی‌سازی نمایش داده، یک فیلتر انتخاب کنید."
+          }
+        }
+      }
+    },
+    "actions": {
+      "add-meta-data": {
+        "title": "افزودن مقادیر ویژگی"
+      },
+      "add-group": {
+        "title": "افزودن گروه"
+      },
+      "edit-group": {
+        "title": "ویرایش گروه"
+      },
+      "delete-group": {
+        "title": "حذف گروه"
+      },
+      "add-field": {
+        "title": "افزودن فیلد"
+      },
+      "preview": {
+        "title": "پیش‌نمایش"
+      },
+      "select": {
+        "title": "انتخاب"
+      },
+      "add-selected": {
+        "title": "افزودن انتخاب‌شده‌ها"
+      },
+      "configure-meta-data": {
+        "title": "پیکربندی مقادیر ویژگی"
+      }
+    },
+    "menus": {
+      "metadata-definitions": {
+        "title": "مقادیر ویژگی",
+        "description": "مدیریت تعاریف مقادیر ویژگی"
+      }
+    },
+    "permissions": {
+      "metadata-definitions": {
+        "title": "تعاریف مقادیر ویژگی",
+        "actions": {
+          "manage": {
+            "title": "مدیریت تعریف مقادیر ویژگی",
+            "description": "مدیریت تمام عملیات تعریف مقادیر ویژگی"
+          },
+          "view": {
+            "title": "@general:actions.view.title",
+            "description": "مشاهده تعاریف مقادیر ویژگی"
+          },
+          "create": {
+            "title": "@general:actions.create.title",
+            "description": "ایجاد تعریف مقادیر ویژگی جدید"
+          },
+          "edit": {
+            "title": "@general:actions.edit.title",
+            "description": "ویرایش تعاریف مقادیر ویژگی موجود"
+          },
+          "delete": {
+            "title": "@general:actions.delete.title",
+            "description": "حذف تعاریف مقادیر ویژگی"
+          }
+        }
+      }
+    }
+  },
+  "equipments": {
+    "terms": {
+      "equipment": "تجهیز",
+      "equipments": "تجهیزات",
+      "category": "دسته تجهیزات",
+      "categories": "دسته‌های تجهیزات"
+    },
+    "entities": {
+      "equipment": {
+        "title": "تجهیز",
+        "plural": "تجهیزات",
+        "components": {
+          "meta-data-form": {
+            "title": "مقادیر ویژگی تجهیز"
+          }
+        }
+      },
+      "equipment-category": {
+        "title": "دسته تجهیزات",
+        "plural": "دسته‌های تجهیزات"
+      }
+    },
+    "menus": {
+      "equipments": {
+        "title": "تجهیزات",
+        "description": "مدیریت تجهیزات"
+      },
+      "equipment-categories": {
+        "title": "دسته‌های تجهیزات",
+        "description": "مدیریت دسته‌های تجهیزات"
+      }
+    },
+    "permissions": {
+      "equipments": {
+        "title": "تجهیزات",
+        "actions": {
+          "manage": {
+            "title": "مدیریت تجهیزات",
+            "description": "مدیریت تمام عملیات تجهیزات"
+          },
+          "view": {
+            "title": "@general:actions.view.title",
+            "description": "مشاهده تجهیزات"
+          },
+          "create": {
+            "title": "@general:actions.create.title",
+            "description": "ایجاد تجهیز جدید"
+          },
+          "edit": {
+            "title": "@general:actions.edit.title",
+            "description": "ویرایش تجهیزات موجود"
+          },
+          "delete": {
+            "title": "@general:actions.delete.title",
+            "description": "حذف تجهیزات"
+          }
+        }
+      }
+    }
+  },
+  "tags": {
+    "terms": {
+      "tag": "برچسب",
+      "tags": "برچسب‌ها"
+    },
+    "entities": {
+      "tag": {
+        "title": "برچسب",
+        "plural": "برچسب‌ها"
+      }
+    },
+    "menus": {
+      "tags": {
+        "title": "برچسب‌ها",
+        "description": "مدیریت برچسب‌ها"
+      }
+    },
+    "permissions": {
+      "tags": {
+        "title": "برچسب‌ها",
+        "actions": {
+          "manage": {
+            "title": "مدیریت برچسب",
+            "description": "مدیریت تمام عملیات برچسب"
+          },
+          "view": {
+            "title": "@general:actions.view.title",
+            "description": "مشاهده برچسب‌ها"
+          },
+          "create": {
+            "title": "@general:actions.create.title",
+            "description": "ایجاد برچسب جدید"
+          },
+          "edit": {
+            "title": "@general:actions.edit.title",
+            "description": "ویرایش برچسب‌های موجود"
+          },
+          "delete": {
+            "title": "@general:actions.delete.title",
+            "description": "حذف برچسب‌ها"
+          }
+        }
+      }
+    }
+  }
+}

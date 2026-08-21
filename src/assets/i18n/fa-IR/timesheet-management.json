@@ -1,0 +1,252 @@
+{
+  "module": {
+    "title": "مدیریت تایم‌شیت",
+    "description": "ثبت زمان روی آیتم‌های کاری، ارسال دوره‌ها و گزارش‌های تایم‌شیت",
+    "menus": {
+      "configuration": {
+        "title": "پیکربندی تایم‌شیت"
+      }
+    }
+  },
+  "features": {
+    "timesheet-entry": {
+      "title": "ثبت تایم‌شیت",
+      "description": "ثبت زمان شخصی و آیتم‌های کاری"
+    },
+    "timesheet-approval": {
+      "title": "تأیید تایم‌شیت",
+      "description": "ارسال دوره و تأیید مدیر"
+    },
+    "timesheet-reporting": {
+      "title": "گزارش تایم‌شیت",
+      "description": "گزارش تایم‌شیت و تطبیق با حضور"
+    }
+  },
+  "pages": {
+    "my-timesheet": {
+      "title": "تایم‌شیت من",
+      "empty-period": "دوره تایم‌شیت باز برای هفته جاری وجود ندارد."
+    },
+    "approval-inbox": {
+      "title": "صندوق تأیید تایم‌شیت"
+    },
+    "team-timesheets": {
+      "title": "تایم‌شیت تیم"
+    }
+  },
+  "permissions": {
+    "group": {
+      "title": "مدیریت تایم‌شیت",
+      "description": "مدیریت تایم‌شیت، آیتم‌های کاری و گزارش‌ها"
+    },
+    "work-item": {
+      "management": { "title": "آیتم‌های کاری", "description": "مدیریت فهرست آیتم‌های کاری" },
+      "view": { "title": "مشاهده آیتم‌های کاری" },
+      "create": { "title": "ایجاد آیتم کاری" },
+      "update": { "title": "ویرایش آیتم کاری" },
+      "delete": { "title": "حذف آیتم کاری" }
+    },
+    "timesheet-period": {
+      "management": { "title": "دوره‌های تایم‌شیت", "description": "مدیریت دوره‌های تایم‌شیت" },
+      "view": { "title": "مشاهده دوره‌ها" },
+      "create": { "title": "ایجاد دوره" },
+      "update": { "title": "ویرایش دوره" },
+      "delete": { "title": "حذف دوره" },
+      "team-view": { "title": "مشاهده تایم‌شیت تیم" },
+      "approve": { "title": "تأیید تایم‌شیت" },
+      "admin-adjust": { "title": "اصلاح تایم‌شیت قفل‌شده" }
+    },
+    "time-entry": {
+      "management": { "title": "ثبت‌های زمان", "description": "مدیریت ثبت‌های زمان" },
+      "view": { "title": "مشاهده ثبت‌ها" },
+      "create": { "title": "ایجاد ثبت" },
+      "update": { "title": "ویرایش ثبت" },
+      "delete": { "title": "حذف ثبت" }
+    },
+    "timesheet-correction": {
+      "management": { "title": "اصلاحات تایم‌شیت" },
+      "view": { "title": "مشاهده اصلاحات" },
+      "approve": { "title": "تأیید اصلاحات" }
+    },
+    "timesheet-policy": {
+      "management": { "title": "سیاست‌های تایم‌شیت" },
+      "view": { "title": "مشاهده سیاست‌ها" }
+    },
+    "timesheet-report": {
+      "view": { "title": "مشاهده گزارش‌ها" },
+      "export": { "title": "خروجی گرفتن" }
+    }
+  },
+  "work-items": {
+    "entities": {
+      "work-item": {
+        "title": "آیتم کاری",
+        "plural": "آیتم‌های کاری",
+        "groups": {
+          "source": "منبع",
+          "assignment": "تخصیص"
+        },
+        "fields": {
+          "code": { "title": "کد" },
+          "title": { "title": "عنوان" },
+          "source-type": {
+            "title": "نوع منبع",
+            "options": {
+              "internal": "داخلی",
+              "jira": "جیرا",
+              "task": "وظیفه"
+            }
+          },
+          "source-ref": { "title": "مرجع منبع" },
+          "is-billable-default": { "title": "قابل‌صورتحساب پیش‌فرض" },
+          "is-active": { "title": "فعال" },
+          "employee-id": { "title": "کارمند" },
+          "project-id": { "title": "پروژه" }
+        }
+      }
+    }
+  },
+  "timesheet-periods": {
+    "states": {
+      "draft": "پیش‌نویس",
+      "waiting-approval": "ارسال‌شده",
+      "approved": "تأییدشده",
+      "rejected": "ردشده",
+      "locked": "قفل‌شده"
+    },
+    "transitions": {
+      "submit": "ارسال",
+      "approve": "تأیید",
+      "reject": "رد",
+      "reopen": "بازگشایی",
+      "lock": "قفل"
+    },
+    "entities": {
+      "timesheet-period": {
+        "title": "دوره تایم‌شیت",
+        "plural": "دوره‌های تایم‌شیت",
+        "groups": {
+          "period": "دوره",
+          "totals": "جمع‌بندی",
+          "approval": "تأیید"
+        },
+        "fields": {
+          "employee-id": { "title": "کارمند" },
+          "period-type": {
+            "title": "نوع دوره",
+            "options": {
+              "weekly": "هفتگی",
+              "biweekly": "دو هفته‌ای",
+              "monthly": "ماهانه"
+            }
+          },
+          "status": { "title": "وضعیت" },
+          "status-id": { "title": "وضعیت" },
+          "start-date": { "title": "تاریخ شروع" },
+          "end-date": { "title": "تاریخ پایان" },
+          "total-seconds": { "title": "مجموع ساعات" },
+          "timezone": { "title": "منطقه زمانی" },
+          "submitted-at": { "title": "زمان ارسال" },
+          "approved-at": { "title": "زمان تأیید" },
+          "rejection-reason": { "title": "دلیل رد" }
+        },
+        "states": {
+          "draft": "پیش‌نویس",
+          "waiting-approval": "ارسال‌شده",
+          "approved": "تأییدشده",
+          "rejected": "ردشده",
+          "locked": "قفل‌شده"
+        }
+      }
+    }
+  },
+  "time-entries": {
+    "entities": {
+      "time-entry": {
+        "title": "ثبت زمان",
+        "plural": "ثبت‌های زمان",
+        "groups": {
+          "timing": "زمان‌بندی",
+          "details": "جزئیات"
+        },
+        "fields": {
+          "employee-id": { "title": "کارمند" },
+          "period-id": { "title": "دوره تایم‌شیت" },
+          "work-item-id": { "title": "آیتم کاری" },
+          "project-id": { "title": "پروژه" },
+          "started-at": { "title": "شروع" },
+          "ended-at": { "title": "پایان" },
+          "duration": { "title": "مدت" },
+          "duration-seconds": { "title": "مدت (ثانیه)" },
+          "description": { "title": "توضیحات" },
+          "is-billable": { "title": "قابل‌صورتحساب" },
+          "entry-date": { "title": "تاریخ" },
+          "timezone": { "title": "منطقه زمانی" }
+        }
+      }
+    }
+  },
+  "timesheet-policies": {
+    "entities": {
+      "timesheet-policy": {
+        "title": "سیاست تایم‌شیت",
+        "plural": "سیاست‌های تایم‌شیت",
+        "groups": {
+          "limits": "محدودیت‌ها",
+          "rules": "قوانین"
+        },
+        "fields": {
+          "max-daily-hours": { "title": "حداکثر ساعت روزانه" },
+          "max-weekly-hours": { "title": "حداکثر ساعت هفتگی" },
+          "require-description": { "title": "الزام توضیحات" },
+          "allow-future-dates": { "title": "اجازه تاریخ آینده" },
+          "overlap-policy": {
+            "title": "سیاست هم‌پوشانی",
+            "options": {
+              "reject": "رد",
+              "warn": "هشدار"
+            }
+          },
+          "period-type-default": {
+            "title": "نوع دوره پیش‌فرض",
+            "options": {
+              "weekly": "هفتگی",
+              "biweekly": "دو هفته‌ای",
+              "monthly": "ماهانه"
+            }
+          },
+          "is-default": { "title": "سیاست پیش‌فرض" }
+        }
+      }
+    }
+  },
+  "timesheet-corrections": {
+    "states": {
+      "waiting-approval": "در انتظار",
+      "approved": "تأییدشده",
+      "rejected": "ردشده"
+    },
+    "transitions": {
+      "submit": "ارسال",
+      "approve": "تأیید",
+      "reject": "رد",
+      "reopen": "بازگشایی"
+    },
+    "entities": {
+      "timesheet-correction": {
+        "title": "اصلاح تایم‌شیت",
+        "plural": "اصلاحات تایم‌شیت",
+        "groups": {
+          "changes": "تغییرات"
+        },
+        "fields": {
+          "period-id": { "title": "دوره تایم‌شیت" },
+          "requested-by-id": { "title": "درخواست‌دهنده" },
+          "reason": { "title": "دلیل" },
+          "status-id": { "title": "وضعیت" },
+          "changes": { "title": "تغییرات پیشنهادی" }
+        }
+      }
+    }
+  }
+}

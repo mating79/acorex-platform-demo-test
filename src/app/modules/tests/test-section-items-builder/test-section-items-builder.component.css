@@ -1,0 +1,9 @@
+@reference '@acorex/styles/themes/default.css';
+:host {
+  display: block;
+  height: 100%;
+}
+
+.demo-section-items-builder-test code {
+  @apply bg-neutral-100 px-1 rounded;
+}

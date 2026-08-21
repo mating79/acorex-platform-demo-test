@@ -1,0 +1,84 @@
+<axp-page-layout>
+  <axp-page-content class="demo-test-ai-direct-page__content">
+    <div class="demo-test-ai-direct-page__shell">
+      <!-- ----- Status line: assist name and last-run timings ----- -->
+      <div class="demo-test-ai-direct-page__status">
+        <span>
+          {{ '@demo-tests:ai-direct.assist-label' | translate | async }}:
+          @if (assistLabel()) {
+            {{ assistLabel() }}
+          }
+          <!-- ----- Fallback when the default assist has not been resolved yet ----- -->
+          @else {
+            {{ '@demo-tests:ai-direct.assist-unknown' | translate | async }}
+          }
+        </span>
+        @if (lastElapsedMs(); as elapsed) {
+          <!-- ----- Elapsed time for the last completed engine run ----- -->
+          <span>
+            {{ '@demo-tests:ai-direct.timing.elapsed' | translate: { params: { ms: elapsed } } | async }}
+          </span>
+        }
+        @if (lastFirstTokenMs(); as firstToken) {
+          <!-- ----- Time to first streamed token ----- -->
+          <span>
+            {{ '@demo-tests:ai-direct.timing.first-token' | translate: { params: { ms: firstToken } } | async }}
+          </span>
+        }
+      </div>
+
+      @if (lastErrorDetail()) {
+        <!-- ----- Diagnostic error detail for this test page ----- -->
+        <p class="demo-test-ai-direct-page__error">{{ lastErrorDetail() }}</p>
+      }
+
+      <!-- ----- Transcript of user and assistant text only ----- -->
+      <div #transcript class="demo-test-ai-direct-page__transcript">
+        @if (displayMessages().length === 0 && !sending()) {
+          <!-- ----- Empty state before the first message ----- -->
+          <p class="demo-test-ai-direct-page__empty">
+            {{ '@demo-tests:ai-direct.empty' | translate | async }}
+          </p>
+        }
+        <!-- ----- Message bubbles ----- -->
+        @else {
+          @for (message of displayMessages(); track $index) {
+            <div
+              class="demo-test-ai-direct-page__bubble"
+              [class.demo-test-ai-direct-page__bubble--user]="message.role === 'user'"
+              [class.demo-test-ai-direct-page__bubble--assistant]="message.role === 'assistant'"
+            >
+              <!--->
+              <!-- ----- Waiting for the first streamed token ----- -->
+              @if (message.role === 'assistant' && sending() && !message.text) {
+                <ax-loading></ax-loading>
+              }
+              <!-- ----- Message text ----- -->
+              @else {
+                <p class="demo-test-ai-direct-page__text">{{ message.text }}</p>
+              }
+            </div>
+          }
+        }
+      </div>
+
+      <!-- ----- Text-only composer ----- -->
+      <div class="demo-test-ai-direct-page__composer">
+        <ax-text-area
+          class="demo-test-ai-direct-page__input"
+          [(ngModel)]="draft"
+          [disabled]="sending()"
+          [placeholder]="('@demo-tests:ai-direct.placeholder' | translate | async) ?? ''"
+          (keydown)="onComposerKeydown($event)"
+        ></ax-text-area>
+        <ax-button
+          color="primary"
+          [disabled]="!canSend()"
+          (onClick)="send()"
+        >
+          {{ '@general:actions.send.title' | translate | async }}
+        </ax-button>
+      </div>
+    </div>
+  </axp-page-content>
+</axp-page-layout>

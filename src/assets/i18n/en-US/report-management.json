@@ -1,0 +1,459 @@
+{
+  "module": {
+    "title": "Report Management",
+    "description": "Browse, run, and view reports with filters and visualizations",
+    "menus": {
+      "root": {
+        "title": "Reports",
+        "description": "Access and manage reports"
+      }
+    }
+  },
+  "reports": {
+    "terms": {
+      "report": "Report",
+      "reports": "Reports",
+      "category": "Category",
+      "categories": "Categories"
+    },
+    "entities": {
+      "report": {
+        "title": "Report",
+        "plural": "Reports",
+        "fields": {
+          "parameter-groups": "Parameter Groups",
+          "layouts": "Layouts",
+          "default-layout-id": "Default Layout",
+          "entities": "Entity Bindings",
+          "generation": "Generation"
+        }
+      },
+      "category": {
+        "title": "Category",
+        "plural": "Categories"
+      }
+    },
+    "permissions": {
+      "reports": {
+        "title": "Reports",
+        "description": "Manage reports",
+        "actions": {
+          "manage": {
+            "title": "Manage Reports",
+            "description": "Full report management access"
+          },
+          "view": {
+            "title": "View Reports",
+            "description": "View report information"
+          },
+          "create": {
+            "title": "Create Report",
+            "description": "Create new reports"
+          },
+          "update": {
+            "title": "Update Report",
+            "description": "Update report information"
+          },
+          "delete": {
+            "title": "Delete Reports",
+            "description": "Delete reports"
+          }
+        }
+      },
+      "categories": {
+        "title": "Report Categories",
+        "description": "Manage report categories",
+        "actions": {
+          "manage": {
+            "title": "Manage Categories",
+            "description": "Full category management access"
+          },
+          "view": {
+            "title": "View Categories",
+            "description": "View category information"
+          },
+          "create": {
+            "title": "Create Category",
+            "description": "Create new categories"
+          },
+          "update": {
+            "title": "Update Category",
+            "description": "Update category information"
+          },
+          "delete": {
+            "title": "Delete Categories",
+            "description": "Delete categories"
+          }
+        }
+      }
+    }
+  },
+  "report-viewer": {
+    "terms": {
+      "viewer": "Report Viewer"
+    },
+    "layouts": {
+      "table": {
+        "title": "Table View"
+      },
+      "bar-chart": {
+        "title": "Bar Chart View"
+      },
+      "doughnut-chart": {
+        "title": "Doughnut Chart View"
+      },
+      "pie-chart": {
+        "title": "Pie Chart View"
+      },
+      "line-chart": {
+        "title": "Line Chart View"
+      },
+      "pdf": {
+        "title": "PDF View"
+      },
+      "chart": {
+        "title": "Chart View"
+      }
+    },
+    "components": {
+      "report-viewer": {
+        "title": "Report Viewer",
+        "empty-states": {
+          "no-data": {
+            "title": "No Data Available",
+            "description": "Execute the report to view data"
+          },
+          "no-report": {
+            "title": "No Report Selected",
+            "description": "Select a report to view its data and apply filters"
+          },
+          "no-parameters": {
+            "title": "No Parameters Defined",
+            "description": "No parameters have been defined for this report yet. Add parameters to make your report more flexible and interactive."
+          }
+        },
+        "messages": {
+          "loading": {
+            "title": "Running Report",
+            "text": "Please wait while we prepare the latest results for this report.",
+            "status": "Fetching report data..."
+          }
+        }
+      },
+      "filters": {
+        "title": "Report Filters",
+        "empty-states": {
+          "unapplied": {
+            "title": "Filters Not Applied",
+            "description": "Your filter changes have not been applied yet. Click 'Execute Report' to see the updated results."
+          },
+          "outdated": {
+            "title": "Results Outdated",
+            "description": "Your filter changes have not been applied yet. The current results may not reflect your latest selections."
+          }
+        },
+        "messages": {
+          "warning": {
+            "unapplied": "Filters have been changed but not applied. Click 'Execute Report' to apply changes."
+          }
+        }
+      },
+      "table": {
+        "footer-total": "Total"
+      },
+      "chart": {
+        "title": "Chart Visualization",
+        "description": "Chart component will be rendered here when integrated",
+        "empty-states": {
+          "no-config": {
+            "title": "Chart Not Configured",
+            "description": "This report does not have chart visualization configured"
+          },
+          "no-data": {
+            "title": "No Data Available",
+            "description": "Please provide data to display the chart"
+          }
+        },
+        "messages": {
+          "loading": "Loading chart data..."
+        }
+      },
+      "data-list-filter": {
+        "empty-states": {
+          "no-filter-selected": {
+            "title": "No Filter Selected",
+            "description": "No filter has been selected for this data list. Select a filter to customize the data display."
+          }
+        }
+      },
+      "pdf": {
+        "title": "PDF Viewer",
+        "description": "PDF report viewer component",
+        "empty-states": {
+          "no-data": {
+            "title": "No PDF Available",
+            "description": "No PDF data is available for this report. Execute the report to generate PDF content."
+          }
+        },
+        "messages": {
+          "loading": "Loading PDF..."
+        }
+      },
+      "report-popup-viewer": {
+        "title": "Report Results",
+        "generated-title": "{{title}} - Generated",
+        "layouts": {
+          "title": "Layout"
+        },
+        "unsupported-layout": {
+          "title": "Unsupported Layout",
+          "description": "This layout type is not supported in the popup viewer yet."
+        }
+      }
+    },
+    "actions": {
+      "open-in-report-viewer": {
+        "title": "View Full Report"
+      },
+      "execute": {
+        "title": "Execute Report"
+      },
+      "refresh": {
+        "title": "Refresh"
+      },
+      "clear-filters": {
+        "title": "Clear Filters"
+      },
+      "browse-reports": {
+        "title": "Browse Reports"
+      },
+      "clear": {
+        "title": "Clear"
+      },
+      "retry": {
+        "title": "Retry"
+      },
+      "cancel": {
+        "title": "Cancel"
+      },
+      "download": {
+        "title": "Download"
+      },
+      "print": {
+        "title": "Print"
+      },
+      "export-excel": {
+        "title": "Export to Excel"
+      },
+      "export-csv": {
+        "title": "Export to CSV"
+      },
+      "export-pdf": {
+        "title": "Export to PDF"
+      },
+      "export-image": {
+        "title": "Export as Image"
+      }
+    },
+    "messages": {
+      "loading": {
+        "in-progress-title": "Running Report",
+        "in-progress-description": "Please wait while we prepare the latest results for this report.",
+        "in-progress-status": "Fetching report data...",
+        "cancel-button": "Cancel"
+      },
+      "error": {
+        "fetch-title": "Error Loading Report",
+        "fetch-description": "An error occurred while loading the report data",
+        "unexpected": "An unexpected error occurred",
+        "unexpected-execution": "An unexpected error occurred while executing the report",
+        "report-or-layout-not-found": "Report or layout not found",
+        "failed-to-execute": "Failed to execute report",
+        "failed-to-load": "Failed to load report definition",
+        "invalid-popup-target": "Popup target report is not configured."
+      },
+      "warnings": {
+        "download-pdf-only": "Download action is only available for PDF layouts",
+        "print-pdf-only": "Print action is only available for PDF layouts",
+        "no-pdf-download": "No PDF data available for download",
+        "no-pdf-print": "No PDF data available for printing",
+        "export-format-required": "Export format is required",
+        "no-report-data-export": "No report data available for export",
+        "export-not-configured": "Export not configured for current layout",
+        "unknown-command": "Unknown command: {commandName}"
+      }
+    }
+  },
+  "entity-reports": {
+    "page": {
+      "title": "Reports",
+      "description": "Open reports bound to this record with pre-filled parameters."
+    },
+    "actions": {
+      "open": {
+        "title": "View Report"
+      }
+    },
+    "messages": {
+      "save-record-first": {
+        "title": "Save Record First",
+        "description": "Save the record before opening entity-bound reports."
+      },
+      "empty": {
+        "title": "No Reports",
+        "description": "No reports are attached to this entity type."
+      }
+    }
+  },
+  "features": {
+    "report-builder": {
+      "title": "Report Builder",
+      "description": "Enable the report builder feature to create and design custom reports"
+    },
+    "saved-reports": {
+      "title": "Saved Reports",
+      "description": "Enable the saved reports feature to save and manage frequently used reports"
+    },
+    "scheduled-reports": {
+      "title": "Scheduled Reports",
+      "description": "Enable the scheduled reports feature to automatically generate and deliver reports on a schedule"
+    },
+    "background-reports": {
+      "title": "Background Reports",
+      "description": "Enable the background reports feature to run reports asynchronously without blocking the user interface"
+    }
+  },
+  "query-snapshots": {
+    "actions": {
+      "refresh-now": "Refresh Now"
+    },
+    "entities": {
+      "policy": {
+        "title": "Query Snapshot Policy",
+        "plural": "Query Snapshot Policies",
+        "fields": {
+          "query-name": "Query Name",
+          "enabled": "Enabled",
+          "schedule": "Schedule",
+          "stale-after-ms": "Stale After (ms)",
+          "triggers": "Triggers"
+        }
+      },
+      "snapshot": {
+        "title": "Query Snapshot",
+        "plural": "Query Snapshots",
+        "fields": {
+          "key": "Query Name",
+          "status": "Status",
+          "calculated-at": "Calculated At",
+          "duration-ms": "Duration (ms)",
+          "last-error": "Last Error",
+          "payload": "Payload"
+        },
+        "statuses": {
+          "ready": "Ready",
+          "stale": "Stale",
+          "failed": "Failed"
+        }
+      }
+    }
+  },
+  "report-generation": {
+    "actions": {
+      "generate-in-background": "Generate in Background",
+      "open-frozen-viewer": "Open Report"
+    },
+    "components": {
+      "background-layouts": {
+        "title": "Report Layouts",
+        "description": "Select one or more layouts to generate in this background run.",
+        "select-all": "Select All",
+        "clear-all": "Clear All"
+      }
+    },
+    "banners": {
+      "frozen": "This is a frozen run. Filters are read-only and data is not queried live.",
+      "queued": "Report generation started. You will be notified when the frozen result is ready."
+    },
+    "empty-states": {
+      "background": {
+        "title": "Background Report",
+        "description": "Set your filters and choose the layouts to generate. You will be notified when the frozen results are ready.",
+        "queued-title": "Report Generation in Progress",
+        "queued-description": "Your report is being generated in the background. You will be notified when the frozen result is ready."
+      }
+    },
+    "messages": {
+      "queued-title": "Report Queued",
+      "queued-body": "You will be notified when this report is ready."
+    },
+    "errors": {
+      "not-found": "Report generation run was not found.",
+      "forbidden": "You do not have access to this report generation run.",
+      "report-not-found": "The report definition was not found.",
+      "unsupported-data-source": "This report uses a data source that cannot be frozen yet.",
+      "query-failed": "The report query failed while generating the freeze.",
+      "create-failed": "Could not start background report generation.",
+      "no-layouts-selected": "Select at least one report layout to generate.",
+      "freeze-not-found": "The frozen report result is not available.",
+      "list-failed": "Could not load your generated reports."
+    },
+    "notifications": {
+      "complete": {
+        "title": "Report Ready",
+        "body": "Your report is ready. Open it to view this run."
+      },
+      "failed": {
+        "title": "Report Generation Failed",
+        "body": "The report could not be generated."
+      },
+      "actions": {
+        "open-viewer": "Open Report"
+      }
+    },
+    "pages": {
+      "mine": {
+        "title": "My Generated Reports",
+        "description": "History of your background report runs.",
+        "loading-title": "Loading Generated Reports",
+        "loading-description": "Please wait while your report history is loaded.",
+        "error-title": "Could Not Load Reports",
+        "empty-title": "No Generated Reports",
+        "empty-description": "Background report runs will appear here when they complete."
+      }
+    },
+    "entities": {
+      "request": {
+        "title": "Report Generation Run",
+        "plural": "Report Generation Runs",
+        "fields": {
+          "report-id": "Report",
+          "layout-id": "Layout",
+          "status": "Status",
+          "trigger": "Trigger",
+          "requested-by": "Requested By",
+          "job-id": "Job",
+          "started-at": "Started At",
+          "completed-at": "Completed At",
+          "duration-ms": "Duration (ms)",
+          "last-error": "Last Error",
+          "expires-at": "Expires At",
+          "parameters": "Parameters",
+          "artifacts": "Artifacts"
+        },
+        "statuses": {
+          "queued": "Queued",
+          "running": "Running",
+          "completed": "Completed",
+          "failed": "Failed",
+          "cancelled": "Cancelled"
+        },
+        "triggers": {
+          "manual": "Manual",
+          "schedule": "Schedule",
+          "export": "Export"
+        }
+      }
+    }
+  }
+}

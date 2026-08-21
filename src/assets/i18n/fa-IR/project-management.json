@@ -1,0 +1,306 @@
+{
+  "module": {
+    "title": "مدیریت پروژه",
+    "description": "مدیریت پروژه‌ها، وظایف و منابع",
+    "menus": {
+      "root": {
+        "title": "مدیریت پروژه",
+        "description": "مدیریت پروژه‌ها، وظایف و منابع"
+      }
+    },
+    "permissions": {
+      "title": "مدیریت پروژه",
+      "description": "دسترسی به قابلیت‌های مدیریت پروژه",
+      "project": {
+        "manage": {
+          "title": "مدیریت پروژه",
+          "description": "مشاهده و مدیریت پروژه‌ها"
+        }
+      },
+      "project-type": {
+        "manage": {
+          "title": "مدیریت نوع پروژه",
+          "description": "پیکربندی انواع پروژه"
+        }
+      }
+    }
+  },
+  "projects": {
+    "terms": {
+      "title": "پروژه",
+      "plural": "پروژه‌ها",
+      "projectName": "عنوان",
+      "projectNo": "شماره پروژه",
+      "description": "توضیحات",
+      "projectTypeId": "نوع پروژه",
+      "startDate": "تاریخ شروع",
+      "endDate": "تاریخ پایان",
+      "duedate": "تاریخ سررسید",
+      "actualStartDate": "شروع واقعی",
+      "actualEndDate": "پایان واقعی",
+      "projectWeight": "وزن پروژه",
+      "customerId": "مشتری",
+      "location": "موقعیت",
+      "locationAssignmentId": "موقعیت"
+    },
+    "groups": {
+      "basic-information": "اطلاعات پایه",
+      "organization-parties": "سازمان / طرف‌ها",
+      "schedule": "زمان‌بندی",
+      "project-status": "وضعیت پروژه",
+      "customer-profile": "پروفایل مشتری"
+    },
+    "project-types": {
+      "title": "نوع پروژه",
+      "plural": "انواع پروژه"
+    },
+    "project-type-categories": {
+      "title": "دسته نوع پروژه",
+      "plural": "دسته‌های نوع پروژه"
+    },
+    "project-type-allowed-task-types": {
+      "title": "نوع وظیفه مجاز",
+      "plural": "انواع وظیفه مجاز"
+    },
+    "project-type-role-types": {
+      "title": "نوع نقش",
+      "plural": "انواع نقش",
+      "projectTypeId": "نوع پروژه",
+      "description": "توضیحات"
+    },
+    "task-type": {
+      "individual-title": "نوع وظیفه",
+      "plural-title": "انواع وظیفه",
+      "configuration": "پیکربندی",
+      "allowed-context-types": "انواع زمینه مجاز",
+      "form-template": "قالب فرم",
+      "features": {
+        "title": "ویژگی‌ها",
+        "fields": {
+          "title": {
+            "title": "عنوان",
+            "description": "عنوان نوع وظیفه",
+            "placeholder": "عنوان را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات"
+          },
+          "default-status": "وضعیت پیش‌فرض"
+        }
+      }
+    },
+    "project-members": {
+      "title": "عضو",
+      "plural": "اعضا",
+      "emlployeeId": "عضو",
+      "projectTypeRoleTypeId": "نقش"
+    },
+    "tasks": {
+      "title": "وظیفه",
+      "plural": "وظایف",
+      "startDate": "تاریخ شروع",
+      "endDate": "تاریخ پایان",
+      "parentTaskId": "وظیفه والد",
+      "supervisorId": "سرپرست",
+      "referenceType": "نوع مرجع",
+      "referenceId": "referenceId"
+    },
+    "search-commands": {
+      "create-project": {
+        "title": "ایجاد پروژه",
+        "description": "ایجاد یک پروژه جدید"
+      },
+      "create-project-type": {
+        "title": "ایجاد نوع پروژه",
+        "description": "ایجاد یک نوع پروژه جدید"
+      }
+    },
+    "entities": {
+      "project": {
+        "components": {
+          "meta-data-form": {
+            "title": "فیلدهای ویژه نوع"
+          }
+        },
+        "related-entities": {
+          "task-start": {
+            "title": "شروع وظیفه"
+          }
+        }
+      }
+    },
+    "messages": {
+      "task-type-not-configured": "برای این نوع وظیفه جریان کار تعریف نشده است.",
+      "date-on-or-after-start-date": "باید در همان روز شروع یا بعد از آن باشد.",
+      "date-on-or-after-actual-start-date": "باید در همان روز شروع واقعی یا بعد از آن باشد."
+    },
+    "site-inspection": {
+      "setup": {
+        "title": "شروع بازرسی سایت",
+        "questionnaire": "پرسشنامه",
+        "assignee": "محول به",
+        "sign-offs": "بازبینان تأیید (اختیاری)",
+        "sign-off-help": "یک یا چند مدیر یا سرپرست انتخاب کنید. ترتیب انتخاب، ترتیب بازبینی است. برای رد شدن از تأیید خالی بگذارید."
+      },
+      "tasks": {
+        "board-title": "بازرسی سایت",
+        "conduct": {
+          "description": "پرسشنامه را باز کنید و در محل تکمیل کنید. برای ادامه بعداً از «ذخیره پیش‌نویس» در پرسشنامه استفاده کنید."
+        },
+        "sign-off": {
+          "description": "پرسشنامه ارسال‌شده را بررسی کنید، سپس تأیید یا رد کنید."
+        },
+        "actions": {
+          "open-questionnaire": "باز کردن پرسشنامه",
+          "review": "بررسی"
+        }
+      },
+      "messages": {
+        "setup-cancelled": "راه‌اندازی بازرسی سایت لغو شد.",
+        "setup-failed": "شروع بازرسی سایت ممکن نشد. پرسشنامه، مسئول و اعضای پروژه را بررسی کنید.",
+        "sign-off": "قبل از بستن، این بازرسی سایت را تأیید کنید.",
+        "rejection": "این بازرسی سایت را رد کنید و دلیل را ثبت کنید.",
+        "completed": "بازرسی سایت تکمیل شد.",
+        "rejected": "بازرسی سایت در مرحله تأیید رد شد."
+      }
+    },
+    "toolbox-talk": {
+      "setup": {
+        "title": "شروع Toolbox Talk",
+        "questionnaire": "پرسشنامه",
+        "assignee": "محول به",
+        "sign-offs": "بازبینان تأیید (اختیاری)",
+        "sign-off-help": "یک یا چند مدیر یا سرپرست انتخاب کنید. ترتیب انتخاب، ترتیب بازبینی است. برای رد شدن از تأیید خالی بگذارید."
+      },
+      "tasks": {
+        "board-title": "Toolbox Talk",
+        "conduct": {
+          "description": "پرسشنامه را باز کنید و جلسه Toolbox Talk را تکمیل کنید. برای ادامه بعداً از «ذخیره پیش‌نویس» در پرسشنامه استفاده کنید."
+        },
+        "sign-off": {
+          "description": "پرسشنامه ارسال‌شده را بررسی کنید، سپس تأیید یا رد کنید."
+        },
+        "actions": {
+          "open-questionnaire": "باز کردن پرسشنامه",
+          "review": "بررسی"
+        }
+      },
+      "messages": {
+        "setup-cancelled": "راه‌اندازی Toolbox Talk لغو شد.",
+        "setup-failed": "شروع Toolbox Talk ممکن نشد. پرسشنامه، مسئول و اعضای پروژه را بررسی کنید.",
+        "sign-off": "قبل از بستن، این Toolbox Talk را تأیید کنید.",
+        "rejection": "این Toolbox Talk را رد کنید و دلیل را ثبت کنید.",
+        "completed": "Toolbox Talk تکمیل شد.",
+        "rejected": "Toolbox Talk در مرحله تأیید رد شد."
+      }
+    },
+    "job-doc": {
+      "setup": {
+        "title": "شروع سند شغلی",
+        "questionnaire": "پرسشنامه",
+        "assignee": "محول به",
+        "sign-offs": "بازبینان تأیید (اختیاری)",
+        "sign-off-help": "یک یا چند مدیر یا سرپرست انتخاب کنید. ترتیب انتخاب، ترتیب بازبینی است. برای رد شدن از تأیید خالی بگذارید."
+      },
+      "tasks": {
+        "board-title": "سند شغلی",
+        "conduct": {
+          "description": "پرسشنامه را باز کنید و آن را تکمیل کنید. برای ادامه بعداً از «ذخیره پیش‌نویس» در پرسشنامه استفاده کنید."
+        },
+        "sign-off": {
+          "description": "پرسشنامه ارسال‌شده را بررسی کنید، سپس تأیید یا رد کنید."
+        },
+        "actions": {
+          "open-questionnaire": "باز کردن پرسشنامه",
+          "review": "بررسی"
+        }
+      },
+      "messages": {
+        "setup-cancelled": "راه‌اندازی سند شغلی لغو شد.",
+        "setup-failed": "شروع سند شغلی ممکن نشد. پرسشنامه، مسئول و اعضای پروژه را بررسی کنید.",
+        "sign-off": "قبل از بستن، این سند شغلی را تأیید کنید.",
+        "rejection": "این سند شغلی را رد کنید و دلیل را ثبت کنید.",
+        "completed": "سند شغلی تکمیل شد.",
+        "rejected": "سند شغلی در مرحله تأیید رد شد."
+      }
+    },
+    "swms": {
+      "setup": {
+        "title": "شروع تکمیل SWMS",
+        "safety-plan": "طرح ایمنی SWMS منتشرشده",
+        "safety-plan-help": "یک طرح SWMS منتشرشده را برای کپی در این کار انتخاب کنید.",
+        "assignee": "محول به",
+        "sign-offs": "کاربران تأیید (اختیاری)",
+        "sign-off-help": "مدیران یا سرپرستان را برای تأیید ترتیبی انتخاب کنید. برای رفتن مستقیم به تکمیل پس از قفل، خالی بگذارید.",
+        "add-sign-off-help": "مدیران یا سرپرستان بیشتری به صف تأیید اضافه کنید."
+      },
+      "tasks": {
+        "board-title": "SWMS",
+        "draft": {
+          "description": "تا وقتی سند در وضعیت پیش‌نویس است آن را تکمیل یا ویرایش کنید. برای ادامه بعداً پیش‌نویس ذخیره کنید، ارسال کنید، یا هنگام آمادگی قفل کنید."
+        },
+        "locked": {
+          "description": "این SWMS قفل شده است. برای اصلاح بازگردانید یا تأیید را شروع کنید."
+        },
+        "sign-off": {
+          "description": "این SWMS را بخوانید و امضا کنید، برای اصلاح بازگردانید، امضاکننده اضافه کنید یا مجدداً محول کنید."
+        },
+        "complete": {
+          "description": "همه تأییدهای لازم انجام شده است. کار را تکمیل و بایگانی کنید یا امضاکننده بیشتری اضافه کنید."
+        },
+        "return-reason": "دلیل بازگشت",
+        "actions": {
+          "save-draft": "ذخیره پیش‌نویس",
+          "submit": "ارسال",
+          "lock": "قفل",
+          "return-for-modification": "بازگشت برای اصلاح",
+          "sign-off": "تأیید",
+          "add-sign-off-user": "افزودن کاربر تأیید",
+          "add-more-signatures": "افزودن امضای بیشتر",
+          "reassign": "محول مجدد",
+          "complete-job": "تکمیل کار"
+        }
+      },
+      "messages": {
+        "setup-cancelled": "راه‌اندازی SWMS لغو شد.",
+        "setup-failed": "شروع SWMS ممکن نشد. طرح منتشرشده، مسئول و اعضای پروژه را بررسی کنید.",
+        "sign-off": "قبل از بایگانی، این SWMS را تأیید کنید.",
+        "completed": "کار SWMS تکمیل و بایگانی شد."
+      }
+    },
+    "catalog-scopes": {
+      "pm": {
+        "title": "مدیریت پروژه",
+        "description": "جریان‌های کار و کاتالوگ‌های مرتبط با وظایف پروژه"
+      }
+    },
+    "meeting-participants": {
+      "states": {
+        "initial": "اولیه"
+      }
+    }
+  },
+  "categories": {
+    "terms": {
+      "category": "دسته",
+      "categories": "دسته‌ها"
+    },
+    "menus": {
+      "categories": {
+        "title": "دسته‌ها",
+        "description": "مدیریت دسته‌های پروژه"
+      }
+    },
+    "entities": {
+      "project-management": {
+        "title": "دسته",
+        "plural": "دسته‌ها",
+        "fields": {
+          "parent": {
+            "title": "دسته والد"
+          }
+        }
+      }
+    }
+  }
+}

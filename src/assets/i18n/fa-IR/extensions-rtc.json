@@ -1,0 +1,28 @@
+{
+  "module": {
+    "title": "ارتباط بلادرنگ",
+    "description": "پیکربندی ارائه‌دهنده WebRTC برای صدا و تصویر"
+  },
+  "integration": {
+    "domain": {
+      "title": "ارتباط بلادرنگ",
+      "description": "ارائه‌دهندگان WebRTC را برای جلسات، تماس‌ها و نشست‌های زنده متصل کنید."
+    }
+  },
+  "settings": {
+    "integrations": {
+      "section-title": "ارتباط بلادرنگ",
+      "section-description": "ارائه‌دهندگان WebRTC را برای تماس صوتی و تصویری متصل کنید.",
+      "connections-panel": {
+        "title": "ارائه‌دهندگان RTC",
+        "description": "LiveKit و سایر ارائه‌دهندگان WebRTC را متصل و پیکربندی کنید."
+      }
+    },
+    "provider": {
+      "active-provider": {
+        "title": "ارائه‌دهنده فعال RTC",
+        "description": "ارائه‌دهنده WebRTC سراسری مستأجر برای صدور توکن و دسترسی به اتاق."
+      }
+    }
+  }
+}

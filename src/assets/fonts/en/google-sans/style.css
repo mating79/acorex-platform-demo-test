@@ -1,0 +1,8 @@
+@reference '@acorex/styles/themes/default.css';
+@font-face {
+  font-family: "google-sans";
+  src: url("/assets/fonts/en/google-sans/GoogleSans-VariableFont_GRAD,opsz,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}

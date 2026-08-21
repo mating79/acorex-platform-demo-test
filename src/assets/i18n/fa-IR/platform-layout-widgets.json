@@ -1,0 +1,197 @@
+{
+  "categories": {
+    "layout": { "title": "چیدمان" },
+    "editor": { "title": "ویرایشگرها" },
+    "action": { "title": "عمل" },
+    "advance": { "title": "پیشرفته" },
+    "ai": { "title": "هوش مصنوعی" }
+  },
+  "subcategories": {
+    "editor-text-inputs": { "title": "ورودی‌های متنی" },
+    "editor-numeric": { "title": "عددی" },
+    "editor-datetime": { "title": "تاریخ و زمان" },
+    "editor-choice": { "title": "انتخاب و فهرست‌ها" },
+    "editor-rich": { "title": "متن غنی" },
+    "editor-visual": { "title": "رنگ‌ها" },
+    "editor-composite": { "title": "فیلدهای ترکیبی" },
+    "editor-config": { "title": "پیکربندی" },
+    "layout-shell": { "title": "صفحه و سند" },
+    "layout-grid": { "title": "شبکه و جدول" },
+    "layout-surfaces": { "title": "سطح و بخش‌ها" },
+    "layout-tabs": { "title": "تب‌ها" },
+    "layout-lists": { "title": "فهرست و نوار ابزار" },
+    "layout-utility": { "title": "ابزار" },
+    "action-controls": { "title": "کنترل‌ها" },
+    "advance-media": { "title": "رسانه و فایل" },
+    "advance-input": { "title": "ورودی و کد" },
+    "advance-data": { "title": "داده و وضعیت" },
+    "advance-tools": { "title": "نقشه و ابزار" }
+  },
+  "widgets": {
+    "button-action": { "title": "دکمه", "description": "اجرای عمل‌های قابل تنظیم" },
+    "avatar": { "title": "آواتار", "description": "نمایش تصویر آواتار بر اساس شناسه و نوع مرجع" },
+    "cron-job": { "title": "Cron Job" },
+    "attachments": { "title": "پیوست‌ها", "description": "بارگذاری و مدیریت پیوست‌های موجودیت" },
+    "image": {
+      "title": "تصویر",
+      "description": "نمایشگر/ویرایشگر ساده تصویر با ذخیره URL یا داده باینری",
+      "dialog": {
+        "title": "تصویر",
+        "preview-title": "پیش‌نمایش تصویر",
+        "editor-title": "ویرایشگر تصویر"
+      }
+    },
+    "widget-field-configurator": { "title": "پیکربند فیلد ابزارک", "description": "تنظیم نوع ابزارک و گزینه‌ها برای یک فیلد" },
+    "scheduler-picker": { "title": "انتخابگر زمان‌بندی" },
+    "signature": {
+      "title": "امضا",
+      "description": "ثبت امضای دیجیتال",
+      "empty-state": {
+        "hint": "برای امضا کلیک کنید",
+        "sign-here": "اینجا امضا کنید"
+      }
+    },
+    "data-list": { "title": "فهرست داده", "description": "نمایش داده به صورت فهرست شبیه جدول با ستون‌های قابل تنظیم" },
+    "status-widget": { "title": "ابزارک وضعیت", "description": "نمایش و مدیریت وضعیت موجودیت با نشانگرهای بصری" },
+    "item-configurator": { "title": "پیکربند آیتم", "description": "انتخاب یک آیتم و ویرایش تنظیمات از طریق نمایشگر ویژگی عمومی؛ مقدار فرم همچنان یک گره ابزارک (نوع + گزینه‌ها) برای سازگاری باقی می‌ماند." },
+    "list-toolbar": { "title": "نوار ابزار فهرست" },
+    "map": { "title": "نقشه", "description": "نمایش و تعامل با نقشه" },
+    "code-editor": { "title": "ویرایشگر کد", "description": "ویرایشگر کد برای عبارات و اسکریپت‌ها" },
+    "stopwatch": { "title": "کرونومتر", "description": "شمارش صعودی یا نزولی از یک محدوده زمانی" },
+    "integration-connections-panel": {
+      "title": "اتصال‌های یکپارچه‌سازی",
+      "description": "مدیریت حساب‌های متصل ارائه‌دهندگان خارجی.",
+      "status": {
+        "connected": "متصل",
+        "connected-count": "{{connected}}/{{total}} متصل",
+        "disabled": "غیرفعال",
+        "not-connected": "متصل نیست"
+      },
+      "fields": {
+        "auth-method": "روش احراز هویت",
+        "display-name": "نام نمایشی",
+        "instance-url": "آدرس نمونه",
+        "token": "توکن",
+        "username": "نام کاربری",
+        "email": "ایمیل",
+        "password": "رمز عبور",
+        "api-token": "توکن API"
+      },
+      "placeholders": {
+        "display-name": "نام نمایشی",
+        "instance-url": "آدرس نمونه (اختیاری)",
+        "token": "توکن دسترسی شخصی",
+        "username": "نام کاربری",
+        "email": "ایمیل حساب",
+        "password": "رمز عبور",
+        "api-token": "توکن API"
+      },
+      "actions": {
+        "connect": "اتصال",
+        "manage": "مدیریت",
+        "configure": "پیکربندی",
+        "reconfigure": "پیکربندی مجدد",
+        "connect-oauth": "اتصال با OAuth",
+        "save-connection": "ذخیره اتصال",
+        "validate": "اعتبارسنجی",
+        "disconnect": "قطع اتصال",
+        "remove": "حذف",
+        "add-connection": "افزودن اتصال جدید"
+      },
+      "dialogs": {
+        "select-auth-method": {
+          "title": "انتخاب روش احراز هویت"
+        },
+        "oauth": {
+          "title": "اتصال با OAuth",
+          "description": "برای مجوزدهی به این برنامه به صفحه ارائه‌دهنده هدایت می‌شوید. پس از تأیید، به‌طور خودکار به اینجا بازمی‌گردید."
+        },
+        "credentials": {
+          "title": "اتصال حساب",
+          "configure-title": "پیکربندی حساب"
+        },
+        "disconnect": {
+          "title": "قطع اتصال یکپارچه‌سازی",
+          "message": "آیا از قطع اتصال {{provider}} مطمئن هستید؟ برای استفاده دوباره از این یکپارچه‌سازی باید مجدداً متصل شوید."
+        },
+        "remove": {
+          "title": "حذف اتصال",
+          "message": "آیا از حذف {{provider}} مطمئن هستید؟ این اتصال به‌طور دائمی حذف می‌شود."
+        }
+      }
+    },
+    "gallery": { "title": "گالری رسانه", "description": "نمایش و ویرایش گالری تصاویر" },
+    "file-viewer": {
+      "title": "نمایشگر فایل",
+      "description": "نمایش و ویرایش کاروسل چندفرمتی فایل با بندانگشتی"
+    },
+    "qrcode": {
+      "title": "کد QR",
+      "description": "نمایش و ویرایش کدهای QR",
+      "content": "محتوا"
+    },
+    "image-marker": { "title": "نشانگر تصویر", "description": "افزودن نشانگر به تصویر" },
+    "json-viewer": { "title": "نمایشگر JSON", "description": "نمایش داده JSON به صورت درخت تاشو" },
+    "outcome-results-viewer": {
+      "title": "نتایج خروجی",
+      "description": "فهرست فقط‌خواندنی برچسب/مقدار برای snapshot نتایج ارزیابی‌شده"
+    },
+    "text-editor": { "title": "جعبه متن", "description": "ورودی تک‌خطی متن" },
+    "large-text-editor": { "title": "جعبه متن بزرگ", "description": "ورودی متن طولانی" },
+    "number-editor": { "title": "جعبه عدد", "description": "ورودی مقادیر عددی" },
+    "list-editor": { "title": "فهرست کشیدن و رها کردن", "description": "فهرست قابل مرتب‌سازی با کشیدن و رها کردن" },
+    "time-duration": { "title": "مدت زمان", "description": "انتخاب مدت زمان" },
+    "color-palette-editor": { "title": "پالت رنگ", "description": "انتخاب رنگ از پالت از پیش تعریف‌شده" },
+    "color-editor": { "title": "جعبه رنگ", "description": "انتخاب و اعمال رنگ" },
+    "number-unit-editor": { "title": "جعبه عدد با واحد", "description": "ورودی مقادیر عددی" },
+    "contact-editor": { "title": "تماس", "description": "ورودی اطلاعات تماس" },
+    "meta-data-editor": { "title": "فراداده", "description": "نمایش فراداده" },
+    "node-renderer-widget": {
+      "title": "رندر نود",
+      "description": "یک نود ویجت را از options رندر می‌کند و مقدار آن را به این فیلد متصل می‌کند"
+    },
+    "address-editor": { "title": "آدرس", "description": "ورودی اطلاعات آدرس" },
+    "rate-picker-editor": { "title": "امتیازدهی", "description": "انتخاب مقدار امتیاز" },
+    "date-time-editor": { "title": "تاریخ و زمان", "description": "انتخاب تاریخ و زمان" },
+    "template-box-editor": { "title": "جعبه قالب", "description": "ویرایشگر متن قالب پیشرفته با پشتیبانی چندزبانه" },
+    "selection-list-editor": { "title": "فهرست انتخاب", "description": "انتخاب از یک فهرست" },
+    "toggle-editor": { "title": "سوئیچ", "description": "تغییر بین حالت روشن/خاموش" },
+    "editor-js-editor": { "title": "Editor.js", "description": "قالب‌بندی و ویرایش متن" },
+    "rich-text-editor": {
+      "title": "متن غنی",
+      "description": "قالب‌بندی و ویرایش متن غنی",
+      "column-expand-title": "مشاهده متن کامل"
+    },
+    "progress-bar-editor": { "title": "نوار پیشرفت", "description": "نمایش پیشرفت به صورت مقدار از کل با نوار بصری" },
+    "connected-lists-editor": { "title": "فهرست‌های متصل", "description": "دو فهرست متصل با انتقال کشیدن و رها کردن" },
+    "checkbox-editor": { "title": "چک‌باکس", "description": "انتخاب چند گزینه با چک‌باکس" },
+    "tag-editor": { "title": "ویرایشگر برچسب", "description": "ورودی و مدیریت چند برچسب" },
+    "select-editor": { "title": "جعبه انتخاب", "description": "انتخاب از فهرست کشویی" },
+    "password-editor": { "title": "جعبه رمز", "description": "ورودی امن رمز عبور" },
+    "table-editor": { "title": "ویرایشگر جدول", "description": "ورودی تک‌خطی متن" },
+    "document-layout": { "title": "سند", "description": "ساختار کل سند" },
+    "fieldset-layout": { "title": "Fieldset", "description": "چیدمان محتوا در یک Fieldset" },
+    "grid-layout": { "title": "چیدمان شبکه‌ای" },
+    "advanced-grid-item-layout": { "title": "آیتم شبکه پیشرفته" },
+    "block-layout": { "title": "چیدمان بلوکی", "description": "چیدمان محتوا در بلوک‌ها" },
+    "flex-item-layout": { "title": "آیتم فلکس", "description": "آیتم در چیدمان فلکس" },
+    "table-layout": { "title": "چیدمان جدول", "description": "ساختار محتوا در ردیف‌ها و سلول‌ها" },
+    "repeater-layout": { "title": "تکرارکننده", "description": "افزودن عناصر فرم تکراری" },
+    "step-wizard": { "title": "ویزارد مرحله‌ای" },
+    "advanced-grid-layout": { "title": "چیدمان شبکه پیشرفته" },
+    "tabset-item": { "title": "آیتم تب", "description": "نمایش یک تب در مجموعه تب‌ها" },
+    "panel-layout": { "title": "چیدمان پنل", "description": "چیدمان محتوا در پنل تاشو" },
+    "tabset-layout": { "title": "چیدمان تب", "description": "نمایش مجموعه تب‌ها" },
+    "alert-box-layout": { "title": "جعبه هشدار", "description": "نمایش هشدار با عنوان و توضیح با ax-alert" },
+    "badge-layout": { "title": "نشان", "description": "نمایش نشان رنگی با آیکن اختیاری برای وضعیت یا برچسب‌ها" },
+    "flex-layout": { "title": "چیدمان فلکس", "description": "چیدمان انعطاف‌پذیر محتوا" },
+    "component-slot": { "title": "جایگاه کامپوننت", "description": "رندر یک جایگاه کامپوننت" },
+    "grid-item-layout": { "title": "آیتم شبکه" },
+    "text-block-layout": { "title": "بلوک متن", "description": "نمایش بلوک‌های متن" },
+    "state-message": { "title": "پیام وضعیت", "description": "نمایش حالت‌های خالی، خطا، بارگذاری یا اطلاعات" },
+    "table-item-layout": { "title": "آیتم جدول", "description": "ظرف ردیف/سلول جدول" },
+    "icon": { "title": "آیکون" },
+    "form-field": { "title": "فیلد فرم" },
+    "page-layout": { "title": "صفحه", "description": "ساختار کل صفحه" }
+  }
+}

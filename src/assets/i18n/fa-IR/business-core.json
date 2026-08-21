@@ -1,0 +1,348 @@
+{
+  "module": {
+    "title": "هسته کسب و کار",
+    "description": "داده‌های پایه مشترک برای تولیدکنندگان، صنایع، انواع کسب و کار و وضعیت‌های کسب و کار که در ماژول‌های مختلف استفاده می‌شود.",
+    "menus": {
+      "root": {
+        "title": "کسب و کار",
+        "description": "تولیدکنندگان، صنایع، انواع کسب و کار و وضعیت‌ها."
+      }
+    }
+  },
+  "manufacturers": {
+    "terms": {
+      "manufacturer": "تولیدکننده",
+      "manufacturers": "تولیدکنندگان"
+    },
+    "entities": {
+      "manufacturer": {
+        "title": "تولیدکننده",
+        "plural": "تولیدکنندگان",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "contact-info": "اطلاعات تماس"
+        },
+        "fields": {
+          "logo": {
+            "title": "لوگو"
+          },
+          "country-of-origin": {
+            "title": "کشور مبدأ"
+          },
+          "website": {
+            "title": "وب‌سایت"
+          },
+          "contact-email": {
+            "title": "ایمیل تماس"
+          },
+          "contact-phone": {
+            "title": "تلفن تماس"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manufacturer": {
+        "manage": {
+          "title": "مدیریت تولیدکنندگان",
+          "description": "دسترسی کامل برای مدیریت تولیدکنندگان"
+        }
+      }
+    }
+  },
+  "industries": {
+    "terms": {
+      "industry": "صنعت",
+      "industries": "صنایع"
+    },
+    "entities": {
+      "industry": {
+        "title": "صنعت",
+        "plural": "صنایع",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد صنعت را وارد کنید (مثال: MANUF, TECH)"
+          },
+          "title": {
+            "title": "نام نمایشی",
+            "placeholder": "عنوان صنعت را وارد کنید (مثال: تولیدی، فناوری)"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات صنعت را وارد کنید"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "industry": {
+        "manage": {
+          "title": "مدیریت صنایع",
+          "description": "دسترسی کامل برای مدیریت صنایع"
+        }
+      }
+    }
+  },
+  "business-types": {
+    "terms": {
+      "business-type": "نوع کسب و کار",
+      "business-types": "انواع کسب و کار"
+    },
+    "entities": {
+      "business-type": {
+        "title": "نوع کسب و کار",
+        "plural": "انواع کسب و کار",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد نوع کسب و کار را وارد کنید (مثال: CORP, LLC)"
+          },
+          "title": {
+            "title": "نام نمایشی",
+            "placeholder": "عنوان نوع کسب و کار را وارد کنید (مثال: شرکت، شرکت با مسئولیت محدود)"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات نوع کسب و کار را وارد کنید"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "business-type": {
+        "manage": {
+          "title": "مدیریت انواع کسب و کار",
+          "description": "دسترسی کامل برای مدیریت انواع کسب و کار"
+        }
+      }
+    }
+  },
+  "business-statuses": {
+    "terms": {
+      "business-status": "وضعیت کسب و کار",
+      "business-statuses": "وضعیت‌های کسب و کار"
+    },
+    "entities": {
+      "business-status": {
+        "title": "وضعیت کسب و کار",
+        "plural": "وضعیت‌های کسب و کار",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد وضعیت را وارد کنید (مثال: ACTIVE, INACTIVE)"
+          },
+          "title": {
+            "title": "نام نمایشی",
+            "placeholder": "عنوان وضعیت را وارد کنید (مثال: فعال، غیرفعال)"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات وضعیت را وارد کنید"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "business-status": {
+        "manage": {
+          "title": "مدیریت وضعیت‌های کسب و کار",
+          "description": "دسترسی کامل برای مدیریت وضعیت‌های کسب و کار"
+        }
+      }
+    }
+  },
+  "party-types": {
+    "terms": {
+      "party-type": "نوع طرف",
+      "party-types": "انواع طرف"
+    },
+    "entities": {
+      "party-type": {
+        "title": "نوع طرف",
+        "plural": "انواع طرف",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد نوع طرف را وارد کنید (مثال: MANUF, DIST)"
+          },
+          "title": {
+            "title": "نام نمایشی",
+            "placeholder": "عنوان نوع طرف را وارد کنید (مثال: تولیدکننده، توزیع‌کننده)"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات نوع طرف را وارد کنید"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "party-type": {
+        "manage": {
+          "title": "مدیریت انواع طرف",
+          "description": "دسترسی کامل برای مدیریت انواع طرف"
+        }
+      }
+    }
+  },
+  "party-segments": {
+    "terms": {
+      "party-segment": "بخش طرف",
+      "party-segments": "بخش‌های طرف"
+    },
+    "entities": {
+      "party-segment": {
+        "title": "بخش طرف",
+        "plural": "بخش‌های طرف",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "title": {
+            "title": "نام نمایشی",
+            "placeholder": "عنوان بخش را وارد کنید (مثال: استراتژیک، ترجیحی)"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات بخش را وارد کنید"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "party-segment": {
+        "manage": {
+          "title": "مدیریت بخش‌های طرف",
+          "description": "دسترسی کامل برای مدیریت بخش‌های طرف"
+        }
+      }
+    }
+  },
+  "lifecycle-stages": {
+    "terms": {
+      "lifecycle-stage": "مرحله چرخه حیات",
+      "lifecycle-stages": "مراحل چرخه حیات"
+    },
+    "entities": {
+      "lifecycle-stage": {
+        "title": "مرحله چرخه حیات",
+        "plural": "مراحل چرخه حیات",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "title": {
+            "title": "نام نمایشی",
+            "placeholder": "عنوان مرحله را وارد کنید (مثال: prospect، فعال)"
+          },
+          "order": {
+            "title": "ترتیب نمایش",
+            "placeholder": "ترتیب نمایش"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات مرحله را وارد کنید"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "lifecycle-stage": {
+        "manage": {
+          "title": "مدیریت مراحل چرخه حیات",
+          "description": "دسترسی کامل برای مدیریت مراحل چرخه حیات"
+        }
+      }
+    }
+  },
+  "parties": {
+    "terms": {
+      "party": "طرف",
+      "parties": "طرف‌ها"
+    },
+    "entities": {
+      "party": {
+        "title": "طرف",
+        "plural": "طرف‌ها",
+        "search-result-description": "طرف تجاری (مشتری، تأمین‌کننده، فروشنده)",
+        "groups": {
+          "profile": "پروفایل",
+          "image": "لوگو",
+          "phones": "تلفن‌ها",
+          "emails": "ایمیل‌ها",
+          "addresses": "آدرس‌ها"
+        },
+        "fields": {
+          "code": {
+            "placeholder": "کد طرف را وارد کنید (مثال: PARTY-202401-0100)"
+          },
+          "title": {
+            "title": "نام نمایشی",
+            "placeholder": "نام طرف را وارد کنید (مثال: نام شرکت)"
+          },
+          "description": {
+            "placeholder": "توضیحات طرف را وارد کنید"
+          },
+          "phone": {
+            "placeholder": "شماره تلفن را وارد کنید"
+          },
+          "email": {
+            "placeholder": "آدرس ایمیل را وارد کنید"
+          },
+          "address-labels": {
+            "work": "کاری",
+            "billing": "صورتحساب",
+            "shipping": "ارسال",
+            "other": "سایر"
+          }
+        },
+        "related-entities": {
+          "contacts": {
+            "title": "مخاطبین"
+          },
+          "locations": {
+            "title": "مکان‌ها"
+          }
+        }
+      }
+    }
+  },
+  "party-locations": {
+    "terms": {
+      "party-location": "مکان طرف",
+      "party-locations": "مکان‌های طرف"
+    },
+    "entities": {
+      "party-location": {
+        "title": "مکان طرف",
+        "plural": "مکان‌های طرف",
+        "search-result-description": "مکان مرتبط با طرف (مثال: دفتر، انبار)",
+        "fields": {
+          "party": {
+            "title": "طرف"
+          },
+          "location": {
+            "title": "مکان"
+          },
+          "location-role": {
+            "title": "نقش"
+          }
+        }
+      }
+    }
+  }
+}
+

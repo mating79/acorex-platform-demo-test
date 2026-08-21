@@ -1,0 +1,126 @@
+{
+  "feature": {
+    "title": "طراح فرم پویا",
+    "description": "طراحی و ساخت فرم‌های پویا با رابط کشیدن و رها کردن"
+  },
+  "terms": {
+    "row": "ردیف",
+    "column": "ستون",
+    "position": "موقعیت"
+  },
+  "components": {
+    "designer": {
+      "title": "طراح فرم پویا",
+      "default-section-badge": "(بخش پیش‌فرض)",
+      "modes": {
+        "designer": "طراح",
+        "preview": "پیش‌نمایش"
+      }
+    },
+    "groups": {
+      "title": "گروه‌ها",
+      "empty-states": {
+        "no-groups": {
+          "title": "هنوز گروهی ایجاد نشده است",
+          "description": "برای سازماندهی فیلدهای فرم خود گروه ایجاد کنید. برای شروع 'افزودن گروه' را کلیک کنید."
+        },
+        "empty-group": {
+          "title": "هیچ فیلدی در این گروه نیست",
+          "description": "فیلدها را به اینجا بکشید یا از 'افزودن فیلد' برای افزودن فیلد به این گروه استفاده کنید."
+        }
+      },
+      "add-dialog": {
+        "title": "افزودن گروه",
+        "group-name": "نام گروه",
+        "group-name-placeholder": "نام گروه را وارد کنید (به عنوان شناسه استفاده می‌شود)",
+        "group-title": "عنوان گروه",
+        "group-title-placeholder": "عنوان نمایشی گروه را وارد کنید",
+        "group-description": "توضیحات گروه",
+        "group-description-placeholder": "توضیحات گروه را وارد کنید (اختیاری)",
+        "group-style": "سبک گروه",
+        "group-style-options": {
+          "container": "کانتینر (حداقل)",
+          "card": "کارت",
+          "fieldset": "فیلدست",
+          "group": "خط گروه"
+        }
+      },
+      "edit-dialog": {
+        "title": "ویرایش گروه: {groupName}"
+      }
+    },
+    "fields": {
+      "title": "فیلدها",
+      "empty-states": {
+        "no-fields": {
+          "title": "هنوز فیلدی اضافه نشده است. برای شروع یک فیلد اضافه کنید.",
+          "description": "هنوز هیچ فیلد فرمی اضافه نشده است. برای شروع افزودن فیلد به فرم خود، دکمه 'افزودن فیلد' را کلیک کنید."
+        }
+      },
+      "add-dialog": {
+        "title": "افزودن فیلد به {groupName}",
+        "field-title": "عنوان فیلد",
+        "field-title-placeholder": "عنوان فیلد را وارد کنید",
+        "widget-type": "نوع ویجت",
+        "widget-type-placeholder": "نوع ویجت را انتخاب کنید"
+      },
+      "edit-dialog": {
+        "title": "ویرایش فیلد: {fieldName}"
+      },
+      "layout-dialog": {
+        "title": "تنظیمات چیدمان فیلد - {fieldName}",
+        "configuration-title": "پیکربندی چیدمان واکنش‌گرا (شبکه 12 ستونی)",
+        "sm-col-span": "صفحه‌های کوچک - محدوده ستون",
+        "sm-col-span-placeholder": "چند ستون را پوشش دهد (1-12)",
+        "sm-col-start": "صفحه‌های کوچک - شروع ستون",
+        "sm-col-start-placeholder": "موقعیت شروع ستون (1-12)",
+        "md-col-span": "صفحه‌های متوسط - محدوده ستون",
+        "md-col-span-placeholder": "چند ستون را پوشش دهد (1-12)",
+        "md-col-start": "صفحه‌های متوسط - شروع ستون",
+        "md-col-start-placeholder": "موقعیت شروع ستون (1-12)",
+        "lg-col-span": "صفحه‌های بزرگ - محدوده ستون",
+        "lg-col-span-placeholder": "چند ستون را پوشش دهد (1-12)",
+        "lg-col-start": "صفحه‌های بزرگ - شروع ستون",
+        "lg-col-start-placeholder": "موقعیت شروع ستون (1-12)",
+        "xl-col-span": "صفحه‌های خیلی بزرگ - محدوده ستون",
+        "xl-col-span-placeholder": "چند ستون را پوشش دهد (1-12)",
+        "xl-col-start": "صفحه‌های خیلی بزرگ - شروع ستون",
+        "xl-col-start-placeholder": "موقعیت شروع ستون (1-12)",
+        "xxl-col-span": "صفحه‌های 2 برابر بزرگ - محدوده ستون",
+        "xxl-col-span-placeholder": "چند ستون را پوشش دهد (1-12)",
+        "xxl-col-start": "صفحه‌های 2 برابر بزرگ - شروع ستون",
+        "xxl-col-start-placeholder": "موقعیت شروع ستون (1-12)",
+        "xxxl-col-span": "صفحه‌های 3 برابر بزرگ - محدوده ستون",
+        "xxxl-col-span-placeholder": "چند ستون را پوشش دهد (1-12)",
+        "xxxl-col-start": "صفحه‌های 3 برابر بزرگ - شروع ستون",
+        "xxxl-col-start-placeholder": "موقعیت شروع ستون (1-12)"
+      }
+    },
+    "preview": {
+      "title": "پیش‌نمایش فرم"
+    }
+  },
+  "actions": {
+    "add-group": {
+      "title": "افزودن گروه"
+    },
+    "add-field": {
+      "title": "افزودن فیلد"
+    },
+    "preview": {
+      "title": "پیش‌نمایش"
+    },
+    "edit-group": {
+      "title": "ویرایش گروه"
+    },
+    "remove-group": {
+      "title": "حذف گروه"
+    },
+    "layout-settings": {
+      "title": "تنظیمات چیدمان"
+    },
+    "configure-field-layout": {
+      "title": "پیکربندی چیدمان فیلد (محدوده ستون، شروع ستون)"
+    }
+  }
+}

@@ -1,0 +1,529 @@
+{
+  "module": {
+    "title": "مدیریت مخاطبین",
+    "description": "مدیریت مخاطبین، نقش‌ها، روابط و شناسه‌ها",
+    "menus": {
+      "root": {
+        "title": "مدیریت مخاطبین",
+        "description": "مدیریت اطلاعات مخاطب"
+      }
+    }
+  },
+  "terms": {
+    "customer": {
+      "title": "مشتری",
+      "plural": "مشتریان"
+    },
+    "vendor": {
+      "title": "فروشنده",
+      "plural": "فروشندگان"
+    },
+    "supplier": {
+      "title": "تأمین‌کننده",
+      "plural": "تأمین‌کنندگان"
+    },
+    "partner": {
+      "title": "همکار",
+      "plural": "همکاران"
+    },
+    "employee": {
+      "title": "کارمند",
+      "plural": "کارمندان"
+    },
+    "subcontractor": {
+      "title": "پیمانکار فرعی",
+      "plural": "پیمانکاران فرعی"
+    },
+    "client": {
+      "title": "کارفرما",
+      "plural": "کارفرمایان"
+    },
+    "individual": {
+      "title": "شخص حقیقی",
+      "plural": "اشخاص حقیقی"
+    },
+    "organization": {
+      "title": "سازمان",
+      "plural": "سازمان‌ها"
+    },
+    "phone": {
+      "title": "تلفن",
+      "plural": "تلفن‌ها"
+    },
+    "email": {
+      "title": "ایمیل",
+      "plural": "ایمیل‌ها"
+    },
+    "mobile": {
+      "title": "موبایل",
+      "plural": "موبایل‌ها"
+    },
+    "first-name": {
+      "title": "نام",
+      "plural": "نام‌ها"
+    },
+    "last-name": {
+      "title": "نام خانوادگی",
+      "plural": "نام‌های خانوادگی"
+    }
+  },
+
+  "party": {
+    "terms": {
+      "party": "مخاطب",
+      "parties": "مخاطبین"
+    },
+    "entities": {
+      "party": {
+        "title": "مخاطب",
+        "plural": "مخاطبین"
+      }
+    },
+    "individual-title": "مخاطب",
+    "plural-title": "مخاطبین",
+    "search-result-description": "اطلاعات و جزئیات مخاطب",
+    "properties": {
+      "type": {
+        "title": "نوع مخاطب",
+        "options": {
+          "individual": "شخص حقیقی",
+          "organization": "سازمان"
+        }
+      },
+      "display-name": {
+        "title": "نام نمایشی"
+      },
+      "first-name": {
+        "title": "نام"
+      },
+      "last-name": {
+        "title": "نام خانوادگی"
+      },
+      "gender": {
+        "title": "جنسیت",
+        "options": {
+          "male": "مرد",
+          "female": "زن",
+          "other": "سایر"
+        }
+      },
+      "legal-name": {
+        "title": "نام رسمی"
+      },
+      "status": {
+        "title": "وضعیت"
+      },
+      "primary-location": {
+        "title": "مکان اصلی"
+      },
+      "notes": {
+        "title": "یادداشت‌ها"
+      }
+    },
+    "related-entities": {
+      "roles": {
+        "title": "نقش‌ها"
+      },
+      "identifiers": {
+        "title": "شناسه‌ها"
+      },
+      "locations": {
+        "title": "آدرس‌ها"
+      },
+      "contacts": {
+        "title": "راه‌های تماس"
+      },
+      "relationships": {
+        "title": "روابط"
+      }
+    },
+    "views": {
+      "active": "مخاطبین فعال",
+      "individuals": "اشخاص حقیقی",
+      "organizations": "سازمان‌ها"
+    },
+    "permissions": {
+      "parties": {
+        "title": "مخاطبین",
+        "description": "مدیریت مخاطبین",
+        "actions": {
+          "manage": {
+            "title": "مدیریت مخاطبین",
+            "description": "دسترسی کامل به مدیریت مخاطب"
+          },
+          "view": {
+            "title": "مشاهده مخاطبین",
+            "description": "مشاهده اطلاعات مخاطب"
+          },
+          "create": {
+            "title": "ایجاد مخاطب",
+            "description": "ایجاد مخاطب جدید"
+          },
+          "edit": {
+            "title": "ویرایش مخاطب",
+            "description": "ویرایش اطلاعات مخاطب"
+          },
+          "delete": {
+            "title": "حذف مخاطبین",
+            "description": "حذف مخاطبین"
+          }
+        }
+      }
+    }
+  },
+
+  "party-role": {
+    "terms": {
+      "party-role": "نقش مخاطب",
+      "party-roles": "نقش‌های مخاطب"
+    },
+    "entities": {
+      "party-role": {
+        "title": "نقش مخاطب",
+        "plural": "نقش‌های مخاطب"
+      }
+    },
+    "individual-title": "نقش مخاطب",
+    "plural-title": "نقش‌های مخاطب",
+    "search-result-description": "اطلاعات نقش مخاطب",
+    "properties": {
+      "party": {
+        "title": "مخاطب"
+      },
+      "role": {
+        "title": "نقش",
+        "options": {
+          "customer": "مشتری",
+          "vendor": "فروشنده",
+          "subcontractor": "پیمانکار فرعی",
+          "client": "کارفرما",
+          "employee": "کارمند",
+          "partner": "همکار",
+          "supplier": "تأمین‌کننده",
+          "other": "سایر"
+        }
+      },
+      "status": {
+        "title": "وضعیت"
+      },
+      "since": {
+        "title": "از تاریخ"
+      },
+      "until": {
+        "title": "تا تاریخ"
+      },
+      "notes": {
+        "title": "یادداشت‌ها"
+      }
+    },
+    "related-entities": {
+      "party": {
+        "title": "مخاطب"
+      }
+    },
+    "permissions": {
+      "party-roles": {
+        "title": "نقش‌های مخاطب",
+        "description": "مدیریت نقش‌های مخاطب",
+        "actions": {
+          "manage": {
+            "title": "مدیریت نقش‌های مخاطب",
+            "description": "دسترسی کامل به مدیریت نقش مخاطب"
+          },
+          "view": {
+            "title": "مشاهده نقش‌های مخاطب",
+            "description": "مشاهده اطلاعات نقش مخاطب"
+          },
+          "create": {
+            "title": "ایجاد نقش مخاطب",
+            "description": "ایجاد نقش‌های جدید مخاطب"
+          },
+          "edit": {
+            "title": "ویرایش نقش مخاطب",
+            "description": "ویرایش اطلاعات نقش مخاطب"
+          },
+          "delete": {
+            "title": "حذف نقش‌های مخاطب",
+            "description": "حذف نقش‌های مخاطب"
+          }
+        }
+      }
+    }
+  },
+
+  "party-relationship": {
+    "terms": {
+      "party-relationship": "رابطه مخاطب",
+      "party-relationships": "روابط مخاطب"
+    },
+    "entities": {
+      "party-relationship": {
+        "title": "رابطه مخاطب",
+        "plural": "روابط مخاطب"
+      }
+    },
+    "individual-title": "رابطه مخاطب",
+    "plural-title": "روابط مخاطب",
+    "search-result-description": "اطلاعات رابطه مخاطب",
+    "properties": {
+      "from-party": {
+        "title": "از مخاطب"
+      },
+      "to-party": {
+        "title": "به مخاطب"
+      },
+      "type": {
+        "title": "نوع رابطه"
+      },
+      "valid-from": {
+        "title": "معتبر از"
+      },
+      "valid-to": {
+        "title": "معتبر تا"
+      },
+      "notes": {
+        "title": "یادداشت‌ها"
+      }
+    },
+    "related-entities": {
+      "from-party": {
+        "title": "از مخاطب"
+      },
+      "to-party": {
+        "title": "به مخاطب"
+      }
+    },
+    "permissions": {
+      "party-relationships": {
+        "title": "روابط مخاطب",
+        "description": "مدیریت روابط مخاطب",
+        "actions": {
+          "manage": {
+            "title": "مدیریت روابط مخاطب",
+            "description": "دسترسی کامل به مدیریت رابطه مخاطب"
+          },
+          "view": {
+            "title": "مشاهده روابط مخاطب",
+            "description": "مشاهده اطلاعات رابطه مخاطب"
+          },
+          "create": {
+            "title": "ایجاد رابطه مخاطب",
+            "description": "ایجاد روابط جدید مخاطب"
+          },
+          "edit": {
+            "title": "ویرایش رابطه مخاطب",
+            "description": "ویرایش اطلاعات رابطه مخاطب"
+          },
+          "delete": {
+            "title": "حذف روابط مخاطب",
+            "description": "حذف روابط مخاطب"
+          }
+        }
+      }
+    }
+  },
+
+  "party-identifier-type": {
+    "terms": {
+      "party-identifier-type": "نوع شناسه مخاطب",
+      "party-identifier-types": "انواع شناسه مخاطب"
+    },
+    "entities": {
+      "party-identifier-type": {
+        "title": "نوع شناسه مخاطب",
+        "plural": "انواع شناسه مخاطب"
+      }
+    },
+    "individual-title": "نوع شناسه مخاطب",
+    "plural-title": "انواع شناسه مخاطب",
+    "search-result-description": "اطلاعات نوع شناسه مخاطب",
+    "properties": {
+      "title": {
+        "title": "عنوان"
+      },
+      "description": {
+        "title": "توضیحات"
+      },
+      "scope": {
+        "title": "محدوده",
+        "options": {
+          "global": "سراسری",
+          "national": "ملی",
+          "regional": "منطقه‌ای"
+        }
+      },
+      "format-regex": {
+        "title": "عبارت منظم قالب"
+      },
+      "min-length": {
+        "title": "حداقل طول"
+      },
+      "max-length": {
+        "title": "حداکثر طول"
+      },
+      "is-unique": {
+        "title": "یکتا است"
+      },
+      "is-active": {
+        "title": "فعال است"
+      }
+    },
+    "permissions": {
+      "party-identifier-types": {
+        "title": "انواع شناسه مخاطب",
+        "description": "مدیریت انواع شناسه مخاطب",
+        "actions": {
+          "manage": {
+            "title": "مدیریت انواع شناسه مخاطب",
+            "description": "دسترسی کامل به مدیریت نوع شناسه مخاطب"
+          },
+          "view": {
+            "title": "مشاهده انواع شناسه مخاطب",
+            "description": "مشاهده اطلاعات نوع شناسه مخاطب"
+          },
+          "create": {
+            "title": "ایجاد نوع شناسه مخاطب",
+            "description": "ایجاد انواع جدید شناسه مخاطب"
+          },
+          "edit": {
+            "title": "ویرایش نوع شناسه مخاطب",
+            "description": "ویرایش اطلاعات نوع شناسه مخاطب"
+          },
+          "delete": {
+            "title": "حذف انواع شناسه مخاطب",
+            "description": "حذف انواع شناسه مخاطب"
+          }
+        }
+      }
+    }
+  },
+
+  "party-identifier": {
+    "terms": {
+      "party-identifier": "شناسه مخاطب",
+      "party-identifiers": "شناسه‌های مخاطب"
+    },
+    "entities": {
+      "party-identifier": {
+        "title": "شناسه مخاطب",
+        "plural": "شناسه‌های مخاطب"
+      }
+    },
+    "individual-title": "شناسه مخاطب",
+    "plural-title": "شناسه‌های مخاطب",
+    "search-result-description": "اطلاعات شناسه مخاطب",
+    "properties": {
+      "party": {
+        "title": "مخاطب"
+      },
+      "type": {
+        "title": "نوع شناسه"
+      },
+      "value": {
+        "title": "مقدار"
+      },
+      "country": {
+        "title": "کشور"
+      },
+      "issuer": {
+        "title": "صادرکننده"
+      },
+      "is-primary": {
+        "title": "اصلی است"
+      },
+      "valid-from": {
+        "title": "معتبر از"
+      },
+      "valid-to": {
+        "title": "معتبر تا"
+      },
+      "notes": {
+        "title": "یادداشت‌ها"
+      }
+    },
+    "related-entities": {
+      "party": {
+        "title": "مخاطب"
+      },
+      "type": {
+        "title": "نوع شناسه"
+      }
+    },
+    "permissions": {
+      "party-identifiers": {
+        "title": "شناسه‌های مخاطب",
+        "description": "مدیریت شناسه‌های مخاطب",
+        "actions": {
+          "manage": {
+            "title": "مدیریت شناسه‌های مخاطب",
+            "description": "دسترسی کامل به مدیریت شناسه مخاطب"
+          },
+          "view": {
+            "title": "مشاهده شناسه‌های مخاطب",
+            "description": "مشاهده اطلاعات شناسه مخاطب"
+          },
+          "create": {
+            "title": "ایجاد شناسه مخاطب",
+            "description": "ایجاد شناسه‌های جدید مخاطب"
+          },
+          "edit": {
+            "title": "ویرایش شناسه مخاطب",
+            "description": "ویرایش اطلاعات شناسه مخاطب"
+          },
+          "delete": {
+            "title": "حذف شناسه‌های مخاطب",
+            "description": "حذف شناسه‌های مخاطب"
+          }
+        }
+      }
+    }
+  },
+  "party-relationship-type": {
+    "terms": {
+      "party-relationship-type": "نوع رابطه مخاطب",
+      "party-relationship-types": "انواع رابطه مخاطب"
+    },
+    "entities": {
+      "party-relationship-type": {
+        "title": "نوع رابطه مخاطب",
+        "plural": "انواع رابطه مخاطب"
+      }
+    },
+    "individual-title": "نوع رابطه مخاطب",
+    "plural-title": "انواع رابطه مخاطب",
+    "search-result-description": "اطلاعات نوع رابطه مخاطب",
+    "properties": {
+      "is-directional": {
+        "title": "جهت‌دار است"
+      }
+    }
+  },
+  "industry": {
+    "terms": {
+      "industry": "صنعت",
+      "industries": "صنایع"
+    },
+    "entities": {
+      "industry": {
+        "title": "صنعت",
+        "plural": "صنایع",
+        "fields": {
+          "title": {
+            "title": "عنوان"
+          },
+          "description": {
+            "title": "توضیحات"
+          }
+        },
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        }
+      }
+    },
+    "individual-title": "صنعت",
+    "plural-title": "صنایع",
+    "basic-info": "اطلاعات پایه",
+    "title": "عنوان",
+    "description": "توضیحات"
+  }
+}

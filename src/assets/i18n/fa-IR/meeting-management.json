@@ -1,0 +1,182 @@
+{
+  "module": {
+    "title": "مدیریت جلسه",
+    "description": "مدیریت جلسات، شرکت‌کنندگان و انواع جلسات",
+    "menus": {
+      "root": {
+        "title": "مدیریت جلسه",
+        "description": "مدیریت جلسات و شرکت‌کنندگان"
+      }
+    }
+  },
+  "meetings": {
+    "terms": {
+      "title": "جلسه",
+      "plural": "جلسات",
+      "meeting-type": "نوع جلسه",
+      "meeting-notes": "یادداشت‌های جلسه",
+      "meeting-provider-type": "نوع ارائه‌دهنده جلسه",
+      "join-url": "نشانی پیوستن",
+      "host-url": "نشانی میزبان",
+      "is-recorded": "ضبط شده است",
+      "set-in-google-calendar": "تنظیم جلسه در تقویم گوگل",
+      "meeting-status": "وضعیت جلسه",
+      "is-fully-signed-off": "کاملاً تأیید شده",
+      "meeting-files": "فایل‌های جلسه",
+      "meeting-location": "محل جلسه",
+      "schedule": "برنامه‌ریزی",
+      "schedule-mode": "نوع برنامه‌ریزی"
+    },
+    "groups": {
+      "basic-information": "اطلاعات پایه",
+      "meeting-details": "جزئیات جلسه",
+      "meeting-status": "وضعیت جلسه"
+    },
+    "states": {
+      "pending": "در انتظار",
+      "in-progress": "در حال انجام",
+      "approved": "تأیید شده",
+      "rejected": "رد شده",
+      "cancelled": "لغو شده",
+      "is-published": "منتشر شده",
+      "completed": "تکمیل شده"
+    },
+    "actions": {
+      "start": "شروع",
+      "start-event": "شروع رویداد",
+      "end-event": "پایان رویداد",
+      "email-participants": "ارسال ایمیل "
+    },
+    "publish-dialog": {
+      "title": "انتشار جلسه",
+      "fields": {
+        "assigned-to": {
+          "title": "کاربر"
+        },
+        "publish-date": {
+          "title": "تاریخ"
+        }
+      }
+    },
+    "meeting-participants": {
+      "title": "شرکت‌کننده جلسه",
+      "plural": "شرکت‌کنندگان جلسه",
+      "signed-off-at": "زمان تأیید",
+      "participant-status": "وضعیت شرکت‌کننده",
+      "join-time": "زمان پیوستن",
+      "left-time": "زمان ترک",
+      "employee-id": "کارمند",
+      "meeting-role-type-ids": "انواع نقش شرکت‌کننده",
+      "duration": "مدت‌زمان",
+      "states": {
+        "absent": "غایب",
+        "present": "حاضر",
+        "accept": "پذیرش",
+        "decline": "رد"
+      },
+      "transitions": {
+        "mark-present": "علامت‌گذاری به عنوان حاضر",
+        "mark-absent": "علامت‌گذاری به عنوان غایب",
+        "accept": "پذیرش",
+        "decline": "رد"
+      }
+    },
+    "meeting-sessions": {
+      "title": "جلسهٔ جلسه",
+      "plural": "جلسات جلسه",
+      "meeting-id": "جلسه",
+      "schedule-date": "تاریخ برنامه‌ریزی",
+      "start-time": "زمان شروع",
+      "end-time": "زمان پایان",
+      "actual-date": "تاریخ واقعی",
+      "actual-start-time": "زمان شروع واقعی",
+      "actual-end-time": "زمان پایان واقعی"
+    },
+    "meeting-types": {
+      "title": "نوع جلسه",
+      "plural": "انواع جلسه"
+    },
+    "meeting-type-file-templates": {
+      "title": "قالب فایل نوع جلسه",
+      "plural": "قالب‌های فایل نوع جلسه",
+      "templateId": "قالب",
+      "typeId": "نوع"
+    },
+    "meeting-role-types": {
+      "title": "نوع نقش شرکت‌کننده جلسه",
+      "plural": "انواع نقش شرکت‌کننده جلسه"
+    }
+  },
+  "meeting": {
+    "individual-title": "جلسه",
+    "plural-title": "جلسات",
+    "title": "جلسه",
+    "meetingType": "نوع جلسه",
+    "meetingNotes": "یادداشت‌های جلسه",
+    "meetingProviderType": "نوع ارائه‌دهنده جلسه",
+    "joinUrl": "نشانی پیوستن",
+    "hostUrl": "نشانی میزبان",
+    "isRecorded": "ضبط شده است",
+    "mettingStatus": "وضعیت جلسه",
+    "isFullysignedOff": "کاملاً تأیید شده",
+    "meetingFiles": "فایل‌های جلسه",
+    "meetingLocationId": "محل جلسه",
+    "basic-information": "اطلاعات پایه",
+    "meeting-details": "جزئیات جلسه",
+    "meeting-status": "وضعیت جلسه",
+    "states": {
+      "pending": "در انتظار",
+      "approved": "تأیید شده",
+      "rejected": "رد شده",
+      "cancelled": "لغو شده"
+    }
+  },
+  "meeting-participant": {
+    "individual-title": "شرکت‌کننده جلسه",
+    "plural-title": "شرکت‌کنندگان جلسه",
+    "title": "شرکت‌کننده جلسه",
+    "duration": "مدت‌زمان",
+    "signedOffAt": "زمان تأیید",
+    "participantStatus": "وضعیت شرکت‌کننده",
+    "jointime": "زمان پیوستن",
+    "leftTime": "زمان ترک",
+    "userId": "کاربر",
+    "meetingRoleTypeIds": "انواع نقش شرکت‌کننده"
+  },
+  "meeting-role-type": {
+    "individual-title": "نوع نقش شرکت‌کننده جلسه",
+    "plural-title": "انواع نقش شرکت‌کننده جلسه",
+    "title": "عنوان"
+  },
+  "meeting-type": {
+    "individual-title": "نوع جلسه",
+    "plural-title": "انواع جلسه",
+    "title": "عنوان"
+  },
+  "meeting-files": {
+    "individual-title": "فایل جلسه",
+    "plural-title": "فایل‌های جلسه",
+    "title": "عنوان",
+    "documentId": "سند",
+    "meetingTypeId": "نوع جلسه"
+  },
+  "meeting-session": {
+    "individual-title": "جلسهٔ جلسه",
+    "plural-title": "جلسات جلسه",
+    "meetingId": "جلسه",
+    "title": "عنوان",
+    "scheduleDate": "تاریخ برنامه‌ریزی",
+    "startTime": "زمان شروع",
+    "endTime": "زمان پایان",
+    "actualDate": "تاریخ واقعی",
+    "actualStartTime": "زمان شروع واقعی",
+    "actualEndTime": "زمان پایان واقعی"
+  },
+  "meeting-type-file-template": {
+    "individual-title": "قالب فایل نوع جلسه",
+    "plural-title": "قالب‌های فایل نوع جلسه",
+    "title": "عنوان",
+    "templateId": "قالب",
+    "typeId": "نوع"
+  }
+}

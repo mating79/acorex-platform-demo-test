@@ -1,0 +1,529 @@
+{
+  "module": {
+    "title": "Party Management",
+    "description": "Manage contacts, roles, relationships, and identifiers",
+    "menus": {
+      "root": {
+        "title": "Party Management",
+        "description": "Manage party information"
+      }
+    }
+  },
+  "terms": {
+    "customer": {
+      "title": "Customer",
+      "plural": "Customers"
+    },
+    "vendor": {
+      "title": "Vendor",
+      "plural": "Vendors"
+    },
+    "supplier": {
+      "title": "Supplier",
+      "plural": "Suppliers"
+    },
+    "partner": {
+      "title": "Partner",
+      "plural": "Partners"
+    },
+    "employee": {
+      "title": "Employee",
+      "plural": "Employees"
+    },
+    "subcontractor": {
+      "title": "Subcontractor",
+      "plural": "Subcontractors"
+    },
+    "client": {
+      "title": "Client",
+      "plural": "Clients"
+    },
+    "individual": {
+      "title": "Individual",
+      "plural": "Individuals"
+    },
+    "organization": {
+      "title": "Organization",
+      "plural": "Organizations"
+    },
+    "phone": {
+      "title": "Phone",
+      "plural": "Phones"
+    },
+    "email": {
+      "title": "Email",
+      "plural": "Emails"
+    },
+    "mobile": {
+      "title": "Mobile",
+      "plural": "Mobiles"
+    },
+    "first-name": {
+      "title": "First Name",
+      "plural": "First Names"
+    },
+    "last-name": {
+      "title": "Last Name",
+      "plural": "Last Names"
+    }
+  },
+
+  "party": {
+    "terms": {
+      "party": "Contact",
+      "parties": "Contacts"
+    },
+    "entities": {
+      "party": {
+        "title": "Contact",
+        "plural": "Contacts"
+      }
+    },
+    "individual-title": "Contact",
+    "plural-title": "Contacts",
+    "search-result-description": "Contact information and details",
+    "properties": {
+      "type": {
+        "title": "Contact Type",
+        "options": {
+          "individual": "Individual",
+          "organization": "Organization"
+        }
+      },
+      "display-name": {
+        "title": "Display Name"
+      },
+      "first-name": {
+        "title": "First Name"
+      },
+      "last-name": {
+        "title": "Last Name"
+      },
+      "gender": {
+        "title": "Gender",
+        "options": {
+          "male": "Male",
+          "female": "Female",
+          "other": "Other"
+        }
+      },
+      "legal-name": {
+        "title": "Legal Name"
+      },
+      "status": {
+        "title": "Status"
+      },
+      "primary-location": {
+        "title": "Primary Location"
+      },
+      "notes": {
+        "title": "Notes"
+      }
+    },
+    "related-entities": {
+      "roles": {
+        "title": "Roles"
+      },
+      "identifiers": {
+        "title": "Identifiers"
+      },
+      "locations": {
+        "title": "Addresses"
+      },
+      "contacts": {
+        "title": "Contacts"
+      },
+      "relationships": {
+        "title": "Relationships"
+      }
+    },
+    "views": {
+      "active": "Active Contacts",
+      "individuals": "Individuals",
+      "organizations": "Organizations"
+    },
+    "permissions": {
+      "parties": {
+        "title": "Contacts",
+        "description": "Manage contacts",
+        "actions": {
+          "manage": {
+            "title": "Manage Contacts",
+            "description": "Full contact management access"
+          },
+          "view": {
+            "title": "View Contacts",
+            "description": "View contact information"
+          },
+          "create": {
+            "title": "Create Contact",
+            "description": "Create new contacts"
+          },
+          "edit": {
+            "title": "Edit Contact",
+            "description": "Edit contact information"
+          },
+          "delete": {
+            "title": "Delete Contacts",
+            "description": "Delete contacts"
+          }
+        }
+      }
+    }
+  },
+
+  "party-role": {
+    "terms": {
+      "party-role": "Contact Role",
+      "party-roles": "Contact Roles"
+    },
+    "entities": {
+      "party-role": {
+        "title": "Contact Role",
+        "plural": "Contact Roles"
+      }
+    },
+    "individual-title": "Contact Role",
+    "plural-title": "Contact Roles",
+    "search-result-description": "Contact role information",
+    "properties": {
+      "party": {
+        "title": "Contact"
+      },
+      "role": {
+        "title": "Role",
+        "options": {
+          "customer": "Customer",
+          "vendor": "Vendor",
+          "subcontractor": "Subcontractor",
+          "client": "Client",
+          "employee": "Employee",
+          "partner": "Partner",
+          "supplier": "Supplier",
+          "other": "Other"
+        }
+      },
+      "status": {
+        "title": "Status"
+      },
+      "since": {
+        "title": "Since"
+      },
+      "until": {
+        "title": "Until"
+      },
+      "notes": {
+        "title": "Notes"
+      }
+    },
+    "related-entities": {
+      "party": {
+        "title": "Contact"
+      }
+    },
+    "permissions": {
+      "party-roles": {
+        "title": "Contact Roles",
+        "description": "Manage contact roles",
+        "actions": {
+          "manage": {
+            "title": "Manage Contact Roles",
+            "description": "Full contact role management access"
+          },
+          "view": {
+            "title": "View Contact Roles",
+            "description": "View contact role information"
+          },
+          "create": {
+            "title": "Create Contact Role",
+            "description": "Create new contact roles"
+          },
+          "edit": {
+            "title": "Edit Contact Role",
+            "description": "Edit contact role information"
+          },
+          "delete": {
+            "title": "Delete Contact Roles",
+            "description": "Delete contact roles"
+          }
+        }
+      }
+    }
+  },
+
+  "party-relationship": {
+    "terms": {
+      "party-relationship": "Contact Relationship",
+      "party-relationships": "Contact Relationships"
+    },
+    "entities": {
+      "party-relationship": {
+        "title": "Contact Relationship",
+        "plural": "Contact Relationships"
+      }
+    },
+    "individual-title": "Contact Relationship",
+    "plural-title": "Contact Relationships",
+    "search-result-description": "Contact relationship information",
+    "properties": {
+      "from-party": {
+        "title": "From Contact"
+      },
+      "to-party": {
+        "title": "To Contact"
+      },
+      "type": {
+        "title": "Relationship Type"
+      },
+      "valid-from": {
+        "title": "Valid From"
+      },
+      "valid-to": {
+        "title": "Valid To"
+      },
+      "notes": {
+        "title": "Notes"
+      }
+    },
+    "related-entities": {
+      "from-party": {
+        "title": "From Contact"
+      },
+      "to-party": {
+        "title": "To Contact"
+      }
+    },
+    "permissions": {
+      "party-relationships": {
+        "title": "Contact Relationships",
+        "description": "Manage contact relationships",
+        "actions": {
+          "manage": {
+            "title": "Manage Contact Relationships",
+            "description": "Full contact relationship management access"
+          },
+          "view": {
+            "title": "View Contact Relationships",
+            "description": "View contact relationship information"
+          },
+          "create": {
+            "title": "Create Contact Relationship",
+            "description": "Create new contact relationships"
+          },
+          "edit": {
+            "title": "Edit Contact Relationship",
+            "description": "Edit contact relationship information"
+          },
+          "delete": {
+            "title": "Delete Contact Relationships",
+            "description": "Delete contact relationships"
+          }
+        }
+      }
+    }
+  },
+
+  "party-identifier-type": {
+    "terms": {
+      "party-identifier-type": "Contact Identifier Type",
+      "party-identifier-types": "Contact Identifier Types"
+    },
+    "entities": {
+      "party-identifier-type": {
+        "title": "Contact Identifier Type",
+        "plural": "Contact Identifier Types"
+      }
+    },
+    "individual-title": "Contact Identifier Type",
+    "plural-title": "Contact Identifier Types",
+    "search-result-description": "Contact identifier type information",
+    "properties": {
+      "title": {
+        "title": "Title"
+      },
+      "description": {
+        "title": "Description"
+      },
+      "scope": {
+        "title": "Scope",
+        "options": {
+          "global": "Global",
+          "national": "National",
+          "regional": "Regional"
+        }
+      },
+      "format-regex": {
+        "title": "Format Regex"
+      },
+      "min-length": {
+        "title": "Minimum Length"
+      },
+      "max-length": {
+        "title": "Maximum Length"
+      },
+      "is-unique": {
+        "title": "Is Unique"
+      },
+      "is-active": {
+        "title": "Is Active"
+      }
+    },
+    "permissions": {
+      "party-identifier-types": {
+        "title": "Contact Identifier Types",
+        "description": "Manage contact identifier types",
+        "actions": {
+          "manage": {
+            "title": "Manage Contact Identifier Types",
+            "description": "Full contact identifier type management access"
+          },
+          "view": {
+            "title": "View Contact Identifier Types",
+            "description": "View contact identifier type information"
+          },
+          "create": {
+            "title": "Create Contact Identifier Type",
+            "description": "Create new contact identifier types"
+          },
+          "edit": {
+            "title": "Edit Contact Identifier Type",
+            "description": "Edit contact identifier type information"
+          },
+          "delete": {
+            "title": "Delete Contact Identifier Types",
+            "description": "Delete contact identifier types"
+          }
+        }
+      }
+    }
+  },
+
+  "party-identifier": {
+    "terms": {
+      "party-identifier": "Contact Identifier",
+      "party-identifiers": "Contact Identifiers"
+    },
+    "entities": {
+      "party-identifier": {
+        "title": "Contact Identifier",
+        "plural": "Contact Identifiers"
+      }
+    },
+    "individual-title": "Contact Identifier",
+    "plural-title": "Contact Identifiers",
+    "search-result-description": "Contact identifier information",
+    "properties": {
+      "party": {
+        "title": "Contact"
+      },
+      "type": {
+        "title": "Identifier Type"
+      },
+      "value": {
+        "title": "Value"
+      },
+      "country": {
+        "title": "Country"
+      },
+      "issuer": {
+        "title": "Issuer"
+      },
+      "is-primary": {
+        "title": "Is Primary"
+      },
+      "valid-from": {
+        "title": "Valid From"
+      },
+      "valid-to": {
+        "title": "Valid To"
+      },
+      "notes": {
+        "title": "Notes"
+      }
+    },
+    "related-entities": {
+      "party": {
+        "title": "Contact"
+      },
+      "type": {
+        "title": "Identifier Type"
+      }
+    },
+    "permissions": {
+      "party-identifiers": {
+        "title": "Contact Identifiers",
+        "description": "Manage contact identifiers",
+        "actions": {
+          "manage": {
+            "title": "Manage Contact Identifiers",
+            "description": "Full contact identifier management access"
+          },
+          "view": {
+            "title": "View Contact Identifiers",
+            "description": "View contact identifier information"
+          },
+          "create": {
+            "title": "Create Contact Identifier",
+            "description": "Create new contact identifiers"
+          },
+          "edit": {
+            "title": "Edit Contact Identifier",
+            "description": "Edit contact identifier information"
+          },
+          "delete": {
+            "title": "Delete Contact Identifiers",
+            "description": "Delete contact identifiers"
+          }
+        }
+      }
+    }
+  },
+  "party-relationship-type": {
+    "terms": {
+      "party-relationship-type": "Contact Relationship Type",
+      "party-relationship-types": "Contact Relationship Types"
+    },
+    "entities": {
+      "party-relationship-type": {
+        "title": "Contact Relationship Type",
+        "plural": "Contact Relationship Types"
+      }
+    },
+    "individual-title": "Contact Relationship Type",
+    "plural-title": "Contact Relationship Types",
+    "search-result-description": "Contact relationship type information",
+    "properties": {
+      "is-directional": {
+        "title": "Is Directional"
+      }
+    }
+  },
+  "industry": {
+    "terms": {
+      "industry": "Industry",
+      "industries": "Industries"
+    },
+    "entities": {
+      "industry": {
+        "title": "Industry",
+        "plural": "Industries",
+        "fields": {
+          "title": {
+            "title": "Title"
+          },
+          "description": {
+            "title": "Description"
+          }
+        },
+        "groups": {
+          "basic-info": "Basic Information"
+        }
+      }
+    },
+    "individual-title": "Industry",
+    "plural-title": "Industries",
+    "basic-info": "Basic Information",
+    "title": "Title",
+    "description": "Description"
+  }
+}

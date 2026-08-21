@@ -1,0 +1,18 @@
+{
+  "actions": {
+    "review-commit": {
+      "title": "Code Review"
+    },
+    "review-branch": {
+      "title": "Review Before PR"
+    }
+  },
+  "review": {
+    "commit": {
+      "started": "Code review started for commit {{sha}} on {{branch}}."
+    },
+    "branch": {
+      "started": "Code review started for branch {{branch}} against {{baseBranch}}."
+    }
+  }
+}

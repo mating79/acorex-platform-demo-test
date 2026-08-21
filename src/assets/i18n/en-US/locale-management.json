@@ -1,0 +1,323 @@
+{
+  "module": {
+    "title": "Locale Management",
+    "description": "Manage languages, locales, and timezones",
+    "menus": {
+      "root": {
+        "title": "Locale Management",
+        "description": "Manage regional and localization settings"
+      },
+      "foundation-group": {
+        "title": "Regional",
+        "description": "Languages and timezones under Configuration"
+      }
+    },
+    "permissions": {
+      "title": "Locale Management",
+      "description": "Manage all aspects of locale management"
+    }
+  },
+  "languages": {
+    "terms": {
+      "language": "Language",
+      "languages": "Languages"
+    },
+    "entities": {
+      "language": {
+        "title": "Language",
+        "plural": "Languages",
+        "fields": {
+          "native-title": "Native Title",
+          "is-rtl": "Right-to-Left"
+        }
+      }
+    },
+    "menus": {
+      "languages": {
+        "title": "Languages",
+        "description": "Manage languages"
+      }
+    },
+    "permissions": {
+      "languages": {
+        "title": "Language Management",
+        "description": "Manage languages",
+        "actions": {
+          "view": {
+            "title": "View Languages",
+            "description": "View language information"
+          },
+          "create": {
+            "title": "Create Language",
+            "description": "Create new languages"
+          },
+          "edit": {
+            "title": "Edit Language",
+            "description": "Edit language information"
+          },
+          "delete": {
+            "title": "Delete Languages",
+            "description": "Delete languages"
+          }
+        }
+      }
+    }
+  },
+  "locales": {
+    "terms": {
+      "locale": "Locale",
+      "locales": "Locales"
+    },
+    "entities": {
+      "locale": {
+        "title": "Locale",
+        "plural": "Locales",
+        "fields": {
+          "language": "Language",
+          "country-code": "Country Code",
+          "is-default": "Default Locale"
+        }
+      }
+    },
+    "menus": {
+      "locales": {
+        "title": "Locales",
+        "description": "Manage locales"
+      }
+    },
+    "permissions": {
+      "locales": {
+        "title": "Locale Management",
+        "description": "Manage locales",
+        "actions": {
+          "view": {
+            "title": "View Locales",
+            "description": "View locale information"
+          },
+          "create": {
+            "title": "Create Locale",
+            "description": "Create new locales"
+          },
+          "edit": {
+            "title": "Edit Locale",
+            "description": "Edit locale information"
+          },
+          "delete": {
+            "title": "Delete Locales",
+            "description": "Delete locales"
+          }
+        }
+      }
+    }
+  },
+  "timezones": {
+    "terms": {
+      "timezone": "Timezone",
+      "timezones": "Timezones"
+    },
+    "entities": {
+      "timezone": {
+        "title": "Timezone",
+        "plural": "Timezones",
+        "fields": {
+          "abbreviation": "Abbreviation",
+          "standard-offset": "UTC Offset (minutes)",
+          "region": "Region",
+          "supports-dst": "Supports DST"
+        }
+      }
+    },
+    "menus": {
+      "timezones": {
+        "title": "Timezones",
+        "description": "Manage timezones"
+      }
+    },
+    "permissions": {
+      "timezones": {
+        "title": "Timezone Management",
+        "description": "Manage timezones",
+        "actions": {
+          "view": {
+            "title": "View Timezones",
+            "description": "View timezone information"
+          },
+          "create": {
+            "title": "Create Timezone",
+            "description": "Create new timezones"
+          },
+          "edit": {
+            "title": "Edit Timezone",
+            "description": "Edit timezone information"
+          },
+          "delete": {
+            "title": "Delete Timezones",
+            "description": "Delete timezones"
+          }
+        }
+      }
+    }
+  },
+  "settings": {
+    "settings": {
+      "regional": {
+        "nav-title": "Region & Language",
+        "title": "Regional Settings",
+        "description": "Configure regional and language preferences.",
+        "datetime": {
+          "title": "Date & Time",
+          "description": "Configure date and time settings.",
+          "timezone": {
+            "title": "Time Zone",
+            "description": "Set the default time zone for the application."
+          }
+        },
+        "region": {
+          "title": "Region",
+          "description": "Configure regional format and preferences.",
+          "available-languages": {
+            "title": "Available Languages",
+            "description": "Choose which languages appear in the header switch and user language settings. Tenants can override this list."
+          },
+          "language": {
+            "title": "Display Language",
+            "description": "Set the preferred display language for the user."
+          },
+          "format": {
+            "title": "Regional Format",
+            "description": "Set the regional format for numbers, dates, and times."
+          },
+          "calendar": {
+            "title": "Calendar System",
+            "description": "Choose how dates are calculated and displayed.",
+            "options": {
+              "gregorian": "Gregorian Calendar",
+              "hijri": "Hijri Calendar"
+            }
+          },
+          "calendar-events": {
+            "title": "Holiday Calendars",
+            "description": "Choose which holiday calendars appear on the task board and other calendar views."
+          },
+          "firstday": {
+            "title": "First Day of Week",
+            "description": "Set the first day of the week.",
+            "options": {
+              "saturday": "Saturday",
+              "sunday": "Sunday",
+              "monday": "Monday"
+            }
+          },
+          "workdays": {
+            "title": "Work Days",
+            "description": "Select the working days for the user.",
+            "options": {
+              "monday": "Monday",
+              "tuesday": "Tuesday",
+              "wednesday": "Wednesday",
+              "thursday": "Thursday",
+              "friday": "Friday",
+              "saturday": "Saturday",
+              "sunday": "Sunday"
+            }
+          },
+          "multilanguage-support": {
+            "title": "Enable Multi-Language Support for Content",
+            "description": "Lets common text (titles, descriptions, notes, and similar fields) be entered in more than one language. Turn off if you only use one language."
+          },
+          "shortdate": {
+            "title": "Short Date Format",
+            "description": "Select the short date format.",
+            "options": {
+              "month-day-year": "Mm/dd/yyyy",
+              "day-month-year": "Dd/mm/yyyy",
+              "year-month-day": "YYYY-MM-DD"
+            }
+          },
+          "longdate": {
+            "title": "Long Date Format",
+            "description": "Select the long date format.",
+            "options": {
+              "month-day-year": "Month Day, Year (April 10, 2025)",
+              "weekday-month-day-year": "Weekday, Month Day, Year (Thursday, April 10, 2025)",
+              "year-month-day": "Year-Month-Day (2025-04-10)"
+            }
+          },
+          "shorttime": {
+            "title": "Short Time Format",
+            "description": "Select the short time format (12-hour or 24-hour).",
+            "options": {
+              "12hour": "12-Hour (Hh:mm AM/PM)",
+              "24hour": "24-Hour (HH:mm)"
+            }
+          },
+          "longtime": {
+            "title": "Long Time Format",
+            "description": "Select the long time format (12-hour or 24-hour).",
+            "options": {
+              "12hour": "12-Hour (Hh:mm:ss AM/PM)",
+              "24hour": "24-Hour (HH:mm:ss)"
+            }
+          }
+        },
+        "units": {
+          "title": "Units",
+          "description": "Configure measurement and display units.",
+          "temperature": {
+            "title": "Temperature Units",
+            "description": "Select your preferred temperature scale.",
+            "options": {
+              "celsius": "Celsius (°C)",
+              "fahrenheit": "Fahrenheit (°F)",
+              "kelvin": "Kelvin (K)"
+            }
+          },
+          "distance": {
+            "title": "Distance Units",
+            "description": "Select your preferred distance unit.",
+            "options": {
+              "kilometers": "Kilometers (km)",
+              "miles": "Miles (mi)"
+            }
+          },
+          "weight": {
+            "title": "Weight Units",
+            "description": "Select your preferred weight unit.",
+            "options": {
+              "kilograms": "Kilograms (kg)",
+              "pounds": "Pounds (lb)"
+            }
+          },
+          "volume": {
+            "title": "Volume Units",
+            "description": "Select your preferred volume unit.",
+            "options": {
+              "liters": "Liters (L)",
+              "gallons": "Gallons (gal)"
+            }
+          },
+          "speed": {
+            "title": "Speed Units",
+            "description": "Select your preferred speed unit.",
+            "options": {
+              "kmh": "Kilometers Per Hour (km/h)",
+              "km/h": "Kilometers Per Hour (km/h)",
+              "mph": "Miles Per Hour (mph)"
+            }
+          },
+          "area": {
+            "title": "Area Units",
+            "description": "Select your preferred area unit.",
+            "options": {
+              "square-meters": "Square Meters (m²)",
+              "square-feet": "Square Feet (ft²)"
+            }
+          }
+        }
+      }
+    }
+  },
+  "app-startup": {
+    "applying-regional-settings": "Applying regional settings (platform, tenant, user)..."
+  }
+}

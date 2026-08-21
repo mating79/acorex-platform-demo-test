@@ -1,0 +1,364 @@
+{
+  "module": {
+    "title": "بینش سیستم",
+    "description": "بر فعالیت پلتفرم، مسیرهای حسابرسی و سیگنال‌های عملیاتی نظارت کنید",
+    "menus": {
+      "root": {
+        "title": "بینش سیستم",
+        "description": "لاگ‌های حسابرسی و رویدادهای سیستم را بررسی کنید"
+      }
+    }
+  },
+  "groups": {
+    "general": "عمومی",
+    "event": "رویداد",
+    "http": "HTTP",
+    "correlation": "همبستگی",
+    "context": "زمینه",
+    "attributes": "ویژگی‌ها"
+  },
+  "entities": {
+    "log-entry": { "title": "رکورد لاگ", "plural": "لاگ‌ها", "views": { "slow": { "title": "کند" } } },
+    "http-request-log": { "title": "لاگ درخواست HTTP", "plural": "لاگ‌های درخواست HTTP" },
+    "job-execution-log": { "title": "لاگ اجرای Job", "plural": "لاگ‌های اجرای Job" },
+    "trace-entry": {
+      "title": "Trace",
+      "plural": "Traceها",
+      "views": {
+        "slow": { "title": "کند" },
+        "command": { "title": "Commandها" },
+        "query": { "title": "Queryها" },
+        "entity": { "title": "Entityها" },
+        "error": { "title": "خطاها" }
+      }
+    },
+    "trace-span": { "title": "Span", "plural": "Spanها" },
+    "error-event": { "title": "رویداد خطا", "plural": "خطاها" },
+    "slow-request": { "title": "درخواست کند", "plural": "درخواست‌های کند" },
+    "metric-point": { "title": "متریک", "plural": "متریک‌ها" },
+    "saved-view": { "title": "نمای ذخیره‌شده", "plural": "نمای‌های ذخیره‌شده" },
+    "alert-rule": { "title": "قانون هشدار", "plural": "قوانین هشدار" },
+    "observability-data-source": { "title": "منبع داده", "plural": "منابع داده" },
+    "retention-policy": { "title": "سیاست نگهداری", "plural": "سیاست‌های نگهداری" },
+    "dashboard-widget-config": { "title": "ویجت داشبورد", "plural": "ویجت‌های داشبورد" }
+  },
+  "fields": {
+    "id": "شناسه",
+    "timestamp": "زمان",
+    "level": "سطح",
+    "message": "پیام",
+    "request-id": "شناسه درخواست",
+    "trace-id": "شناسه Trace",
+    "span-id": "شناسه Span",
+    "user-id": "شناسه کاربر",
+    "tenant-id": "شناسه مستاجر",
+    "application-id": "شناسه برنامه",
+    "service-name": "نام سرویس",
+    "module": "ماژول",
+    "entity": "موجودیت",
+    "operation": "عملیات",
+    "kind": "نوع",
+    "source": "منبع",
+    "method": "متد",
+    "url": "آدرس",
+    "status-code": "کد وضعیت",
+    "duration": "مدت (میلی‌ثانیه)",
+    "severity-number": "شماره شدت",
+    "attributes": "ویژگی‌ها",
+    "job-id": "شناسه Job",
+    "job-name": "نام Job",
+    "status": "وضعیت",
+    "error": "خطا",
+    "start-time": "زمان شروع",
+    "span-count": "تعداد Span",
+    "has-error": "دارای خطا",
+    "error-type": "نوع خطا",
+    "fingerprint": "اثر انگشت",
+    "threshold-ms": "آستانه (میلی‌ثانیه)",
+    "metric-name": "نام متریک",
+    "metric-type": "نوع متریک",
+    "value": "مقدار",
+    "title": "عنوان",
+    "description": "توضیحات",
+    "entity-full-name": "موجودیت",
+    "is-default": "پیش‌فرض",
+    "is-shared": "اشتراکی",
+    "name": "نام",
+    "enabled": "فعال",
+    "threshold": "آستانه",
+    "window-minutes": "بازه (دقیقه)",
+    "severity": "شدت",
+    "last-triggered-at": "آخرین فعال‌سازی",
+    "data-source-type": "نوع داده",
+    "provider": "ارائه‌دهنده",
+    "data-type": "نوع داده",
+    "retention-days": "روزهای نگهداری",
+    "widget-type": "نوع ویجت",
+    "dashboard-key": "کلید داشبورد",
+    "order": "ترتیب"
+  },
+  "actions": {
+    "export": { "title": "خروجی" },
+    "clear-logs": { "title": "پاک‌سازی لاگ‌ها" },
+    "clear-logs-confirm": {
+      "title": "پاک‌سازی لاگ‌ها",
+      "message": "همه رکوردهای لاگ مطابق فیلترهای فعلی برای این مستأجر حذف شوند؟ این عمل قابل بازگشت نیست."
+    },
+    "clear-logs-success": "{{ deleted }} رکورد لاگ حذف شد.",
+    "create-alert": { "title": "ایجاد هشدار" },
+    "view-trace": { "title": "مشاهده Trace" },
+    "view-timeline": { "title": "مشاهده Timeline" }
+  },
+  "permissions": {
+    "group": {
+      "title": "بینش سیستم",
+      "description": "مدیریت دسترسی به قابلیت‌های نظارت و Observability"
+    },
+    "logs": {
+      "view": { "title": "مشاهده لاگ‌ها", "description": "مرور لاگ‌های زمان اجرا" },
+      "export": { "title": "خروجی لاگ‌ها", "description": "خروجی گرفتن از داده‌های لاگ" }
+    },
+    "traces": {
+      "view": { "title": "مشاهده Traceها", "description": "مرور Traceهای توزیع‌شده" }
+    },
+    "metrics": {
+      "view": { "title": "مشاهده متریک‌ها", "description": "مرور متریک‌ها و داده‌های سری زمانی" }
+    },
+    "errors": {
+      "view": { "title": "مشاهده خطاها", "description": "مرور رویدادهای خطا" }
+    },
+    "saved-views": {
+      "manage": { "title": "مدیریت نمای‌های ذخیره‌شده", "description": "ایجاد و مدیریت فیلترهای ذخیره‌شده" }
+    },
+    "alerts": {
+      "manage": { "title": "مدیریت هشدارها", "description": "پیکربندی قوانین هشدار و اعلان‌ها" }
+    },
+    "admin": {
+      "title": "مدیر بینش سیستم",
+      "description": "دسترسی کامل مدیریتی به بینش سیستم"
+    },
+    "audit-log": {
+      "manage": {
+        "title": "مدیریت لاگ‌های حسابرسی",
+        "description": "پیکربندی تنظیمات و نگهداری لاگ حسابرسی"
+      }
+    }
+  },
+  "pages": {
+    "metrics": {
+      "title": "نمای کلی متریک‌ها",
+      "loading": "در حال بارگذاری متریک‌ها..."
+    },
+    "trace-timeline": {
+      "title": "خط زمانی",
+      "back-to-traces": "بازگشت به Traceها",
+      "trace-id": "شناسه Trace",
+      "duration": "مدت",
+      "loading": "در حال بارگذاری Trace...",
+      "not-found": "Trace یافت نشد.",
+      "view-logs": "مشاهده لاگ‌های مرتبط",
+      "timeline": "خط زمانی",
+      "spans": "Spanها"
+    },
+    "trace-flow": {
+      "title": "جریان",
+      "duration": "مدت",
+      "not-found": "Trace یافت نشد.",
+      "empty": "Spanی برای این Trace موجود نیست.",
+      "next-middleware": "میدلور بعدی",
+      "input": "ورودی",
+      "output": "خروجی",
+      "no-input": "برای این Span ورودی ثبت نشده است.",
+      "no-output": "برای این Span خروجی ثبت نشده است.",
+      "attributes": "ویژگی‌ها",
+      "events": "رویدادها",
+      "span-id": "شناسه Span",
+      "parent-span-id": "شناسه Span والد"
+    }
+  },
+  "logs": {
+    "terms": {
+      "log": "لاگ",
+      "logs": "لاگ‌ها",
+      "audit-log": "لاگ حسابرسی",
+      "audit-logs": "لاگ‌های حسابرسی",
+      "retention": "نگهداری",
+      "storage": "ذخیره‌سازی",
+      "alert": "هشدار",
+      "performance": "کارایی"
+    },
+    "entities": {
+      "audit-log": {
+        "title": "لاگ حسابرسی",
+        "plural": "لاگ‌های حسابرسی",
+        "description": "ورودی‌های مسیر حسابرسی سیستم که توسط بینش سیستم ثبت شده‌اند",
+        "formats": {
+          "search-result": {
+            "description": "رکورد حسابرسی بینش سیستم"
+          }
+        },
+        "groups": {
+          "general": "عمومی",
+          "user": "کاربر",
+          "client": "کلاینت",
+          "impersonator": "جایگزین",
+          "actions": "اقدامات",
+          "entity-changes": "تغییرات موجودیت",
+          "extra": "داده‌های تکمیلی"
+        },
+        "fields": {
+          "id": { "title": "شناسه", "description": "شناسه یکتای رکورد لاگ" },
+          "application-name": { "title": "نام برنامه", "description": "برنامه‌ای که لاگ را تولید کرده است" },
+          "execution-time": { "title": "زمان اجرا", "description": "زمان ثبت اجرای اقدام" },
+          "execution-duration": { "title": "مدت زمان اجرا", "description": "مدت زمان صرف‌شده برای اجرا (میلی‌ثانیه)" },
+          "comments": { "title": "توضیحات", "description": "یادداشت‌های تکمیلی ثبت‌شده با لاگ" },
+          "tenant-id": { "title": "شناسه مستاجر", "description": "شناسه مستاجر انجام‌دهنده عملیات" },
+          "tenant-name": { "title": "نام مستاجر", "description": "نام نمایشی مستاجر" },
+          "user-id": { "title": "شناسه کاربر", "description": "شناسه کاربر انجام‌دهنده عملیات" },
+          "user-name": { "title": "نام کاربر", "description": "نام نمایشی کاربر" },
+          "client-ip-address": {
+            "title": "آدرس IP کلاینت",
+            "description": "آدرس IP کلاینتی که درخواست را ارسال کرده است"
+          },
+          "client-name": { "title": "نام کلاینت", "description": "نام برنامه کلاینت" },
+          "client-id": { "title": "شناسه کلاینت", "description": "شناسه اختصاصی کلاینت" },
+          "browser-info": { "title": "اطلاعات مرورگر", "description": "رشته عامل کاربر ارائه شده توسط کلاینت" },
+          "http-method": { "title": "متد HTTP", "description": "متد HTTP استفاده شده برای درخواست" },
+          "url": { "title": "آدرس درخواست", "description": "مسیر درخواستی ارسال‌شده به سرور" },
+          "http-status-code": { "title": "کد وضعیت HTTP", "description": "کد وضعیت HTTP بازگشتی از سرور" },
+          "http-status": { "title": "وضعیت HTTP", "description": "توضیح متنی وضعیت بازگشتی" },
+          "correlation-id": { "title": "شناسه همبستگی", "description": "شناسه رهگیری برای اتصال درخواست‌های مرتبط" },
+          "exceptions": { "title": "استثناها", "description": "جزئیات استثناهای ثبت‌شده برای درخواست" },
+          "impersonator-user-id": {
+            "title": "شناسه کاربر جایگزین",
+            "description": "شناسه کاربری که عملیات را به صورت جایگزین انجام داده است"
+          },
+          "impersonator-user-name": { "title": "نام کاربر جایگزین", "description": "نام نمایشی کاربر جایگزین" },
+          "impersonator-tenant-id": {
+            "title": "شناسه مستاجر جایگزین",
+            "description": "شناسه مستاجری که کاربر جایگزین به آن تعلق دارد"
+          },
+          "impersonator-tenant-name": { "title": "نام مستاجر جایگزین", "description": "نام مستاجر کاربر جایگزین" },
+          "extra-properties": { "title": "ویژگی‌های اضافی", "description": "متاداده تکمیلی ثبت‌شده همراه با لاگ" },
+          "actions": { "title": "اقدامات", "description": "خدمات فراخوانی‌شده در طول درخواست" },
+          "entity-changes": {
+            "title": "تغییرات موجودیت",
+            "description": "تغییرهای انجام‌شده روی موجودیت‌ها در جریان درخواست"
+          }
+        },
+        "views": {
+          "single": { "title": "جزئیات لاگ" },
+          "auth-logs": { "title": "لاگ‌های احراز هویت" }
+        }
+      }
+    },
+    "settings": {
+      "group": {
+        "title": "بینش سیستم",
+        "description": "نحوه ذخیره‌سازی، پایش و بهینه‌سازی لاگ‌های حسابرسی را در سطح پلتفرم پیکربندی کنید"
+      },
+      "retention": {
+        "title": "سیاست نگهداری",
+        "description": "مدت نگهداری لاگ‌های زمان اجرا در Elasticsearch و بافر حافظه را کنترل کنید",
+        "items": {
+          "enabled": {
+            "title": "فعال‌سازی نگهداری",
+            "description": "پس از پایان دوره تعیین‌شده، لاگ‌ها را به‌صورت خودکار حذف کن"
+          },
+          "period": {
+            "title": "دوره نگهداری (روز)",
+            "description": "تعداد روزهای نگهداری لاگ پیش از حذف"
+          },
+          "batch-size": {
+            "title": "اندازه دسته پاک‌سازی",
+            "description": "حداکثر تعداد سند Elasticsearch که در هر اجرای زمان‌بندی‌شده حذف می‌شود"
+          },
+          "purge-cron": {
+            "title": "زمان‌بندی پاک‌سازی (کرون)",
+            "description": "عبارت کرون برای کار پس‌زمینه نگهداری لاگ بینش سیستم"
+          }
+        }
+      },
+      "storage": {
+        "title": "پشتیبان فایل خطای بحرانی",
+        "description": "ثبت لاگ‌های خطا و fatal روی دیسک وقتی Elasticsearch در دسترس نیست",
+        "items": {
+          "critical-file-enabled": {
+            "title": "فعال‌سازی پشتیبان فایل",
+            "description": "افزودن لاگ‌های خطا و fatal زمان اجرا به فایل JSONL محلی"
+          },
+          "location": {
+            "title": "پوشه فایل",
+            "description": "پوشه‌ای که critical-errors.jsonl در آن نوشته می‌شود",
+            "placeholder": "./logs/acorex"
+          }
+        }
+      },
+      "level": {
+        "title": "سطح لاگ",
+        "description": "حداقل شدت ثبت‌شده به صورت پیش‌فرض را مشخص کنید",
+        "items": {
+          "default": {
+            "title": "سطح لاگ پیش‌فرض",
+            "description": "سطح پایه‌ای که روی همه ماژول‌ها اعمال می‌شود",
+            "options": {
+              "error": "خطا",
+              "warn": "هشدار",
+              "info": "اطلاع‌رسانی",
+              "debug": "اشکال‌زدایی",
+              "trace": "ردگیری"
+            }
+          }
+        }
+      },
+      "performance": {
+        "title": "کارایی",
+        "description": "ایندکس‌گذاری لاگ و تشخیص درخواست کند را تنظیم کنید",
+        "items": {
+          "slow-request-threshold": {
+            "title": "آستانه درخواست کند",
+            "description": "حداقل مدت درخواست به میلی‌ثانیه برای طبقه‌بندی به‌عنوان درخواست کند"
+          },
+          "async": {
+            "title": "لاگ‌برداری غیرهمگام",
+            "description": "ایندکس‌گذاری دسته‌ای در Elasticsearch برای کاهش تأخیر"
+          },
+          "batch-size": {
+            "title": "اندازه دسته ایندکسر",
+            "description": "تعداد لاگ‌هایی که در هر درخواست bulk به Elasticsearch ارسال می‌شوند"
+          },
+          "flush-interval": {
+            "title": "بازه تخلیه ایندکسر",
+            "description": "فواصل زمانی ارسال دسته‌های لاگ به Elasticsearch"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "group": {
+        "title": "بینش سیستم",
+        "description": "مدیریت دسترسی به قابلیت‌های نظارت بینش سیستم"
+      },
+      "audit-log": {
+        "manage": {
+          "title": "مدیریت لاگ‌های حسابرسی",
+          "description": "اجازه پیکربندی تنظیمات و نگهداری لاگ حسابرسی"
+        },
+        "actions": {
+          "view": {
+            "title": "مشاهده لاگ‌ها",
+            "description": "اجازه مشاهده رکوردهای لاگ حسابرسی"
+          },
+          "export": {
+            "title": "خروجی گرفتن از لاگ‌ها",
+            "description": "اجازه خروجی گرفتن از داده‌های لاگ حسابرسی برای تحلیل"
+          },
+          "purge": {
+            "title": "پاکسازی لاگ‌ها",
+            "description": "اجازه حذف یا پاکسازی رکوردهای لاگ حسابرسی"
+          }
+        }
+      }
+    }
+  }
+}

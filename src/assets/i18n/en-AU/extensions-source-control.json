@@ -1,0 +1,144 @@
+{
+  "module": {
+    "title": "Source Control",
+    "description": "Link platform projects to Git repositories"
+  },
+  "integration": {
+    "domain": {
+      "title": "Source Control",
+      "description": "Connect Git hosting providers for repositories, sync, and import."
+    }
+  },
+  "settings": {
+    "source-control": {
+      "group": {
+        "nav-title": "Source Control",
+        "title": "Source Control",
+        "description": "Configure which project types can link to Git repositories."
+      },
+      "section-title": "Configuration",
+      "section-description": "Control source-control capabilities for project types.",
+      "enabled-project-types": {
+        "title": "Enabled Project Types",
+        "description": "Only projects with these types can link a Git repository. Add other types here without code changes."
+      }
+    }
+  },
+  "entities": {
+    "project-source-control-link": {
+      "title": "Project Repository Link",
+      "plural": "Project Repository Links",
+      "groups": {
+        "repository": "Repository"
+      },
+      "fields": {
+        "project-id": { "title": "Project ID" },
+        "provider-id": { "title": "Provider" },
+        "connection-id": { "title": "Connection ID" },
+        "remote-id": { "title": "Remote ID" },
+        "full-name": { "title": "Repository" },
+        "web-url": { "title": "Web URL" },
+        "default-branch": { "title": "Default Branch" },
+        "linked-at": { "title": "Linked At" }
+      }
+    }
+  },
+  "actions": {
+    "link-repository": {
+      "title": "Link Repository"
+    },
+    "unlink-repository": {
+      "title": "Unlink Repository"
+    }
+  },
+  "pages": {
+    "repository": {
+      "title": "Repository",
+      "linked": {
+        "summary": "This project is linked to a Git repository.",
+        "badge": "Linked"
+      },
+      "fields": {
+        "provider": "Provider",
+        "default-branch": "Default Branch",
+        "web-url": "Web URL"
+      },
+      "actions": {
+        "back": "Back",
+        "change": "Change Repository",
+        "unlink": "Unlink Repository"
+      },
+      "empty": {
+        "no-connection": {
+          "title": "No Git Provider Connected",
+          "description": "Connect GitHub or GitLab in Administration → Integrations before linking a repository."
+        }
+      },
+      "steps": {
+        "provider": {
+          "title": "Select a Provider",
+          "description": "Choose which connected Git provider you want to use for this project."
+        },
+        "repositories": {
+          "title": "Select a Repository",
+          "search-placeholder": "Search repositories by name",
+          "empty": "No repositories match your search. Try a different keyword."
+        }
+      },
+      "dialogs": {
+        "link": {
+          "title": "Link Repository",
+          "message": "Link {{fullName}} to this project?"
+        },
+        "unlink": {
+          "title": "Unlink Repository",
+          "message": "Unlink {{fullName}} from this project?"
+        }
+      },
+      "messages": {
+        "linked": "Repository {{fullName}} linked successfully.",
+        "unlinked": "Repository unlinked successfully."
+      },
+      "commits": {
+        "title": "Commits",
+        "description": "Recent commits for the selected branch.",
+        "branch": {
+          "placeholder": "Select branch"
+        },
+        "empty": {
+          "title": "No Commits Found",
+          "description": "This branch has no commits yet, or the provider returned an empty list."
+        },
+        "actions": {
+          "view": "View on Provider"
+        }
+      }
+    }
+  },
+  "link-repository": {
+    "messages": {
+      "no-connection": "No GitHub or GitLab connection is configured. Connect a provider in Administration → Integrations first."
+    },
+    "dialog": {
+      "title": "Link Repository",
+      "instructions": "Select a connected provider and search for a repository to link to this project.",
+      "fields": {
+        "connection": "Connection",
+        "search": "Search",
+        "repository": "Repository"
+      },
+      "placeholders": {
+        "search": "Type to filter repositories"
+      },
+      "actions": {
+        "save": "Link Repository"
+      }
+    }
+  },
+  "unlink-repository": {
+    "dialog": {
+      "title": "Unlink Repository",
+      "message": "Unlink {{fullName}} from this project?"
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "module": {
+    "title": "ماژول نمونه",
+    "description": "توضیحات ماژول نمونه",
+    "terms": {
+      "shared-term": "مقدار عبارت مشترک"
+    },
+    "menus": {
+      "root": {
+        "title": "عنوان منوی ریشه",
+        "description": "توضیحات منوی ریشه"
+      }
+    }
+  },
+  "feature-key": {
+    "terms": {
+      "term-key1": "کلید عبارت ۱",
+      "term-key2": {
+        "sub-key": "کلید فرعی عبارت ۲"
+      }
+    },
+    "menus": {
+      "menu-key": {
+        "title": "عنوان منو",
+        "description": "توضیحات منو"
+      }
+    },
+    "entities": {
+      "entity-key": {
+        "title": "عنوان موجودیت",
+        "plural": "موجودیت‌ها",
+        "fields": {
+          "field-key": {
+            "title": "عنوان فیلد",
+            "description": "توضیحات فیلد",
+            "placeholder": "متن راهنما فیلد"
+          }
+        },
+        "groups": {
+          "group-key": "عنوان گروه"
+        }
+      }
+    },
+    "components": {
+      "component-key": {
+        "title": "عنوان کامپوننت",
+        "description": "توضیحات کامپوننت",
+        "empty-states": {
+          "no-data": {
+            "title": "داده‌ای یافت نشد",
+            "description": "داده‌ای در دسترس نیست"
+          }
+        }
+      }
+    },
+    "settings": {
+      "section-key": {
+        "title": "عنوان بخش",
+        "description": "توضیحات بخش",
+        "items": {
+          "item-key": {
+            "title": "عنوان مورد",
+            "description": "توضیحات مورد"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "resource-key": {
+        "title": "عنوان منبع",
+        "actions": {
+          "view": {
+            "title": "مشاهده"
+          },
+          "create": {
+            "title": "ایجاد"
+          },
+          "edit": {
+            "title": "ویرایش"
+          },
+          "delete": {
+            "title": "حذف"
+          },
+          "manage": {
+            "title": "مدیریت"
+          }
+        }
+      }
+    },
+    "actions": {
+      "action-key": {
+        "title": "عنوان عملیات",
+        "description": "توضیحات عملیات"
+      }
+    },
+    "messages": {
+      "success": {
+        "message-key": "پیام موفقیت"
+      },
+      "error": {
+        "message-key": "پیام خطا"
+      },
+      "warning": {
+        "message-key": "پیام هشدار"
+      }
+    },
+    "states": {
+      "state-key": "برچسب وضعیت"
+    },
+    "validations": {
+      "validation-key": "پیام اعتبارسنجی"
+    }
+  }
+}
+

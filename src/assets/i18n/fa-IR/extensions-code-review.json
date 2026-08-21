@@ -1,0 +1,18 @@
+{
+  "actions": {
+    "review-commit": {
+      "title": "بررسی کد"
+    },
+    "review-branch": {
+      "title": "بررسی قبل از PR"
+    }
+  },
+  "review": {
+    "commit": {
+      "started": "بررسی کد برای کامیت {{sha}} روی شاخه {{branch}} آغاز شد."
+    },
+    "branch": {
+      "started": "بررسی کد برای شاخه {{branch}} نسبت به {{baseBranch}} آغاز شد."
+    }
+  }
+}

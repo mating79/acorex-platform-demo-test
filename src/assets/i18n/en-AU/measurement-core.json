@@ -1,0 +1,490 @@
+{
+  "module": {
+    "title": "Measurement Core",
+    "alias": "Measurement",
+    "description": "Shared measurement master data for inventory, manufacturing, quality control, and sizing.",
+    "menus": {
+      "root": {
+        "title": "Units and Measures",
+        "description": "Quantity types, units of measure, dimensions, ranges, and size charts."
+      }
+    }
+  },
+  "quantity-types": {
+    "terms": {
+      "quantity-type": "Quantity Type",
+      "quantity-types": "Quantity Types"
+    },
+    "entities": {
+      "quantity-type": {
+        "title": "Quantity Type",
+        "plural": "Quantity Types",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter quantity type code (e.g., LENGTH, MASS)"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter quantity type title"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Describe the quantity type"
+          },
+          "base-unit": {
+            "title": "Base Unit"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-quantity-type": {
+        "title": "Create Quantity Type",
+        "description": "Define a new quantity type."
+      }
+    },
+    "permissions": {
+      "quantity-type": {
+        "title": "Quantity Types",
+        "manage": {
+          "title": "Manage Quantity Types"
+        }
+      }
+    }
+  },
+  "units": {
+    "terms": {
+      "unit-of-measure": "Unit of Measure",
+      "units-of-measure": "Units of Measure"
+    },
+    "entities": {
+      "unit-of-measure": {
+        "title": "Unit of Measure",
+        "plural": "Units of Measure",
+        "groups": {
+          "basic-info": "Basic Information",
+          "configuration": "Configuration"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter unit code (e.g., cm, mm, in)"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter unit title"
+          },
+          "symbol": {
+            "title": "Symbol",
+            "placeholder": "Enter unit symbol (e.g., m, kg, L)"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Describe the unit of measure"
+          },
+          "quantity-type": {
+            "title": "Quantity Type"
+          },
+          "factor-to-base": {
+            "title": "Factor to Base",
+            "placeholder": "Conversion factor to base unit (e.g., 10 for cm → mm)"
+          },
+          "precision": {
+            "title": "Precision",
+            "placeholder": "Decimal places (0-10)"
+          },
+          "is-base": {
+            "title": "Base Unit"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-unit-of-measure": {
+        "title": "Create Unit of Measure",
+        "description": "Register a new unit of measure."
+      }
+    },
+    "permissions": {
+      "unit-of-measure": {
+        "title": "Units of Measure",
+        "manage": {
+          "title": "Manage Units of Measure"
+        }
+      }
+    }
+  },
+  "conversions": {
+    "terms": {
+      "unit-conversion": "Unit Conversion",
+      "unit-conversions": "Unit Conversions"
+    },
+    "entities": {
+      "unit-conversion": {
+        "title": "Unit Conversion",
+        "plural": "Unit Conversions",
+        "groups": {
+          "basic-info": "Basic Information",
+          "conversion": "Conversion"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Optional code (e.g., M_TO_CM)"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Describe the conversion"
+          },
+          "from-unit": {
+            "title": "From Unit"
+          },
+          "to-unit": {
+            "title": "To Unit"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Display title (e.g., Box to Piece)"
+          },
+          "factor": {
+            "title": "Factor",
+            "placeholder": "Conversion factor (e.g., 100 for m → cm)"
+          },
+          "conversion-factor": {
+            "title": "Conversion Factor",
+            "placeholder": "Conversion factor (e.g., 100 for m → cm)"
+          },
+          "operator": {
+            "title": "Operator",
+            "options": {
+              "multiply": "Multiply",
+              "divide": "Divide"
+            }
+          }
+        }
+      }
+    },
+    "search": {
+      "create-unit-conversion": {
+        "title": "Create Unit Conversion",
+        "description": "Define a new unit conversion rule."
+      }
+    },
+    "permissions": {
+      "unit-conversion": {
+        "title": "Unit Conversions",
+        "manage": {
+          "title": "Manage Unit Conversions"
+        }
+      }
+    }
+  },
+  "dimensions": {
+    "entities": {
+      "measurement-dimension": {
+        "title": "Measurement Dimension",
+        "plural": "Measurement Dimensions",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter dimension code (e.g., FOOT_LENGTH, CHEST)"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter dimension title"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Describe the measurement dimension"
+          },
+          "quantity-type": {
+            "title": "Quantity Type"
+          },
+          "default-uom": {
+            "title": "Default Unit"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-measurement-dimension": {
+        "title": "Create Measurement Dimension",
+        "description": "Define a new measurement dimension (axis)."
+      }
+    },
+    "permissions": {
+      "measurement-dimension": {
+        "title": "Measurement Dimensions",
+        "manage": {
+          "title": "Manage Measurement Dimensions"
+        }
+      }
+    }
+  },
+  "ranges": {
+    "entities": {
+      "measurement-range": {
+        "title": "Measurement Range",
+        "plural": "Measurement Ranges",
+        "groups": {
+          "basic-info": "Basic Information",
+          "range-config": "Range Configuration"
+        },
+        "fields": {
+          "measurement-dimension": {
+            "title": "Measurement Dimension"
+          },
+          "code": {
+            "title": "Code",
+            "placeholder": "Optional code (e.g., RANGE_26_27)"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Optional display title"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Describe the range"
+          },
+          "unit": {
+            "title": "Unit"
+          },
+          "min": {
+            "title": "Minimum",
+            "placeholder": "Min value"
+          },
+          "max": {
+            "title": "Maximum",
+            "placeholder": "Max value"
+          },
+          "target": {
+            "title": "Target",
+            "placeholder": "Nominal value"
+          },
+          "range-type": {
+            "title": "Range Type",
+            "options": {
+              "acceptable": "Acceptable",
+              "preferred": "Preferred",
+              "tolerance": "Tolerance",
+              "ideal": "Ideal"
+            }
+          },
+          "bound-type": {
+            "title": "Bound Type",
+            "options": {
+              "closed": "Closed",
+              "open": "Open",
+              "left-closed": "Left Closed",
+              "right-closed": "Right Closed"
+            }
+          },
+          "step": {
+            "title": "Step",
+            "placeholder": "Granularity (e.g., 0.5)"
+          },
+          "priority": {
+            "title": "Priority",
+            "placeholder": "Ordering"
+          },
+          "is-reusable": {
+            "title": "Reusable"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-measurement-range": {
+        "title": "Create Measurement Range",
+        "description": "Define a new measurement range."
+      }
+    },
+    "permissions": {
+      "measurement-range": {
+        "title": "Measurement Ranges",
+        "manage": {
+          "title": "Manage Measurement Ranges"
+        }
+      }
+    }
+  },
+  "sizes": {
+    "terms": {
+      "sizing-profile": "Sizing Profile",
+      "size-item": "Size Item",
+      "sizing-dimension-usage": "Sizing Dimension Usage",
+      "size-rule": "Size Rule"
+    },
+    "entities": {
+      "sizing-profile": {
+        "title": "Sizing Profile",
+        "plural": "Sizing Profiles",
+        "groups": {
+          "basic-info": "Basic Information",
+          "configuration": "Configuration"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter chart code (e.g., SHOES_MEN_US)"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter chart title (e.g., Men's Shoes US)"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Describe the sizing profile"
+          },
+          "category": {
+            "title": "Category",
+            "placeholder": "e.g., Footwear, Apparel"
+          },
+          "region": {
+            "title": "Region",
+            "placeholder": "e.g., US, EU, UK"
+          },
+          "match-strategy": {
+            "title": "Match Strategy",
+            "options": {
+              "primary-first": "Primary First",
+              "all-required": "All Required"
+            }
+          },
+          "enforce-no-overlap": {
+            "title": "Enforce No Overlap"
+          }
+        }
+      },
+      "sizing-dimension-usage": {
+        "title": "Sizing Dimension Usage",
+        "plural": "Sizing Dimension Usages",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "sizing-profile": {
+            "title": "Sizing Profile"
+          },
+          "measurement-dimension": {
+            "title": "Measurement Dimension"
+          },
+          "required": {
+            "title": "Required"
+          },
+          "primary": {
+            "title": "Primary"
+          },
+          "sort-order": {
+            "title": "Sort Order",
+            "placeholder": "Column order"
+          },
+          "priority": {
+            "title": "Priority",
+            "placeholder": "Tie-break priority"
+          }
+        }
+      },
+      "size-item": {
+        "title": "Size Item",
+        "plural": "Size Items",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "sizing-profile": {
+            "title": "Sizing Profile"
+          },
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter size code (e.g., US 8.5, M)"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Optional display title"
+          },
+          "sort-order": {
+            "title": "Sort Order",
+            "placeholder": "Row order"
+          }
+        }
+      },
+      "size-rule": {
+        "title": "Size Rule",
+        "plural": "Size Rules",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "sizing-profile": {
+            "title": "Sizing Profile"
+          },
+          "size-item": {
+            "title": "Size Item"
+          },
+          "measurement-dimension": {
+            "title": "Measurement Dimension"
+          },
+          "measurement-range": {
+            "title": "Measurement Range"
+          },
+          "match-behavior": {
+            "title": "Match Behavior",
+            "options": {
+              "hard": "Hard",
+              "soft": "Soft",
+              "scoring": "Scoring"
+            }
+          },
+          "priority": {
+            "title": "Priority",
+            "placeholder": "Within size item"
+          }
+        }
+      }
+    },
+    "search": {
+      "create-sizing-profile": {
+        "title": "Create Sizing Profile",
+        "description": "Define a new sizing profile (sizing system)."
+      },
+      "create-size-item": {
+        "title": "Create Size Item",
+        "description": "Add a size option to a sizing profile."
+      }
+    },
+    "permissions": {
+      "sizing-profile": {
+        "title": "Sizing Profiles",
+        "manage": {
+          "title": "Manage Sizing Profiles"
+        }
+      },
+      "sizing-dimension-usage": {
+        "title": "Sizing Dimension Usages",
+        "manage": {
+          "title": "Manage Sizing Dimension Usages"
+        }
+      },
+      "size-item": {
+        "title": "Size Items",
+        "manage": {
+          "title": "Manage Size Items"
+        }
+      },
+      "size-rule": {
+        "title": "Size Rules",
+        "manage": {
+          "title": "Manage Size Rules"
+        }
+      }
+    }
+  }
+}

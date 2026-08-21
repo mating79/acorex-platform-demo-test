@@ -1,0 +1,200 @@
+{
+  "module": {
+    "title": "Simpro",
+    "description": "Connect Simpro cloud and sync jobs with platform projects",
+    "menus": {
+      "configuration": {
+        "title": "Simpro"
+      }
+    }
+  },
+  "integration": {
+    "display-name": "Simpro",
+    "description": "Connect to Simpro cloud for job management and project sync.",
+    "badges": {
+      "last-sync": "Last sync: {{datetime}}",
+      "never-synced": "Not synced yet"
+    },
+    "auth": {
+      "client-credentials": {
+        "label": "Client Credentials",
+        "instructions": "Enter your Simpro build URL, company ID, and the client ID and client secret from your Simpro application key file. The server exchanges these for an access token using the OAuth2 client credentials grant.",
+        "build-url": {
+          "label": "Build URL",
+          "placeholder": "https://your-build.simprosuite.com"
+        },
+        "company-id": {
+          "label": "Company ID",
+          "placeholder": "0 for single-company builds"
+        },
+        "client-id": {
+          "label": "Client ID",
+          "placeholder": "Paste your Simpro client ID"
+        },
+        "client-secret": {
+          "label": "Client Secret",
+          "placeholder": "Paste your Simpro client secret"
+        }
+      },
+      "oauth": {
+        "label": "OAuth 2.0",
+        "instructions": "Enter your Simpro build URL, company ID, and OAuth client credentials from your application key file. After saving, you will be redirected to Simpro to sign in and authorize this application. Tokens are stored and refreshed automatically — you do not need to authorize on every save.",
+        "build-url": {
+          "label": "Build URL",
+          "placeholder": "https://your-build.simprosuite.com"
+        },
+        "company-id": {
+          "label": "Company ID",
+          "placeholder": "Use 0 only for single-company builds; sandbox multi-company is usually 2"
+        },
+        "client-id": {
+          "label": "Client ID",
+          "placeholder": "Paste your Simpro client ID"
+        },
+        "client-secret": {
+          "label": "Client Secret",
+          "placeholder": "Paste your Simpro client secret"
+        }
+      }
+    },
+    "connect": {
+      "instructions": "<p>Enter your Simpro <strong>build URL</strong> (for example, <code>https://your-build.simprosuite.com</code>), <strong>company ID</strong>, and OAuth <strong>client ID</strong> / <strong>client secret</strong> from your Simpro application key file. After saving, you will be redirected to Simpro to authorize this application.</p>",
+      "dialog": {
+        "title": "Connect Simpro",
+        "reconfigure-title": "Reconfigure Simpro"
+      },
+      "fields": {
+        "display-name": "Display name"
+      },
+      "placeholders": {
+        "display-name": "Simpro"
+      },
+      "actions": {
+        "save": "Save Connection",
+        "save-and-authorize": "Save & Authorize"
+      }
+    }
+  },
+  "permissions": {
+    "group": {
+      "title": "Simpro",
+      "description": "Configure Simpro integration and job links"
+    },
+    "management": {
+      "title": "Simpro management",
+      "description": "Full access to Simpro configuration"
+    },
+    "simpro-project": {
+      "view": {
+        "title": "View job links"
+      },
+      "create": {
+        "title": "Create job links"
+      },
+      "update": {
+        "title": "Update job links"
+      },
+      "delete": {
+        "title": "Delete job links"
+      }
+    },
+    "catalog": {
+      "view": {
+        "title": "View Simpro configuration"
+      }
+    },
+    "project-import": {
+      "execute": {
+        "title": "Import jobs from Simpro"
+      }
+    },
+    "customer-import": {
+      "execute": {
+        "title": "Import Customers from Simpro"
+      }
+    },
+    "project-sync": {
+      "execute": {
+        "title": "Sync project with Simpro"
+      }
+    }
+  },
+  "actions": {
+    "import-from-simpro": {
+      "title": "Import from Simpro"
+    },
+    "sync": {
+      "title": "Sync"
+    }
+  },
+  "import": {
+    "not-connected": {
+      "title": "Connect Simpro to import jobs",
+      "message": "Simpro is not connected for this tenant. Open Administration → Integrations to connect your account, then try importing again."
+    },
+    "success-single": "Imported \"{{title}}\" from Simpro.",
+    "success-multiple": "Imported {{count}} jobs from Simpro.",
+    "selector": {
+      "title": "Select Simpro job",
+      "pull-jobs": "Pull Jobs"
+    },
+    "dialog": {
+      "title": "Import Simpro job",
+      "submit": "Import job"
+    },
+    "loading": {
+      "fetch": {
+        "title": "Loading from Simpro",
+        "status": "Pulling jobs into cache…"
+      },
+      "import": {
+        "title": "Importing job",
+        "status": "Creating platform project…"
+      }
+    },
+    "sync-strategy": {
+      "title": "Sync strategy",
+      "options": {
+        "remoteOverride": "Remote overrides local",
+        "localOverride": "Keep local values",
+        "merge": "Merge (fill empty local fields)"
+      }
+    }
+  },
+  "import-customers": {
+    "success-single": "Imported \"{{title}}\" from Simpro.",
+    "success-multiple": "Imported {{count}} customers from Simpro.",
+    "selector": {
+      "title": "Select Simpro Customer",
+      "pull-customers": "Pull Customers"
+    },
+    "loading": {
+      "fetch": {
+        "title": "Loading from Simpro",
+        "status": "Pulling customers into cache…"
+      },
+      "import": {
+        "title": "Importing Customer",
+        "status": "Creating platform customer…"
+      }
+    }
+  },
+  "sync": {
+    "success": "Project synced with Simpro successfully.",
+    "loading": {
+      "title": "Syncing with Simpro",
+      "status": "Updating project from Simpro…"
+    }
+  },
+  "errors": {
+    "company-id-zero-multi": "Company ID 0 cannot be used on multi-company Simpro builds. Open Administration → Integrations → Configure Simpro and set a valid company ID.",
+    "company-id-invalid": "The configured Simpro company ID is not valid for this build. Open Administration → Integrations → Configure Simpro and update the company ID.",
+    "pull-jobs-failed": "Failed to pull Simpro jobs.",
+    "pull-customers-failed": "Failed to pull Simpro customers.",
+    "import-failed": "Simpro import failed.",
+    "import-customers-failed": "Simpro customer import failed.",
+    "sync-failed": "Simpro sync failed.",
+    "connect-failed": "Failed to connect Simpro.",
+    "oauth-callback-failed": "Simpro authorization failed."
+  }
+}

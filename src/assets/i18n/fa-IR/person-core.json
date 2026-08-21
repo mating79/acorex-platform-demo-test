@@ -1,0 +1,412 @@
+{
+  "module": {
+    "title": "هسته شخص",
+    "description": "داده‌های مرجع مشترک شخص و جمعیت‌شناسی (سطح تحصیلات، وضعیت تأهل) که در ماژول‌های مختلف استفاده می‌شود.",
+    "menus": {
+      "root": {
+        "title": "شخصی",
+        "description": "سطوح تحصیلات، وضعیت‌های تأهل و داده‌های مرجع مرتبط."
+      }
+    }
+  },
+  "education-levels": {
+    "terms": {
+      "education-level": "سطح تحصیلات",
+      "education-levels": "سطوح تحصیلات"
+    },
+    "entities": {
+      "education-level": {
+        "title": "سطح تحصیلات",
+        "plural": "سطوح تحصیلات",
+        "search-result-description": "داده‌های مرجع سطح تحصیلات و صلاحیت",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "title": {
+            "title": "عنوان",
+            "placeholder": "سطح تحصیلات را وارد کنید (مثال: دیپلم، کارشناسی، کارشناسی ارشد)"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات را وارد کنید"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "education-level": {
+        "manage": {
+          "title": "مدیریت سطوح تحصیلات",
+          "description": "دسترسی کامل برای مدیریت سطوح تحصیلات"
+        }
+      }
+    }
+  },
+  "genders": {
+    "terms": {
+      "gender": "جنسیت",
+      "genders": "جنسیت‌ها"
+    },
+    "entities": {
+      "gender": {
+        "title": "جنسیت",
+        "plural": "جنسیت‌ها",
+        "search-result-description": "داده‌های مرجع جنسیت برای پروفایل شخص",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "title": {
+            "title": "عنوان",
+            "placeholder": "برچسب جنسیت را وارد کنید (مثال: مرد، زن، غیردودویی)"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات را وارد کنید"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "gender": {
+        "manage": {
+          "title": "مدیریت جنسیت‌ها",
+          "description": "دسترسی کامل برای مدیریت مقادیر مرجع جنسیت"
+        }
+      }
+    }
+  },
+  "person-titles": {
+    "terms": {
+      "person-title": "عنوان شخص",
+      "person-titles": "عناوین شخص"
+    },
+    "entities": {
+      "person-title": {
+        "title": "عنوان شخص",
+        "plural": "عناوین شخص",
+        "search-result-description": "مرجع عنوان و خطاب شخص (آقا، خانم، دکتر و غیره)",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان را وارد کنید (مثال: آقا، خانم، دکتر، استاد)"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات را وارد کنید"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "person-title": {
+        "manage": {
+          "title": "مدیریت عناوین شخص",
+          "description": "دسترسی کامل برای مدیریت عناوین شخص"
+        }
+      }
+    }
+  },
+  "marital-statuses": {
+    "terms": {
+      "marital-status": "وضعیت تأهل",
+      "marital-statuses": "وضعیت‌های تأهل"
+    },
+    "entities": {
+      "marital-status": {
+        "title": "وضعیت تأهل",
+        "plural": "وضعیت‌های تأهل",
+        "search-result-description": "داده‌های مرجع وضعیت تأهل (مجرد، متأهل و غیره)",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "title": {
+            "title": "عنوان",
+            "placeholder": "وضعیت تأهل را وارد کنید (مثال: مجرد، متأهل، مطلقه)"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات را وارد کنید"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "marital-status": {
+        "manage": {
+          "title": "مدیریت وضعیت‌های تأهل",
+          "description": "دسترسی کامل برای مدیریت وضعیت‌های تأهل"
+        }
+      }
+    }
+  },
+  "person-identifier-types": {
+    "entities": {
+      "person-identifier-type": {
+        "title": "نوع شناسه شخص",
+        "plural": "انواع شناسه شخص",
+        "search-result-description": "اطلاعات نوع شناسه شخص",
+        "fields": {
+          "scope": "محدوده",
+          "scope-options": {
+            "global": "جهانی",
+            "national": "ملی",
+            "regional": "منطقه‌ای"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "person-identifier-type": {
+        "manage": {
+          "title": "مدیریت انواع شناسه شخص",
+          "description": "دسترسی کامل برای مدیریت انواع شناسه شخص"
+        }
+      }
+    }
+  },
+  "person-relationships": {
+    "entities": {
+      "person-relationship": {
+        "title": "مخاطب مرتبط",
+        "plural": "مخاطبین مرتبط",
+        "search-result-description": "اطلاعات مخاطب مرتبط",
+        "properties": {
+          "from-person": { "title": "شخص مبدأ" },
+          "to-person": { "title": "شخص مقصد" },
+          "type": { "title": "نوع ارتباط" }
+        },
+        "related-entities": {
+          "from-person": { "title": "شخص مبدأ" },
+          "to-person": { "title": "شخص مقصد" },
+          "type": { "title": "نوع ارتباط" }
+        },
+        "columns": {
+          "phone": { "title": "تلفن" },
+          "email": { "title": "ایمیل" }
+        }
+      }
+    },
+    "actions": {
+      "choose-existing-person": {
+        "title": "انتخاب شخص موجود",
+        "selector-title": "انتخاب شخص",
+        "form-title": "افزودن نوع ارتباط"
+      },
+      "create-new-person": {
+        "title": "ایجاد شخص جدید",
+        "dialog-title": "ایجاد شخص جدید",
+        "relationship-form-title": "تعیین نوع ارتباط"
+      }
+    },
+    "permissions": {
+      "person-relationship": {
+        "manage": {
+          "title": "مدیریت مخاطبین مرتبط",
+          "description": "دسترسی کامل برای مدیریت مخاطبین مرتبط"
+        }
+      }
+    }
+  },
+  "religions": {
+    "entities": {
+      "religion": {
+        "title": "دین",
+        "plural": "ادیان",
+        "search-result-description": "داده‌های مرجع دین و اعتقادات",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "title": {
+            "title": "عنوان",
+            "placeholder": "دین را وارد کنید (مثال: مسیحیت، اسلام)"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات را وارد کنید"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "religion": {
+        "manage": {
+          "title": "مدیریت ادیان",
+          "description": "دسترسی کامل برای مدیریت ادیان"
+        }
+      }
+    }
+  },
+  "contact-roles": {
+    "terms": {
+      "contact-role": "نقش تماس",
+      "contact-roles": "نقش‌های تماس"
+    },
+    "entities": {
+      "contact-role": {
+        "title": "نقش تماس",
+        "plural": "نقش‌های تماس",
+        "search-result-description": "فهرست نقش‌های تماس در زمینه شخص، مکان و فرصت",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "type": {
+            "title": "نوع",
+            "options": {
+              "person": "شخص",
+              "location-contact": "تماس مکانی",
+              "opportunity-contact": "تماس فرصت",
+              "contact-assignment": "تخصیص تماس",
+              "person-relationship": "ارتباط شخص",
+              "family": "خانواده"
+            }
+          },
+          "name": {
+            "title": "نام",
+            "placeholder": "شناسه یکتا (مثال: customer، site-manager)"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "نام نمایشی (مثال: مشتری، مدیر سایت)"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات اختیاری"
+          },
+          "inverse-type": {
+            "title": "نوع معکوس"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "contact-role": {
+        "manage": {
+          "title": "مدیریت نقش‌های تماس",
+          "description": "دسترسی کامل برای مدیریت نقش‌های تماس"
+        }
+      }
+    }
+  },
+  "contact-assignments": {
+    "terms": {
+      "contact-assignment": "تخصیص تماس",
+      "contact-assignments": "تخصیص‌های تماس"
+    },
+    "entities": {
+      "contact-assignment": {
+        "title": "تخصیص تماس",
+        "plural": "تخصیص‌های تماس",
+        "search-result-description": "شخصی که با نقش تماس مشخص به طرف اختصاص داده شده است",
+        "fields": {
+          "party": {
+            "title": "طرف"
+          },
+          "person": {
+            "title": "شخص"
+          },
+          "role": {
+            "title": "نقش"
+          },
+          "integration-ref": {
+            "title": "پیوند یکپارچه‌سازی"
+          }
+        }
+      }
+    },
+    "actions": {
+      "assign-existing-person": {
+        "title": "اختصاص مخاطب موجود",
+        "selector-title": "انتخاب مخاطب",
+        "form-title": "اختصاص مخاطب به {{partyTitle}}"
+      },
+      "create-with-new-person": {
+        "title": "ایجاد مخاطب جدید",
+        "person-dialog-title": "ایجاد مخاطب",
+        "assignment-dialog-title": "تعیین نقش مخاطب"
+      }
+    },
+    "messages": {
+      "missing-party-context": "برای اختصاص مخاطب، زمینه طرف الزامی است."
+    }
+  },
+  "persons": {
+    "terms": {
+      "person": "شخص",
+      "persons": "اشخاص"
+    },
+    "entities": {
+      "person": {
+        "title": "شخص",
+        "plural": "اشخاص",
+        "search-result-description": "اطلاعات فرد",
+        "groups": {
+          "profile": "پروفایل",
+          "image": "عکس",
+          "phones": "تلفن‌ها",
+          "emails": "ایمیل‌ها",
+          "addresses": "آدرس‌ها",
+          "signature": "امضا"
+        },
+        "fields": {
+          "birth-date": {
+            "title": "تاریخ تولد"
+          },
+          "person-title": {
+            "title": "عنوان"
+          },
+          "gender": {
+            "title": "جنسیت"
+          },
+          "marital-status": {
+            "title": "وضعیت تأهل"
+          },
+          "education-level": {
+            "title": "سطح تحصیلات"
+          },
+          "identity-number": {
+            "title": "شماره شناسایی",
+            "placeholder": "شماره شناسایی را وارد کنید"
+          },
+          "user": {
+            "title": "کاربر"
+          },
+          "signature": {
+            "title": "امضا"
+          },
+          "phone": {
+            "title": "تلفن",
+            "placeholder": "شماره تلفن را وارد کنید"
+          },
+          "email": {
+            "title": "ایمیل",
+            "placeholder": "آدرس ایمیل را وارد کنید"
+          },
+          "address-labels": {
+            "home": "منزل",
+            "work": "محل کار",
+            "other": "سایر"
+          }
+        },
+        "related-entities": {
+          "relationships": { "title": "مخاطبین مرتبط" }
+        }
+      }
+    },
+    "permissions": {
+      "person": {
+        "manage": {
+          "title": "مدیریت اشخاص",
+          "description": "دسترسی کامل به مدیریت اشخاص"
+        }
+      }
+    }
+  }
+}

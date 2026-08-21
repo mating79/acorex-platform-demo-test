@@ -1,0 +1,416 @@
+{
+  "module": {
+    "title": "هسته سلامت",
+    "description": "داده‌های مرجع مرتبط با سلامت (گروه خونی، وضعیت توان‌یابی، انواع حساسیت، واکسن و ...) که در ماژول‌های مختلف استفاده می‌شود.",
+    "menus": {
+      "root": {
+        "title": "سلامت",
+        "description": "گروه‌های خونی، وضعیت‌های توان‌یابی، انواع حساسیت، واکسن‌ها و داده‌های مرجع مرتبط."
+      }
+    }
+  },
+  "catalog-scopes": {
+    "health": {
+      "title": "سلامت",
+      "description": "پرسشنامه‌ها، سوالات و گردش‌کارهای محدودشده به حوزه سلامت."
+    }
+  },
+  "terms": {
+    "subject": {
+      "type": "نوع موضوع",
+      "title": "موضوع"
+    }
+  },
+  "profile-page": {
+    "groups": {
+      "health": {
+        "title": "سلامت"
+      }
+    },
+    "sections": {
+      "health-profile": {
+        "description": "مشاهده و ویرایش جزئیات پروفایل سلامت شما."
+      },
+      "health-conditions": {
+        "description": "مشاهده حساسیت‌ها، بیماری‌های مزمن و سایر شرایط سلامت."
+      },
+      "health-events": {
+        "description": "مشاهده واکسیناسیون، آسیب‌ها، مراجعه به پزشک و سایر پرونده‌های سلامت."
+      }
+    },
+    "commands": {
+      "manage-health-profile": {
+        "messages": {
+          "no-subject": "پروفایل شخصی به حساب کاربری شما متصل نشده است."
+        }
+      },
+      "manage-health-records": {
+        "dialog": {
+          "title": "{{sectionTitle}} — {{subjectName}}"
+        }
+      }
+    }
+  },
+  "health-events": {
+    "states": {
+      "in-progress": "در حال انجام",
+      "completed": "تکمیل‌شده",
+      "cancelled": "لغوشده"
+    },
+    "transitions": {
+      "await-sign-off": "در انتظار تأیید",
+      "complete": "تکمیل"
+    },
+    "messages": {
+      "event-not-implemented": "این نوع پرونده سلامت هنوز با گردش‌کار پیکربندی نشده است.",
+      "event-start-cancelled": "شروع رویداد لغو شد.",
+      "employee-sign-off": "جزئیات پرونده سلامت را بررسی کنید و برای تأیید امضای خود را ثبت کنید.",
+      "manager-sign-off": "پرونده سلامت را بررسی کنید و تأیید مدیر را با امضا ثبت کنید.",
+      "replace-open": {
+        "confirm": {
+          "title": "جایگزینی اجرای باز",
+          "message": "یک {{recordTypeTitle}} در حال انجام برای این موضوع وجود دارد. آیا می‌خواهید اجرای جدید را شروع کنید و مورد باز را لغو کنید؟"
+        }
+      }
+    },
+    "tasks": {
+      "task-title": "رویداد سلامت",
+      "board-title": "{{subjectTitle}} — {{recordTypeTitle}} — {{occurredDate}}",
+      "questionnaire": {
+        "description": "برای تکمیل این رویداد، پرسشنامه را انجام دهید."
+      },
+      "employee-sign-off": {
+        "description": "پرونده سلامت را بررسی کنید و برای تأیید صحت آن امضا کنید."
+      },
+      "manager-sign-off": {
+        "description": "پرونده سلامت را بررسی کنید و به‌عنوان مدیر مستقیم تأیید و امضا کنید."
+      }
+    },
+    "actions": {
+      "start": {
+        "title": "شروع رویداد سلامت"
+      }
+    },
+    "entities": {
+      "health-event": {
+        "title": "رویداد سلامت",
+        "plural": "رویدادهای سلامت",
+        "groups": {
+          "event-details": "جزئیات رویداد",
+          "more-information": "اطلاعات بیشتر",
+          "sign-off": "تأیید و امضا"
+        },
+        "fields": {
+          "record-type-id": "نوع پرونده سلامت",
+          "occurred-date": "تاریخ وقوع",
+          "end-date": "تاریخ پایان",
+          "provider": {
+            "title": "ارائه‌دهنده درمان",
+            "placeholder": "مثلاً دکتر احمدی یا پرستار بهداشت حرفه‌ای"
+          },
+          "facility": {
+            "title": "محل ارائه خدمت",
+            "placeholder": "مثلاً کلینیک دفتر مرکزی یا داروخانه"
+          },
+          "employee-signature": "امضای کارمند",
+          "employee-signed-at": "زمان امضای کارمند",
+          "manager-signature": "امضای مدیر",
+          "manager-signed-at": "زمان امضای مدیر"
+        }
+      }
+    },
+    "permissions": {
+      "health-events": {
+        "view-own": { "title": "مشاهده رویدادهای سلامت خود" },
+        "edit-own": { "title": "ویرایش رویدادهای سلامت خود" },
+        "view": { "title": "مشاهده رویدادهای سلامت" },
+        "manage": { "title": "مدیریت رویدادهای سلامت" }
+      }
+    }
+  },
+  "health-record-types": {
+    "entities": {
+      "health-record-type": {
+        "title": "نوع پرونده سلامت",
+        "plural": "انواع پرونده سلامت"
+      }
+    },
+    "permissions": {
+      "health-record-type": { "manage": { "title": "مدیریت انواع پرونده سلامت" } }
+    }
+  },
+  "health-profiles": {
+    "entities": {
+      "health-profile": {
+        "title": "پروفایل سلامت",
+        "plural": "پروفایل‌های سلامت",
+        "groups": { "profile-details": "جزئیات پروفایل" },
+        "fields": {
+          "blood-type-id": "گروه خونی",
+          "disability-status-id": "وضعیت توان‌یابی",
+          "smoking-status": "وضعیت مصرف سیگار",
+          "alcohol-consumption": "مصرف الکل",
+          "health-risk-level": "سطح خطر سلامت",
+          "doctor-name": "نام پزشک",
+          "doctor-number": "شماره پزشک",
+          "emergency-contact-name": "نام تماس اضطراری",
+          "emergency-contact-phone": "شماره تماس اضطراری",
+          "emergency-contact-email": "ایمیل تماس اضطراری"
+        }
+      }
+    },
+    "actions": {
+      "create": { "title": "ایجاد پروفایل سلامت" }
+    },
+    "permissions": {
+      "health-profiles": {
+        "view-own": { "title": "مشاهده پروفایل سلامت خود" },
+        "edit-own": { "title": "ویرایش پروفایل سلامت خود" },
+        "view": { "title": "مشاهده پروفایل‌های سلامت" },
+        "manage": { "title": "مدیریت پروفایل‌های سلامت" }
+      }
+    }
+  },
+  "health-condition-types": {
+    "entities": {
+      "health-condition-type": {
+        "title": "شرایط",
+        "plural": "شرایط",
+        "groups": { "basic-info": "اطلاعات پایه" },
+        "fields": { "kind": "دسته", "suggested-restriction-ids": "محدودیت‌های پیشنهادی" }
+      }
+    },
+    "kinds": {
+      "allergy": "حساسیت",
+      "chronic": "بیماری مزمن"
+    },
+    "permissions": {
+      "health-condition-type": { "manage": { "title": "مدیریت شرایط" } }
+    }
+  },
+  "health-restrictions": {
+    "entities": {
+      "health-restriction": {
+        "title": "محدودیت",
+        "plural": "محدودیت‌ها"
+      }
+    },
+    "permissions": {
+      "health-restriction": {
+        "manage": { "title": "مدیریت محدودیت‌ها" }
+      }
+    }
+  },
+  "health-conditions": {
+    "entities": {
+      "health-condition": {
+        "title": "شرایط سلامت",
+        "plural": "شرایط سلامت",
+        "groups": {
+          "condition-details": "جزئیات شرایط",
+          "more-information": "اطلاعات بیشتر",
+          "restrictions": "محدودیت‌ها"
+        },
+        "fields": {
+          "condition-type-id": "شرایط",
+          "diagnosed-date": "تاریخ تشخیص",
+          "restrictions": {
+            "title": "محدودیت‌ها"
+          },
+          "restriction-id": "محدودیت",
+          "start-date": "تاریخ شروع",
+          "end-date": "تاریخ پایان",
+          "is-active": "فعال"
+        }
+      }
+    },
+    "actions": {
+      "create": { "title": "افزودن شرایط سلامت" }
+    },
+    "permissions": {
+      "health-condition": {
+        "view-own": { "title": "مشاهده شرایط سلامت خود" },
+        "edit-own": { "title": "ویرایش شرایط سلامت خود" },
+        "view": { "title": "مشاهده شرایط سلامت" },
+        "manage": { "title": "مدیریت شرایط سلامت" }
+      }
+    }
+  },
+  "datasources": {
+    "medication-form-options": {
+      "title": "شکل دارو",
+      "columns": { "value": { "title": "مقدار" }, "title": { "title": "عنوان" } },
+      "samples": {
+        "tablet": "قرص",
+        "capsule": "کپسول",
+        "syrup": "شربت",
+        "injection": "تزریق",
+        "cream": "کرم",
+        "drops": "قطره",
+        "inhaler": "استنشاقی",
+        "patch": "چسب",
+        "other": "سایر"
+      }
+    },
+    "health-risk-level-options": {
+      "title": "سطح خطر سلامت",
+      "columns": { "value": { "title": "مقدار" }, "title": { "title": "عنوان" } },
+      "samples": {
+        "low": "کم",
+        "medium": "متوسط",
+        "high": "بالا",
+        "critical": "بحرانی"
+      }
+    },
+    "alcohol-consumption-options": {
+      "title": "مصرف الکل",
+      "columns": { "value": { "title": "مقدار" }, "title": { "title": "عنوان" } },
+      "samples": {
+        "never": "هرگز",
+        "occasional": "گاهی",
+        "regular": "منظم",
+        "heavy": "زیاد",
+        "prefer-not-to-say": "ترجیح می‌دهم نگویم"
+      }
+    },
+    "smoking-status-options": {
+      "title": "وضعیت مصرف سیگار",
+      "columns": { "value": { "title": "مقدار" }, "title": { "title": "عنوان" } },
+      "samples": {
+        "never": "هرگز",
+        "former": "سابق",
+        "current": "فعلی",
+        "prefer-not-to-say": "ترجیح می‌دهم نگویم"
+      }
+    },
+    "allergy-severity-options": {
+      "title": "شدت حساسیت",
+      "columns": { "value": { "title": "مقدار" }, "title": { "title": "عنوان" } },
+      "samples": {
+        "mild": "خفیف",
+        "moderate": "متوسط",
+        "severe": "شدید"
+      }
+    },
+    "chronic-condition-status-options": {
+      "title": "وضعیت بیماری مزمن",
+      "columns": { "value": { "title": "مقدار" }, "title": { "title": "Title" } },
+      "samples": {
+        "active": "فعال",
+        "managed": "تحت کنترل",
+        "resolved": "برطرف‌شده"
+      }
+    },
+    "injury-mechanism-options": {
+      "title": "گزینه‌های مکانیزم آسیب",
+      "columns": {
+        "id": { "title": "شناسه" },
+        "title": { "title": "عنوان" }
+      },
+      "samples": {
+        "slip-trip-fall": "لغزش، زمین‌خوردن یا سقوط",
+        "struck-by": "برخورد با شیء یا تجهیزات",
+        "struck-against": "برخورد با شیء یا سطح",
+        "caught-in": "گیر کردن در یا بین",
+        "overexertion": "فشار بیش از حد یا تکرار",
+        "exposure": "قرارگیری (شیمیایی، حرارت، صدا)",
+        "vehicle": "حادثه وسیله نقلیه یا ماشین‌آلات متحرک",
+        "cut-puncture": "بریدگی، سوراخ یا پارگی",
+        "other": "سایر / مطمئن نیستم"
+      }
+    },
+    "work-capacity-options": {
+      "title": "گزینه‌های توان کار",
+      "columns": {
+        "id": { "title": "شناسه" },
+        "title": { "title": "عنوان" }
+      },
+      "samples": {
+        "continue": "توان ادامه کار",
+        "modified": "فقط وظایف سبک یا تعدیل‌شده",
+        "unable": "عدم توانایی کار / مرخصی",
+        "hospitalised": "بستری یا مراقبت اورژانسی"
+      }
+    },
+    "pain-rate-options": {
+      "title": "گزینه‌های شدت درد",
+      "columns": {
+        "id": { "title": "شناسه" },
+        "title": { "title": "عنوان" }
+      },
+      "samples": {
+        "1": "۱ — بدون درد",
+        "2": "۲ — خفیف",
+        "3": "۳ — متوسط",
+        "4": "۴ — شدید",
+        "5": "۵ — بسیار شدید"
+      }
+    }
+  },
+  "blood-types": {
+    "entities": {
+      "blood-type": {
+        "title": "گروه خونی",
+        "plural": "گروه‌های خونی",
+        "groups": { "basic-info": "اطلاعات پایه" }
+      }
+    },
+    "permissions": {
+      "blood-type": { "manage": { "title": "مدیریت گروه‌های خونی", "description": "دسترسی کامل برای مدیریت گروه‌های خونی" } }
+    }
+  },
+  "body-parts": {
+    "entities": {
+      "body-part": {
+        "title": "بخش بدن",
+        "plural": "بخش‌های بدن",
+        "groups": { "basic-info": "اطلاعات پایه" }
+      }
+    },
+    "permissions": {
+      "body-part": { "manage": { "title": "مدیریت بخش‌های بدن", "description": "دسترسی کامل برای مدیریت بخش‌های بدن" } }
+    }
+  },
+  "disability-statuses": {
+    "entities": {
+      "disability-status": {
+        "title": "توان‌یابی",
+        "plural": "توان‌یابی",
+        "groups": { "basic-info": "اطلاعات پایه" }
+      }
+    },
+    "permissions": {
+      "disability-status": { "manage": { "title": "مدیریت توان‌یابی", "description": "دسترسی کامل برای مدیریت توان‌یابی" } }
+    }
+  },
+  "injury-types": {
+    "entities": {
+      "injury-type": {
+        "title": "آسیب",
+        "plural": "آسیب‌ها",
+        "groups": { "basic-info": "اطلاعات پایه" }
+      }
+    },
+    "permissions": {
+      "injury-type": { "manage": { "title": "مدیریت آسیب‌ها", "description": "دسترسی کامل برای مدیریت آسیب‌ها" } }
+    }
+  },
+  "reports": {
+    "filters": {
+      "all": "همه",
+      "unspecified": "نامشخص"
+    }
+  },
+  "vaccination-types": {
+    "entities": {
+      "vaccination-type": {
+        "title": "واکسن",
+        "plural": "واکسن‌ها",
+        "groups": { "basic-info": "اطلاعات پایه" }
+      }
+    },
+    "permissions": {
+      "vaccination-type": { "manage": { "title": "مدیریت واکسن‌ها", "description": "دسترسی کامل برای مدیریت واکسن‌ها" } }
+    }
+  }
+}

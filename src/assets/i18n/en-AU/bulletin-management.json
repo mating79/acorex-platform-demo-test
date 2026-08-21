@@ -1,0 +1,212 @@
+{
+  "module": {
+    "title": "Announcements",
+    "description": "Publish organisation announcements, news, events, and urgent posts."
+  },
+  "menus": {
+    "feed": {
+      "title": "Announcements"
+    },
+    "posts": {
+      "title": "Announcements"
+    }
+  },
+  "pages": {
+    "feed": {
+      "title": "Announcements",
+      "description": "Organisation announcements, news, and events.",
+      "search-placeholder": "Search Announcements",
+      "empty": "No announcements match this view.",
+      "empty-title": "No Announcements Yet",
+      "empty-description": "Published announcements for you will appear here.",
+      "no-results-title": "No Matching Announcements",
+      "no-results-description": "Try a different search or clear the current filters.",
+      "load-error-title": "Could Not Load Announcements",
+      "load-error-description": "Check your connection and try again.",
+      "unread-count": "Unseen announcements",
+      "pinned": "Pinned",
+      "event-label": "Event",
+      "filters": {
+        "all": "All",
+        "unread": "Unread",
+        "pinned": "Pinned",
+        "urgent": "Urgent",
+        "read-status": "Read Status",
+        "tags": "Tags"
+      },
+      "actions": {
+        "mark-read": "Mark Read",
+        "read": "Read",
+        "react": "React",
+        "comment": "Comment",
+        "see-more": "See More",
+        "see-less": "See Less",
+        "discuss": "Discuss",
+        "refresh": "Refresh",
+        "retry": "Retry",
+        "clear-filters": "Clear Filters"
+      }
+    }
+  },
+  "entities": {
+    "bulletin-post": {
+      "title": "Announcement",
+      "plural": "Announcements",
+      "groups": {
+        "lifecycle": "Lifecycle",
+        "event": "Event",
+        "engagement": "Engagement"
+      },
+      "fields": {
+        "body": {
+          "title": "Body"
+        },
+        "kind": {
+          "title": "Kind",
+          "options": {
+            "announcement": "Announcement",
+            "news": "News",
+            "event": "Event",
+            "urgent": "Urgent"
+          }
+        },
+        "status": {
+          "title": "Status",
+          "options": {
+            "draft": "Draft",
+            "scheduled": "Scheduled",
+            "published": "Published",
+            "cancelled": "Cancelled",
+            "archived": "Archived"
+          }
+        },
+        "author-user-id": {
+          "title": "Author"
+        },
+        "publish-at": {
+          "title": "Publish At"
+        },
+        "published-at": {
+          "title": "Published At"
+        },
+        "expires-at": {
+          "title": "Expires At"
+        },
+        "event-starts-at": {
+          "title": "Event Starts At"
+        },
+        "event-ends-at": {
+          "title": "Event Ends At"
+        },
+        "event-location": {
+          "title": "Event Location"
+        },
+        "is-pinned": {
+          "title": "Pinned"
+        },
+        "pin-rank": {
+          "title": "Pin Rank"
+        },
+        "pinned-until": {
+          "title": "Pinned Until"
+        },
+        "allow-reactions": {
+          "title": "Allow Reactions"
+        },
+        "allow-comments": {
+          "title": "Allow Comments"
+        },
+        "notification-policy": {
+          "title": "Notification Policy",
+          "options": {
+            "in-app": "In-App",
+            "selected-channels": "Selected Channels",
+            "urgent-override": "Urgent Override"
+          }
+        },
+        "publication-version": {
+          "title": "Publication Version"
+        }
+      }
+    },
+    "bulletin-audience": {
+      "title": "Audience",
+      "plural": "Audiences",
+      "fields": {
+        "post-id": {
+          "title": "Post"
+        },
+        "target-type": {
+          "title": "Target Type",
+          "options": {
+            "organization": "Organisation",
+            "user": "User",
+            "role": "Role",
+            "team": "Team",
+            "business-unit": "Business Unit",
+            "position": "Position",
+            "job-definition": "Job Definition"
+          }
+        },
+        "target-id": {
+          "title": "Target"
+        },
+        "mode": {
+          "title": "Mode",
+          "options": {
+            "include": "Include",
+            "exclude": "Exclude"
+          }
+        },
+        "resolved-at": {
+          "title": "Resolved At"
+        },
+        "resolved-count": {
+          "title": "Resolved Count"
+        }
+      }
+    },
+    "bulletin-receipt": {
+      "title": "Receipt",
+      "plural": "Receipts",
+      "fields": {
+        "post-id": {
+          "title": "Post"
+        },
+        "user-id": {
+          "title": "User"
+        },
+        "first-seen-at": {
+          "title": "First Seen At"
+        },
+        "read-at": {
+          "title": "Read At"
+        },
+        "dismissed-at": {
+          "title": "Dismissed At"
+        }
+      }
+    }
+  },
+  "queries": {
+    "feed": {
+      "title": "Announcement Feed",
+      "description": "Published announcements addressed to the current user."
+    },
+    "unread-count": {
+      "title": "Unseen Announcement Count",
+      "description": "Number of unseen announcements addressed to the current user."
+    }
+  },
+  "commands": {
+    "mark-read": {
+      "title": "Mark Announcement Read",
+      "description": "Records that the current user has read an announcement."
+    }
+  },
+  "errors": {
+    "invalid-transition": "This announcement cannot change status from its current state.",
+    "schedule-requires-future-publish-at": "Scheduled announcements need a publish time in the future.",
+    "not-addressed": "This announcement is not addressed to you."
+  }
+}

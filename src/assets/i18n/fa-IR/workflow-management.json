@@ -1,0 +1,878 @@
+{
+  "module": {
+    "title": "مدیریت گردش کار",
+    "description": "مدیریت تعاریف و اجرای گردش کار",
+    "menus": {
+      "root": {
+        "title": "مدیریت گردش کار",
+        "description": "تعاریف و اجرای گردش کار"
+      }
+    },
+    "permissions": {
+      "title": "مدیریت گردش کار",
+      "description": "مجوزهای مدیریت گردش کار"
+    }
+  },
+  "workflow": {
+    "menus": {
+      "workflow": {
+        "title": "گردش کار",
+        "description": "تعاریف و نمونه‌های گردش کار"
+      }
+    }
+  },
+  "automations": {
+    "terms": {
+      "automation": "اتوماسیون",
+      "automations": "اتوماسیون‌ها"
+    },
+    "entities": {
+      "automation": {
+        "title": "اتوماسیون",
+        "plural": "اتوماسیون‌ها",
+        "groups": {
+          "condition": "شرط",
+          "command": "دستور"
+        },
+        "fields": {
+          "ref-type": {
+            "title": "نوع مرجع",
+            "description": "نوع موجودیت والد (مثلاً AssessmentManagement.Questionnaire)",
+            "placeholder": "مثلاً AssessmentManagement.Questionnaire"
+          },
+          "ref-id": {
+            "title": "شناسه مرجع",
+            "description": "شناسه رکورد والد",
+            "placeholder": "شناسه رکورد والد"
+          },
+          "name": {
+            "title": "نام",
+            "description": "نام متغیر (حروف، اعداد، زیرخط، خط تیره)",
+            "placeholder": "مثلاً lifestyleCounseling، urgentReferral"
+          },
+          "title": {
+            "title": "عنوان",
+            "description": "عنوان نمایشی",
+            "placeholder": "مثلاً مشاوره سبک زندگی، ارجاع فوری"
+          },
+          "description": {
+            "title": "توضیحات",
+            "description": "توضیحات اختیاری",
+            "placeholder": "زمان اجرای این اقدام را شرح دهید"
+          },
+          "condition": {
+            "title": "شرط",
+            "description": "عبارت JSON روی نتایج قانون (field = نام نتیجه قانون)",
+            "placeholder": "{ \"op\": \"eq\", \"field\": \"overallRisk\", \"value\": \"moderate\" }"
+          },
+          "command": {
+            "title": "کلید دستور",
+            "description": "کلید ثبت AXPCommand برای اجرا",
+            "placeholder": "مثلاً AssessmentManagement.HealthAssessment:LifestyleCounseling"
+          },
+          "params": {
+            "title": "پارامترها",
+            "description": "شیء JSON ارسالی به دستور",
+            "placeholder": "{ \"priority\": 3 }"
+          }
+        }
+      }
+    }
+  },
+  "workflow-definitions": {
+    "terms": {
+      "workflow": "گردش کار",
+      "workflows": "گردش کارها",
+      "definition": "تعریف",
+      "execution": "اجرا"
+    },
+    "menus": {
+      "workflow-definitions": {
+        "title": "تعاریف گردش کار",
+        "description": "مدیریت تعاریف گردش کار"
+      }
+    },
+    "entities": {
+      "workflow-definition": {
+        "title": "تعریف گردش کار",
+        "plural": "تعاریف گردش کار",
+        "fields": {
+          "definition-id": {
+            "title": "شناسه تعریف",
+            "description": "شناسه یکتای تعریف گردش کار",
+            "placeholder": "شناسه تعریف را وارد کنید"
+          },
+          "name": {
+            "title": "نام",
+            "description": "شناسه یکتای گردش کار (فقط خواندنی پس از ایجاد)",
+            "placeholder": "نام گردش کار را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "description": "عنوان نمایشی گردش کار",
+            "placeholder": "عنوان گردش کار را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "description": "توضیحات گردش کار",
+            "placeholder": "توضیحات را وارد کنید"
+          },
+          "version": {
+            "title": "نسخه",
+            "description": "شماره نسخه"
+          },
+          "is-latest": {
+            "title": "آخرین نسخه",
+            "description": "آیا آخرین نسخه است"
+          },
+          "is-published": {
+            "title": "منتشر شده",
+            "description": "آیا منتشر شده است"
+          },
+          "is-readonly": {
+            "title": "فقط خواندنی",
+            "description": "آیا فقط خواندنی است"
+          },
+          "is-system": {
+            "title": "سیستمی",
+            "description": "آیا گردش کار سیستمی است"
+          },
+          "created-at": {
+            "title": "تاریخ ایجاد",
+            "description": "زمان ایجاد"
+          },
+          "bindings": {
+            "title": "اتصال‌ها",
+            "description": "اتصال موجودیت و رویداد برای اجرای گردش کار",
+            "placeholder": "تعریف JSON اتصال‌ها"
+          },
+          "graph": {
+            "title": "گراف گردش کار",
+            "description": "گراف فعالیت‌ها (ویرایش در صفحه فعالیت‌ها)"
+          },
+          "variables": {
+            "title": "متغیرهای گردش کار"
+          },
+          "workflow-inputs": {
+            "title": "ورودی‌های گردش کار"
+          },
+          "outputs": {
+            "title": "خروجی‌های گردش کار"
+          },
+          "custom-properties": {
+            "title": "ویژگی‌های سفارشی"
+          },
+          "extensions": {
+            "title": "افزونه‌ها"
+          }
+        },
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "status": {
+          "transitions": {
+            "submit-review": "ارسال برای بررسی",
+            "publish": "انتشار",
+            "publish-direct": "انتشار فوری",
+            "revise": "بازگشت به پیش‌نویس",
+            "unpublish": "لغو انتشار",
+            "archive": "بایگانی"
+          }
+        },
+        "pages": {
+          "activities": {
+            "title": "فعالیت‌ها",
+            "add-step": "افزودن گام",
+            "empty": "هنوز فعالیتی نیست. گام اضافه کنید و برای هر نتیجه (outcome) گام بعدی را مشخص کنید.",
+            "select-activity": "انتخاب فعالیت",
+            "select-step": "یک گام از ستون چپ انتخاب کنید تا اتصال‌ها و ورودی‌ها را ویرایش کنید.",
+            "editor-placeholder": "نوع فعالیت را انتخاب کنید تا ورودی‌ها نمایش داده شوند.",
+            "start-activity": "شروع گردش کار",
+            "connection-end": "(پایان گردش کار)",
+            "connection-target-placeholder": "گام بعدی",
+            "connections": {
+              "title": "اتصال‌های خروجی",
+              "hint": "برای هر نتیجه، گام بعدی را انتخاب کنید یا گردش کار را پایان دهید."
+            },
+            "inputs": {
+              "title": "ورودی‌ها"
+            },
+            "node-actions": {
+              "add-activity": "افزودن فعالیت",
+              "arrange-layout": "چیدمان خودکار",
+              "toggle-detail-panel": "نمایش/پنهان‌سازی پنل جزئیات"
+            }
+          }
+        }
+      }
+    },
+    "actions": {
+      "execute": {
+        "title": "اجرا",
+        "description": "اجرای گردش کار",
+        "input-dialog": {
+          "title": "ورودی گردش کار"
+        },
+        "workflow-not-found": "گردش کار \"{{name}}\" یافت نشد."
+      }
+    },
+    "related-entities": {
+      "workflow-instances": {
+        "title": "نمونه‌های گردش کار"
+      },
+      "activity-definitions": {
+        "title": "تعاریف فعالیت"
+      },
+      "connections": {
+        "title": "اتصال‌ها"
+      }
+    }
+  },
+  "workflow-instances": {
+    "terms": {
+      "instance": "نمونه",
+      "instances": "نمونه‌ها",
+      "execution": "اجرا",
+      "status": "وضعیت",
+      "sub-status": "وضعیت فرعی"
+    },
+    "menus": {
+      "workflow-instances": {
+        "title": "نمونه‌های گردش کار",
+        "description": "مدیریت اجراهای گردش کار"
+      }
+    },
+    "entities": {
+      "workflow-instance": {
+        "title": "نمونه گردش کار",
+        "plural": "نمونه‌های گردش کار",
+        "pages": {
+          "activity-instances": {
+            "title": "نمونه‌های فعالیت",
+            "empty": "هنوز داده اجرای فعالیت برای این نمونه در دسترس نیست.",
+            "field": {
+              "activity-type": "نوع فعالیت",
+              "node-id": "شناسه گام",
+              "status": "وضعیت",
+              "outcome": "خروجی مسیری (Outcome)",
+              "started-at": "شروع",
+              "completed-at": "پایان",
+              "performed-by": "انجام‌دهنده",
+              "input": "ورودی (از تعریف)",
+              "output": "خروجی (وضعیت ثبت‌شده)",
+              "human-assignees": "واگذارشدگان (Human task)",
+              "completed-by": "انجام‌دهنده"
+            }
+          }
+        },
+        "fields": {
+          "workflow-title": {
+            "title": "گردش کار",
+            "description": "نام یا شناسه تعریف گردش کار"
+          },
+          "status-display": {
+            "title": "وضعیت",
+            "description": "وضعیت فعلی گردش کار (قابل خواندن)"
+          },
+          "current-step": {
+            "title": "مرحله فعلی",
+            "description": "شاخص مرحله فعلی در گردش کار"
+          },
+          "total-steps": {
+            "title": "تعداد کل مراحل",
+            "description": "تعداد کل مراحل گردش کار"
+          },
+          "progress-percentage": {
+            "title": "پیشرفت",
+            "description": "درصد تکمیل گردش کار"
+          },
+          "assign-user-display": {
+            "title": "واگذار‌شده / آخرین اقدام",
+            "description": "مراجعه به کاربر برای واگذارشدهٔ معلق یا آخرین انجام‌دهنده (از موجودیت کاربر امنیت)."
+          },
+          "definition-id": {
+            "title": "شناسه تعریف",
+            "description": "شناسه تعریف گردش کار",
+            "placeholder": "شناسه تعریف را وارد کنید"
+          },
+          "name": {
+            "title": "نام",
+            "description": "نام نمونه",
+            "placeholder": "نام نمونه را وارد کنید"
+          },
+          "status": {
+            "title": "وضعیت",
+            "description": "وضعیت اجرای گردش کار"
+          },
+          "sub-status": {
+            "title": "وضعیت فرعی",
+            "description": "وضعیت فرعی اجرای گردش کار"
+          },
+          "correlation-id": {
+            "title": "شناسه همبستگی",
+            "description": "شناسه همبستگی برای ردیابی",
+            "placeholder": "شناسه همبستگی را وارد کنید"
+          },
+          "version": {
+            "title": "نسخه",
+            "description": "نسخه تعریف گردش کار"
+          },
+          "incident-count": {
+            "title": "تعداد خطاها",
+            "description": "تعداد خطاها یا خرابی‌ها"
+          },
+          "created-at": {
+            "title": "تاریخ ایجاد",
+            "description": "زمان ایجاد"
+          },
+          "updated-at": {
+            "title": "تاریخ به‌روزرسانی",
+            "description": "زمان آخرین به‌روزرسانی"
+          },
+          "finished-at": {
+            "title": "تاریخ پایان",
+            "description": "زمان تکمیل"
+          },
+          "bookmarks": {
+            "title": "بوک‌مارک‌ها",
+            "description": "نقاط توقف فعالیت‌های معلق"
+          },
+          "activity-contexts": {
+            "title": "زمینه اجرای فعالیت‌ها",
+            "description": "ورودی/خروجی و وضعیت هر فعالیت"
+          },
+          "flow-input": {
+            "title": "ورودی گردش کار",
+            "description": "داده‌های ورودی گردش کار"
+          },
+          "flow-output": {
+            "title": "خروجی گردش کار",
+            "description": "داده‌های خروجی گردش کار"
+          },
+          "incidents": {
+            "title": "رویدادهای خطا",
+            "description": "خطاها یا خرابی‌ها در حین اجرا"
+          },
+          "fault": {
+            "title": "خرابی",
+            "description": "وضعیت خرابی در صورت خطادار بودن گردش کار"
+          },
+          "workflow-variables": {
+            "title": "متغیرها",
+            "description": "متغیرهای گردش کار: نام، عنوان و مقدار در این نمونه",
+            "column-key": "کلید",
+            "column-title": "عنوان",
+            "column-value": "مقدار"
+          }
+        },
+        "groups": {
+          "overview": "خلاصه",
+          "variables": "متغیرها",
+          "basic-info": "اطلاعات پایه",
+          "status": "وضعیت",
+          "metadata": "متادیتا",
+          "bookmarks": "بوک‌مارک‌ها",
+          "activity-contexts": "اجرای فعالیت‌ها",
+          "flow-data": "ورودی و خروجی گردش کار",
+          "incidents": "رویدادهای خطا",
+          "fault": "خرابی"
+        }
+      }
+    },
+    "status-display": {
+      "Running": {
+        "Pending": "در حال اجرا – در انتظار",
+        "Executing": "در حال اجرا – در حال اجرا",
+        "Suspended": "در حال اجرا – معلق",
+        "Finished": "در حال اجرا – پایان یافته",
+        "Cancelled": "در حال اجرا – لغو شده",
+        "Faulted": "در حال اجرا – خطا دار"
+      },
+      "Finished": {
+        "Pending": "پایان یافته – در انتظار",
+        "Executing": "پایان یافته – در حال اجرا",
+        "Suspended": "پایان یافته – معلق",
+        "Finished": "پایان یافته",
+        "Cancelled": "لغو شده",
+        "Faulted": "خطا دار"
+      }
+    },
+    "states": {
+      "running": "در حال اجرا",
+      "finished": "پایان یافته",
+      "pending": "در انتظار",
+      "executing": "در حال اجرا",
+      "suspended": "معلق",
+      "cancelled": "لغو شده",
+      "faulted": "خطا دار"
+    }
+  },
+  "tests": {
+    "terms": {
+      "definitions": "تعاریف",
+      "instances": "نمونه‌ها",
+      "test-console": "کنسول تست",
+      "workflow-definitions": "تعاریف گردش کار",
+      "workflow-instances": "نمونه‌های گردش کار"
+    },
+    "actions": {
+      "add-definition": {
+        "title": "افزودن تعریف",
+        "description": "افزودن تعریف گردش کار جدید"
+      },
+      "edit": {
+        "title": "ویرایش",
+        "description": "ویرایش تعریف گردش کار"
+      },
+      "delete": {
+        "title": "حذف",
+        "description": "حذف تعریف یا نمونه گردش کار"
+      },
+      "execute": {
+        "title": "اجرا",
+        "description": "اجرای گردش کار"
+      },
+      "refresh": {
+        "title": "بروزرسانی",
+        "description": "بروزرسانی لیست"
+      },
+      "clear-logs": {
+        "title": "پاک کردن لاگ‌ها",
+        "description": "پاک کردن لاگ‌های اجرا"
+      }
+    },
+    "messages": {
+      "info": {
+        "workflow-starting": "شروع گردش کار: {{name}}",
+        "executing-task": "اجرای تسک: {{activityName}}",
+        "instance-selected": "نمونه انتخاب شد: {{id}}",
+        "status": "وضعیت: {{status}}"
+      },
+      "success": {
+        "workflow-started": "گردش کار شروع شد. شناسه نمونه: {{instanceId}}",
+        "task-completed": "تسک با موفقیت انجام شد. نتیجه: {{outcome}}",
+        "workflow-completed": "گردش کار با موفقیت تمام شد",
+        "definition-deleted": "تعریف گردش کار با موفقیت حذف شد",
+        "instance-deleted": "نمونه گردش کار با موفقیت حذف شد"
+      },
+      "warning": {
+        "workflow-suspended": "گردش کار متوقف شد - نیاز به تعامل کاربر"
+      },
+      "error": {
+        "load-definitions": "خطا در بارگذاری تعاریف گردش کار",
+        "load-instances": "خطا در بارگذاری نمونه‌های گردش کار",
+        "delete-definition": "خطا در حذف تعریف گردش کار",
+        "delete-instance": "خطا در حذف نمونه گردش کار",
+        "workflow-start-failed": "خطا در شروع گردش کار",
+        "task-complete-failed": "خطا در تکمیل تسک",
+        "workflow-execution": "خطا در اجرای گردش کار: {{message}}",
+        "workflow-failed": "گردش کار با خطا متوقف شد"
+      },
+      "confirm": {
+        "delete-definition": "آیا مطمئن هستید که می‌خواهید تعریف گردش کار \"{{name}}\" را حذف کنید؟",
+        "delete-instance": "آیا مطمئن هستید که می‌خواهید نمونه گردش کار \"{{id}}\" را حذف کنید؟"
+      }
+    },
+    "components": {
+      "workflow-list": {
+        "title": "مدیریت گردش کار",
+        "empty-states": {
+          "no-definitions": {
+            "title": "هیچ تعریف گردش کاری یافت نشد",
+            "description": "هیچ تعریف گردش کاری یافت نشد. اولین تعریف خود را ایجاد کنید."
+          },
+          "no-instances": {
+            "title": "هیچ نمونه گردش کاری یافت نشد",
+            "description": "هیچ نمونه گردش کاری یافت نشد. یک گردش کار را اجرا کنید تا نمونه‌ها را اینجا ببینید."
+          },
+          "no-selection": {
+            "title": "هیچ نمونه‌ای انتخاب نشده",
+            "description": "یک نمونه از لیست انتخاب کنید تا جزئیات آن را ببینید."
+          }
+        }
+      }
+    }
+  },
+  "signature": {
+    "plugin": {
+      "title": "امضای دیجیتال",
+      "signers": {
+        "title": "امضاکنندگان"
+      },
+      "signatures": {
+        "title": "امضاها"
+      },
+      "workflow-instance-id": {
+        "title": "شناسه نمونه گردش کار"
+      },
+      "status": {
+        "title": "وضعیت امضا"
+      },
+      "action": {
+        "title": "امضا"
+      }
+    },
+    "workflow": {
+      "title": "گردش کار امضای موجودیت",
+      "description": "گردش کار کامل امضا برای رکوردهای موجودیت"
+    },
+    "activities": {
+      "menus": {
+        "activities": {
+          "title": "فعالیت‌ها",
+          "description": "دسته‌بندی‌ها و تعاریف فعالیت"
+        },
+        "activity-categories": {
+          "title": "دسته‌بندی‌های فعالیت",
+          "description": "مدیریت دسته‌بندی‌های فعالیت"
+        },
+        "activity-definitions": {
+          "title": "تعاریف فعالیت",
+          "description": "مدیریت تعاریف فعالیت"
+        }
+      }
+    },
+    "command": {
+      "start-workflow": {
+        "success-title": "گردش کار امضا شروع شد",
+        "success-message": "گردش کار امضا با موفقیت شروع شد",
+        "error-title": "شروع گردش کار ناموفق بود",
+        "error-unknown": "خطای نامشخص رخ داد"
+      },
+      "sign-entity": {
+        "success-title": "امضا ثبت شد",
+        "success-message": "امضای شما با موفقیت ثبت شد",
+        "error-title": "امضا ناموفق بود",
+        "error": {
+          "not-eligible": "شما مجاز به امضای این رکورد نیستید",
+          "already-signed": "شما قبلاً این رکورد را امضا کرده‌اید",
+          "fully-signed": "این رکورد توسط تمام امضاکنندگان مورد نیاز امضا شده است",
+          "cancelled": "امضا لغو شد"
+        },
+        "dialog": {
+          "title": "امضای سند",
+          "message": "لطفاً امضای دیجیتال و هرگونه یادداشت اختیاری خود را در زیر ارائه دهید.",
+          "note-label": "یادداشت‌ها",
+          "note-placeholder": "هرگونه یادداشت مربوط به امضای خود را اضافه کنید...",
+          "signature-label": "امضا",
+          "signature-required": "امضا برای ادامه الزامی است",
+          "submit-text": "امضا و ارسال"
+        }
+      }
+    },
+    "messages": {
+      "success": {
+        "workflow-started": "گردش کار امضا با موفقیت شروع شد",
+        "signature-collected": "امضا با موفقیت جمع‌آوری شد",
+        "all-signed": "تمام امضاها جمع‌آوری شده‌اند"
+      },
+      "error": {
+        "workflow-failed": "گردش کار امضا ناموفق بود",
+        "signature-failed": "جمع‌آوری امضا ناموفق بود",
+        "validation-failed": "اعتبارسنجی امضا ناموفق بود"
+      }
+    }
+  },
+  "sign-off": {
+    "activities": {
+      "sign-off": {
+        "title": "تأیید و امضا",
+        "description": "جمع‌آوری امضای دیجیتال الزامی برای تأیید",
+        "default-message": "لطفاً برای تأیید، امضای خود را ثبت کنید.",
+        "dialog-title": "تأیید و امضا",
+        "note-label": "یادداشت",
+        "note-placeholder": "یادداشت اختیاری را وارد کنید",
+        "signature-label": "امضا",
+        "signature-required": "برای تأیید، امضا الزامی است",
+        "submit-text": "تأیید و امضا"
+      },
+      "rejection-reason": {
+        "title": "دلیل رد",
+        "description": "ثبت دلیل رد",
+        "message": "لطفاً دلیل رد این درخواست را وارد کنید.",
+        "reason-label": "دلیل",
+        "reason-placeholder": "دلیل رد را وارد کنید",
+        "reason-required": "وارد کردن دلیل رد الزامی است"
+      }
+    }
+  },
+  "activities": {
+    "menus": {
+      "activities": {
+        "title": "فعالیت‌ها",
+        "description": "دسته‌بندی‌ها و تعاریف فعالیت"
+      },
+      "activity": {
+        "title": "فعالیت",
+        "description": "تعاریف فعالیت"
+      },
+      "activity-categories": {
+        "title": "دسته‌بندی‌های فعالیت",
+        "description": "مدیریت دسته‌بندی‌های فعالیت"
+      },
+      "activity-definitions": {
+        "title": "تعاریف فعالیت",
+        "description": "مدیریت تعاریف فعالیت"
+      }
+    },
+    "entities": {
+      "activity-definition": {
+        "title": "تعریف فعالیت",
+        "plural": "تعاریف فعالیت",
+        "fields": {
+          "execution-mode": {
+            "title": "حالت اجرا",
+            "description": "محل اجرای فعالیت"
+          },
+          "is-browsable": {
+            "title": "قابل مرور",
+            "description": "آیا فعالیت قابل مرور است"
+          },
+          "is-container": {
+            "title": "کانتینر",
+            "description": "آیا فعالیت یک کانتینر است"
+          },
+          "inputs": {
+            "title": "ورودی‌ها",
+            "description": "پارامترهای ورودی فعالیت"
+          },
+          "outputs": {
+            "title": "خروجی‌ها",
+            "description": "پارامترهای خروجی فعالیت"
+          },
+          "outcomes": {
+            "title": "نتایج",
+            "description": "نتایج ممکن فعالیت"
+          },
+          "task-type": {
+            "title": "نوع تسک",
+            "description": "نوع تسک برای مدیریت کارتابل"
+          }
+        }
+      }
+    }
+  },
+  "work": {
+    "menus": {
+      "work": {
+        "title": "کار",
+        "description": "وظایف گردش کار و کارتابل"
+      }
+    }
+  },
+  "workflow-run": {
+    "actions": {
+      "continue": {
+        "title": "ادامه"
+      },
+      "cancel-run": {
+        "title": "لغو اجرا"
+      },
+      "take-over": {
+        "title": "تحویل به من"
+      },
+      "history": {
+        "title": "تاریخچه"
+      }
+    },
+    "history": {
+      "popup-title": "{{workflowTitle}} — {{statusDisplay}}",
+      "empty": "هنوز هیچ گامی برای این اجرای گردش کار ثبت نشده است.",
+      "system-performer": "سیستم",
+      "instance-status": {
+        "in-progress": "در حال اجرا",
+        "pending-user-action": "در انتظار اقدام کاربر",
+        "waiting": "در انتظار",
+        "completed": "تکمیل‌شده",
+        "failed": "ناموفق",
+        "cancelled": "لغو شده",
+        "unknown": "نامشخص"
+      },
+      "field": {
+        "reporter": "گزارش‌دهنده",
+        "started-at": "شروع",
+        "completed-at": "پایان",
+        "performed-by": "انجام‌دهنده",
+        "performer": "انجام‌دهنده",
+        "assignee": "مسئول"
+      },
+      "activity-status": {
+        "running": "در حال اجرا",
+        "completed": "تکمیل‌شده",
+        "pending": "در انتظار",
+        "executing": "در حال انجام",
+        "suspended": "معلق",
+        "canceled": "لغو شده",
+        "faulted": "خطا دار",
+        "failed": "ناموفق"
+      },
+      "tabs": {
+        "timeline": {
+          "title": "خط زمانی"
+        },
+        "visual": {
+          "title": "نمای بصری",
+          "empty": "نمودار گردش کار برای این اجرا در دسترس نیست.",
+          "coming-soon": "نمای نمودار گردش کار به‌زودی در اینجا در دسترس خواهد بود."
+        }
+      },
+      "messages": {
+        "no-instance": "هیچ نمونه گردش کاری به این رکورد متصل نیست."
+      }
+    },
+    "dialogs": {
+      "cancel-run": {
+        "title": "اجرای گردش‌کار لغو شود؟",
+        "message": "این کار گردش‌کار را متوقف می‌کند و رویداد چرخه عمر را لغو‌شده علامت می‌زند. این عمل قابل بازگشت نیست."
+      }
+    },
+    "messages": {
+      "no-pending-step": "مرحلهٔ در انتظاری برای ادامهٔ این اجرای گردش‌کار وجود ندارد.",
+      "awaiting-approver": "این مرحله در انتظار تأییدکنندهٔ تعیین‌شده است. به‌عنوان مدیر، کارتابل وظایف را باز کنید تا تأیید یا رد کنید.",
+      "use-task-board": "وظیفه به شما واگذار شد. برای ادامه، کارتابل وظایف را باز کنید.",
+      "cancel-run-note": "از فهرست رویدادهای چرخه عمر لغو شد.",
+      "cancel-run-success": "اجرای گردش‌کار لغو شد."
+    }
+  },
+  "tasks": {
+    "popover": {
+      "more": "بیشتر",
+      "assignee": "مسئول",
+      "started-by": "شروع‌کننده",
+      "created": "تاریخ ایجاد",
+      "due": "موعد",
+      "effective-date": "تاریخ اثر",
+      "priority": "اولویت"
+    },
+    "states": {
+      "pending": "در انتظار",
+      "claimed": "ادعا شده",
+      "in-progress": "در حال انجام",
+      "completed": "تکمیل شده",
+      "cancelled": "لغو شده",
+      "rejected": "رد شده"
+    },
+    "actions": {
+      "claim": {
+        "title": "دریافت وظیفه"
+      },
+      "reassign-to-self": {
+        "title": "تحویل به خودم"
+      }
+    },
+    "errors": {
+      "not-assignee": "فقط کاربر تخصیص‌یافته می‌تواند این وظیفه را تکمیل کند.",
+      "reassign-failed": "واگذاری این وظیفه به شما انجام نشد.",
+      "reassign-not-supported": "واگذاری مجدد وظیفه پشتیبانی نمی‌شود."
+    },
+    "dialogs": {
+      "reassign-to-self": {
+        "title": "تحویل وظیفه",
+        "message": "این وظیفه به شخص دیگری تخصیص شده است. آیا می‌خواهید آن را به خودتان واگذار کنید و ادامه دهید؟"
+      },
+      "continue-next-step": {
+        "title": "ادامه به مرحله بعد؟",
+        "message": "مرحله دیگری در این گردش کار برای تکمیل دارید.",
+        "take-over-message": "مرحله بعد به شخص دیگری تخصیص شده است. آیا می‌خواهید آن را تحویل بگیرید و ادامه دهید؟"
+      }
+    }
+  },
+  "workflow-instance": {
+    "permissions": {
+      "reassign-to-self": {
+        "title": "واگذاری وظیفه به خود",
+        "description": "تحویل و تکمیل وظیفه انسانی که به کاربر دیگری تخصیص شده است"
+      }
+    }
+  },
+  "cartable": {
+    "menus": {
+      "cartable": {
+        "title": "کارتابل",
+        "description": "صندوق وظایف گردش کار و مدیریت تسک"
+      }
+    },
+    "components": {
+      "cartable-page": {
+        "title": "کارتابل",
+        "description": "صندوق وظایف گردش کار",
+        "tabs": {
+          "all": {
+            "title": "همه تسک‌ها"
+          },
+          "my-tasks": {
+            "title": "وظایف من"
+          },
+          "pending": {
+            "title": "در انتظار"
+          },
+          "in-progress": {
+            "title": "در حال انجام"
+          },
+          "completed": {
+            "title": "تکمیل شده"
+          },
+          "cancelled": {
+            "title": "لغو شده"
+          }
+        },
+        "filters": {
+          "status": {
+            "title": "وضعیت"
+          },
+          "priority": {
+            "title": "اولویت"
+          },
+          "kind": {
+            "title": "نوع"
+          }
+        },
+        "empty-states": {
+          "no-tasks": {
+            "title": "تسکی وجود ندارد",
+            "description": "هیچ تسکی در دسترس نیست"
+          }
+        }
+      }
+    },
+    "actions": {
+      "claim": {
+        "title": "ادعا",
+        "description": "ادعای این تسک"
+      },
+      "complete": {
+        "title": "تکمیل",
+        "description": "تکمیل این تسک"
+      },
+      "cancel": {
+        "title": "لغو",
+        "description": "لغو این تسک"
+      },
+      "view-details": {
+        "title": "مشاهده جزئیات",
+        "description": "مشاهده جزئیات تسک"
+      }
+    }
+  },
+  "workflow-selector-plugin": {
+    "group": {
+      "title": "پیکربندی گردش کار"
+    },
+    "property": {
+      "title": "گردش کار"
+    }
+  },
+  "workflow-configurator": {
+    "label": "گردش کار",
+    "widget": {
+      "title": "پیکربندی‌گر گردش کار",
+      "description": "گردش کار را انتخاب کنید و مقادیر پیش‌فرض ورودی الگو را تنظیم کنید."
+    },
+    "configure": {
+      "group-title": "پارامترهای گردش کار"
+    }
+  },
+  "app-startup": {
+    "resuming-stale-suspensions": "در حال از سرگیری تعلیق‌های قدیمی گردش کار..."
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "module": {
+    "title": "ServiceM8",
+    "description": "Connect ServiceM8 and sync jobs with platform projects",
+    "menus": {
+      "configuration": {
+        "title": "ServiceM8"
+      }
+    }
+  },
+  "integration": {
+    "display-name": "ServiceM8",
+    "description": "Connect to ServiceM8 for job management and project sync.",
+    "badges": {
+      "last-sync": "Last sync: {{datetime}}",
+      "never-synced": "Not synced yet"
+    },
+    "auth": {
+      "client-credentials": {
+        "label": "Client Credentials",
+        "instructions": "ServiceM8 public integrations use OAuth 2.0. Use the OAuth connect flow with your App ID and App Secret.",
+        "client-id": {
+          "label": "App ID",
+          "placeholder": "Paste your ServiceM8 App ID"
+        },
+        "client-secret": {
+          "label": "App Secret",
+          "placeholder": "Paste your ServiceM8 App Secret"
+        }
+      },
+      "oauth": {
+        "label": "OAuth 2.0",
+        "instructions": "Enter your ServiceM8 App ID and App Secret from the developer add-on. After saving, you will be redirected to ServiceM8 to sign in and authorize this application. Tokens are stored and refreshed automatically.",
+        "client-id": {
+          "label": "App ID",
+          "placeholder": "Paste your ServiceM8 App ID"
+        },
+        "client-secret": {
+          "label": "App Secret",
+          "placeholder": "Paste your ServiceM8 App Secret"
+        }
+      }
+    },
+    "connect": {
+      "instructions": "<p>Enter your ServiceM8 <strong>App ID</strong> and <strong>App Secret</strong> from the developer add-on. After saving, you will be redirected to ServiceM8 to sign in and authorize this application. Tokens are stored and refreshed automatically.</p>",
+      "dialog": {
+        "title": "Connect ServiceM8",
+        "reconfigure-title": "Reconfigure ServiceM8"
+      },
+      "fields": {
+        "display-name": "Display name"
+      },
+      "placeholders": {
+        "display-name": "ServiceM8"
+      },
+      "actions": {
+        "save": "Save Connection",
+        "save-and-authorize": "Save & Authorize"
+      }
+    }
+  },
+  "permissions": {
+    "group": {
+      "title": "ServiceM8",
+      "description": "Configure ServiceM8 integration and job links"
+    },
+    "management": {
+      "title": "ServiceM8 management",
+      "description": "Full access to ServiceM8 configuration"
+    },
+    "servicem8-project": {
+      "view": {
+        "title": "View job links"
+      },
+      "create": {
+        "title": "Create job links"
+      },
+      "update": {
+        "title": "Update job links"
+      },
+      "delete": {
+        "title": "Delete job links"
+      }
+    },
+    "catalog": {
+      "view": {
+        "title": "View ServiceM8 configuration"
+      }
+    },
+    "project-import": {
+      "execute": {
+        "title": "Import jobs from ServiceM8"
+      }
+    },
+    "project-sync": {
+      "execute": {
+        "title": "Sync project with ServiceM8"
+      }
+    }
+  },
+  "actions": {
+    "import-from-servicem8": {
+      "title": "Import from ServiceM8"
+    },
+    "sync": {
+      "title": "Sync"
+    }
+  },
+  "import": {
+    "not-connected": {
+      "title": "Connect ServiceM8 to import jobs",
+      "message": "ServiceM8 is not connected for this tenant. Open Administration → Integrations to connect your account, then try importing again."
+    },
+    "success-single": "Imported \"{{title}}\" from ServiceM8.",
+    "selector": {
+      "title": "Select ServiceM8 job",
+      "pull-jobs": "Pull Jobs"
+    },
+    "dialog": {
+      "title": "Import ServiceM8 job",
+      "submit": "Import job"
+    },
+    "loading": {
+      "fetch": {
+        "title": "Loading from ServiceM8",
+        "status": "Pulling jobs into cache…"
+      },
+      "import": {
+        "title": "Importing job",
+        "status": "Creating platform project…"
+      }
+    },
+    "sync-strategy": {
+      "title": "Sync strategy",
+      "options": {
+        "remoteOverride": "Remote overrides local",
+        "localOverride": "Keep local values",
+        "merge": "Merge (fill empty local fields)"
+      }
+    }
+  },
+  "sync": {
+    "success": "Project synced with ServiceM8 successfully.",
+    "loading": {
+      "title": "Syncing with ServiceM8",
+      "status": "Updating project from ServiceM8…"
+    }
+  }
+}

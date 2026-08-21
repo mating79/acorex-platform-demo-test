@@ -1,0 +1,112 @@
+{
+  "module": {
+    "title": "مدیریت داشبورد",
+    "description": "مدیریت داشبوردها و ویجت‌ها",
+    "menus": {
+      "root": {
+        "title": "مدیریت داشبورد",
+        "description": "مدیریت داشبوردها"
+      }
+    }
+  },
+  "dashboards": {
+    "entities": {
+      "dashboard": {
+        "pages": {
+          "layout": {
+            "title": "چیدمان",
+            "description": "جای‌چینی ویجت‌ها روی شبکه"
+          }
+        },
+        "groups": {
+          "access": {
+            "title": "دسترسی و نمایش"
+          }
+        },
+        "fields": {
+          "description": {
+            "title": "توضیحات"
+          },
+          "scope": {
+            "title": "حوزه",
+            "options": {
+              "tenant": "سازمانی",
+              "personal": "شخصی",
+              "entity": "موجودیت"
+            }
+          }
+        },
+        "views": {
+          "tenant": "داشبوردهای سازمانی",
+          "personal": "داشبوردهای شخصی"
+        }
+      }
+    },
+    "actions": {
+      "open-entity-dashboard": "باز کردن داشبورد"
+    },
+    "widget": {
+      "entity-dashboard": {
+        "title": "داشبورد موجودیت",
+        "description": "داشبورد متصل به رکورد جاری موجودیت"
+      }
+    },
+    "terms": {
+      "dashboard": "داشبورد",
+      "dashboards": "داشبوردها"
+    },
+    "menus": {
+      "dashboards": {
+        "title": "داشبوردها",
+        "description": "مدیریت داشبوردها"
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت داشبورد",
+        "description": "مدیریت کلیه داشبوردها"
+      },
+      "dashboards": {
+        "title": "داشبوردها",
+        "actions": {
+          "manage": {
+            "title": "مدیریت داشبورد",
+            "description": "مدیریت داشبوردها"
+          },
+          "view": {
+            "title": "@general:actions.view.title",
+            "description": "مشاهده داشبوردها"
+          },
+          "create": {
+            "title": "@general:actions.create.title",
+            "description": "ایجاد داشبورد جدید"
+          },
+          "edit": {
+            "title": "@general:actions.edit.title",
+            "description": "ویرایش داشبوردهای موجود"
+          },
+          "delete": {
+            "title": "@general:actions.delete.title",
+            "description": "حذف داشبوردها"
+          }
+        }
+      }
+    }
+  },
+  "shared-widgets": {
+    "widget-picker-category": {
+      "chart": "نمودارها",
+      "utility": "ابزارها"
+    },
+    "widget-picker-sub-categories": {
+      "chart-kpi": "شاخص‌های کلیدی عملکرد",
+      "chart-cartesian": "میله و خط",
+      "chart-radial": "دونات و گیج",
+      "chart-specialized": "نقشه حرارتی و قیف",
+      "utility-shortcut": "میان‌برها",
+      "utility-time": "زمان و تقویم",
+      "utility-weather": "آب‌وهوا",
+      "utility-notes": "یادداشت‌ها"
+    }
+  }
+}

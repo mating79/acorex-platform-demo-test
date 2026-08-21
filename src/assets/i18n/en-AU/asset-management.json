@@ -1,0 +1,787 @@
+{
+  "module": {
+    "title": "Asset Management",
+    "description": "Manage organizational assets, categories, and lifecycle metadata.",
+    "menus": {
+      "root": {
+        "title": "Asset Management",
+        "description": "Explore all asset-related features."
+      },
+      "assets": {
+        "title": "Assets",
+        "description": "Manage physical and digital assets."
+      }
+    }
+  },
+  "catalog-scopes": {
+    "booking": {
+      "title": "Booking",
+      "description": "Questionnaires, question bank items, and workflow definitions for asset booking checklists."
+    }
+  },
+  "features": {
+    "asset-management": {
+      "title": "Asset Management",
+      "description": "Enable asset management functionality"
+    }
+  },
+  "assetSetup": {
+    "menus": {
+      "assetSetup": {
+        "title": "Asset Setup"
+      }
+    }
+  },
+  "assets": {
+    "terms": {
+      "asset": "Asset",
+      "assets": "Assets"
+    },
+    "menus": {
+      "root": {
+        "title": "Assets",
+        "description": "Maintain asset records and lifecycle information."
+      }
+    },
+    "entities": {
+      "asset": {
+        "title": "Asset",
+        "plural": "Assets",
+        "groups": {
+          "basic-info": "Basic Information",
+          "description-info": "Description",
+          "category-info": "Category",
+          "ownership": "Responsibility",
+          "placement": "Placement & Structure",
+          "lifecycle": "Lifecycle",
+          "lifecycle-status": "Lifecycle Status",
+          "booking": "Booking",
+          "media": "Media",
+          "rental": "Leased/Rented",
+          "operation-requirements": "Operation Requirements",
+          "purchase": "Purchase Information"
+        },
+        "fields": {
+          "code": {
+            "title": "Asset Code",
+            "placeholder": "Enter asset code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter asset title"
+          },
+          "assetTypeId": {
+            "title": "Asset Type",
+            "placeholder": "Enter asset type"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Enter asset description"
+          },
+          "owner-id": {
+            "title": "Owner"
+          },
+          "assigned-to-employee-id": {
+            "title": "Assigned to Employee"
+          },
+          "location-id": {
+            "title": "Location"
+          },
+          "serial-number": {
+            "title": "Registration/Serial Number",
+            "placeholder": "Enter registration/serial number"
+          },
+          "asset-tag": {
+            "title": "Asset Tag",
+            "placeholder": "Enter asset tag"
+          },
+          "purchase-date": {
+            "title": "Purchase Date"
+          },
+          "lifecycle-status": {
+            "title": "Lifecycle Status"
+          },
+          "status": {
+            "title": "Operational Status"
+          },
+          "commissioned-date": {
+            "title": "Commissioned Date"
+          },
+          "retired-date": {
+            "title": "Retired Date"
+          },
+          "reservations": {
+            "title": "Reservations"
+          },
+          "is-rented": {
+            "title": "Is the asset leased or rented?"
+          },
+          "rented-to-id": {
+            "title": "Rented To"
+          },
+          "rented-to": {
+            "title": "Rented To"
+          },
+          "rental-start-date": {
+            "title": "Rental Start Date"
+          },
+          "rental-return-date": {
+            "title": "Rental Return Date"
+          },
+          "rental-status": {
+            "title": "Rental Status"
+          },
+          "is-bookable": {
+            "title": "Is the asset shared plant & equipment?"
+          },
+          "pre-book-questionnaire-id": {
+            "title": "Pre-Booking Questionnaire"
+          },
+          "post-book-questionnaire-id": {
+            "title": "Post-Booking Questionnaire"
+          },
+          "qr-code": {
+            "title": "QR Code"
+          },
+          "parent-id": {
+            "title": "Asset"
+          },
+          "images": {
+            "title": "Images"
+          },
+          "test-tag-identification-number": {
+            "title": "Test & Tag Identification Number",
+            "placeholder": "Enter Test & Tag Identification Number"
+          },
+          "license-type-id": {
+            "title": "License Type"
+          }
+        },
+        "components": {
+          "list": {
+            "empty-states": {
+              "no-data": {
+                "title": "No Assets Registered",
+                "description": "Create an asset to start tracking equipment and resources."
+              }
+            }
+          },
+          "asset-component": {
+            "title": "Components",
+            "assigned": "Assigned",
+            "unassigned": "Unassigned",
+            "no-link": "No asset selected",
+            "actions": {
+              "edit": {
+                "title": "Edit Assigned Asset"
+              },
+              "delete": {
+                "title": "Remove Assigned Asset"
+              }
+            }
+          },
+          "meta-data-form": {
+            "title": "Asset's Additional Information"
+          }
+        },
+        "dialogs": {
+          "create-maintenance-offer": {
+            "title": "Create maintenance records?",
+            "content": "This asset type has {{count}} maintenance template(s) with auto-generate plan enabled. What should be created for \"{{assetTitle}}\"?",
+            "actions": {
+              "plans-only": "Plans only",
+              "plans-and-work-orders": "Plans + work orders"
+            },
+            "errors": {
+              "create-failed-title": "Could not create maintenance records",
+              "create-failed-content": "Maintenance plan or work order creation failed."
+            },
+            "success": {
+              "plans-title": "Maintenance plans created",
+              "plans-content": "{{count}} maintenance plan(s) were created.",
+              "both-title": "Maintenance records created",
+              "both-content": "{{planCount}} maintenance plan(s) and {{workOrderCount}} work order(s) were created."
+            }
+          }
+        },
+        "related-entities": {
+          "maintenance-plans": {
+            "title": "Maintenance Plans"
+          },
+          "inspections": {
+            "title": "Inspections"
+          },
+          "work-orders": {
+            "title": "Work Orders"
+          },
+          "maintenance-templates": {
+            "title": "Maintenance Templates"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "asset": {
+        "actions": {
+          "manage": {
+            "title": "Manage Assets"
+          },
+          "view": {
+            "title": "View Assets"
+          },
+          "create": {
+            "title": "Create Asset"
+          },
+          "update": {
+            "title": "Edit Asset"
+          },
+          "delete": {
+            "title": "Delete Assets"
+          }
+        }
+      }
+    },
+    "states": {
+      "created": "Created",
+      "in-stock": "In Stock",
+      "available": "Available",
+      "assigned": "Assigned",
+      "under-maintenance": "Under Maintenance/Inspection",
+      "out-of-service": "Out of Service",
+      "retired": "Retired",
+      "disposed": "Disposed",
+      "lost": "Lost",
+      "returned-to-supplier": "Returned to Supplier"
+    },
+    "transitions": {
+      "receive-to-stock": "Receive to Stock",
+      "make-available": "Make Available",
+      "reserve": "Reserve",
+      "cancel-reservation": "Cancel Reservation",
+      "assign": "Assign",
+      "unassign": "Unassign",
+      "install": "Install",
+      "uninstall": "Uninstall",
+      "start-inspection": "Start Inspection",
+      "complete-inspection": "Complete Inspection",
+      "start-maintenance": "Start Maintenance",
+      "complete-maintenance": "Complete Maintenance",
+      "mark-out-of-service": "Mark Out of Service",
+      "restore-service": "Restore Service",
+      "retire": "Retire",
+      "dispose": "Dispose",
+      "mark-lost": "Mark Lost"
+    },
+    "lifecycle-statuses": {
+      "created": "Created",
+      "active": "Active",
+      "draft": "Draft",
+      "received": "Received",
+      "commissioned": "Commissioned",
+      "in-service": "In Service",
+      "out-of-service": "Out of Service",
+      "retired": "Retired",
+      "disposed": "Disposed",
+      "lost": "Lost"
+    },
+    "lifecycle-transitions": {
+      "activate": "Activate",
+      "receive": "Receive",
+      "commission": "Commission",
+      "take-out-of-service": "Take Out of Service",
+      "start-service": "Start Service",
+      "retire": "Retire",
+      "mark-lost": "Mark Lost",
+      "return-to-service": "Return to Service",
+      "reactivate": "Reactivate",
+      "dispose": "Dispose",
+      "mark-found": "Mark Found"
+    },
+    "statuses": {
+      "unavailable": "Unavailable",
+      "available": "Available",
+      "assigned": "Assigned",
+      "reserved": "Reserved",
+      "in-use": "In Use",
+      "under-maintenance": "Under Maintenance",
+      "under-inspection": "Under Inspection",
+      "damaged": "Damaged",
+      "missing": "Missing/Stolen"
+    },
+    "status-transitions": {
+      "make-available": "Make Available",
+      "start-maintenance": "Start Maintenance",
+      "start-inspection": "Start Inspection",
+      "mark-damaged": "Mark Damaged",
+      "mark-missing": "Mark Missing",
+      "assign": "Assign",
+      "reserve": "Reserve",
+      "start-use": "Start Use",
+      "make-unavailable": "Make Unavailable",
+      "unassign": "Unassign",
+      "cancel-reservation": "Cancel Reservation",
+      "finish-use": "Finish Use",
+      "return-to-assigned": "Return to Assigned",
+      "complete-maintenance": "Complete Maintenance",
+      "complete-maintenance-assigned": "Complete Maintenance (Assigned)",
+      "pass-inspection": "Pass Inspection",
+      "pass-inspection-assigned": "Pass Inspection (Assigned)",
+      "send-to-maintenance": "Send to Maintenance",
+      "fail-inspection": "Fail Inspection",
+      "repair-and-make-available": "Repair and Make Available",
+      "mark-found": "Mark Found",
+      "mark-found-unavailable": "Mark Found (Unavailable)",
+      "mark-found-damaged": "Mark Found (Damaged)"
+    },
+    "search": {
+      "create-asset": {
+        "title": "Create Asset",
+        "description": "Open the asset form to register a new record."
+      }
+    }
+  },
+  "status": {
+    "asset": {
+      "title": "Asset Status",
+      "plural": "Asset Statuses"
+    }
+  },
+  "assetTypes": {
+    "terms": {
+      "assetType": "Asset Type",
+      "assetTypes": "Asset Types"
+    },
+    "menus": {
+      "root": {
+        "title": "Asset Types",
+        "description": "Define asset types."
+      }
+    },
+    "entities": {
+      "assetType": {
+        "title": "Asset Type",
+        "plural": "Asset Types",
+        "groups": {
+          "basic-info": "Basic Information",
+          "maintenance-info": "Maintenance"
+        },
+        "fields": {
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter asset title"
+          },
+          "name": {
+            "title": "Name",
+            "placeholder": "Enter Latin name (letters, numbers, underscore, hyphen)"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Enter asset description"
+          },
+          "hasMaintenance": {
+            "title": "Enabled",
+            "gridTitle": "Has Maintenance"
+          },
+          "maintenanceTypeIds": {
+            "title": "Types",
+            "gridTitle": "Maintenance Types"
+          }
+        },
+        "components": {
+          "meta-data-form": {
+            "title": "Asset's Additional Information"
+          },
+          "components": {
+            "title": "Components"
+          },
+          "actions": {
+            "add-section": {
+              "title": "Add Section"
+            },
+            "edit-section": {
+              "title": "Edit Section"
+            },
+            "add-item": {
+              "title": "Add Component"
+            },
+            "preview": {
+              "title": "Preview"
+            }
+          },
+          "property-viewer": {
+            "tabs": {
+              "section": {
+                "title": "Section"
+              },
+              "component": {
+                "title": "Component"
+              }
+            },
+            "groups": {
+              "section-basic": {
+                "title": "Section"
+              },
+              "identifiers": {
+                "title": "Identifiers"
+              }
+            },
+            "fields": {
+              "id": {
+                "title": "ID"
+              },
+              "asset-type-id": {
+                "title": "Asset Type ID"
+              },
+              "section-folder-id": {
+                "title": "Section Folder ID"
+              }
+            },
+            "validation": {
+              "section-code": {
+                "title": "Invalid Code",
+                "description": "Enter a valid numeric section code."
+              },
+              "section-code-duplicate": {
+                "title": "Duplicate Code",
+                "description": "Another section already uses this code."
+              },
+              "section-title": {
+                "title": "Title Required",
+                "description": "Enter a section title."
+              },
+              "component-role": {
+                "title": "Role Required",
+                "description": "Enter a role name."
+              },
+              "component-count": {
+                "title": "Invalid Count",
+                "description": "Enter a valid non-negative count."
+              }
+            }
+          },
+          "builder": {
+            "empty-page": {
+              "title": "No Sections Yet. Use Add Section to Create One."
+            },
+            "empty-section": {
+              "title": "No Components Yet",
+              "description": "Add a component to this section."
+            }
+          }
+        },
+        "related-entities": {
+          "activity-type-asset-types": {
+            "title": "Activity Type"
+          },
+          "maintenance-templates": {
+            "title": "Maintenance Templates"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "asset": {
+        "actions": {
+          "manage": {
+            "title": "Manage Asset Types"
+          },
+          "view": {
+            "title": "View Asset Types"
+          },
+          "create": {
+            "title": "Create Asset Type"
+          },
+          "update": {
+            "title": "Edit Asset Type"
+          },
+          "delete": {
+            "title": "Delete Asset Types"
+          }
+        }
+      }
+    }
+  },
+  "assetSystemTypes": {
+    "menus": {
+      "root": {
+        "title": "Asset System Types"
+      }
+    },
+    "entities": {
+      "assetSystemType": {
+        "title": "Asset System Type",
+        "plural": "Asset System Types",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "id": {
+            "title": "ID"
+          },
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter asset system type code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter asset system type name"
+          },
+          "parentId": {
+            "title": "Parent System Type",
+            "placeholder": "Select parent system type"
+          },
+          "parent": {
+            "title": "Parent"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Enter asset system type description"
+          }
+        }
+      }
+    }
+  },
+  "assetSystems": {
+    "menus": {
+      "root": {
+        "title": "Asset Systems"
+      }
+    },
+    "entities": {
+      "assetSystem": {
+        "title": "Asset System",
+        "plural": "Asset Systems",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "id": {
+            "title": "ID"
+          },
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter asset system code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter asset system title"
+          },
+          "assetSystemTypeId": {
+            "title": "Asset System Type",
+            "placeholder": "Select asset system type"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Enter asset system description"
+          },
+          "locationId": {
+            "title": "Location",
+            "placeholder": "Enter location"
+          }
+        }
+      },
+      "related-entities": {
+        "work-packages": {
+          "title": "Work Packages"
+        },
+        "failure-registers": {
+          "title": "Failure Registers"
+        }
+      }
+    }
+  },
+  "assetSystemAssignments": {
+    "entities": {
+      "assetSystemAssignment": {
+        "title": "Asset System Assignment",
+        "plural": "Asset System Assignments",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "id": {
+            "title": "ID"
+          },
+          "date": {
+            "title": "Date"
+          },
+          "startDate": {
+            "title": "Start Date"
+          },
+          "endDate": {
+            "title": "End Date"
+          },
+          "assetSystemId": {
+            "title": "Asset System",
+            "placeholder": "Select asset system"
+          },
+          "assetId": {
+            "title": "Asset",
+            "placeholder": "Select asset"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Enter assignment description"
+          }
+        }
+      }
+    }
+  },
+  "common": {
+    "status": {
+      "draft": "Draft",
+      "active": "Active",
+      "returned": "Returned",
+      "overdue": "Overdue",
+      "cancelled": "Cancelled"
+    }
+  },
+  "assetRentalHistories": {
+    "transitions": {
+      "activate": "Activate rental",
+      "cancel-from-draft": "Cancel rental",
+      "return": "Mark as returned",
+      "mark-overdue": "Mark as overdue",
+      "cancel-rental": "Cancel rental"
+    },
+    "entities": {
+      "assetRentalHistory": {
+        "title": "Asset Rental Information",
+        "plural": "Asset Rental Informations",
+        "actions": {
+          "rent-from": {
+            "title": "Rent From",
+            "dialog-title": "Rent Asset from Supplier"
+          },
+          "rent-to": {
+            "title": "Rent To",
+            "dialog-title": "Rent Asset to Supplier"
+          }
+        },
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "validations": {
+          "rental-party-required": "Select a leased/rented to or leased/rented from supplier.",
+          "rented-to-required": "Leased/Rented To is required for this rental.",
+          "rented-from-required": "Leased/Rented From is required for this rental."
+        },
+        "fields": {
+          "id": {
+            "title": "ID"
+          },
+          "assetId": {
+            "title": "Asset",
+            "placeholder": "Select asset"
+          },
+          "rentedToId": {
+            "title": "Leased/Rented To"
+          },
+          "rentedFromId": {
+            "title": "Leased/Rented From"
+          },
+          "rentalDirection": {
+            "title": "Rental Direction"
+          },
+          "createdDate": {
+            "title": "Created"
+          },
+          "startDate": {
+            "title": "Start Date"
+          },
+          "monthlyRent": {
+            "title": "Monthly Rent"
+          },
+          "expectedReturnDate": {
+            "title": "Expected Return"
+          },
+          "actualReturnDate": {
+            "title": "Actual Return"
+          },
+          "status": {
+            "title": "Status"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Optional notes"
+          }
+        }
+      }
+    }
+  },
+  "assetTypeSections": {
+    "menus": {
+      "root": {
+        "title": "Asset Type Sections",
+        "description": "Section setup; open subsection items to manage related data."
+      }
+    },
+    "entities": {
+      "assetTypeSection": {
+        "title": "Asset Type Section",
+        "plural": "Asset Type Sections",
+        "actions": {
+          "add-section": {
+            "title": "Add Section"
+          }
+        },
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter section code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter section title"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Enter section description"
+          }
+        },
+        "related-entities": {
+          "assetTypeSectionComponents": {
+            "title": "Section Components",
+            "description": "Configure component rows for this section."
+          }
+        }
+      }
+    }
+  },
+  "assetTypeSectionComponents": {
+    "entities": {
+      "assetTypeSectionComponent": {
+        "title": "Section Component",
+        "plural": "Section Components",
+        "actions": {
+          "add-item": {
+            "title": "Add Component"
+          }
+        },
+        "groups": {
+          "section-folder": "Asset Type Section",
+          "component-content": "Component Details"
+        },
+        "fields": {
+          "assetTypeSectionId": {
+            "title": "Section",
+            "placeholder": "Select asset type section"
+          },
+          "roleName": {
+            "title": "Role Name",
+            "placeholder": "Enter role or component name"
+          },
+          "count": {
+            "title": "Count"
+          },
+          "hasMaintenance": {
+            "title": "Has Maintenance"
+          }
+        }
+      }
+    }
+  }
+}

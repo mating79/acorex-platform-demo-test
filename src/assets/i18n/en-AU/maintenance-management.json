@@ -1,0 +1,1942 @@
+{
+  "module": {
+    "title": "Maintenance Management",
+    "description": "Manage maintenance types and maintenance records for organizational assets.",
+    "menus": {
+      "root": {
+        "title": "Maintenance Management",
+        "description": "Explore all maintenance-related features."
+      },
+      "activities": {
+        "title": "Activities"
+      },
+      "failures": {
+        "title": "Failures"
+      }
+    },
+    "permissions": {
+      "title": "Maintenance Management",
+      "description": "Access to maintenance management features"
+    }
+  },
+  "catalog-scopes": {
+    "mn": {
+      "title": "Maintenance",
+      "description": "Questionnaires, question bank items, and workflow definitions for asset maintenance and failure management."
+    }
+  },
+  "maintenance-types": {
+    "terms": {
+      "maintenance-type": "Maintenance Type",
+      "maintenance-types": "Maintenance Types"
+    },
+    "menus": {
+      "root": {
+        "title": "Maintenance Types",
+        "description": "Configure reusable maintenance type definitions."
+      }
+    },
+    "entities": {
+      "maintenance-type": {
+        "title": "Maintenance Type",
+        "plural": "Maintenance Types",
+        "groups": {
+          "basic-info": "Basic Information",
+          "plan-scheduling": "Plan & Scheduling"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "e.g. MT-202605-0001"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter title for maintenance type"
+          },
+          "description": {
+            "placeholder": "Optional description of when to use this maintenance type"
+          },
+          "autoGeneratePlan": {
+            "title": "Auto Generate Plan"
+          },
+          "hasSchedule": {
+            "title": "Has Schedule"
+          }
+        },
+        "related-entities": {
+          "templates": {
+            "title": "Maintenance Templates"
+          },
+          "plans": {
+            "title": "Maintenance Plans"
+          }
+        },
+        "components": {
+          "list": {
+            "empty-states": {
+              "no-data": {
+                "title": "No Maintenance Types Defined",
+                "description": "Create at least one maintenance type to get started."
+              }
+            }
+          }
+        }
+      },
+      "maintenance-template": {
+        "groups": {
+          "Scheduling": "Scheduling"
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Maintenance Types",
+        "description": "Full access to maintenance type management"
+      },
+      "view": {
+        "title": "View Maintenance Types",
+        "description": "View maintenance type information"
+      },
+      "create": {
+        "title": "Create Maintenance Types",
+        "description": "Create new maintenance types"
+      },
+      "edit": {
+        "title": "Edit Maintenance Types",
+        "description": "Edit maintenance type information"
+      },
+      "delete": {
+        "title": "Delete Maintenance Types",
+        "description": "Delete maintenance types"
+      }
+    }
+  },
+  "maintenance-templates": {
+    "terms": {
+      "maintenance-template": "Maintenance Template",
+      "maintenance-templates": "Maintenance Templates"
+    },
+    "menus": {
+      "root": {
+        "title": "Maintenance Templates",
+        "description": "Define reusable maintenance execution templates per type and asset context."
+      }
+    },
+    "entities": {
+      "maintenance-template": {
+        "title": "Maintenance Template",
+        "plural": "Maintenance Templates",
+        "groups": {
+          "workflow": "Workflow",
+          "configuration": "Configuration",
+          "execution": "Execution",
+          "scheduling": "Scheduling"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "e.g. MNT-202605-0001"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter template title"
+          },
+          "description": {
+            "placeholder": "Enter description when this template applies"
+          },
+          "maintenance-type-id": {
+            "title": "Maintenance Type"
+          },
+          "asset-type-id": {
+            "title": "Asset Type"
+          },
+          "metadata-ids": {
+            "title": "Metadata Fields",
+            "placeholder": "Select metadata fields for this maintenance type"
+          },
+          "asset-status-type-id": {
+            "title": "Asset Status"
+          },
+          "work-permit": {
+            "title": "Work Permit"
+          },
+          "need-shutdown": {
+            "title": "Shutdown Required"
+          },
+          "estimated-minutes": {
+            "title": "Estimated Minutes",
+            "placeholder": "Typical duration in minutes"
+          },
+          "assessment-template-ids": {
+            "title": "Assessment Templates (Questionnaires)",
+            "placeholder": "Select assessment templates"
+          },
+          "schedule": {
+            "title": "Schedule",
+            "placeholder": "Cron, RRULE, or human-readable schedule"
+          },
+          "version-id": {
+            "title": "Version",
+            "placeholder": "Enter template version identifier"
+          },
+          "metadata": {
+            "title": "Metadata (JSON)",
+            "placeholder": "Optional JSON metadata for integrations"
+          },
+          "auto-generate-plan": {
+            "title": "Auto Generate Plan"
+          },
+          "has-schedule": {
+            "title": "Has Schedule"
+          }
+        },
+        "related-entities": {
+          "activity-types": {
+            "title": "Activity Types"
+          },
+          "failure-modes": {
+            "title": "Failure Modes"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Maintenance Templates",
+        "description": "Full access to maintenance template management"
+      },
+      "view": {
+        "title": "View Maintenance Templates",
+        "description": "View maintenance template definitions"
+      },
+      "create": {
+        "title": "Create Maintenance Templates",
+        "description": "Create new maintenance templates"
+      },
+      "edit": {
+        "title": "Edit Maintenance Templates",
+        "description": "Edit maintenance template definitions"
+      },
+      "delete": {
+        "title": "Delete Maintenance Templates",
+        "description": "Delete maintenance templates"
+      }
+    }
+  },
+  "maintenance-plans": {
+    "terms": {
+      "maintenance-plan": "Maintenance Plan",
+      "maintenance-plans": "Maintenance Plans"
+    },
+    "menus": {
+      "root": {
+        "title": "Maintenance Plans",
+        "description": "Plan recurring and scheduled maintenance execution for specific assets."
+      }
+    },
+    "entities": {
+      "maintenance-plan": {
+        "title": "Maintenance Plan",
+        "plural": "Maintenance Plans",
+        "groups": {
+          "plan-definition": "Plan Definition",
+          "schedule": "Schedule",
+          "assignment-priority": "Assignment & Priority",
+          "execution-settings": "Execution Settings"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "e.g. MP-202605-0001"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Plan display title"
+          },
+          "description": {
+            "placeholder": "Optional maintenance plan description"
+          },
+          "maintenance-type-id": {
+            "title": "Maintenance Type"
+          },
+          "asset-id": {
+            "title": "Asset"
+          },
+          "maintenance-template-id": {
+            "title": "Maintenance Template"
+          },
+          "schedule": {
+            "title": "Schedule"
+          },
+          "assigned-to-id": {
+            "title": "Assigned To"
+          },
+          "priority-id": {
+            "title": "Priority"
+          },
+          "work-permit": {
+            "title": "Work Permit"
+          },
+          "need-shutdown": {
+            "title": "Shutdown Required"
+          },
+          "estimated-hours": {
+            "title": "Estimated Hours"
+          },
+          "auto-generated-plan": {
+            "title": "Auto Generated"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Maintenance Plans",
+        "description": "Full access to maintenance plan management"
+      },
+      "view": {
+        "title": "View Maintenance Plans",
+        "description": "View maintenance plan information"
+      },
+      "create": {
+        "title": "Create Maintenance Plans",
+        "description": "Create new maintenance plans"
+      },
+      "edit": {
+        "title": "Edit Maintenance Plans",
+        "description": "Edit maintenance plan information"
+      },
+      "delete": {
+        "title": "Delete Maintenance Plans",
+        "description": "Delete maintenance plans"
+      }
+    }
+  },
+  "work-packages": {
+    "terms": {
+      "work-package": "Work Package",
+      "work-packages": "Work Packages"
+    },
+    "entities": {
+      "work-package": {
+        "title": "Work Package",
+        "plural": "Work Packages",
+        "groups": {
+          "scope-context": "Scope & Context",
+          "timing": "Timing"
+        },
+        "fields": {
+          "code": {
+            "title": "Code"
+          },
+          "title": {
+            "title": "Title"
+          },
+          "description": {
+            "title": "Description"
+          },
+          "asset-system-id": {
+            "title": "Asset System"
+          },
+          "planned-start": {
+            "title": "Planned Start"
+          },
+          "planned-end": {
+            "title": "Planned End"
+          },
+          "started-at": {
+            "title": "Started At"
+          },
+          "completed-at": {
+            "title": "Completed At"
+          },
+          "need-shutdown": {
+            "title": "Shutdown Required"
+          },
+          "work-order-ids": {
+            "title": "Work Orders"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Work Packages",
+        "description": "Full access to work package management"
+      },
+      "view": {
+        "title": "View Work Packages",
+        "description": "View work package information"
+      },
+      "create": {
+        "title": "Create Work Packages",
+        "description": "Create new work packages"
+      },
+      "edit": {
+        "title": "Edit Work Packages",
+        "description": "Edit work package information"
+      },
+      "delete": {
+        "title": "Delete Work Packages",
+        "description": "Delete work packages"
+      }
+    }
+  },
+  "work-orders": {
+    "terms": {
+      "work-order": "Work Order",
+      "work-orders": "Work Orders"
+    },
+    "source-types": {
+      "manual": "Manual",
+      "maintenance-plan": "Maintenance Plan",
+      "create-asset": "Create Asset",
+      "failure-register": "Failure Register"
+    },
+    "states": {
+      "planned": "Planned",
+      "scheduled": "Scheduled",
+      "assigned": "Assigned",
+      "in-progress": "In Progress",
+      "on-hold": "On Hold",
+      "completed": "Completed",
+      "signed-off": "Signed Off",
+      "cancelled": "Cancelled"
+    },
+    "status": {
+      "transitions": {
+        "schedule": "Schedule work order",
+        "assign": "Assign work order",
+        "start-work": "Start work",
+        "reschedule": "Reschedule",
+        "put-on-hold": "Put on hold",
+        "complete": "Mark complete",
+        "resume": "Resume work",
+        "sign-off": "Sign off",
+        "reopen": "Reopen work order",
+        "cancel": "Cancel work order"
+      }
+    },
+    "actions": {
+      "start-flow": {
+        "title": "Start maintenance flow",
+        "select-template": {
+          "title": "Select maintenance template",
+          "content": "Choose which maintenance template workflow to start for this work order."
+        }
+      },
+      "complete-checklist": {
+        "title": "Complete checklist"
+      }
+    },
+    "messages": {
+      "no-workflow-configured": "No maintenance workflow is configured on the template for this work order.",
+      "no-workflow-templates-for-asset": "No maintenance template with a workflow is available for this asset.",
+      "flow-requires-startable-status": "The work order must be planned, scheduled, or assigned before starting the maintenance flow.",
+      "assigned-user-required": "Assign a person to this work order before starting the maintenance workflow.",
+      "assigned-employee-required": "The assigned person must be linked to an employee record before starting the approval workflow.",
+      "workflow-started-use-task-board": "Maintenance workflow started. Open the task board to continue the next steps.",
+      "sign-off": "Review the work order and checklist answers, then sign off to approve.",
+      "rejection": "Provide a reason for rejecting this work order.",
+      "approval-success": "Work order was approved and signed off.",
+      "approval-rejected": "Work order approval was rejected. Complete the required steps and start the flow again.",
+      "checklist-start-failed": "Work could not be started after the checklist. Verify the assignee and try again."
+    },
+    "tasks": {
+      "task-title": "Work order — {{ workOrderCode }}",
+      "checklist": {
+        "description": "Complete the checklist before starting maintenance."
+      },
+      "mid-checklist": {
+        "description": "Complete the mid-work checklist during maintenance."
+      },
+      "post-checklist": {
+        "description": "Complete the post-work compliance checklist."
+      },
+      "technician-work": {
+        "description": "Perform the maintenance work, then mark work as complete."
+      },
+      "supervisor-approval": {
+        "description": "Review the work order and checklist answers. Approve or reject when ready."
+      },
+      "actions": {
+        "open-questionnaire": "Open questionnaire",
+        "work-complete": "Mark work complete",
+        "review": "Review",
+        "reject": "Reject"
+      }
+    },
+    "entities": {
+      "work-order": {
+        "title": "Work Order",
+        "plural": "Work Orders",
+        "related-entities": {
+          "work-reports": {
+            "title": "Work Reports"
+          }
+        },
+        "groups": {
+          "basic-info": "Basic Information",
+          "scheduling-execution": "Scheduling & Execution",
+          "assignment": "Assignment",
+          "execution-settings": "Execution Settings",
+          "required-checklist": "Required Checklist",
+          "approval": "Approval"
+        },
+        "components": {
+          "meta-data-form": {
+            "title": "Metadata"
+          }
+        },
+        "fields": {
+          "work-order-no": {
+            "title": "Work Order No",
+            "placeholder": "Enter work order number"
+          },
+          "asset-id": {
+            "title": "Asset"
+          },
+          "plannable": {
+            "title": "Plannable"
+          },
+          "maintenance-type-id": {
+            "title": "Maintenance Type"
+          },
+          "maintenance-template-id": {
+            "title": "Maintenance Template"
+          },
+          "workflow-column": {
+            "title": "Maintenance Process",
+            "select-workflow": "Start process"
+          },
+          "work-report-column": {
+            "title": "Work Report",
+            "empty": "No report",
+            "view-report": "View report"
+          },
+          "maintenance-plan-id": {
+            "title": "Maintenance Plan"
+          },
+          "failure-register-id": {
+            "title": "Failure Register"
+          },
+          "priority-id": {
+            "title": "Priority"
+          },
+          "source-type": {
+            "title": "Source Type"
+          },
+          "title": {
+            "title": "Title"
+          },
+          "scheduled-start": {
+            "title": "Scheduled Start"
+          },
+          "scheduled-end": {
+            "title": "Scheduled End"
+          },
+          "started-at": {
+            "title": "Started At"
+          },
+          "completed-at": {
+            "title": "Completed At"
+          },
+          "assigned-to-id": {
+            "title": "Assigned To"
+          },
+          "requested-by-id": {
+            "title": "Requested By"
+          },
+          "estimated-hours": {
+            "title": "Estimated Hours"
+          },
+          "actual-hours": {
+            "title": "Actual Hours"
+          },
+          "downtime-minutes": {
+            "title": "Downtime Minutes"
+          },
+          "work-permit": {
+            "title": "Work Permit"
+          },
+          "need-shutdown": {
+            "title": "Shutdown Required"
+          },
+          "auto-generated-work-order": {
+            "title": "Auto Generated"
+          },
+          "checklist-response-id": {
+            "title": "Checklist response"
+          },
+          "approval-status": {
+            "title": "Approval status"
+          },
+          "rejection-reason": {
+            "title": "Rejection reason"
+          },
+          "metadata-value": {
+            "title": "Metadata"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Work Orders",
+        "description": "Full access to work order management"
+      },
+      "view": {
+        "title": "View Work Orders",
+        "description": "View work order information"
+      },
+      "create": {
+        "title": "Create Work Orders",
+        "description": "Create new work orders"
+      },
+      "edit": {
+        "title": "Edit Work Orders",
+        "description": "Edit work order information"
+      },
+      "delete": {
+        "title": "Delete Work Orders",
+        "description": "Delete work orders"
+      }
+    }
+  },
+  "work-reports": {
+    "terms": {
+      "work-report": "Work Report",
+      "work-reports": "Work Reports"
+    },
+    "entities": {
+      "work-report": {
+        "title": "Work Report",
+        "plural": "Work Reports",
+        "groups": {
+          "system-info": "System Information",
+          "work-details": "Work Details",
+          "checklist-results": "Checklist Results"
+        },
+        "fields": {
+          "work-order-id": {
+            "title": "Work Order"
+          },
+          "assessments": {
+            "title": "Checklist Results",
+            "checklist-label": "Checklist {{index}}",
+            "actions": {
+              "view-response": "View Response"
+            }
+          },
+          "reported-at": {
+            "title": "Reported At"
+          },
+          "performed-by-id": {
+            "title": "Performed By"
+          },
+          "result": {
+            "title": "Result",
+            "placeholder": "Enter the overall result"
+          },
+          "summary": {
+            "title": "Summary",
+            "placeholder": "Enter short summary of the work performed"
+          },
+          "action-taken": {
+            "title": "Action Taken",
+            "placeholder": "Enter actions completed during the work"
+          },
+          "recommendation": {
+            "title": "Recommendation",
+            "placeholder": "Enter recommendations for follow-up or next steps"
+          },
+          "labor-hours": {
+            "title": "Labor Hours"
+          },
+          "downtime-minutes": {
+            "title": "Downtime Minutes"
+          },
+          "started-at": {
+            "title": "Started At"
+          },
+          "ended-at": {
+            "title": "Ended At"
+          },
+          "finalized-at": {
+            "title": "Finalized At"
+          },
+          "need-follow-up": {
+            "title": "Action Required"
+          },
+          "follow-up-work-order-id": {
+            "title": "Work Order"
+          }
+        }
+      }
+    },
+    "commands": {
+      "fill-completion": {
+        "title": "Complete Work Report"
+      }
+    },
+    "messages": {
+      "not-created-yet": "Work report has not been created yet."
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Work Reports",
+        "description": "Full access to work report management"
+      },
+      "view": {
+        "title": "View Work Reports",
+        "description": "View work report information"
+      },
+      "create": {
+        "title": "Create Work Reports",
+        "description": "Create new work reports"
+      },
+      "edit": {
+        "title": "Edit Work Reports",
+        "description": "Edit work report information"
+      },
+      "delete": {
+        "title": "Delete Work Reports",
+        "description": "Delete work reports"
+      }
+    }
+  },
+  "maintenance-template-activity-types": {
+    "terms": {
+      "maintenance-template-activity-type": "Maintenance Template Activity Type",
+      "maintenance-template-activity-types": "Maintenance Template Activity Types"
+    },
+    "entities": {
+      "maintenance-template-activity-type": {
+        "title": "Maintenance Template Activity Type",
+        "plural": "Maintenance Template Activity Types",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "maintenance-template-id": {
+            "title": "Maintenance Template"
+          },
+          "activity-type-id": {
+            "title": "Activity Type"
+          },
+          "sequence-no": {
+            "title": "Sequence No",
+            "placeholder": "Enter sequence number"
+          },
+          "need-shutdown": {
+            "title": "Shutdown Required"
+          },
+          "is-main-activity": {
+            "title": "Main Activity"
+          },
+          "estimated-minutes": {
+            "title": "Estimated Minutes",
+            "placeholder": "Enter estimated minutes"
+          },
+          "description": {
+            "placeholder": "Enter optional description"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Maintenance Template Activity Types",
+        "description": "Full access to maintenance template activity type management"
+      },
+      "view": {
+        "title": "View Maintenance Template Activity Types",
+        "description": "View maintenance template activity type information"
+      },
+      "create": {
+        "title": "Create Maintenance Template Activity Types",
+        "description": "Create new maintenance template activity types"
+      },
+      "edit": {
+        "title": "Edit Maintenance Template Activity Types",
+        "description": "Edit maintenance template activity type information"
+      },
+      "delete": {
+        "title": "Delete Maintenance Template Activity Types",
+        "description": "Delete maintenance template activity types"
+      }
+    }
+  },
+  "maintenance-template-resources": {
+    "terms": {
+      "maintenance-template-resource": "Maintenance Template Resource",
+      "maintenance-template-resources": "Maintenance Template Resources"
+    },
+    "entities": {
+      "maintenance-template-resource": {
+        "title": "Maintenance Template Resource",
+        "plural": "Maintenance Template Resources",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter code"
+          },
+          "maintenance-template-id": {
+            "title": "Maintenance Template"
+          },
+          "resource-type": {
+            "title": "Resource Type",
+            "options": {
+              "assettype": "Asset Type",
+              "jobdefinition": "Job Definition",
+              "inventoryitem": "Inventory Item"
+            }
+          },
+          "resource-id": {
+            "title": "Resource",
+            "placeholder": "Select or enter resource"
+          },
+          "resource-summary": {
+            "title": "Resource (summary)"
+          },
+          "quantity": {
+            "title": "Quantity",
+            "placeholder": "Enter quantity"
+          },
+          "estimated-hours": {
+            "title": "Estimated Hours",
+            "placeholder": "Enter estimated hours"
+          },
+          "description": {
+            "placeholder": "Optional description"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Maintenance Template Resources",
+        "description": "Full access to maintenance template resource management"
+      },
+      "view": {
+        "title": "View Maintenance Template Resources",
+        "description": "View maintenance template resources"
+      },
+      "create": {
+        "title": "Create Maintenance Template Resources",
+        "description": "Create new maintenance template resources"
+      },
+      "edit": {
+        "title": "Edit Maintenance Template Resources",
+        "description": "Edit maintenance template resources"
+      },
+      "delete": {
+        "title": "Delete Maintenance Template Resources",
+        "description": "Delete maintenance template resources"
+      }
+    }
+  },
+  "maintenance-template-failure-modes": {
+    "terms": {
+      "maintenance-template-failure-mode": "Maintenance Template Failure Mode",
+      "maintenance-template-failure-modes": "Maintenance Template Failure Modes"
+    },
+    "entities": {
+      "maintenance-template-failure-mode": {
+        "title": "Maintenance Template Failure Mode",
+        "plural": "Maintenance Template Failure Modes",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter code"
+          },
+          "maintenance-template-id": {
+            "title": "Maintenance Template"
+          },
+          "failure-mode-id": {
+            "title": "Failure Mode"
+          },
+          "description": {
+            "placeholder": "Enter optional description"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Maintenance Template Failure Modes",
+        "description": "Full access to maintenance template failure mode management"
+      },
+      "view": {
+        "title": "View Maintenance Template Failure Modes",
+        "description": "View maintenance template failure modes"
+      },
+      "create": {
+        "title": "Create Maintenance Template Failure Modes",
+        "description": "Create new maintenance template failure modes"
+      },
+      "edit": {
+        "title": "Edit Maintenance Template Failure Modes",
+        "description": "Edit maintenance template failure modes"
+      },
+      "delete": {
+        "title": "Delete Maintenance Template Failure Modes",
+        "description": "Delete maintenance template failure modes"
+      }
+    }
+  },
+  "maintenances": {
+    "terms": {
+      "maintenance": "Maintenance",
+      "maintenances": "Maintenances"
+    },
+    "menus": {
+      "root": {
+        "title": "Maintenances",
+        "description": "Record and manage maintenance activities."
+      }
+    },
+    "entities": {
+      "maintenance": {
+        "title": "Maintenance",
+        "plural": "Maintenances",
+        "groups": {
+          "basic-info": "Basic Information",
+          "performed-by": "Performed By",
+          "additional": "Additional Details"
+        },
+        "fields": {
+          "resource-id": {
+            "title": "Resources",
+            "placeholder": "Select resource"
+          },
+          "maintenance-type-id": {
+            "title": "Maintenance Type",
+            "placeholder": "Select maintenance type"
+          },
+          "performed-by": {
+            "title": "Performed By",
+            "options": {
+              "employee": "Employee",
+              "thirdParty": "Third Party"
+            }
+          },
+          "employee-id": {
+            "title": "Employee",
+            "placeholder": "Select employee"
+          },
+          "third-party-id": {
+            "title": "Third Party",
+            "placeholder": "Select third party"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Enter maintenance description"
+          }
+        },
+        "components": {
+          "meta-data-form": {
+            "title": "Metadata"
+          },
+          "list": {
+            "empty-states": {
+              "no-data": {
+                "title": "No Maintenances Recorded",
+                "description": "Create a maintenance record to track maintenance activities."
+              }
+            }
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Maintenances",
+        "description": "Full access to maintenance management"
+      },
+      "view": {
+        "title": "View Maintenances",
+        "description": "View maintenance information"
+      },
+      "create": {
+        "title": "Create Maintenances",
+        "description": "Create new maintenance records"
+      },
+      "edit": {
+        "title": "Edit Maintenances",
+        "description": "Edit maintenance information"
+      },
+      "delete": {
+        "title": "Delete Maintenances",
+        "description": "Delete maintenance records"
+      }
+    },
+    "search": {
+      "create-maintenance": {
+        "title": "Create Maintenance",
+        "description": "Open the maintenance form to record a new maintenance activity."
+      }
+    }
+  },
+  "failure-causes": {
+    "terms": {
+      "failure-cause": "Failure Cause",
+      "failure-causes": "Failure Causes"
+    },
+    "entities": {
+      "failure-cause": {
+        "title": "Failure Cause",
+        "plural": "Failure Causes",
+        "groups": {
+          "basic-info": "Basic Information",
+          "failure-detail": "Failure Details",
+          "impact-planning": "Impact & Planning"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter a short code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter failure cause title"
+          },
+          "description": {
+            "placeholder": "Enter optional description"
+          }
+        },
+        "related-entities": {
+          "sub-causes": {
+            "title": "Sub-Causes"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Failure Causes",
+        "description": "Full access to failure cause management"
+      },
+      "view": {
+        "title": "View Failure Causes",
+        "description": "View failure cause information"
+      },
+      "create": {
+        "title": "Create Failure Causes",
+        "description": "Create new failure causes"
+      },
+      "edit": {
+        "title": "Edit Failure Causes",
+        "description": "Edit failure cause information"
+      },
+      "delete": {
+        "title": "Delete Failure Causes",
+        "description": "Delete failure causes"
+      }
+    }
+  },
+  "failure-mechanisms": {
+    "terms": {
+      "failure-mechanism": "Failure Mechanism",
+      "failure-mechanisms": "Failure Mechanisms"
+    },
+    "entities": {
+      "failure-mechanism": {
+        "title": "Failure Mechanism",
+        "plural": "Failure Mechanisms",
+        "groups": {
+          "basic-info": "Basic Information",
+          "details": "Details"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter a short code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter failure mechanism title"
+          },
+          "description": {
+            "placeholder": "Enter optional description"
+          }
+        },
+        "related-entities": {
+          "activity-types": {
+            "title": "Activity Types"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Failure Mechanisms",
+        "description": "Full access to failure mechanism management"
+      },
+      "view": {
+        "title": "View Failure Mechanisms",
+        "description": "View failure mechanism information"
+      },
+      "create": {
+        "title": "Create Failure Mechanisms",
+        "description": "Create new failure mechanisms"
+      },
+      "edit": {
+        "title": "Edit Failure Mechanisms",
+        "description": "Edit failure mechanism information"
+      },
+      "delete": {
+        "title": "Delete Failure Mechanisms",
+        "description": "Delete failure mechanisms"
+      }
+    }
+  },
+  "failure-detections": {
+    "terms": {
+      "failure-detection": "Failure Detection",
+      "failure-detections": "Failure Detections"
+    },
+    "entities": {
+      "failure-detection": {
+        "title": "Failure Detection",
+        "plural": "Failure Detections",
+        "groups": {
+          "basic-info": "Basic Information",
+          "details": "Details"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter a short code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter failure detection title"
+          },
+          "description": {
+            "placeholder": "Enter optional description"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Failure Detections",
+        "description": "Full access to failure detection management"
+      },
+      "view": {
+        "title": "View Failure Detections",
+        "description": "View failure detection information"
+      },
+      "create": {
+        "title": "Create Failure Detections",
+        "description": "Create new failure detections"
+      },
+      "edit": {
+        "title": "Edit Failure Detections",
+        "description": "Edit failure detection information"
+      },
+      "delete": {
+        "title": "Delete Failure Detections",
+        "description": "Delete failure detections"
+      }
+    }
+  },
+  "failure-effects": {
+    "terms": {
+      "failure-effect": "Failure Effect",
+      "failure-effects": "Failure Effects"
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Failure Effects",
+        "description": "Full access to failure effect management"
+      },
+      "view": {
+        "title": "View Failure Effects",
+        "description": "View failure effect information"
+      },
+      "create": {
+        "title": "Create Failure Effects",
+        "description": "Create new failure effects"
+      },
+      "edit": {
+        "title": "Edit Failure Effects",
+        "description": "Edit failure effect information"
+      },
+      "delete": {
+        "title": "Delete Failure Effects",
+        "description": "Delete failure effects"
+      }
+    },
+    "entities": {
+      "failure-effect": {
+        "title": "Failure Effect",
+        "plural": "Failure Effects",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter a short code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter failure effect title"
+          },
+          "description": {
+            "placeholder": "Enter optional description"
+          }
+        }
+      }
+    }
+  },
+  "failure-severities": {
+    "terms": {
+      "failure-severity": "Failure Severity",
+      "failure-severities": "Failure Severities"
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Failure Severities",
+        "description": "Full access to failure severity management"
+      },
+      "view": {
+        "title": "View Failure Severities",
+        "description": "View failure severity information"
+      },
+      "create": {
+        "title": "Create Failure Severities",
+        "description": "Create new failure severities"
+      },
+      "edit": {
+        "title": "Edit Failure Severities",
+        "description": "Edit failure severity information"
+      },
+      "delete": {
+        "title": "Delete Failure Severities",
+        "description": "Delete failure severities"
+      }
+    },
+    "entities": {
+      "failure-severity": {
+        "title": "Failure Severity",
+        "plural": "Failure Severities",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter a short code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter failure severity title"
+          },
+          "description": {
+            "placeholder": "Enter optional description"
+          }
+        }
+      }
+    }
+  },
+  "failure-types": {
+    "terms": {
+      "failure-type": "Failure Type",
+      "failure-types": "Failure Types"
+    },
+    "entities": {
+      "failure-type": {
+        "title": "Failure Type",
+        "plural": "Failure Types",
+        "groups": {
+          "basic-info": "Basic Information",
+          "overview": "Overview"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter a short code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter failure type title"
+          },
+          "description": {
+            "placeholder": "Enter optional description"
+          }
+        },
+        "related-entities": {
+          "failure-modes": {
+            "title": "Failure Modes"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Failure Types",
+        "description": "Full access to failure type management"
+      },
+      "view": {
+        "title": "View Failure Types",
+        "description": "View failure type information"
+      },
+      "create": {
+        "title": "Create Failure Types",
+        "description": "Create new failure types"
+      },
+      "edit": {
+        "title": "Edit Failure Types",
+        "description": "Edit failure type information"
+      },
+      "delete": {
+        "title": "Delete Failure Types",
+        "description": "Delete failure types"
+      }
+    }
+  },
+  "activity-categories": {
+    "terms": {
+      "activity-category": "Activity Category",
+      "activity-categories": "Activity Categories"
+    },
+    "entities": {
+      "activity-category": {
+        "title": "Activity Category",
+        "plural": "Activity Categories",
+        "groups": {
+          "overview": "Overview"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter a short code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter category title"
+          },
+          "description": {
+            "placeholder": "Enter optional description"
+          }
+        },
+        "related-entities": {
+          "activity-types": {
+            "title": "Activity Types"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Activity Categories",
+        "description": "Full access to activity category management"
+      },
+      "view": {
+        "title": "View Activity Categories",
+        "description": "View activity category information"
+      },
+      "create": {
+        "title": "Create Activity Categories",
+        "description": "Create new activity categories"
+      },
+      "edit": {
+        "title": "Edit Activity Categories",
+        "description": "Edit activity category information"
+      },
+      "delete": {
+        "title": "Delete Activity Categories",
+        "description": "Delete activity categories"
+      }
+    }
+  },
+  "activity-types": {
+    "terms": {
+      "activity-type": "Activity Type",
+      "activity-types": "Activity Types"
+    },
+    "entities": {
+      "activity-type": {
+        "title": "Activity Type",
+        "plural": "Activity Types",
+        "groups": {
+          "basic-info": "Basic Information",
+          "scheduling": "Scheduling",
+          "execution-planning": "Execution Planning"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter a short code"
+          },
+          "activity-category-id": {
+            "title": "Activity Category"
+          },
+          "schedule-id": {
+            "title": "Schedule",
+            "placeholder": "Configure recurrence schedule"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter activity type title"
+          },
+          "description": {
+            "placeholder": "Optional description"
+          },
+          "initial-estimated-time": {
+            "title": "Estimated Duration (minutes)",
+            "placeholder": "e.g. 120"
+          },
+          "shut-down-flag": {
+            "title": "Shutdown Required"
+          }
+        },
+        "related-entities": {
+          "asset-types": {
+            "title": "Asset Types"
+          },
+          "resources": {
+            "title": "Resources"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Activity Types",
+        "description": "Full access to activity type management"
+      },
+      "view": {
+        "title": "View Activity Types",
+        "description": "View activity type information"
+      },
+      "create": {
+        "title": "Create Activity Types",
+        "description": "Create new activity types"
+      },
+      "edit": {
+        "title": "Edit Activity Types",
+        "description": "Edit activity type information"
+      },
+      "delete": {
+        "title": "Delete Activity Types",
+        "description": "Delete activity types"
+      }
+    }
+  },
+  "activity-type-asset-types": {
+    "terms": {
+      "activity-type-asset-type": "Activity Team Assignment",
+      "activity-type-asset-types": "Activity Team Assignments"
+    },
+    "entities": {
+      "activity-type-asset-type": {
+        "title": "Activity Team Assignment",
+        "plural": "Activity Team Assignments",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "activity-type-id": {
+            "title": "Activity Type"
+          },
+          "asset-type-id": {
+            "title": "Asset Type"
+          },
+          "work-team-id": {
+            "title": "Work Team",
+            "placeholder": "Enter work team"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Activity Type Asset Types",
+        "description": "Full access to activity type asset type management"
+      },
+      "view": {
+        "title": "View Activity Type Asset Types",
+        "description": "View activity type asset type information"
+      },
+      "create": {
+        "title": "Create Activity Type Asset Types",
+        "description": "Create new activity type asset types"
+      },
+      "edit": {
+        "title": "Edit Activity Type Asset Types",
+        "description": "Edit activity type asset type information"
+      },
+      "delete": {
+        "title": "Delete Activity Type Asset Types",
+        "description": "Delete activity type asset types"
+      }
+    }
+  },
+  "activity-type-resources": {
+    "terms": {
+      "activity-type-resource": "Activity Type Resource",
+      "activity-type-resources": "Activity Type Resources"
+    },
+    "entities": {
+      "activity-type-resource": {
+        "title": "Activity Type Resource",
+        "plural": "Activity Type Resources",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "activity-type-id": {
+            "title": "Activity Type"
+          },
+          "resource-type": {
+            "title": "Resource Type",
+            "options": {
+              "assettype": "Asset Type",
+              "jobdefinition": "Job Definition",
+              "inventoryitem": "Inventory Item"
+            }
+          },
+          "resource-id": {
+            "title": "Resources",
+            "placeholder": "Enter resource ID"
+          },
+          "resource-selection-ids": {
+            "placeholder": "Select resources"
+          },
+          "resource-summary": {
+            "title": "Resources"
+          },
+          "count": {
+            "title": "Count",
+            "placeholder": "Enter required quantity"
+          },
+          "initial-estimated-time": {
+            "title": "Initial Estimated Time (minutes)",
+            "placeholder": "e.g. 30"
+          },
+          "description": {
+            "placeholder": "Enter optional description"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Activity Type Resources",
+        "description": "Full access to activity type resource management"
+      },
+      "view": {
+        "title": "View Activity Type Resources",
+        "description": "View activity type resource information"
+      },
+      "create": {
+        "title": "Create Activity Type Resources",
+        "description": "Create new activity type resources"
+      },
+      "edit": {
+        "title": "Edit Activity Type Resources",
+        "description": "Edit activity type resource information"
+      },
+      "delete": {
+        "title": "Delete Activity Type Resources",
+        "description": "Delete activity type resources"
+      }
+    }
+  },
+  "failure-modes": {
+    "terms": {
+      "failure-mode": "Failure Mode",
+      "failure-modes": "Failure Modes"
+    },
+    "priority": {
+      "critical": "Critical",
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "priorities": {
+      "critical": "Critical",
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "entities": {
+      "failure-mode": {
+        "title": "Failure Mode",
+        "plural": "Failure Modes",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter a short code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter failure mode title"
+          },
+          "description": {
+            "placeholder": "Optional description"
+          },
+          "shut-down-flag": {
+            "title": "Shutdown Required"
+          },
+          "priority-id": {
+            "title": "Priority"
+          },
+          "failure-type-id": {
+            "title": "Failure Type"
+          },
+          "initial-estimated-time": {
+            "title": "Estimated Duration (minutes)",
+            "placeholder": "e.g. 120"
+          }
+        },
+        "related-entities": {
+          "asset-types": {
+            "title": "Asset Types"
+          },
+          "mechanisms": {
+            "title": "Mechanisms"
+          },
+          "solutions": {
+            "title": "Solutions"
+          },
+          "reports": {
+            "title": "Reports"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Failure Modes",
+        "description": "Full access to failure mode management"
+      },
+      "view": {
+        "title": "View Failure Modes",
+        "description": "View failure mode information"
+      },
+      "create": {
+        "title": "Create Failure Modes",
+        "description": "Create new failure modes"
+      },
+      "edit": {
+        "title": "Edit Failure Modes",
+        "description": "Edit failure mode information"
+      },
+      "delete": {
+        "title": "Delete Failure Modes",
+        "description": "Delete failure modes"
+      }
+    }
+  },
+  "failure-mode-asset-types": {
+    "terms": {
+      "failure-mode-asset-type": "Failure Mode Asset Type",
+      "failure-mode-asset-types": "Failure Mode Asset Types"
+    },
+    "entities": {
+      "failure-mode-asset-type": {
+        "title": "Failure Mode Asset Type",
+        "plural": "Failure Mode Asset Types",
+        "groups": {
+          "basic-info": "Basic Information",
+          "details": "Details"
+        },
+        "fields": {
+          "failure-mode-id": {
+            "title": "Failure Mode"
+          },
+          "asset-type-id": {
+            "title": "Asset Type"
+          },
+          "priority-id": {
+            "title": "Priority"
+          },
+          "shut-down-flag": {
+            "title": "Shutdown Required"
+          },
+          "credit-required": {
+            "title": "Credit Required",
+            "placeholder": "Enter required credit"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Enter description"
+          }
+        }
+      }
+    }
+  },
+  "failure-mode-mechanisms": {
+    "terms": {
+      "failure-mode-mechanism": "Failure Mode Mechanism",
+      "failure-mode-mechanisms": "Failure Mode Mechanisms"
+    },
+    "entities": {
+      "failure-mode-mechanism": {
+        "title": "Failure Mode Mechanism",
+        "plural": "Failure Mode Mechanisms",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "failure-mode-id": {
+            "title": "Failure Mode"
+          },
+          "failure-mechanism-id": {
+            "title": "Failure Mechanism"
+          }
+        }
+      }
+    }
+  },
+  "failure-mode-solutions": {
+    "terms": {
+      "failure-mode-solution": "Failure Mode Solution",
+      "failure-mode-solutions": "Failure Mode Solutions"
+    },
+    "risk-levels": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High",
+      "critical": "Critical"
+    },
+    "solution-types": {
+      "temporary": "Temporary",
+      "permanent": "Permanent",
+      "workaround": "Workaround",
+      "preventive": "Preventive"
+    },
+    "entities": {
+      "failure-mode-solution": {
+        "title": "Failure Mode Solution",
+        "plural": "Failure Mode Solutions",
+        "groups": {
+          "basic-info": "Basic Information",
+          "details": "Details"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "Enter a short code"
+          },
+          "title": {
+            "title": "Title",
+            "placeholder": "Enter solution title"
+          },
+          "failure-mode-id": {
+            "title": "Failure Mode"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Enter solution description"
+          },
+          "success-rate": {
+            "title": "Success Rate (%)",
+            "placeholder": "Enter success rate between 0 and 100"
+          },
+          "risk-level": {
+            "title": "Risk Level"
+          },
+          "estimated-cost": {
+            "title": "Estimated Cost",
+            "placeholder": "Enter estimated cost"
+          },
+          "solution-type": {
+            "title": "Solution Type"
+          }
+        }
+      }
+    }
+  },
+  "failure-registers": {
+    "terms": {
+      "failure-register": "Failure Register",
+      "failure-registers": "Failure Registers"
+    },
+    "permissions": {
+      "manage": {
+        "title": "Manage Failure Registers",
+        "description": "Full access to failure register management"
+      },
+      "view": {
+        "title": "View Failure Registers",
+        "description": "View failure register information"
+      },
+      "create": {
+        "title": "Create Failure Registers",
+        "description": "Create new failure registers"
+      },
+      "edit": {
+        "title": "Edit Failure Registers",
+        "description": "Edit failure register information"
+      },
+      "delete": {
+        "title": "Delete Failure Registers",
+        "description": "Delete failure registers"
+      }
+    },
+    "status": {
+      "transitions": {
+        "submit-for-review": "Submit for review",
+        "require-work-order": "Require work order",
+        "reject": "Reject",
+        "mark-duplicate": "Mark as duplicate",
+        "create-work-order": "Create work order",
+        "start-work-order": "Start work order",
+        "resolve": "Mark resolved",
+        "require-follow-up": "Require follow-up",
+        "create-follow-up-work-order": "Create follow-up work order",
+        "close": "Close register"
+      }
+    },
+    "states": {
+      "reported": "Reported",
+      "under-review": "Under review",
+      "work-order-required": "Work order required",
+      "work-order-created": "Work order created",
+      "in-progress": "In progress (work order)",
+      "resolved": "Resolved",
+      "follow-up-required": "Follow-up required",
+      "rejected": "Rejected",
+      "duplicate": "Duplicate",
+      "closed": "Closed"
+    },
+    "entities": {
+      "failure-register": {
+        "title": "Failure Register",
+        "plural": "Failure Registers",
+        "groups": {
+          "basic-info": "Basic Information",
+          "asset-detail": "Asset Detail",
+          "failure-details": "Failure Details",
+          "outcome-info": "Outcome"
+        },
+        "fields": {
+          "code": {
+            "title": "Code",
+            "placeholder": "e.g. FR-2026-0001"
+          },
+          "date": {
+            "title": "Date"
+          },
+          "asset-system-id": {
+            "title": "Asset System"
+          },
+          "asset-id": {
+            "title": "Asset"
+          },
+          "failure-mode-id": {
+            "title": "Failure Mode"
+          },
+          "failure-detection-id": {
+            "title": "Failure Detection"
+          },
+          "priority-id": {
+            "title": "Priority"
+          },
+          "failure-severity-id": {
+            "title": "Failure Severity"
+          },
+          "description": {
+            "title": "Description",
+            "placeholder": "Describe the observed failure"
+          }
+        },
+        "related-entities": {
+          "effects": {
+            "title": "Effects"
+          },
+          "causes": {
+            "title": "Causes"
+          },
+          "mechanisms": {
+            "title": "Mechanisms"
+          }
+        }
+      }
+    }
+  },
+  "failure-register-effects": {
+    "terms": {
+      "failure-register-effect": "Failure Register Effect",
+      "failure-register-effects": "Failure Register Effects"
+    },
+    "entities": {
+      "failure-register-effect": {
+        "title": "Failure Register Effect",
+        "plural": "Failure Register Effects",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "failure-register-id": {
+            "title": "Failure register"
+          },
+          "failure-effect-id": {
+            "title": "Failure Effect"
+          }
+        }
+      }
+    }
+  },
+  "failure-register-causes": {
+    "terms": {
+      "failure-register-cause": "Failure Register Cause",
+      "failure-register-causes": "Failure Register Causes"
+    },
+    "entities": {
+      "failure-register-cause": {
+        "title": "Failure Register Cause",
+        "plural": "Failure Register Causes",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "failure-register-id": {
+            "title": "Failure register"
+          },
+          "failure-cause-id": {
+            "title": "Failure Cause"
+          }
+        }
+      }
+    }
+  },
+  "failure-register-mechanisms": {
+    "terms": {
+      "failure-register-mechanism": "Failure Register Mechanism",
+      "failure-register-mechanisms": "Failure Register Mechanisms"
+    },
+    "entities": {
+      "failure-register-mechanism": {
+        "title": "Failure Register Mechanism",
+        "plural": "Failure Register Mechanisms",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "failure-register-id": {
+            "title": "Failure register"
+          },
+          "failure-mechanism-id": {
+            "title": "Failure Mechanism"
+          }
+        }
+      }
+    }
+  }
+}

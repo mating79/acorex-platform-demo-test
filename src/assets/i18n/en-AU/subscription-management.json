@@ -1,0 +1,190 @@
+{
+  "module": {
+    "title": "Subscription Management",
+    "description": "Manage subscriptions for tenants, application editions, and other entities",
+    "menus": {
+      "root": {
+        "title": "Subscription Management",
+        "description": "Manage subscriptions and subscription plans"
+      }
+    }
+  },
+  "features": {
+    "subscription-management": {
+      "title": "Subscription Management",
+      "description": "Enable subscription management functionality"
+    },
+    "manage-subscriptions": {
+      "title": "Manage Subscriptions",
+      "description": "Enable subscription and plan management on the Platform Console"
+    }
+  },
+  "subscriptions": {
+    "terms": {
+      "subscription": "Subscription",
+      "subscriptions": "Subscriptions",
+      "tenant": "Tenant",
+      "application-edition": "Application Edition"
+    },
+    "entities": {
+      "subscription": {
+        "title": "Subscription",
+        "plural": "Subscriptions",
+        "groups": {
+          "basic-info": "Basic Information",
+          "subscription-details": "Subscription Details"
+        },
+        "fields": {
+          "subscriber": {
+            "title": "Subscriber",
+            "description": "The entity that is subscribing (e.g., Tenant)",
+            "placeholder": "Select subscriber"
+          },
+          "plan": {
+            "title": "Subscription Plan",
+            "description": "The subscription plan for this subscription",
+            "placeholder": "Select subscription plan"
+          },
+          "title": {
+            "title": "Title",
+            "description": "Subscription title",
+            "placeholder": "Enter subscription title"
+          },
+          "description": {
+            "title": "Description",
+            "description": "Subscription description",
+            "placeholder": "Enter subscription description"
+          },
+          "start-date": {
+            "title": "Start Date",
+            "description": "Subscription start date",
+            "placeholder": "Select start date"
+          },
+          "end-date": {
+            "title": "End Date",
+            "description": "Subscription end date",
+            "placeholder": "Select end date"
+          }
+        }
+      },
+      "subscription-plan": {
+        "title": "Subscription Plan",
+        "plural": "Subscription Plans",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "title": {
+            "title": "Title",
+            "description": "Subscription plan title",
+            "placeholder": "Enter plan title"
+          },
+          "description": {
+            "title": "Description",
+            "description": "Subscription plan description",
+            "placeholder": "Enter plan description"
+          },
+          "code": {
+            "title": "Code",
+            "description": "Unique code for the subscription plan",
+            "placeholder": "Enter plan code"
+          }
+        },
+        "related-entities": {
+          "items": {
+            "title": "Plan Items"
+          }
+        }
+      },
+      "subscription-plan-item": {
+        "title": "Subscription Plan Item",
+        "plural": "Subscription Plan Items",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "plan": {
+            "title": "Subscription Plan",
+            "description": "The subscription plan this item belongs to",
+            "placeholder": "Select subscription plan"
+          },
+          "subscribable-type": {
+            "title": "Subscribable Type",
+            "description": "Type of entity this item is for (e.g., Application Edition)",
+            "placeholder": "Select subscribable type"
+          },
+          "edition": {
+            "title": "Application Edition",
+            "description": "The application edition this item is associated with",
+            "placeholder": "Select application edition"
+          }
+        }
+      }
+    },
+    "states": {
+      "active": "Active",
+      "expired": "Expired",
+      "cancelled": "Cancelled",
+      "suspended": "Suspended"
+    },
+    "transitions": {
+      "expire": "Expire",
+      "cancel": "Cancel",
+      "suspend": "Suspend",
+      "activate": "Activate",
+      "renew": "Renew"
+    },
+    "permissions": {
+      "subscriptions": {
+        "title": "Subscriptions",
+        "actions": {
+          "view": {
+            "title": "@general:actions.view.title"
+          },
+          "create": {
+            "title": "@general:actions.create.title"
+          },
+          "edit": {
+            "title": "@general:actions.edit.title"
+          },
+          "delete": {
+            "title": "@general:actions.delete.title"
+          },
+          "manage": {
+            "title": "Manage Subscriptions"
+          }
+        }
+      },
+      "subscription-plans": {
+        "title": "Subscription Plans",
+        "actions": {
+          "view": {
+            "title": "@general:actions.view.title"
+          },
+          "create": {
+            "title": "@general:actions.create.title"
+          },
+          "edit": {
+            "title": "@general:actions.edit.title"
+          },
+          "delete": {
+            "title": "@general:actions.delete.title"
+          },
+          "manage": {
+            "title": "Manage Subscription Plans"
+          }
+        }
+      }
+    },
+    "actions": {
+      "create-subscription": {
+        "title": "Create Subscription",
+        "description": "Create a new subscription"
+      },
+      "create-subscription-plan": {
+        "title": "Create Subscription Plan",
+        "description": "Create a new subscription plan"
+      }
+    }
+  }
+}

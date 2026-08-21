@@ -1,0 +1,116 @@
+{
+  "module": {
+    "title": "BambooHR",
+    "description": "اتصال BambooHR و همگام‌سازی کارکنان در مدیریت سرمایه انسانی",
+    "menus": {
+      "configuration": {
+        "title": "BambooHR"
+      }
+    }
+  },
+  "integration": {
+    "display-name": "BambooHR",
+    "description": "برای همگام‌سازی کارکنان با پلتفرم به BambooHR متصل شوید.",
+    "domain": {
+      "title": "سرمایه انسانی",
+      "description": "یکپارچه‌سازی‌های منابع انسانی و نیروی کار"
+    },
+    "auth": {
+      "api-token": {
+        "label": "کلید API",
+        "instructions": "دامنه شرکت بَمبو اچ‌آر و کلید API را از پروفایل کاربری خود وارد کنید. کلید با احراز هویت پایه HTTP ارسال می‌شود.",
+        "company-domain": {
+          "placeholder": "your-company"
+        },
+        "api-key": {
+          "placeholder": "کلید API بَمبو اچ‌آر را وارد کنید"
+        }
+      }
+    },
+    "connect": {
+      "api-token-dialog": {
+        "title": "اتصال بَمبو اچ‌آر",
+        "configure-title": "پیکربندی مجدد بَمبو اچ‌آر",
+        "instructions": "<p>زیردامنه شرکت را از نشانی بَمبو اچ‌آر بگیرید (مثلاً <code>acme</code> از <strong>acme.bamboohr.com</strong>) و <strong>کلید API</strong> ساخته‌شده در پروفایل خود را وارد کنید.</p>",
+        "fields": {
+          "display-name": "نام نمایشی",
+          "company-domain": "دامنه شرکت",
+          "api-key": "کلید API"
+        },
+        "placeholders": {
+          "display-name": "BambooHR",
+          "company-domain": "your-company",
+          "api-key": "کلید API بَمبو اچ‌آر را وارد کنید"
+        },
+        "actions": {
+          "save": "ذخیره اتصال"
+        }
+      },
+      "errors": {
+        "company-domain-required": "دامنه شرکت الزامی است.",
+        "api-key-required": "کلید API الزامی است."
+      }
+    }
+  },
+  "permissions": {
+    "group": {
+      "title": "بَمبو اچ‌آر",
+      "description": "پیکربندی یکپارچه‌سازی بَمبو اچ‌آر و همگام‌سازی کارکنان"
+    },
+    "management": {
+      "title": "مدیریت بَمبو اچ‌آر",
+      "description": "دسترسی کامل به پیکربندی بَمبو اچ‌آر"
+    },
+    "catalog": {
+      "view": {
+        "title": "مشاهده پیکربندی بَمبو اچ‌آر"
+      }
+    },
+    "employee-import": {
+      "execute": {
+        "title": "ورود کارکنان از بَمبو اچ‌آر"
+      }
+    },
+    "employee-sync": {
+      "execute": {
+        "title": "همگام‌سازی کارکنان با بَمبو اچ‌آر"
+      }
+    }
+  },
+  "actions": {
+    "sync-from-bamboohr": {
+      "title": "همگام‌سازی از بَمبو اچ‌آر"
+    },
+    "sync": {
+      "title": "همگام‌سازی با بَمبو اچ‌آر"
+    }
+  },
+  "connect-required": {
+    "title": "بَمبو اچ‌آر متصل نیست",
+    "message": "قبل از همگام‌سازی کارکنان، بَمبو اچ‌آر را در مدیریت ← یکپارچه‌سازی‌ها متصل کنید. صفحه یکپارچه‌سازی‌ها اکنون باز شود؟"
+  },
+  "sync-all": {
+    "loading": {
+      "title": "همگام‌سازی کارکنان",
+      "status": "در حال دریافت کارکنان از بَمبو اچ‌آر…"
+    },
+    "success": "همگام‌سازی بَمبو اچ‌آر تمام شد. ایجاد {{created}}، به‌روزرسانی {{updated}}، رد شده {{skipped}}، خطا {{errors}}."
+  },
+  "sync": {
+    "loading": {
+      "title": "همگام‌سازی کارمند",
+      "status": "در حال به‌روزرسانی از بَمبو اچ‌آر…"
+    },
+    "success": "کارمند از بَمبو اچ‌آر همگام شد."
+  },
+  "settings": {
+    "integrations": {
+      "section-title": "سرمایه انسانی",
+      "section-description": "ارائه‌دهندگان منابع انسانی را برای همگام‌سازی کارکنان در مدیریت سرمایه انسانی متصل کنید.",
+      "connections-panel": {
+        "title": "ارائه‌دهندگان سرمایه انسانی",
+        "description": "بَمبو اچ‌آر را برای همگام‌سازی کارکنان متصل و پیکربندی کنید."
+      }
+    }
+  }
+}

@@ -1,0 +1,552 @@
+{
+  "module": {
+    "title": "Health Core",
+    "description": "Health-related reference data and health records used across modules.",
+    "menus": {
+      "root": {
+        "title": "Health",
+        "description": "Blood types, health records, record types, and related reference data."
+      }
+    }
+  },
+  "catalog-scopes": {
+    "health": {
+      "title": "Health",
+      "description": "Questionnaires, question bank items, and workflows scoped to occupational and personal health."
+    }
+  },
+  "terms": {
+    "subject": {
+      "type": "Subject Type",
+      "title": "Subject"
+    }
+  },
+  "profile-page": {
+    "groups": {
+      "health": {
+        "title": "Health"
+      }
+    },
+    "sections": {
+      "health-profile": {
+        "description": "View and update your health profile details."
+      },
+      "health-conditions": {
+        "description": "View allergies, chronic conditions, and other health conditions."
+      },
+      "health-events": {
+        "description": "View vaccinations, injuries, consultations, and other health records."
+      }
+    },
+    "commands": {
+      "manage-health-profile": {
+        "messages": {
+          "no-subject": "We could not find a person profile linked to your account."
+        }
+      },
+      "manage-health-records": {
+        "dialog": {
+          "title": "{{sectionTitle}} — {{subjectName}}"
+        }
+      }
+    }
+  },
+  "datasources": {
+    "medication-form-options": {
+      "title": "Medication Form",
+      "columns": {
+        "value": {
+          "title": "Value"
+        },
+        "title": {
+          "title": "Title"
+        }
+      },
+      "samples": {
+        "tablet": "Tablet",
+        "capsule": "Capsule",
+        "syrup": "Syrup",
+        "injection": "Injection",
+        "cream": "Cream",
+        "drops": "Drops",
+        "inhaler": "Inhaler",
+        "patch": "Patch",
+        "other": "Other"
+      }
+    },
+    "health-risk-level-options": {
+      "title": "Health Risk Level",
+      "columns": {
+        "value": {
+          "title": "Value"
+        },
+        "title": {
+          "title": "Title"
+        }
+      },
+      "samples": {
+        "low": "Low",
+        "medium": "Medium",
+        "high": "High",
+        "critical": "Critical"
+      }
+    },
+    "alcohol-consumption-options": {
+      "title": "Alcohol Consumption",
+      "columns": {
+        "value": {
+          "title": "Value"
+        },
+        "title": {
+          "title": "Title"
+        }
+      },
+      "samples": {
+        "never": "Never",
+        "occasional": "Occasional",
+        "regular": "Regular",
+        "heavy": "Heavy",
+        "prefer-not-to-say": "Prefer Not to Say"
+      }
+    },
+    "smoking-status-options": {
+      "title": "Smoking Status",
+      "columns": {
+        "value": {
+          "title": "Value"
+        },
+        "title": {
+          "title": "Title"
+        }
+      },
+      "samples": {
+        "never": "Never",
+        "former": "Former Smoker",
+        "current": "Current Smoker",
+        "prefer-not-to-say": "Prefer Not to Say"
+      }
+    },
+    "allergy-severity-options": {
+      "title": "Allergy Severity",
+      "columns": {
+        "value": {
+          "title": "Value"
+        },
+        "title": {
+          "title": "Title"
+        }
+      },
+      "samples": {
+        "mild": "Mild",
+        "moderate": "Moderate",
+        "severe": "Severe"
+      }
+    },
+    "chronic-condition-status-options": {
+      "title": "Chronic Condition Status",
+      "columns": {
+        "value": {
+          "title": "Value"
+        },
+        "title": {
+          "title": "Title"
+        }
+      },
+      "samples": {
+        "active": "Active",
+        "managed": "Managed",
+        "resolved": "Resolved"
+      }
+    },
+    "injury-mechanism-options": {
+      "title": "Injury Mechanism Options",
+      "columns": {
+        "id": {
+          "title": "Id"
+        },
+        "title": {
+          "title": "Title"
+        }
+      },
+      "samples": {
+        "slip-trip-fall": "Slip, Trip, or Fall",
+        "struck-by": "Struck by Object or Equipment",
+        "struck-against": "Struck Against Object or Surface",
+        "caught-in": "Caught In or Between",
+        "overexertion": "Overexertion or Repetitive Strain",
+        "exposure": "Exposure (Chemical, Heat, Noise)",
+        "vehicle": "Vehicle or Mobile Plant Incident",
+        "cut-puncture": "Cut, Puncture, or Laceration",
+        "other": "Other / Not Sure"
+      }
+    },
+    "work-capacity-options": {
+      "title": "Work Capacity Options",
+      "columns": {
+        "id": {
+          "title": "Id"
+        },
+        "title": {
+          "title": "Title"
+        }
+      },
+      "samples": {
+        "continue": "Able to Continue Working",
+        "modified": "Modified or Light Duties Only",
+        "unable": "Unable to Work / Sent Home",
+        "hospitalised": "Hospitalised or Emergency Care"
+      }
+    },
+    "pain-rate-options": {
+      "title": "Pain Rate Options",
+      "columns": {
+        "id": {
+          "title": "Id"
+        },
+        "title": {
+          "title": "Title"
+        }
+      },
+      "samples": {
+        "1": "1 — No Pain",
+        "2": "2 — Mild",
+        "3": "3 — Moderate",
+        "4": "4 — Severe",
+        "5": "5 — Very Severe"
+      }
+    }
+  },
+  "health-condition-types": {
+    "entities": {
+      "health-condition-type": {
+        "title": "Condition",
+        "plural": "Conditions",
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "fields": {
+          "kind": "Kind",
+          "suggested-restriction-ids": "Suggested Restrictions"
+        }
+      }
+    },
+    "kinds": {
+      "allergy": "Allergy",
+      "chronic": "Chronic Condition"
+    },
+    "permissions": {
+      "health-condition-type": {
+        "manage": {
+          "title": "Manage Conditions",
+          "description": "Full access to manage conditions."
+        }
+      }
+    }
+  },
+  "health-restrictions": {
+    "entities": {
+      "health-restriction": {
+        "title": "Restriction",
+        "plural": "Restrictions"
+      }
+    },
+    "permissions": {
+      "health-restriction": {
+        "manage": {
+          "title": "Manage Restrictions",
+          "description": "Full access to manage restriction catalog and categories."
+        }
+      }
+    }
+  },
+  "health-conditions": {
+    "entities": {
+      "health-condition": {
+        "title": "Health Condition",
+        "plural": "Health Conditions",
+        "groups": {
+          "condition-details": "Condition Details",
+          "more-information": "More Information",
+          "restrictions": "Restrictions"
+        },
+        "fields": {
+          "condition-type-id": "Condition",
+          "diagnosed-date": "Diagnosed Date",
+          "restrictions": {
+            "title": "Restrictions"
+          },
+          "restriction-id": "Restriction",
+          "start-date": "Start Date",
+          "end-date": "End Date",
+          "is-active": "Active"
+        }
+      }
+    },
+    "actions": {
+      "create": {
+        "title": "Add Health Condition"
+      }
+    },
+    "permissions": {
+      "health-condition": {
+        "view-own": {
+          "title": "View Own Health Conditions"
+        },
+        "edit-own": {
+          "title": "Edit Own Health Conditions"
+        },
+        "view": {
+          "title": "View Health Conditions"
+        },
+        "manage": {
+          "title": "Manage Health Conditions"
+        }
+      }
+    }
+  },
+  "health-record-types": {
+    "entities": {
+      "health-record-type": {
+        "title": "Health Record Type",
+        "plural": "Health Record Types"
+      }
+    },
+    "permissions": {
+      "health-record-type": {
+        "manage": {
+          "title": "Manage Health Record Types"
+        }
+      }
+    }
+  },
+  "health-events": {
+    "entities": {
+      "health-event": {
+        "title": "Health Record",
+        "plural": "Health Records",
+        "groups": {
+          "event-details": "Event Details",
+          "more-information": "More Information",
+          "sign-off": "Sign-Off"
+        },
+        "fields": {
+          "record-type-id": "Health Record Type",
+          "occurred-date": "Occurred Date",
+          "end-date": "End Date",
+          "provider": {
+            "title": "Healthcare Provider",
+            "placeholder": "e.g. Dr. Jane Smith or occupational health nurse"
+          },
+          "facility": {
+            "title": "Location of Care",
+            "placeholder": "e.g. Head Office Clinic or local pharmacy"
+          },
+          "employee-signature": "Employee Signature",
+          "employee-signed-at": "Employee Signed At",
+          "manager-signature": "Manager Signature",
+          "manager-signed-at": "Manager Signed At"
+        }
+      }
+    },
+    "actions": {
+      "start": {
+        "title": "Start Health Event"
+      }
+    },
+    "states": {
+      "in-progress": "In Progress",
+      "completed": "Completed",
+      "cancelled": "Cancelled"
+    },
+    "transitions": {
+      "await-sign-off": "Await Sign-Off",
+      "complete": "Complete"
+    },
+    "tasks": {
+      "task-title": "Health Event Task",
+      "board-title": "{{subjectTitle}} — {{recordTypeTitle}} — {{occurredDate}}",
+      "questionnaire": {
+        "description": "Complete the health questionnaire for this event."
+      },
+      "employee-sign-off": {
+        "description": "Review the health record and sign to confirm it is accurate."
+      },
+      "manager-sign-off": {
+        "description": "Review the health record and sign off as the line manager."
+      }
+    },
+    "messages": {
+      "event-not-implemented": "This health record type is not configured with a workflow yet.",
+      "event-start-cancelled": "Health event start was cancelled.",
+      "employee-sign-off": "Review the health record details and provide your signature to confirm.",
+      "manager-sign-off": "Review the health record and provide your manager sign-off.",
+      "replace-open": {
+        "confirm": {
+          "title": "Replace Open Health Event?",
+          "message": "An in-progress {{recordTypeTitle}} already exists for this subject. Start a new run and cancel the open one?"
+        }
+      }
+    },
+    "permissions": {
+      "health-event": {
+        "view-own": {
+          "title": "View Own Health Events"
+        },
+        "edit-own": {
+          "title": "Edit Own Health Events"
+        },
+        "view": {
+          "title": "View Health Events"
+        },
+        "manage": {
+          "title": "Manage Health Events"
+        }
+      }
+    }
+  },
+  "health-profiles": {
+    "entities": {
+      "health-profile": {
+        "title": "Health Profile",
+        "plural": "Health Profiles",
+        "groups": {
+          "profile-details": "Profile Details"
+        },
+        "fields": {
+          "blood-type-id": "Blood Type",
+          "disability-status-id": "Disability Status",
+          "smoking-status": "Smoking Status",
+          "alcohol-consumption": "Alcohol Consumption",
+          "health-risk-level": "Health Risk Level",
+          "doctor-name": "Doctor's Name",
+          "doctor-number": "Doctor's Number",
+          "emergency-contact-name": "Emergency Contact Name",
+          "emergency-contact-phone": "Emergency Contact Phone",
+          "emergency-contact-email": "Emergency Contact Email"
+        }
+      }
+    },
+    "actions": {
+      "create": {
+        "title": "Add Health Profile"
+      }
+    },
+    "permissions": {
+      "health-profile": {
+        "view-own": {
+          "title": "View Own Health Profile"
+        },
+        "edit-own": {
+          "title": "Edit Own Health Profile"
+        },
+        "view": {
+          "title": "View Health Profiles"
+        },
+        "manage": {
+          "title": "Manage Health Profiles"
+        }
+      }
+    }
+  },
+  "blood-types": {
+    "entities": {
+      "blood-type": {
+        "title": "Blood Type",
+        "plural": "Blood Types",
+        "groups": {
+          "basic-info": "Basic Information"
+        }
+      }
+    },
+    "permissions": {
+      "blood-type": {
+        "manage": {
+          "title": "Manage Blood Types",
+          "description": "Full access to manage blood types."
+        }
+      }
+    }
+  },
+  "body-parts": {
+    "entities": {
+      "body-part": {
+        "title": "Body Part",
+        "plural": "Body Parts",
+        "groups": {
+          "basic-info": "Basic Information"
+        }
+      }
+    },
+    "permissions": {
+      "body-part": {
+        "manage": {
+          "title": "Manage Body Parts",
+          "description": "Full access to manage body parts."
+        }
+      }
+    }
+  },
+  "disability-statuses": {
+    "entities": {
+      "disability-status": {
+        "title": "Disability",
+        "plural": "Disabilities",
+        "groups": {
+          "basic-info": "Basic Information"
+        }
+      }
+    },
+    "permissions": {
+      "disability-status": {
+        "manage": {
+          "title": "Manage Disabilities",
+          "description": "Full access to manage disabilities."
+        }
+      }
+    }
+  },
+  "injury-types": {
+    "entities": {
+      "injury-type": {
+        "title": "Injury",
+        "plural": "Injuries",
+        "groups": {
+          "basic-info": "Basic Information"
+        }
+      }
+    },
+    "permissions": {
+      "injury-type": {
+        "manage": {
+          "title": "Manage Injuries",
+          "description": "Full access to manage injuries."
+        }
+      }
+    }
+  },
+  "reports": {
+    "filters": {
+      "all": "All",
+      "unspecified": "Unspecified"
+    }
+  },
+  "vaccination-types": {
+    "entities": {
+      "vaccination-type": {
+        "title": "Vaccination",
+        "plural": "Vaccinations",
+        "groups": {
+          "basic-info": "Basic Information"
+        }
+      }
+    },
+    "permissions": {
+      "vaccination-type": {
+        "manage": {
+          "title": "Manage Vaccinations",
+          "description": "Full access to manage vaccinations."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,443 @@
+{
+  "module": {
+    "title": "Conversation",
+    "description": "Manage conversations, rooms, and messages",
+    "menus": {
+      "conversations": {
+        "title": "Conversations"
+      }
+    },
+    "permissions": {
+      "title": "Conversation",
+      "description": "Access conversation and chat features",
+      "manage": {
+        "title": "Conversation management",
+        "description": "Use conversations, rooms, and messages"
+      }
+    }
+  },
+  "plural-title": "Conversations",
+  "chat-error": "Failed to load chats.",
+  "chat-try-again": "Please try again!",
+  "try-again": "Try Again",
+  "back-to-chat-list": "Back to Chat List",
+  "remove-chat": "Remove Chat",
+  "is-typing": "is typing",
+  "room": {
+    "individual-title": "Room",
+    "plural-title": "Rooms",
+    "basic-info": "Basic Information",
+    "title": "Title",
+    "topic": "Topic",
+    "members": "Members",
+    "entity": "Entity",
+    "create": "Create Room",
+    "delete-items": "Delete Selected",
+    "detail": "View Details",
+    "delete": "Delete",
+    "all-item": "All Rooms"
+  },
+  "message": {
+    "individual-title": "Message",
+    "plural-title": "Messages",
+    "basic-info": "Basic Information",
+    "room": "Room",
+    "content": "Content",
+    "contentType": "Content Type",
+    "author": "Author",
+    "replyTo": "Reply To",
+    "reactions": "Reactions",
+    "seen": "Seen By",
+    "create": "Create Message",
+    "delete-items": "Delete Selected",
+    "detail": "View Details",
+    "delete": "Delete",
+    "all-item": "All Messages"
+  },
+  "actions": {
+    "show-comment-popup": "Show Comments",
+    "reply": "Reply",
+    "open": "Open",
+    "delete": "Delete",
+    "mark-seen": "Mark as Seen"
+  },
+  "tabs": {
+    "all": "All",
+    "unread": "Unread"
+  },
+  "labels": {
+    "group-chat": "Group Chat",
+    "unknown-user": "Unknown User"
+  },
+  "no-chats-found": {
+    "title": "No Chats Found",
+    "description": "No conversations are available in this tab. Start a new conversation to begin chatting."
+  },
+  "state-message": {
+    "error": {
+      "title": "Chat Error",
+      "description": "Something went wrong while loading the chat"
+    }
+  },
+  "new-conversation": {
+    "header": "New Conversation",
+    "lookup": {
+      "label": "Select Users"
+    },
+    "title": {
+      "label": "Title",
+      "placeholder": "Enter title"
+    },
+    "actions": {
+      "accept-send": "Accept & Send",
+      "new-chat": "New Chat",
+      "chat-with-ai": "Chat With AI"
+    },
+    "button": "New Conversation"
+  },
+  "mini-chat": {
+    "history-title": "Chat history",
+    "new-chat": "New chat",
+    "loading": "Loading…",
+    "inbox-empty-state": {
+      "title": "No AI Assist Chats Yet",
+      "description": "Start a new chat to talk with AI."
+    },
+    "entity-empty-state": {
+      "title": "No Chats Yet",
+      "description": "Start a new chat to discuss this record with AI."
+    }
+  },
+  "in-app": {
+    "actions": {
+      "open-chat": "Open Chat"
+    }
+  },
+  "chat": {
+    "notification": {
+      "name": "Chat",
+      "title": "Chat",
+      "new-message": "You have a new message.",
+      "new-message-title": "New Message"
+    },
+    "actions": {
+      "call": "Call",
+      "copy": "Copy",
+      "back-to-chats": "Back to Chats",
+      "download-debug-information": "Download Debug Information"
+    },
+    "call": {
+      "start-title": "Start Call",
+      "loading": "Loading contact...",
+      "load-error": "Could not load this conversation.",
+      "hint": "Select a call type to get started.",
+      "start-video": "Start Video",
+      "stop-video": "Stop Video",
+      "start-call": "Start Call",
+      "cancel": "Cancel",
+      "waiting": "waiting...",
+      "connecting": "Connecting...",
+      "connected": "Connected",
+      "is-calling": "is calling you...",
+      "screencast": "Screencast",
+      "end-call": "End Call",
+      "mute": "Mute",
+      "unmute": "Unmute",
+      "add-people": "Add People",
+      "share-link": "Share Link",
+      "decline": "Decline",
+      "accept": "Accept",
+      "group-title": "Group Call",
+      "encrypted": "End-to-End Encrypted",
+      "speaking": "speaking",
+      "add-people-soon": "Adding people will be available soon.",
+      "link-copied": "Call link copied.",
+      "link-copy-failed": "Could not copy the call link.",
+      "media-error": "Could not access camera or microphone.",
+      "connect-error": "Could not connect to the call.",
+      "no-answer": "No answer yet. The call stays open until you hang up.",
+      "devices": {
+        "microphone": "Microphone",
+        "camera": "Camera",
+        "empty": "No Devices Found"
+      },
+      "rtc-not-configured": "Calling is unavailable. Connect an RTC provider such as LiveKit in Administration → Integrations.",
+      "popup-blocked": "Pop-up blocked. Allow pop-ups for this site and try again.",
+      "log": {
+        "declined": "Declined Voice Call",
+        "declined-video": "Declined Video Call",
+        "missed": "Missed Voice Call",
+        "missed-video": "Missed Video Call",
+        "cancelled": "Cancelled Voice Call",
+        "cancelled-video": "Cancelled Video Call"
+      }
+    },
+    "debug-mode": "Debug",
+    "speech-to-text": {
+      "errors": {
+        "transcription-failed": "Could not transcribe the voice recording. Please try again."
+      }
+    },
+    "tabs": {
+      "bot": "Bot"
+    },
+    "empty-state": {
+      "title": "No Messages Yet",
+      "description": "Type a message below to start this conversation."
+    },
+    "assist": {
+      "errors": {
+        "title": "AI Error",
+        "tool-title": "AI Tool Error",
+        "stream-title": "AI Stream"
+      }
+    },
+    "assist-dialog": {
+      "search": {
+        "placeholder": "Search Assists..."
+      },
+      "actions": {
+        "start-chat": "Start Chat"
+      },
+      "states": {
+        "loading": "Loading assists...",
+        "no-search-result": "No assists match your search.",
+        "no-assists": "No assists are available."
+      },
+      "errors": {
+        "load-assists": "Failed to load assists. Please try again.",
+        "start-chat": "Failed to start chat. Please try again."
+      }
+    },
+    "empty-assist": {
+      "caption": "What can I help with?",
+      "assist-default": "Assist",
+      "placeholder": "Message {{assist}}...",
+      "errors": {
+        "send": "Failed to send. Please try again.",
+        "load-assists": "Failed to load assists."
+      }
+    },
+    "starter-prompts": {
+      "list-aria": "Suggested ways to start the conversation",
+      "errors": {
+        "send": "Failed to send. Please try again."
+      }
+    },
+    "assist-renderer": {
+      "run-meta": {
+        "title": "Run details",
+        "model": "Model",
+        "duration": "Duration",
+        "total-tokens": "Total tokens"
+      },
+      "aria": {
+        "assistant-response": "Assistant response",
+        "run-usage": "Model run usage and timing"
+      },
+      "sections": {
+        "thinking": "Thinking",
+        "input": "Input",
+        "output": "Output",
+        "agent-prompt": "Prompt sent to agent",
+        "agent-answer": "Agent reply",
+        "agent-stream": "Agent output (stream)",
+        "nested-tools": "Tools used inside agent"
+      },
+      "badges": {
+        "internal": "Internal",
+        "agent": "Agent",
+        "tool": "Tool",
+        "running": "Running...",
+        "done": "Done"
+      },
+      "delegated-agent": {
+        "detail": "Detail",
+        "detail-aria": "Open full specialist run transcript",
+        "dialog-title-suffix": "Full Specialist Run",
+        "transcript-label": "Specialist Transcript",
+        "transcript-missing": "No cached specialist transcript for this tool call.",
+        "download-json": "Download JSON",
+        "reflection": "Reflection",
+        "roles": {
+          "user": "User",
+          "assistant": "Assistant",
+          "tool": "Tool",
+          "system": "System"
+        }
+      },
+      "activity": {
+        "starting": "Connecting…",
+        "planning": "Thinking…",
+        "using-tools": "Using tools / agents…",
+        "responding": "Writing response…"
+      },
+      "errors": {
+        "image-load": "Image file could not be loaded.",
+        "audio-load": "Audio file could not be loaded.",
+        "file-load": "File could not be loaded."
+      },
+      "retry": {
+        "aria": {
+          "panel": "Assist response could not be completed"
+        },
+        "action": "Try again",
+        "incomplete": {
+          "title": "Response interrupted",
+          "description": "The assistant did not finish this reply. You can try again to regenerate it."
+        },
+        "failed": {
+          "title": "Response failed",
+          "description": "Something went wrong while generating this reply. Try again when you are ready."
+        }
+      }
+    },
+    "assist-conversation": {
+      "rename": {
+        "action": "Rename Chat",
+        "title": "Rename Chat",
+        "placeholder": "Enter Chat Title",
+        "actions": {
+          "save": "Save"
+        },
+        "messages": {
+          "success": "Chat title updated.",
+          "error": "Failed to update chat title. Please try again."
+        }
+      }
+    },
+    "org-chart": {
+      "private-chat": "Start Private Chat",
+      "private-chat-bu-head": "Private Chat With Head",
+      "group-chat-bu": "Start Group Chat",
+      "group-room-title": "Chat — {{unit}}",
+      "fallback-unit": "Unit",
+      "error-title": "Chat",
+      "errors": {
+        "load-employee": "Could not load the employee record.",
+        "no-user": "No user account is linked to this employee.",
+        "self-chat": "You cannot start a chat with yourself.",
+        "no-business-unit": "Business unit could not be resolved.",
+        "no-head-employee": "No head employee is assigned, or the head seat is vacant.",
+        "no-members": "No other members with accounts were found for this unit.",
+        "create-room": "Could not create the chat room."
+      }
+    },
+    "user-card": {
+      "message": "Message",
+      "error-title": "Chat",
+      "errors": {
+        "self-chat": "You cannot start a chat with yourself.",
+        "create-room": "Could not start the conversation.",
+        "missing-user": "This person has no user account to message."
+      }
+    },
+    "route": {
+      "error-title": "Chat",
+      "conversation-not-found": "This conversation does not exist or is no longer available."
+    },
+    "user-form": {
+      "actions": {
+        "submit": "Submit"
+      },
+      "states": {
+        "submitted": "Submitted",
+        "submitted-success": "Form submitted successfully."
+      },
+      "fields": {
+        "name": {
+          "placeholder": "Name"
+        }
+      }
+    }
+  },
+  "search": {
+    "placeholder": "Search chats...",
+    "assist": {
+      "group-title": "AI Assist",
+      "shortcut-description": "Start a new chat with this AI assist."
+    }
+  },
+  "confirmations": {
+    "remove-chat": {
+      "title": "Remove Chat",
+      "message": "Are you sure you want to remove this chat?"
+    },
+    "delete-room": {
+      "title": "Delete Room",
+      "message": "Are you sure you want to delete Room?"
+    }
+  },
+  "messages": {
+    "create-room-failed": "Failed to create room",
+    "mark-seen-failed": "Failed to mark as seen"
+  },
+  "terms": {
+    "common": {
+      "comment": "Comment",
+      "comments": "Comments"
+    }
+  },
+  "comments": {
+    "feature": {
+      "title": "Comments"
+    },
+    "widget": {
+      "title": "Comments",
+      "description": "Display and manage comments for entities"
+    },
+    "notification": {
+      "title": "Comment",
+      "new-comment": "New Comment"
+    },
+    "actions": {
+      "edit": {
+        "title": "Edit"
+      },
+      "delete": {
+        "title": "Delete"
+      },
+      "send": {
+        "title": "Send"
+      },
+      "cancel": {
+        "title": "Cancel"
+      },
+      "reply-to": "Reply to",
+      "edit-message": "Edit Message"
+    },
+    "components": {
+      "comment": {
+        "empty-states": {
+          "no-comments": {
+            "title": "No Comments",
+            "description": "No comments have been recorded."
+          }
+        }
+      }
+    },
+    "confirmations": {
+      "delete-comment": {
+        "title": "Delete Comment",
+        "message": "Are you sure you want to delete this comment?",
+        "deleting": "Deleting..."
+      }
+    },
+    "messages": {
+      "success": {
+        "comment-deleted": "Comment deleted successfully."
+      },
+      "error": {
+        "load-comments": "Failed to load comments. Please try again.",
+        "delete-comment": "Failed to delete comment!",
+        "submit-comment": "Failed to submit comment. Please try again.",
+        "add-reaction-not-implemented": "Add reaction command is not implemented."
+      }
+    }
+  },
+  "support": {
+    "title": "AI Support",
+    "aria-label": "Open support chat",
+    "model": "AI Model"
+  }
+}

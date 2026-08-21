@@ -1,0 +1,89 @@
+{
+  "module": {
+    "title": "Platform Dev Tools",
+    "description": "Development-only module to explore platform structure: modules, entities, permissions, and features.",
+    "descriptions": {
+      "module": "Module metadata and configuration.",
+      "entities": "Entities defined in this module.",
+      "entity": "Entity definition and properties.",
+      "permissions": "List of permissions for this module.",
+      "features": "List of features for this module."
+    },
+    "terms": {
+      "entities": "Entities",
+      "entity": "Entity",
+      "module": "Module",
+      "module-info": "Module Info",
+      "permissions": "Permissions",
+      "features": "Features",
+      "name": "Name",
+      "title": "Title",
+      "plural": "Plural",
+      "description": "Description",
+      "key": "Key",
+      "default-value": "Default Value",
+      "properties": "Properties",
+      "type": "Type",
+      "loading-entity": "Loading Entity…"
+    },
+    "menus": {
+      "platform-explorer": {
+        "title": "Platform Explorer"
+      }
+    },
+    "permissions": {
+      "title": "Platform Dev Tools",
+      "description": "Development-time platform exploration",
+      "platform-explorer": {
+        "view": {
+          "title": "Platform Explorer",
+          "description": "Open the platform explorer to browse modules, entities, and permissions"
+        }
+      },
+      "allow-debug": {
+        "title": "Allow Debug",
+        "description": "Enable debug mode and additional diagnostic behavior in platform dev tools"
+      }
+    },
+    "messages": {
+      "no-modules": "No modules loaded.",
+      "select-node": "Select a node from the tree.",
+      "no-permissions": "No permissions for this module.",
+      "no-features": "No features for this module.",
+      "loading": "Loading..."
+    }
+  },
+  "settings": {
+    "group": {
+      "nav-title": "Dev Tools",
+      "title": "Platform Dev Tools",
+      "description": "Options for development-time exploration and diagnostics."
+    },
+    "developer": {
+      "title": "Developer",
+      "description": "Controls diagnostic and debug behavior for developers using Platform Dev Tools.",
+      "items": {
+        "debug-mode": {
+          "title": "Debug Mode",
+          "description": "When enabled, the platform may emit additional diagnostic information useful during development."
+        }
+      }
+    },
+    "communication-debug-redirect": {
+      "title": "Communication Debug Redirect",
+      "description": "When Debug Mode is enabled, outbound communication deliveries are redirected to these targets instead of the original recipients.",
+      "email": {
+        "title": "Debug Redirect Email",
+        "description": "All SMTP deliveries are sent to this address while Debug Mode is on. Leave empty to block email delivery in debug mode."
+      },
+      "telegram-chat-id": {
+        "title": "Debug Redirect Telegram Chat ID",
+        "description": "All Telegram deliveries are sent to this chat ID while Debug Mode is on. Leave empty to block Telegram delivery in debug mode."
+      },
+      "whatsapp-phone-number": {
+        "title": "Debug Redirect WhatsApp Phone Number",
+        "description": "All WhatsApp deliveries are sent to this E.164 phone number while Debug Mode is on. Leave empty to block WhatsApp delivery in debug mode."
+      }
+    }
+  }
+}

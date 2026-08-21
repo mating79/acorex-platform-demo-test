@@ -1,0 +1,298 @@
+{
+  "module": {
+    "title": "کارهای پس‌زمینه",
+    "description": "پایش و مدیریت کارهای پس‌زمینه و زمان‌بندی‌ها",
+    "menus": {
+      "root": {
+        "title": "کارهای پس‌زمینه",
+        "description": "کارهای پس‌زمینه و زمان‌بندی‌ها"
+      }
+    },
+    "permissions": {
+      "title": "مدیریت کارهای پس‌زمینه",
+      "description": "دسترسی به کارهای پس‌زمینه، تلاش‌ها و زمان‌بندی‌ها"
+    }
+  },
+  "settings": {
+    "group": {
+      "title": "کارهای پس‌زمینه",
+      "description": "تنظیمات سطح پلتفرم برای اجرا و نگهداشت کارهای پس‌زمینه"
+    },
+    "retention": {
+      "title": "نگهداشت",
+      "description": "حذف فیزیکی کارها و تلاش‌های منقضی پس از دوره نگهداشت",
+      "items": {
+        "enabled": {
+          "title": "فعال‌سازی purge نگهداشت",
+          "description": "در صورت فعال بودن، یک کار سیستمی به‌صورت دوره‌ای کارهای منقضی را حذف می‌کند"
+        },
+        "default-days": {
+          "title": "نگهداشت پیش‌فرض (روز)",
+          "description": "کارهای terminal قدیمی‌تر از این مدت حذف می‌شوند"
+        },
+        "dead-letter-days": {
+          "title": "نگهداشت dead-letter (روز)",
+          "description": "کارهای dead-letter مدت بیشتری قبل از purge نگه داشته می‌شوند"
+        },
+        "batch-size": {
+          "title": "اندازه batch purge",
+          "description": "حداکثر تعداد کار حذف‌شده در هر اجرای purge"
+        },
+        "purge-cron": {
+          "title": "زمان‌بندی purge (Cron)",
+          "description": "عبارت cron برای job سیستمی purge نگهداشت"
+        }
+      }
+    }
+  },
+  "jobs": {
+    "menus": {
+      "jobs": {
+        "title": "کارها",
+        "description": "پایش کارهای پس‌زمینه"
+      }
+    },
+    "entities": {
+      "background-job": {
+        "title": "کار پس‌زمینه",
+        "plural": "کارهای پس‌زمینه",
+        "groups": {
+          "overview": "نمای کلی",
+          "execution": "اجرا",
+          "data": "داده‌ها"
+        },
+        "fields": {
+          "title": { "title": "عنوان" },
+          "command": { "title": "دستور" },
+          "executed-at": { "title": "زمان اجرا" },
+          "job-type": { "title": "نوع کار" },
+          "status": { "title": "وضعیت" },
+          "trigger": { "title": "نحوه شروع" },
+          "progress": { "title": "پیشرفت" },
+          "current-attempt": { "title": "تلاش جاری" },
+          "max-attempts": { "title": "حداکثر تلاش" },
+          "finished-at": { "title": "زمان پایان" },
+          "completed-at": { "title": "تاریخ پایان" },
+          "duration": { "title": "مدت زمان" },
+          "result-message": { "title": "پیام نتیجه" },
+          "payload": { "title": "داده ورودی" },
+          "result": { "title": "نتیجه" },
+          "parent-job-id": { "title": "کار والد" }
+        },
+        "related-entities": {
+          "attempts": { "title": "تلاش‌ها" },
+          "child-jobs": { "title": "کارهای فرزند" }
+        },
+        "states": {
+          "created": "ایجادشده",
+          "scheduled": "زمان‌بندی‌شده",
+          "queued": "در صف",
+          "running": "در حال اجرا",
+          "paused": "متوقف موقت",
+          "completed": "تکمیل‌شده",
+          "failed": "ناموفق",
+          "cancelled": "لغوشده",
+          "dead-lettered": "بایگانی خطا"
+        },
+        "triggers": {
+          "schedule": "زمان‌بندی",
+          "manual": "دستی",
+          "event": "رویداد",
+          "system": "سیستمی"
+        }
+      }
+    },
+    "actions": {
+      "cancel": { "title": "لغو کار" },
+      "retry": { "title": "تلاش مجدد" }
+    },
+    "errors": {
+      "not-found": "کار پس‌زمینه {{jobId}} پیدا نشد.",
+      "retry-invalid-status": "کار {{jobId}} در وضعیت {{status}} قابل تلاش مجدد نیست. برای کارهای بایگانی خطا از اجرای دوباره استفاده کنید.",
+      "not-dead-lettered": "کار {{jobId}} در وضعیت بایگانی خطا نیست (وضعیت: {{status}})."
+    },
+    "commands": {
+      "retry": {
+        "messages": {
+          "success": "تلاش مجدد در صف قرار گرفت.",
+          "failed": "تلاش مجدد کار پس‌زمینه انجام نشد."
+        }
+      },
+      "cancel": {
+        "messages": {
+          "completed": "لغو کار انجام شد.",
+          "requested": "درخواست لغو کار ثبت شد.",
+          "failed": "لغو کار پس‌زمینه انجام نشد."
+        }
+      }
+    },
+    "permissions": {
+      "view": {
+        "title": "مشاهده کارها",
+        "description": "مشاهده کارها و تاریخچه تلاش‌ها"
+      },
+      "cancel": {
+        "title": "لغو کار",
+        "description": "لغو کار در حال اجرا یا در صف"
+      },
+      "retry": {
+        "title": "تلاش مجدد کار",
+        "description": "اجرای دوباره کار ناموفق"
+      },
+      "delete": {
+        "title": "حذف کار",
+        "description": "حذف دائمی کار و تلاش‌های آن"
+      },
+      "replay-dead-letter": {
+        "title": "اجرای دوباره کار بایگانی‌شده",
+        "description": "اجرای دوباره کار بایگانی خطا به‌صورت کار جدید"
+      }
+    }
+  },
+  "attempts": {
+    "entities": {
+      "background-job-attempt": {
+        "title": "تلاش اجرا",
+        "plural": "تلاش‌های اجرا",
+        "groups": {
+          "overview": "نمای کلی"
+        },
+        "fields": {
+          "job-id": { "title": "کار" },
+          "attempt-number": { "title": "شماره تلاش" },
+          "trigger": { "title": "نحوه شروع" },
+          "status": { "title": "وضعیت" },
+          "worker-id": { "title": "پردازشگر" },
+          "started-at": { "title": "زمان شروع" },
+          "completed-at": { "title": "زمان پایان" },
+          "duration-ms": { "title": "مدت (میلی‌ثانیه)" },
+          "error": { "title": "خطا" }
+        },
+        "states": {
+          "queued": "در صف",
+          "running": "در حال اجرا",
+          "succeeded": "موفق",
+          "failed": "ناموفق",
+          "cancelled": "لغوشده",
+          "timed-out": "منقضی‌شده",
+          "abandoned": "رهاشده"
+        }
+      }
+    }
+  },
+  "schedules": {
+    "menus": {
+      "schedules": {
+        "title": "زمان‌بندی‌ها",
+        "description": "مدیریت زمان‌بندی کارهای تکرارشونده"
+      }
+    },
+    "entities": {
+      "background-job-schedule": {
+        "title": "زمان‌بندی کار",
+        "plural": "زمان‌بندی کارها",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "command": "دستور",
+          "recurrence": "تکرار",
+          "policies": "سیاست‌ها",
+          "runtime": "وضعیت اجرا"
+        },
+        "fields": {
+          "title": { "title": "عنوان" },
+          "description": { "title": "توضیحات" },
+          "command": { "title": "دستور" },
+          "command-key": { "title": "کلید دستور" },
+          "tenant-id": { "title": "سازمان" },
+          "application-id": { "title": "برنامه" },
+          "job-type": { "title": "نوع کار" },
+          "enabled": { "title": "فعال" },
+          "source": { "title": "منبع" },
+          "cron": { "title": "عبارت کرون" },
+          "timezone": { "title": "منطقه زمانی" },
+          "concurrency-policy": { "title": "سیاست هم‌زمانی" },
+          "missed-run-policy": { "title": "سیاست اجرای ازدست‌رفته" },
+          "default-visibility": { "title": "نمایش پیش‌فرض" },
+          "failure-threshold": { "title": "آستانه خطا" },
+          "failure-action": { "title": "اقدام پس از خطا" },
+          "reset-failures-after-success": { "title": "بازنشانی خطا پس از موفقیت" },
+          "status": { "title": "وضعیت" },
+          "payload": { "title": "داده ورودی" },
+          "next-run-at": { "title": "اجرای بعدی" },
+          "last-triggered-at": { "title": "آخرین اجرا" },
+          "consecutive-failures": { "title": "خطاهای متوالی" }
+        },
+        "options": {
+          "concurrency": {
+            "skip-if-running": "رد شدن هنگام اجرا",
+            "queue": "قرار گرفتن در صف"
+          },
+          "missed-run": {
+            "skip": "رد شدن",
+            "catch-up-one": "جبران یک اجرا"
+          },
+          "source": {
+            "system": "سیستمی",
+            "integration": "یکپارچه‌سازی",
+            "user": "کاربر"
+          },
+          "visibility": {
+            "initiator": "ایجادکننده",
+            "tenant-admin": "مدیر سازمان",
+            "silent": "پنهان"
+          },
+          "failure-action": {
+            "pause": "توقف زمان‌بندی",
+            "disable": "غیرفعال‌سازی زمان‌بندی",
+            "alert": "فقط هشدار"
+          }
+        },
+        "status": {
+          "active": "فعال",
+          "pause": "متوقف",
+          "disabled": "غیرفعال"
+        },
+        "transitions": {
+          "pause": "توقف",
+          "resume": "ادامه",
+          "disable": "غیرفعال‌سازی",
+          "enable": "فعال‌سازی"
+        }
+      }
+    },
+    "actions": {
+      "run-now": { "title": "اجرای فوری" },
+      "bulk-run-now": {
+        "title": "اجرای انتخاب‌شده‌ها",
+        "confirm": {
+          "title": "اجرای زمان‌بندی‌های انتخاب‌شده",
+          "message": "زمان‌بندی‌های انتخاب‌شده همین حالا اجرا شوند؟"
+        }
+      }
+    },
+    "commands": {
+      "run-now": {
+        "messages": {
+          "success": {
+            "title": "کار آغاز شد",
+            "description": "«{{name}}» آغاز شد و در صف اجرا قرار گرفت."
+          },
+          "failed": {
+            "title": "اجرا ناموفق بود",
+            "description": "امکان آغاز «{{name}}» وجود نداشت."
+          }
+        }
+      }
+    },
+    "permissions": {
+      "view": {
+        "title": "مشاهده زمان‌بندی‌ها",
+        "description": "مشاهده زمان‌بندی کارها"
+      },
+      "manage": {
+        "title": "مدیریت زمان‌بندی‌ها",
+        "description": "ایجاد، ویرایش و حذف زمان‌بندی کارها"
+      }
+    }
+  }
+}

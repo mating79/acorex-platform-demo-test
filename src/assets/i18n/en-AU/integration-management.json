@@ -1,0 +1,156 @@
+{
+  "module": {
+    "title": "Integration Management",
+    "description": "Connect external systems and manage per-user integrations."
+  },
+  "pages": {
+    "integrations": {
+      "title": "Integrations",
+      "description": "Connect external providers to your tenant.",
+      "sidebar": {
+        "overview": {
+          "title": "Overview",
+          "connected": "Connected",
+          "error": "Error",
+          "disabled": "Disabled",
+          "not-connected": "Not Connected"
+        },
+        "categories": {
+          "title": "Categories",
+          "all": "All"
+        },
+        "empty-filter": {
+          "title": "No Categories Selected",
+          "description": "Select at least one category in the side panel to show integrations.",
+          "action": "Select All Categories"
+        }
+      }
+    }
+  },
+  "settings": {
+    "group": {
+      "nav-title": "Integrations",
+      "title": "Integrations",
+      "description": "Connect external providers to your account."
+    },
+    "domains": {
+      "other": {
+        "title": "Other Integrations",
+        "description": "Additional integration connectors not yet grouped into a dedicated domain."
+      }
+    },
+    "section": {
+      "connections": {
+        "title": "Connected Accounts",
+        "description": "Manage your personal integration connections."
+      }
+    },
+    "connections-panel": {
+      "title": "Integration Connections",
+      "description": "View and manage connected external providers."
+    }
+  },
+  "permissions": {
+    "module": {
+      "title": "Integration Management",
+      "description": "Permissions for integration providers and connections."
+    },
+    "provider": {
+      "view": {
+        "title": "View providers",
+        "description": "View available integration providers."
+      }
+    },
+    "connection": {
+      "view": {
+        "title": "View connections",
+        "description": "View personal integration connections."
+      },
+      "management": {
+        "title": "Manage connections",
+        "description": "Connect, disconnect, and reauthorize personal integrations."
+      }
+    },
+    "tenant-connection": {
+      "management": {
+        "title": "Manage tenant connections",
+        "description": "Manage tenant-wide integration connections."
+      }
+    },
+    "application": {
+      "management": {
+        "title": "Manage OAuth applications",
+        "description": "Configure tenant OAuth application settings."
+      }
+    },
+    "connection-health": {
+      "view": {
+        "title": "View connection health",
+        "description": "View integration connection validation status."
+      }
+    }
+  },
+  "connections": {
+    "entities": {
+      "connection": {
+        "title": "Integration Connection",
+        "plural": "Integration Connections",
+        "groups": {
+          "connection": "Connection",
+          "status": "Status"
+        },
+        "fields": {
+          "provider-id": { "title": "Provider" },
+          "connection-scope": { "title": "Scope" },
+          "connection-key": { "title": "Connection key" },
+          "auth-method-type": { "title": "Authentication method" },
+          "instance-url": { "title": "Instance URL" },
+          "external-account-name": { "title": "External account" },
+          "secret-ref": { "title": "Secret reference" },
+          "tenant-id": { "title": "Tenant" },
+          "user-id": { "title": "User" },
+          "is-revoked": { "title": "Revoked" },
+          "is-disabled": { "title": "Disabled" }
+        }
+      }
+    }
+  },
+  "oauth-states": {
+    "entities": {
+      "oauth-state": {
+        "title": "OAuth State",
+        "plural": "OAuth States",
+        "fields": {
+          "state": { "title": "State" },
+          "provider-id": { "title": "Provider" },
+          "user-id": { "title": "User" },
+          "tenant-id": { "title": "Tenant" },
+          "expires-at": { "title": "Expires at" },
+          "code-verifier": { "title": "Code verifier" },
+          "redirect-uri": { "title": "Redirect URI" },
+          "consumed-at": { "title": "Consumed at" }
+        }
+      }
+    }
+  },
+  "applications": {
+    "entities": {
+      "application": {
+        "title": "Integration Application",
+        "plural": "Integration Applications",
+        "groups": {
+          "oauth": "OAuth configuration"
+        },
+        "fields": {
+          "provider-id": { "title": "Provider" },
+          "tenant-id": { "title": "Tenant" },
+          "client-id": { "title": "Client ID" },
+          "client-secret-ref": { "title": "Client secret reference" },
+          "authorization-endpoint": { "title": "Authorization endpoint" },
+          "token-endpoint": { "title": "Token endpoint" },
+          "redirect-uri": { "title": "Redirect URI" }
+        }
+      }
+    }
+  }
+}

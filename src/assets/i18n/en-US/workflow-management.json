@@ -1,0 +1,878 @@
+{
+  "module": {
+    "title": "Workflow Management",
+    "description": "Manage workflow definitions and executions",
+    "menus": {
+      "root": {
+        "title": "Workflow Management",
+        "description": "Workflow definitions and executions"
+      }
+    },
+    "permissions": {
+      "title": "Workflow Management",
+      "description": "Workflow management permissions"
+    }
+  },
+  "workflow": {
+    "menus": {
+      "workflow": {
+        "title": "Workflow",
+        "description": "Workflow definitions and executions"
+      }
+    }
+  },
+  "automations": {
+    "terms": {
+      "automation": "Automation",
+      "automations": "Automations"
+    },
+    "entities": {
+      "automation": {
+        "title": "Automation",
+        "plural": "Automations",
+        "groups": {
+          "condition": "Condition",
+          "command": "Command"
+        },
+        "fields": {
+          "ref-type": {
+            "title": "Reference Type",
+            "description": "Parent entity type (e.g. AssessmentManagement.Questionnaire)",
+            "placeholder": "e.g. AssessmentManagement.Questionnaire"
+          },
+          "ref-id": {
+            "title": "Reference ID",
+            "description": "Parent record id",
+            "placeholder": "Parent record id"
+          },
+          "name": {
+            "title": "Name",
+            "description": "Variable name (letters, numbers, underscores, hyphens)",
+            "placeholder": "e.g. lifestyleCounseling, urgentReferral"
+          },
+          "title": {
+            "title": "Title",
+            "description": "Display title",
+            "placeholder": "e.g. Lifestyle Counseling, Urgent Referral"
+          },
+          "description": {
+            "title": "Description",
+            "description": "Optional description",
+            "placeholder": "Describe when this action runs"
+          },
+          "condition": {
+            "title": "Condition",
+            "description": "JSON expression on rule results (field = rule result name)",
+            "placeholder": "{ \"op\": \"eq\", \"field\": \"overallRisk\", \"value\": \"moderate\" }"
+          },
+          "command": {
+            "title": "Command",
+            "description": "AXPCommand registry key to execute",
+            "placeholder": "e.g. Create Entity"
+          },
+          "params": {
+            "title": "Parameters",
+            "description": "JSON object passed to command",
+            "placeholder": "{ \"priority\": 3 }"
+          }
+        }
+      }
+    }
+  },
+  "workflow-definitions": {
+    "terms": {
+      "workflow": "Workflow",
+      "workflows": "Workflows",
+      "definition": "Definition",
+      "execution": "Execution"
+    },
+    "menus": {
+      "workflow-definitions": {
+        "title": "Workflow Definitions",
+        "description": "Manage workflow definitions"
+      }
+    },
+    "entities": {
+      "workflow-definition": {
+        "title": "Workflow Definition",
+        "plural": "Workflow Definitions",
+        "fields": {
+          "definition-id": {
+            "title": "Definition ID",
+            "description": "Unique identifier for workflow definition",
+            "placeholder": "Enter definition ID"
+          },
+          "name": {
+            "title": "Name",
+            "description": "Unique workflow identifier (readonly after creation)",
+            "placeholder": "Enter workflow name"
+          },
+          "title": {
+            "title": "Title",
+            "description": "Display title for the workflow",
+            "placeholder": "Enter workflow title"
+          },
+          "description": {
+            "title": "Description",
+            "description": "Workflow description",
+            "placeholder": "Enter workflow description"
+          },
+          "version": {
+            "title": "Version",
+            "description": "Version number"
+          },
+          "is-latest": {
+            "title": "Latest",
+            "description": "Is latest version"
+          },
+          "is-published": {
+            "title": "Published",
+            "description": "Is published"
+          },
+          "is-readonly": {
+            "title": "Readonly",
+            "description": "Is readonly"
+          },
+          "is-system": {
+            "title": "System",
+            "description": "Is system workflow"
+          },
+          "created-at": {
+            "title": "Created At",
+            "description": "Creation timestamp"
+          },
+          "bindings": {
+            "title": "Bindings",
+            "description": "Entity and event bindings for workflow triggers",
+            "placeholder": "Define bindings JSON"
+          },
+          "graph": {
+            "title": "Workflow graph",
+            "description": "Activity graph (edited on the Activities page)"
+          },
+          "variables": {
+            "title": "Workflow variables"
+          },
+          "workflow-inputs": {
+            "title": "Workflow inputs"
+          },
+          "outputs": {
+            "title": "Workflow outputs"
+          },
+          "custom-properties": {
+            "title": "Custom properties"
+          },
+          "extensions": {
+            "title": "Extensions"
+          }
+        },
+        "groups": {
+          "basic-info": "Basic Information"
+        },
+        "status": {
+          "transitions": {
+            "submit-review": "Submit for review",
+            "publish": "Publish",
+            "publish-direct": "Publish now",
+            "revise": "Return to draft",
+            "unpublish": "Unpublish",
+            "archive": "Archive"
+          }
+        },
+        "pages": {
+          "activities": {
+            "title": "Activities",
+            "add-step": "Add step",
+            "empty": "No activities yet. Use Add step to add steps, then wire outcomes to targets.",
+            "select-activity": "Select activity",
+            "select-step": "Select a step on the left to edit connections and inputs.",
+            "editor-placeholder": "Select an activity type to configure its inputs.",
+            "start-activity": "Workflow start",
+            "connection-end": "(End workflow)",
+            "connection-target-placeholder": "Next step",
+            "connections": {
+              "title": "Outgoing connections",
+              "hint": "For each outcome, choose which step runs next, or end the workflow."
+            },
+            "inputs": {
+              "title": "Inputs"
+            },
+            "node-actions": {
+              "add-activity": "Add Activity",
+              "arrange-layout": "Arrange layout",
+              "toggle-detail-panel": "Toggle Details Panel"
+            }
+          }
+        }
+      }
+    },
+    "actions": {
+      "execute": {
+        "title": "Execute",
+        "description": "Execute workflow",
+        "input-dialog": {
+          "title": "Workflow input"
+        },
+        "workflow-not-found": "Workflow \"{{name}}\" was not found."
+      }
+    },
+    "related-entities": {
+      "workflow-instances": {
+        "title": "Workflow Instances"
+      },
+      "activity-definitions": {
+        "title": "Activity Definitions"
+      },
+      "connections": {
+        "title": "Connections"
+      }
+    }
+  },
+  "workflow-instances": {
+    "terms": {
+      "instance": "Instance",
+      "instances": "Instances",
+      "execution": "Execution",
+      "status": "Status",
+      "sub-status": "Sub Status"
+    },
+    "menus": {
+      "workflow-instances": {
+        "title": "Workflow Instances",
+        "description": "Manage workflow executions"
+      }
+    },
+    "entities": {
+      "workflow-instance": {
+        "title": "Workflow Instance",
+        "plural": "Workflow Instances",
+        "pages": {
+          "activity-instances": {
+            "title": "Activity instances",
+            "empty": "No activity execution data is available for this instance yet.",
+            "field": {
+              "activity-type": "Activity type",
+              "node-id": "Step id",
+              "status": "Status",
+              "outcome": "Outcome (port)",
+              "started-at": "Started at",
+              "completed-at": "Completed at",
+              "performed-by": "Performed by",
+              "input": "Input (from definition)",
+              "output": "Output (captured state)",
+              "human-assignees": "Human task assignees",
+              "completed-by": "Completed by"
+            }
+          }
+        },
+        "fields": {
+          "workflow-title": {
+            "title": "Workflow",
+            "description": "Workflow name or definition identifier"
+          },
+          "status-display": {
+            "title": "Status",
+            "description": "Current workflow status (human-readable)"
+          },
+          "current-step": {
+            "title": "Current Step",
+            "description": "Current step index in the workflow"
+          },
+          "total-steps": {
+            "title": "Total Steps",
+            "description": "Total number of steps in the workflow"
+          },
+          "progress-percentage": {
+            "title": "Progress",
+            "description": "Workflow completion percentage"
+          },
+          "assign-user-display": {
+            "title": "Assignee / Last Action",
+            "description": "User lookup for the pending assignee or last performer (resolved from SecurityManagement.User)."
+          },
+          "definition-id": {
+            "title": "Definition ID",
+            "description": "Workflow definition identifier",
+            "placeholder": "Enter definition ID"
+          },
+          "name": {
+            "title": "Name",
+            "description": "Instance name",
+            "placeholder": "Enter instance name"
+          },
+          "status": {
+            "title": "Status",
+            "description": "Workflow execution status"
+          },
+          "sub-status": {
+            "title": "Sub Status",
+            "description": "Workflow execution sub-status"
+          },
+          "correlation-id": {
+            "title": "Correlation ID",
+            "description": "Correlation identifier for tracking",
+            "placeholder": "Enter correlation ID"
+          },
+          "version": {
+            "title": "Version",
+            "description": "Workflow definition version"
+          },
+          "incident-count": {
+            "title": "Incident Count",
+            "description": "Number of errors or faults"
+          },
+          "created-at": {
+            "title": "Created At",
+            "description": "Creation timestamp"
+          },
+          "updated-at": {
+            "title": "Updated At",
+            "description": "Last update timestamp"
+          },
+          "finished-at": {
+            "title": "Finished At",
+            "description": "Completion timestamp"
+          },
+          "bookmarks": {
+            "title": "Bookmarks",
+            "description": "Suspended activity bookmarks (resume points)"
+          },
+          "activity-contexts": {
+            "title": "Activity Execution Contexts",
+            "description": "Input/output and status per activity"
+          },
+          "flow-input": {
+            "title": "Workflow Input",
+            "description": "Input data passed to the workflow"
+          },
+          "flow-output": {
+            "title": "Workflow Output",
+            "description": "Output data produced by the workflow"
+          },
+          "incidents": {
+            "title": "Incidents",
+            "description": "Errors or faults during execution"
+          },
+          "fault": {
+            "title": "Fault",
+            "description": "Current fault state if workflow is faulted"
+          },
+          "workflow-variables": {
+            "title": "Variables",
+            "description": "Workflow variables: name, title, and value in this instance",
+            "column-key": "Key",
+            "column-title": "Title",
+            "column-value": "Value"
+          }
+        },
+        "groups": {
+          "overview": "Overview",
+          "variables": "Variables",
+          "basic-info": "Basic Information",
+          "status": "Status",
+          "metadata": "Metadata",
+          "bookmarks": "Bookmarks",
+          "activity-contexts": "Activity Execution",
+          "flow-data": "Flow Input & Output",
+          "incidents": "Incidents",
+          "fault": "Fault"
+        }
+      }
+    },
+    "status-display": {
+      "Running": {
+        "Pending": "Running – Pending",
+        "Executing": "Running – Executing",
+        "Suspended": "Running – Suspended",
+        "Finished": "Running – Finished",
+        "Cancelled": "Running – Cancelled",
+        "Faulted": "Running – Faulted"
+      },
+      "Finished": {
+        "Pending": "Finished – Pending",
+        "Executing": "Finished – Executing",
+        "Suspended": "Finished – Suspended",
+        "Finished": "Finished",
+        "Cancelled": "Cancelled",
+        "Faulted": "Faulted"
+      }
+    },
+    "states": {
+      "running": "Running",
+      "finished": "Finished",
+      "pending": "Pending",
+      "executing": "Executing",
+      "suspended": "Suspended",
+      "cancelled": "Cancelled",
+      "faulted": "Faulted"
+    }
+  },
+  "tests": {
+    "terms": {
+      "definitions": "Definitions",
+      "instances": "Instances",
+      "test-console": "Test Console",
+      "workflow-definitions": "Workflow Definitions",
+      "workflow-instances": "Workflow Instances"
+    },
+    "actions": {
+      "add-definition": {
+        "title": "Add Definition",
+        "description": "Add new workflow definition"
+      },
+      "edit": {
+        "title": "Edit",
+        "description": "Edit workflow definition"
+      },
+      "delete": {
+        "title": "Delete",
+        "description": "Delete workflow definition or instance"
+      },
+      "execute": {
+        "title": "Execute",
+        "description": "Execute workflow"
+      },
+      "refresh": {
+        "title": "Refresh",
+        "description": "Refresh list"
+      },
+      "clear-logs": {
+        "title": "Clear Logs",
+        "description": "Clear execution logs"
+      }
+    },
+    "messages": {
+      "info": {
+        "workflow-starting": "Starting workflow: {{name}}",
+        "executing-task": "Executing task: {{activityName}}",
+        "instance-selected": "Instance selected: {{id}}",
+        "status": "Status: {{status}}"
+      },
+      "success": {
+        "workflow-started": "Workflow started. Instance ID: {{instanceId}}",
+        "task-completed": "Task completed. Outcome: {{outcome}}",
+        "workflow-completed": "Workflow completed successfully",
+        "definition-deleted": "Workflow definition deleted successfully",
+        "instance-deleted": "Workflow instance deleted successfully"
+      },
+      "warning": {
+        "workflow-suspended": "Workflow suspended - user interaction required"
+      },
+      "error": {
+        "load-definitions": "Failed to load workflow definitions",
+        "load-instances": "Failed to load workflow instances",
+        "delete-definition": "Failed to delete workflow definition",
+        "delete-instance": "Failed to delete workflow instance",
+        "workflow-start-failed": "Failed to start workflow",
+        "task-complete-failed": "Failed to complete task",
+        "workflow-execution": "Error executing workflow: {{message}}",
+        "workflow-failed": "Workflow failed with error"
+      },
+      "confirm": {
+        "delete-definition": "Are you sure you want to delete workflow definition \"{{name}}\"?",
+        "delete-instance": "Are you sure you want to delete workflow instance \"{{id}}\"?"
+      }
+    },
+    "components": {
+      "workflow-list": {
+        "title": "Workflow Management",
+        "empty-states": {
+          "no-definitions": {
+            "title": "No Workflow Definitions",
+            "description": "No workflow definitions found. Create your first definition to get started."
+          },
+          "no-instances": {
+            "title": "No Workflow Instances",
+            "description": "No workflow instances found. Execute a workflow to see instances here."
+          },
+          "no-selection": {
+            "title": "No Instance Selected",
+            "description": "Select an instance from the list to view its details."
+          }
+        }
+      }
+    }
+  },
+  "signature": {
+    "plugin": {
+      "title": "Digital Signatures",
+      "signers": {
+        "title": "Signers"
+      },
+      "signatures": {
+        "title": "Signatures"
+      },
+      "workflow-instance-id": {
+        "title": "Workflow Instance ID"
+      },
+      "status": {
+        "title": "Signature Status"
+      },
+      "action": {
+        "title": "Sign"
+      }
+    },
+    "workflow": {
+      "title": "Entity Signature Workflow",
+      "description": "Complete signature workflow for entity records"
+    },
+    "activities": {
+      "menus": {
+        "activities": {
+          "title": "Activities",
+          "description": "Activity categories and definitions"
+        },
+        "activity-categories": {
+          "title": "Activity Categories",
+          "description": "Manage activity categories"
+        },
+        "activity-definitions": {
+          "title": "Activity Definitions",
+          "description": "Manage activity definitions"
+        }
+      }
+    },
+    "command": {
+      "start-workflow": {
+        "success-title": "Signature Workflow Started",
+        "success-message": "Signature workflow has been started successfully",
+        "error-title": "Failed to Start Workflow",
+        "error-unknown": "Unknown error occurred"
+      },
+      "sign-entity": {
+        "success-title": "Signature Recorded",
+        "success-message": "Your signature has been recorded successfully",
+        "error-title": "Signature Failed",
+        "error": {
+          "not-eligible": "You are not eligible to sign this record",
+          "already-signed": "You have already signed this record",
+          "fully-signed": "This record has been fully signed by all required signers",
+          "cancelled": "Signature was cancelled"
+        },
+        "dialog": {
+          "title": "Sign Document",
+          "message": "Please provide your digital signature and any optional notes below.",
+          "note-label": "Notes",
+          "note-placeholder": "Add any notes related to your signature...",
+          "signature-label": "Signature",
+          "signature-required": "Signature is required to proceed",
+          "submit-text": "Sign & Submit"
+        }
+      }
+    },
+    "messages": {
+      "success": {
+        "workflow-started": "Signature workflow started successfully",
+        "signature-collected": "Signature collected successfully",
+        "all-signed": "All signatures have been collected"
+      },
+      "error": {
+        "workflow-failed": "Signature workflow failed",
+        "signature-failed": "Failed to collect signature",
+        "validation-failed": "Signature validation failed"
+      }
+    }
+  },
+  "sign-off": {
+    "activities": {
+      "sign-off": {
+        "title": "Sign off",
+        "description": "Collects a required digital signature to confirm approval",
+        "default-message": "Please sign off to confirm your approval.",
+        "dialog-title": "Sign off",
+        "note-label": "Note",
+        "note-placeholder": "Enter an optional note",
+        "signature-label": "Signature",
+        "signature-required": "Signature is required to sign off",
+        "submit-text": "Sign off"
+      },
+      "rejection-reason": {
+        "title": "Rejection reason",
+        "description": "Captures rejection reason",
+        "message": "Please provide a reason for rejecting this request.",
+        "reason-label": "Reason",
+        "reason-placeholder": "Enter rejection reason",
+        "reason-required": "Rejection reason is required"
+      }
+    }
+  },
+  "activities": {
+    "menus": {
+      "activities": {
+        "title": "Activities",
+        "description": "Activity categories and definitions"
+      },
+      "activity": {
+        "title": "Activity",
+        "description": "Activity definitions"
+      },
+      "activity-categories": {
+        "title": "Activity Categories",
+        "description": "Manage activity categories"
+      },
+      "activity-definitions": {
+        "title": "Activity Definitions",
+        "description": "Manage activity definitions"
+      }
+    },
+    "entities": {
+      "activity-definition": {
+        "title": "Activity Definition",
+        "plural": "Activity Definitions",
+        "fields": {
+          "execution-mode": {
+            "title": "Execution Mode",
+            "description": "Where the activity should be executed"
+          },
+          "is-browsable": {
+            "title": "Is Browsable",
+            "description": "Whether the activity can be browsed"
+          },
+          "is-container": {
+            "title": "Is Container",
+            "description": "Whether the activity is a container"
+          },
+          "inputs": {
+            "title": "Inputs",
+            "description": "Input parameters for the activity"
+          },
+          "outputs": {
+            "title": "Outputs",
+            "description": "Output parameters from the activity"
+          },
+          "outcomes": {
+            "title": "Outcomes",
+            "description": "Possible outcomes of the activity"
+          },
+          "task-type": {
+            "title": "Task Type",
+            "description": "Type of task for inbox handling"
+          }
+        }
+      }
+    }
+  },
+  "work": {
+    "menus": {
+      "work": {
+        "title": "Work",
+        "description": "Workflow tasks and cartable"
+      }
+    }
+  },
+  "workflow-run": {
+    "actions": {
+      "continue": {
+        "title": "Continue"
+      },
+      "cancel-run": {
+        "title": "Cancel run"
+      },
+      "take-over": {
+        "title": "Take over"
+      },
+      "history": {
+        "title": "History"
+      }
+    },
+    "history": {
+      "popup-title": "{{workflowTitle}} — {{statusDisplay}}",
+      "empty": "No workflow steps have been recorded for this run yet.",
+      "system-performer": "System",
+      "instance-status": {
+        "in-progress": "In progress",
+        "pending-user-action": "Pending user action",
+        "waiting": "Waiting",
+        "completed": "Completed",
+        "failed": "Failed",
+        "cancelled": "Cancelled",
+        "unknown": "Unknown"
+      },
+      "field": {
+        "reporter": "Reporter",
+        "started-at": "Started",
+        "completed-at": "Completed",
+        "performed-by": "Performed by",
+        "performer": "Performer",
+        "assignee": "Assignee"
+      },
+      "activity-status": {
+        "running": "Running",
+        "completed": "Completed",
+        "pending": "Pending",
+        "executing": "In progress",
+        "suspended": "Suspended",
+        "canceled": "Canceled",
+        "faulted": "Faulted",
+        "failed": "Failed"
+      },
+      "tabs": {
+        "timeline": {
+          "title": "Timeline"
+        },
+        "visual": {
+          "title": "Visual",
+          "empty": "No workflow diagram is available for this run.",
+          "coming-soon": "Workflow diagram view will be available here soon."
+        }
+      },
+      "messages": {
+        "no-instance": "No workflow instance is linked to this record."
+      }
+    },
+    "dialogs": {
+      "cancel-run": {
+        "title": "Cancel workflow run?",
+        "message": "This will stop the workflow and mark the lifecycle event as cancelled. This cannot be undone."
+      }
+    },
+    "messages": {
+      "no-pending-step": "There is no pending step to continue for this workflow run.",
+      "awaiting-approver": "This step is waiting for the assigned approver. Open the task board as the manager to approve or reject.",
+      "use-task-board": "Task claimed. Open the task board to continue.",
+      "cancel-run-note": "Cancelled from lifecycle events list.",
+      "cancel-run-success": "Workflow run was cancelled."
+    }
+  },
+  "tasks": {
+    "popover": {
+      "more": "More",
+      "assignee": "Assignee",
+      "started-by": "Started by",
+      "created": "Created",
+      "due": "Due",
+      "effective-date": "Effective date",
+      "priority": "Priority"
+    },
+    "states": {
+      "pending": "Pending",
+      "claimed": "Claimed",
+      "in-progress": "In Progress",
+      "completed": "Completed",
+      "cancelled": "Cancelled",
+      "rejected": "Rejected"
+    },
+    "actions": {
+      "claim": {
+        "title": "Claim"
+      },
+      "reassign-to-self": {
+        "title": "Take Over"
+      }
+    },
+    "errors": {
+      "not-assignee": "Only the assigned user can complete this task.",
+      "reassign-failed": "Could not reassign this task to you.",
+      "reassign-not-supported": "Reassigning tasks is not supported."
+    },
+    "dialogs": {
+      "reassign-to-self": {
+        "title": "Take Over Task",
+        "message": "This task is assigned to someone else. Assign it to yourself and continue?"
+      },
+      "continue-next-step": {
+        "title": "Continue to next step?",
+        "message": "You have another step to complete in this workflow.",
+        "take-over-message": "The next step is assigned to someone else. Take it over and continue?"
+      }
+    }
+  },
+  "workflow-instance": {
+    "permissions": {
+      "reassign-to-self": {
+        "title": "Reassign Task to Self",
+        "description": "Take over a human task assigned to another user and complete it on the task board"
+      }
+    }
+  },
+  "cartable": {
+    "menus": {
+      "cartable": {
+        "title": "Cartable",
+        "description": "Workflow tasks inbox and task management"
+      }
+    },
+    "components": {
+      "cartable-page": {
+        "title": "Cartable",
+        "description": "Workflow tasks inbox",
+        "tabs": {
+          "all": {
+            "title": "All Tasks"
+          },
+          "my-tasks": {
+            "title": "My Tasks"
+          },
+          "pending": {
+            "title": "Pending"
+          },
+          "in-progress": {
+            "title": "In Progress"
+          },
+          "completed": {
+            "title": "Completed"
+          },
+          "cancelled": {
+            "title": "Cancelled"
+          }
+        },
+        "filters": {
+          "status": {
+            "title": "Status"
+          },
+          "priority": {
+            "title": "Priority"
+          },
+          "kind": {
+            "title": "Kind"
+          }
+        },
+        "empty-states": {
+          "no-tasks": {
+            "title": "No Tasks",
+            "description": "No tasks available"
+          }
+        }
+      }
+    },
+    "actions": {
+      "claim": {
+        "title": "Claim",
+        "description": "Claim this task"
+      },
+      "complete": {
+        "title": "Complete",
+        "description": "Complete this task"
+      },
+      "cancel": {
+        "title": "Cancel",
+        "description": "Cancel this task"
+      },
+      "view-details": {
+        "title": "View Details",
+        "description": "View task details"
+      }
+    }
+  },
+  "workflow-selector-plugin": {
+    "group": {
+      "title": "Workflow Configuration"
+    },
+    "property": {
+      "title": "Workflow"
+    }
+  },
+  "workflow-configurator": {
+    "label": "Workflow",
+    "widget": {
+      "title": "Workflow configurator",
+      "description": "Select a workflow and configure template input defaults."
+    },
+    "configure": {
+      "group-title": "Workflow parameters"
+    }
+  },
+  "app-startup": {
+    "resuming-stale-suspensions": "Resuming stale workflow suspensions..."
+  }
+}

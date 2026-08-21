@@ -1,0 +1,28 @@
+{
+  "module": {
+    "title": "Real-Time Communication",
+    "description": "WebRTC provider configuration for voice and video"
+  },
+  "integration": {
+    "domain": {
+      "title": "Real-Time Communication",
+      "description": "Connect WebRTC providers for meetings, calls, and live sessions."
+    }
+  },
+  "settings": {
+    "integrations": {
+      "section-title": "Real-Time Communication",
+      "section-description": "Connect WebRTC providers for voice and video calls.",
+      "connections-panel": {
+        "title": "RTC Providers",
+        "description": "Connect and configure LiveKit and other WebRTC providers."
+      }
+    },
+    "provider": {
+      "active-provider": {
+        "title": "Active RTC Provider",
+        "description": "Tenant-wide WebRTC provider used for token generation and room access."
+      }
+    }
+  }
+}

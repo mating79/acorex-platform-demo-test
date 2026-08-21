@@ -1,0 +1,74 @@
+{
+  "module": {
+    "title": "مدیریت تدارکات",
+    "description": "مدیریت روابط تامین‌کننده-محصول، قیمت‌گذاری و فرآیندهای تدارکات"
+  },
+  "supplier-products": {
+    "terms": {
+      "supplier": "تامین‌کننده",
+      "suppliers": "تامین‌کنندگان"
+    },
+    "entities": {
+      "supplier-product": {
+        "title": "محصول تامین‌کننده",
+        "plural": "محصولات تامین‌کننده",
+        "groups": {
+          "supplier-product-info": "اطلاعات محصول تامین‌کننده",
+          "pricing-terms": "قیمت و شرایط"
+        },
+        "fields": {
+          "supplier": {
+            "title": "تامین‌کننده"
+          },
+          "product": {
+            "title": "محصول"
+          },
+          "unit-price": {
+            "title": "قیمت واحد",
+            "description": "قیمت هر واحد از این تامین‌کننده"
+          },
+          "currency": {
+            "title": "ارز"
+          },
+          "payment-terms": {
+            "title": "شرایط پرداخت"
+          },
+          "minimum-order-quantity": {
+            "title": "حداقل مقدار سفارش",
+            "description": "حداقل مقدار مورد نیاز برای سفارش"
+          },
+          "lead-time-days": {
+            "title": "زمان تحویل (روز)",
+            "description": "تعداد روزهای تحویل"
+          },
+          "priority": {
+            "title": "اولویت",
+            "description": "رتبه اولویت تامین‌کننده (1 = بالاترین اولویت)"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "supplier-products": {
+        "title": "محصولات تامین‌کننده",
+        "actions": {
+          "view": {
+            "title": "@general:actions.view.title"
+          },
+          "create": {
+            "title": "@general:actions.create.title"
+          },
+          "edit": {
+            "title": "@general:actions.edit.title"
+          },
+          "delete": {
+            "title": "@general:actions.delete.title"
+          },
+          "manage": {
+            "title": "@general:actions.manage.title"
+          }
+        }
+      }
+    }
+  }
+}

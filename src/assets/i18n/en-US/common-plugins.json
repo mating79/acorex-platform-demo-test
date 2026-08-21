@@ -1,0 +1,60 @@
+{
+  "feature": {
+    "title": "Common Plugins",
+    "description": "Entity plugins available across the platform"
+  },
+  "history": {
+    "title": "History",
+    "description": "Version history and audit trail"
+  },
+  "lock": {
+    "title": "Lock",
+    "description": "Locking to prevent concurrent editing"
+  },
+  "compare": {
+    "title": "Compare",
+    "description": "Compare versions and restore"
+  },
+  "comments": {
+    "title": "Comments",
+    "description": "Comments and notes on records",
+    "options": {
+      "display": { "title": "Display", "description": "Section (inline) or page (separate tab)" },
+      "icon": { "title": "Icon", "description": "Icon for the comments page" },
+      "title": { "title": "Title", "description": "Override title for comments section/page" }
+    }
+  },
+  "distribution": {
+    "title": "Distribution",
+    "description": "Distribution and sharing settings"
+  },
+  "status": {
+    "title": "Status",
+    "description": "Status lifecycle management",
+    "options": {
+      "field": { "title": "Field", "description": "Status field name in entity" },
+      "definition": { "title": "Definition", "description": "Status definition key (e.g. common.status.task)" },
+      "generate": { "title": "Generate", "description": "View generation config (views.enabled)" }
+    }
+  },
+  "policy": {
+    "title": "Policy",
+    "description": "Policy and access control",
+    "options": {
+      "policy": { "title": "Policy", "description": "Policy identifier" }
+    }
+  },
+  "workflow": {
+    "title": "Workflow",
+    "description": "Workflow and approval process"
+  },
+  "documents": {
+    "title": "Documents",
+    "description": "Document attachments and types",
+    "options": {
+      "title": { "title": "Title", "description": "Page title override" },
+      "icon": { "title": "Icon", "description": "Page icon override" },
+      "documentTypeNames": { "title": "Document Types", "description": "Allowed document type names (restricts creation/upload)" }
+    }
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "module": {
+    "title": "Fergus",
+    "description": "اتصال Fergus و همگام‌سازی کارها با پروژه‌های پلتفرم",
+    "menus": {
+      "configuration": {
+        "title": "Fergus"
+      }
+    }
+  },
+  "integration": {
+    "display-name": "Fergus",
+    "description": "اتصال به Fergus برای مدیریت کار و همگام‌سازی پروژه.",
+    "badges": {
+      "last-sync": "آخرین همگام‌سازی: {{datetime}}",
+      "never-synced": "هنوز همگام‌سازی نشده"
+    },
+    "auth": {
+      "pat": {
+        "label": "توکن دسترسی شخصی",
+        "instructions": "در Fergus از مسیر تنظیمات ← یکپارچه‌سازی‌ها ← Fergus API یک توکن دسترسی شخصی بسازید و آن را وارد کنید.",
+        "token": {
+          "label": "توکن دسترسی شخصی",
+          "placeholder": "توکن دسترسی شخصی Fergus را وارد کنید"
+        }
+      },
+      "oauth": {
+        "label": "OAuth 2.0",
+        "instructions": "شناسه کلاینت و رمز کلاینت OAuth را از برنامه ثبت‌شده Fergus وارد کنید. پس از ذخیره، برای ورود و مجوزدهی به Fergus هدایت می‌شوید. توکن‌ها به‌صورت خودکار ذخیره و تازه‌سازی می‌شوند.",
+        "client-id": {
+          "label": "شناسه کلاینت",
+          "placeholder": "شناسه کلاینت OAuth Fergus را وارد کنید"
+        },
+        "client-secret": {
+          "label": "رمز کلاینت",
+          "placeholder": "رمز کلاینت OAuth Fergus را وارد کنید"
+        }
+      }
+    },
+    "connect": {
+      "instructions": "<p><strong>روش احراز هویت</strong> را انتخاب کنید و فیلدهای الزامی را پر کنید. ترجیحاً <strong>توکن دسترسی شخصی</strong> Fergus را از مسیر <strong>تنظیمات ← یکپارچه‌سازی‌ها ← Fergus API</strong> وارد کنید، یا از <strong>شناسه کلاینت</strong> و <strong>رمز کلاینت</strong> OAuth برنامه ثبت‌شده استفاده کنید.</p>",
+      "dialog": {
+        "title": "اتصال Fergus",
+        "reconfigure-title": "پیکربندی مجدد Fergus"
+      },
+      "fields": {
+        "auth-method": "روش احراز هویت",
+        "display-name": "نام نمایشی"
+      },
+      "placeholders": {
+        "display-name": "Fergus"
+      },
+      "actions": {
+        "save": "ذخیره اتصال",
+        "save-and-authorize": "ذخیره و مجوزدهی"
+      },
+      "errors": {
+        "pat-required": "توکن دسترسی شخصی الزامی است.",
+        "client-id-required": "شناسه کلاینت الزامی است.",
+        "client-secret-required": "رمز کلاینت الزامی است."
+      }
+    }
+  },
+  "permissions": {
+    "group": {
+      "title": "Fergus",
+      "description": "پیکربندی یکپارچه‌سازی Fergus و پیوندهای Job"
+    },
+    "management": {
+      "title": "مدیریت Fergus",
+      "description": "دسترسی کامل به پیکربندی Fergus"
+    },
+    "fergus-project": {
+      "view": {
+        "title": "مشاهده پیوندهای Job"
+      },
+      "create": {
+        "title": "ایجاد پیوندهای Job"
+      },
+      "update": {
+        "title": "به‌روزرسانی پیوندهای Job"
+      },
+      "delete": {
+        "title": "حذف پیوندهای Job"
+      }
+    },
+    "catalog": {
+      "view": {
+        "title": "مشاهده پیکربندی Fergus"
+      }
+    },
+    "project-import": {
+      "execute": {
+        "title": "ورود Job از Fergus"
+      }
+    },
+    "project-sync": {
+      "execute": {
+        "title": "همگام‌سازی پروژه با Fergus"
+      }
+    }
+  },
+  "actions": {
+    "import-from-fergus": {
+      "title": "ورود از Fergus"
+    },
+    "sync": {
+      "title": "همگام‌سازی"
+    }
+  },
+  "import": {
+    "not-connected": {
+      "title": "برای وارد کردن Jobها Fergus را متصل کنید",
+      "message": "Fergus برای این tenant متصل نیست. برای اتصال حساب، مدیریت ← یکپارچه‌سازی‌ها را باز کنید و دوباره وارد کردن را امتحان کنید."
+    },
+    "success-single": "«{{title}}» از Fergus وارد شد.",
+    "selector": {
+      "title": "انتخاب Job از Fergus",
+      "pull-jobs": "بارگذاری Jobها"
+    },
+    "dialog": {
+      "title": "ورود Job از Fergus",
+      "submit": "ورود Job"
+    },
+    "loading": {
+      "fetch": {
+        "title": "بارگذاری از Fergus",
+        "status": "در حال کش کردن Jobها…"
+      },
+      "import": {
+        "title": "ورود Job",
+        "status": "در حال ایجاد پروژه پلتفرم…"
+      }
+    },
+    "sync-strategy": {
+      "title": "استراتژی همگام‌سازی",
+      "options": {
+        "remoteOverride": "مقدار راه دور جایگزین محلی شود",
+        "localOverride": "مقادیر محلی حفظ شوند",
+        "merge": "ادغام (پر کردن فیلدهای خالی محلی)"
+      }
+    }
+  },
+  "sync": {
+    "success": "پروژه با موفقیت با Fergus همگام‌سازی شد.",
+    "loading": {
+      "title": "همگام‌سازی با Fergus",
+      "status": "در حال به‌روزرسانی پروژه از Fergus…"
+    }
+  }
+}

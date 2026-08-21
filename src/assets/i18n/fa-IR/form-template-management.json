@@ -1,0 +1,243 @@
+{
+  "module": {
+    "title": "مدیریت قالب فرم",
+    "description": "مدیریت قالب‌های فرم، ویجت‌ها و دسته‌ها",
+    "menus": {
+      "root": {
+        "title": "قالب‌های فرم",
+        "description": "مدیریت قالب‌های فرم و ویجت‌ها"
+      }
+    }
+  },
+  "templates": {
+    "terms": {
+      "template": "قالب",
+      "templates": "قالب‌ها",
+      "template-id": "شناسه قالب",
+      "template-type": "نوع",
+      "choose-template": "انتخاب قالب",
+      "remove-template": "حذف قالب",
+      "empty-template": "قالب خالی"
+    },
+    "menus": {
+      "templates": {
+        "title": "قالب‌ها",
+        "description": "مدیریت قالب‌های فرم"
+      },
+      "forms": {
+        "title": "فرم‌ها",
+        "description": "مدیریت قالب‌های فرم"
+      },
+      "widgets": {
+        "title": "ویجت‌ها",
+        "description": "مدیریت قالب‌های ویجت"
+      }
+    },
+    "entities": {
+      "template": {
+        "title": "قالب",
+        "plural": "قالب‌ها",
+        "fields": {
+          "code": {
+            "title": "کد",
+            "description": "شناسه یکتا برای قالب",
+            "placeholder": "کد قالب را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "description": "نام نمایشی قالب",
+            "placeholder": "عنوان قالب را وارد کنید"
+          },
+          "type": {
+            "title": "نوع",
+            "description": "نوع قالب (فرم یا ویجت)",
+            "placeholder": "نوع قالب را انتخاب کنید"
+          },
+          "template": {
+            "title": "ویرایش قالب",
+            "description": "طراحی و ویرایش محتوای قالب"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "templates": {
+        "title": "قالب‌ها",
+        "actions": {
+          "view": {
+            "title": "مشاهده قالب‌ها",
+            "description": "مشاهده اطلاعات قالب‌ها"
+          },
+          "edit": {
+            "title": "ویرایش قالب",
+            "description": "ویرایش تنظیمات قالب"
+          },
+          "delete": {
+            "title": "حذف قالب‌ها",
+            "description": "حذف قالب‌ها"
+          },
+          "create": {
+            "title": "ایجاد قالب",
+            "description": "ایجاد قالب جدید"
+          },
+          "manage": {
+            "title": "مدیریت قالب‌ها",
+            "description": "دسترسی کامل به مدیریت قالب‌ها"
+          }
+        }
+      }
+    }
+  },
+  "categories": {
+    "terms": {
+      "category": "دسته",
+      "categories": "دسته‌ها"
+    },
+    "entities": {
+      "category": {
+        "title": "دسته",
+        "plural": "دسته‌ها",
+        "fields": {
+          "categoryId": {
+            "title": "شناسه دسته",
+            "description": "شناسه یکتای دسته",
+            "placeholder": "دسته را انتخاب کنید"
+          },
+          "parentId": {
+            "title": "شناسه والد",
+            "description": "شناسه دسته والد",
+            "placeholder": "دسته والد را انتخاب کنید"
+          },
+          "isArchived": {
+            "title": "بایگانی شده",
+            "description": "وضعیت بایگانی دسته"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "categories": {
+        "title": "دسته‌ها",
+        "actions": {
+          "view": {
+            "title": "مشاهده دسته‌ها",
+            "description": "مشاهده اطلاعات دسته‌ها"
+          },
+          "edit": {
+            "title": "ویرایش دسته",
+            "description": "ویرایش تنظیمات دسته"
+          },
+          "delete": {
+            "title": "حذف دسته‌ها",
+            "description": "حذف دسته‌ها"
+          },
+          "create": {
+            "title": "ایجاد دسته",
+            "description": "ایجاد دسته جدید"
+          },
+          "manage": {
+            "title": "مدیریت دسته‌ها",
+            "description": "دسترسی کامل به مدیریت دسته‌ها"
+          }
+        }
+      }
+    }
+  },
+  "designer": {
+    "terms": {
+      "designer": "طراح",
+      "design": "طراحی",
+      "widget": "ویجت",
+      "widgets": "ویجت‌ها",
+      "form": "فرم",
+      "forms": "فرم‌ها",
+      "start-design-template": "شروع طراحی قالب",
+      "edit-template": "ویرایش قالب در طراح"
+    },
+    "components": {
+      "widget-picker": {
+        "title": "گالری ویجت",
+        "description": "یک ویجت از گالری انتخاب کنید",
+        "search-placeholder": "مثال: دکمه، متن، ...",
+        "tab-all": "همه",
+        "selected-count": "{{count}} مورد انتخاب‌شده",
+        "pinned-section-title": "پین‌شده"
+      },
+      "template-picker": {
+        "title": "گالری قالب",
+        "description": "یک قالب از گالری انتخاب کنید",
+        "search-placeholder": "جستجوی قالب‌ها...",
+        "clear-search": "پاک کردن جستجو",
+        "empty-states": {
+          "no-templates": {
+            "title": "هیچ قالبی یافت نشد",
+            "description": "در این دسته هیچ قالبی موجود نیست. دسته دیگری را انتخاب کنید یا از جستجو استفاده کنید."
+          },
+          "no-search-results": {
+            "title": "هیچ قالبی یافت نشد",
+            "description": "هیچ قالبی با معیارهای جستجوی شما مطابقت ندارد. شرایط جستجو را تغییر دهید یا دسته‌ها را مرور کنید."
+          },
+          "no-category-results": {
+            "title": "هیچ قالبی یافت نشد",
+            "description": "در این دسته هیچ قالبی موجود نیست. دسته دیگری را انتخاب کنید یا از جستجو استفاده کنید."
+          }
+        }
+      }
+    },
+    "settings": {
+      "form-template": {
+        "title": "قالب فرم",
+        "description": "تنظیمات مربوط به قالب‌های فرم",
+        "items": {}
+      },
+      "designer": {
+        "title": "طراح",
+        "description": "تنظیمات مربوط به طراح قالب‌های فرم",
+        "items": {
+          "history-panel": {
+            "title": "پنل تاریخچه",
+            "description": "فعال/غیرفعال کردن پنل تاریخچه برای فرم‌ها"
+          },
+          "auto-save": {
+            "title": "ذخیره‌سازی خودکار",
+            "description": "ذخیره‌سازی خودکار اطلاعات فرم در بازه‌های زمانی منظم"
+          },
+          "auto-save-interval": {
+            "title": "بازه زمانی ذخیره‌سازی خودکار",
+            "description": "زمان‌بندی (بر حسب دقیقه) برای ذخیره‌سازی خودکار اطلاعات فرم را تنظیم کنید"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "@form-template-management:module.title",
+        "actions": {
+          "manage": {
+            "title": "مدیریت قالب‌های فرم"
+          }
+        }
+      }
+    }
+  },
+  "designerAi": {
+    "menu": "دستیار هوش مصنوعی…",
+    "dialog-title": "دستیار طراح فرم",
+    "placeholder": "فرم موردنظر یا تغییرات لایه فعلی را توضیح دهید…",
+    "no-ai-module": "قابلیت AI در این محیط فعال نیست. ماژول مدیریت AI را اضافه یا فعال کنید.",
+    "applied-hint": "بوم طراحی به‌روز شد. برای ذخیره از مسیر File → Save یا Ctrl+S استفاده کنید.",
+    "loading": {
+      "title": "اعمال چیدمان AI",
+      "applying": "در حال به‌روزرسانی بوم طراح…",
+      "complete": "چیدمان اعمال شد.",
+      "run-title": "در حال تولید چیدمان",
+      "run-initial": "مدل در حال تولید و اعتبارسنجی JSON است؛ ممکن است کمی طول بکشد…"
+    }
+  },
+  "viewer": {
+    "terms": {
+      "view": "مشاهده",
+      "preview": "پیش‌نمایش"
+    }
+  }
+}

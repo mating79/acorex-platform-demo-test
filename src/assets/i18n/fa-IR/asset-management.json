@@ -1,0 +1,1208 @@
+{
+  "module": {
+    "title": "مدیریت دارایی",
+    "description": "مدیریت دارایی‌های سازمان، دسته‌بندی‌ها و فراداده چرخه حیات.",
+    "menus": {
+      "root": {
+        "title": "مدیریت دارایی",
+        "description": "همه قابلیت‌های مرتبط با دارایی را مرور کنید."
+      },
+      "assets": {
+        "title": "دارایی‌ها",
+        "description": "دارایی‌های فیزیکی و دیجیتال را مدیریت کنید."
+      },
+      "asset-statuses": {
+        "title": "وضعیت‌های دارایی",
+        "description": "وضعیت‌های قابل استفاده مجدد را تعریف کنید."
+      },
+      "maintenances": {
+        "title": "نگهداری‌ها",
+        "description": "سوابق نگهداری را مدیریت کنید."
+      },
+      "inspections": {
+        "title": "بازرسی‌ها",
+        "description": "سوابق بازرسی را مدیریت کنید."
+      },
+      "maintenance-types": {
+        "title": "انواع نگهداری",
+        "description": "انواع نگهداری را تعریف کنید."
+      },
+      "asset-categories": {
+        "title": "دسته‌بندی‌های دارایی",
+        "description": "دسته‌بندی‌های دارایی را مدیریت کنید."
+      }
+    }
+  },
+  "catalog-scopes": {
+    "booking": {
+      "title": "رزرو",
+      "description": "پرسشنامه‌ها، آیتم‌های بانک سؤال و تعریف‌های گردش‌کار برای چک‌لیست‌های رزرو دارایی."
+    }
+  },
+  "features": {
+    "asset-management": {
+      "title": "مدیریت دارایی",
+      "description": "فعال‌سازی قابلیت مدیریت دارایی"
+    }
+  },
+  "assetSetup": {
+    "menus": {
+      "assetSetup": {
+        "title": "راه‌اندازی دارایی"
+      }
+    }
+  },
+  "assets": {
+    "terms": {
+      "asset": "دارایی",
+      "assets": "دارایی‌ها"
+    },
+    "menus": {
+      "root": {
+        "title": "دارایی‌ها",
+        "description": "سوابق دارایی و اطلاعات چرخه حیات را نگهداری کنید."
+      }
+    },
+    "categories": {
+      "it-equipment": {
+        "title": "تجهیزات فناوری",
+        "description": "رایانه‌ها، لوازم جانبی و سخت‌افزار فناوری."
+      },
+      "facility": {
+        "title": "تسهیلات",
+        "description": "سیستم‌های ساختمانی و دارایی‌های زیرساختی."
+      },
+      "vehicle": {
+        "title": "ناوگان خودرو",
+        "description": "وسایل نقلیه عملیاتی و دارایی‌های حمل و نقل."
+      }
+    },
+    "entities": {
+      "asset": {
+        "title": "دارایی",
+        "plural": "دارایی‌ها",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "description-info": "توضیحات",
+          "category-info": "دسته‌بندی",
+          "rental": "اجاره/اجاره‌شده",
+          "operation-requirements": "نیازمندی‌های عملیاتی",
+          "purchase": "اطلاعات خرید",
+          "ownership": "مسئولیت",
+          "placement": "جایگاه و ساختار",
+          "lifecycle": "چرخه حیات",
+          "lifecycle-status": "چرخه حیات ",
+          "booking": "رزرو",
+          "settings": "تنظیمات",
+          "additional": "جزئیات تکمیلی",
+          "media": "رسانه"
+        },
+        "fields": {
+          "code": {
+            "title": "کد دارایی",
+            "placeholder": "کد دارایی را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان دارایی را وارد کنید"
+          },
+          "assetTypeId": {
+            "title": "نوع دارایی",
+            "placeholder": "نوع دارایی را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات دارایی را وارد کنید"
+          },
+          "status-id": {
+            "title": "وضعیت"
+          },
+          "owner-id": {
+            "title": "مالک"
+          },
+          "assigned-to-employee-id": {
+            "title": "تخصیص به کارمند"
+          },
+          "location-id": {
+            "title": "مکان"
+          },
+          "serial-number": {
+            "title": "شماره ثبت/سریال",
+            "placeholder": "شماره ثبت/سریال را وارد کنید"
+          },
+          "asset-tag": {
+            "title": "برچسب دارایی",
+            "placeholder": "برچسب دارایی را وارد کنید"
+          },
+          "purchase-date": {
+            "title": "تاریخ خرید"
+          },
+          "lifecycle-status": {
+            "title": "مرحله چرخه حیات"
+          },
+          "status": {
+            "title": "وضعیت بهره‌برداری"
+          },
+          "commissioned-date": {
+            "title": "تاریخ بهره‌برداری"
+          },
+          "retired-date": {
+            "title": "تاریخ بازنشستگی"
+          },
+          "reservations": {
+            "title": "رزروها"
+          },
+          "notes": {
+            "title": "یادداشت‌ها"
+          },
+          "is-rented": {
+            "title": "دارایی اجاره/اجاره‌شده است؟"
+          },
+          "license-type-id": {
+            "title": "نوع مجوز"
+          },
+          "rented-to-id": {
+            "title": "اجاره‌شده به"
+          },
+          "rented-to": {
+            "title": "اجاره‌شده به"
+          },
+          "rental-start-date": {
+            "title": "تاریخ شروع اجاره"
+          },
+          "rental-return-date": {
+            "title": "تاریخ بازگشت اجاره"
+          },
+          "rental-status": {
+            "title": "وضعیت اجاره"
+          },
+          "is-bookable": {
+            "title": "آیا دارایی، ماشین‌آلات و تجهیزات قابل رزرو است؟"
+          },
+          "pre-book-questionnaire-id": {
+            "title": "پرسشنامه پیش از رزرو"
+          },
+          "post-book-questionnaire-id": {
+            "title": "پرسشنامه پس از رزرو"
+          },
+          "qr-code": {
+            "title": "کد QR"
+          },
+          "images": {
+            "title": "تصاویر"
+          },
+          "parent-id": {
+            "title": "دارایی"
+          },
+          "test-tag-identification-number": {
+            "title": "شماره شناسایی تست و برچسب",
+            "placeholder": "شماره شناسایی تست و برچسب را وارد کنید"
+          }
+        },
+        "components": {
+          "list": {
+            "empty-states": {
+              "no-data": {
+                "title": "دارایی‌ای ثبت نشده است",
+                "description": "برای آغاز رهگیری تجهیزات، یک دارایی ثبت کنید."
+              }
+            }
+          },
+          "asset-component": {
+            "title": "اجزا",
+            "assigned": "اختصاص‌یافته",
+            "unassigned": "اختصاص‌نیافته",
+            "no-link": "دارایی انتخاب نشده است",
+            "actions": {
+              "edit": {
+                "title": "ویرایش دارایی جزء"
+              },
+              "delete": {
+                "title": "حذف ارتباط دارایی جزء"
+              }
+            }
+          },
+          "meta-data-form": {
+            "title": "اطلاعات تکمیلی دارایی"
+          }
+        },
+        "dialogs": {
+          "create-maintenance-offer": {
+            "title": "ایجاد رکوردهای نگهداری؟",
+            "content": "برای این نوع دارایی {{count}} الگوی نگهداری با «ایجاد خودکار برنامه» فعال است. برای «{{assetTitle}}» چه چیزی ایجاد شود؟",
+            "actions": {
+              "plans-only": "فقط برنامه",
+              "plans-and-work-orders": "برنامه + دستورکار"
+            },
+            "errors": {
+              "create-failed-title": "ایجاد رکورد نگهداری انجام نشد",
+              "create-failed-content": "ایجاد برنامه نگهداری یا دستورکار با خطا مواجه شد."
+            },
+            "success": {
+              "plans-title": "برنامه‌های نگهداری ایجاد شد",
+              "plans-content": "{{count}} برنامه نگهداری ایجاد شد.",
+              "both-title": "رکوردهای نگهداری ایجاد شد",
+              "both-content": "{{planCount}} برنامه نگهداری و {{workOrderCount}} دستورکار ایجاد شد."
+            }
+          }
+        },
+        "related-entities": {
+          "maintenances": {
+            "title": "نگهداری‌ها"
+          },
+          "maintenance-plans": {
+            "title": "برنامه‌های نگهداری"
+          },
+          "inspections": {
+            "title": "بازرسی‌ها"
+          },
+          "work-orders": {
+            "title": "دستورکارها"
+          },
+          "maintenance-templates": {
+            "title": "الگوهای نگهداری"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "asset": {
+        "actions": {
+          "manage": {
+            "title": "مدیریت دارایی‌ها"
+          },
+          "view": {
+            "title": "مشاهده دارایی‌ها"
+          },
+          "create": {
+            "title": "ایجاد دارایی"
+          },
+          "update": {
+            "title": "ویرایش دارایی"
+          },
+          "delete": {
+            "title": "حذف دارایی‌ها"
+          }
+        }
+      }
+    },
+    "states": {
+      "created": "ایجاد شده",
+      "in-stock": "در انبار",
+      "available": "در دسترس",
+      "assigned": "تخصیص‌یافته",
+      "under-maintenance": "در حال نگهداری",
+      "out-of-service": "خارج از سرویس",
+      "retired": "بازنشسته",
+      "disposed": "امحا شده",
+      "lost": "مفقود"
+    },
+    "transitions": {
+      "receive-to-stock": "ورود به انبار",
+      "make-available": "آماده برای بهره‌برداری",
+      "reserve": "رزرو",
+      "cancel-reservation": "لغو رزرو",
+      "assign": "تخصیص",
+      "unassign": "لغو تخصیص",
+      "install": "نصب",
+      "uninstall": "برچیدن از محل نصب",
+      "start-inspection": "شروع بازرسی",
+      "complete-inspection": "پایان بازرسی",
+      "start-maintenance": "شروع نگهداری",
+      "complete-maintenance": "پایان نگهداری",
+      "mark-out-of-service": "ثبت خارج از سرویس",
+      "restore-service": "بازگردانی به سرویس",
+      "retire": "بازنشستگی",
+      "dispose": "امحا",
+      "return-to-supplier": "بازگشت به تأمین‌کننده",
+      "mark-lost": "ثبت مفقودی"
+    },
+    "lifecycle-status": {
+      "created": "ایجاد شده",
+      "active": "فعال",
+      "draft": "پیش‌نویس",
+      "received": "تحویل گرفته شده",
+      "commissioned": "راه‌اندازی شده",
+      "in-service": "در بهره‌برداری",
+      "out-of-service": "خارج از بهره‌برداری",
+      "retired": "بازنشسته",
+      "disposed": "امحا شده",
+      "lost": "مفقود"
+    },
+    "lifecycle-transitions": {
+      "activate": "فعال‌سازی",
+      "receive": "دریافت",
+      "commission": "راه‌اندازی",
+      "take-out-of-service": "خارج کردن از بهره‌برداری",
+      "start-service": "شروع بهره‌برداری",
+      "retire": "بازنشستگی",
+      "mark-lost": "ثبت مفقودی",
+      "return-to-service": "بازگشت به بهره‌برداری",
+      "reactivate": "فعال‌سازی مجدد",
+      "dispose": "امحا",
+      "mark-found": "ثبت یافتن"
+    },
+    "statuses": {
+      "unavailable": "غیرقابل بهره‌برداری",
+      "available": "در دسترس",
+      "assigned": "تخصیص داده شده",
+      "reserved": "رزرو شده",
+      "in-use": "در حال استفاده",
+      "under-maintenance": "تحت نگهداری",
+      "under-inspection": "تحت بازرسی",
+      "damaged": "آسیب‌دیده",
+      "missing": "سرقت شده/ مفقود"
+    },
+    "status-transitions": {
+      "make-available": "قابل بهره‌برداری کردن",
+      "start-maintenance": "شروع نگهداری",
+      "start-inspection": "شروع بازرسی",
+      "mark-damaged": "ثبت آسیب",
+      "mark-missing": "ثبت مفقودی",
+      "assign": "تخصیص",
+      "reserve": "رزرو",
+      "start-use": "شروع استفاده",
+      "make-unavailable": "غیرقابل بهره‌برداری کردن",
+      "unassign": "لغو تخصیص",
+      "cancel-reservation": "لغو رزرو",
+      "finish-use": "پایان استفاده",
+      "return-to-assigned": "بازگشت به تخصیص",
+      "complete-maintenance": "اتمام نگهداری",
+      "complete-maintenance-assigned": "اتمام نگهداری (تخصیص)",
+      "pass-inspection": "قبول در بازرسی",
+      "pass-inspection-assigned": "قبول در بازرسی (تخصیص)",
+      "send-to-maintenance": "ارسال به نگهداری",
+      "fail-inspection": "رد در بازرسی",
+      "repair-and-make-available": "تعمیر و قابل بهره‌برداری کردن",
+      "mark-found": "ثبت یافتن",
+      "mark-found-unavailable": "ثبت یافتن (غیرقابل بهره‌برداری)",
+      "mark-found-damaged": "ثبت یافتن (آسیب‌دیده)"
+    },
+    "search": {
+      "create-asset": {
+        "title": "ایجاد دارایی",
+        "description": "فرم دارایی را برای ثبت رکورد جدید باز می‌کند."
+      }
+    }
+  },
+  "status": {
+    "asset": {
+      "title": "وضعیت دارایی",
+      "plural": "وضعیت‌های دارایی"
+    }
+  },
+  "asset-statuses": {
+    "terms": {
+      "asset-status": "وضعیت دارایی",
+      "asset-statuses": "وضعیت‌های دارایی"
+    },
+    "menus": {
+      "root": {
+        "title": "وضعیت‌های دارایی",
+        "description": "وضعیت‌های چرخه حیات قابل استفاده مجدد را پیکربندی کنید."
+      }
+    },
+    "entities": {
+      "asset-status": {
+        "title": "وضعیت دارایی",
+        "plural": "وضعیت‌های دارایی",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "behavior": "رفتار"
+        },
+        "fields": {
+          "code": {
+            "title": "کد وضعیت",
+            "placeholder": "کد وضعیت را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان وضعیت",
+            "placeholder": "عنوان وضعیت را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات"
+          },
+          "is-active": {
+            "title": "فعال است"
+          }
+        },
+        "components": {
+          "list": {
+            "empty-states": {
+              "no-data": {
+                "title": "هیچ وضعیتی تعریف نشده است",
+                "description": "حداقل یک وضعیت ایجاد کنید تا چرخه حیات دارایی دسته‌بندی شود."
+              }
+            }
+          }
+        }
+      }
+    },
+    "permissions": {
+      "asset-status": {
+        "actions": {
+          "manage": {
+            "title": "مدیریت وضعیت‌های دارایی"
+          },
+          "view": {
+            "title": "مشاهده وضعیت‌های دارایی"
+          },
+          "create": {
+            "title": "ایجاد وضعیت دارایی"
+          },
+          "update": {
+            "title": "ویرایش وضعیت دارایی"
+          },
+          "delete": {
+            "title": "حذف وضعیت‌های دارایی"
+          }
+        }
+      }
+    },
+    "states": {
+      "active": "فعال",
+      "maintenance": "در تعمیرات",
+      "retired": "بازنشسته"
+    },
+    "search": {
+      "create-asset-status": {
+        "title": "ایجاد وضعیت دارایی",
+        "description": "فرم وضعیت دارایی را برای افزودن وضعیت جدید باز می‌کند."
+      }
+    }
+  },
+
+  "maintenances": {
+    "terms": {
+      "maintenance": "نگهداری",
+      "maintenances": "نگهداری‌ها"
+    },
+    "menus": {
+      "root": {
+        "title": "نگهداری‌ها",
+        "description": "سوابق نگهداری را مدیریت کنید."
+      }
+    },
+    "entities": {
+      "maintenance": {
+        "title": "نگهداری",
+        "plural": "نگهداری‌ها",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "performed-by": "انجام شده توسط",
+          "additional": "جزئیات تکمیلی"
+        },
+        "fields": {
+          "maintenance-type-id": {
+            "title": "نوع نگهداری",
+            "placeholder": "نام نوع نگهداری را وارد کنید"
+          },
+          "asset-id": {
+            "title": "دارایی"
+          },
+          "performed-by": {
+            "title": "انجام شده توسط",
+            "options": {
+              "employee": "کارمند",
+              "thirdParty": "شخص ثالث"
+            }
+          },
+          "employee-id": {
+            "title": "کارمند"
+          },
+          "third-party-id": {
+            "title": "شخص ثالث",
+            "placeholder": "شخص ثالث را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات"
+          }
+        },
+        "components": {
+          "list": {
+            "empty-states": {
+              "no-data": {
+                "title": "هیچ نگهداری تعریف نشده است",
+                "description": "حداقل یک سوابق نگهداری ایجاد کنید."
+              }
+            }
+          }
+        }
+      }
+    },
+    "permissions": {
+      "maintenance": {
+        "actions": {
+          "manage": {
+            "title": "مدیریت نگهداری‌ها"
+          },
+          "view": {
+            "title": "مشاهده نگهداری‌ها"
+          },
+          "create": {
+            "title": "ایجاد نگهداری"
+          },
+          "update": {
+            "title": "ویرایش نگهداری"
+          },
+          "delete": {
+            "title": "حذف نگهداری‌ها"
+          }
+        }
+      }
+    }
+  },
+
+  "maintenance-types": {
+    "terms": {
+      "maintenance-type": "نوع نگهداری",
+      "maintenance-types": "انواع نگهداری"
+    },
+    "menus": {
+      "root": {
+        "title": "انواع نگهداری",
+        "description": "تعاریف انواع نگهداری قابل استفاده مجدد را پیکربندی کنید."
+      }
+    },
+    "entities": {
+      "maintenance-type": {
+        "title": "نوع نگهداری",
+        "plural": "انواع نگهداری",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "behavior": "رفتار"
+        },
+        "fields": {
+          "title": {
+            "title": "نوع نگهداری",
+            "placeholder": "نام نوع نگهداری را وارد کنید"
+          },
+          "maintenance-type-label": {
+            "title": "برچسب",
+            "placeholder": "برچسب نوع نگهداری برای نمایش در فرم‌ها را وارد کنید."
+          },
+          "is-active": {
+            "title": "فعال است"
+          }
+        },
+        "components": {
+          "list": {
+            "empty-states": {
+              "no-data": {
+                "title": "هیچ نوع نگهداری تعریف نشده است",
+                "description": "حداقل یک نوع نگهداری ایجاد کنید."
+              }
+            }
+          }
+        }
+      }
+    },
+    "permissions": {
+      "maintenance-type": {
+        "actions": {
+          "manage": {
+            "title": "مدیریت انواع نگهداری"
+          },
+          "view": {
+            "title": "مشاهده انواع نگهداری"
+          },
+          "create": {
+            "title": "ایجاد نوع نگهداری"
+          },
+          "update": {
+            "title": "ویرایش نوع نگهداری"
+          },
+          "delete": {
+            "title": "حذف انواع نگهداری"
+          }
+        }
+      }
+    },
+    "states": {
+      "active": "فعال",
+      "maintenance": "در تعمیرات",
+      "retired": "بازنشسته"
+    },
+    "search": {
+      "create-maintenance-type": {
+        "title": "ایجاد نوع نگهداری",
+        "description": ""
+      }
+    }
+  },
+
+  "inspections": {
+    "terms": {
+      "inspection": "بازرسی",
+      "inspections": "بازرسی‌ها"
+    },
+    "menus": {
+      "root": {
+        "title": "بازرسی‌ها",
+        "description": "سوابق بازرسی را مدیریت کنید."
+      }
+    },
+    "entities": {
+      "inspection": {
+        "title": "بازرسی",
+        "plural": "بازرسی‌ها",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "additional": "جزئیات تکمیلی"
+        },
+        "fields": {
+          "asset-id": {
+            "title": "دارایی"
+          },
+          "inspected-at": {
+            "title": "تاریخ و زمان بازرسی"
+          },
+          "employee-id": {
+            "title": "کارمند"
+          },
+          "description": {
+            "title": "توضیحات"
+          }
+        },
+        "components": {
+          "list": {
+            "empty-states": {
+              "no-data": {
+                "title": "هیچ بازرسی تعریف نشده است",
+                "description": "حداقل یک سوابق بازرسی ایجاد کنید."
+              }
+            }
+          }
+        }
+      }
+    },
+    "permissions": {
+      "inspection": {
+        "actions": {
+          "manage": {
+            "title": "مدیریت بازرسی‌ها"
+          },
+          "view": {
+            "title": "مشاهده بازرسی‌ها"
+          },
+          "create": {
+            "title": "ایجاد بازرسی"
+          },
+          "update": {
+            "title": "ویرایش بازرسی"
+          },
+          "delete": {
+            "title": "حذف بازرسی‌ها"
+          }
+        }
+      }
+    }
+  },
+
+  "asset-categories": {
+    "terms": {
+      "asset-category": "دسته‌بندی دارایی",
+      "asset-categories": "دسته‌بندی‌های دارایی"
+    },
+    "menus": {
+      "root": {
+        "title": "دسته‌بندی‌های دارایی",
+        "description": "سوابق دسته‌بندی دارایی‌ها را مدیریت کنید."
+      }
+    },
+    "entities": {
+      "asset-category": {
+        "title": "دسته‌بندی دارایی",
+        "plural": "دسته‌بندی‌های دارایی",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "name": {
+            "title": "نام",
+            "placeholder": "نام دسته‌بندی را وارد کنید"
+          },
+          "asset-category-id": {
+            "title": "دسته‌بندی دارایی"
+          },
+          "title": {
+            "title": "عنوان"
+          },
+          "has-maintenance": {
+            "title": "دارای نگهداری"
+          },
+          "has-inspection": {
+            "title": "دارای بازرسی"
+          },
+          "description": {
+            "title": "توضیحات"
+          },
+          "maintenance-type-id": {
+            "title": "انواع نگهداری"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "asset-category": {
+        "actions": {
+          "manage": {
+            "title": "مدیریت دسته‌بندی‌های دارایی"
+          },
+          "view": {
+            "title": "مشاهده دسته‌بندی‌های دارایی"
+          },
+          "create": {
+            "title": "ایجاد دسته‌بندی دارایی"
+          },
+          "update": {
+            "title": "ویرایش دسته‌بندی دارایی"
+          },
+          "delete": {
+            "title": "حذف دسته‌بندی‌های دارایی"
+          }
+        }
+      }
+    }
+  },
+  "assetTypes": {
+    "terms": {
+      "assetType": "نوع دارایی",
+      "assetTypes": "انواع دارایی"
+    },
+    "menus": {
+      "root": {
+        "title": "انواع دارایی",
+        "description": "تعریف انواع دارایی."
+      }
+    },
+    "entities": {
+      "assetType": {
+        "title": "نوع دارایی",
+        "plural": "انواع دارایی",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "maintenance-info": "نگهداری"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد نوع دارایی را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان نوع دارایی را وارد کنید"
+          },
+          "name": {
+            "title": "نام",
+            "placeholder": "نام لاتین را وارد کنید (حروف، عدد، زیرخط، خط تیره)"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات نوع دارایی را وارد کنید"
+          },
+          "hasMaintenance": {
+            "title": "فعال",
+            "gridTitle": "دارای نگهداری"
+          },
+          "maintenanceTypeIds": {
+            "title": "انواع",
+            "gridTitle": "انواع نگهداری"
+          },
+          "hasInspection": {
+            "title": "دارای بازرسی"
+          }
+        },
+        "components": {
+          "meta-data-form": {
+            "title": "اطلاعات تکمیلی نوع دارایی"
+          },
+          "components": {
+            "title": "اجزای ساختار"
+          },
+          "actions": {
+            "add-section": {
+              "title": "افزودن بخش"
+            },
+            "edit-section": {
+              "title": "ویرایش بخش"
+            },
+            "add-item": {
+              "title": "افزودن جزء"
+            },
+            "preview": {
+              "title": "پیش‌نمایش"
+            }
+          },
+          "property-viewer": {
+            "tabs": {
+              "section": {
+                "title": "بخش"
+              },
+              "component": {
+                "title": "جزء"
+              }
+            },
+            "groups": {
+              "section-basic": {
+                "title": "بخش"
+              },
+              "identifiers": {
+                "title": "شناسه‌ها"
+              }
+            },
+            "fields": {
+              "id": {
+                "title": "شناسه"
+              },
+              "asset-type-id": {
+                "title": "شناسه نوع دارایی"
+              },
+              "section-folder-id": {
+                "title": "شناسه پوشه بخش"
+              }
+            },
+            "validation": {
+              "section-code": {
+                "title": "کد نامعتبر",
+                "description": "یک کد عددی معتبر برای بخش وارد کنید."
+              },
+              "section-code-duplicate": {
+                "title": "کد تکراری",
+                "description": "بخش دیگری با این کد وجود دارد."
+              },
+              "section-title": {
+                "title": "عنوان الزامی است",
+                "description": "عنوان بخش را وارد کنید."
+              },
+              "component-role": {
+                "title": "نام نقش الزامی است",
+                "description": "نام نقش را وارد کنید."
+              },
+              "component-count": {
+                "title": "تعداد نامعتبر",
+                "description": "یک عدد نامنفی معتبر وارد کنید."
+              }
+            }
+          },
+          "builder": {
+            "empty-page": {
+              "title": "هنوز بخشی وجود ندارد. با «افزودن بخش» یک بخش بسازید."
+            },
+            "empty-section": {
+              "title": "هنوز جزئی نیست",
+              "description": "برای این بخش یک جزء اضافه کنید."
+            }
+          }
+        },
+        "related-entities": {
+          "activity-type-asset-types": {
+            "title": "نوع فعالیت "
+          },
+          "maintenance-templates": {
+            "title": "قالب‌های نگهداری"
+          },
+          "assetTypeSections": {
+            "title": "بخش‌های نوع دارایی"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "asset": {
+        "actions": {
+          "manage": {
+            "title": "مدیریت انواع دارایی"
+          },
+          "view": {
+            "title": "مشاهده انواع دارایی"
+          },
+          "create": {
+            "title": "ایجاد نوع دارایی"
+          },
+          "update": {
+            "title": "ویرایش نوع دارایی"
+          },
+          "delete": {
+            "title": "حذف انواع دارایی"
+          }
+        }
+      }
+    }
+  },
+  "assetTypeSections": {
+    "menus": {
+      "root": {
+        "title": "بخش‌های نوع دارایی",
+        "description": "تنظیم بخش؛ برای مدیریت داده‌های مرتبط زیرمنوها را باز کنید."
+      }
+    },
+    "entities": {
+      "assetTypeSection": {
+        "title": "بخش نوع دارایی",
+        "plural": "بخش‌های نوع دارایی",
+        "actions": {
+          "add-section": {
+            "title": "افزودن بخش"
+          }
+        },
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد بخش را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان بخش را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات بخش را وارد کنید"
+          }
+        },
+        "related-entities": {
+          "assetTypeSectionComponents": {
+            "title": "اجزای بخش",
+            "description": "پیکربندی ردیف‌های جزء برای این بخش."
+          }
+        }
+      }
+    }
+  },
+  "assetTypeSectionComponents": {
+    "entities": {
+      "assetTypeSectionComponent": {
+        "title": "جزء بخش",
+        "plural": "اجزای بخش",
+        "actions": {
+          "add-item": {
+            "title": "افزودن جزء"
+          }
+        },
+        "groups": {
+          "section-folder": "بخش نوع دارایی",
+          "component-content": "جزئیات جزء"
+        },
+        "fields": {
+          "assetTypeSectionId": {
+            "title": "بخش",
+            "placeholder": "بخش نوع دارایی را انتخاب کنید"
+          },
+          "roleName": {
+            "title": "نام نقش",
+            "placeholder": "نام نقش یا جزء را وارد کنید"
+          },
+          "count": {
+            "title": "تعداد"
+          },
+          "hasMaintenance": {
+            "title": "دارای نگهداری"
+          }
+        }
+      }
+    }
+  },
+  "assetSystemTypes": {
+    "menus": {
+      "root": {
+        "title": "انواع سیستم دارایی"
+      }
+    },
+    "entities": {
+      "assetSystemType": {
+        "title": "نوع سیستم دارایی",
+        "plural": "انواع سیستم دارایی",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "id": {
+            "title": "شناسه"
+          },
+          "code": {
+            "title": "کد",
+            "placeholder": "کد نوع سیستم دارایی را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "نام نوع سیستم دارایی را وارد کنید"
+          },
+          "parentId": {
+            "title": "نوع سیستم والد",
+            "placeholder": "نوع سیستم والد را انتخاب کنید"
+          },
+          "parent": {
+            "title": "والد"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات نوع سیستم دارایی را وارد کنید"
+          }
+        }
+      }
+    }
+  },
+  "assetSystems": {
+    "menus": {
+      "root": {
+        "title": "سیستم‌های دارایی"
+      }
+    },
+    "entities": {
+      "assetSystem": {
+        "title": "سیستم دارایی",
+        "plural": "سیستم‌های دارایی",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "id": {
+            "title": "شناسه"
+          },
+          "code": {
+            "title": "کد",
+            "placeholder": "کد سیستم دارایی را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان سیستم دارایی را وارد کنید"
+          },
+          "assetSystemTypeId": {
+            "title": "نوع سیستم دارایی",
+            "placeholder": "نوع سیستم دارایی را انتخاب کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات سیستم دارایی را وارد کنید"
+          },
+          "locationId": {
+            "title": "مکان",
+            "placeholder": "مکان را وارد کنید"
+          }
+        }
+      }
+    }
+  },
+  "assetSystemAssignments": {
+    "entities": {
+      "assetSystemAssignment": {
+        "title": "تخصیص سیستم دارایی",
+        "plural": "تخصیص‌های سیستم دارایی",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "id": {
+            "title": "شناسه"
+          },
+          "date": {
+            "title": "تاریخ"
+          },
+          "startDate": {
+            "title": "تاریخ شروع"
+          },
+          "endDate": {
+            "title": "تاریخ پایان"
+          },
+          "assetSystemId": {
+            "title": "سیستم دارایی",
+            "placeholder": "سیستم دارایی را انتخاب کنید"
+          },
+          "assetId": {
+            "title": "دارایی",
+            "placeholder": "دارایی را انتخاب کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات تخصیص را وارد کنید"
+          }
+        }
+      }
+    }
+  },
+  "common": {
+    "status": {
+      "draft": "پیش‌نویس",
+      "active": "فعال",
+      "returned": "بازگردانده‌شده",
+      "overdue": "سررسیدگذشته",
+      "cancelled": "لغوشده"
+    }
+  },
+  "assetRentalHistories": {
+    "transitions": {
+      "activate": "فعال‌سازی اجاره",
+      "cancel-from-draft": "لغو اجاره (پیش‌نویس)",
+      "return": "ثبت بازگشت",
+      "mark-overdue": "علامت‌گذاری به‌عنوان سررسیدگذشته",
+      "cancel-rental": "لغو اجاره"
+    },
+    "entities": {
+      "assetRentalHistory": {
+        "title": "اطلاعات اجاره دارایی",
+        "plural": "اطلاعات اجاره دارایی",
+        "actions": {
+          "rent-from": {
+            "title": "اجاره از",
+            "dialog-title": "ثبت اجاره از تأمین‌کننده"
+          },
+          "rent-to": {
+            "title": "اجاره به",
+            "dialog-title": "ثبت اجاره به تأمین‌کننده"
+          }
+        },
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "validations": {
+          "rental-party-required": "یکی از تأمین‌کنندگان «اجاره به» یا «اجاره از» باید انتخاب شود.",
+          "rented-to-required": "برای این اجاره، فیلد «اجاره/اجاره‌شده به» الزامی است.",
+          "rented-from-required": "برای این اجاره، فیلد «اجاره/اجاره‌شده از» الزامی است."
+        },
+        "fields": {
+          "id": {
+            "title": "شناسه"
+          },
+          "assetId": {
+            "title": "دارایی",
+            "placeholder": "دارایی را انتخاب کنید"
+          },
+          "rentedToId": {
+            "title": "اجاره/اجاره‌شده به"
+          },
+          "rentedFromId": {
+            "title": "اجاره/اجاره‌شده از"
+          },
+          "rentalDirection": {
+            "title": "جهت اجاره"
+          },
+          "createdDate": {
+            "title": "تاریخ ثبت"
+          },
+          "startDate": {
+            "title": "تاریخ شروع اجاره"
+          },
+          "monthlyRent": {
+            "title": "اجاره ماهانه"
+          },
+          "expectedReturnDate": {
+            "title": "تاریخ بازگشت پیش‌بینی‌شده"
+          },
+          "actualReturnDate": {
+            "title": "تاریخ بازگشت واقعی"
+          },
+          "status": {
+            "title": "وضعیت"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "یادداشت اختیاری"
+          }
+        }
+      }
+    }
+  }
+}

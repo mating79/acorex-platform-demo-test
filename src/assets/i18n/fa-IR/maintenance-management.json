@@ -1,0 +1,1929 @@
+{
+  "module": {
+    "title": "مدیریت نگهداری",
+    "description": "مدیریت انواع نگهداری و سوابق نگهداری برای دارایی‌های سازمانی.",
+    "menus": {
+      "root": {
+        "title": "مدیریت نگهداری",
+        "description": "دسترسی به تمام ویژگی‌های مرتبط با نگهداری."
+      },
+      "activities": {
+        "title": "فعالیت‌ها"
+      },
+      "failures": {
+        "title": "خرابی‌ها"
+      }
+    },
+    "permissions": {
+      "title": "مدیریت نگهداری",
+      "description": "دسترسی به ویژگی‌های مدیریت نگهداری"
+    }
+  },
+  "catalog-scopes": {
+    "mn": {
+      "title": "نگهداری و تعمیرات",
+      "description": "پرسشنامه‌ها، آیتم‌های بانک سؤال و تعریف گردش‌کار برای نگهداری دارایی‌ها و مدیریت خرابی."
+    }
+  },
+  "maintenance-types": {
+    "terms": {
+      "maintenance-type": "نوع نگهداری",
+      "maintenance-types": "انواع نگهداری"
+    },
+    "menus": {
+      "root": {
+        "title": "انواع نگهداری",
+        "description": "پیکربندی تعاریف قابل استفاده مجدد انواع نگهداری."
+      }
+    },
+    "entities": {
+      "maintenance-type": {
+        "title": "نوع نگهداری",
+        "plural": "انواع نگهداری",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "plan-scheduling": "برنامه ریزی و زمان‌بندی"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "مثال MT-202605-0001"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان نوع نگهداری را وارد کنید"
+          },
+          "description": {
+            "placeholder": "توضیح اختیاری درباره کاربرد این نوع نگهداری"
+          },
+          "autoGeneratePlan": {
+            "title": "ساخت خودکار برنامه"
+          },
+          "hasSchedule": {
+            "title": "دارای زمان‌بندی"
+          }
+        },
+        "related-entities": {
+          "templates": {
+            "title": "الگوهای نگهداری"
+          },
+          "plans": {
+            "title": "برنامه‌های نگهداری"
+          }
+        },
+        "components": {
+          "list": {
+            "empty-states": {
+              "no-data": {
+                "title": "هیچ نوع نگهداری تعریف نشده است",
+                "description": "حداقل یک نوع نگهداری ایجاد کنید تا شروع کنید."
+              }
+            }
+          }
+        }
+      },
+      "maintenance-template": {
+        "groups": {
+          "Scheduling": "زمان‌بندی"
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت انواع نگهداری",
+        "description": "دسترسی کامل به مدیریت انواع نگهداری"
+      },
+      "view": {
+        "title": "مشاهده انواع نگهداری",
+        "description": "مشاهده اطلاعات نوع نگهداری"
+      },
+      "create": {
+        "title": "ایجاد انواع نگهداری",
+        "description": "ایجاد انواع نگهداری جدید"
+      },
+      "edit": {
+        "title": "ویرایش انواع نگهداری",
+        "description": "ویرایش اطلاعات نوع نگهداری"
+      },
+      "delete": {
+        "title": "حذف انواع نگهداری",
+        "description": "حذف انواع نگهداری"
+      }
+    }
+  },
+  "maintenance-templates": {
+    "terms": {
+      "maintenance-template": "الگوی نگهداری",
+      "maintenance-templates": "الگوهای نگهداری"
+    },
+    "menus": {
+      "root": {
+        "title": "الگوهای نگهداری",
+        "description": "تعریف الگوهای اجرای نگهداری قابل استفاده مجدد بر اساس نوع و زمینه دارایی."
+      }
+    },
+    "entities": {
+      "maintenance-template": {
+        "title": "الگوی نگهداری",
+        "plural": "الگوهای نگهداری",
+        "groups": {
+          "classification": "طبقه‌بندی",
+          "workflow": "گردش کار",
+          "configuration": "پیکربندی",
+          "execution": "اجرا",
+          "scheduling": "زمانبندی"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "مثال MNT-202605-0001"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "نام نمایشی الگو"
+          },
+          "description": {
+            "placeholder": "شرح کاربرد این الگو"
+          },
+          "maintenance-type-id": {
+            "title": "نوع نگهداری"
+          },
+          "asset-type-id": {
+            "title": "نوع دارایی"
+          },
+          "metadata-ids": {
+            "title": "فیلدهای فراداده",
+            "placeholder": "فیلدهای فراداده این نوع نگهداری را انتخاب کنید"
+          },
+          "asset-status-type-id": {
+            "title": "وضعیت دارایی"
+          },
+          "work-permit": {
+            "title": "مجوز کار"
+          },
+          "need-shutdown": {
+            "title": "نیاز به توقف"
+          },
+          "estimated-minutes": {
+            "title": "دقیقه تخمینی",
+            "placeholder": "مدت معمول به دقیقه"
+          },
+          "assessment-template-ids": {
+            "title": "الگوهای ارزیابی (پرسشنامه‌ها)"
+          },
+          "schedule": {
+            "title": "زمان‌بندی",
+            "placeholder": "عبارت Cron، RRULE، یا توصیف قابل فهم"
+          },
+          "version-id": {
+            "title": "نسخه",
+            "placeholder": "شناسه نسخه الگو"
+          },
+          "metadata": {
+            "title": "فراداده (JSON)",
+            "placeholder": "فراداده JSON اختیاری برای یکپارچه‌سازی‌ها"
+          },
+          "auto-generate-plan": {
+            "title": "ساخت خودکار برنامه"
+          },
+          "has-schedule": {
+            "title": "دارای زمان‌بندی"
+          }
+        },
+        "related-entities": {
+          "activity-types": {
+            "title": "انواع فعالیت"
+          },
+          "failure-modes": {
+            "title": "حالت‌های خرابی"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت الگوهای نگهداری",
+        "description": "دسترسی کامل به مدیریت الگوهای نگهداری"
+      },
+      "view": {
+        "title": "مشاهده الگوهای نگهداری",
+        "description": "مشاهده تعاریف الگوی نگهداری"
+      },
+      "create": {
+        "title": "ایجاد الگوهای نگهداری",
+        "description": "ایجاد الگوهای نگهداری جدید"
+      },
+      "edit": {
+        "title": "ویرایش الگوهای نگهداری",
+        "description": "ویرایش تعاریف الگوی نگهداری"
+      },
+      "delete": {
+        "title": "حذف الگوهای نگهداری",
+        "description": "حذف الگوهای نگهداری"
+      }
+    }
+  },
+  "maintenance-plans": {
+    "terms": {
+      "maintenance-plan": "برنامه نگهداری",
+      "maintenance-plans": "برنامه‌های نگهداری"
+    },
+    "menus": {
+      "root": {
+        "title": "برنامه‌های نگهداری",
+        "description": "برنامه‌ریزی و زمان‌بندی اجرای نگهداری برای دارایی‌های مشخص."
+      }
+    },
+    "entities": {
+      "maintenance-plan": {
+        "title": "برنامه نگهداری",
+        "plural": "برنامه‌های نگهداری",
+        "groups": {
+          "plan-definition": "تعریف برنامه",
+          "schedule": "زمان‌بندی",
+          "assignment-priority": "تخصیص و اولویت",
+          "execution-settings": "تنظیمات اجرا"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "مثال MP-202605-0001"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان نمایشی برنامه"
+          },
+          "description": {
+            "placeholder": "توضیحات اختیاری برنامه نگهداری"
+          },
+          "maintenance-type-id": {
+            "title": "نوع نگهداری"
+          },
+          "asset-id": {
+            "title": "دارایی"
+          },
+          "maintenance-template-id": {
+            "title": "الگوی نگهداری"
+          },
+          "schedule": {
+            "title": "زمان‌بندی"
+          },
+          "assigned-to-id": {
+            "title": "مسئول انجام"
+          },
+          "priority-id": {
+            "title": "اولویت"
+          },
+          "work-permit": {
+            "title": "مجوز کار"
+          },
+          "need-shutdown": {
+            "title": "نیازمند توقف"
+          },
+          "estimated-hours": {
+            "title": "ساعت تخمینی"
+          },
+          "auto-generated-plan": {
+            "title": "خودکار ایجاد شده"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت برنامه‌های نگهداری",
+        "description": "دسترسی کامل به مدیریت برنامه‌های نگهداری"
+      },
+      "view": {
+        "title": "مشاهده برنامه‌های نگهداری",
+        "description": "مشاهده اطلاعات برنامه‌های نگهداری"
+      },
+      "create": {
+        "title": "ایجاد برنامه‌های نگهداری",
+        "description": "ایجاد برنامه نگهداری جدید"
+      },
+      "edit": {
+        "title": "ویرایش برنامه‌های نگهداری",
+        "description": "ویرایش اطلاعات برنامه‌های نگهداری"
+      },
+      "delete": {
+        "title": "حذف برنامه‌های نگهداری",
+        "description": "حذف برنامه‌های نگهداری"
+      }
+    }
+  },
+  "work-packages": {
+    "terms": {
+      "work-package": "بسته کاری",
+      "work-packages": "بسته‌های کاری"
+    },
+    "entities": {
+      "work-package": {
+        "title": "بسته کاری",
+        "plural": "بسته‌های کاری",
+        "groups": {
+          "scope-context": "دامنه و بستر",
+          "timing": "زمان‌بندی"
+        },
+        "fields": {
+          "code": {
+            "title": "کد"
+          },
+          "title": {
+            "title": "عنوان"
+          },
+          "description": {
+            "title": "توضیحات"
+          },
+          "asset-system-id": {
+            "title": "سیستم دارایی"
+          },
+          "planned-start": {
+            "title": "شروع برنامه‌ریزی‌شده"
+          },
+          "planned-end": {
+            "title": "پایان برنامه‌ریزی‌شده"
+          },
+          "started-at": {
+            "title": "زمان شروع"
+          },
+          "completed-at": {
+            "title": "زمان تکمیل"
+          },
+          "need-shutdown": {
+            "title": "نیازمند توقف"
+          },
+          "work-order-ids": {
+            "title": "دستورکارها"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت بسته‌های کاری",
+        "description": "دسترسی کامل به مدیریت بسته‌های کاری"
+      },
+      "view": {
+        "title": "مشاهده بسته‌های کاری",
+        "description": "مشاهده اطلاعات بسته‌های کاری"
+      },
+      "create": {
+        "title": "ایجاد بسته‌های کاری",
+        "description": "ایجاد بسته کاری جدید"
+      },
+      "edit": {
+        "title": "ویرایش بسته‌های کاری",
+        "description": "ویرایش اطلاعات بسته‌های کاری"
+      },
+      "delete": {
+        "title": "حذف بسته‌های کاری",
+        "description": "حذف بسته‌های کاری"
+      }
+    }
+  },
+  "work-orders": {
+    "terms": {
+      "work-order": "دستور کار",
+      "work-orders": "دستورکارها"
+    },
+    "source-types": {
+      "manual": "دستی",
+      "maintenance-plan": "برنامه نگهداری",
+      "create-asset": "ایجاد دارایی",
+      "failure-register": "ثبت خرابی"
+    },
+    "states": {
+      "planned": "برنامه‌ریزی‌شده",
+      "scheduled": "زمان‌بندی‌شده",
+      "assigned": "تخصیص‌یافته",
+      "in-progress": "در حال انجام",
+      "on-hold": "معلق",
+      "completed": "تکمیل‌شده",
+      "signed-off": "تأیید نهایی",
+      "cancelled": "لغو شده"
+    },
+    "status": {
+      "transitions": {
+        "schedule": "زمان‌بندی دستور کار",
+        "assign": "تخصیص دستور کار",
+        "start-work": "شروع کار",
+        "reschedule": "زمان‌بندی مجدد",
+        "put-on-hold": "تعلیق کار",
+        "complete": "علامت‌گذاری به‌عنوان تکمیل‌شده",
+        "resume": "از سرگیری کار",
+        "sign-off": "تأیید نهایی",
+        "reopen": "بازگشایی دستور کار",
+        "cancel": "لغو دستور کار"
+      }
+    },
+    "actions": {
+      "start-flow": {
+        "title": "شروع گردش کار نگهداری",
+        "select-template": {
+          "title": "انتخاب قالب نگهداری",
+          "content": "قالبی را انتخاب کنید که گردش کار آن برای این دستور کار اجرا شود."
+        }
+      },
+      "create-from-template": {
+        "title": "دستور کار جدید"
+      }
+    },
+    "messages": {
+      "no-workflow-configured": "برای این دستور کار، گردش کار نگهداری روی قالب تنظیم نشده است.",
+      "no-workflow-templates-for-asset": "هیچ قالب نگهداری با گردش کار برای این دارایی در دسترس نیست.",
+      "flow-requires-startable-status": "قبل از شروع گردش کار، دستور کار باید در وضعیت برنامه‌ریزی‌شده، زمان‌بندی‌شده یا تخصیص‌یافته باشد.",
+      "assigned-user-required": "قبل از شروع گردش کار نگهداری، باید یک فرد به این دستور کار تخصیص داده شود.",
+      "assigned-employee-required": "قبل از شروع گردش کار تأیید، فرد تخصیص‌یافته باید به رکورد کارمند متصل باشد.",
+      "workflow-started-use-task-board": "گردش کار نگهداری آغاز شد. برای ادامه مراحل بعدی، کارتابل وظایف را باز کنید.",
+      "sign-off": "دستور کار و پاسخ‌های چک‌لیست را بررسی کنید و برای تأیید، امضا کنید.",
+      "rejection": "دلیل رد این دستور کار را وارد کنید.",
+      "approval-success": "دستور کار تأیید و امضا شد.",
+      "approval-rejected": "تأیید دستور کار رد شد. مراحل لازم را تکمیل کنید و گردش کار را دوباره شروع کنید.",
+      "checklist-start-failed": "پس از چک‌لیست، شروع کار ممکن نشد. تخصیص‌دهنده را بررسی کنید و دوباره تلاش کنید."
+    },
+    "tasks": {
+      "task-title": "دستور کار — {{ workOrderCode }}",
+      "checklist": {
+        "description": "چک‌لیست را قبل از شروع نگهداری تکمیل کنید."
+      },
+      "mid-checklist": {
+        "description": "چک‌لیست حین کار را در طول نگهداری تکمیل کنید."
+      },
+      "post-checklist": {
+        "description": "چک‌لیست انطباق پس از کار را تکمیل کنید."
+      },
+      "technician-work": {
+        "description": "کار نگهداری را انجام دهید و سپس تکمیل کار را علامت بزنید."
+      },
+      "supervisor-approval": {
+        "description": "دستور کار و پاسخ‌های چک‌لیست را بررسی کنید و در صورت آمادگی تأیید یا رد کنید."
+      },
+      "actions": {
+        "open-questionnaire": "باز کردن پرسشنامه",
+        "work-complete": "علامت‌گذاری تکمیل کار",
+        "review": "بررسی",
+        "reject": "رد"
+      }
+    },
+    "entities": {
+      "work-order": {
+        "title": "دستور کار",
+        "plural": "دستورکارها",
+        "related-entities": {
+          "work-reports": {
+            "title": "گزارش‌های کار"
+          }
+        },
+        "groups": {
+          "basic-info": "نمای کلی دستور کار",
+          "scheduling-execution": "زمان‌بندی و اجرا",
+          "assignment": "تخصیص",
+          "execution-settings": "تنظیمات اجرا",
+          "required-checklist": "چک‌لیست الزامی",
+          "approval": "تأیید"
+        },
+        "components": {
+          "meta-data-form": {
+            "title": "فراداده"
+          }
+        },
+        "fields": {
+          "work-order-no": {
+            "title": "شماره دستور کار",
+            "placeholder": "شماره دستور کار را وارد کنید"
+          },
+          "asset-id": {
+            "title": "دارایی"
+          },
+          "plannable": {
+            "title": "قابل برنامه‌ریزی"
+          },
+          "maintenance-type-id": {
+            "title": "نوع نگهداری"
+          },
+          "maintenance-template-id": {
+            "title": "الگوی نگهداری"
+          },
+          "workflow-column": {
+            "title": "فرآیند نگهداری",
+            "select-workflow": "شروع فرآیند"
+          },
+          "work-report-column": {
+            "title": "گزارش کار",
+            "empty": "بدون گزارش",
+            "view-report": "مشاهده گزارش"
+          },
+          "maintenance-plan-id": {
+            "title": "برنامه نگهداری"
+          },
+          "failure-register-id": {
+            "title": "ثبت خرابی"
+          },
+          "priority-id": {
+            "title": "اولویت"
+          },
+          "source-type": {
+            "title": "نوع منبع"
+          },
+          "title": {
+            "title": "عنوان"
+          },
+          "scheduled-start": {
+            "title": "شروع برنامه‌ریزی‌شده"
+          },
+          "scheduled-end": {
+            "title": "پایان برنامه‌ریزی‌شده"
+          },
+          "started-at": {
+            "title": "زمان شروع"
+          },
+          "completed-at": {
+            "title": "زمان تکمیل"
+          },
+          "assigned-to-id": {
+            "title": "مسئول انجام"
+          },
+          "requested-by-id": {
+            "title": "درخواست‌کننده"
+          },
+          "estimated-hours": {
+            "title": "ساعت تخمینی"
+          },
+          "actual-hours": {
+            "title": "ساعت واقعی"
+          },
+          "downtime-minutes": {
+            "title": "دقایق توقف"
+          },
+          "work-permit": {
+            "title": "مجوز کار"
+          },
+          "need-shutdown": {
+            "title": "نیازمند توقف"
+          },
+          "auto-generated-work-order": {
+            "title": "خودکار ایجاد شده"
+          },
+          "checklist-response-id": {
+            "title": "پاسخ چک‌لیست"
+          },
+          "approval-status": {
+            "title": "وضعیت تأیید"
+          },
+          "rejection-reason": {
+            "title": "دلیل رد"
+          },
+          "metadata-value": {
+            "title": "فراداده"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت دستورکارها",
+        "description": "دسترسی کامل به مدیریت دستورکارها"
+      },
+      "view": {
+        "title": "مشاهده دستورکارها",
+        "description": "مشاهده اطلاعات دستورکار"
+      },
+      "create": {
+        "title": "ایجاد دستورکار",
+        "description": "ایجاد دستورکار جدید"
+      },
+      "edit": {
+        "title": "ویرایش دستورکارها",
+        "description": "ویرایش اطلاعات دستورکار"
+      },
+      "delete": {
+        "title": "حذف دستورکارها",
+        "description": "حذف دستورکارها"
+      }
+    }
+  },
+  "work-reports": {
+    "terms": {
+      "work-report": "گزارش کار",
+      "work-reports": "گزارش‌های کار"
+    },
+    "entities": {
+      "work-report": {
+        "title": "گزارش کار",
+        "plural": "گزارش‌های کار",
+        "groups": {
+          "system-info": "اطلاعات سیستمی",
+          "work-details": "جزئیات کار",
+          "checklist-results": "نتایج چک‌لیست"
+        },
+        "fields": {
+          "work-order-id": {
+            "title": "دستور کار"
+          },
+          "assessments": {
+            "title": "نتایج چک‌لیست",
+            "checklist-label": "چک‌لیست {{index}}",
+            "actions": {
+              "view-response": "مشاهده پاسخ"
+            }
+          },
+          "reported-at": {
+            "title": "زمان گزارش"
+          },
+          "performed-by-id": {
+            "title": "انجام‌دهنده"
+          },
+          "result": {
+            "title": "نتیجه",
+            "placeholder": "شرح کلی نتیجه کار را وارد کنید"
+          },
+          "summary": {
+            "title": "خلاصه",
+            "placeholder": "خلاصه کار انجام‌شده"
+          },
+          "action-taken": {
+            "title": "اقدام انجام‌شده",
+            "placeholder": "اقدامات انجام‌شده در حین کار"
+          },
+          "recommendation": {
+            "title": "توصیه",
+            "placeholder": "توصیه برای پیگیری یا اقدام بعدی"
+          },
+          "labor-hours": {
+            "title": "ساعت نیروی کار"
+          },
+          "downtime-minutes": {
+            "title": "دقیقه توقف"
+          },
+          "started-at": {
+            "title": "شروع"
+          },
+          "ended-at": {
+            "title": "پایان"
+          },
+          "finalized-at": {
+            "title": "زمان نهایی‌سازی"
+          },
+          "need-follow-up": {
+            "title": "نیاز به پیگیری"
+          },
+          "follow-up-work-order-id": {
+            "title": "دستور کار "
+          }
+        }
+      }
+    },
+    "commands": {
+      "fill-completion": {
+        "title": "تکمیل گزارش کار"
+      }
+    },
+    "messages": {
+      "not-created-yet": "گزارش کار هنوز ایجاد نشده است."
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت گزارش‌های کار",
+        "description": "دسترسی کامل به مدیریت گزارش‌های کار"
+      },
+      "view": {
+        "title": "مشاهده گزارش‌های کار",
+        "description": "مشاهده اطلاعات گزارش کار"
+      },
+      "create": {
+        "title": "ایجاد گزارش کار",
+        "description": "ایجاد گزارش کار جدید"
+      },
+      "edit": {
+        "title": "ویرایش گزارش‌های کار",
+        "description": "ویرایش اطلاعات گزارش کار"
+      },
+      "delete": {
+        "title": "حذف گزارش‌های کار",
+        "description": "حذف گزارش‌های کار"
+      }
+    }
+  },
+  "maintenance-template-activity-types": {
+    "terms": {
+      "maintenance-template-activity-type": "نوع فعالیت الگوی نگهداری",
+      "maintenance-template-activity-types": "انواع فعالیت الگوی نگهداری"
+    },
+    "entities": {
+      "maintenance-template-activity-type": {
+        "title": "نوع فعالیت الگوی نگهداری",
+        "plural": "انواع فعالیت الگوی نگهداری",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "maintenance-template-id": {
+            "title": "الگوی نگهداری"
+          },
+          "activity-type-id": {
+            "title": "نوع فعالیت"
+          },
+          "sequence-no": {
+            "title": "شماره ترتیب",
+            "placeholder": "شماره ترتیب را وارد کنید"
+          },
+          "need-shutdown": {
+            "title": "نیاز به توقف"
+          },
+          "is-main-activity": {
+            "title": "فعالیت اصلی"
+          },
+          "estimated-minutes": {
+            "title": "دقایق تخمینی",
+            "placeholder": "دقایق تخمینی را وارد کنید"
+          },
+          "description": {
+            "placeholder": "توضیحات اختیاری"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت انواع فعالیت الگوی نگهداری",
+        "description": "دسترسی کامل به مدیریت انواع فعالیت الگوی نگهداری"
+      },
+      "view": {
+        "title": "مشاهده انواع فعالیت الگوی نگهداری",
+        "description": "مشاهده اطلاعات نوع فعالیت الگوی نگهداری"
+      },
+      "create": {
+        "title": "ایجاد نوع فعالیت الگوی نگهداری",
+        "description": "ایجاد نوع فعالیت الگوی نگهداری جدید"
+      },
+      "edit": {
+        "title": "ویرایش انواع فعالیت الگوی نگهداری",
+        "description": "ویرایش اطلاعات نوع فعالیت الگوی نگهداری"
+      },
+      "delete": {
+        "title": "حذف انواع فعالیت الگوی نگهداری",
+        "description": "حذف انواع فعالیت الگوی نگهداری"
+      }
+    }
+  },
+  "maintenance-template-resources": {
+    "terms": {
+      "maintenance-template-resource": "منبع الگوی نگهداری",
+      "maintenance-template-resources": "منابع الگوی نگهداری"
+    },
+    "entities": {
+      "maintenance-template-resource": {
+        "title": "منبع الگوی نگهداری",
+        "plural": "منابع الگوی نگهداری",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد را وارد کنید"
+          },
+          "maintenance-template-id": {
+            "title": "الگوی نگهداری"
+          },
+          "resource-type": {
+            "title": "نوع منبع",
+            "options": {
+              "assettype": "نوع دارایی",
+              "jobdefinition": "تعریف شغل",
+              "inventoryitem": "قلم انبار"
+            }
+          },
+          "resource-id": {
+            "title": "منبع",
+            "placeholder": "منبع را انتخاب یا وارد کنید"
+          },
+          "resource-summary": {
+            "title": "منبع (خلاصه)"
+          },
+          "quantity": {
+            "title": "تعداد",
+            "placeholder": "تعداد را وارد کنید"
+          },
+          "estimated-hours": {
+            "title": "ساعت تخمینی",
+            "placeholder": "ساعت تخمینی را وارد کنید"
+          },
+          "description": {
+            "placeholder": "توضیحات اختیاری"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت منابع الگوی نگهداری",
+        "description": "دسترسی کامل به مدیریت منابع الگوی نگهداری"
+      },
+      "view": {
+        "title": "مشاهده منابع الگوی نگهداری",
+        "description": "مشاهده منابع الگوی نگهداری"
+      },
+      "create": {
+        "title": "ایجاد منابع الگوی نگهداری",
+        "description": "ایجاد منابع الگوی نگهداری جدید"
+      },
+      "edit": {
+        "title": "ویرایش منابع الگوی نگهداری",
+        "description": "ویرایش منابع الگوی نگهداری"
+      },
+      "delete": {
+        "title": "حذف منابع الگوی نگهداری",
+        "description": "حذف منابع الگوی نگهداری"
+      }
+    }
+  },
+  "maintenance-template-failure-modes": {
+    "terms": {
+      "maintenance-template-failure-mode": "حالت خرابی الگوی نگهداری",
+      "maintenance-template-failure-modes": "حالت‌های خرابی الگوی نگهداری"
+    },
+    "entities": {
+      "maintenance-template-failure-mode": {
+        "title": "حالت خرابی الگوی نگهداری",
+        "plural": "حالت‌های خرابی الگوی نگهداری",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد را وارد کنید"
+          },
+          "maintenance-template-id": {
+            "title": "الگوی نگهداری"
+          },
+          "failure-mode-id": {
+            "title": "حالت خرابی"
+          },
+          "description": {
+            "placeholder": "توضیحات اختیاری"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت حالت‌های خرابی الگوی نگهداری",
+        "description": "دسترسی کامل به مدیریت حالت‌های خرابی الگوی نگهداری"
+      },
+      "view": {
+        "title": "مشاهده حالت‌های خرابی الگوی نگهداری",
+        "description": "مشاهده حالت‌های خرابی الگوی نگهداری"
+      },
+      "create": {
+        "title": "ایجاد حالت خرابی الگوی نگهداری",
+        "description": "ایجاد حالت خرابی الگوی نگهداری جدید"
+      },
+      "edit": {
+        "title": "ویرایش حالت‌های خرابی الگوی نگهداری",
+        "description": "ویرایش حالت‌های خرابی الگوی نگهداری"
+      },
+      "delete": {
+        "title": "حذف حالت‌های خرابی الگوی نگهداری",
+        "description": "حذف حالت‌های خرابی الگوی نگهداری"
+      }
+    }
+  },
+  "maintenances": {
+    "terms": {
+      "maintenance": "نگهداری",
+      "maintenances": "نگهداری‌ها"
+    },
+    "menus": {
+      "root": {
+        "title": "نگهداری‌ها",
+        "description": "ثبت و مدیریت فعالیت‌های نگهداری."
+      }
+    },
+    "entities": {
+      "maintenance": {
+        "title": "نگهداری",
+        "plural": "نگهداری‌ها",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "performed-by": "انجام شده توسط",
+          "additional": "جزئیات اضافی"
+        },
+        "fields": {
+          "resource-id": {
+            "title": "منبع",
+            "placeholder": "منبع را انتخاب کنید"
+          },
+          "maintenance-type-id": {
+            "title": "نوع نگهداری",
+            "placeholder": "نوع نگهداری را انتخاب کنید"
+          },
+          "performed-by": {
+            "title": "انجام شده توسط",
+            "options": {
+              "employee": "کارمند",
+              "thirdParty": "شخص ثالث"
+            }
+          },
+          "employee-id": {
+            "title": "کارمند",
+            "placeholder": "کارمند را انتخاب کنید"
+          },
+          "third-party-id": {
+            "title": "شخص ثالث",
+            "placeholder": "شخص ثالث را انتخاب کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات نگهداری را وارد کنید"
+          }
+        },
+        "components": {
+          "meta-data-form": {
+            "title": "فراداده"
+          },
+          "list": {
+            "empty-states": {
+              "no-data": {
+                "title": "هیچ نگهداری ثبت نشده است",
+                "description": "یک سابقه نگهداری ایجاد کنید تا فعالیت‌های نگهداری را ردیابی کنید."
+              }
+            }
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت نگهداری‌ها",
+        "description": "دسترسی کامل به مدیریت نگهداری"
+      },
+      "view": {
+        "title": "مشاهده نگهداری‌ها",
+        "description": "مشاهده اطلاعات نگهداری"
+      },
+      "create": {
+        "title": "ایجاد نگهداری‌ها",
+        "description": "ایجاد سوابق نگهداری جدید"
+      },
+      "edit": {
+        "title": "ویرایش نگهداری‌ها",
+        "description": "ویرایش اطلاعات نگهداری"
+      },
+      "delete": {
+        "title": "حذف نگهداری‌ها",
+        "description": "حذف سوابق نگهداری"
+      }
+    },
+    "search": {
+      "create-maintenance": {
+        "title": "ایجاد نگهداری",
+        "description": "فرم نگهداری را باز کنید تا یک فعالیت نگهداری جدید ثبت کنید."
+      }
+    }
+  },
+  "failure-causes": {
+    "terms": {
+      "failure-cause": "علت خرابی",
+      "failure-causes": "علل خرابی"
+    },
+    "entities": {
+      "failure-cause": {
+        "title": "علت خرابی",
+        "plural": "علل خرابی",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "details": "جزئیات"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد کوتاه را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان علت خرابی را وارد کنید"
+          },
+          "description": {
+            "placeholder": "توضیحات اختیاری"
+          }
+        },
+        "related-entities": {
+          "sub-causes": {
+            "title": "علل فرعی"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت علل خرابی",
+        "description": "دسترسی کامل به مدیریت علل خرابی"
+      },
+      "view": {
+        "title": "مشاهده علل خرابی",
+        "description": "مشاهده اطلاعات علت خرابی"
+      },
+      "create": {
+        "title": "ایجاد علل خرابی",
+        "description": "ایجاد علت خرابی جدید"
+      },
+      "edit": {
+        "title": "ویرایش علل خرابی",
+        "description": "ویرایش اطلاعات علت خرابی"
+      },
+      "delete": {
+        "title": "حذف علل خرابی",
+        "description": "حذف علل خرابی"
+      }
+    }
+  },
+  "failure-mechanisms": {
+    "terms": {
+      "failure-mechanism": "مکانیزم خرابی",
+      "failure-mechanisms": "مکانیزم‌های خرابی"
+    },
+    "entities": {
+      "failure-mechanism": {
+        "title": "مکانیزم خرابی",
+        "plural": "مکانیزم‌های خرابی",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "details": "جزئیات"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد کوتاه را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان مکانیزم خرابی را وارد کنید"
+          },
+          "description": {
+            "placeholder": "توضیحات اختیاری"
+          }
+        },
+        "related-entities": {
+          "activity-types": {
+            "title": "انواع فعالیت"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت مکانیزم‌های خرابی",
+        "description": "دسترسی کامل به مدیریت مکانیزم‌های خرابی"
+      },
+      "view": {
+        "title": "مشاهده مکانیزم‌های خرابی",
+        "description": "مشاهده اطلاعات مکانیزم خرابی"
+      },
+      "create": {
+        "title": "ایجاد مکانیزم‌های خرابی",
+        "description": "ایجاد مکانیزم خرابی جدید"
+      },
+      "edit": {
+        "title": "ویرایش مکانیزم‌های خرابی",
+        "description": "ویرایش اطلاعات مکانیزم خرابی"
+      },
+      "delete": {
+        "title": "حذف مکانیزم‌های خرابی",
+        "description": "حذف مکانیزم‌های خرابی"
+      }
+    }
+  },
+  "failure-detections": {
+    "terms": {
+      "failure-detection": "تشخیص خرابی",
+      "failure-detections": "تشخیص‌های خرابی"
+    },
+    "entities": {
+      "failure-detection": {
+        "title": "تشخیص خرابی",
+        "plural": "تشخیص‌های خرابی",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد کوتاه را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان تشخیص خرابی را وارد کنید"
+          },
+          "description": {
+            "placeholder": "توضیحات اختیاری"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت تشخیص‌های خرابی",
+        "description": "دسترسی کامل به مدیریت تشخیص‌های خرابی"
+      },
+      "view": {
+        "title": "مشاهده تشخیص‌های خرابی",
+        "description": "مشاهده اطلاعات تشخیص خرابی"
+      },
+      "create": {
+        "title": "ایجاد تشخیص‌های خرابی",
+        "description": "ایجاد تشخیص خرابی جدید"
+      },
+      "edit": {
+        "title": "ویرایش تشخیص‌های خرابی",
+        "description": "ویرایش اطلاعات تشخیص خرابی"
+      },
+      "delete": {
+        "title": "حذف تشخیص‌های خرابی",
+        "description": "حذف تشخیص‌های خرابی"
+      }
+    }
+  },
+  "failure-effects": {
+    "terms": {
+      "failure-effect": "اثر خرابی",
+      "failure-effects": "اثرات خرابی"
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت اثرات خرابی",
+        "description": "دسترسی کامل به مدیریت اثرات خرابی"
+      },
+      "view": {
+        "title": "مشاهده اثرات خرابی",
+        "description": "مشاهده اطلاعات اثر خرابی"
+      },
+      "create": {
+        "title": "ایجاد اثرات خرابی",
+        "description": "ایجاد اثر خرابی جدید"
+      },
+      "edit": {
+        "title": "ویرایش اثرات خرابی",
+        "description": "ویرایش اطلاعات اثر خرابی"
+      },
+      "delete": {
+        "title": "حذف اثرات خرابی",
+        "description": "حذف اثرات خرابی"
+      }
+    },
+    "entities": {
+      "failure-effect": {
+        "title": "اثر خرابی",
+        "plural": "اثرات خرابی",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد کوتاه را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان اثر خرابی را وارد کنید"
+          },
+          "description": {
+            "placeholder": "توضیحات اختیاری"
+          }
+        }
+      }
+    }
+  },
+  "failure-severities": {
+    "terms": {
+      "failure-severity": "شدت خرابی",
+      "failure-severities": "شدت‌های خرابی"
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت شدت‌های خرابی",
+        "description": "دسترسی کامل به مدیریت شدت‌های خرابی"
+      },
+      "view": {
+        "title": "مشاهده شدت‌های خرابی",
+        "description": "مشاهده اطلاعات شدت خرابی"
+      },
+      "create": {
+        "title": "ایجاد شدت‌های خرابی",
+        "description": "ایجاد شدت خرابی جدید"
+      },
+      "edit": {
+        "title": "ویرایش شدت‌های خرابی",
+        "description": "ویرایش اطلاعات شدت خرابی"
+      },
+      "delete": {
+        "title": "حذف شدت‌های خرابی",
+        "description": "حذف شدت‌های خرابی"
+      }
+    },
+    "entities": {
+      "failure-severity": {
+        "title": "شدت خرابی",
+        "plural": "شدت‌های خرابی",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد کوتاه را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان شدت خرابی را وارد کنید"
+          },
+          "description": {
+            "placeholder": "توضیحات اختیاری"
+          }
+        }
+      }
+    }
+  },
+  "failure-types": {
+    "terms": {
+      "failure-type": "نوع خرابی",
+      "failure-types": "انواع خرابی"
+    },
+    "entities": {
+      "failure-type": {
+        "title": "نوع خرابی",
+        "plural": "انواع خرابی",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "overview": "نمای کلی"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد کوتاه را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان نوع خرابی را وارد کنید"
+          },
+          "description": {
+            "placeholder": "توضیحات اختیاری"
+          }
+        },
+        "related-entities": {
+          "failure-modes": {
+            "title": "حالت‌های خرابی"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت انواع خرابی",
+        "description": "دسترسی کامل به مدیریت انواع خرابی"
+      },
+      "view": {
+        "title": "مشاهده انواع خرابی",
+        "description": "مشاهده اطلاعات نوع خرابی"
+      },
+      "create": {
+        "title": "ایجاد انواع خرابی",
+        "description": "ایجاد نوع خرابی جدید"
+      },
+      "edit": {
+        "title": "ویرایش انواع خرابی",
+        "description": "ویرایش اطلاعات نوع خرابی"
+      },
+      "delete": {
+        "title": "حذف انواع خرابی",
+        "description": "حذف انواع خرابی"
+      }
+    }
+  },
+  "activity-categories": {
+    "terms": {
+      "activity-category": "دسته فعالیت",
+      "activity-categories": "دسته‌های فعالیت"
+    },
+    "entities": {
+      "activity-category": {
+        "title": "دسته فعالیت",
+        "plural": "دسته‌های فعالیت",
+        "groups": {
+          "overview": "نمای کلی"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد کوتاه را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان دسته را وارد کنید"
+          },
+          "description": {
+            "placeholder": "توضیحات اختیاری"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت دسته‌های فعالیت",
+        "description": "دسترسی کامل به مدیریت دسته‌های فعالیت"
+      },
+      "view": {
+        "title": "مشاهده دسته‌های فعالیت",
+        "description": "مشاهده اطلاعات دسته فعالیت"
+      },
+      "create": {
+        "title": "ایجاد دسته فعالیت",
+        "description": "ایجاد دسته فعالیت جدید"
+      },
+      "edit": {
+        "title": "ویرایش دسته‌های فعالیت",
+        "description": "ویرایش اطلاعات دسته فعالیت"
+      },
+      "delete": {
+        "title": "حذف دسته‌های فعالیت",
+        "description": "حذف دسته‌های فعالیت"
+      }
+    }
+  },
+  "activity-types": {
+    "terms": {
+      "activity-type": "نوع فعالیت",
+      "activity-types": "انواع فعالیت"
+    },
+    "entities": {
+      "activity-type": {
+        "title": "نوع فعالیت",
+        "plural": "انواع فعالیت",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "scheduling": "برنامه ریزی",
+          "execution-planning": "برنامه اجرا"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد کوتاه را وارد کنید"
+          },
+          "activity-category-id": {
+            "title": "دسته فعالیت"
+          },
+          "schedule-id": {
+            "title": "برنامه",
+            "placeholder": "برنامه تکرار را پیکربندی کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان نوع فعالیت را وارد کنید"
+          },
+          "description": {
+            "placeholder": "توضیحات اختیاری"
+          },
+          "initial-estimated-time": {
+            "title": "زمان تخمینی اولیه (دقیقه)",
+            "placeholder": "مثلاً 120"
+          },
+          "shut-down-flag": {
+            "title": "نیاز به توقف"
+          }
+        },
+        "related-entities": {
+          "asset-types": {
+            "title": "نوع‌های دارایی"
+          },
+          "resources": {
+            "title": "منابع"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت انواع فعالیت",
+        "description": "دسترسی کامل به مدیریت انواع فعالیت"
+      },
+      "view": {
+        "title": "مشاهده انواع فعالیت",
+        "description": "مشاهده اطلاعات نوع فعالیت"
+      },
+      "create": {
+        "title": "ایجاد نوع فعالیت",
+        "description": "ایجاد نوع فعالیت جدید"
+      },
+      "edit": {
+        "title": "ویرایش انواع فعالیت",
+        "description": "ویرایش اطلاعات نوع فعالیت"
+      },
+      "delete": {
+        "title": "حذف انواع فعالیت",
+        "description": "حذف انواع فعالیت"
+      }
+    }
+  },
+  "activity-type-asset-types": {
+    "terms": {
+      "activity-type-asset-type": "تخصیص تیم فعالیت",
+      "activity-type-asset-types": "تخصیص های تیم فعالیت"
+    },
+    "entities": {
+      "activity-type-asset-type": {
+        "title": "نوع دارایی نوع فعالیت",
+        "plural": "نوع‌های دارایی نوع فعالیت",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "activity-type-id": {
+            "title": "نوع فعالیت"
+          },
+          "asset-type-id": {
+            "title": "نوع دارایی"
+          },
+          "work-team-id": {
+            "title": "تیم کاری",
+            "placeholder": "تیم کاری را وارد کنید"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت نوع‌های دارایی نوع فعالیت",
+        "description": "دسترسی کامل به مدیریت نوع‌های دارایی نوع فعالیت"
+      },
+      "view": {
+        "title": "مشاهده نوع‌های دارایی نوع فعالیت",
+        "description": "مشاهده اطلاعات نوع دارایی نوع فعالیت"
+      },
+      "create": {
+        "title": "ایجاد نوع دارایی نوع فعالیت",
+        "description": "ایجاد نوع دارایی نوع فعالیت جدید"
+      },
+      "edit": {
+        "title": "ویرایش نوع‌های دارایی نوع فعالیت",
+        "description": "ویرایش اطلاعات نوع دارایی نوع فعالیت"
+      },
+      "delete": {
+        "title": "حذف نوع‌های دارایی نوع فعالیت",
+        "description": "حذف نوع‌های دارایی نوع فعالیت"
+      }
+    }
+  },
+  "activity-type-resources": {
+    "terms": {
+      "activity-type-resource": "منبع نوع فعالیت",
+      "activity-type-resources": "منابع نوع فعالیت"
+    },
+    "entities": {
+      "activity-type-resource": {
+        "title": "منبع نوع فعالیت",
+        "plural": "منابع نوع فعالیت",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "activity-type-id": {
+            "title": "نوع فعالیت"
+          },
+          "resource-type": {
+            "title": "نوع منبع",
+            "options": {
+              "assettype": "نوع دارایی",
+              "jobdefinition": "تعریف شغل",
+              "inventoryitem": "ردیف انبار"
+            }
+          },
+          "resource-id": {
+            "title": "شناسه منبع",
+            "placeholder": "شناسه منبع را وارد کنید"
+          },
+          "resource-selection-ids": {
+            "placeholder": "منابع را انتخاب کنید"
+          },
+          "resource-summary": {
+            "title": "منابع"
+          },
+          "count": {
+            "title": "تعداد",
+            "placeholder": "تعداد مورد نیاز را وارد کنید"
+          },
+          "initial-estimated-time": {
+            "title": "زمان تخمینی اولیه (دقیقه)",
+            "placeholder": "مثلاً 30"
+          },
+          "description": {
+            "placeholder": "توضیحات اختیاری"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت منابع نوع فعالیت",
+        "description": "دسترسی کامل به مدیریت منابع نوع فعالیت"
+      },
+      "view": {
+        "title": "مشاهده منابع نوع فعالیت",
+        "description": "مشاهده اطلاعات منابع نوع فعالیت"
+      },
+      "create": {
+        "title": "ایجاد منابع نوع فعالیت",
+        "description": "ایجاد منبع نوع فعالیت جدید"
+      },
+      "edit": {
+        "title": "ویرایش منابع نوع فعالیت",
+        "description": "ویرایش اطلاعات منبع نوع فعالیت"
+      },
+      "delete": {
+        "title": "حذف منابع نوع فعالیت",
+        "description": "حذف منابع نوع فعالیت"
+      }
+    }
+  },
+  "failure-modes": {
+    "terms": {
+      "failure-mode": "حالت خرابی",
+      "failure-modes": "حالت‌های خرابی"
+    },
+    "priorities": {
+      "critical": "بحرانی",
+      "high": "بالا",
+      "medium": "متوسط",
+      "low": "پایین"
+    },
+    "entities": {
+      "failure-mode": {
+        "title": "حالت خرابی",
+        "plural": "حالت‌های خرابی",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد کوتاه را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان حالت خرابی را وارد کنید"
+          },
+          "description": {
+            "placeholder": "توضیحات اختیاری"
+          },
+          "shut-down-flag": {
+            "title": "نیاز به توقف"
+          },
+          "priority-id": {
+            "title": "اولویت"
+          },
+          "failure-type-id": {
+            "title": "نوع خرابی"
+          },
+          "initial-estimated-time": {
+            "title": "زمان تخمینی اولیه (دقیقه)",
+            "placeholder": "مثلاً 120"
+          }
+        },
+        "related-entities": {
+          "asset-types": {
+            "title": "نوع‌های دارایی"
+          },
+          "mechanisms": {
+            "title": "مکانیزم‌ها"
+          },
+          "solutions": {
+            "title": "راه‌حل‌ها"
+          },
+          "reports": {
+            "title": "گزارش‌ها"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت حالت‌های خرابی",
+        "description": "دسترسی کامل به مدیریت حالت‌های خرابی"
+      },
+      "view": {
+        "title": "مشاهده حالت‌های خرابی",
+        "description": "مشاهده اطلاعات حالت خرابی"
+      },
+      "create": {
+        "title": "ایجاد حالت‌های خرابی",
+        "description": "ایجاد حالت خرابی جدید"
+      },
+      "edit": {
+        "title": "ویرایش حالت‌های خرابی",
+        "description": "ویرایش اطلاعات حالت خرابی"
+      },
+      "delete": {
+        "title": "حذف حالت‌های خرابی",
+        "description": "حذف حالت‌های خرابی"
+      }
+    }
+  },
+  "failure-mode-asset-types": {
+    "terms": {
+      "failure-mode-asset-type": "نوع دارایی حالت خرابی",
+      "failure-mode-asset-types": "نوع‌های دارایی حالت خرابی"
+    },
+    "entities": {
+      "failure-mode-asset-type": {
+        "title": "نوع دارایی حالت خرابی",
+        "plural": "نوع‌های دارایی حالت خرابی",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "details": "جزئیات"
+        },
+        "fields": {
+          "failure-mode-id": {
+            "title": "حالت خرابی"
+          },
+          "asset-type-id": {
+            "title": "نوع دارایی"
+          },
+          "priority-id": {
+            "title": "اولویت"
+          },
+          "shut-down-flag": {
+            "title": "نیازمند توقف"
+          },
+          "credit-required": {
+            "title": "اعتبار مورد نیاز",
+            "placeholder": "مقدار اعتبار مورد نیاز را وارد کنید"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیحات را وارد کنید"
+          }
+        }
+      }
+    }
+  },
+  "failure-mode-mechanisms": {
+    "terms": {
+      "failure-mode-mechanism": "مکانیزم حالت خرابی",
+      "failure-mode-mechanisms": "مکانیزم‌های حالت خرابی"
+    },
+    "entities": {
+      "failure-mode-mechanism": {
+        "title": "مکانیزم حالت خرابی",
+        "plural": "مکانیزم‌های حالت خرابی",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "failure-mode-id": {
+            "title": "حالت خرابی"
+          },
+          "failure-mechanism-id": {
+            "title": "مکانیزم خرابی"
+          }
+        }
+      }
+    }
+  },
+  "failure-mode-solutions": {
+    "terms": {
+      "failure-mode-solution": "راه‌حل حالت خرابی",
+      "failure-mode-solutions": "راه‌حل‌های حالت خرابی"
+    },
+    "risk-levels": {
+      "low": "کم",
+      "medium": "متوسط",
+      "high": "زیاد",
+      "critical": "بحرانی"
+    },
+    "solution-types": {
+      "temporary": "موقت",
+      "permanent": "دائمی",
+      "workaround": "راهکار جایگزین",
+      "preventive": "پیشگیرانه"
+    },
+    "entities": {
+      "failure-mode-solution": {
+        "title": "راه‌حل حالت خرابی",
+        "plural": "راه‌حل‌های حالت خرابی",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "details": "جزئیات"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "کد کوتاه را وارد کنید"
+          },
+          "title": {
+            "title": "عنوان",
+            "placeholder": "عنوان راه‌حل را وارد کنید"
+          },
+          "failure-mode-id": {
+            "title": "حالت خرابی"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "توضیح راه‌حل را وارد کنید"
+          },
+          "success-rate": {
+            "title": "نرخ موفقیت (%)",
+            "placeholder": "نرخ موفقیت بین ۰ تا ۱۰۰ را وارد کنید"
+          },
+          "risk-level": {
+            "title": "سطح ریسک"
+          },
+          "estimated-cost": {
+            "title": "هزینه تخمینی",
+            "placeholder": "هزینه تخمینی را وارد کنید"
+          },
+          "solution-type": {
+            "title": "نوع راه‌حل"
+          }
+        }
+      }
+    }
+  },
+  "failure-registers": {
+    "terms": {
+      "failure-register": "ثبت خرابی",
+      "failure-registers": "ثبت‌های خرابی"
+    },
+    "permissions": {
+      "manage": {
+        "title": "مدیریت ثبت‌های خرابی",
+        "description": "دسترسی کامل به مدیریت ثبت‌های خرابی"
+      },
+      "view": {
+        "title": "مشاهده ثبت‌های خرابی",
+        "description": "مشاهده اطلاعات ثبت خرابی"
+      },
+      "create": {
+        "title": "ایجاد ثبت‌های خرابی",
+        "description": "ایجاد ثبت خرابی جدید"
+      },
+      "edit": {
+        "title": "ویرایش ثبت‌های خرابی",
+        "description": "ویرایش اطلاعات ثبت خرابی"
+      },
+      "delete": {
+        "title": "حذف ثبت‌های خرابی",
+        "description": "حذف ثبت‌های خرابی"
+      }
+    },
+    "status": {
+      "transitions": {
+        "submit-for-review": "ارسال برای بررسی",
+        "require-work-order": "نیاز به دستور کار",
+        "reject": "رد",
+        "mark-duplicate": "علامت‌گذاری تکراری",
+        "create-work-order": "ایجاد دستور کار",
+        "start-work-order": "شروع دستور کار",
+        "resolve": "علامت‌گذاری رفع‌شده",
+        "require-follow-up": "نیاز به پیگیری",
+        "create-follow-up-work-order": "ایجاد دستور کار پیگیری",
+        "close": "بستن ثبت"
+      }
+    },
+    "states": {
+      "reported": "گزارش‌شده",
+      "under-review": "در حال بررسی",
+      "work-order-required": "نیاز به دستور کار",
+      "work-order-created": "دستور کار ایجاد شد",
+      "in-progress": "در حال اجرا (دستور کار)",
+      "resolved": "رفع‌شده",
+      "follow-up-required": "نیاز به پیگیری",
+      "rejected": "رد شده",
+      "duplicate": "تکراری",
+      "closed": "بسته‌شده"
+    },
+    "entities": {
+      "failure-register": {
+        "title": "ثبت خرابی",
+        "plural": "ثبت‌های خرابی",
+        "groups": {
+          "basic-info": "اطلاعات پایه",
+          "asset-detail": "جزئیات دارایی",
+          "failure-details": "جزئیات خرابی",
+          "outcome-info": "نتیجه"
+        },
+        "fields": {
+          "code": {
+            "title": "کد",
+            "placeholder": "مثال FR-2026-0001"
+          },
+          "date": {
+            "title": "تاریخ"
+          },
+          "asset-system-id": {
+            "title": "سیستم دارایی"
+          },
+          "asset-id": {
+            "title": "دارایی"
+          },
+          "failure-mode-id": {
+            "title": "حالت خرابی"
+          },
+          "failure-detection-id": {
+            "title": "تشخیص خرابی"
+          },
+          "priority-id": {
+            "title": "اولویت"
+          },
+          "failure-severity-id": {
+            "title": "شدت خرابی"
+          },
+          "description": {
+            "title": "توضیحات",
+            "placeholder": "خرابی مشاهده شده را توضیح دهید"
+          }
+        },
+        "related-entities": {
+          "effects": {
+            "title": "اثرات"
+          },
+          "causes": {
+            "title": "علل"
+          },
+          "mechanisms": {
+            "title": "مکانیزم‌ها"
+          }
+        }
+      }
+    }
+  },
+  "failure-register-effects": {
+    "terms": {
+      "failure-register-effect": "اثر ثبت خرابی",
+      "failure-register-effects": "اثرات ثبت خرابی"
+    },
+    "entities": {
+      "failure-register-effect": {
+        "title": "اثر ثبت خرابی",
+        "plural": "اثرات ثبت خرابی",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "failure-register-id": {
+            "title": "ثبت خرابی"
+          },
+          "failure-effect-id": {
+            "title": "اثر خرابی"
+          }
+        }
+      }
+    }
+  },
+  "failure-register-causes": {
+    "terms": {
+      "failure-register-cause": "علت ثبت خرابی",
+      "failure-register-causes": "علل ثبت خرابی"
+    },
+    "entities": {
+      "failure-register-cause": {
+        "title": "علت ثبت خرابی",
+        "plural": "علل ثبت خرابی",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "failure-register-id": {
+            "title": "ثبت خرابی"
+          },
+          "failure-cause-id": {
+            "title": "علت خرابی"
+          }
+        }
+      }
+    }
+  },
+  "failure-register-mechanisms": {
+    "terms": {
+      "failure-register-mechanism": "مکانیزم ثبت خرابی",
+      "failure-register-mechanisms": "مکانیزم‌های ثبت خرابی"
+    },
+    "entities": {
+      "failure-register-mechanism": {
+        "title": "مکانیزم ثبت خرابی",
+        "plural": "مکانیزم‌های ثبت خرابی",
+        "groups": {
+          "basic-info": "اطلاعات پایه"
+        },
+        "fields": {
+          "failure-register-id": {
+            "title": "ثبت خرابی"
+          },
+          "failure-mechanism-id": {
+            "title": "مکانیزم خرابی"
+          }
+        }
+      }
+    }
+  }
+}
