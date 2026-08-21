@@ -21,6 +21,7 @@ import { AXERtcExtensionModule } from '@acorex-platform/extension-rtc-core-clien
 import { AXELiveKitExtensionModule } from '@acorex-platform/extension-rtc-livekit-client';
 import { AXEOpenWeatherMapExtensionModule } from '@acorex-platform/extension-weather-openweathermap-client';
 import { AXEWeatherApiExtensionModule } from '@acorex-platform/extension-weather-weatherapi-client';
+import { AXCAuthApiModule } from '../lib/auth-gateway/auth-api.module';
 import { AXPAuthModule } from '@acorex-platform/framework-client/auth';
 import { configureRegionalFontStylesheets } from '@acorex-platform/framework-client/themes/shared';
 import { AXPFileStorageService, AXPHomePageModule, AXPNotFoundCatchAllRoute, AXP_APP_VERSION_PROVIDER, AXP_PLATFORM_CONFIG_TOKEN, AXP_ROOT_CONFIG_TOKEN, configPlatform, provideDynamicHomePage } from '@acorex-platform/framework-client/common';
@@ -279,6 +280,7 @@ export const appConfig: ApplicationConfig = {
       //
       AXCApiHttpModule,
       AXCRuntimeRemoteApiModule,
+      AXCAuthApiModule,
       DemoAuthRootModule,
       AXPAuthModule.forRoot(),
       //

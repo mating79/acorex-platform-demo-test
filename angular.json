@@ -27,6 +27,11 @@
                 "input": "src/assets",
                 "output": "/assets"
               },
+              {
+                "glob": "**/*",
+                "input": "node_modules/@acorex-platform/extension-weather-core-client/assets/images/weather",
+                "output": "/assets/images/weather"
+              },
               "src/favicon.ico"
             ],
             "styles": [

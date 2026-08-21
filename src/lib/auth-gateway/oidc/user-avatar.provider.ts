@@ -1,5 +1,7 @@
-import { RootConfig } from '@acorex-platform/module-security-management-server/contracts';
-import { AXMSecurityManagementUsersEntityModel } from '@acorex-platform/module-security-management-server/contracts';
+import {
+  RootConfig,
+  type AXMSecurityManagementUsersEntityModel,
+} from '@acorex-platform/module-security-management-client/contracts';
 import { AXPEntityService } from '@acorex-platform/framework-client/layout/entity';
 import { AXPUserAvatarData, AXPUserAvatarProvider } from '@acorex-platform/framework-client/layout/components';
 import { AXPSessionService } from '@acorex-platform/framework-client/auth';

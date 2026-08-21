@@ -16,11 +16,6 @@
     "moduleResolution": "bundler",
     "lib": ["dom", "es2022"],
     "baseUrl": ".",
-    "paths": {
-      "@acorex-platform/client-connectivity-api": [
-        "src/lib/client-connectivity-api/index.ts"
-      ]
-    },
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "strictPropertyInitialization": false,

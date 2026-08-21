@@ -1,13 +1,13 @@
 {
   "/api": {
-    "target": "https://dev.acorexui.com",
-    "secure": true,
+    "target": "http://localhost:5500",
+    "secure": false,
     "changeOrigin": true,
     "logLevel": "warn"
   },
   "/socket.io": {
-    "target": "https://dev.acorexui.com",
-    "secure": true,
+    "target": "http://localhost:5500",
+    "secure": false,
     "changeOrigin": true,
     "ws": true,
     "logLevel": "warn"
