@@ -4,7 +4,7 @@ import {
   AXP_SETTING_DEFAULT_VALUES_PROVIDERS,
   type AXPSettingDefaultValuesProvider,
 } from '@acorex-platform/framework-client/common';
-import { AXPPlatformScope } from '@acorex-platform/framework-shared/core';
+import { AXPPlatformScope, AXPRegionalSetting } from '@acorex-platform/framework-shared/core';
 import { AXPCommunicationMetaSettingKeys } from '@acorex-platform/extension-communication-meta-client/contracts';
 import { AXPCommunicationTelegramSettingKeys } from '@acorex-platform/extension-communication-telegram-client/contracts';
 import { AXPCommunicationManagementSettingKeys } from '@acorex-platform/module-communication-management-client/contracts';
@@ -28,6 +28,7 @@ export const DEMO_PLATFORM_SETTINGS_DEFAULTS_PROVIDER: AXPSettingDefaultValuesPr
       [AXPCommunicationTelegramSettingKeys.DebugRedirectChatId]: '77677492',
       [AXPCommunicationMetaSettingKeys.DebugRedirectPhoneNumber]: '+989132041267',
       [AXPPlatformDevToolsSettings.DebugMode]: true,
+      [AXPRegionalSetting.AvailableLanguages]: ['en-US', 'fa-IR'],
     };
   },
 };

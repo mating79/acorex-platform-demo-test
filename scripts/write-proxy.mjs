@@ -59,17 +59,21 @@ const apiBasePath = env.API_BASE_PATH || '/api';
 const publicBaseUrl = (env.API_PUBLIC_BASE_URL || '').replace(/\/$/, '');
 const baseUrl = publicBaseUrl || apiBasePath;
 const useHttps = apiOrigin.startsWith('https://');
+// When the API uses HTTPS with a cert Node cannot verify (e.g. corporate CA),
+// set API_PROXY_INSECURE=true so the dev proxy skips TLS verification.
+const proxySecure =
+  env.API_PROXY_INSECURE === 'true' ? false : useHttps;
 
 const proxy = {
   '/api': {
     target: apiOrigin,
-    secure: useHttps,
+    secure: proxySecure,
     changeOrigin: true,
     logLevel: 'warn',
   },
   '/socket.io': {
     target: apiOrigin,
-    secure: useHttps,
+    secure: proxySecure,
     changeOrigin: true,
     ws: true,
     logLevel: 'warn',
